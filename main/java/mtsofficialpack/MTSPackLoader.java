@@ -115,32 +115,6 @@ public class MTSPackLoader{
 		}
 	}
 	
-	/* 	
-	This data needs to go into the engine JSON files.
-	public enum Engines{
-		BRISTOL_MERCURY(true, (byte) 1, (byte) 25, (byte) 13, 2400, 1.0F),
-		AMC_I4(true, (byte) 4, (byte) 50, (byte) 3, 7500, 0.5F),
-		DETROIT_DIESEL(false, (byte) 9, (byte) 25, (byte) 4, 3500, 1.5F);
-		
-		private final boolean isAutomatic;
-		private final byte numberGears;
-		private final byte starterPower;
-		private final byte starterIncrement;
-		private final int maxRPM;
-		private final float fuelConsumption;
-		
-		private Engines(boolean isAutomatic, byte numberGears, byte starterPower, byte starterIncrement, int maxRPM, float fuelConsumption){
-			this.isAutomatic = isAutomatic;
-			this.numberGears = numberGears;
-			this.starterPower = starterPower;
-			this.starterIncrement = starterIncrement;
-			this.maxRPM = maxRPM;
-			this.fuelConsumption = fuelConsumption;
-		}
-	}entity.mts.crate.name=Crate
-entity.crate.name=Crate
-	 */
-	
 	/*
 	 * 	This data needs to go in the propeller JSON files.
 	@Override
