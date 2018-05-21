@@ -1,0 +1,557 @@
+{
+  "definitions" : [
+		{
+			"uniqueName" : "vulcanair_white",
+			"itemDisplayName" : "White Vulcanair",
+			"modelTexture" : "vulcanair_white.png",
+			"backplateTexture" : "vulcanair_backplate.png",
+			"mouldingTexture" : "vulcanair_moulding_white.png",
+			"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"minecraft:dye:15", "minecraft:iron_ingot:0", "minecraft:dye:15",
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
+			]
+		},
+		{
+			"uniqueName" : "vulcanair_green",
+			"itemDisplayName" : "Green Vulcanair",
+			"modelTexture" : "vulcanair_green.png",
+			"backplateTexture" : "vulcanair_backplate.png",
+			"mouldingTexture" : "vulcanair_moulding_green.png",
+			"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"minecraft:dye:10", "minecraft:iron_ingot:0", "minecraft:dye:2",
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
+			]
+		},
+		{
+			"uniqueName" : "vulcanair_blue",
+			"itemDisplayName" : "Blue Vulcanair",
+			"modelTexture" : "vulcanair_blue.png",
+			"backplateTexture" : "vulcanair_backplate.png",
+			"mouldingTexture" : "vulcanair_moulding_blue.png",
+			"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"minecraft:dye:4", "minecraft:iron_ingot:0", "minecraft:dye:4",
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
+			]
+		},
+		{
+			"uniqueName" : "vulcanair_black",
+			"itemDisplayName" : "Black Vulcanair",
+			"modelTexture" : "vulcanair_black.png",
+			"backplateTexture" : "vulcanair_backplate.png",
+			"mouldingTexture" : "vulcanair_moulding_black.png",
+			"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"minecraft:dye:0", "minecraft:iron_ingot:0", "minecraft:dye:0",
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
+			]
+		},
+		{
+			"uniqueName" : "vulcanair_red",
+			"itemDisplayName" : "Red Vulcanair",
+			"modelTexture" : "vulcanair_red.png",
+			"backplateTexture" : "vulcanair_backplate.png",
+			"mouldingTexture" : "vulcanair_moulding_red.png",
+			"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"minecraft:dye:1", "minecraft:iron_ingot:0", "minecraft:dye:1",
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
+			]
+		},
+		{
+			"uniqueName" : "vulcanair_dark_red",
+			"itemDisplayName" : "Dark Red Vulcanair",
+			"modelTexture" : "vulcanair_red.png",
+			"backplateTexture" : "vulcanair_backplate.png",
+			"mouldingTexture" : "vulcanair_moulding_dark_red.png",
+			"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"minecraft:dye:1", "minecraft:iron_ingot:0", "minecraft:dye:0",
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
+			]
+		},
+		{
+			"uniqueName" : "vulcanair_white_orange",
+			"itemDisplayName" : "White-Orange Vulcanair",
+			"modelTexture" : "vulcanair_white_orange.png",
+			"backplateTexture" : "vulcanair_backplate.png",
+			"mouldingTexture" : "vulcanair_moulding_white.png",
+			"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"minecraft:dye:15", "minecraft:iron_ingot:0", "minecraft:dye:14",
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
+			]
+		}
+	],
+
+  "general": {
+		"packVersion" : 5,
+		"numberWindows" : 5,
+		"name" : "Vulcanair",
+    "type" : "plane",
+		"description" : "The Vulcanair is a six-seat, twin-engined, high-wing monoplane aircraft.  Inspired by the real life Vulcanair P.68 Italian aircraft, its rigid landing gear allows for the mounting of pontoons for both land and sea flights.",
+		"openTop" : false,
+		"emptyMass" : 1230,
+    "defaultDisplayText" : "Wolfvanox",
+    "displayTextMaxLength" : 12
+  },
+
+  "motorized" : {
+    "fuelCapacity" : 15000,
+    "instruments" : [
+			{
+				"pos" : [11, 14, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [22, 64],
+				"scale" : 0.7,
+				"hudScale" : 0.75
+			},
+			{
+				"pos" : [6.25, 14, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [35, 63],
+				"scale" : 0.7,
+				"hudScale" : 0.9
+			},
+			{
+				"pos" : [1.5, 14, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [50, 63],
+				"scale" : 0.7,
+				"hudScale" : 0.9
+			},
+			{
+				"pos" : [-3.25, 14, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [65, 63],
+				"scale" : 0.7,
+				"hudScale" : 0.9
+			},
+			{
+				"pos" : [-8, 14, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [78, 64],
+				"scale" : 0.7,
+				"hudScale" : 0.75
+			},
+			{
+				"pos" : [11, 10, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [22, 88],
+				"scale" : 0.7,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [6.25, 10, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [36, 88],
+				"scale" : 0.7,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [1.5, 10, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [50, 88],
+				"scale" : 0.7,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [-3.25, 10, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [64, 88],
+				"scale" : 0.7,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [-8, 10, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [78, 88],
+				"scale" : 0.7,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [0, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [70, 65],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 2
+			},
+			{
+				"pos" : [-3, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [80, 65],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 2
+			},
+			{
+				"pos" : [-6, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [70, 79],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 2
+			},
+			{
+				"pos" : [-9, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [80, 79],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 2
+			},
+			{
+				"pos" : [12, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [45, 65],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [9, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [55, 65],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [6, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [45, 79],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [3, 6.5, 48.9],
+				"rot" : [0, 0, 0],
+				"hudpos" : [55, 79],
+				"scale" : 0.5,
+				"hudScale" : 0.6,
+				"optionalEngineNumber" : 1
+			}
+    ],
+		"controls" : [
+			{
+				"pos" : [-12, 14, 48.9],
+				"hudpos" : [95, 65],
+				"controlName" : "aircraft_throttle"
+			},
+			{
+				"pos" : [-12, 10, 48.9],
+				"hudpos" : [10, 67],
+				"controlName" : "aircraft_flaps"
+			},
+			{
+				"pos" : [-12.75, 6, 48.9],
+				"hudpos" : [90, 65],
+				"controlName" : "parking_brake"
+			}
+    ]
+  },
+
+  "plane" : {
+    "hasFlaps" : true,
+    "wingSpan" : 12.0,
+    "wingArea" : 18.6,
+    "tailDistance" : 7.0,
+    "rudderArea" : 1.5,
+    "elevatorArea" : 3.0,
+    "defaultElevatorAngle" : -10.0
+  },
+	
+	"parts": [
+    {
+      "pos" : [0, -0.60, 4.52625],
+      "names" : ["wheelsmall"],
+			"turnsWithSteer" : true
+    },
+	{
+      "pos" : [-1.75, -0.60, 0],
+      "names" : ["pontoon","wheelsmall"]
+    },
+	{
+      "pos" : [1.75, -0.60, 0],
+      "names" : ["pontoon","wheelsmall"]
+    },
+	{
+      "pos" : [2.69, 1.65, 1.17],
+      "names" : ["enginelycomingo360"]
+    },
+	{
+      "pos" : [-2.69, 1.65, 1.17],
+      "names" : ["enginelycomingo360"]
+    },
+	{
+      "pos" : [0.45, 0.6, 2.37],
+      "names" : ["seat"],
+			"isController" : true
+    },
+			{
+      "pos" : [-0.45, 0.6, 2.37],
+      "names" : ["seat"],
+			"isController" : true
+    },
+	{
+      "pos" : [0.45, 0.6, 1.245],
+      "names" : ["crate","seat"]
+    },
+	{
+      "pos" : [-0.45, 0.6, 1.245],
+      "names" : ["crate","seat"]
+    },
+	{
+      "pos" : [0.45, 0.6, 0.12],
+      "names" : ["crate","seat"]
+    },
+	{
+      "pos" : [-0.45, 0.6, 0.12],
+      "names" : ["crate","seat"]
+    }
+  ],
+
+  "collision": [
+    {
+      "pos" : [0, 0.2, 4],
+      "width" : 1,
+      "height" : 1
+    },
+	{
+      "pos" : [0, 1.25, -4.5],
+      "width" : 1,
+      "height" : 0.5
+    },
+	{
+      "pos" : [-1.25, 1.2625, -4.75],
+      "width" : 1,
+      "height" : 0.125
+    },
+	{
+      "pos" : [1.25, 1.2625, -4.75],
+      "width" : 1,
+      "height" : 0.125
+    },
+	{
+      "pos" : [0, 2.325, -4.75],
+      "width" : 0.25,
+      "height" : 2.25
+    },
+	{
+      "pos" : [0, 0.875, -1.5],
+      "width" : 1.75,
+      "height" : 1.75
+    },
+	{
+      "pos" : [0, 1.125, -3.5],
+      "width" : 1.25,
+      "height" : 1.25
+    },
+	{
+      "pos" : [0, 1.7625, 1.5],
+      "width" : 1.75,
+      "height" : 0.125
+    },
+	{
+      "pos" : [0, 1.7625, 0.25],
+      "width" : 1.75,
+      "height" : 0.125
+    },
+	{
+      "pos" : [-2.0, 1.7625, 0.25],
+      "width" : 1.75,
+      "height" : 0.125
+    },
+	{
+      "pos" : [2.0, 1.7625, 0.25],
+      "width" : 1.75,
+      "height" : 0.125
+    },
+	{
+      "pos" : [-4.2, 1.7625, 0.25],
+      "width" : 1.75,
+      "height" : 0.125
+    },
+	{
+      "pos" : [4.2, 1.7625, 0.25],
+      "width" : 1.75,
+      "height" : 0.125
+    },
+	{
+      "pos" : [-6.5, 1.7625, 0.25],
+      "width" : 1.75,
+      "height" : 0.125
+    },
+	{
+      "pos" : [6.5, 1.7625, 0.25],
+      "width" : 1.75,
+      "height" : 0.125
+    }
+  ],
+
+  "rendering": {
+		"modelName" : "vulcanair.obj",
+		"textMarkings" : [
+			{
+				"pos" : [0.625, 1.25, -2.8125],
+				"rot" : [0, 100, 0],
+				"scale" : 0.75,
+				"color" : "#CCCCCC"
+			},
+			{
+				"pos" : [-0.625, 1.25, -2.8125],
+				"rot" : [0, -100, 0],
+				"scale" : 0.75,
+				"color" : "#CCCCCC"
+			}
+		],
+		"lights" : [
+			{
+				"pos" : [4.375, 1.7475, 1.13],
+				"rot" : [0, 0, 0],
+				"lightRot" : [-30, 25, 0],
+				"width" : 2,
+				"length" : 2,
+				"brightness" : 30,
+				"switchNumber" : 3,
+				"color" : "#FFFFFF",
+				"beamDistance" : 15,
+				"beamDiameter" : 4
+			},
+			{
+				"pos" : [4.5, 1.7475, 1.13],
+				"rot" : [0, 0, 0],
+				"lightRot" : [-15, 18, 0],
+				"width" : 2,
+				"length" : 2,
+				"brightness" : 40,
+				"switchNumber" : 4,
+				"color" : "#FFFFFF",
+				"beamDistance" : 30,
+				"beamDiameter" : 6
+			}
+		],
+		"beacons" : [
+			{
+				"pos" : [7.25, 1.875, 0.49],
+				"rot" : [0, 0, -90],
+				"width" : 2,
+				"length" : 2,
+				"height" : 1,
+				"brightness" : 16,
+				"switchNumber" : 1,
+				"color" : "#FF0000",
+				"flashing" : false
+			},
+			{
+				"pos" : [-7.25, 1.875, 0.49],
+				"rot" : [0, 0, 90],
+				"width" : 2,
+				"length" : 2,
+				"height" : 1,
+				"brightness" : 16,
+				"switchNumber" : 1,
+				"color" : "#00FF00",
+				"flashing" : false
+			},
+			{
+				"pos" : [0, 3.75, -4.57],
+				"rot" : [0, 0, 0],
+				"width" : 2,
+				"length" : 2,
+				"height" : 1,
+				"brightness" : 16,
+				"switchNumber" : 1,
+				"color" : "#FFFFFF",
+				"flashing" : false
+			},
+			{
+				"pos" : [7.25, 1.875, 0.365],
+				"rot" : [0, 0, -90],
+				"width" : 2,
+				"length" : 2,
+				"height" : 1,
+				"brightness" : 30,
+				"switchNumber" : 2,
+				"color" : "#FFFFFF",
+				"flashing" : true
+			},
+			{
+				"pos" : [-7.25, 1.875, 0.365],
+				"rot" : [0, 0, 90],
+				"width" : 2,
+				"length" : 2,
+				"height" : 1,
+				"brightness" : 30,
+				"switchNumber" : 2,
+				"color" : "#FFFFFF",
+				"flashing" : true
+			},
+			{
+				"pos" : [0, 1.7, -1.68],
+				"rot" : [0, 0, 0],
+				"width" : 2,
+				"length" : 2,
+				"height" : 1,
+				"brightness" : 30,
+				"switchNumber" : 2,
+				"color" : "#FF0000",
+				"flashing" : true
+			}
+		],
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$Aileron_L",
+				"rotationPoint" : [-5.75, 1.7500005, -0.192500],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Aileron_R",
+				"rotationPoint" : [5.75, 1.7500005, -0.192500],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Elevator_L",
+				"rotationPoint" : [0.84375, 1.3125, -5.130000],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "elevator"
+			},
+			{
+				"partName" : "$Elevator_R",
+				"rotationPoint" : [0.84375, 1.3125, -5.130000],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "elevator"
+			},
+			{
+				"partName" : "$Rudder",
+				"rotationPoint" : [0, 0.75, -5.005000],
+				"rotationAxis" : [0, 1, 0],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "$WheelStrut",
+				"rotationPoint" : [0, -0.35, 4.52625],
+				"rotationAxis" : [0, -1, 0],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "$Flap_L",
+				"rotationPoint" : [-2.75, 1.75, -0.192500],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "flap"
+			},
+			{
+				"partName" : "$Flap_R",
+				"rotationPoint" : [2.75, 1.75, -0.192500],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "flap"
+			}
+		]
+  }
+}

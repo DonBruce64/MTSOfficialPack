@@ -1,0 +1,110 @@
+package minecrafttransportsimulator.dataclasses;
+
+import minecrafttransportsimulator.systems.PackParserSystem;
+import net.minecraftforge.fml.common.Mod;
+
+/**Main registry class.  This class should be referenced by any class looking for
+ * MTS items or blocks.  Adding new items and blocks is a simple as adding them
+ * as a field; the init method automatically registers all items and blocks in the class
+ * and orders them according to the order in which they were declared.
+ * This calls the {@link PackParserSystem} to register any custom vehicles and parts
+ * that were loaded by packs.
+ * 
+ * @author don_bruce
+ */
+@Mod.EventBusSubscriber
+public final class MTSRegistry{
+/*
+	
+	private static void initPartRecipes(){
+		//Seats
+		for(int i=0; i<96; ++i){
+			registerRecipe(new ItemStack(seat, 1, i),
+				" BA",
+				" BA",
+				"AAA",
+				'A', new ItemStack(Blocks.WOODEN_SLAB, 1, i%6),
+				'B', new ItemStack(Blocks.WOOL, 1, i/6));
+		}
+		for(int i=0; i<6; ++i){
+			registerRecipe(new ItemStack(seat, 1, 96 + i),
+				" BA",
+				" BA",
+				"AAA",
+				'A', new ItemStack(Blocks.WOODEN_SLAB, 1, i%6),
+				'B', new ItemStack(Items.LEATHER));
+		}
+		//Skid
+		registerRecipe(new ItemStack(skid),
+				"A A",
+				" A ",
+				"  A",
+				'A', Blocks.IRON_BARS);
+		//Pontoon
+		registerRecipe(new ItemStack(pontoon, 2),
+				"AAA",
+				"BBB",
+				"AAA",
+				'A', Items.IRON_INGOT,
+				'B', Blocks.WOOL);
+
+	
+	private static void initEngineRecipes(){
+		//New engines
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineAMCI4, false),
+				"AAA",
+				"BCB",
+				"BBB",
+				'A', Blocks.PISTON,
+				'B', Blocks.OBSIDIAN,
+				'C', Items.IRON_INGOT);
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineLycomingO360, false),
+				"ABA",
+				"BCB",
+				"ABA",
+				'A', Blocks.PISTON,
+				'B', Blocks.OBSIDIAN,
+				'C', Items.IRON_INGOT);
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineBristolMercury, false),
+				"ABA",
+				"ACA",
+				"ABA",
+				'A', Blocks.PISTON,
+				'B', Blocks.OBSIDIAN,
+				'C', Items.IRON_INGOT);
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineDetroitDiesel, false),
+				"AAA",
+				"ACA",
+				"BBB",
+				'A', Blocks.PISTON,
+				'B', Blocks.OBSIDIAN,
+				'C', Items.IRON_INGOT);
+		
+		//Repaired engines
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineAMCI4, false),
+				"B B",
+				" C ",
+				"B B",
+				'B', Blocks.OBSIDIAN,
+				'C', MTSRegistry.engineAMCI4);
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineLycomingO360, false),
+				"B B",
+				" C ",
+				"B B",
+				'B', Blocks.OBSIDIAN,
+				'C', MTSRegistry.engineLycomingO360);
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineBristolMercury, false),
+				"B B",
+				"BCB",
+				"B B",
+				'B', Blocks.OBSIDIAN,
+				'C', MTSRegistry.engineBristolMercury);
+		registerRecipe(ItemPartEngine.getStackWithData((ItemPartEngine) MTSRegistry.engineDetroitDiesel, false),
+				"B B",
+				"BCB",
+				"B B",
+				'B', Blocks.OBSIDIAN,
+				'C', MTSRegistry.engineDetroitDiesel);
+	}
+	
+}

@@ -1,0 +1,181 @@
+{
+  "definitions" : [
+		{
+			"uniqueName" : "scout",
+			"itemDisplayName" : "Scout",
+			"modelTexture" : "scout.png",
+      "backplateTexture" : "scout_backplate.png",
+			"mouldingTexture" : "scout_backplate.png",
+			"recipe" : [
+				"minecraft:glass_pane:0", "minecraft:dye:15", "minecraft:glass_pane:0",
+				"minecraft:iron_ingot:0", "minecraft:dye:1", "minecraft:iron_ingot:0",
+				"minecraft:iron_ingot:0", "minecraft:dye:4", "minecraft:iron_ingot:0"
+			]
+		}
+	],
+
+	"general": {
+		"packVersion" : 5,
+		"numberWindows" : 8,
+		"name" : "Scout",
+    "type" : "car",
+    "description" : "The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two and can fit two crates in the back.",
+    "openTop" : false,
+    "emptyMass" : 1230,
+    "defaultDisplayText" : "IH-SCOUT",
+    "displayTextMaxLength" : 7
+  },
+
+  "motorized" : {
+    "fuelCapacity" : 15000,
+    "instruments" : [],
+		"controls" : []
+  },
+
+  "car" : {
+		"isBigTruck" : false,
+    "isFrontWheelDrive" : true,
+		"isRearWheelDrive" : true,
+    "dragCoefficient" : 0.45,
+    "hornSound" : "horn_car1"
+  },
+	
+	"parts": [
+		{
+      "pos" : [-1.125, 0.0, -0.25],
+      "names" : ["wheelmedium"]
+    },
+		{
+      "pos" : [1.125, 0.0, -0.25],
+      "names" : ["wheelmedium"]
+    },
+		{
+      "pos" : [-1.125, 0.0, 2.6875],
+      "names" : ["wheelmedium"],
+			"turnsWithSteer" : true
+    },
+		{
+      "pos" : [1.125, 0.0, 2.6875],
+      "names" : ["wheelmedium"],
+			"turnsWithSteer" : true
+		},
+		{
+      "pos" : [-0.65, 0.525, 0.8],
+      "names" : ["seat"]
+    },
+		{
+      "pos" : [0.65, 0.525, 0.8],
+      "names" : ["seat"],
+			"isController" : true
+    },
+		{
+      "pos" : [-0.5, 1.0, -0.4375],
+      "names" : ["crate"]
+    },
+		{
+      "pos" : [0.5, 1.0, -0.4375],
+      "names" : ["crate"]
+    },
+		{
+      "pos" : [0, 0.35, 2.25],
+      "names" : ["engineamci4"]
+    }
+  ],
+	
+  "collision": [
+    {
+      "pos" : [-0.5, 0.9375, 2.25],
+      "width" : 1.0,
+      "height" : 0.15
+    },
+		 {
+      "pos" : [0.5, 0.9375, 2.25],
+      "width" : 1.0,
+      "height" : 0.15
+    },
+		{
+      "pos" : [0, 0.625, -0.25],
+      "width" : 1,
+      "height" : 0.15
+    },
+		{
+      "pos" : [0, 1.725, 0.45],
+      "width" : 2.0,
+      "height" : 0.15
+    }
+  ],
+
+  "rendering": {
+		"modelName" : "scout.obj",
+		"textMarkings" : [
+			{
+				"pos" : [0, 0.3, 3.17],
+				"rot" : [0, 0, 0],
+				"scale" : 0.20,
+				"color" : "#000000"
+			},
+			{
+				"pos" : [0, 0.69, -1.19],
+				"rot" : [0, 180, 0],
+				"scale" : 0.20,
+				"color" : "#000000"
+			}
+		],
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$Gas",
+				"rotationPoint" : [0, 0.000861, 1.519962],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "throttle"
+			},
+			{
+				"partName" : "$Brake",
+				"rotationPoint" : [0, 0.022653, 1.583881],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "brake"
+			},
+			{
+				"partName" : "$Parking_Brake",
+				"rotationPoint" : [0, 0.403453, 1.355693],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "p_brake"
+			},
+			{
+				"partName" : "$Gearshift",
+				"rotationPoint" : [0, 0.403453, 1.286943],
+				"rotationAxis" : [2, 0, 0],
+				"rotationVariable" : "gearshift"
+			},
+			{
+				"partName" : "$Door_L",
+				"rotationPoint" : [1.096287, 0, 1.718194],
+				"rotationAxis" : [0, -1, 0],
+				"rotationVariable" : "door"
+			},
+			{
+				"partName" : "$Door_L_Window",
+				"rotationPoint" : [1.096287, 0, 1.718194],
+				"rotationAxis" : [0, -1, 0],
+				"rotationVariable" : "door"
+			},
+			{
+				"partName" : "$Door_R",
+				"rotationPoint" : [-1.122463, 0, 1.718194],
+				"rotationAxis" : [0, 1, 0],
+				"rotationVariable" : "door"
+			},
+			{
+				"partName" : "$Door_R_Window",
+				"rotationPoint" : [-1.122463, 0, 1.718194],
+				"rotationAxis" : [0, 1, 0],
+				"rotationVariable" : "door"
+			},
+			{
+				"partName" : "$SteeringWheel",
+				"rotationPoint" : [0.533787, 0.874197, 1.764971],
+				"rotationAxis" : [0, 0.3907, -0.9205],
+				"rotationVariable" : "steeringwheel"
+			}
+		]
+  }
+}

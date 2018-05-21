@@ -1,0 +1,24 @@
+{    
+	"enginelycomingo360_cranking"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginelycomingo360_cranking","stream": false}]},
+	"enginelycomingo360_starting"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginelycomingo360_starting","stream": false}]},
+	"enginelycomingo360_running"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginelycomingo360_running","stream": false}]},
+	"enginelycomingo360_sputter"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:engine_sputter","stream": false}]},
+	
+	"enginebristolmercury_cranking"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginebristolmercury_cranking","stream": false}]},
+	"enginebristolmercury_starting"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginebristolmercury_starting","stream": false}]},
+	"enginebristolmercury_running"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginebristolmercury_running","stream": false}]},
+	"enginebristolmercury_sputter"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:engine_sputter","stream": false}]},
+
+	"engineamci4_cranking"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:engineamci4_cranking","stream": false}]},
+	"engineamci4_starting"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:engineamci4_starting","stream": false}]},
+	"engineamci4_running"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:engineamci4_running","stream": false}]},
+	"engineamci4_sputter"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:engine_sputter","stream": false}]},
+ 
+	"enginedetroitdiesel_cranking"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginedetroitdiesel_cranking","stream": false}]},
+	"enginedetroitdiesel_starting"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginedetroitdiesel_starting","stream": false}]},
+	"enginedetroitdiesel_running"     : {"category": "master", "sounds": [{"name": "mtsofficialpack:enginedetroitdiesel_running","stream": false}]},
+	"enginedetroitdiesel_sputter"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:engine_sputter","stream": false}]},
+ 
+	"horn_car"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:horn_car","stream": false}]},
+	"horn_truck"    : {"category": "master", "sounds": [{"name": "mtsofficialpack:horn_truck","stream": false}]}
+}

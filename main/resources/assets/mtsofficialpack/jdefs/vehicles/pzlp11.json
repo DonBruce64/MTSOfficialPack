@@ -1,0 +1,305 @@
+{
+  "definitions" : [
+		{
+			"uniqueName" : "pzlp11",
+    	"itemDisplayName" : "PZL-P11",
+    	"modelTexture" : "pzlp11.png",
+			"backplateTexture" : "pzlp11_backplate.png",
+			"mouldingTexture" : "pzlp11_moulding.png",
+    	"recipe" : [
+				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
+				"", "minecraft:iron_bars:0", "",
+				"minecraft:iron_ingot:0", "minecraft:iron_bars:0", "minecraft:iron_ingot:0"
+			]
+		}
+	],
+
+  "general": {
+		"packVersion" : 5,
+		"name" : "PZL-P11",
+    "type" : "plane",
+		"description" : "The PZL P11.c is a born and bred fighter aircraft. It's shoulder wing monoplane configuration provides the pilot with exceptional visibility of the sky and ground, and makes the PZL P11.c much faster than it's biplane fighter counterparts.",
+		"openTop" : true,
+		"emptyMass" : 1150,
+    "defaultDisplayText" : "MAX 4H70 M",
+    "displayTextMaxLength" : 10
+  },
+
+  "motorized" : {
+    "fuelCapacity" : 7000,
+    "instruments" : [
+			{
+				"pos" : [4.5, 11.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [27, 64],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [1.5, 11.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [42, 64],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [-1.5, 11.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [57, 64],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [-4.5, 11.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [72, 64],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [4.5, 8.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [27, 88],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [1.5, 8.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [42, 88],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [-1.5, 8.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [57, 88],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [-4.5, 8.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [72, 88],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [0.0, 5.6, -13.2],
+				"rot" : [0, 0, 0],
+				"hudpos" : [10, 88],
+				"scale" : 0.5,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [7.99, 8.6, -17.5],
+				"rot" : [0, 90, 0],
+				"hudpos" : [30, 80],
+				"scale" : 0.5,
+				"hudScale" : 1.0,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [-7.99, 8.6, -17.5],
+				"rot" : [0, -90, 0],
+				"hudpos" : [65, 80],
+				"scale" : 0.5,
+				"hudScale" : 1.0,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [-7.99, 8.6, -20.25],
+				"rot" : [0, -90, 0],
+				"hudpos" : [80, 80],
+				"scale" : 0.5,
+				"hudScale" : 1.0,
+				"optionalEngineNumber" : 1
+			}
+    ],
+		"controls" : [
+			{
+				"pos" : [3.5, 5, -13.2],
+				"hudpos" : [95, 65],
+				"controlName" : "aircraft_throttle"
+			},
+			{
+				"pos" : [-3.5, 5, -13.2],
+				"hudpos" : [90, 65],
+				"controlName" : "parking_brake"
+			}
+    ]
+  },
+
+  "plane" : {
+    "hasFlaps" : false,
+    "wingSpan" : 11.0,
+    "wingArea" : 18.0,
+    "tailDistance" : 7.0,
+    "rudderArea" : 1.5,
+    "elevatorArea" : 3.0,
+    "defaultElevatorAngle" : -10.0
+  },		
+	"parts": [
+    {
+      "pos" : [0, -0.15, -5.25],
+      "names" : ["skid"]
+    },
+    {
+      "pos" : [-1.4, -1.4875, 0.375],
+      "names" : ["wheelmedium", "pontoon"]
+    },
+    {
+      "pos" : [1.4, -1.4875, 0.375],
+      "names" : ["wheelmedium", "pontoon"]
+    },
+		{
+      "pos" : [0, 0.15, 0.85],
+      "names" : ["enginebristolmercury"]
+    },
+    {
+      "pos" : [0, 0.2, -1.3],
+      "names" : ["seat"],
+			"isController" : true
+    }
+  ],	
+  "collision": [
+    {
+      "pos" : [0, 0.2, 0.5],
+      "width" : 1,
+      "height" : 1
+    },
+		{
+      "pos" : [0, 0.2, -0.25],
+      "width" : 1,
+      "height" : 1
+    },
+		{
+      "pos" : [0, 0.375, -2.5],
+      "width" : 1,
+      "height" : 0.75
+    },
+		{
+      "pos" : [0, 0.375, -3.75],
+      "width" : 1,
+      "height" : 0.75
+    },
+		{
+      "pos" : [0, 0.375, -5],
+      "width" : 1,
+      "height" : 0.75
+    },
+		{
+      "pos" : [-1, 0.5625, -5.5],
+      "width" : 1,
+      "height" : 0.125
+    },
+		{
+      "pos" : [1, 0.5625, -5.5],
+      "width" : 1,
+      "height" : 0.125
+    },
+		{
+      "pos" : [0, 1.125, -5.5],
+      "width" : 0.25,
+      "height" : 1.25
+    },
+		{
+      "pos" : [-1.75, 1.2625, -0.1],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+		{
+      "pos" : [1.75, 1.2625, -0.1],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+		{
+      "pos" : [-3.25, 1.2625, -0.1],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+		{
+      "pos" : [3.25, 1.2625, -0.1],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+		{
+      "pos" : [-4.5, 1.2625, -0.1],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+		{
+      "pos" : [4.5, 1.2625, -0.1],
+      "width" : 1.25,
+      "height" : 0.125
+    }
+  ],
+
+  "rendering": {
+		"modelName" : "pzlp11.obj",
+		"windows" : [
+			{
+        "pos1" : [-0.25, 1.125, -0.75],
+				"pos2" : [-0.25, 0.88, -0.325],
+				"pos3" : [0.25, 0.88, -0.325],
+				"pos4" : [0.25, 1.125, -0.75]
+      },
+			{
+        "pos1" : [-0.25, 1.05, -0.75],
+				"pos2" : [-0.25, 0.88, -0.75],
+				"pos3" : [-0.25, 0.88, -0.45]
+      },
+			{
+				"pos1" : [0.25, 0.88, -0.45],
+				"pos2" : [0.25, 0.88, -0.75],
+				"pos3" : [0.25, 1.05, -0.75]
+      }
+    ],
+		"textMarkings" : [
+      {
+        "pos" : [0.560, 0.4, -3.03],
+        "rot" : [0, 99, 0],
+				"scale" : 0.5,
+				"color" : "#9D9D97"
+      },
+			{
+        "pos" : [-0.560, 0.4, -3.03],
+        "rot" : [0, -99, 0],
+				"scale" : 0.5,
+				"color" : "#9D9D97"
+      }
+    ],
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$Aileron_L",
+				"rotationPoint" : [0, 1.1875, -0.8125],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Aileron_R",
+				"rotationPoint" : [0, 1.1875, -0.8125],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Elevator_L",
+				"rotationPoint" : [0, 0.5625, -5.5],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "elevator"
+			},
+			{
+				"partName" : "$Elevator_R",
+				"rotationPoint" : [0, 0.5625, -5.5],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "elevator"
+			},
+			{
+				"partName" : "$Rudder",
+				"rotationPoint" : [0, 0, -5.5],
+				"rotationAxis" : [0, 1, 0],
+				"rotationVariable" : "rudder"
+			}
+		]
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "definitions" : [
+		{
+			"subName" : "_oak",
+    	"extraMaterials" : ["minecraft:wooden_slab:0:5", "minecraft:planks:0:5"]
+		},
+		{
+			"subName" : "_spruce",
+    	"extraMaterials" : ["minecraft:wooden_slab:1:5", "minecraft:planks:1:5"]
+		},
+		{
+			"subName" : "_birch",
+    	"extraMaterials" : ["minecraft:wooden_slab:2:5", "minecraft:planks:2:5"]
+		},
+		{
+			"subName" : "_jungle",
+			"extraMaterials" : ["minecraft:wooden_slab:3:5", "minecraft:planks:3:5"]
+		},
+		{
+			"subName" : "_acacia",
+			"extraMaterials" : ["minecraft:wooden_slab:4:5", "minecraft:planks:4:5"]
+		},
+		{
+			"subName" : "_darkoak",
+    	"extraMaterials" : ["minecraft:wooden_slab:5:5", "minecraft:planks:5:5"]
+		}
+	],
+
+  "general": {
+    "type" : "plane",
+		"openTop" : false,
+		"emptyMass" : 800,
+		"materials" : []
+  },
+
+  "motorized" : {
+    "fuelCapacity" : 5000,
+    "instruments" : [
+			{
+				"pos" : [7.5, 5.5, 11.49],
+				"rot" : [0, 0, 0],
+				"hudpos" : [30, 63],
+				"scale" : 1.0,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [2, 5.5, 11.49],
+				"rot" : [0, 0, 0],
+				"hudpos" : [50, 63],
+				"scale" : 1.0,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [-3.5, 5.5, 11.49],
+				"rot" : [0, 0, 0],
+				"hudpos" : [70, 63],
+				"scale" : 1.0,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [7.5, 0, 11.49],
+				"rot" : [0, 0, 0],
+				"hudpos" : [30, 87],
+				"scale" : 1.0,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [2, 0, 11.49],
+				"rot" : [0, 0, 0],
+				"hudpos" : [50, 87],
+				"scale" : 1.0,
+				"hudScale" : 1.0
+			},
+			{
+				"pos" : [-3.5, 0, 11.49],
+				"rot" : [0, 0, 0],
+				"hudpos" : [70, 87],
+				"scale" : 1.0,
+				"hudScale" : 1.0
+			}
+    ],
+		"controls" : [
+			{
+				"pos" : [-10, 7, 11.49],
+				"hudpos" : [95, 65],
+				"controlName" : "aircraft_throttle"
+			},
+			{
+				"pos" : [-10, 3, 11.49],
+				"hudpos" : [10, 67],
+				"controlName" : "aircraft_flaps"
+			},
+			{
+				"pos" : [-10, -1, 11.49],
+				"hudpos" : [90, 65],
+				"controlName" : "parking_brake"
+			}
+    ]
+  },
+
+  "plane" : {
+    "hasFlaps" : true,
+    "wingSpan" : 11.0,
+    "wingArea" : 16.0,
+    "tailDistance" : 7.0,
+    "rudderArea" : 1.5,
+    "elevatorArea" : 3.0,
+    "defaultElevatorAngle" : -5.0
+  },
+	
+	"parts": [
+    {
+      "pos" : [0, -0.85, 1.7],
+      "names" : ["mtsofficialpack:wheelsmall"],
+			"turnsWithSteer" : true
+    },
+    {
+      "pos" : [-1.65, -0.85, 0],
+      "names" : ["mtsofficialpack:wheelsmall", "mtsofficialpack:pontoon"]
+    },
+    {
+      "pos" : [1.65, -0.85, 0],
+      "names" : ["mtsofficialpack:wheelsmall", "mtsofficialpack:pontoon"]
+    },
+    {
+      "pos" : [0, 0.1, 1.65],
+      "names" : ["mtsofficialpack:enginelycomingo360"]
+    },
+    {
+      "pos" : [-0.45, 0.4, 0.01],
+      "names" : ["mtsofficialpack:seat"],
+			"isController" : true
+    },
+		{
+      "pos" : [0.45, 0.4, 0.01],
+      "names" : ["mtsofficialpack:seat"],
+			"isController" : true
+    },
+    {
+      "pos" : [0, 0.4, -1],
+      "names" : ["mtsofficialpack:crate", "mtsofficialpack:seat"]
+    }
+  ],
+
+  "collision": [
+    {
+      "pos" : [0, 0.2, 1.5],
+      "width" : 1,
+      "height" : 1
+    },
+    {
+      "pos" : [0, 0.2, -2.75],
+      "width" : 1,
+      "height" : 1
+    },
+    {
+      "pos" : [1.5, 0.5625, -4.25],
+      "width" : 1,
+      "height" : 0.125
+    },
+    {
+      "pos" : [-1.5, 0.5625, -4.25],
+      "width" : 1,
+      "height" : 0.125
+    },
+    {
+      "pos" : [1.5, 0.5625, -4.25],
+      "width" : 1,
+      "height" : 0.125
+    },
+    {
+      "pos" : [0, 1.25, -4.25],
+      "width" : 0.25,
+      "height" : 1.5
+    },
+    {
+      "pos" : [0, 1.6625, 0.25],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [-1.25, 1.6625, 0.25],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [1.25, 1.6625, 0.25],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [-2.5, 1.6625, 0.25],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [2.5, 1.6625, 0.25],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [-3.75, 1.6625, 0.25],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [3.75, 1.6625, 0.25],
+      "width" : 1.25,
+      "height" : 0.125
+    }
+  ],
+
+  "rendering": {
+		"numberWindows" : 8,
+		"defaultDisplayText" : "MC-172",
+    "displayTextMaxLength" : 7,
+		"textMarkings" : [
+      {
+        "pos" : [0.65625, 0.25, -2.8125],
+        "rot" : [0, 105, 0],
+				"scale" : 0.75,
+				"color" : "#CCCCCC"
+      },
+			{
+        "pos" : [-0.65625, 0.25, -2.8125],
+        "rot" : [0, -105, 0],
+				"scale" : 0.75,
+				"color" : "#CCCCCC"
+      }
+			],
+			"rotatableModelObjects" : [
+			{
+				"partName" : "$Aileron_L",
+				"rotationPoint" : [0, 1.6875, 0],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Aileron_R",
+				"rotationPoint" : [0, 1.6875, 0],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Elevator_L",
+				"rotationPoint" : [0, 0.5, -4.25],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "elevator"
+			},
+			{
+				"partName" : "$Elevator_R",
+				"rotationPoint" : [0, 0.5, -4.25],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "elevator"
+			},
+			{
+				"partName" : "$Rudder",
+				"rotationPoint" : [0, 0, -4.25],
+				"rotationAxis" : [0, 1, 0],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "&$NavigationLight_FFFFFF_FFFFF",
+				"rotationPoint" : [0, 0, -4.25],
+				"rotationAxis" : [0, 1, 0],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "$Flap_L",
+				"rotationPoint" : [0, 1.6875, 0.125],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "flap"
+			},
+			{
+				"partName" : "$Flap_R",
+				"rotationPoint" : [0, 1.6875, 0.125],
+				"rotationAxis" : [-1, 0, 0],
+				"rotationVariable" : "flap"
+			}
+		]
+  }
+}

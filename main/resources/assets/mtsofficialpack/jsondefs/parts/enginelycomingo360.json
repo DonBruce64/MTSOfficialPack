@@ -1,0 +1,16 @@
+{
+  "general": {
+    "type" : "engine_aircraft",
+		"materials" : ["minecraft:piston:0:4", "minecraft:obsidian:0:4", "minecraft:iron_ingot:0:1"]
+  },
+	
+	"engine" : {
+    "isAutomatic" : true,
+    "starterPower" : 50,
+    "starterDuration" : 4,
+    "maxRPM" : 2900,
+    "fuelConsumption" : 0.4,
+    "gearRatios" : [1.0],
+		"repairMaterials" : ["minecraft:obsidian:0:4"]
+	}
+}

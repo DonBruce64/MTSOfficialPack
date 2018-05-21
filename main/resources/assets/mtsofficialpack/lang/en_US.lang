@@ -1,0 +1,24 @@
+#Translated by don_bruce
+
+itemGroup.mtsofficialpack=MTS Official Vehicle Pack
+
+item.mc172_oak.name=Oak MC-172
+item.mc172_spruce.name=Spruce MC-172
+item.mc172_birch.name=Birch MC-172
+item.mc172_jungle.name=Jungle MC-172
+item.mc172_acacia.name=Acacia MC-172
+item.mc172_darkoak.name=Dark Oak MC-172
+description.mc172=The MC-172 is not fancy, but its cheap and sturdy airframe is at home on any rural Minecraft base.  High wings and a good power-to-weight ratio make this a good all-around starter.
+
+item.gmcbrigboxred=Red Box Truck GMC Brigadier
+item.gmcbrigboxblack=Black Box Truck GMC Brigadier
+item.gmcbrigboxwhite=White Box Truck GMC Brigadier
+item.gmcbrigboxyellow=Yellow Box Truck GMC Brigadier
+item.gmcbrigboxgreen=Green Box Truck GMC Brigadier
+description.gmcbrigbox=The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  With multiple configurations it's a solid addition to any city.
+
+
+item.crate.name=Vehicle Crate
+item.wheelsmall.name=Small Wheel
+item.wheelmeduim.name=Medium Wheel
+item.wheellarge.name=Large Wheel

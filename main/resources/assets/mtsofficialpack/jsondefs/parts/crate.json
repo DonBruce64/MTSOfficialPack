@@ -1,0 +1,6 @@
+{
+  "general": {
+    "type" : "crate",
+		"materials" : ["minecraft:planks:-1:8"]
+  }
+}
