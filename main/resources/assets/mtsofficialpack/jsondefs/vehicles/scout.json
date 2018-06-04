@@ -1,29 +1,16 @@
 {
   "definitions" : [
 		{
-			"uniqueName" : "scout",
-			"itemDisplayName" : "Scout",
-			"modelTexture" : "scout.png",
-      "backplateTexture" : "scout_backplate.png",
-			"mouldingTexture" : "scout_backplate.png",
-			"recipe" : [
-				"minecraft:glass_pane:0", "minecraft:dye:15", "minecraft:glass_pane:0",
-				"minecraft:iron_ingot:0", "minecraft:dye:1", "minecraft:iron_ingot:0",
-				"minecraft:iron_ingot:0", "minecraft:dye:4", "minecraft:iron_ingot:0"
-			]
+			"subName" : "",
+    	"extraMaterials" : []
 		}
 	],
-
-	"general": {
-		"packVersion" : 5,
-		"numberWindows" : 8,
-		"name" : "Scout",
+	
+  "general": {
     "type" : "car",
-    "description" : "The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two and can fit two crates in the back.",
-    "openTop" : false,
-    "emptyMass" : 1230,
-    "defaultDisplayText" : "IH-SCOUT",
-    "displayTextMaxLength" : 7
+		"openTop" : false,
+		"emptyMass" : 1230,
+		"materials" : ["minecraft:dye:1:1", "minecraft:dye:15:2", "minecraft:dye:4:1", "minecraft:iron_ingot:0:18"]
   },
 
   "motorized" : {
@@ -37,48 +24,56 @@
     "isFrontWheelDrive" : true,
 		"isRearWheelDrive" : true,
     "dragCoefficient" : 0.45,
-    "hornSound" : "horn_car1"
+    "hornSound" : "mtsofficialpack:horn_car"
   },
 	
 	"parts": [
 		{
       "pos" : [-1.125, 0.0, -0.25],
-      "names" : ["wheelmedium"]
+      "types" : ["ground_device"],
+			"minValue" : 0.25,
+			"maxValue" : 0.75
     },
 		{
       "pos" : [1.125, 0.0, -0.25],
-      "names" : ["wheelmedium"]
+      "types" : ["ground_device"],
+			"minValue" : 0.25,
+			"maxValue" : 0.75
     },
 		{
       "pos" : [-1.125, 0.0, 2.6875],
-      "names" : ["wheelmedium"],
+      "types" : ["ground_device"],
+			"minValue" : 0.25,
+			"maxValue" : 0.75,
 			"turnsWithSteer" : true
     },
 		{
       "pos" : [1.125, 0.0, 2.6875],
-      "names" : ["wheelmedium"],
+      "types" : ["ground_device"],
+			"minValue" : 0.25,
+			"maxValue" : 0.75,
 			"turnsWithSteer" : true
 		},
 		{
-      "pos" : [-0.65, 0.525, 0.8],
-      "names" : ["seat"]
+      "pos" : [-0.65, 0.36875, 0.8],
+      "types" : ["seat"]
     },
 		{
-      "pos" : [0.65, 0.525, 0.8],
-      "names" : ["seat"],
+      "pos" : [0.65, 0.36875, 0.8],
+      "types" : ["seat"],
 			"isController" : true
     },
 		{
       "pos" : [-0.5, 1.0, -0.4375],
-      "names" : ["crate"]
+      "types" : ["crate"]
     },
 		{
       "pos" : [0.5, 1.0, -0.4375],
-      "names" : ["crate"]
+      "types" : ["crate"]
     },
 		{
       "pos" : [0, 0.35, 2.25],
-      "names" : ["engineamci4"]
+      "types" : ["engine_car"]
     }
   ],
 	
@@ -106,7 +101,9 @@
   ],
 
   "rendering": {
-		"modelName" : "scout.obj",
+		"numberWindows" : 8,
+		"defaultDisplayText" : "IH-SCOUT",
+    "displayTextMaxLength" : 7,
 		"textMarkings" : [
 			{
 				"pos" : [0, 0.3, 3.17],
