@@ -111,34 +111,40 @@
 	"parts": [
     {
       "pos" : [0, -0.85, 1.7],
-      "names" : ["mtsofficialpack:wheelsmall"],
+      "types" : ["ground_device"],
+			"minValue" : 0.0,
+			"maxValue" : 0.65,
 			"turnsWithSteer" : true
     },
     {
       "pos" : [-1.65, -0.85, 0],
-      "names" : ["mtsofficialpack:wheelsmall", "mtsofficialpack:pontoon"]
+      "types" : ["ground_device"],
+			"minValue" : 0.0,
+			"maxValue" : 0.65
     },
     {
       "pos" : [1.65, -0.85, 0],
-      "names" : ["mtsofficialpack:wheelsmall", "mtsofficialpack:pontoon"]
+      "types" : ["ground_device"],
+			"minValue" : 0.0,
+			"maxValue" : 0.65
     },
     {
       "pos" : [0, 0.1, 1.65],
-      "names" : ["mtsofficialpack:enginelycomingo360"]
+      "types" : ["engine_aircraft"]
     },
     {
-      "pos" : [-0.45, 0.4, 0.01],
-      "names" : ["mtsofficialpack:seat"],
+      "pos" : [-0.40, 0.125, 0.01],
+      "types" : ["seat"],
 			"isController" : true
     },
 		{
-      "pos" : [0.45, 0.4, 0.01],
-      "names" : ["mtsofficialpack:seat"],
+      "pos" : [0.40, 0.125, 0.01],
+      "types" : ["seat"],
 			"isController" : true
     },
     {
-      "pos" : [0, 0.4, -1],
-      "names" : ["mtsofficialpack:crate", "mtsofficialpack:seat"]
+      "pos" : [0, 0.125, -1],
+      "types" : ["crate", "seat"]
     }
   ],
 
@@ -260,7 +266,7 @@
 				"rotationVariable" : "rudder"
 			},
 			{
-				"partName" : "&$NavigationLight_FFFFFF_FFFFF",
+				"partName" : "&$NavigationLight_FFFFFF_FFFFF_111",
 				"rotationPoint" : [0, 0, -4.25],
 				"rotationAxis" : [0, 1, 0],
 				"rotationVariable" : "rudder"
