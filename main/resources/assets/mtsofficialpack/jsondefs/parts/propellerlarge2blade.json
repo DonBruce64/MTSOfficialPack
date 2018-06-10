@@ -1,0 +1,13 @@
+{
+  "general": {
+    "type" : "propeller",
+		"materials" : ["minecraft:dye:15:1", "minecraft:iron_ingot:0:3"]
+  },
+	
+	"propeller" : {
+	  "numberBlades" : 2,
+		"pitch" : 133,
+		"diameter" : 118,
+		"startingHealth" : 500
+	}
+}
