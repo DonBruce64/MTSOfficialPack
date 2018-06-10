@@ -2,6 +2,7 @@ package mtsofficialpack;
 
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -51,7 +52,10 @@ public class MTSPackLoader{
 			String className = this.getClass().getSimpleName();
 			String packageName = this.getClass().getPackage().getName();
 			String classDir = this.getClass().getClassLoader().getResource(packageName).getPath();
-			classDir = classDir.substring(0, classDir.indexOf('!')).replace("file:/", "");
+			//Need this to remove % escape characters like %20 for spaces.
+			URI classURI = new URI(classDir);
+			classDir = classURI.getPath();
+			classDir = classDir.substring(0, classDir.indexOf('!'));
 			
 			/*From here on out the system should search the jarfile this class is located in and find all the files
 			In the assets/<MODID>/jsondefs/vehicles section.  It should take all files located in there and send
