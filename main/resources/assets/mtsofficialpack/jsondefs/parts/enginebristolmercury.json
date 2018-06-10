@@ -6,8 +6,8 @@
 	
 	"engine" : {
     "isAutomatic" : true,
-    "starterPower" : 25,
-    "starterDuration" : 13,
+    "starterPower" : 40,
+    "starterDuration" : 4,
     "maxRPM" : 2400,
     "fuelConsumption" : 1.0,
     "gearRatios" : [1.0],
