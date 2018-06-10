@@ -130,7 +130,15 @@
     },
     {
       "pos" : [0, 0.1, 1.65],
-      "types" : ["engine_aircraft"]
+      "types" : ["engine_aircraft"],
+			"minValue" : 0.0,
+			"maxValue" : 0.5
+    },
+		{
+      "pos" : [0, 0.1, 2.4],
+      "types" : ["propeller"],
+			"minValue" : 0,
+			"maxValue" : 90
     },
     {
       "pos" : [-0.40, 0.125, 0.01],
@@ -144,7 +152,7 @@
     },
     {
       "pos" : [0, 0.125, -1],
-      "types" : ["crate", "seat"]
+      "types" : ["crate"]
     }
   ],
 
