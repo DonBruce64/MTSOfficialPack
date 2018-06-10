@@ -6,7 +6,7 @@
 	
 	"engine" : {
     "isAutomatic" : true,
-    "starterPower" : 50,
+    "starterPower" : 20,
     "starterDuration" : 4,
     "maxRPM" : 2900,
     "fuelConsumption" : 0.4,
