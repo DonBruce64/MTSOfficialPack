@@ -73,7 +73,9 @@
     },
 		{
       "pos" : [0, 0.35, 2.25],
-      "types" : ["engine_car"]
+      "types" : ["engine_car"],
+			"minValue" : 0.25,
+			"maxValue" : 0.5
     }
   ],
 	
