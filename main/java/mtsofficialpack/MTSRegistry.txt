@@ -17,12 +17,6 @@ public final class MTSRegistry{
 /*
 	
 	private static void initPartRecipes(){
-		//Skid
-		registerRecipe(new ItemStack(skid),
-				"A A",
-				" A ",
-				"  A",
-				'A', Blocks.IRON_BARS);
 		//Pontoon
 		registerRecipe(new ItemStack(pontoon, 2),
 				"AAA",
