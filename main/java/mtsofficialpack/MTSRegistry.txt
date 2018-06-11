@@ -17,23 +17,6 @@ public final class MTSRegistry{
 /*
 	
 	private static void initPartRecipes(){
-		//Seats
-		for(int i=0; i<96; ++i){
-			registerRecipe(new ItemStack(seat, 1, i),
-				" BA",
-				" BA",
-				"AAA",
-				'A', new ItemStack(Blocks.WOODEN_SLAB, 1, i%6),
-				'B', new ItemStack(Blocks.WOOL, 1, i/6));
-		}
-		for(int i=0; i<6; ++i){
-			registerRecipe(new ItemStack(seat, 1, 96 + i),
-				" BA",
-				" BA",
-				"AAA",
-				'A', new ItemStack(Blocks.WOODEN_SLAB, 1, i%6),
-				'B', new ItemStack(Items.LEATHER));
-		}
 		//Skid
 		registerRecipe(new ItemStack(skid),
 				"A A",
