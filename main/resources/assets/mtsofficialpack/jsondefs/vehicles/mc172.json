@@ -40,43 +40,43 @@
 				"pos" : [7.5, 5.5, 11.49],
 				"rot" : [0, 0, 0],
 				"hudpos" : [30, 63],
-				"scale" : 1.0,
-				"hudScale" : 1.0
+				"scale" : 0.35,
+				"hudScale" : 0.45
 			},
 			{
 				"pos" : [2, 5.5, 11.49],
 				"rot" : [0, 0, 0],
 				"hudpos" : [50, 63],
-				"scale" : 1.0,
-				"hudScale" : 1.0
+				"scale" : 0.35,
+				"hudScale" : 0.45
 			},
 			{
 				"pos" : [-3.5, 5.5, 11.49],
 				"rot" : [0, 0, 0],
 				"hudpos" : [70, 63],
-				"scale" : 1.0,
-				"hudScale" : 1.0
+				"scale" : 0.35,
+				"hudScale" : 0.45
 			},
 			{
 				"pos" : [7.5, 0, 11.49],
 				"rot" : [0, 0, 0],
 				"hudpos" : [30, 87],
-				"scale" : 1.0,
-				"hudScale" : 1.0
+				"scale" : 0.35,
+				"hudScale" : 0.45
 			},
 			{
 				"pos" : [2, 0, 11.49],
 				"rot" : [0, 0, 0],
 				"hudpos" : [50, 87],
-				"scale" : 1.0,
-				"hudScale" : 1.0
+				"scale" : 0.35,
+				"hudScale" : 0.45
 			},
 			{
 				"pos" : [-3.5, 0, 11.49],
 				"rot" : [0, 0, 0],
 				"hudpos" : [70, 87],
-				"scale" : 1.0,
-				"hudScale" : 1.0
+				"scale" : 0.35,
+				"hudScale" : 0.45
 			}
     ],
 		"controls" : [

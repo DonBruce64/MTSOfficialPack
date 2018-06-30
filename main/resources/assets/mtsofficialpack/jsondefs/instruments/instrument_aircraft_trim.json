@@ -1,0 +1,33 @@
+{
+  "general": {
+    "validVehicles" : ["plane"],
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:3", "minecraft:dye:2:3"],
+		"textureXSectorStart" : 3,
+		"textureYSectorStart" : 4
+  },
+	
+	"components" : [
+		{
+		},
+		{
+			rotationVariable : "trim_rudder",
+			yRotationPositionOffset : 20,
+			rotationFactor : 6.75
+		},
+		{
+			rotationVariable : "trim_elevator",
+			yRotationPositionOffset : -16,
+			xRotationPositionOffset : 24,
+			rotationFactor : -9.0
+		},
+		{
+			rotationVariable : "trim_aileron",
+			yRotationPositionOffset : -16,
+			xRotationPositionOffset : -24,
+			rotationFactor : 7.5
+		},
+		{
+			lightOverlay : true
+		}
+	]
+}

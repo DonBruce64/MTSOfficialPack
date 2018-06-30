@@ -1,0 +1,27 @@
+{
+  "general": {
+    "validVehicles" : ["plane"],
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:15:1", "minecraft:dye:12:3", "minecraft:dye:3:3"],
+		"textureXSectorStart" : 1,
+		"textureYSectorStart" : 1
+  },
+	
+	"components" : [
+		{
+			rotationVariable : "roll",
+			rotationFactor : -1.0,
+			visibilityVariable : "pitch",
+			visibleSectionHeight : 80,
+			visibilityFactor : 1.0
+		},
+		{
+			rotationVariable : "roll",
+			rotationFactor : -1.0
+		},
+		{
+		},
+		{
+			lightOverlay : true
+		}
+	]
+}

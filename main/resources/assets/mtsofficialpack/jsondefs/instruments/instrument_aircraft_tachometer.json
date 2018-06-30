@@ -1,0 +1,28 @@
+{
+  "general": {
+    "validVehicles" : ["plane"],
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:3", "minecraft:dye:1:1"],
+		"textureXSectorStart" : 4,
+		"textureYSectorStart" : 4
+  },
+	
+	"components" : [
+		{
+		},
+		{
+			rotationVariable : "rpm_max",
+			rotationOffset : 45,
+			rotationFactor : 0.1
+		},
+		{
+		},
+		{
+			rotationVariable : "rpm",
+			rotationOffset : -135,
+			rotationFactor : 0.1
+		},
+		{
+			lightOverlay : true
+		}
+	]
+}
