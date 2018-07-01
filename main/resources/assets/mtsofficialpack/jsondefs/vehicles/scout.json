@@ -15,6 +15,7 @@
 
   "motorized" : {
     "fuelCapacity" : 15000,
+		"hornSound" : "mtsofficialpack:horn_car",
     "instruments" : [],
 		"controls" : []
   },
@@ -23,8 +24,7 @@
 		"isBigTruck" : false,
     "isFrontWheelDrive" : true,
 		"isRearWheelDrive" : true,
-    "dragCoefficient" : 0.45,
-    "hornSound" : "mtsofficialpack:horn_car"
+    "dragCoefficient" : 0.45
   },
 	
 	"parts": [
