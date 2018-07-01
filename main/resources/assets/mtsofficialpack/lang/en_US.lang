@@ -36,7 +36,7 @@ item.seatred.name=Red Seat
 item.seatwhite.name=White Seat
 item.skid.name=Landing Skid
 item.wheelsmall.name=Small Wheel
-item.wheelmeduim.name=Medium Wheel
+item.wheelmedium.name=Medium Wheel
 item.wheellarge.name=Large Wheel
 
 item.instrument_aircraft_attitude.name=Attitude Indicator
