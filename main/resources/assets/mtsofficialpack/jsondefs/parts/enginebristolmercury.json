@@ -7,10 +7,19 @@
 	"engine" : {
     "isAutomatic" : true,
     "starterPower" : 40,
-    "starterDuration" : 4,
+    "starterDuration" : 3,
     "maxRPM" : 2400,
     "fuelConsumption" : 1.0,
     "gearRatios" : [1.0],
 		"repairMaterials" : ["minecraft:obsidian:0:5"]
-	}
+	},
+		
+	"subParts" : [
+		{
+      "pos" : [0, 0, 0.75],
+      "types" : ["propeller"],
+			"minValue" : 0,
+			"maxValue" : 150
+    }
+	]
 }

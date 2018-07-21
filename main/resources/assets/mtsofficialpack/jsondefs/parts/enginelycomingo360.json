@@ -12,5 +12,14 @@
     "fuelConsumption" : 0.4,
     "gearRatios" : [1.0],
 		"repairMaterials" : ["minecraft:obsidian:0:4"]
-	}
+	},
+	
+	"subParts" : [
+		{
+      "pos" : [0, 0, 0.75],
+      "types" : ["propeller"],
+			"minValue" : 0,
+			"maxValue" : 90
+    }
+	]
 }

@@ -134,12 +134,6 @@
 			"minValue" : 0.0,
 			"maxValue" : 0.5
     },
-		{
-      "pos" : [0, 0.1, 2.4],
-      "types" : ["propeller"],
-			"minValue" : 0,
-			"maxValue" : 90
-    },
     {
       "pos" : [-0.40, 0.125, 0.01],
       "types" : ["seat"],
