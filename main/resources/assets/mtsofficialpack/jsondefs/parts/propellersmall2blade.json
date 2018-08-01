@@ -1,0 +1,13 @@
+{
+  "general": {
+    "type" : "propeller",
+		"materials" : ["minecraft:planks:0:3"]
+  },
+	
+	"propeller" : {
+	  "numberBlades" : 2,
+		"pitch" : 55,
+		"diameter" : 78,
+		"startingHealth" : 100
+	}
+}
