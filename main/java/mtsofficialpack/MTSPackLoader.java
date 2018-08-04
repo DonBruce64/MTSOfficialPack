@@ -20,10 +20,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  * The only thing that needs to be changed in order to adapt it for other packs are the static
  * strings below, the mcmod.info file, and the package/file name this class, and the assets, 
  * are located in. Note that ALL of those strings should be the same.  If your MODID is different
- * that the folder/package this file is located in the loader will fail!  Also, don't forget to
+ * than the folder/package this file is located in the loader will fail!  Also, don't forget to
  * change the package section up at the top when you re-name the folder this file is in.  
  * 
- * Should you be compiling this for your own use, any compiler from 1.10.2 onward should compile it with no issues.
+ * Should you be compiling this for your own use, any compiler from 1.10.2 onward should do so with no issues.
  * 
  * Note that the "required-after" can also be used to require other mods besides MTS.
  * This is useful if your pack depends on another content pack, or a mod that's not MTS
@@ -32,11 +32,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  * @author don_bruce
  */
 @Mod.EventBusSubscriber
-@Mod(modid = MTSPackLoader.MODID, name = MTSPackLoader.MODNAME, version = MTSPackLoader.MODVER, dependencies = "required-after:mts@[11.0.0,12.0.0);", acceptedMinecraftVersions="[1.10.2,]")
+@Mod(modid=MTSPackLoader.MODID, name=MTSPackLoader.MODNAME, version=MTSPackLoader.MODVER, dependencies=MTSPackLoader.DEPS, acceptedMinecraftVersions=MTSPackLoader.MCVERS)
 public class MTSPackLoader{
 	public static final String MODID="mtsofficialpack";
 	public static final String MODNAME="The Official Vehicle Pack for MTS";
 	public static final String MODVER="5.0.0";
+	public static final String DEPS="required-after:mts@[11.0.0,);";
+	public static final String MCVERS="[1.10.2,]";
 	
 	/**
 	 * On class construction we look through this jar and send all pack vehicles
@@ -45,11 +47,7 @@ public class MTSPackLoader{
 	 */
 	public MTSPackLoader(){
 		try{
-			Class packParserSystem = Class.forName("minecrafttransportsimulator.systems.PackParserSystem");
-			Method addMultipartMethod = packParserSystem.getMethod("addMultipartDefinition", InputStreamReader.class, String.class, String.class);
-			Method addPartMethod = packParserSystem.getMethod("addPartDefinition", InputStreamReader.class, String.class, String.class);
-			Method addInstrumentMethod = packParserSystem.getMethod("addInstrumentDefinition", InputStreamReader.class, String.class, String.class);
-			
+			//Get the current class dir.
 			String className = this.getClass().getSimpleName();
 			String packageName = this.getClass().getPackage().getName();
 			String classDir = this.getClass().getClassLoader().getResource(packageName).getPath();
@@ -58,48 +56,39 @@ public class MTSPackLoader{
 			classDir = classURI.getPath();
 			classDir = classDir.substring(0, classDir.indexOf('!'));
 			
-			/*From here on out the system should search the jarfile this class is located in and find all the files
-			In the assets/<MODID>/jsondefs section.  It should take all files located in there and send
-			them to the appropriate method in the PackParserSystem.
-			The String parameter in all cases is the MODID, and should match the folder/package name here.
-			Make sure the entries are sorted, however, as the parser can't do that itself.
-			*/
-			ZipFile jarFile = new ZipFile(classDir);
-			Enumeration<? extends ZipEntry> entries = jarFile.entries();
-			List<String> multipartEntries = new ArrayList<String>();
-			List<String> partEntries = new ArrayList<String>();
-			List<String> instrumentEntries = new ArrayList<String>();
+			//Get the instance of the PackParserSystem.
+			Class packParserSystem = Class.forName("minecrafttransportsimulator.systems.PackParserSystem");
 			
-			while(entries.hasMoreElements()){
-				ZipEntry entry = entries.nextElement();		
-				if(entry.getName().endsWith(".json")){
-					if(entry.getName().contains("jsondefs/vehicles")){
-						multipartEntries.add(entry.getName());
-					}else if(entry.getName().contains("jsondefs/parts")){
-						partEntries.add(entry.getName());
-					}else if(entry.getName().contains("jsondefs/instruments")){
-						instrumentEntries.add(entry.getName());
+			//Get the method that has all the current pack names and get those names.
+			Method getPackContentNamesMethod = packParserSystem.getMethod("getValidPackContentNames");
+			String[] contentNames = (String[]) getPackContentNamesMethod.invoke(null);
+			
+			//Iterate through all the content names, adding them as applicable.
+			for(String contentName : contentNames){
+				//Use a list to save the names so we can sort them so they appear in order in the Creative Tabs.
+				List<String> entryNames = new ArrayList<String>();
+				
+				//Capitalize the first letter of the content name and use it to get the appropriate method.
+				Method addContentMethod = packParserSystem.getMethod("add" + contentName.substring(0, 1).toUpperCase() + contentName.substring(1) + "Definition", InputStreamReader.class, String.class, String.class);
+				
+				//Search the jarfile this class is located in and find all the files in the assets/<MODID>/jsondefs/<contentName> section.
+				ZipFile jarFile = new ZipFile(classDir);
+				Enumeration<? extends ZipEntry> entries = jarFile.entries();
+				while(entries.hasMoreElements()){
+					ZipEntry entry = entries.nextElement();
+					if(entry.getName().endsWith(".json") && entry.getName().contains("jsondefs/" + contentName + "s")){
+						entryNames.add(entry.getName());
 					}
 				}
+				
+				//Sort the list and add send all items to MTS.
+				entryNames.sort(null);
+				for(String entryName : entryNames){
+					String entryFileName = entryName.substring(entryName.lastIndexOf('/') + 1, entryName.length() - ".json".length());
+					addContentMethod.invoke(null, new InputStreamReader(jarFile.getInputStream(jarFile.getEntry(entryName))), entryFileName, MODID);
+				}
+				jarFile.close();
 			}
-			
-			//Sort the the entries, and then send them off to be registered.
-			multipartEntries.sort(null);
-			for(String entryName : multipartEntries){
-				String entryFileName = entryName.substring(entryName.lastIndexOf('/') + 1, entryName.length() - ".json".length());
-				addMultipartMethod.invoke(null, new InputStreamReader(jarFile.getInputStream(jarFile.getEntry(entryName))), entryFileName, MODID);
-			}
-			partEntries.sort(null);
-			for(String entryName : partEntries){
-				String entryFileName = entryName.substring(entryName.lastIndexOf('/') + 1, entryName.length() - ".json".length());
-				addPartMethod.invoke(null, new InputStreamReader(jarFile.getInputStream(jarFile.getEntry(entryName))), entryFileName, MODID);
-			}
-			instrumentEntries.sort(null);
-			for(String entryName : instrumentEntries){
-				String entryFileName = entryName.substring(entryName.lastIndexOf('/') + 1, entryName.length() - ".json".length());
-				addInstrumentMethod.invoke(null, new InputStreamReader(jarFile.getInputStream(jarFile.getEntry(entryName))), entryFileName, MODID);
-			}
-			jarFile.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
