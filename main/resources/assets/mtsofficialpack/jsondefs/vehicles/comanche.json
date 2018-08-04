@@ -1,65 +1,28 @@
-{
-  "definitions" : [
+{	
+	"definitions" : [
 		{
-			"uniqueName" : "comanche_blue",
-			"itemDisplayName" : "Blue Comanche",
-			"modelTexture" : "comanche_blue.png",
-			"backplateTexture" : "comanche_backplate.png",
-			"mouldingTexture" : "comanche_moulding_blue.png",
-			"recipe" : [
-				"", "minecraft:glass_pane:0", "",
-				"minecraft:iron_trapdoor:0", "minecraft:iron_block:0", "minecraft:iron_trapdoor:0",
-				"", "minecraft:stained_hardened_clay:11", ""
-			]
+			"subName" : "_blue",
+    	"extraMaterials" : ["minecraft:stained_hardened_clay:11:2"]
 		},
 		{
-			"uniqueName" : "comanche_grey",
-			"itemDisplayName" : "Grey Comanche",
-			"modelTexture" : "comanche_grey.png",
-			"backplateTexture" : "comanche_backplate.png",
-			"mouldingTexture" : "comanche_moulding_grey.png",
-			"recipe" : [
-				"", "minecraft:glass_pane:0", "",
-				"minecraft:iron_trapdoor:0", "minecraft:iron_block:0", "minecraft:iron_trapdoor:0",
-				"", "minecraft:stained_hardened_clay:8", ""
-			]
+			"subName" : "_grey",
+    	"extraMaterials" : ["minecraft:stained_hardened_clay:8:2"]
 		},
 		{
-			"uniqueName" : "comanche_red",
-			"itemDisplayName" : "Red Comanche",
-			"modelTexture" : "comanche_red.png",
-			"backplateTexture" : "comanche_backplate.png",
-			"mouldingTexture" : "comanche_moulding_red.png",
-			"recipe" : [
-				"", "minecraft:glass_pane:0", "",
-				"minecraft:iron_trapdoor:0", "minecraft:iron_block:0", "minecraft:iron_trapdoor:0",
-				"", "minecraft:stained_hardened_clay:14", ""
-			]
+			"subName" : "_red",
+    	"extraMaterials" : ["minecraft:stained_hardened_clay:14:2"]
 		},
 		{
-			"uniqueName" : "comanche_yellow",
-			"itemDisplayName" : "Yellow Comanche",
-			"modelTexture" : "comanche_yellow.png",
-			"backplateTexture" : "comanche_backplate.png",
-			"mouldingTexture" : "comanche_moulding_yellow.png",
-			"recipe" : [
-				"", "minecraft:glass_pane:0", "",
-				"minecraft:iron_trapdoor:0", "minecraft:iron_block:0", "minecraft:iron_trapdoor:0",
-				"", "minecraft:stained_hardened_clay:4", ""
-			]
+			"subName" : "_yellow",
+			"extraMaterials" : ["minecraft:stained_hardened_clay:4:2"]
 		}
 	],
 
   "general": {
-		"packVersion" : 5,
-		"numberWindows" : 7,
-		"name" : "Comanche",
     "type" : "plane",
-		"description" : "The Comanche is a small, swift, twin-engine craft.  While the lower wing might pose a hazard on overgrown runways, it makes up for it by being much faster and nimbler than other planes of its size.",
 		"openTop" : false,
 		"emptyMass" : 1030.0,
-    "defaultDisplayText" : "COMANCHE",
-    "displayTextMaxLength" : 8
+		"materials" : ["minecraft:iron_trapdoor:-1:5", "minecraft:iron_ingot:-1:15", "minecraft:repeater:-1:1", "minecraft:redstone:-1:9", "minecraft:redstone_lamp:-1:2", "minecraft:glass_pane:-1:5"]
   },
 
   "motorized" : {
@@ -68,121 +31,121 @@
 			{
 				"pos" : [9.5, 16.75, 9.90],
 				"rot" : [0, 0, 0],
-				"hudpos" : [29, 63],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"hudpos" : [30, 63],
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
 				"pos" : [5.35, 16.75, 9.90],
 				"rot" : [0, 0, 0],
 				"hudpos" : [43, 63],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
 				"pos" : [1.2, 16.75, 9.90],
 				"rot" : [0, 0, 0],
-				"hudpos" : [57, 63],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"hudpos" : [56, 63],
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
 				"pos" : [-2.95, 16.75, 9.90],
 				"rot" : [0, 0, 0],
-				"hudpos" : [71, 63],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"hudpos" : [69, 63],
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
-				"pos" : [9.5, 12.5, 9.90],
+				"pos" : [9.5, 12.75, 9.90],
 				"rot" : [0, 0, 0],
-				"hudpos" : [29, 87],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"hudpos" : [30, 87],
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
-				"pos" : [5.35, 12.5, 9.90],
+				"pos" : [5.35, 12.75, 9.90],
 				"rot" : [0, 0, 0],
 				"hudpos" : [43, 87],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
-				"pos" : [1.2, 12.5, 9.90],
+				"pos" : [1.2, 12.75, 9.90],
 				"rot" : [0, 0, 0],
-				"hudpos" : [57, 87],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"hudpos" : [56, 87],
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
-				"pos" : [-2.95, 12.5, 9.90],
+				"pos" : [-2.95, 12.75, 9.90],
 				"rot" : [0, 0, 0],
-				"hudpos" : [71, 87],
-				"scale" : 0.7,
-				"hudScale" : 1.0
+				"hudpos" : [69, 87],
+				"scale" : 0.26,
+				"hudScale" : 0.5
 			},
 			{
 				"pos" : [-5.9, 17.8, 9.9],
 				"rot" : [0, 0, 0],
 				"hudpos" : [45, 65],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 1
 			},
 			{
 				"pos" : [-5.9, 16, 9.9],
 				"rot" : [0, 0, 0],
 				"hudpos" : [55, 65],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 1
 			},
 			{
 				"pos" : [-5.9, 14.2, 9.9],
 				"rot" : [0, 0, 0],
-				"hudpos" : [45, 79],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"hudpos" : [45, 83],
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 1
 			},
 			{
 				"pos" : [-5.9, 12.4, 9.9],
 				"rot" : [0, 0, 0],
-				"hudpos" : [55, 79],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"hudpos" : [55, 83],
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 1
 			},
 			{
 				"pos" : [-7.65, 17.8, 9.9],
 				"rot" : [0, 0, 0],
 				"hudpos" : [70, 65],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 2
 			},
 			{
 				"pos" : [-7.65, 16, 9.9],
 				"rot" : [0, 0, 0],
 				"hudpos" : [80, 65],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 2
 			},
 			{
 				"pos" : [-7.65, 14.2, 9.9],
 				"rot" : [0, 0, 0],
-				"hudpos" : [70, 79],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"hudpos" : [70, 83],
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 2
 			},
 			{
 				"pos" : [-7.65, 12.4, 9.9],
 				"rot" : [0, 0, 0],
-				"hudpos" : [80, 79],
-				"scale" : 0.3,
-				"hudScale" : 0.6,
+				"hudpos" : [80, 83],
+				"scale" : 0.12,
+				"hudScale" : 0.35,
 				"optionalEngineNumber" : 2
 			}
     ],
@@ -218,42 +181,52 @@
 	"parts": [
      {
       "pos" : [0.0, -0.60, 2.35],
-      "names" : ["wheelsmall"],
+      "types" : ["ground_device"],
+			"minValue" : 0.35,
+			"maxValue" : 0.65,
 			"turnsWithSteer" : true
     },
     {
       "pos" : [-1.85, -0.45, -0.35],
-      "names" : ["wheelsmall"]
+      "types" : ["ground_device"],
+			"minValue" : 0.35,
+			"maxValue" : 0.65
     },
     {
       "pos" : [1.85, -0.45, -0.35],
-      "names" : ["wheelsmall"]
+      "types" : ["ground_device"],
+			"minValue" : 0.35,
+			"maxValue" : 0.65
     },
 				{
-      "pos" : [2.5, 0.5, 1.47],
-      "names" : ["enginelycomingo360"]
+      "pos" : [2.5, 0.51, 1.47],
+      "types" : ["engine_aircraft"],
+			"minValue" : 0.0,
+			"maxValue" : 0.65
     },
     {
-      "pos" : [-2.5, 0.5, 1.47],
-      "names" : ["enginelycomingo360"]
+      "pos" : [-2.5, 0.51, 1.47],
+      "types" : ["engine_aircraft"],
+			"minValue" : 0.0,
+			"maxValue" : 0.65
     },
     {
-      "pos" : [-0.38, 0.8, 0.0],
-      "names" : ["seat"],
+      "pos" : [-0.38, 0.65, 0.0],
+      "types" : ["seat"],
 			"isController" : true
     },
 		{
-      "pos" : [0.38, 0.8, 0.0],
-      "names" : ["seat"],
+      "pos" : [0.38, 0.65, 0.0],
+      "types" : ["seat"],
 			"isController" : true
     },
     {
-      "pos" : [-0.38, 0.8, -1.375],
-      "names" : ["crate", "seat"]
+      "pos" : [-0.38, 0.65, -1.375],
+      "types" : ["crate", "seat"]
     },
 		 {
-      "pos" : [0.38, 0.8, -1.375],
-      "names" : ["crate", "seat"]
+      "pos" : [0.38, 0.65, -1.375],
+      "types" : ["crate", "seat"]
     }
   ],
 
@@ -376,7 +349,9 @@
   ],
 
   "rendering": {
-		"modelName" : "comanche.obj",
+		"numberWindows" : 7,
+		"defaultDisplayText" : "COMANCHE",
+    "displayTextMaxLength" : 8,
 		"textMarkings" : [
       {
         "pos" : [0.67, 1.5, -3.25],
@@ -391,113 +366,6 @@
 				"color" : "#CCCCCC"
       }
     ],
-		"lights" : [
-			{
-				"pos" : [0, 0.405, 3.3745],
-				"rot" : [0, 0, 0],
-				"lightRot" : [0, 35, 0],
-				"width" : 2,
-				"length" : 2,
-				"brightness" : 30,
-				"switchNumber" : 3,
-				"color" : "#FFFFFF",
-				"beamDistance" : 20,
-				"beamDiameter" : 10
-
-			},
-			{
-				"pos" : [7, 0.51, 0.6875],
-				"rot" : [0, 0, 3],
-				"lightRot" : [-15, 35, 0],
-				"width" : 2,
-				"length" : 2,
-				"brightness" : 40,
-				"switchNumber" : 4,
-				"color" : "#FFFFFF",
-				"beamDistance" : 15,
-				"beamDiameter" : 10
-			},
-			{
-				"pos" : [-7, 0.51, 0.6875],
-				"rot" : [0, 0, -3],
-				"lightRot" : [15, 35, 0],
-				"width" : 2,
-				"length" : 2,
-				"brightness" : 40,
-				"switchNumber" : 4,
-				"color" : "#FFFFFF",
-				"beamDistance" : 15,
-				"beamDiameter" : 10
-			}
-		],
-		"beacons" : [
-			{
-				"pos" : [7.244, 0.522, 0.5625],
-				"rot" : [0, 0, -87],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 16,
-				"switchNumber" : 1,
-				"color" : "#FF0000",
-				"flashing" : false
-			},
-			{
-				"pos" : [-7.244, 0.522, 0.5625],
-				"rot" : [0, 0, 87],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 16,
-				"switchNumber" : 1,
-				"color" : "#00FF00",
-				"flashing" : false
-			},
-			{
-				"pos" : [0, 3.375, -5.125],
-				"rot" : [0, 0, 00],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 16,
-				"switchNumber" : 1,
-				"color" : "#FFFFFF",
-				"flashing" : false
-			},
-			{
-				"pos" : [7.244, 0.522, 0.4375],
-				"rot" : [0, 0, -87],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 30,
-				"switchNumber" : 2,
-				"color" : "#FFFFFF",
-				"flashing" : true
-			},
-			{
-				"pos" : [-7.244, 0.522, 0.4375],
-				"rot" : [0, 0, 87],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 30,
-				"switchNumber" : 2,
-				"color" : "#FFFFFF",
-				"flashing" : true
-			},
-			{
-				"pos" : [0, 3.375, -5.0],
-				"rot" : [0, 0, 0],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 30,
-				"switchNumber" : 2,
-				"color" : "#FF0000",
-				"flashing" : true
-			}
-		],
 		"rotatableModelObjects" : [
 			{
 				"partName" : "$Aileron_L",
@@ -513,6 +381,12 @@
 			},
 			{
 				"partName" : "$Rudder",
+				"rotationPoint" : [0, 0, -5.25],
+				"rotationAxis" : [0, 1 , 0],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "&$NavigationLight_FFFFFF_FFFFF_111",
 				"rotationPoint" : [0, 0, -5.25],
 				"rotationAxis" : [0, 1 , 0],
 				"rotationVariable" : "rudder"

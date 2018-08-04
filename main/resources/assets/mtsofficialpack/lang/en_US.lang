@@ -10,6 +10,12 @@ item.mc172_acacia.name=Acacia MC-172
 item.mc172_darkoak.name=Dark Oak MC-172
 description.mc172=The MC-172 is not fancy, but its cheap and sturdy airframe is at home on any rural Minecraft base.  High wings and a good power-to-weight ratio make this a good all-around starter.
 
+item.comanche_blue.name=Blue Comanche
+item.comanche_grey.name=Grey Comanche
+item.comanche_red.name=Red Comanche
+item.comanche_yellow.name=Yellow Comanche
+description.comanche=The Comanche is a small, swift, twin-engine craft.  While the lower wing might pose a hazard on overgrown runways, it makes up for it by being faster and nimbler than other planes of its size.
+
 item.scout.name=Scout
 description.scout=The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two and can fit two crates in the back.
 
