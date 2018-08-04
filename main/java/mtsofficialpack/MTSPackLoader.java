@@ -101,6 +101,10 @@ public class MTSPackLoader{
 	 * of the items will have been set prior by the core mod, so use that
 	 * and the modID here to determine the registry name.  Yes, it's poor form, 
 	 * but Forge needs to lay off the restrictions on registration names.
+	 * 
+	 * We also need to set the unlocalized name again, this time with our MODID as a prefix.
+	 * If we don't it's very likely we will conflict with other packs with respect to entries
+	 * in the .lang language files.
 	 */
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event){
@@ -111,6 +115,7 @@ public class MTSPackLoader{
 			for(Item item : itemList){
 				item.setRegistryName(new ResourceLocation(MODID, item.getUnlocalizedName().substring("item.".length())));
 				event.getRegistry().register(item);
+				item.setUnlocalizedName(MODID + "." + item.getUnlocalizedName().substring("item.".length()));
 			}	
 		}catch(Exception e){
 			e.printStackTrace();
