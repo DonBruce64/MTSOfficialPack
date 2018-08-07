@@ -1,0 +1,14 @@
+{
+  "general": {
+    "type" : "propeller",
+		"materials" : ["minecraft:dye:15:1", "minecraft:iron_ingot:0:3", "minecraft:redstone:-1:2"]
+  },
+	
+	"propeller" : {
+		"isDynamicPitch" : true,
+	  "numberBlades" : 2,
+		"pitch" : 65,
+		"diameter" : 80,
+		"startingHealth" : 250
+	}
+}
