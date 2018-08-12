@@ -352,6 +352,8 @@
 		"numberWindows" : 7,
 		"defaultDisplayText" : "COMANCHE",
     "displayTextMaxLength" : 8,
+		"hudBackplaneTexturePercentages" : [0.66796875, 0.76953125, 0.2578125, 0.30859375],
+		"hudMouldingTexturePercentages" : [0.0546875, 0.15625, 0.0703125, 0.12109375],
 		"textMarkings" : [
       {
         "pos" : [0.67, 1.5, -3.25],
