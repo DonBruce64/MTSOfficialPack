@@ -1,0 +1,24 @@
+{
+  "general": {
+    "validVehicles" : ["car"],
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:0:2", "minecraft:dye:15:3", "minecraft:dye:1:2"],
+		"textureXSectorStart" : 4,
+		"textureYSectorStart" : 1
+  },
+	
+	"components" : [
+		{
+		},
+		{
+			rotationVariable : "rpm",
+			yRotationPositionOffset : -2,
+			rotationOffset : -135,
+			rotationFactor : 0.03857
+		},
+		{
+		},
+		{
+			lightOverlay : true
+		}
+	]
+}
