@@ -222,6 +222,8 @@
 		"numberWindows" : 8,
 		"defaultDisplayText" : "MC-172",
     "displayTextMaxLength" : 7,
+		"hudBackplaneTexturePercentages" : [0.0, 6.0, 0.0, 0.5],
+		"hudMouldingTexturePercentages" : [0.0, 8.0, 0.5, 1.0],
 		"textMarkings" : [
       {
         "pos" : [0.65625, 0.25, -2.8125],
