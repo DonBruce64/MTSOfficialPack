@@ -2,27 +2,27 @@
   "definitions" : [
 		{
 			"subName" : "_oak",
-    	"extraMaterials" : ["minecraft:wooden_slab:0:5", "minecraft:planks:0:5"]
+    	"extraMaterials" : ["minecraft:wooden_slab:0:10", "minecraft:planks:0:10"]
 		},
 		{
 			"subName" : "_spruce",
-    	"extraMaterials" : ["minecraft:wooden_slab:1:5", "minecraft:planks:1:5"]
+    	"extraMaterials" : ["minecraft:wooden_slab:1:10", "minecraft:planks:1:10"]
 		},
 		{
 			"subName" : "_birch",
-    	"extraMaterials" : ["minecraft:wooden_slab:2:5", "minecraft:planks:2:5"]
+    	"extraMaterials" : ["minecraft:wooden_slab:2:10", "minecraft:planks:2:10"]
 		},
 		{
 			"subName" : "_jungle",
-			"extraMaterials" : ["minecraft:wooden_slab:3:5", "minecraft:planks:3:5"]
+			"extraMaterials" : ["minecraft:wooden_slab:3:10", "minecraft:planks:3:10"]
 		},
 		{
 			"subName" : "_acacia",
-			"extraMaterials" : ["minecraft:wooden_slab:4:5", "minecraft:planks:4:5"]
+			"extraMaterials" : ["minecraft:wooden_slab:4:10", "minecraft:planks:4:10"]
 		},
 		{
 			"subName" : "_darkoak",
-    	"extraMaterials" : ["minecraft:wooden_slab:5:5", "minecraft:planks:5:5"]
+    	"extraMaterials" : ["minecraft:wooden_slab:5:10", "minecraft:planks:5:10"]
 		}
 	],
 
