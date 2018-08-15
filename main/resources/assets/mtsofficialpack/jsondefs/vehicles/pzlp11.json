@@ -1,118 +1,106 @@
 {
   "definitions" : [
 		{
-			"uniqueName" : "pzlp11",
-    	"itemDisplayName" : "PZL-P11",
-    	"modelTexture" : "pzlp11.png",
-			"backplateTexture" : "pzlp11_backplate.png",
-			"mouldingTexture" : "pzlp11_moulding.png",
-    	"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"", "minecraft:iron_bars:0", "",
-				"minecraft:iron_ingot:0", "minecraft:iron_bars:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "",
+			"extraMaterials" : []
 		}
 	],
 
   "general": {
-		"packVersion" : 5,
-		"name" : "PZL-P11",
     "type" : "plane",
-		"description" : "The PZL P11.c is a born and bred fighter aircraft. It's shoulder wing monoplane configuration provides the pilot with exceptional visibility of the sky and ground, and makes the PZL P11.c much faster than it's biplane fighter counterparts.",
 		"openTop" : true,
 		"emptyMass" : 1150,
-    "defaultDisplayText" : "MAX 4H70 M",
-    "displayTextMaxLength" : 10
+		"materials" : ["minecraft:iron_ingot:-1:20", "minecraft:iron_ingot:-1:15", "minecraft:glass_pane:-1:3"]
   },
 
   "motorized" : {
     "fuelCapacity" : 7000,
     "instruments" : [
 			{
-				"pos" : [4.5, 11.6, -13.2],
+				"pos" : [4.5, 11.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [27, 64],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [1.5, 11.6, -13.2],
+				"pos" : [1.5, 11.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [42, 64],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [-1.5, 11.6, -13.2],
+				"pos" : [-1.5, 11.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [57, 64],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [-4.5, 11.6, -13.2],
+				"pos" : [-4.5, 11.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [72, 64],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [4.5, 8.6, -13.2],
+				"pos" : [4.5, 8.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [27, 88],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [1.5, 8.6, -13.2],
+				"pos" : [1.5, 8.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [42, 88],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [-1.5, 8.6, -13.2],
+				"pos" : [-1.5, 8.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [57, 88],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [-4.5, 8.6, -13.2],
+				"pos" : [-4.5, 8.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [72, 88],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [0.0, 5.6, -13.2],
+				"pos" : [0.0, 5.6, -13.1],
 				"rot" : [0, 0, 0],
 				"hudpos" : [10, 88],
-				"scale" : 0.5,
-				"hudScale" : 1.0
+				"scale" : 0.20,
+				"hudScale" : 0.45
 			},
 			{
-				"pos" : [7.99, 8.6, -17.5],
+				"pos" : [7.99, 8.4, -17.5],
 				"rot" : [0, 90, 0],
 				"hudpos" : [30, 80],
-				"scale" : 0.5,
-				"hudScale" : 1.0,
+				"scale" : 0.20,
+				"hudScale" : 0.45,
 				"optionalEngineNumber" : 1
 			},
 			{
-				"pos" : [-7.99, 8.6, -17.5],
+				"pos" : [-7.99, 8.4, -17.5],
 				"rot" : [0, -90, 0],
 				"hudpos" : [65, 80],
-				"scale" : 0.5,
-				"hudScale" : 1.0,
+				"scale" : 0.20,
+				"hudScale" : 0.45,
 				"optionalEngineNumber" : 1
 			},
 			{
-				"pos" : [-7.99, 8.6, -20.25],
+				"pos" : [-7.99, 8.4, -20.5],
 				"rot" : [0, -90, 0],
 				"hudpos" : [80, 80],
-				"scale" : 0.5,
-				"hudScale" : 1.0,
+				"scale" : 0.20,
+				"hudScale" : 0.45,
 				"optionalEngineNumber" : 1
 			}
     ],
@@ -137,28 +125,37 @@
     "tailDistance" : 7.0,
     "rudderArea" : 1.5,
     "elevatorArea" : 3.0,
-    "defaultElevatorAngle" : -10.0
+    "defaultElevatorAngle" : -2.0
   },		
 	"parts": [
     {
       "pos" : [0, -0.15, -5.25],
-      "names" : ["skid"]
+      "types" : ["ground_device"],
+			"minValue" : 0.15,
+			"maxValue" : 0.35,
+			"turnsWithSteer" : true
     },
     {
       "pos" : [-1.4, -1.4875, 0.375],
-      "names" : ["wheelmedium", "pontoon"]
+      "types" : ["ground_device"],
+			"minValue" : 0.85,
+			"maxValue" : 1.05
     },
     {
       "pos" : [1.4, -1.4875, 0.375],
-      "names" : ["wheelmedium", "pontoon"]
+      "types" : ["ground_device"],
+			"minValue" : 0.85,
+			"maxValue" : 1.05
     },
 		{
       "pos" : [0, 0.15, 0.85],
-      "names" : ["enginebristolmercury"]
+      "types" : ["engine_aircraft"],
+			"minValue" : 0.5,
+			"maxValue" : 1.25
     },
     {
-      "pos" : [0, 0.2, -1.3],
-      "names" : ["seat"],
+      "pos" : [0, 0.0, -1.4],
+      "types" : ["seat"],
 			"isController" : true
     }
   ],	
@@ -236,25 +233,10 @@
   ],
 
   "rendering": {
-		"modelName" : "pzlp11.obj",
-		"windows" : [
-			{
-        "pos1" : [-0.25, 1.125, -0.75],
-				"pos2" : [-0.25, 0.88, -0.325],
-				"pos3" : [0.25, 0.88, -0.325],
-				"pos4" : [0.25, 1.125, -0.75]
-      },
-			{
-        "pos1" : [-0.25, 1.05, -0.75],
-				"pos2" : [-0.25, 0.88, -0.75],
-				"pos3" : [-0.25, 0.88, -0.45]
-      },
-			{
-				"pos1" : [0.25, 0.88, -0.45],
-				"pos2" : [0.25, 0.88, -0.75],
-				"pos3" : [0.25, 1.05, -0.75]
-      }
-    ],
+		"defaultDisplayText" : "MAX 4H70 M",
+    "displayTextMaxLength" : 10,
+		"hudBackplaneTexturePercentages" : [0.0, 0.1328125, 0.4609375, 0.50390625],
+		"hudMouldingTexturePercentages" : [0.09375, 0.2265625, 0.41796875, 0.4609375],
 		"textMarkings" : [
       {
         "pos" : [0.560, 0.4, -3.03],
