@@ -175,7 +175,7 @@
     "tailDistance" : 4.125,
     "rudderArea" : 0.7,
     "elevatorArea" : 2.0,
-    "defaultElevatorAngle" : -5.0
+    "defaultElevatorAngle" : -10.0
   },
 	
 	"parts": [
