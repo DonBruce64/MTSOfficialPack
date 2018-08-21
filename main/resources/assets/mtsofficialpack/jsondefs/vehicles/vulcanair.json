@@ -1,101 +1,40 @@
 {
   "definitions" : [
 		{
-			"uniqueName" : "vulcanair_white",
-			"itemDisplayName" : "White Vulcanair",
-			"modelTexture" : "vulcanair_white.png",
-			"backplateTexture" : "vulcanair_backplate.png",
-			"mouldingTexture" : "vulcanair_moulding_white.png",
-			"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"minecraft:dye:15", "minecraft:iron_ingot:0", "minecraft:dye:15",
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "_white",
+			"extraMaterials" : ["minecraft:dye:15:4"]
 		},
 		{
-			"uniqueName" : "vulcanair_green",
-			"itemDisplayName" : "Green Vulcanair",
-			"modelTexture" : "vulcanair_green.png",
-			"backplateTexture" : "vulcanair_backplate.png",
-			"mouldingTexture" : "vulcanair_moulding_green.png",
-			"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"minecraft:dye:10", "minecraft:iron_ingot:0", "minecraft:dye:2",
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "_green",
+			"extraMaterials" : ["minecraft:dye:10:3", "minecraft:dye:2:1"]
 		},
 		{
-			"uniqueName" : "vulcanair_blue",
-			"itemDisplayName" : "Blue Vulcanair",
-			"modelTexture" : "vulcanair_blue.png",
-			"backplateTexture" : "vulcanair_backplate.png",
-			"mouldingTexture" : "vulcanair_moulding_blue.png",
-			"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"minecraft:dye:4", "minecraft:iron_ingot:0", "minecraft:dye:4",
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "_blue",
+			"extraMaterials" : ["minecraft:dye:4:4"]
 		},
 		{
-			"uniqueName" : "vulcanair_black",
-			"itemDisplayName" : "Black Vulcanair",
-			"modelTexture" : "vulcanair_black.png",
-			"backplateTexture" : "vulcanair_backplate.png",
-			"mouldingTexture" : "vulcanair_moulding_black.png",
-			"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"minecraft:dye:0", "minecraft:iron_ingot:0", "minecraft:dye:0",
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "_black",
+			"extraMaterials" : ["minecraft:dye:0:4"]
 		},
 		{
-			"uniqueName" : "vulcanair_red",
-			"itemDisplayName" : "Red Vulcanair",
-			"modelTexture" : "vulcanair_red.png",
-			"backplateTexture" : "vulcanair_backplate.png",
-			"mouldingTexture" : "vulcanair_moulding_red.png",
-			"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"minecraft:dye:1", "minecraft:iron_ingot:0", "minecraft:dye:1",
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "_red",
+			"extraMaterials" : ["minecraft:dye:1:4"]
 		},
 		{
-			"uniqueName" : "vulcanair_dark_red",
-			"itemDisplayName" : "Dark Red Vulcanair",
-			"modelTexture" : "vulcanair_red.png",
-			"backplateTexture" : "vulcanair_backplate.png",
-			"mouldingTexture" : "vulcanair_moulding_dark_red.png",
-			"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"minecraft:dye:1", "minecraft:iron_ingot:0", "minecraft:dye:0",
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "_dark_red",
+			"extraMaterials" : ["minecraft:dye:1:2", "minecraft:dye:0:2"]
 		},
 		{
-			"uniqueName" : "vulcanair_white_orange",
-			"itemDisplayName" : "White-Orange Vulcanair",
-			"modelTexture" : "vulcanair_white_orange.png",
-			"backplateTexture" : "vulcanair_backplate.png",
-			"mouldingTexture" : "vulcanair_moulding_white.png",
-			"recipe" : [
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0",
-				"minecraft:dye:15", "minecraft:iron_ingot:0", "minecraft:dye:14",
-				"minecraft:iron_ingot:0", "minecraft:iron_ingot:0", "minecraft:iron_ingot:0"
-			]
+			"subName" : "_white_orange",
+			"extraMaterials" : ["minecraft:dye:15:3", "minecraft:dye:14:1"]
 		}
 	],
 
   "general": {
-		"packVersion" : 5,
-		"numberWindows" : 5,
-		"name" : "Vulcanair",
     "type" : "plane",
-		"description" : "The Vulcanair is a six-seat, twin-engined, high-wing monoplane aircraft.  Inspired by the real life Vulcanair P.68 Italian aircraft, its rigid landing gear allows for the mounting of pontoons for both land and sea flights.",
 		"openTop" : false,
 		"emptyMass" : 1230,
-    "defaultDisplayText" : "Wolfvanox",
-    "displayTextMaxLength" : 12
+		"materials" : ["minecraft:iron_trapdoor:-1:5", "minecraft:iron_ingot:-1:25", "minecraft:repeater:-1:1", "minecraft:redstone:-1:9", "minecraft:redstone_lamp:-1:2", "minecraft:glass_pane:-1:5"]
   },
 
   "motorized" : {
@@ -268,50 +207,68 @@
 	"parts": [
     {
       "pos" : [0, -0.60, 4.52625],
-      "names" : ["wheelsmall"],
+      "types" : ["ground_device"],
+			"minValue" : 0.35,
+			"maxValue" : 0.65,
 			"turnsWithSteer" : true
     },
 	{
       "pos" : [-1.75, -0.60, 0],
-      "names" : ["pontoon","wheelsmall"]
+      "types" : ["ground_device"],
+			"minValue" : 0.35,
+			"maxValue" : 0.65
     },
 	{
       "pos" : [1.75, -0.60, 0],
-      "names" : ["pontoon","wheelsmall"]
+      "types" : ["ground_device"],
+			"minValue" : 0.35,
+			"maxValue" : 0.65
     },
 	{
       "pos" : [2.69, 1.65, 1.17],
-      "names" : ["enginelycomingo360"]
+      "types" : ["engine_aircraft"],
+			"minValue" : 0.0,
+			"maxValue" : 0.65
     },
 	{
       "pos" : [-2.69, 1.65, 1.17],
-      "names" : ["enginelycomingo360"]
+      "types" : ["engine_aircraft"],
+			"minValue" : 0.0,
+			"maxValue" : 0.65
     },
 	{
-      "pos" : [0.45, 0.6, 2.37],
-      "names" : ["seat"],
+      "pos" : [0.45, 0.25, 2.25],
+      "types" : ["seat"],
 			"isController" : true
     },
 			{
-      "pos" : [-0.45, 0.6, 2.37],
-      "names" : ["seat"],
+      "pos" : [-0.45, 0.25, 2.25],
+      "types" : ["seat"],
 			"isController" : true
     },
 	{
-      "pos" : [0.45, 0.6, 1.245],
-      "names" : ["crate","seat"]
+      "pos" : [0.45, 0.25, 1.35],
+      "types" : ["crate","seat"]
     },
 	{
-      "pos" : [-0.45, 0.6, 1.245],
-      "names" : ["crate","seat"]
+      "pos" : [-0.45, 0.25, 1.35],
+      "types" : ["crate","seat"]
     },
 	{
-      "pos" : [0.45, 0.6, 0.12],
-      "names" : ["crate","seat"]
+      "pos" : [0.45, 0.25, 0.45],
+      "types" : ["crate","seat"]
     },
 	{
-      "pos" : [-0.45, 0.6, 0.12],
-      "names" : ["crate","seat"]
+      "pos" : [-0.45, 0.25, 0.45],
+      "types" : ["crate","seat"]
+    },
+	{
+      "pos" : [0.45, 0.25, -0.35],
+      "types" : ["crate"]
+    },
+	{
+      "pos" : [-0.45, 0.25, -0.35],
+      "types" : ["crate"]
     }
   ],
 
@@ -394,7 +351,11 @@
   ],
 
   "rendering": {
-		"modelName" : "vulcanair.obj",
+		"numberWindows" : 5,
+		"defaultDisplayText" : "Wolfvanox",
+    "displayTextMaxLength" : 12,
+		"hudBackplaneTexturePercentages" : [0.095703125, 0.1875, 0.18359375, 0.22265625],
+		"hudMouldingTexturePercentages" : [0.095703125, 0.1875, 0.14453125, 0.18359375],
 		"textMarkings" : [
 			{
 				"pos" : [0.625, 1.25, -2.8125],
@@ -407,100 +368,6 @@
 				"rot" : [0, -100, 0],
 				"scale" : 0.75,
 				"color" : "#CCCCCC"
-			}
-		],
-		"lights" : [
-			{
-				"pos" : [4.375, 1.7475, 1.13],
-				"rot" : [0, 0, 0],
-				"lightRot" : [-30, 25, 0],
-				"width" : 2,
-				"length" : 2,
-				"brightness" : 30,
-				"switchNumber" : 3,
-				"color" : "#FFFFFF",
-				"beamDistance" : 15,
-				"beamDiameter" : 4
-			},
-			{
-				"pos" : [4.5, 1.7475, 1.13],
-				"rot" : [0, 0, 0],
-				"lightRot" : [-15, 18, 0],
-				"width" : 2,
-				"length" : 2,
-				"brightness" : 40,
-				"switchNumber" : 4,
-				"color" : "#FFFFFF",
-				"beamDistance" : 30,
-				"beamDiameter" : 6
-			}
-		],
-		"beacons" : [
-			{
-				"pos" : [7.25, 1.875, 0.49],
-				"rot" : [0, 0, -90],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 16,
-				"switchNumber" : 1,
-				"color" : "#FF0000",
-				"flashing" : false
-			},
-			{
-				"pos" : [-7.25, 1.875, 0.49],
-				"rot" : [0, 0, 90],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 16,
-				"switchNumber" : 1,
-				"color" : "#00FF00",
-				"flashing" : false
-			},
-			{
-				"pos" : [0, 3.75, -4.57],
-				"rot" : [0, 0, 0],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 16,
-				"switchNumber" : 1,
-				"color" : "#FFFFFF",
-				"flashing" : false
-			},
-			{
-				"pos" : [7.25, 1.875, 0.365],
-				"rot" : [0, 0, -90],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 30,
-				"switchNumber" : 2,
-				"color" : "#FFFFFF",
-				"flashing" : true
-			},
-			{
-				"pos" : [-7.25, 1.875, 0.365],
-				"rot" : [0, 0, 90],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 30,
-				"switchNumber" : 2,
-				"color" : "#FFFFFF",
-				"flashing" : true
-			},
-			{
-				"pos" : [0, 1.7, -1.68],
-				"rot" : [0, 0, 0],
-				"width" : 2,
-				"length" : 2,
-				"height" : 1,
-				"brightness" : 30,
-				"switchNumber" : 2,
-				"color" : "#FF0000",
-				"flashing" : true
 			}
 		],
 		"rotatableModelObjects" : [
@@ -530,6 +397,12 @@
 			},
 			{
 				"partName" : "$Rudder",
+				"rotationPoint" : [0, 0.75, -5.005000],
+				"rotationAxis" : [0, 1, 0],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "&$Navigationlight_FFFFFF_FFFFF_111",
 				"rotationPoint" : [0, 0.75, -5.005000],
 				"rotationAxis" : [0, 1, 0],
 				"rotationVariable" : "rudder"

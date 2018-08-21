@@ -13,7 +13,13 @@ description.mtsofficialpack.mc172=The MC-172 is not fancy, but its cheap and stu
 item.mtsofficialpack.pzlp11.name=PZL P11.c
 description.mtsofficialpack.pzlp11=The PZL P11.c is a born and bred fighter aircraft. Its shoulder wing monoplane configuration provides the pilot with exceptional visibility of the sky and ground, and makes the PZL P11.c much faster than it's biplane fighter counterparts.
 
-
+item.mtsofficialpack.vulcanair_white.name=White Vulcanair
+item.mtsofficialpack.vulcanair_green.name=Green Vulcanair
+item.mtsofficialpack.vulcanair_blue.name=Blue Vulcanair
+item.mtsofficialpack.vulcanair_black.name=Black Vulcanair
+item.mtsofficialpack.vulcanair_red.name=Red Vulcanair
+item.mtsofficialpack.vulcanair_dark_red.name=Dark Red Vulcanair
+item.mtsofficialpack.vulcanair_white_orange.name=White-Orange Vulcanair
 description.mtsofficialpack.vulcanair=The Vulcanair is a six-seat, twin-engined, high-wing monoplane aircraft.  Inspired by the real life Vulcanair P.68 Italian aircraft, its rigid landing gear allows for the mounting of pontoons for both land and sea flights.
 
 item.mtsofficialpack.comanche_blue.name=Blue Comanche
