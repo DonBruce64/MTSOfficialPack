@@ -33,65 +33,65 @@
 		"materials" : []
   },
 
-  "motorized" : {
+	"motorized" : {
     "fuelCapacity" : 5000,
     "instruments" : [
 			{
-				"pos" : [7.5, 5.5, 11.49],
+				"pos" : [0.46875, 0.34375, 0.718125],
 				"rot" : [0, 0, 0],
 				"hudpos" : [30, 63],
-				"scale" : 0.35,
-				"hudScale" : 0.45
+				"scale" : 0.04375,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [2, 5.5, 11.49],
+				"pos" : [0.125, 0.34375, 0.718125],
 				"rot" : [0, 0, 0],
 				"hudpos" : [50, 63],
-				"scale" : 0.35,
-				"hudScale" : 0.45
+				"scale" : 0.04375,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [-3.5, 5.5, 11.49],
+				"pos" : [-0.21875, 0.34375, 0.718125],
 				"rot" : [0, 0, 0],
 				"hudpos" : [70, 63],
-				"scale" : 0.35,
-				"hudScale" : 0.45
+				"scale" : 0.04375,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [7.5, 0, 11.49],
+				"pos" : [0.46875, 0.0, 0.718125],
 				"rot" : [0, 0, 0],
 				"hudpos" : [30, 87],
-				"scale" : 0.35,
-				"hudScale" : 0.45
+				"scale" : 0.04375,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [2, 0, 11.49],
+				"pos" : [0.125, 0.0, 0.718125],
 				"rot" : [0, 0, 0],
 				"hudpos" : [50, 87],
-				"scale" : 0.35,
-				"hudScale" : 0.45
+				"scale" : 0.04375,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [-3.5, 0, 11.49],
+				"pos" : [-0.21875, 0.0, 0.718125],
 				"rot" : [0, 0, 0],
 				"hudpos" : [70, 87],
-				"scale" : 0.35,
-				"hudScale" : 0.45
+				"scale" : 0.04375,
+				"hudScale" : 0.85
 			}
     ],
 		"controls" : [
 			{
-				"pos" : [-10, 7, 11.49],
+				"pos" : [-0.625, 0.4375, 0.718125],
 				"hudpos" : [95, 65],
 				"controlName" : "aircraft_throttle"
 			},
 			{
-				"pos" : [-10, 3, 11.49],
+				"pos" : [-0.625, 0.1875, 0.718125],
 				"hudpos" : [10, 67],
 				"controlName" : "aircraft_flaps"
 			},
 			{
-				"pos" : [-10, -1, 11.49],
+				"pos" : [-0.625, -0.0625, 0.718125],
 				"hudpos" : [90, 65],
 				"controlName" : "parking_brake"
 			}
