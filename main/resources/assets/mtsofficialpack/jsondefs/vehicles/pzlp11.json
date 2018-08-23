@@ -17,106 +17,106 @@
     "fuelCapacity" : 7000,
     "instruments" : [
 			{
-				"pos" : [4.5, 11.6, -13.1],
+				"pos" : [0.28125, 0.725, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [27, 64],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [1.5, 11.6, -13.1],
+				"pos" : [0.09375, 0.725, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [42, 64],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [-1.5, 11.6, -13.1],
+				"pos" : [-0.09375, 0.725, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [57, 64],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [-4.5, 11.6, -13.1],
+				"pos" : [-0.28125, 0.725, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [72, 64],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [4.5, 8.6, -13.1],
+				"pos" : [0.28125, 0.5375, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [27, 88],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [1.5, 8.6, -13.1],
+				"pos" : [0.09375, 0.5375, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [42, 88],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [-1.5, 8.6, -13.1],
+				"pos" : [-0.09375, 0.5375, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [57, 88],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [-4.5, 8.6, -13.1],
+				"pos" : [-0.28125, 0.5375, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [72, 88],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [0.0, 5.6, -13.1],
+				"pos" : [0.0, 0.35, -0.81875],
 				"rot" : [0, 0, 0],
 				"hudpos" : [10, 88],
-				"scale" : 0.20,
-				"hudScale" : 0.45
+				"scale" : 0.025,
+				"hudScale" : 0.85
 			},
 			{
-				"pos" : [7.99, 8.4, -17.5],
+				"pos" : [0.499375, 0.525, -1.09375],
 				"rot" : [0, 90, 0],
 				"hudpos" : [30, 80],
-				"scale" : 0.20,
-				"hudScale" : 0.45,
+				"scale" : 0.025,
+				"hudScale" : 0.85,
 				"optionalEngineNumber" : 1
 			},
 			{
-				"pos" : [-7.99, 8.4, -17.5],
+				"pos" : [-0.499375, 0.525, -1.09375],
 				"rot" : [0, -90, 0],
 				"hudpos" : [65, 80],
-				"scale" : 0.20,
-				"hudScale" : 0.45,
+				"scale" : 0.025,
+				"hudScale" : 0.85,
 				"optionalEngineNumber" : 1
 			},
 			{
-				"pos" : [-7.99, 8.4, -20.5],
+				"pos" : [-0.499375, 0.525, -1.28125],
 				"rot" : [0, -90, 0],
 				"hudpos" : [80, 80],
-				"scale" : 0.20,
-				"hudScale" : 0.45,
+				"scale" : 0.025,
+				"hudScale" : 0.85,
 				"optionalEngineNumber" : 1
 			}
     ],
 		"controls" : [
 			{
-				"pos" : [3.5, 5, -13.2],
+				"pos" : [0.21875, 0.3125, -0.825],
 				"hudpos" : [95, 65],
 				"controlName" : "aircraft_throttle"
 			},
 			{
-				"pos" : [-3.5, 5, -13.2],
+				"pos" : [-0.21875, 0.3125, -0.825],
 				"hudpos" : [90, 65],
 				"controlName" : "parking_brake"
 			}
     ]
-  },
+	},
 
   "plane" : {
     "hasFlaps" : false,
