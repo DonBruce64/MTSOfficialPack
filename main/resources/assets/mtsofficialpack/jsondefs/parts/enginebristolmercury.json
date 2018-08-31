@@ -8,9 +8,9 @@
     "isAutomatic" : true,
     "starterPower" : 40,
     "starterDuration" : 3,
-    "maxRPM" : 2400,
-    "fuelConsumption" : 1.0,
-    "gearRatios" : [1.0],
+    "maxRPM" : 4000,
+    "fuelConsumption" : 0.75,
+    "gearRatios" : [0.5],
 		"repairMaterials" : ["minecraft:obsidian:0:5"]
 	},
 		
