@@ -38,6 +38,8 @@ item.mtsofficialpack.gmcbrigboxyellow=Yellow Box Truck GMC Brigadier
 item.mtsofficialpack.gmcbrigboxgreen=Green Box Truck GMC Brigadier
 description.mtsofficialpack.gmcbrigbox=The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  With multiple configurations it's a solid addition to any city.
 
+item.mtsofficialpack.firetruck.name=Fire Truck
+description.mtsofficialpack.firetruck=The 1973 Ward LaFrance P80 Ambassador is a small fire truck, mostly known for being on the TV show Emergency!  This rendition seats two, and comes equipped with a working siren and emergency lights.  A must-have for any town!
 
 item.mtsofficialpack.crate.name=Vehicle Crate
 item.mtsofficialpack.engineamci4.name=AMC I4 Car Engine
