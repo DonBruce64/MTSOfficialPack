@@ -34,7 +34,7 @@
     "type" : "plane",
 		"openTop" : false,
 		"emptyMass" : 1230,
-		"materials" : ["minecraft:iron_trapdoor:-1:5", "minecraft:iron_ingot:-1:25", "minecraft:repeater:-1:1", "minecraft:redstone:-1:9", "minecraft:redstone_lamp:-1:2", "minecraft:glass_pane:-1:5"]
+		"materials" : ["minecraft:iron_trapdoor:-1:5", "minecraft:iron_ingot:-1:25", "minecraft:redstone:-1:9", "minecraft:redstone_lamp:-1:2", "minecraft:glass_pane:-1:5"]
   },
 
   "motorized" : {
