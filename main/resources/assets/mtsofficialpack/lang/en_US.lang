@@ -28,8 +28,13 @@ item.mtsofficialpack.comanche_red.name=Red Comanche
 item.mtsofficialpack.comanche_yellow.name=Yellow Comanche
 description.mtsofficialpack.comanche=The Comanche is a small, swift, twin-engine craft.  While the lower wing might pose a hazard on overgrown runways, it makes up for it by being faster and nimbler than other planes of its size.
 
-item.mtsofficialpack.scout.name=Scout
-description.mtsofficialpack.scout=The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two and can fit two crates in the back.
+item.mtsofficialpack.scout_red.name=Red Scout
+item.mtsofficialpack.scout_black.name=Black Scout
+item.mtsofficialpack.scout_orange.name=Orange Scout
+item.mtsofficialpack.scout_patriot.name=Patriotic Scout
+item.mtsofficialpack.scout_beaut.name=Golden Scout
+item.mtsofficialpack.scout_pzl.name=Army Scout
+description.mtsofficialpack.scout=The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats four, or two with two areas for cargo in the back.
 
 item.mtsofficialpack.gmcbrigboxred=Red Box Truck GMC Brigadier
 item.mtsofficialpack.gmcbrigboxblack=Black Box Truck GMC Brigadier
