@@ -201,12 +201,14 @@
 				{
       "pos" : [2.5, 0.51, 1.47],
       "types" : ["engine_aircraft"],
+			"overrideMirror" : true,
 			"minValue" : 0.0,
 			"maxValue" : 0.65
     },
     {
       "pos" : [-2.5, 0.51, 1.47],
       "types" : ["engine_aircraft"],
+			"overrideMirror" : true,
 			"minValue" : 0.0,
 			"maxValue" : 0.65
     },
