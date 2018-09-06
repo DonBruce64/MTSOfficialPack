@@ -11,15 +11,15 @@
 		},
 		{
 			rotationVariable : "rpm_max",
-			rotationOffset : 45,
-			rotationFactor : 0.1
+			rotationOffset : -110,
+			rotationFactor : 0.05
 		},
 		{
 		},
 		{
 			rotationVariable : "rpm",
-			rotationOffset : -135,
-			rotationFactor : 0.1
+			rotationOffset : -110,
+			rotationFactor : 0.05
 		},
 		{
 			lightOverlay : true
