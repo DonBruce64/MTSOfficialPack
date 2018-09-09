@@ -36,12 +36,13 @@ item.mtsofficialpack.scout_beaut.name=Golden Scout
 item.mtsofficialpack.scout_pzl.name=Army Scout
 description.mtsofficialpack.scout=The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats four, or two with two areas for cargo in the back.
 
-item.mtsofficialpack.gmcbrigboxred=Red Box Truck GMC Brigadier
-item.mtsofficialpack.gmcbrigboxblack=Black Box Truck GMC Brigadier
-item.mtsofficialpack.gmcbrigboxwhite=White Box Truck GMC Brigadier
-item.mtsofficialpack.gmcbrigboxyellow=Yellow Box Truck GMC Brigadier
-item.mtsofficialpack.gmcbrigboxgreen=Green Box Truck GMC Brigadier
-description.mtsofficialpack.gmcbrigbox=The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  With multiple configurations it's a solid addition to any city.
+item.mtsofficialpack.gmcbrig_black.name=Black GMC Brigadier
+item.mtsofficialpack.gmcbrig_blue.name=Blue GMC Brigadier
+item.mtsofficialpack.gmcbrig_green.name=Green GMC Brigadier
+item.mtsofficialpack.gmcbrig_red.name=Red GMC Brigadier
+item.mtsofficialpack.gmcbrig_white.name=White GMC Brigadier
+item.mtsofficialpack.gmcbrig_yellow.name=Yellow GMC Brigadier
+description.mtsofficialpack.gmcbrig=The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  Its solid frame combined with its ability to be equipped with a variety of beds makes it a solid addition to any city.
 
 item.mtsofficialpack.firetruck.name=Fire Truck
 description.mtsofficialpack.firetruck=The 1973 Ward LaFrance P80 Ambassador is a small fire truck, mostly known for being on the TV show Emergency!  This rendition seats two, and comes equipped with a working siren and emergency lights.  A must-have for any town!
