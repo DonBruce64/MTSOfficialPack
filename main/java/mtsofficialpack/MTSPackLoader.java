@@ -36,7 +36,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class MTSPackLoader{
 	public static final String MODID="mtsofficialpack";
 	public static final String MODNAME="The Official Vehicle Pack for MTS";
-	public static final String MODVER="5.0.0";
+	public static final String MODVER="6.0.0";
 	public static final String DEPS="required-after:mts@[11.0.0,);";
 	public static final String MCVERS="[1.10.2,]";
 	
@@ -108,13 +108,52 @@ public class MTSPackLoader{
 	 */
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event){
+		final String[] itemRegistryNames = {"setRegistryName", "func_77655_b"};
 		try{
+			//First get the MTS classes.
 			Class registry = Class.forName("minecrafttransportsimulator.dataclasses.MTSRegistry");
 			Method getItemsMethod = registry.getMethod("getItemsForPack", String.class);
 			List<Item> itemList = (List<Item>) getItemsMethod.invoke(null, MODID);
+			
+			//Forge changed the location of the registry class mid-1.12.2.
+			//We need to detect this to prevent crashes during construction.
+			Class forgeRegistryClass = null;
+			try{
+				//Check for old class first.
+				forgeRegistryClass = Class.forName("net.minecraftforge.fml.common.registry.IForgeRegistryEntry");
+			}catch(ClassNotFoundException e){
+				 //If we don't find the old class, check for the new one.
+				forgeRegistryClass = Class.forName("net.minecraftforge.registries.IForgeRegistryEntry");
+			}
+			//Get the registration method and register the item.
+			//We use reflection here to prevent a Java import and instead use generics.
+			Method getRegistryMethod = event.getClass().getMethod("getRegistry");
+			Object registryClass = getRegistryMethod.invoke(event);
+			
+			//We need to loop through the methods here to get the correct one, as Forge abstracts the type.
+			//That abstraction means we can't use a generic getMethod call.
+			Method registerItemMethod = null;
+			for(Method method : getRegistryMethod.invoke(event).getClass().getMethods()){
+				if(method.getName().equals("register")){
+					registerItemMethod = method;
+					break;
+				}
+			}
+			
+			Method registerNameMethod = null;
+			for(String methodName : itemRegistryNames){
+				try{
+					registerNameMethod = Item.class.getMethod(methodName, ResourceLocation.class);
+					break;
+				}catch (Exception e){
+					continue;
+				}
+			}
+			
+			//Now register all the items.
 			for(Item item : itemList){
-				item.setRegistryName(new ResourceLocation(MODID, item.getUnlocalizedName().substring("item.".length())));
-				event.getRegistry().register(item);
+				registerNameMethod.invoke(item, new ResourceLocation(MODID, item.getUnlocalizedName().substring("item.".length())));
+				registerItemMethod.invoke(registryClass, item);
 				item.setUnlocalizedName(MODID + "." + item.getUnlocalizedName().substring("item.".length()));
 			}	
 		}catch(Exception e){
