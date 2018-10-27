@@ -36,8 +36,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class MTSPackLoader{
 	public static final String MODID="mtsofficialpack";
 	public static final String MODNAME="The Official Vehicle Pack for MTS";
-	public static final String MODVER="7.0.0";
-	public static final String DEPS="required-after:mts@[11.0.0,);";
+	public static final String MODVER="8.0.0";
+	public static final String DEPS="required-after:mts@[12.0.0,);";
 	public static final String MCVERS="[1.10.2,]";
 	
 	/**
@@ -141,8 +141,12 @@ public class MTSPackLoader{
 			}
 			
 			//Now register all the items.
+			//Use the unlocalized name as it's the only thing we can set MTS-side that packs can see.
+			//The name will be in the format of item.modid.name, so make sure to prune the item.modid. portion to
+			//get a reasonable registry name.
 			for(Item item : itemList){
-				setRegistryNameMethod.invoke(item, new ResourceLocation(MODID, item.getUnlocalizedName().substring("item.".length())));
+				System.out.println(item.getUnlocalizedName().replace("item." + MODID + ".", ""));
+				setRegistryNameMethod.invoke(item, new ResourceLocation(MODID, item.getUnlocalizedName().replace("item." + MODID + ".", "")));
 				registerItemMethod.invoke(registryClass, item);
 			}
 		}catch(Exception e){
