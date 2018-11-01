@@ -125,3 +125,7 @@ item.mtsofficialpack.instrument_car_tachometer_amc.name=AMC I4 Tachometer
 item.mtsofficialpack.instrument_car_tachometer_amc.description=Indicates engine speeds.
 item.mtsofficialpack.instrument_car_tachometer_det.name=Detroit Diesel Tachometer
 item.mtsofficialpack.instrument_car_tachometer_det.description=Indicates engine speeds.
+
+sign.mtsofficialpack.stop.name=Stop Sign
+sign.mtsofficialpack.yeild.name=Yeild Sign
+sign.mtsofficialpack.wrongway.name=Wrong Way Sign
