@@ -145,7 +145,6 @@ public class MTSPackLoader{
 			//The name will be in the format of item.modid.name, so make sure to prune the item.modid. portion to
 			//get a reasonable registry name.
 			for(Item item : itemList){
-				System.out.println(item.getUnlocalizedName().replace("item." + MODID + ".", ""));
 				setRegistryNameMethod.invoke(item, new ResourceLocation(MODID, item.getUnlocalizedName().replace("item." + MODID + ".", "")));
 				registerItemMethod.invoke(registryClass, item);
 			}
