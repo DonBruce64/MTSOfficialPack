@@ -127,6 +127,7 @@ item.mtsofficialpack.instrument_car_tachometer_det.name=Detroit Diesel Tachomete
 item.mtsofficialpack.instrument_car_tachometer_det.description=Indicates engine speeds.
 
 sign.mtsofficialpack.route.name=Route Sign
+sign.mtsofficialpack.speedlimit.name=Speed Limit Sign
 sign.mtsofficialpack.stop.name=Stop Sign
 sign.mtsofficialpack.wrongway.name=Wrong Way Sign
 sign.mtsofficialpack.yeild.name=Yeild Sign
