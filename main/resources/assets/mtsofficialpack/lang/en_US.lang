@@ -126,8 +126,12 @@ item.mtsofficialpack.instrument_car_tachometer_amc.description=Indicates engine 
 item.mtsofficialpack.instrument_car_tachometer_det.name=Detroit Diesel Tachometer
 item.mtsofficialpack.instrument_car_tachometer_det.description=Indicates engine speeds.
 
-sign.mtsofficialpack.route.name=Route Sign
-sign.mtsofficialpack.speedlimit.name=Speed Limit Sign
-sign.mtsofficialpack.stop.name=Stop Sign
-sign.mtsofficialpack.wrongway.name=Wrong Way Sign
-sign.mtsofficialpack.yeild.name=Yeild Sign
+sign.mtsofficialpack.donotenter.name=Do Not Enter
+sign.mtsofficialpack.noparking.name=No Parking
+sign.mtsofficialpack.oneway_left.name=One Way (Left)
+sign.mtsofficialpack.oneway_right.name=One Way (Right)
+sign.mtsofficialpack.route.name=Route
+sign.mtsofficialpack.speedlimit.name=Speed Limit
+sign.mtsofficialpack.stop.name=Stop
+sign.mtsofficialpack.wrongway.name=Wrong Way
+sign.mtsofficialpack.yeild.name=Yeild
