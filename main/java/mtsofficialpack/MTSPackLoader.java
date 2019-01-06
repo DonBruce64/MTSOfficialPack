@@ -36,7 +36,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class MTSPackLoader{
 	public static final String MODID="mtsofficialpack";
 	public static final String MODNAME="The Official Vehicle Pack for MTS";
-	public static final String MODVER="8.0.0";
+	public static final String MODVER="9.0.0";
 	public static final String DEPS="required-after:mts@[12.0.0,);";
 	public static final String MCVERS="[1.10.2,]";
 	

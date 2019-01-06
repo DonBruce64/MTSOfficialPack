@@ -111,20 +111,20 @@
 	"parts": [
     {
       "pos" : [0, -0.85, 1.7],
-      "types" : ["ground_device"],
+      "types" : ["wheel", "pontoon"],
 			"minValue" : 0.35,
 			"maxValue" : 0.65,
 			"turnsWithSteer" : true
     },
     {
       "pos" : [-1.65, -0.85, 0],
-      "types" : ["ground_device"],
+      "types" : ["wheel", "pontoon"],
 			"minValue" : 0.35,
 			"maxValue" : 0.65
     },
     {
       "pos" : [1.65, -0.85, 0],
-      "types" : ["ground_device"],
+      "types" : ["wheel", "pontoon"],
 			"minValue" : 0.35,
 			"maxValue" : 0.65
     },

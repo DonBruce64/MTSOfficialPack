@@ -1,17 +1,11 @@
 {
   "general": {
-    "type" : "ground_device",
+    "type" : "pontoon",
 		"materials" : ["minecraft:iron_ingot:0:3"]
   },
 	
-	"groundDevice" : {
-		"canBeFlat" : false,
-		"canFloat" : true,
-		"rotatesOnShaft" : false,
-		"isLongPart" : true,
-    "diameter" : 0.35,
-		"thickness" : 0.75,
-		"motiveFriction" : 0.1,
+	"pontoon" : {
+		"width" : 0.5,
 		"lateralFriction" : 0.125,
 		"extraCollisionBoxOffset" : -2.0
 	}

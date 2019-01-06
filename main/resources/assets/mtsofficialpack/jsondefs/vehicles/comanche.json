@@ -181,20 +181,20 @@
 	"parts": [
      {
       "pos" : [0.0, -0.60, 2.35],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65,
 			"turnsWithSteer" : true
     },
     {
       "pos" : [-1.85, -0.45, -0.35],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65
     },
     {
       "pos" : [1.85, -0.45, -0.35],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65
     },

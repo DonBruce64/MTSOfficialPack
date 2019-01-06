@@ -79,26 +79,26 @@
 	"parts": [
 		{
       "pos" : [-1.2, -0.041949, -0.010662],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0
     },
 		{
       "pos" : [1.2, -0.041949, -0.010662],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0
     },
 		{
       "pos" : [-1.2, -0.041949, 3.29684],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0,
 			"turnsWithSteer" : true
     },
 		{
       "pos" : [1.2, -0.041949, 3.29684],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0,
 			"turnsWithSteer" : true

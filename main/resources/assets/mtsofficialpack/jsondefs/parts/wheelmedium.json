@@ -1,18 +1,12 @@
 {
   "general": {
-    "type" : "ground_device",
+    "type" : "wheel",
 		"materials" : ["minecraft:dye:0:2", "minecraft:iron_ingot:0:2", "minecraft:wool:15:2"]
   },
 	
-	"groundDevice" : {
-		"canBeFlat" : true,
-		"canFloat" : false,
-		"rotatesOnShaft" : true,
-		"isLongPart" : false,
+	"wheel" : {
     "diameter" : 0.75,
-		"thickness" : 0.375,
 		"motiveFriction" : 0.5,
-		"lateralFriction" : 0.5,
-		"flatDiameter" : 0.375
+		"lateralFriction" : 0.5
 	}
 }

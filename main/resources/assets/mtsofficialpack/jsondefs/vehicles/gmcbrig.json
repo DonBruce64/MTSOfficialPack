@@ -79,62 +79,62 @@
 	"parts": [
 		{
       "pos" : [-0.85, 0.0, -0.0],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.9,
 			"maxValue" : 1.1,
 			"additionalPart" :  {
 				"pos" : [-1.25, 0.0, -0.0],
-				"types" : ["ground_device"],
+				"types" : ["wheel"],
 				"minValue" : 0.9,
 				"maxValue" : 1.1
 			}
     },
 		{
       "pos" : [0.85, 0.0, -0.0],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.9,
 			"maxValue" : 1.1,
 			"additionalPart" :  {
 				"pos" : [1.25, 0.0, -0.0],
-				"types" : ["ground_device"],
+				"types" : ["wheel"],
 				"minValue" : 0.9,
 				"maxValue" : 1.1
 			}
     },
 		{
       "pos" : [-0.85, 0.0, -1.4375],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.9,
 			"maxValue" : 1.1,
 			"additionalPart" :  {
 				"pos" : [-1.25, 0.0, -1.4375],
-				"types" : ["ground_device"],
+				"types" : ["wheel"],
 				"minValue" : 0.9,
 				"maxValue" : 1.1
 			}
     },
 		{
       "pos" : [0.85, 0.0, -1.4375],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.9,
 			"maxValue" : 1.1,
 			"additionalPart" :  {
 				"pos" : [1.25, 0.0, -1.4375],
-				"types" : ["ground_device"],
+				"types" : ["wheel"],
 				"minValue" : 0.9,
 				"maxValue" : 1.1
 			}
     },
 		{
       "pos" : [-1.25, 0.0, 4.0],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.9,
 			"maxValue" : 1.1,
 			"turnsWithSteer" : true
     },
 		{
       "pos" : [1.25, 0.0, 4.0],
-      "types" : ["ground_device"],
+      "types" : ["wheel"],
 			"minValue" : 0.9,
 			"maxValue" : 1.1,
 			"turnsWithSteer" : true
