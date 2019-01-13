@@ -135,3 +135,6 @@ sign.mtsofficialpack.speedlimit.name=Ограничение скорости
 sign.mtsofficialpack.stop.name=Стоп
 sign.mtsofficialpack.wrongway.name=Неправильный путь
 sign.mtsofficialpack.yield.name=Уступите дорогу
+
+item.mtsofficialpack.trafficcone.name=Дорожный ограничительный конус
+item.mtsofficialpack.crashbarrier.name=Дорожный ограничительный барьер

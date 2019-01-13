@@ -135,3 +135,6 @@ sign.mtsofficialpack.speedlimit.name=Speed Limit
 sign.mtsofficialpack.stop.name=Stop
 sign.mtsofficialpack.wrongway.name=Wrong Way
 sign.mtsofficialpack.yield.name=Yield
+
+item.mtsofficialpack.crashbarrier.name=Crash Barrier
+item.mtsofficialpack.trafficcone.name=Traffic Cone

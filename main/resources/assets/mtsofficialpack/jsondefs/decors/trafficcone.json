@@ -1,0 +1,8 @@
+{
+  "general": {
+		"width" : 0.6,
+		"height" : 0.75,
+		"depth" : 0.6,
+		"materials" : ["minecraft:dye:15:1", "minecraft:dye:14:1", "minecraft:slime_ball:-1:1"]
+	}
+}
