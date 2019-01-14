@@ -10,8 +10,7 @@
     "starterDuration" : 3,
     "maxRPM" : 4000,
     "fuelConsumption" : 0.75,
-    "gearRatios" : [0.5],
-		"repairMaterials" : ["minecraft:obsidian:0:5"]
+    "gearRatios" : [0.5]
 	},
 		
 	"subParts" : [
