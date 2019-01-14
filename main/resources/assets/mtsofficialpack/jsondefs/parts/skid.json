@@ -5,7 +5,7 @@
   },
 	
 	"skid" : {
-    "wdith" : 0.25,
+    "width" : 0.25,
 		"lateralFriction" : 0.5
 	}
 }
