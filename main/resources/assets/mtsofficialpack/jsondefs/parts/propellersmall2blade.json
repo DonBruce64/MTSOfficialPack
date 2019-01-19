@@ -1,7 +1,7 @@
 {
   "general": {
     "type" : "propeller",
-		"materials" : ["minecraft:planks:0:3"]
+		"materials" : ["minecraft:planks:-1:3"]
   },
 	
 	"propeller" : {
