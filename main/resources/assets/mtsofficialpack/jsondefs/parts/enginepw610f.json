@@ -1,0 +1,25 @@
+{
+  "general": {
+    "type" : "engine_jet",
+		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "minecraft:iron_ingot:0:1"]
+  },
+	
+	"engine" : {
+    "isAutomatic" : true,
+    "starterPower" : 11,
+    "starterDuration" : 4,
+    "maxRPM" : 24310,
+    "fuelConsumption" : 0.35,
+    "gearRatios" : [1.83]
+	},
+   "rendering": {
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$IntakeFan",
+				"rotationPoint" : [0, 0, 0],
+				"rotationAxis" : [0, 0, 1],
+				"rotationVariable" : "engine"
+			}
+		]
+	}
+}
