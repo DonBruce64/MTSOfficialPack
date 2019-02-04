@@ -28,6 +28,12 @@ item.mtsofficialpack.comanche_red.name=Red Comanche
 item.mtsofficialpack.comanche_yellow.name=Yellow Comanche
 description.mtsofficialpack.comanche=The Comanche is a small, swift, twin-engine craft.  While the lower wing might pose a hazard on overgrown runways, it makes up for it by being faster and nimbler than other planes of its size.
 
+item.mtsofficialpack.e500_blue.name=Blue E-500
+item.mtsofficialpack.e500_green.name=Green E-500
+item.mtsofficialpack.e500_red.name=Red E-500
+item.mtsofficialpack.e500_yellow.name=Yellow E-500
+description.mtsofficialpack.e500=The Eclipse 500, first flown in 2002, created a new class of aircraft: the very light jet, or VLJ. The MTS version is configured to seat five, with the pilot in the front and four passengers behind them. A great addition to any private airport, and quite efficient for its capacity and speed as well.
+
 item.mtsofficialpack.scout_red.name=Red Scout
 item.mtsofficialpack.scout_black.name=Black Scout
 item.mtsofficialpack.scout_orange.name=Orange Scout

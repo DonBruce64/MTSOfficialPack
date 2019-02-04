@@ -1,0 +1,465 @@
+{	
+	"definitions" : [
+		{
+			"subName" : "_blue",
+    	"extraMaterials" : ["minecraft:dye:12:5"]
+		},
+		{
+			"subName" : "_green",
+    	"extraMaterials" : ["minecraft:dye:10:5"]
+		},
+		{
+			"subName" : "_red",
+    	"extraMaterials" : ["minecraft:dye:1:5"]
+		},
+		{
+			"subName" : "_yellow",
+			"extraMaterials" : ["minecraft:dye:11:5"]
+		}
+	],
+
+  "general": {
+    "type" : "plane",
+		"openTop" : false,
+		"emptyMass" : 1610,
+		"materials" : ["minecraft:iron_bars:-1:6", "minecraft:iron_trapdoor:-1:8", "minecraft:iron_ingot:-1:15", "minecraft:redstone:-1:9", "minecraft:comparator:-1:1", "minecraft:glass_pane:-1:5"]
+  },
+
+  "motorized" : {
+    "fuelCapacity" : 10000,
+    "instruments" : [
+			{
+				"pos" : [0.3890625, 0.671875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [30, 63],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [0.1296875, 0.671875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [43, 63],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [-0.1296875, 0.671875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [56, 63],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [-0.3890625, 0.671875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [69, 63],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [0.3890625, 0.421875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [30, 87],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [0.1296875, 0.421875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [43, 87],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [-0.1296875, 0.421875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [56, 87],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [-0.3890625, 0.421875, 3.224],
+				"rot" : [0, 0, 0],
+				"hudpos" : [69, 87],
+				"scale" : 0.0325,
+				"hudScale" : 0.85
+			},
+			{
+				"pos" : [0.59374, 0.756875, 2.865625],
+				"rot" : [0, 90.0, 0],
+				"hudpos" : [45, 65],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [0.59374, 0.756875, 2.975],
+				"rot" : [0, 90.0, 0],
+				"hudpos" : [55, 65],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [0.59374, 0.644375, 2.865625],
+				"rot" : [0, 90.0, 0],
+				"hudpos" : [45, 83],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [0.59374, 0.644375, 2.975],
+				"rot" : [0, 90.0, 0],
+				"hudpos" : [55, 83],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 1
+			},
+			{
+				"pos" : [-0.59374, 0.756875, 2.975],
+				"rot" : [0, -90.0, 0],
+				"hudpos" : [70, 65],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 2
+			},
+			{
+				"pos" : [-0.59374, 0.756875, 2.865625],
+				"rot" : [0, -90.0, 0],
+				"hudpos" : [80, 65],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 2
+			},
+			{
+				"pos" : [-0.59374, 0.644375, 2.975],
+				"rot" : [0, -90.0, 0],
+				"hudpos" : [70, 83],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 2
+			},
+			{
+				"pos" : [-0.59374, 0.644375, 2.865625],
+				"rot" : [0, -90.0, 0],
+				"hudpos" : [80, 83],
+				"scale" : 0.015,
+				"hudScale" : 0.65,
+				"optionalEngineNumber" : 2
+			}
+    ],
+		"controls" : [
+			{
+				"pos" : [0, 0.65, -2.225],
+				"hudpos" : [95, 65],
+				"controlName" : "aircraft_throttle"
+			},
+			{
+				"pos" : [0, 0.65, -2.225],
+				"hudpos" : [10, 67],
+				"controlName" : "aircraft_flaps"
+			},
+			{
+				"pos" : [0, 0.65, -2.225],
+				"hudpos" : [90, 65],
+				"controlName" : "parking_brake"
+			}
+    ]
+  },
+
+  "plane" : {
+    "hasFlaps" : true,
+    "wingSpan" : 11.4,
+    "wingArea" : 13.4,
+    "tailDistance" : 4.0,
+    "rudderArea" : 1.0,
+    "elevatorArea" : 2.2,
+    "defaultElevatorAngle" : -7.5
+  },
+	
+	"parts": [
+     {
+      "pos" : [0.0, -0.39875, 3.31875],
+      "types" : ["wheel"],
+			"minValue" : 0.4,
+			"maxValue" : 0.65,
+			"turnsWithSteer" : true
+    },
+    {
+      "pos" : [-1.5125, -0.4175, -0.18125],
+      "types" : ["wheel"],
+			"minValue" : 0.4,
+			"maxValue" : 0.65
+    },
+    {
+      "pos" : [1.5125, -0.4175, -0.18125],
+      "types" : ["wheel"],
+			"minValue" : 0.4,
+			"maxValue" : 0.65
+    },
+				{
+      "pos" : [0.96875, 0.78875, -2.4235],
+      "types" : ["engine_jet"],
+			"overrideMirror" : true,
+			"minValue" : 0.0,
+			"maxValue" : 0.65
+    },
+    {
+      "pos" : [-0.96875, 0.78875, -2.4235],
+      "types" : ["engine_jet"],
+			"overrideMirror" : true,
+			"minValue" : 0.0,
+			"maxValue" : 0.65
+    },
+    {
+      "pos" : [-0.0, 0.195, 2.31875],
+      "types" : ["seat"],
+			"isController" : true
+    },
+		{
+      "pos" : [0.40625, 0.195, 1.48125],
+      "types" : ["seat"]
+    },
+    {
+      "pos" : [-0.40625, 0.195, 1.48125],
+      "types" : ["seat"]
+    },
+    {
+      "pos" : [-0.40625, 0.195, 0.51875],
+      "types" : ["seat"]
+    },
+	{
+      "pos" : [0.40625, 0.195, 0.51875],
+      "types" : ["seat"]
+    }
+  ],
+
+  "collision": [
+     {
+      "pos" : [-1.5, 2.35, -5.1],
+      "width" : 0.75,
+      "height" : 0.125 
+    },
+    {
+      "pos" : [-0.6, 2.35, -4.85],
+      "width" : 0.85,
+      "height" : 0.125
+    },
+    {
+      "pos" : [0.6, 2.35, -4.85],
+      "width" : 0.85,
+      "height" : 0.125
+    },
+    {
+      "pos" : [1.5, 2.35, -5.1],
+      "width" : 0.75,
+      "height" : 0.125
+    },
+    {
+      "pos" : [0.0, 1.25, -3.4],
+      "width" : 0.25,
+      "height" : 0.4
+    },
+    {
+      "pos" : [0.0, 1.5, -3.9],
+      "width" : 0.25,
+      "height" : 1
+    },
+    {
+      "pos" : [0.0, 1.65, -4.375],
+      "width" : 0.25,
+      "height" : 1.25
+    },
+    {
+      "pos" : [0.0, 1.4375, 1.75],
+      "width" : 1.5,
+      "height" : 0.125
+    },
+    {
+      "pos" : [0.0, 1.4375, 0.75],
+      "width" : 1.5,
+      "height" : 0.125
+    },
+    {
+      "pos" : [0.0, 0.625, -3.75],
+      "width" : 0.75,
+      "height" : 0.75
+    },
+    {
+      "pos" : [0.0, 0.625, -2.85],
+      "width" : 1,
+      "height" : 1
+    },
+    {
+      "pos" : [0.0, 0.625, -1.75],
+      "width" : 1.25,
+      "height" : 1.25
+    },
+    {
+      "pos" : [0.0, 0.625, -0.5],
+      "width" : 1.5,
+      "height" : 1.5
+    },
+    {
+      "pos" : [0.0, 0.375, 3.5],
+      "width" : 1,
+      "height" : 1
+    },
+    {
+      "pos" : [0.0, 0.375, 4.25],
+      "width" : 0.5,
+      "height" : 0.5
+    },
+    {
+      "pos" : [0.0, 0.0625, 0.75],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [0.0, 0.0625, 1.75],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+    {
+      "pos" : [1.125, 0.0, 0.625],
+      "width" : 0.5,
+      "height" : 0.125
+    },
+    {
+      "pos" : [1.5, 0.0, -0.125],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+	{
+      "pos" : [3.0, 0.1875, -0.0],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+	{
+      "pos" : [4.5, 0.35, 0.125],
+      "width" : 1.0,
+      "height" : 0.125
+    },
+    {
+      "pos" : [5.25, 0.4, 0.125],
+      "width" : 0.5,
+      "height" : 0.125
+    },
+    {
+      "pos" : [-1.125, 0.0, 0.625],
+      "width" : 0.5,
+      "height" : 0.125
+    },
+	{
+      "pos" : [-1.5, 0.0, -0.125],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+	{
+      "pos" : [-3.0, 0.1875, 0.0],
+      "width" : 1.25,
+      "height" : 0.125
+    },
+	{
+      "pos" : [-4.5, 0.35, 0.125],
+      "width" : 1.0,
+      "height" : 0.125
+    },
+    {
+      "pos" : [-5.25, 0.4, 0.125],
+      "width" : 0.5,
+      "height" : 0.125
+    }
+  ],
+
+  "rendering": {
+		"numberWindows" : 10,
+		"defaultDisplayText" : "N750RG",
+    "displayTextMaxLength" : 6,
+		"hudBackplaneTexturePercentages" : [0.81640625, 0.89648437, 0.1953125, 0.25],
+		"hudMouldingTexturePercentages" : [0.30078125, 0.30859375, 0.00390625, 0.01953125],
+		"textMarkings" : [
+				{
+				"pos" : [0.0313, 1.25, -3.25],
+				"rot" : [0, 90, 0],
+				"scale" : 0.4,
+				"color" : "#CCCCCC"
+			},
+			{
+				"pos" : [-0.0313, 1.25, -3.25],
+				"rot" : [0, -90, 0],
+				"scale" : 0.45,
+				"color" : "#CCCCCC"
+			}
+		],
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$Aileron_L",
+				"rotationPoint" : [4.6826, 0.343437, -0.025],
+				"rotationAxis" : [-0.995, -0.105, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Aileron_R",
+				"rotationPoint" : [-4.6826, 0.343437, -0.025],
+				"rotationAxis" : [0.995, -0.105, 0],
+				"rotationVariable" : "aileron"
+			},
+			{
+				"partName" : "$Rudder",
+				"rotationPoint" : [0, 1.61217, -4.25938],
+				"rotationAxis" : [0, 0.866, -0.5],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "$WheelStrut",
+				"rotationPoint" : [0, 0, 3.31875],
+				"rotationAxis" : [0, -1 , 0],
+				"rotationVariable" : "rudder"
+			},
+			{
+				"partName" : "$Elevator_R",
+				"rotationPoint" : [-0.9685, 2.32, -4.995],
+				"rotationAxis" : [0.966, 0, 0.259],
+				"rotationVariable" : "elevator"
+			},   
+			{
+				"partName" : "$Elevator_L",
+				"rotationPoint" : [0.9685, 2.32, -4.995],
+				"rotationAxis" : [0.966, 0, -0.259],
+				"rotationVariable" : "elevator"
+			},  
+			{
+				"partName" : "$Flap_L",
+				"rotationPoint" : [2.274, 0.090283, -0.4],
+				"rotationAxis" : [-0.995, -0.105, 0],
+				"rotationVariable" : "flap"
+			},
+			{
+				"partName" : "$Flap_R",
+				"rotationPoint" : [-2.274, 0.090283, -0.4],
+				"rotationAxis" : [-0.995, 0.105, 0],
+				"rotationVariable" : "flap"
+			},
+			{
+				"partName" : "$Door_Top",
+				"rotationPoint" : [0.78125, 1.445, 0],
+				"rotationAxis" : [0, 0, 2.25],
+				"rotationVariable" : "door"
+			},
+			{
+				"partName" : "$Door_Bottom",
+				"rotationPoint" : [0.78125, -0.18, 0],
+				"rotationAxis" : [0, 0, -2.25],
+				"rotationVariable" : "door"
+			},
+			{
+				"partName" : "$Door_Window",
+				"rotationPoint" : [0.78125, 1.445, 0],
+				"rotationAxis" : [0, 0, 2.25],
+				"rotationVariable" : "door"
+			}
+		]
+  }
+}
