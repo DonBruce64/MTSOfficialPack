@@ -11,63 +11,93 @@
     "subParts" : [
    	{
       "pos" : [-0.85, 0.2, 1.49],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     } ,
-	{
+		{
       "pos" : [-0.85, 0.2, 0.69],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [-0.85, 0.2, -0.91],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [-0.85, 0.2, -0.101],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [-0.85, 0.2, -1.71],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     } ,
-	{
+		{
       "pos" : [-0, 0.2, 1.49],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     } ,
-	{
+		{
       "pos" : [-0, 0.2, 0.69],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [-0, 0.2, -0.901],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [-0, 0.2, -0.101],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [-0, 0.2, -1.71],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [0.85, 0.2, 1.49],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     } ,
-	{
+		{
       "pos" : [0.85, 0.2, 0.69],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [0.85, 0.2, -0.901],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [0.85, 0.2, -0.101],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     },
-	{
+		{
       "pos" : [0.85, 0.2, -1.71],
-      "types" : ["crate"]
+      "types" : ["crate", "barrel"],
+			"minValue" : 0,
+			"maxValue" : 6000
     }  
 	]
 }
