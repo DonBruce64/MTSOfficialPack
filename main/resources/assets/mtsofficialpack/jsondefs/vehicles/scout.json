@@ -73,6 +73,7 @@
 		"isBigTruck" : false,
     "isFrontWheelDrive" : true,
 		"isRearWheelDrive" : true,
+		"axleRatio" : 3.55,
     "dragCoefficient" : 0.6
   },
 	
