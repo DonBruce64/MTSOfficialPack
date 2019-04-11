@@ -148,13 +148,41 @@
 			"maxValue" : 0.95
     },
 		{
+      "pos" : [-0.8125, 0.3125, 0.25],
+			"overrideMirror" : true,
+      "types" : ["gun_fixed"],
+			"minValue" : 0,
+			"maxValue" : 20
+    },
+		{
+      "pos" : [0.8125, 0.3125, 0.25],
+      "types" : ["gun_fixed"],
+			"minValue" : 0,
+			"maxValue" : 20
+    },
+		{
+      "pos" : [-2.5, 1.0625, 0.25],
+			"rot" : [0.0, 2.5, 0.0],
+			"overrideMirror" : true,
+      "types" : ["gun_fixed"],
+			"minValue" : 0,
+			"maxValue" : 20
+    },
+    {
+      "pos" : [2.5, 1.0625, 0.25],
+			"rot" : [0.0, -2.5, 0.0],
+      "types" : ["gun_fixed"],
+			"minValue" : 0,
+			"maxValue" : 20
+    },
+		{
       "pos" : [0, 0.15, 0.85],
       "types" : ["engine_aircraft"],
 			"minValue" : 0.5,
 			"maxValue" : 1.25
     },
     {
-      "pos" : [0, 0.0, -1.4],
+      "pos" : [0, 0.0625, -1.4],
       "types" : ["seat"],
 			"isController" : true
     }

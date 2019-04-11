@@ -55,11 +55,13 @@ description.mtsofficialpack.firetruck=The 1973 Ward LaFrance P80 Ambassador is a
 
 item.mtsofficialpack.crate.name=Crate
 item.mtsofficialpack.barrel.name=Barrel
+item.mtsofficialpack.bullet762.name=7.62mm Bullet
 item.mtsofficialpack.engineamci4.name=AMC I4 Car Engine
 item.mtsofficialpack.enginebristolmercury.name=Bristol Mercury Plane Engine
 item.mtsofficialpack.enginedetroitdiesel.name=Detroit Diesel Truck Engine
 item.mtsofficialpack.enginelycomingo360.name=Lycoming O-360 Plane Engine
 item.mtsofficialpack.enginepw610f.name=Pratt & Whitney 610F Jet Engine
+item.mtsofficialpack.gunm1919.name=M1919 Browning Machine Gun
 item.mtsofficialpack.pontoon.name=Pontoon
 item.mtsofficialpack.propellersmall2blade.name=Small 2-Bladed Propeller
 item.mtsofficialpack.propellersmall3blade.name=Small 3-Bladed Propeller (Dynamic Pitch)
