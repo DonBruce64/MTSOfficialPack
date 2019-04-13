@@ -1,0 +1,47 @@
+{
+  "general": {
+    "validVehicles" : ["car"],
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:1:1", "minecraft:dye:4:1", "minecraft:dye:15:4"],
+		"textureXSectorStart" : 8,
+		"textureYSectorStart" : 1
+  },
+	
+	"components" : [
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 80,
+			visibilityFactor : 80.0,
+			visibilityOffset : 56.0
+		},
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 0
+		},
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 0
+		},
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 0
+		},
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 0
+		},
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 0
+		},
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 0
+		},
+		{
+			visibilityVariable : "gear",
+			visibleSectionHeight : 80,
+			visibilityFactor : 0.0,
+			lightOverlay : true
+		}
+	]
+}
