@@ -42,6 +42,12 @@ item.mtsofficialpack.scout_beaut.name=Golden Scout
 item.mtsofficialpack.scout_pzl.name=Army Scout
 description.mtsofficialpack.scout=The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats four, or two with two areas for cargo in the back.
 
+item.mtsofficialpack.trimotor_black.name=Black Ford Trimotor
+item.mtsofficialpack.trimotor_blue.name=Blue Ford Trimotor
+item.mtsofficialpack.trimotor_red.name=Red Ford Trimotor
+item.mtsofficialpack.trimotor_white.name=White Ford Trimotor
+description.mtsofficialpack.trimotor=The Ford Trimotor is an old, yet trustworthy aircraft.  Its large wingspan provides ample lift for short takeoffs, as well as enough to maintain flight with one engine out.  With room for 12 passengers or crates, it's a great choice for long-haul flights where reliability (but not time) is of the essence.
+
 item.mtsofficialpack.gmcbrig_black.name=Black GMC Brigadier
 item.mtsofficialpack.gmcbrig_blue.name=Blue GMC Brigadier
 item.mtsofficialpack.gmcbrig_green.name=Green GMC Brigadier
