@@ -10,5 +10,28 @@
 		"pitch" : 65,
 		"diameter" : 80,
 		"startingHealth" : 250
+	},
+	
+	"rendering": {
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$blade_1",
+				"rotationPoint" : [0, 0, 0],
+				"rotationAxis" : [1, 0, 0],
+				"rotationVariable" : "propellerpitch"
+			},
+			{
+				"partName" : "$blade_2",
+				"rotationPoint" : [0, 0, 0],
+				"rotationAxis" : [-0.5, 0.866, 0],
+				"rotationVariable" : "propellerpitch"
+			},
+			{
+				"partName" : "$blade_3",
+				"rotationPoint" : [0, 0, 0],
+				"rotationAxis" : [-0.5, -0.866, 0],
+				"rotationVariable" : "propellerpitch"
+			}
+		]
 	}
 }
