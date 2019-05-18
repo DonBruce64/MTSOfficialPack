@@ -2,5 +2,8 @@
   "general": {
     "type" : "crate",
 		"materials" : ["minecraft:planks:-1:8"]
-  }
+  },
+	"crate" : {
+		"rows" : 3
+	}
 }

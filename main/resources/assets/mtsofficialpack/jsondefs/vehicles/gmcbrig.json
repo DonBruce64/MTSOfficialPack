@@ -157,8 +157,10 @@
 	},
 		{
 	  "pos" : [0, 0.99, -0.24],
-	  "types" : ["custom"],
-	  "customTypes" : ["brigbed"]
+	  "types" : ["custom", "crate"],
+	  "customTypes" : ["brigbed"],
+		"minValue" : 0,
+		"maxValue" : 7
     } 
   ],
 	
