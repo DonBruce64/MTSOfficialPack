@@ -262,51 +262,75 @@
     },
     {
       "pos" : [0.625, -0.5125, 1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [-0.625, -0.5125, 1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [0.625, -0.5125, -0.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [-0.625, -0.5125, -0.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [0.625, -0.5125, -1.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [-0.625, -0.5125, -1.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [0.625, -0.5125, -2.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [-0.625, -0.5125, -2.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },		
     {
       "pos" : [0.625, -0.5125, -3.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [-0.625, -0.5125, -3.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },	
     {
       "pos" : [0.625, -0.5125, -4.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
     {
       "pos" : [-0.625, -0.5125, -4.1],
-      "types" : ["seat", "crate"]
+      "types" : ["seat", "crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     }
   ],
 	

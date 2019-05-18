@@ -146,7 +146,9 @@
     },
     {
       "pos" : [0, 0.125, -1],
-      "types" : ["crate"]
+      "types" : ["crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     }
   ],
 

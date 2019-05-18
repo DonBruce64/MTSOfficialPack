@@ -250,27 +250,39 @@
     },
 	{
       "pos" : [0.45, 0.25, 1.35],
-      "types" : ["crate","seat"]
+      "types" : ["crate","seat"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
 	{
       "pos" : [-0.45, 0.25, 1.35],
-      "types" : ["crate","seat"]
+      "types" : ["crate","seat"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
 	{
       "pos" : [0.45, 0.25, 0.45],
-      "types" : ["crate","seat"]
+      "types" : ["crate","seat"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
 	{
       "pos" : [-0.45, 0.25, 0.45],
-      "types" : ["crate","seat"]
+      "types" : ["crate","seat"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
 	{
       "pos" : [0.45, 0.25, -0.35],
-      "types" : ["crate"]
+      "types" : ["crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     },
 	{
       "pos" : [-0.45, 0.25, -0.35],
-      "types" : ["crate"]
+      "types" : ["crate"],
+			"minValue" : 0,
+			"maxValue" : 3
     }
   ],
 
