@@ -10,6 +10,7 @@
     "starterDuration" : 4,
     "maxRPM" : 2900,
     "fuelConsumption" : 0.4,
+	"fuelType" : "avgas",
     "gearRatios" : [1.0]
 	},
 	
