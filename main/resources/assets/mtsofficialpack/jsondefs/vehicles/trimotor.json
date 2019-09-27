@@ -510,7 +510,7 @@
 			},
 			{
 				"partName" : "$Elevators",
-				"rotationPoint" : [0, 0, -10.1975],
+				"rotationPoint" : [0, 1.391986, -10.1975],
 				"rotationAxis" : [1, 0, 0],
 				"rotationVariable" : "elevator"
 			},
