@@ -241,36 +241,42 @@
 	{
       "pos" : [0.45, 0.25, 2.25],
       "types" : ["seat"],
-			"isController" : true
+			"isController" : true,
+			"dismountPos" : [2.0, 0, 3.0]
     },
 			{
       "pos" : [-0.45, 0.25, 2.25],
       "types" : ["seat"],
-			"isController" : true
+			"isController" : true,
+			"dismountPos" : [-2.0, 0, 3.0]
     },
 	{
       "pos" : [0.45, 0.25, 1.35],
       "types" : ["crate","seat"],
 			"minValue" : 0,
-			"maxValue" : 3
+			"maxValue" : 3,
+			"dismountPos" : [2.0, 0, 3.0]
     },
 	{
       "pos" : [-0.45, 0.25, 1.35],
       "types" : ["crate","seat"],
 			"minValue" : 0,
-			"maxValue" : 3
+			"maxValue" : 3,
+			"dismountPos" : [-2.0, 0, 3.0]
     },
 	{
       "pos" : [0.45, 0.25, 0.45],
       "types" : ["crate","seat"],
 			"minValue" : 0,
-			"maxValue" : 3
+			"maxValue" : 3,
+			"dismountPos" : [2.0, 0, 3.0]
     },
 	{
       "pos" : [-0.45, 0.25, 0.45],
       "types" : ["crate","seat"],
 			"minValue" : 0,
-			"maxValue" : 3
+			"maxValue" : 3,
+			"dismountPos" : [-2.0, 0, 3.0]
     },
 	{
       "pos" : [0.45, 0.25, -0.35],

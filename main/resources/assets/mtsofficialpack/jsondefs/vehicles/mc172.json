@@ -137,12 +137,14 @@
     {
       "pos" : [-0.40, 0.125, 0.01],
       "types" : ["seat"],
-			"isController" : true
+			"isController" : true,
+			"dismountPos" : [-2.0, 0, -2.0]
     },
 		{
       "pos" : [0.40, 0.125, 0.01],
       "types" : ["seat"],
-			"isController" : true
+			"isController" : true,
+			"dismountPos" : [2.0, 0, -2.0]
     },
     {
       "pos" : [0, 0.125, -1],

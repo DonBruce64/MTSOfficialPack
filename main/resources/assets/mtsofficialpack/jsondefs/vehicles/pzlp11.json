@@ -184,7 +184,8 @@
     {
       "pos" : [0, 0.0625, -1.4],
       "types" : ["seat"],
-			"isController" : true
+			"isController" : true,
+			"dismountPos" : [1.5, 0, -1.5]
     }
   ],	
   "collision": [

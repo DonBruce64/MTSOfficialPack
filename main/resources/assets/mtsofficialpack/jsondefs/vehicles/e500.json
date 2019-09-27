@@ -215,23 +215,28 @@
     {
       "pos" : [-0.0, 0.195, 2.31875],
       "types" : ["seat"],
-			"isController" : true
+			"isController" : true,
+			"dismountPos" : [1.5, 0, 1.75]
     },
 		{
       "pos" : [0.40625, 0.195, 1.48125],
-      "types" : ["seat"]
+      "types" : ["seat"],
+			"dismountPos" : [1.5, 0, 1.75]
     },
     {
       "pos" : [-0.40625, 0.195, 1.48125],
-      "types" : ["seat"]
+      "types" : ["seat"],
+			"dismountPos" : [1.5, 0, 1.75]
     },
     {
       "pos" : [-0.40625, 0.195, 0.51875],
-      "types" : ["seat"]
+      "types" : ["seat"],
+			"dismountPos" : [1.5, 0, 1.75]
     },
 	{
       "pos" : [0.40625, 0.195, 0.51875],
-      "types" : ["seat"]
+      "types" : ["seat"],
+			"dismountPos" : [1.5, 0, 1.75]
     }
   ],
 
