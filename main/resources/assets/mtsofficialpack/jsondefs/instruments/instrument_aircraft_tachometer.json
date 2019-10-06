@@ -1,6 +1,6 @@
 {
   "general": {
-    "validVehicles" : ["plane"],
+    "validVehicles" : ["plane", "blimp"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:3", "minecraft:dye:1:1"],
 		"textureXSectorStart" : 4,
 		"textureYSectorStart" : 4
