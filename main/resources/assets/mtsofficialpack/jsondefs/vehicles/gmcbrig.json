@@ -36,6 +36,8 @@
   "motorized" : {
     "fuelCapacity" : 35000,
 		"hornSound" : "mtsofficialpack:horn_truck",
+		"hookupPos" : [0, 0.0, 4.0],
+		"hitchPos" : [0, 0.5, 0.0],
     "instruments" : [
         		{
 				"pos" : [0.85, 1.12, 2.9375],
@@ -264,8 +266,14 @@
 			{
 				"partName" : "$Gearshift",
 				"rotationPoint" : [0, 0.430625, 2.916250],
-				"rotationAxis" : [-0.75, 0, 0],
-				"rotationVariable" : "gearshift"
+				"rotationAxis" : [0.5, 0, 0],
+				"rotationVariable" : "gearshift_hvertical"
+			},
+			{
+				"partName" : "$Gearshift",
+				"rotationPoint" : [0, 0.430625, 2.916250],
+				"rotationAxis" : [0, 0, 1.0],
+				"rotationVariable" : "gearshift_hhorizontal"
 			}
 		]
   }
