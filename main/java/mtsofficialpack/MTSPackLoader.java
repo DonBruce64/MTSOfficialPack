@@ -32,13 +32,19 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
  * @author don_bruce
  */
 @Mod.EventBusSubscriber
+//DO NOT MODIFY THIS LINE!  Modify the things below this line instead.  Modifying this line will cause your pack to crash.
 @Mod(modid=MTSPackLoader.MODID, name=MTSPackLoader.MODNAME, version=MTSPackLoader.MODVER, dependencies=MTSPackLoader.DEPS, acceptedMinecraftVersions=MTSPackLoader.MCVERS)
 public class MTSPackLoader{
+	//The ID for your pack.  Must be unique to every mod and pack in the world!
 	public static final String MODID="mtsofficialpack";
+	//Short title for your pack.
 	public static final String MODNAME="The Official Vehicle Pack for MTS";
-	public static final String MODVER="12.0.0";
-	public static final String DEPS="required-after:mts@[12.0.0,);";
-	public static final String MCVERS="[1.10.2,]";
+	//Pack version.  May be linked to from other packs to force specific versions.  Otherwise unused.
+	public static final String MODVER="13.0.0";
+	//Mods/packs and the versions needed to run this pack.  Put whatever you want, but always leave MTS in here to ensure players have it loaded.
+	public static final String DEPS="required-after:mts@[15.0.0,);";
+	//What MC versions this pack supports.  If you're using an older MTSPackLoader file and older JSON you can support 1.10.2-1.12.2.
+	public static final String MCVERS="[1.12.2,]";
 	
 	/**
 	 * On class construction we look through this jar and send all pack vehicles
@@ -108,45 +114,18 @@ public class MTSPackLoader{
 	 */
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event){
-		final String[] itemRegistryNames = {"setRegistryName", "func_77655_b"};
 		try{
 			//First get the MTS classes.
 			Class registry = Class.forName("minecrafttransportsimulator.dataclasses.MTSRegistry");
 			Method getItemsMethod = registry.getMethod("getItemsForPack", String.class);
 			List<Item> itemList = (List<Item>) getItemsMethod.invoke(null, MODID);
 			
-			//Get the registration method and register the item.
-			//We use reflection here to prevent a Java import and instead use generics.
-			Method getRegistryMethod = event.getClass().getMethod("getRegistry");
-			Object registryClass = getRegistryMethod.invoke(event);
-			
-			//We need to loop through the methods here to get the correct one, as Forge abstracts the type.
-			//That abstraction means we can't use a generic getMethod call.
-			Method registerItemMethod = null;
-			for(Method method : getRegistryMethod.invoke(event).getClass().getMethods()){
-				if(method.getName().equals("register") && method.getParameterCount() == 1){
-					registerItemMethod = method;
-					break;
-				}
-			}
-			
-			Method setRegistryNameMethod = null;
-			for(String methodName : itemRegistryNames){
-				try{
-					setRegistryNameMethod = Item.class.getMethod(methodName, ResourceLocation.class);
-					break;
-				}catch (Exception e){
-					continue;
-				}
-			}
-			
-			//Now register all the items.
-			//Use the unlocalized name as it's the only thing we can set MTS-side that packs can see.
-			//The name will be in the format of item.modid.name, so make sure to prune the item.modid. portion to
-			//get a reasonable registry name.
+			//Now register the pack items.  Use the unlocalized name as it's the only thing we can set MTS-side 
+			//that packs can see.  The name will be in the format of item.modid.name, so make sure to prune the 
+			//item.modid. portion to get a reasonable registry name.
 			for(Item item : itemList){
-				setRegistryNameMethod.invoke(item, new ResourceLocation(MODID, item.getUnlocalizedName().replace("item." + MODID + ".", "")));
-				registerItemMethod.invoke(registryClass, item);
+				item.setRegistryName(new ResourceLocation(MODID, item.getUnlocalizedName().replace("item." + MODID + ".", "")));
+				event.getRegistry().register(item);
 			}
 		}catch(Exception e){
 			e.printStackTrace();
