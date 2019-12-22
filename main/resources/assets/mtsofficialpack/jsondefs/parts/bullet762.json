@@ -6,7 +6,6 @@
 	"bullet" : {
     "type" : "normal",
 		"diameter" : 7.62,
-		"quantity" : 250,
-		"texturePercentage" : 0.25
+		"quantity" : 250
 	}
 }
