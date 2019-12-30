@@ -1,0 +1,22 @@
+{
+  "general": {
+    "type" : "custom",
+	"modelName" : "scoutroof",
+    "customType" : "scoutroof",
+		"materials" : ["minecraft:iron_ingot:-1:4", "minecraft:iron_bars:-1:2", "minecraft:paper:-1:6"]
+  },
+  "custom": {
+    "width" : 1.5,
+    "height" : 0.5
+    },
+	"rendering": {
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$door_tailgate",
+				"rotationPoint" : [0, 0.71065, -0.8691],
+				"rotationAxis" : [1.5, 0, 0],
+				"rotationVariable" : "door"
+			}
+		]
+	}
+}

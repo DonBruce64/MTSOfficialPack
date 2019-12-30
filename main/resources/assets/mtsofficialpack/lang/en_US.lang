@@ -34,13 +34,12 @@ item.mtsofficialpack.e500_red.name=Red Eclipse 500
 item.mtsofficialpack.e500_yellow.name=Yellow Eclipse 500
 description.mtsofficialpack.e500=The Eclipse 500, first flown in 2002, created a new class of aircraft: the very light jet, or VLJ. The MTS version is configured to seat five, with the pilot in the front and four passengers behind them. A great addition to any private airport, and quite efficient for its capacity and speed as well.
 
-item.mtsofficialpack.scout_red.name=Red Scout
-item.mtsofficialpack.scout_black.name=Black Scout
+item.mtsofficialpack.scout_blue.name=Blue Scout
 item.mtsofficialpack.scout_orange.name=Orange Scout
 item.mtsofficialpack.scout_patriot.name=Patriotic Scout
-item.mtsofficialpack.scout_beaut.name=Golden Scout
-item.mtsofficialpack.scout_pzl.name=Army Scout
-description.mtsofficialpack.scout=The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats four, or two with two areas for cargo in the back.
+item.mtsofficialpack.scout_red.name=Red Scout
+item.mtsofficialpack.scout_yellow.name=Yellow Scout
+description.mtsofficialpack.scout=The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two, with area for cargo in the back.
 
 item.mtsofficialpack.trimotor_black.name=Black Ford Trimotor
 item.mtsofficialpack.trimotor_blue.name=Blue Ford Trimotor
@@ -86,6 +85,8 @@ item.mtsofficialpack.brigbedbox.name=Brigadier Box Rear-End
 item.mtsofficialpack.brigbedlogs.name=Brigadier Logging Bed
 item.mtsofficialpack.brigbedstake.name=Brigadier Stakebed
 item.mtsofficialpack.brigbedflat.name=Brigadier Flatbed
+item.mtsofficialpack.scouthardtop.name=Scout Hard-Top
+item.mtsofficialpack.scoutvinyltop.name=Scout Vinyl-Top
 
 item.mtsofficialpack.instrument_aircraft_attitude.name=Attitude Indicator
 item.mtsofficialpack.instrument_aircraft_attitude.description=Indicates where the plane is pointing.
