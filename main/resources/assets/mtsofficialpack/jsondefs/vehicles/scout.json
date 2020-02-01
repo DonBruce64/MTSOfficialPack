@@ -130,6 +130,8 @@
 		{
       "pos" : [0, 0.2901875, 2.76685],
       "types" : ["engine_car"],
+	  "exhaustPos" : [1.1262, 0.097504, -0.744776],
+	  "exhaustVelocity" : [1.0, 0.0, 0.0],
 			"minValue" : 0.0,
 			"maxValue" : 1.25
     }
