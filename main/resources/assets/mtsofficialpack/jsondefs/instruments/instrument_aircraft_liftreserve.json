@@ -1,21 +1,32 @@
 {
   "general": {
     "validVehicles" : ["plane"],
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:10:2", "minecraft:dye:11:1", "minecraft:dye:1:1"],
-		"textureXSectorStart" : 8,
-		"textureYSectorStart" : 1
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:10:2", "minecraft:dye:11:1", "minecraft:dye:1:1"]
   },
 	
 	"components" : [
 		{
+			"textureXCenter" : 960,
+			"textureYCenter" : 64,
+			"textureWidth" : 128,
+			"textureHeight" : 128
 		},
 		{
-			rotationVariable : "lift_reserve",
-			yRotationPositionOffset : -40,
-			rotationFactor : 1.0
+			"xCenter" : 0,
+			"yCenter" : -40,
+			"textureXCenter" : 960,
+			"textureYCenter" : 192,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"rotationVariable" : "lift_reserve",
+			"rotationFactor" : 1.0
 		},
 		{
-			lightOverlay : true
+			"textureXCenter" : 960,
+			"textureYCenter" : 320,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"lightOverlay" : true
 		}
 	]
 }

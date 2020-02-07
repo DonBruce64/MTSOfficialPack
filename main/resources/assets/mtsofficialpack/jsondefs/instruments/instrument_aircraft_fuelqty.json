@@ -1,22 +1,33 @@
 {
   "general": {
     "validVehicles" : ["plane", "blimp"],
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2"],
-		"textureXSectorStart" : 2,
-		"textureYSectorStart" : 5
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2"]
   },
 	
 	"components" : [
 		{
+			"textureXCenter" : 192,
+			"textureYCenter" : 448,
+			"textureWidth" : 128,
+			"textureHeight" : 128
 		},
 		{
-			rotationVariable : "fuel",
-			yRotationPositionOffset : -16,
-			rotationOffset : -50,
-			rotationFactor : 1.0
+			"xCenter" : 0,
+			"yCenter" : -16,
+			"textureXCenter" : 192,
+			"textureYCenter" : 320,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"rotationVariable" : "fuel",
+			"rotationOffset" : -50,
+			"rotationFactor" : 1.0
 		},
 		{
-			lightOverlay : true
+			"textureXCenter" : 960,
+			"textureYCenter" : 320,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"lightOverlay" : true
 		}
 	]
 }

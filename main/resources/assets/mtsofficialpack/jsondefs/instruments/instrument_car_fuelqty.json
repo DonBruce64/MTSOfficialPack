@@ -1,24 +1,41 @@
 {
   "general": {
     "validVehicles" : ["car"],
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:8:2", "minecraft:dye:15:3", "minecraft:dye:1:1", "minecraft:dye:4:1"],
-		"textureXSectorStart" : 6,
-		"textureYSectorStart" : 1
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:8:2", "minecraft:dye:15:3", "minecraft:dye:1:1", "minecraft:dye:4:1"]
   },
 	
 	"components" : [
 		{
+			"textureXCenter" : 704,
+			"textureYCenter" : 704,
+			"textureWidth" : 128,
+			"textureHeight" : 128
 		},
 		{
-			rotationVariable : "fuel",
-			yRotationPositionOffset : -19,
-			rotationOffset : -75,
-			rotationFactor : 1.5
+			"yCenter" : -19,
+			"xCenter" : 0,
+			"textureXCenter" : 832,
+			"textureYCenter" : 832,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"rotationVariable" : "fuel",
+			"rotationOffset" : -75,
+			"rotationFactor" : 1.5
 		},
 		{
+			"yCenter" : -19,
+			"xCenter" : 0,
+			"textureXCenter" : 832,
+			"textureYCenter" : 576,
+			"textureWidth" : 128,
+			"textureHeight" : 128
 		},
 		{
-			lightOverlay : true
+			"textureXCenter" : 960,
+			"textureYCenter" : 832,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"lightOverlay" : true
 		}
 	]
 }

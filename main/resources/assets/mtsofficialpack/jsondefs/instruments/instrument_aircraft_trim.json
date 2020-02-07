@@ -1,33 +1,54 @@
 {
   "general": {
     "validVehicles" : ["plane"],
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:3", "minecraft:dye:2:3"],
-		"textureXSectorStart" : 3,
-		"textureYSectorStart" : 4
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:3", "minecraft:dye:2:3"]
   },
 	
 	"components" : [
 		{
+			"textureXCenter" : 832,
+			"textureYCenter" : 448,
+			"textureWidth" : 128,
+			"textureHeight" : 128
 		},
 		{
-			rotationVariable : "trim_rudder",
-			yRotationPositionOffset : 20,
-			rotationFactor : 6.75
+			"xCenter" : 0,
+			"yCenter" : 20,
+			"textureXCenter" : 832,
+			"textureYCenter" : 320,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"rotationVariable" : "trim_rudder",
+			"rotationFactor" : 6.75
+			
 		},
 		{
-			rotationVariable : "trim_elevator",
-			yRotationPositionOffset : -16,
-			xRotationPositionOffset : 24,
-			rotationFactor : -9.0
+			"xCenter" : -24,
+			"yCenter" : -16,
+			"textureXCenter" : 832,
+			"textureYCenter" : 320,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"rotationVariable" : "trim_elevator",
+			"rotationOffset" : 90,
+			"rotationFactor" : -9.0
 		},
 		{
-			rotationVariable : "trim_aileron",
-			yRotationPositionOffset : -16,
-			xRotationPositionOffset : -24,
-			rotationFactor : 7.5
+			"xCenter" : 24,
+			"yCenter" : -16,
+			"textureXCenter" : 704,
+			"textureYCenter" : 320,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"rotationVariable" : "trim_aileron",
+			"rotationFactor" : 7.5
 		},
 		{
-			lightOverlay : true
+			"textureXCenter" : 960,
+			"textureYCenter" : 320,
+			"textureWidth" : 128,
+			"textureHeight" : 128,
+			"lightOverlay" : true
 		}
 	]
 }
