@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Rods",
 	"materials" : ["minecraft:bread:-1:1", "minecraft:dye:4:1"]
   }
 }

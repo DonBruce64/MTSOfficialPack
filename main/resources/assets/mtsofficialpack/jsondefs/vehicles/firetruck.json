@@ -1,12 +1,14 @@
 {
   "definitions" : [
 	  {
+		"name" : "Fire Truck",
 		  "subName" : "",
 		  "extraMaterials" : []
 	  }
 	],
 	
   "general": {
+	"description" : "The 1973 Ward LaFrance P80 Ambassador is a small fire truck, mostly known for being on the TV show Emergency!  This rendition seats two, and comes equipped with a working siren and emergency lights.  A must-have for any town!",
     "type" : "car",
 		"openTop" : false,
 		"emptyMass" : 9725,

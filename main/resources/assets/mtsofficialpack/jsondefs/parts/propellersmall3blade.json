@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Small 3-Bladed Propeller (Dynamic Pitch)",
     "type" : "propeller",
 		"materials" : ["minecraft:dye:15:1", "minecraft:iron_ingot:0:3", "minecraft:redstone:-1:2"]
   },

@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Small 2-Bladed Propeller",
     "type" : "propeller",
 		"materials" : ["minecraft:planks:-1:3"]
   },

@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Lycoming O-360 Plane Engine",
     "type" : "engine_aircraft",
 		"materials" : ["minecraft:piston:0:4", "minecraft:obsidian:0:4", "minecraft:iron_ingot:0:1"]
   },

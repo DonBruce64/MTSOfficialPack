@@ -1,5 +1,7 @@
 {
   "general": {
+	"name" : "Turn and Slip Indicator",
+	"description" : "Indicates turn rate and slip.",
     "validVehicles" : ["plane"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:5"]
   },

@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Scout Hard-Top",
     "type" : "custom",
 	"modelName" : "scoutroof",
     "customType" : "scoutroof",

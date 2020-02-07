@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Landing Skid",
     "type" : "skid",
 		"materials" : ["minecraft:dye:2:1", "minecraft:iron_ingot:0:1"]
   },

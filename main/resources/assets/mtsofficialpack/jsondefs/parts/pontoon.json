@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Pontoon",
     "type" : "pontoon",
 		"materials" : ["minecraft:iron_ingot:0:3"]
   },

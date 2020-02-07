@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "M1919 Browning Machine Gun",
     "type" : "gun_fixed",
 		"materials" : ["minecraft:iron_ingot:-1:4", "minecraft:coal:-1:1", "minecraft:lever:-1:1"]
   },

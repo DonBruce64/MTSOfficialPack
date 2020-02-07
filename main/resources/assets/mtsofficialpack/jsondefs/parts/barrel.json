@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Barrel",
     "type" : "barrel",
 		"materials" : ["minecraft:iron_ingot:-1:5", "minecraft:dye:1:1"]
   },

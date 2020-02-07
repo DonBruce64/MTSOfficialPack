@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "7.62mm Bullet",
     "type" : "bullet",
 		"materials" : ["minecraft:iron_ingot:-1:1", "minecraft:gunpowder:-1:2"]
   },

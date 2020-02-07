@@ -1,32 +1,39 @@
 {
   "definitions" : [
 		{
+		"name" : "Black GMC Brigadier",
 		  "subName" : "_black",
 		  "extraMaterials" : ["minecraft:dye:0:2"]
 	  },
 		{
+		"name" : "Blue GMC Brigadier",
 		  "subName" : "_blue",
 		  "extraMaterials" : ["minecraft:dye:12:2"]
 	  },
 	  {
+		"name" : "Green GMC Brigadier",
 		  "subName" : "_green",
 		  "extraMaterials" : ["minecraft:dye:2:2"]
 	  },
 		{
+		"name" : "Red GMC Brigadier",
 		  "subName" : "_red",
 		  "extraMaterials" : ["minecraft:dye:1:2"]
 	  },
 	  {
+		"name" : "White GMC Brigadier",
 		  "subName" : "_white",
 		  "extraMaterials" : ["minecraft:dye:15:2"]
 	  },
 	  {
+		"name" : "Yellow GMC Brigadier",
 		  "subName" : "_yellow",
 		  "extraMaterials" : ["minecraft:dye:11:2"]
 	  }
 	],
 	
   "general": {
+	"description" : "The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  Its solid frame combined with its ability to be equipped with a variety of beds makes it a solid addition to any city.",
     "type" : "car",
 		"openTop" : false,
 		"emptyMass" : 8165,

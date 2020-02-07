@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Brigadier Box Rear-End",
     "type" : "crate",
     "customType" : "brigbed",
 		"materials" : ["minecraft:iron_ingot:-1:4", "minecraft:iron_bars:-1:2", "minecraft:paper:-1:6"]

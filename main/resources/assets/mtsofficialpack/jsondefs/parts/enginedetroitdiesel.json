@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Detroit Diesel Truck Engine",
     "type" : "engine_car",
 		"materials" : ["minecraft:piston:0:6", "minecraft:obsidian:0:8", "minecraft:iron_ingot:0:2"]
   },

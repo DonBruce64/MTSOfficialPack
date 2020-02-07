@@ -1,5 +1,7 @@
 {
   "general": {
+	"name" : "Heading Indicator",
+	"description" : "Indicates heading direction.",
     "validVehicles" : ["plane", "blimp"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:4"]
   },

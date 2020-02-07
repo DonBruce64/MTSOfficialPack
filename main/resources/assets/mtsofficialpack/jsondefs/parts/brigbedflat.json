@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Brigadier Flatbed",
     "type" : "custom",
     "customType" : "brigbed",
     "materials" : ["minecraft:planks:-1:3", "minecraft:iron_bars:-1:1"]

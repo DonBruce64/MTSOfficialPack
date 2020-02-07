@@ -1,12 +1,14 @@
 {
   "definitions" : [
 		{
+		"name" : "PZL P11.c",
 			"subName" : "",
 			"extraMaterials" : []
 		}
 	],
 
   "general": {
+	"description" : "The PZL P11.c is a born and bred fighter aircraft. Its shoulder wing monoplane configuration provides the pilot with exceptional visibility of the sky and ground, and makes the PZL P11.c much faster than it's biplane fighter counterparts.",
     "type" : "plane",
 		"openTop" : true,
 		"emptyMass" : 1150,

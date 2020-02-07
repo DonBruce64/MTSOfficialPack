@@ -1,5 +1,7 @@
 {
   "general": {
+	"name" : "Airspeed Indicator",
+	"description" : "Indicates speed.",
     "validVehicles" : ["plane", "blimp"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:10:1", "minecraft:dye:11:1", "minecraft:dye:1:1"]
   },

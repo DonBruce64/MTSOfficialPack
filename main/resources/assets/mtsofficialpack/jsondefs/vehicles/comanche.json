@@ -1,24 +1,29 @@
 {	
 	"definitions" : [
 		{
+		"name" : "Blue Comanche",
 			"subName" : "_blue",
     	"extraMaterials" : ["minecraft:stained_hardened_clay:11:2"]
 		},
 		{
+		"name" : "Grey Comanche",
 			"subName" : "_grey",
     	"extraMaterials" : ["minecraft:stained_hardened_clay:8:2"]
 		},
 		{
+		"name" : "Red Comanche",
 			"subName" : "_red",
     	"extraMaterials" : ["minecraft:stained_hardened_clay:14:2"]
 		},
 		{
+		"name" : "Yellow Comanche",
 			"subName" : "_yellow",
 			"extraMaterials" : ["minecraft:stained_hardened_clay:4:2"]
 		}
 	],
 
   "general": {
+	"description" : "The Comanche is a small, swift, twin-engine craft.  While the lower wing might pose a hazard on overgrown runways, it makes up for it by being faster and nimbler than other planes of its size.",
     "type" : "plane",
 		"openTop" : false,
 		"emptyMass" : 1030.0,

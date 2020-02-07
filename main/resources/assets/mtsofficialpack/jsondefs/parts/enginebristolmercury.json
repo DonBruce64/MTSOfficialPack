@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Bristol Mercury Plane Engine",
     "type" : "engine_aircraft",
 		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "minecraft:iron_ingot:0:1"]
   },

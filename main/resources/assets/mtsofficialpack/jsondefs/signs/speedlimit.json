@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Speed Limit",
 		"font" : "default",
 		"textLines" : [
 			{

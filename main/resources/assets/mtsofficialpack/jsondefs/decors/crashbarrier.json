@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Crash Barrier",
 		"width" : 1.0,
 		"height" : 0.84375,
 		"depth" : 0.5625,

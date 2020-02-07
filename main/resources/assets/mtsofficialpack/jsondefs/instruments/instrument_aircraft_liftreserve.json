@@ -1,5 +1,7 @@
 {
   "general": {
+	"name" : "Lift Reserve Indicator",
+	"description" : "Indicates lift potential.",
     "validVehicles" : ["plane"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:10:2", "minecraft:dye:11:1", "minecraft:dye:1:1"]
   },

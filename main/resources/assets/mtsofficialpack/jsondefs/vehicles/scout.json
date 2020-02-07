@@ -1,22 +1,27 @@
  {
   "definitions" : [
 		{
+		"name" : "Blue Scout",
 			"subName" : "_blue",
 			"extraMaterials" : ["minecraft:dye:12:3"]
 		},
 		{
+		"name" : "Orange Scout",
 			"subName" : "_orange",
 			"extraMaterials" : ["minecraft:dye:14:3"]
 		},
 		{
+		"name" : "Patriotic Scout",
 			"subName" : "_patriot",
 			"extraMaterials" : ["minecraft:dye:4:1","minecraft:dye:1:1","minecraft:dye:15:1"]
 		},
 		{
+		"name" : "Red Scout",
 			"subName" : "_red",
 			"extraMaterials" : ["minecraft:dye:1:3"]
 		},
 		{
+		"name" : "Yellow Scout",
 			"subName" : "_yellow",
 			"extraMaterials" : ["minecraft:dye:11:3"]
 		}
@@ -24,6 +29,7 @@
 	],
 	
   "general": {
+	"description" : "The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two, with area for cargo in the back.",
     "type" : "car",
 		"openTop" : false,
 		"emptyMass" : 1637,

@@ -1,5 +1,7 @@
 {
   "general": {
+	"name" : "Attitude Indicator",
+	"description" : "Indicates where the plane is pointing.",
     "validVehicles" : ["plane"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:15:1", "minecraft:dye:12:3", "minecraft:dye:3:3"]
   },

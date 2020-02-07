@@ -1,32 +1,39 @@
 {
   "definitions" : [
 		{
+		"name" : "Oak MC-172",
 			"subName" : "_oak",
     	"extraMaterials" : ["minecraft:wooden_slab:0:10", "minecraft:planks:0:10"]
 		},
 		{
+		"name" : "Spruce MC-172",
 			"subName" : "_spruce",
     	"extraMaterials" : ["minecraft:wooden_slab:1:10", "minecraft:planks:1:10"]
 		},
 		{
+		"name" : "Birch MC-172",
 			"subName" : "_birch",
     	"extraMaterials" : ["minecraft:wooden_slab:2:10", "minecraft:planks:2:10"]
 		},
 		{
+		"name" : "Jungle MC-172",
 			"subName" : "_jungle",
 			"extraMaterials" : ["minecraft:wooden_slab:3:10", "minecraft:planks:3:10"]
 		},
 		{
+		"name" : "Acacia MC-172",
 			"subName" : "_acacia",
 			"extraMaterials" : ["minecraft:wooden_slab:4:10", "minecraft:planks:4:10"]
 		},
 		{
+		"name" : "Dark Oak MC-172",
 			"subName" : "_darkoak",
     	"extraMaterials" : ["minecraft:wooden_slab:5:10", "minecraft:planks:5:10"]
 		}
 	],
 
   "general": {
+	"description" : "The MC-172 is not fancy, but its cheap and sturdy airframe is at home on any rural Minecraft base.  High wings and a good power-to-weight ratio make this a good all-around starter.",
     "type" : "plane",
 		"openTop" : false,
 		"emptyMass" : 800,

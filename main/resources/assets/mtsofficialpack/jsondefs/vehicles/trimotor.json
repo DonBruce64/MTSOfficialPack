@@ -1,24 +1,29 @@
 {
   "definitions" : [
 		{
+		"name" : "Black Ford Trimotor",
 			"subName" : "_black",
 			"extraMaterials" : ["minecraft:dye:0:4"]
 		},
 		{
+		"name" : "Blue Ford Trimotor",
 			"subName" : "_blue",
 			"extraMaterials" : ["minecraft:dye:4:4"]
 		},
 		{
+		"name" : "Red Ford Trimotor",
 			"subName" : "_red",
 			"extraMaterials" : ["minecraft:dye:1:4"]
 		},
 		{
+		"name" : "White Ford Trimotor",
 			"subName" : "_white",
 			"extraMaterials" : ["minecraft:dye:15:4"]
 		}
 	],
 
   "general": {
+	"description" : "The Ford Trimotor is an old, yet trustworthy aircraft.  Its large wingspan provides ample lift for short takeoffs, as well as enough to maintain flight with one engine out.  With room for 12 passengers or crates, it's a great choice for long-haul flights where reliability (but not time) is of the essence.",
     "type" : "plane",
 		"openTop" : false,
 		"emptyMass" : 3000,

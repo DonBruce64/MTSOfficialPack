@@ -1,24 +1,29 @@
 {	
 	"definitions" : [
 		{
+		"name" : "Blue Eclipse 500",
 			"subName" : "_blue",
     	"extraMaterials" : ["minecraft:dye:12:5"]
 		},
 		{
+		"name" : "Green Eclipse 500",
 			"subName" : "_green",
     	"extraMaterials" : ["minecraft:dye:10:5"]
 		},
 		{
+		"name" : "Red Eclipse 500",
 			"subName" : "_red",
     	"extraMaterials" : ["minecraft:dye:1:5"]
 		},
 		{
+		"name" : "Yellow Eclipse 500",
 			"subName" : "_yellow",
 			"extraMaterials" : ["minecraft:dye:11:5"]
 		}
 	],
 
   "general": {
+	"description" : "The Eclipse 500, first flown in 2002, created a new class of aircraft: the very light jet, or VLJ. The MTS version is configured to seat five, with the pilot in the front and four passengers behind them. A great addition to any private airport, and quite efficient for its capacity and speed as well.",
     "type" : "plane",
 		"openTop" : false,
 		"emptyMass" : 1610,

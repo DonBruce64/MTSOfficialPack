@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "Small Wheel",
     "type" : "wheel",
 		"materials" : ["minecraft:dye:0:1", "minecraft:iron_ingot:0:1", "minecraft:wool:15:1"]
   },

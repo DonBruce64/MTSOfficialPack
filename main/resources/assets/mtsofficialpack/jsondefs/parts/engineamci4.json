@@ -1,5 +1,6 @@
 {
   "general": {
+	"name" : "AMC I4 Car Engine",
     "type" : "engine_car",
 		"materials" : ["minecraft:piston:0:4", "minecraft:obsidian:0:3", "minecraft:iron_ingot:0:1"]
   },
