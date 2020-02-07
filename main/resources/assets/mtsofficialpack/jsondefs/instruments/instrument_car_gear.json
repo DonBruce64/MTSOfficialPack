@@ -14,8 +14,7 @@
 			"textureHeight" : 80,
 			"translationVariable" : "gear",
 			"translationFactor" : 80.0,
-			"translateHorizontal" : true,
-			"translateWindow" : true
+			"translateHorizontal" : true
 		},
 		{
 			"textureXCenter" : 960,
