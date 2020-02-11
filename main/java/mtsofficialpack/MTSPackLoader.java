@@ -91,7 +91,7 @@ public class MTSPackLoader{
 				entryNames.sort(null);
 				for(String entryName : entryNames){
 					String entryFileName = entryName.substring(entryName.lastIndexOf('/') + 1, entryName.length() - ".json".length());
-					addContentMethod.invoke(null, new InputStreamReader(jarFile.getInputStream(jarFile.getEntry(entryName))), entryFileName, MODID);
+					addContentMethod.invoke(null, new InputStreamReader(jarFile.getInputStream(jarFile.getEntry(entryName)), "UTF-8"), entryFileName, MODID);
 				}
 				jarFile.close();
 			}
