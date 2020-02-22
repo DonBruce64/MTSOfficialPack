@@ -32,180 +32,446 @@
 
   "motorized" : {
     "fuelCapacity" : 25000,
-		"instruments" : [
-			{
-				"pos" : [0.6875, 0.454488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [22, 64],
-				"scale" : 0.0375,
-				"hudScale" : 0.75
-			},
-			{
-				"pos" : [0.390625, 0.454488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [35, 63],
-				"scale" : 0.0375,
-				"hudScale" : 0.9
-			},
-			{
-				"pos" : [0.09375, 0.454488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [50, 63],
-				"scale" : 0.0375,
-				"hudScale" : 0.9
-			},
-			{
-				"pos" : [-0.203125, 0.454488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [65, 63],
-				"scale" : 0.0375,
-				"hudScale" : 0.9
-			},
-			{
-				"pos" : [-0.5, 0.454488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [78, 64],
-				"scale" : 0.0375,
-				"hudScale" : 0.75
-			},
-			{
-				"pos" : [0.390625, 0.154488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [36, 88],
-				"scale" : 0.0375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [0.09375, 0.154488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [50, 88],
-				"scale" : 0.0375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [-0.203125, 0.154488, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [64, 88],
-				"scale" : 0.0375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [2.3, 0.366987, 1.0],
-				"rot" : [0, 90, 0],
-				"hudpos" : [40, 65],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 1
-			},
-			{
-				"pos" : [2.3, 0.166987, 1.0],
-				"rot" : [0, 90, 0],
-				"hudpos" : [50, 65],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 1
-			},
-			{
-				"pos" : [2.3, -0.033013, 1.0],
-				"rot" : [0, 90, 0],
-				"hudpos" : [40, 80],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 1
-			},
-			{
-				"pos" : [2.3, -0.233013, 1.0],
-				"rot" : [0, 90, 0],
-				"hudpos" : [50, 80],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 1
-			},
-			{
-				"pos" : [0.39375, -0.15, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [60, 65],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 2
-			},
-			{
-				"pos" : [0.19375, -0.15, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [70, 65],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 2
-			},
-			{
-				"pos" : [-0.00625, -0.15, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [60, 80],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 2
-			},
-			{
-				"pos" : [-0.20625, -0.15, 2.84],
-				"rot" : [0, 0, 0],
-				"hudpos" : [70, 80],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 2
-			},
-			{
-				"pos" : [-2.3, 0.366987, 1.0],
-				"rot" : [0, -90, 0],
-				"hudpos" : [80, 65],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 3
-			},
-			{
-				"pos" : [-2.3, 0.166987, 1.0],
-				"rot" : [0, -90, 0],
-				"hudpos" : [90, 65],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 3
-			},
-			{
-				"pos" : [-2.3, -0.033013, 1.0],
-				"rot" : [0, -90, 0],
-				"hudpos" : [80, 80],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 3
-			},
-			{
-				"pos" : [-2.3, -0.233013, 1.0],
-				"rot" : [0, -90, 0],
-				"hudpos" : [90, 80],
-				"scale" : 0.025,
-				"hudScale" : 0.6,
-				"optionalEngineNumber" : 3
-			},
-			{
-				"pos" : [-0.75, 0.579488, 1.43],
-				"rot" : [0, 0, 0],
-				"hudpos" : [78, 88],
-				"scale" : 0.05625,
-				"hudScale" : 0.85
-			}
-    ],
-		"controls" : [
-			{
-				"pos" : [-0.75, 0.454488, 2.86],
-				"hudpos" : [95, 65],
-				"controlName" : "aircraft_throttle"
-			},
-			{
-				"pos" : [-0.75, 0.154488, 2.86],
-				"hudpos" : [90, 65],
-				"controlName" : "parking_brake"
-			}
+		"instruments": [
+      {
+        "pos": [
+          0.6875,
+          0.454488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          22.0,
+          64.0
+        ],
+        "scale": 0.0375,
+        "hudX": 88,
+        "hudY": 39,
+        "hudScale": 0.375,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.390625,
+          0.454488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          35.0,
+          63.0
+        ],
+        "scale": 0.0375,
+        "hudX": 140,
+        "hudY": 36,
+        "hudScale": 0.45,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.09375,
+          0.454488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          50.0,
+          63.0
+        ],
+        "scale": 0.0375,
+        "hudX": 200,
+        "hudY": 36,
+        "hudScale": 0.45,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          -0.203125,
+          0.454488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          65.0,
+          63.0
+        ],
+        "scale": 0.0375,
+        "hudX": 260,
+        "hudY": 36,
+        "hudScale": 0.45,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          -0.5,
+          0.454488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          78.0,
+          64.0
+        ],
+        "scale": 0.0375,
+        "hudX": 312,
+        "hudY": 39,
+        "hudScale": 0.375,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.390625,
+          0.154488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          36.0,
+          88.0
+        ],
+        "scale": 0.0375,
+        "hudX": 144,
+        "hudY": 106,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.09375,
+          0.154488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          50.0,
+          88.0
+        ],
+        "scale": 0.0375,
+        "hudX": 200,
+        "hudY": 106,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          -0.203125,
+          0.154488,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          64.0,
+          88.0
+        ],
+        "scale": 0.0375,
+        "hudX": 256,
+        "hudY": 106,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          2.3,
+          0.366987,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          90.0,
+          0.0
+        ],
+        "hudpos": [
+          40.0,
+          65.0
+        ],
+        "scale": 0.025,
+        "hudX": 160,
+        "hudY": 42,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 1
+      },
+      {
+        "pos": [
+          2.3,
+          0.166987,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          90.0,
+          0.0
+        ],
+        "hudpos": [
+          50.0,
+          65.0
+        ],
+        "scale": 0.025,
+        "hudX": 200,
+        "hudY": 42,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 1
+      },
+      {
+        "pos": [
+          2.3,
+          -0.033013,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          90.0,
+          0.0
+        ],
+        "hudpos": [
+          40.0,
+          80.0
+        ],
+        "scale": 0.025,
+        "hudX": 160,
+        "hudY": 84,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 1
+      },
+      {
+        "pos": [
+          2.3,
+          -0.233013,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          90.0,
+          0.0
+        ],
+        "hudpos": [
+          50.0,
+          80.0
+        ],
+        "scale": 0.025,
+        "hudX": 200,
+        "hudY": 84,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 1
+      },
+      {
+        "pos": [
+          0.39375,
+          -0.15,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          60.0,
+          65.0
+        ],
+        "scale": 0.025,
+        "hudX": 240,
+        "hudY": 42,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 2
+      },
+      {
+        "pos": [
+          0.19375,
+          -0.15,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          70.0,
+          65.0
+        ],
+        "scale": 0.025,
+        "hudX": 280,
+        "hudY": 42,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 2
+      },
+      {
+        "pos": [
+          -0.00625,
+          -0.15,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          60.0,
+          80.0
+        ],
+        "scale": 0.025,
+        "hudX": 240,
+        "hudY": 84,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 2
+      },
+      {
+        "pos": [
+          -0.20625,
+          -0.15,
+          2.84
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          70.0,
+          80.0
+        ],
+        "scale": 0.025,
+        "hudX": 280,
+        "hudY": 84,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 2
+      },
+      {
+        "pos": [
+          -2.3,
+          0.366987,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          0.0
+        ],
+        "hudpos": [
+          80.0,
+          65.0
+        ],
+        "scale": 0.025,
+        "hudX": 320,
+        "hudY": 42,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 3
+      },
+      {
+        "pos": [
+          -2.3,
+          0.166987,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          0.0
+        ],
+        "hudpos": [
+          90.0,
+          65.0
+        ],
+        "scale": 0.025,
+        "hudX": 360,
+        "hudY": 42,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 3
+      },
+      {
+        "pos": [
+          -2.3,
+          -0.033013,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          0.0
+        ],
+        "hudpos": [
+          80.0,
+          80.0
+        ],
+        "scale": 0.025,
+        "hudX": 320,
+        "hudY": 84,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 3
+      },
+      {
+        "pos": [
+          -2.3,
+          -0.233013,
+          1.0
+        ],
+        "rot": [
+          0.0,
+          -90.0,
+          0.0
+        ],
+        "hudpos": [
+          90.0,
+          80.0
+        ],
+        "scale": 0.025,
+        "hudX": 360,
+        "hudY": 84,
+        "hudScale": 0.3,
+        "optionalEngineNumber": 3
+      },
+      {
+        "pos": [
+          -0.75,
+          0.579488,
+          1.43
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.05625,
+        "hudX": 312,
+        "hudY": 106,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      }
     ]
-	},
+  },
 	
   "plane" : {
     "hasFlaps" : false,
@@ -504,8 +770,6 @@
   "rendering": {
 		"defaultDisplayText" : "DB32-1204-UL",
     "displayTextMaxLength" : 12,
-		"hudBackplaneTexturePercentages" : [0.416015625, 0.466796875, 0.482421875, 0.509765625],
-		"hudMouldingTexturePercentages" : [0.416015625, 0.466796875, 0.478515625, 0.482421875],
 		"textMarkings" : [
 			{
         "pos" : [-6, 1.65, 0.5],

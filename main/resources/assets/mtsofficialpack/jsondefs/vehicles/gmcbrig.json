@@ -35,47 +35,48 @@
   "general": {
 	"description" : "The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  Its solid frame combined with its ability to be equipped with a variety of beds makes it a solid addition to any city.",
     "type" : "car",
-		"openTop" : false,
-		"emptyMass" : 8165,
-		"materials" : ["minecraft:iron_ingot:-1:7", "minecraft:iron_bars:-1:6", "minecraft:iron_trapdoor:-1:2", "minecraft:glass_pane:-1:5"]
+	"openTop" : false,
+	"emptyMass" : 8165,
+	"materials" : ["minecraft:iron_ingot:-1:7", "minecraft:iron_bars:-1:6", "minecraft:iron_trapdoor:-1:2", "minecraft:glass_pane:-1:5"]
   },
 
   "motorized" : {
     "fuelCapacity" : 35000,
-		"hornSound" : "mtsofficialpack:horn_truck",
-		"hookupPos" : [0, 0.0, 4.0],
-		"hitchPos" : [0, 0.5, 0.0],
+	"hornSound" : "mtsofficialpack:horn_truck",
     "instruments" : [
-        		{
-				"pos" : [0.85, 1.12, 2.9375],
-				"rot" : [0, 0, 0],
-				"hudpos" : [43.5, 63],
-				"scale" : 0.045,
-				"hudScale" : 0.9
-			},			
-			{
-				"pos" : [0.40, 1.12, 2.9375],
-				"rot" : [0, 0, 0],
-				"hudpos" : [56.5, 63],
-				"scale" : 0.045,
-				"hudScale" : 0.9
-			},
-			{
-				"pos" : [0.15, 1.24, 2.9375],
-				"rot" : [0, 0, 0],
-				"hudpos" : [66.5, 57],
-				"scale" : 0.015,
-				"hudScale" : 0.45
-			},
-			{
-				"pos" : [0.15, 1.00, 2.9375],
-				"rot" : [0, 0, 0],
-				"hudpos" : [66.5, 69],
-				"scale" : 0.015,
-				"hudScale" : 0.45
-			}
-			],
-		"controls" : []
+		{
+			"pos" : [0.85, 1.12, 2.9375],
+			"rot" : [0, 0, 0],
+			"scale" : 0.045,
+			"hudX": 174,
+			"hudY": 36,
+			"hudScale": 0.37545
+		},			
+		{
+			"pos" : [0.40, 1.12, 2.9375],
+			"rot" : [0, 0, 0],
+			"scale" : 0.045,
+			"hudX": 226,
+			"hudY": 36,
+			"hudScale": 0.37545
+		},
+		{
+			"pos" : [0.15, 1.24, 2.9375],
+			"rot" : [0, 0, 0],
+			"scale" : 0.015,
+			"hudX": 266,
+			"hudY": 23,
+			"hudScale": 0.225
+		},
+		{
+			"pos" : [0.15, 1.00, 2.9375],
+			"rot" : [0, 0, 0],
+			"scale" : 0.015,
+			"hudX": 266,
+			"hudY": 53,
+			"hudScale": 0.225
+		}
+	]
   },
 
   "car" : {
@@ -204,11 +205,8 @@
   ],
 
   "rendering": {
-		"numberWindows" : 8,
 		"defaultDisplayText" : "GMC",
-		"hudBackplaneTexturePercentages" : [0.5, 0.6171875, 0.25, 0.3671875],
-		"hudMouldingTexturePercentages" : [0.5, 0.6171875, 0, 0.1171875],
-    "displayTextMaxLength" : 7,
+		"displayTextMaxLength" : 7,
 		"textMarkings" : [
 			{
 				"pos" : [0, 0.118118, 4.8694],

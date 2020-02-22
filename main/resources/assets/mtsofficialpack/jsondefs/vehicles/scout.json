@@ -39,44 +39,109 @@
   "motorized" : {
     "fuelCapacity" : 15000,
     "hornSound" : "mtsofficialpack:horn_car",
-     "instruments" : [
-			{
-				"pos" : [0.90745, 0.829139, 1.805],
-				"rot" : [0, 0, 0],
-				"hudpos" : [30, 66.25],
-				"scale" : 0.015625,
-				"hudScale" : 0.65
-			},
-			{
-				"pos" : [0.7512, 0.829139, 1.805],
-				"rot" : [0, 0, 0],
-				"hudpos" : [40, 66.25],
-				"scale" : 0.015625,
-				"hudScale" : 0.65
-			},
-			{
-				"pos" : [0.59495, 0.829139, 1.805],
-				"rot" : [0, 0, 0],
-				"hudpos" : [50, 66.25],
-				"scale" : 0.015625,
-				"hudScale" : 0.65
-			},
-			{
-				"pos" : [0.4387, 0.829139, 1.805],
-				"rot" : [0, 0, 0],
-				"hudpos" : [60, 66.25],
-				"scale" : 0.015625,
-				"hudScale" : 0.65
-			},
-			{
-				"pos" : [0.28245, 0.829139, 1.805],
-				"rot" : [0, 0, 0],
-				"hudpos" : [70, 66.25],
-				"scale" : 0.015625,
-				"hudScale" : 0.65
-			}
-		],
-		"controls" : []
+         "instruments": [
+      {
+        "pos": [
+          0.90745,
+          0.829139,
+          1.805
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          30.0,
+          66.25
+        ],
+        "scale": 0.015625,
+        "hudX": 120,
+        "hudY": 45,
+        "hudScale": 0.325,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.7512,
+          0.829139,
+          1.805
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          40.0,
+          66.25
+        ],
+        "scale": 0.015625,
+        "hudX": 160,
+        "hudY": 45,
+        "hudScale": 0.325,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.59495,
+          0.829139,
+          1.805
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          50.0,
+          66.25
+        ],
+        "scale": 0.015625,
+        "hudX": 200,
+        "hudY": 45,
+        "hudScale": 0.325,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.4387,
+          0.829139,
+          1.805
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          60.0,
+          66.25
+        ],
+        "scale": 0.015625,
+        "hudX": 240,
+        "hudY": 45,
+        "hudScale": 0.325,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.28245,
+          0.829139,
+          1.805
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.015625,
+        "hudX": 280,
+        "hudY": 45,
+        "hudScale": 0.325,
+        "optionalEngineNumber": 0
+      }
+    ]
   },
 
   "car" : {
@@ -172,10 +237,7 @@
   ],
 
   "rendering": {
-		"numberWindows" : 3,
 		"defaultDisplayText" : "IH SCOUT",
-		 "hudBackplaneTexturePercentages" : [0.5, 0.625, 0.078125, 0.203125],
-		"hudMouldingTexturePercentages" : [0.5, 0.625, 0.078125, 0.203125],
     "displayTextMaxLength" : 7,
 		"textMarkings" : [
 			{

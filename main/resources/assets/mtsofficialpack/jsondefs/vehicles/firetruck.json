@@ -19,51 +19,118 @@
     "fuelCapacity" : 15000,
     	"hornSound" : "mtsofficialpack:horn_air",
     	"sirenSound" : "mtsofficialpack:siren",
-    "instruments" : [
-    		{
-				"pos" : [1.003125, 1.0625, 6.24],
-				"rot" : [0, 0, 0],
-				"hudpos" : [43.5, 63],
-				"scale" : 0.0421875,
-				"hudScale" : 0.9
-			},			
-			{
-				"pos" : [0.553125, 1.0625, 6.24],
-				"rot" : [0, 0, 0],
-				"hudpos" : [56.5, 63],
-				"scale" : 0.0421875,
-				"hudScale" : 0.9
-			},
-			{
-				"pos" : [0.321875, 0.9625, 6.24],
-				"rot" : [0, 0, 0],
-				"hudpos" : [66.5, 57],
-				"scale" : 0.0140625,
-				"hudScale" : 0.45
-			},
-			{
-				"pos" : [0.321875, 1.1625, 6.24],
-				"rot" : [0, 0, 0],
-				"hudpos" : [66.5, 69],
-				"scale" : 0.0140625,
-				"hudScale" : 0.45
-			},
-			{
-				"pos" : [1.234375, 0.9625, 6.24],
-				"rot" : [0, 0, 0],
-				"hudpos" : [33.5, 57],
-				"scale" : 0.0140625,
-				"hudScale" : 0.45
-			},
-			{
-				"pos" : [1.234375, 1.1625, 6.24],
-				"rot" : [0, 0, 0],
-				"hudpos" : [33.5, 69],
-				"scale" : 0.0140625,
-				"hudScale" : 0.45
-			}
-	],
-		"controls" : []
+    "instruments": [
+      {
+        "pos": [
+          1.003125,
+          1.0625,
+          6.24
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          43.5,
+          63.0
+        ],
+        "scale": 0.0421875,
+        "hudX": 174,
+        "hudY": 36,
+        "hudScale": 0.45,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.553125,
+          1.0625,
+          6.24
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          56.5,
+          63.0
+        ],
+        "scale": 0.0421875,
+        "hudX": 225,
+        "hudY": 36,
+        "hudScale": 0.45,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.321875,
+          0.9625,
+          6.24
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.014062,
+        "hudX": 266,
+        "hudY": 22,
+        "hudScale": 0.225,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.321875,
+          1.1625,
+          6.24
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.014062,
+        "hudX": 266,
+        "hudY": 51,
+        "hudScale": 0.225,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          1.234375,
+          0.9625,
+          6.24
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.014062,
+        "hudX": 134,
+        "hudY": 22,
+        "hudScale": 0.225,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          1.234375,
+          1.1625,
+          6.24
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.014062,
+        "hudX": 134,
+        "hudY": 51,
+        "hudScale": 0.225,
+        "optionalEngineNumber": 0
+      }
+    ]
   },
 
   "car" : {
@@ -154,11 +221,8 @@
   ],
 
   "rendering": {
-		"numberWindows" : 9,
 		"defaultDisplayText" : "1973WLFP80AFT",
     "displayTextMaxLength" : 7,
-    	"hudBackplaneTexturePercentages" : [0.6, 0.6, 0.7, 0.7],
-		"hudMouldingTexturePercentages" : [0, 0, 0.0625, 0.0625],
 		"textMarkings" : [
 		],
 		"rotatableModelObjects" : [

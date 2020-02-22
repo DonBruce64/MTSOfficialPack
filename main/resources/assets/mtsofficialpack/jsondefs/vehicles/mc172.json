@@ -42,66 +42,129 @@
 
 	"motorized" : {
     "fuelCapacity" : 5000,
-    "instruments" : [
-			{
-				"pos" : [0.46875, 0.34375, 0.718125],
-				"rot" : [0, 0, 0],
-				"hudpos" : [30, 63],
-				"scale" : 0.04375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [0.125, 0.34375, 0.718125],
-				"rot" : [0, 0, 0],
-				"hudpos" : [50, 63],
-				"scale" : 0.04375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [-0.21875, 0.34375, 0.718125],
-				"rot" : [0, 0, 0],
-				"hudpos" : [70, 63],
-				"scale" : 0.04375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [0.46875, 0.0, 0.718125],
-				"rot" : [0, 0, 0],
-				"hudpos" : [30, 87],
-				"scale" : 0.04375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [0.125, 0.0, 0.718125],
-				"rot" : [0, 0, 0],
-				"hudpos" : [50, 87],
-				"scale" : 0.04375,
-				"hudScale" : 0.85
-			},
-			{
-				"pos" : [-0.21875, 0.0, 0.718125],
-				"rot" : [0, 0, 0],
-				"hudpos" : [70, 87],
-				"scale" : 0.04375,
-				"hudScale" : 0.85
-			}
-    ],
-		"controls" : [
-			{
-				"pos" : [-0.625, 0.4375, 0.718125],
-				"hudpos" : [95, 65],
-				"controlName" : "aircraft_throttle"
-			},
-			{
-				"pos" : [-0.625, 0.1875, 0.718125],
-				"hudpos" : [10, 67],
-				"controlName" : "aircraft_flaps"
-			},
-			{
-				"pos" : [-0.625, -0.0625, 0.718125],
-				"hudpos" : [90, 65],
-				"controlName" : "parking_brake"
-			}
+    "instruments": [
+      {
+        "pos": [
+          0.46875,
+          0.34375,
+          0.718125
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          30.0,
+          63.0
+        ],
+        "scale": 0.04375,
+        "hudX": 120,
+        "hudY": 36,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.125,
+          0.34375,
+          0.718125
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          50.0,
+          63.0
+        ],
+        "scale": 0.04375,
+        "hudX": 200,
+        "hudY": 36,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          -0.21875,
+          0.34375,
+          0.718125
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          70.0,
+          63.0
+        ],
+        "scale": 0.04375,
+        "hudX": 280,
+        "hudY": 36,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.46875,
+          0.0,
+          0.718125
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          30.0,
+          87.0
+        ],
+        "scale": 0.04375,
+        "hudX": 120,
+        "hudY": 103,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          0.125,
+          0.0,
+          0.718125
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hudpos": [
+          50.0,
+          87.0
+        ],
+        "scale": 0.04375,
+        "hudX": 200,
+        "hudY": 103,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      },
+      {
+        "pos": [
+          -0.21875,
+          0.0,
+          0.718125
+        ],
+        "rot": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.04375,
+        "hudX": 280,
+        "hudY": 103,
+        "hudScale": 0.425,
+        "optionalEngineNumber": 0
+      }
     ]
   },
 
@@ -230,11 +293,8 @@
   ],
 
   "rendering": {
-		"numberWindows" : 8,
 		"defaultDisplayText" : "MC-172",
     "displayTextMaxLength" : 7,
-		"hudBackplaneTexturePercentages" : [0.0, 6.0, 0.0, 0.5],
-		"hudMouldingTexturePercentages" : [0.0, 8.0, 0.5, 1.0],
 		"textMarkings" : [
       {
         "pos" : [0.65625, 0.25, -2.8125],
