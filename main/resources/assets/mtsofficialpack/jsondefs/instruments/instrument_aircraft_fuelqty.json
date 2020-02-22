@@ -15,7 +15,7 @@
 		},
 		{
 			"xCenter" : 0,
-			"yCenter" : -16,
+			"yCenter" : 16,
 			"textureXCenter" : 192,
 			"textureYCenter" : 320,
 			"textureWidth" : 128,

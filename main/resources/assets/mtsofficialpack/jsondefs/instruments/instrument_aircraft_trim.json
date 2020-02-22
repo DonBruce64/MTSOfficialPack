@@ -15,7 +15,7 @@
 		},
 		{
 			"xCenter" : 0,
-			"yCenter" : 20,
+			"yCenter" : -20,
 			"textureXCenter" : 832,
 			"textureYCenter" : 320,
 			"textureWidth" : 128,
@@ -25,8 +25,8 @@
 			
 		},
 		{
-			"xCenter" : -24,
-			"yCenter" : -16,
+			"xCenter" : 24,
+			"yCenter" : 16,
 			"textureXCenter" : 832,
 			"textureYCenter" : 320,
 			"textureWidth" : 128,
@@ -36,8 +36,8 @@
 			"rotationFactor" : -9.0
 		},
 		{
-			"xCenter" : 24,
-			"yCenter" : -16,
+			"xCenter" : -24,
+			"yCenter" : 16,
 			"textureXCenter" : 704,
 			"textureYCenter" : 320,
 			"textureWidth" : 128,

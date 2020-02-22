@@ -14,7 +14,7 @@
 			"textureHeight" : 128
 		},
 		{
-			"xCenter" : 16,
+			"xCenter" : -16,
 			"yCenter" : 0,
 			"textureXCenter" : 192,
 			"textureYCenter" : 192,
@@ -25,7 +25,7 @@
 			"rotationFactor" : 2.857
 		},
 		{
-			"xCenter" : 16,
+			"xCenter" : -16,
 			"yCenter" : 0,
 			"textureXCenter" : 192,
 			"textureYCenter" : 320,
