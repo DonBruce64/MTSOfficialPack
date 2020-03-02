@@ -15,7 +15,8 @@
 			"rotationVariable" : "roll",
 			"rotationFactor" : -1.0,
 			"translationVariable" : "pitch",
-			"translationFactor" : 1.0
+			"translationFactor" : 1.0,
+			"translationClamp" : 25
 		},
 		{
 			"textureXCenter" : 64,

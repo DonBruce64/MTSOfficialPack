@@ -22,7 +22,7 @@
 			"textureHeight" : 128,
 			"rotationVariable" : "fuel",
 			"rotationOffset" : -75,
-			"rotationFactor" : 1.5
+			"rotationFactor" : 150
 		},
 		{
 			"yCenter" : 19,

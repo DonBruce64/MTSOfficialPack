@@ -20,7 +20,7 @@
 				"partName" : "$IntakeFan",
 				"rotationPoint" : [0, 0, 0],
 				"rotationAxis" : [0, 0, 1],
-				"rotationVariable" : "engine"
+				"rotationVariable" : "engine_rotation"
 			}
 		]
 	}

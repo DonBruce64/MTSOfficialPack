@@ -21,7 +21,8 @@
 			"textureWidth" : 128,
 			"textureHeight" : 128,
 			"rotationVariable" : "lift_reserve",
-			"rotationFactor" : 1.0
+			"rotationFactor" : 1.0,
+			"rotationClamp" : 25
 		},
 		{
 			"textureXCenter" : 960,

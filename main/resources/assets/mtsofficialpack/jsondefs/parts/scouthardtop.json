@@ -15,8 +15,8 @@
 			{
 				"partName" : "$door_tailgate",
 				"rotationPoint" : [0, 0.71065, -0.8691],
-				"rotationAxis" : [1.5, 0, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [90, 0, 0],
+				"rotationVariable" : "p_brake"
 			}
 		]
 	}

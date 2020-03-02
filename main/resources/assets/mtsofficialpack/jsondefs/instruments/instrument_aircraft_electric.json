@@ -34,7 +34,8 @@
 			"textureHeight" : 128,
 			"rotationVariable" : "electric_usage",
 			"rotationOffset" : -90,
-			"rotationFactor" : -55
+			"rotationFactor" : -55,
+			"rotationClamp" : 55
 		},
 		{
 			"textureXCenter" : 960,

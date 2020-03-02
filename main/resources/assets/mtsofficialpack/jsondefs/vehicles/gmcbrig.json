@@ -225,62 +225,62 @@
 			{
 				"partName" : "$Door_L",
 				"rotationPoint" : [1.0625, 0, 3.275625],
-				"rotationAxis" : [0, -1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, -60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$Door_L_Window",
 				"rotationPoint" : [1.0625, 0, 3.275625],
-				"rotationAxis" : [0, -1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, -60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$Door_R",
 				"rotationPoint" : [-1.0625, 0, 3.275625],
-				"rotationAxis" : [0, 1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, 60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$Door_R_Window",
 				"rotationPoint" : [-1.0625, 0, 3.275625],
-				"rotationAxis" : [0, 1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, 60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$Gas",
 				"rotationPoint" : [0, 0.361451, 2.914554],
-				"rotationAxis" : [1, 0, 0],
+				"rotationAxis" : [20, 0, 0],
 				"rotationVariable" : "throttle"
 			},
 			{
 				"partName" : "$Brake",
 				"rotationPoint" : [0, 0, 0.01],
-				"rotationAxis" : [0.05, 0, 0],
+				"rotationAxis" : [20, 0, 0],
 				"rotationVariable" : "brake"
 			},
 			{
 				"partName" : "$Parking",
 				"rotationPoint" : [0, 0.386498, 2.653041],
-				"rotationAxis" : [-1, 0, 0],
+				"rotationAxis" : [-60, 0, 0],
 				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$Steeringwheel",
 				"rotationPoint" : [0.619618, 0.633528, 3.34614],
 				"rotationAxis" : [0, 0.707, -0.707],
-				"rotationVariable" : "steeringwheel"
+				"rotationVariable" : "steering_wheel"
 			},
 			{
 				"partName" : "$Gearshift",
 				"rotationPoint" : [0, 0.430625, 2.916250],
 				"rotationAxis" : [0.5, 0, 0],
-				"rotationVariable" : "gearshift_hvertical"
+				"rotationVariable" : "engine_gearshift_hvertical1"
 			},
 			{
 				"partName" : "$Gearshift",
 				"rotationPoint" : [0, 0.430625, 2.916250],
 				"rotationAxis" : [0, 0, 1.0],
-				"rotationVariable" : "gearshift_hhorizontal"
+				"rotationVariable" : "engine_gearshift_hhorizontal1"
 			}
 		]
   }

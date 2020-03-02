@@ -18,7 +18,7 @@
 			"textureYCenter" : 320,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
-			"rotationVariable" : "fuel_flow",
+			"rotationVariable" : "engine_fuel_flow",
 			"rotationOffset" : -135,
 			"rotationFactor" : 60
 		},

@@ -19,19 +19,19 @@
 				"partName" : "$blade_1",
 				"rotationPoint" : [0, 0, 0],
 				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "propellerpitch"
+				"rotationVariable" : "propeller_pitch_deg"
 			},
 			{
 				"partName" : "$blade_2",
 				"rotationPoint" : [0, 0, 0],
 				"rotationAxis" : [-0.5, 0.866, 0],
-				"rotationVariable" : "propellerpitch"
+				"rotationVariable" : "propeller_pitch_deg"
 			},
 			{
 				"partName" : "$blade_3",
 				"rotationPoint" : [0, 0, 0],
 				"rotationAxis" : [-0.5, -0.866, 0],
-				"rotationVariable" : "propellerpitch"
+				"rotationVariable" : "propeller_pitch_deg"
 			}
 		]
 	}

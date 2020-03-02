@@ -37,7 +37,7 @@
         "hudX": 108,
         "hudY": 39,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -58,7 +58,7 @@
         "hudX": 168,
         "hudY": 39,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -79,7 +79,7 @@
         "hudX": 227,
         "hudY": 39,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -100,7 +100,7 @@
         "hudX": 288,
         "hudY": 39,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -121,7 +121,7 @@
         "hudX": 108,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -142,7 +142,7 @@
         "hudX": 168,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -163,7 +163,7 @@
         "hudX": 227,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -184,7 +184,7 @@
         "hudX": 288,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -205,7 +205,7 @@
         "hudX": 40,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -226,7 +226,7 @@
         "hudX": 120,
         "hudY": 84,
         "hudScale": 0.425,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -247,7 +247,7 @@
         "hudX": 260,
         "hudY": 84,
         "hudScale": 0.425,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -264,7 +264,7 @@
         "hudX": 320,
         "hudY": 84,
         "hudScale": 0.425,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       }
     ]
 	},

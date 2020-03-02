@@ -62,7 +62,7 @@
         "hudX": 120,
         "hudY": 36,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -83,7 +83,7 @@
         "hudX": 200,
         "hudY": 36,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -104,7 +104,7 @@
         "hudX": 280,
         "hudY": 36,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -125,7 +125,7 @@
         "hudX": 120,
         "hudY": 103,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -146,7 +146,7 @@
         "hudX": 200,
         "hudY": 103,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -163,7 +163,7 @@
         "hudX": 280,
         "hudY": 103,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       }
     ]
   },
@@ -350,13 +350,13 @@
 				"partName" : "$Flap_L",
 				"rotationPoint" : [0, 1.6875, 0.125],
 				"rotationAxis" : [-1, 0, 0],
-				"rotationVariable" : "flap"
+				"rotationVariable" : "flaps_actual"
 			},
 			{
 				"partName" : "$Flap_R",
 				"rotationPoint" : [0, 1.6875, 0.125],
 				"rotationAxis" : [-1, 0, 0],
-				"rotationVariable" : "flap"
+				"rotationVariable" : "flaps_actual"
 			}
 		]
   }

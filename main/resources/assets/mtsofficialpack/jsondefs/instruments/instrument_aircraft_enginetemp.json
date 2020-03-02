@@ -18,7 +18,7 @@
 			"textureYCenter" : 320,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
-			"rotationVariable" : "temp",
+			"rotationVariable" : "engine_temp",
 			"rotationOffset" : -159.3,
 			"rotationFactor" : 2.43
 		},

@@ -12,7 +12,7 @@
 			"textureYCenter" : 960,
 			"textureWidth" : 80,
 			"textureHeight" : 80,
-			"translationVariable" : "gear",
+			"translationVariable" : "engine_gear",
 			"translationFactor" : 80.0,
 			"translateHorizontal" : true
 		},

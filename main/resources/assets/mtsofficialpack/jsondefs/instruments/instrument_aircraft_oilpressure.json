@@ -18,7 +18,7 @@
 			"textureYCenter" : 320,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
-			"rotationVariable" : "oil",
+			"rotationVariable" : "engine_oil",
 			"rotationOffset" : -135,
 			"rotationFactor" : 1.8
 		},

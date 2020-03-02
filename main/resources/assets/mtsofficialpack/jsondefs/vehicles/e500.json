@@ -52,7 +52,7 @@
         "hudX": 120,
         "hudY": 36,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -73,7 +73,7 @@
         "hudX": 172,
         "hudY": 36,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -94,7 +94,7 @@
         "hudX": 224,
         "hudY": 36,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -115,7 +115,7 @@
         "hudX": 276,
         "hudY": 36,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -136,7 +136,7 @@
         "hudX": 120,
         "hudY": 103,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -157,7 +157,7 @@
         "hudX": 172,
         "hudY": 103,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -178,7 +178,7 @@
         "hudX": 224,
         "hudY": 103,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -199,7 +199,7 @@
         "hudX": 276,
         "hudY": 103,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -220,7 +220,7 @@
         "hudX": 180,
         "hudY": 42,
         "hudScale": 0.325,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -241,7 +241,7 @@
         "hudX": 220,
         "hudY": 42,
         "hudScale": 0.325,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -262,7 +262,7 @@
         "hudX": 180,
         "hudY": 92,
         "hudScale": 0.325,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -283,7 +283,7 @@
         "hudX": 220,
         "hudY": 92,
         "hudScale": 0.325,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -304,7 +304,7 @@
         "hudX": 280,
         "hudY": 42,
         "hudScale": 0.325,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       },
       {
         "pos": [
@@ -325,7 +325,7 @@
         "hudX": 320,
         "hudY": 42,
         "hudScale": 0.325,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       },
       {
         "pos": [
@@ -342,7 +342,7 @@
         "hudX": 280,
         "hudY": 92,
         "hudScale": 0.325,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       },
       {
         "pos": [
@@ -363,7 +363,7 @@
         "hudX": 320,
         "hudY": 92,
         "hudScale": 0.325,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       }
     ]
   },
@@ -636,31 +636,31 @@
 				"partName" : "$Flap_L",
 				"rotationPoint" : [2.274, 0.090283, -0.4],
 				"rotationAxis" : [-0.995, -0.105, 0],
-				"rotationVariable" : "flap"
+				"rotationVariable" : "flaps_actual"
 			},
 			{
 				"partName" : "$Flap_R",
 				"rotationPoint" : [-2.274, 0.090283, -0.4],
 				"rotationAxis" : [-0.995, 0.105, 0],
-				"rotationVariable" : "flap"
+				"rotationVariable" : "flaps_actual"
 			},
 			{
 				"partName" : "$Door_Top",
 				"rotationPoint" : [0.78125, 1.445, 0],
-				"rotationAxis" : [0, 0, 2.25],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, 0, 135],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$Door_Bottom",
 				"rotationPoint" : [0.78125, -0.18, 0],
-				"rotationAxis" : [0, 0, -2.25],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, 0, -135],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$Door_Window",
 				"rotationPoint" : [0.78125, 1.445, 0],
-				"rotationAxis" : [0, 0, 2.25],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, 0, 135],
+				"rotationVariable" : "p_brake"
 			}
 		]
   }

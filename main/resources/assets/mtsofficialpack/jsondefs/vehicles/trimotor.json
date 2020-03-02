@@ -52,7 +52,7 @@
         "hudX": 88,
         "hudY": 39,
         "hudScale": 0.375,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -73,7 +73,7 @@
         "hudX": 140,
         "hudY": 36,
         "hudScale": 0.45,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -94,7 +94,7 @@
         "hudX": 200,
         "hudY": 36,
         "hudScale": 0.45,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -115,7 +115,7 @@
         "hudX": 260,
         "hudY": 36,
         "hudScale": 0.45,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -136,7 +136,7 @@
         "hudX": 312,
         "hudY": 39,
         "hudScale": 0.375,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -157,7 +157,7 @@
         "hudX": 144,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -178,7 +178,7 @@
         "hudX": 200,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -199,7 +199,7 @@
         "hudX": 256,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -220,7 +220,7 @@
         "hudX": 160,
         "hudY": 42,
         "hudScale": 0.3,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -241,7 +241,7 @@
         "hudX": 200,
         "hudY": 42,
         "hudScale": 0.3,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -262,7 +262,7 @@
         "hudX": 160,
         "hudY": 84,
         "hudScale": 0.3,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -283,7 +283,7 @@
         "hudX": 200,
         "hudY": 84,
         "hudScale": 0.3,
-        "optionalEngineNumber": 1
+        "optionalPartNumber": 1
       },
       {
         "pos": [
@@ -304,7 +304,7 @@
         "hudX": 240,
         "hudY": 42,
         "hudScale": 0.3,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       },
       {
         "pos": [
@@ -325,7 +325,7 @@
         "hudX": 280,
         "hudY": 42,
         "hudScale": 0.3,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       },
       {
         "pos": [
@@ -346,7 +346,7 @@
         "hudX": 240,
         "hudY": 84,
         "hudScale": 0.3,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       },
       {
         "pos": [
@@ -367,7 +367,7 @@
         "hudX": 280,
         "hudY": 84,
         "hudScale": 0.3,
-        "optionalEngineNumber": 2
+        "optionalPartNumber": 2
       },
       {
         "pos": [
@@ -388,7 +388,7 @@
         "hudX": 320,
         "hudY": 42,
         "hudScale": 0.3,
-        "optionalEngineNumber": 3
+        "optionalPartNumber": 3
       },
       {
         "pos": [
@@ -409,7 +409,7 @@
         "hudX": 360,
         "hudY": 42,
         "hudScale": 0.3,
-        "optionalEngineNumber": 3
+        "optionalPartNumber": 3
       },
       {
         "pos": [
@@ -430,7 +430,7 @@
         "hudX": 320,
         "hudY": 84,
         "hudScale": 0.3,
-        "optionalEngineNumber": 3
+        "optionalPartNumber": 3
       },
       {
         "pos": [
@@ -451,7 +451,7 @@
         "hudX": 360,
         "hudY": 84,
         "hudScale": 0.3,
-        "optionalEngineNumber": 3
+        "optionalPartNumber": 3
       },
       {
         "pos": [
@@ -468,7 +468,8 @@
         "hudX": 312,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0,
+		"defaultInstrument" : "mtsofficialpack:instrument_aircraft_altimeter"
       }
     ]
   },

@@ -20,7 +20,7 @@
 			"textureYCenter" : 832,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
-			"rotationVariable" : "rpm",
+			"rotationVariable" : "engine_rpm",
 			"rotationOffset" : -135,
 			"rotationFactor" : 0.03857
 		},

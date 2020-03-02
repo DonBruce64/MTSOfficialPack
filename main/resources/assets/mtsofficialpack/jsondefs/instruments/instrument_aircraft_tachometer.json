@@ -18,7 +18,7 @@
 			"textureYCenter" : 192,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
-			"rotationVariable" : "rpm_max",
+			"rotationVariable" : "engine_rpm_max",
 			"rotationOffset" : -110,
 			"rotationFactor" : 0.05
 		},
@@ -33,7 +33,7 @@
 			"textureYCenter" : 320,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
-			"rotationVariable" : "rpm",
+			"rotationVariable" : "engine_rpm",
 			"rotationOffset" : -110,
 			"rotationFactor" : 0.05
 		},

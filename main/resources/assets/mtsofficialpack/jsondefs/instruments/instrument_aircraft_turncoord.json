@@ -19,7 +19,8 @@
 			"textureWidth" : 128,
 			"textureHeight" : 128,
 			"rotationVariable" : "turn_coordinator",
-			"rotationFactor" : 1.0
+			"rotationFactor" : 1.0,
+			"rotationClamp" : 50
 		},
 		{
 			"textureXCenter" : 576,

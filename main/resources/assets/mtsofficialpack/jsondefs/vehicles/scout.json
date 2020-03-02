@@ -59,7 +59,7 @@
         "hudX": 120,
         "hudY": 45,
         "hudScale": 0.325,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -80,7 +80,7 @@
         "hudX": 160,
         "hudY": 45,
         "hudScale": 0.325,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -101,7 +101,7 @@
         "hudX": 200,
         "hudY": 45,
         "hudScale": 0.325,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -122,7 +122,7 @@
         "hudX": 240,
         "hudY": 45,
         "hudScale": 0.325,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       },
       {
         "pos": [
@@ -139,7 +139,7 @@
         "hudX": 280,
         "hudY": 45,
         "hudScale": 0.325,
-        "optionalEngineNumber": 0
+        "optionalPartNumber": 0
       }
     ]
   },
@@ -257,68 +257,68 @@
 			{
 				"partName" : "$gas",
 				"rotationPoint" : [0, 0.438564, 1.99344],
-				"rotationAxis" : [-0.75, 0, 0],
+				"rotationAxis" : [-20, 0, 0],
 				"rotationVariable" : "throttle"
 			},
 			{
 				"partName" : "$brake",
 				"rotationPoint" : [0, 0.438564, 1.99344],
-				"rotationAxis" : [-0.75, 0, 0],
+				"rotationAxis" : [-20, 0, 0],
 				"rotationVariable" : "brake"
 			},
 			{
 				"partName" : "$parking_brake",
 				"rotationPoint" : [0, 0.39903, 1.96825],
-				"rotationAxis" : [-1, 0, 0],
+				"rotationAxis" : [-20, 0, 0],
 				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$gearshift",
 				"rotationPoint" : [0, 0.459074, 1.50387],
 				"rotationAxis" : [2, 0, 0],
-				"rotationVariable" : "gearshift"
+				"rotationVariable" : "engine_gearshift1"
 			},
 			{
 				"partName" : "$door_L",
 				"rotationPoint" : [1.1262, 0, 1.95699],
-				"rotationAxis" : [0, -1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, -60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$door_L_window",
 				"rotationPoint" : [1.1262, 0, 1.95699],
-				"rotationAxis" : [0, -1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, -60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$door_R",
 				"rotationPoint" : [-1.1238, 0, 1.95699],
-				"rotationAxis" : [0, 1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, 60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$door_R_window",
 				"rotationPoint" : [-1.1238, 0, 1.95699],
-				"rotationAxis" : [0, 1, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [0, 60, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$door_tailgate",
 				"rotationPoint" : [0, 0.260388, -0.971157],
-				"rotationAxis" : [-1.5, 0, 0],
-				"rotationVariable" : "door"
+				"rotationAxis" : [-90, 0, 0],
+				"rotationVariable" : "p_brake"
 			},
 			{
 				"partName" : "$hood",
 				"rotationPoint" : [0, 0.885389, 2.09134],
-				"rotationAxis" : [-1, 0, 0],
+				"rotationAxis" : [-60, 0, 0],
 				"rotationVariable" : "hood"
 			},
 			{
 				"partName" : "$steering_wheel",
 				"rotationPoint" : [0.588149, 0.593752, 1.82917],
 				"rotationAxis" : [0, 0.5, -0.5],
-				"rotationVariable" : "steeringwheel"
+				"rotationVariable" : "steering_wheel"
 			}
 		]
   }
