@@ -634,13 +634,13 @@
 				"partName" : "$Door_R",
 				"rotationPoint" : [-0.875000, 0, 0.625],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_R_Window",
 				"rotationPoint" : [-0.875000, 0, 0.625],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			}
 		]
   }

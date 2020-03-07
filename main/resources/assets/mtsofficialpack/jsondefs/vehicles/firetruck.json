@@ -230,25 +230,25 @@
 				"partName" : "$Door_L",
 				"rotationPoint" : [1.4375, 0, 6.55609],
 				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_L_Window",
 				"rotationPoint" : [1.4375, 0, 6.55609],
 				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_R",
 				"rotationPoint" : [-1.4375, 0, 6.55609],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_R_Window",
 				"rotationPoint" : [-1.4375, 0, 6.55609],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Gas",
@@ -278,7 +278,7 @@
 				"partName" : "$Gearshift",
 				"rotationPoint" : [0, 0.328119, 5.86859],
 				"rotationAxis" : [-0.75, 0, 0],
-				"rotationVariable" : "engine_gearshift1"
+				"rotationVariable" : "engine_gearshift_1"
 			}
 		]
   }

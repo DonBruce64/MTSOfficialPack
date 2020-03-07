@@ -648,19 +648,19 @@
 				"partName" : "$Door_Top",
 				"rotationPoint" : [0.78125, 1.445, 0],
 				"rotationAxis" : [0, 0, 135],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_Bottom",
 				"rotationPoint" : [0.78125, -0.18, 0],
 				"rotationAxis" : [0, 0, -135],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_Window",
 				"rotationPoint" : [0.78125, 1.445, 0],
 				"rotationAxis" : [0, 0, 135],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			}
 		]
   }

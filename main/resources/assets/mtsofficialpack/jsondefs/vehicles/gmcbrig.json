@@ -226,25 +226,25 @@
 				"partName" : "$Door_L",
 				"rotationPoint" : [1.0625, 0, 3.275625],
 				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_L_Window",
 				"rotationPoint" : [1.0625, 0, 3.275625],
 				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_R",
 				"rotationPoint" : [-1.0625, 0, 3.275625],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Door_R_Window",
 				"rotationPoint" : [-1.0625, 0, 3.275625],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$Gas",
@@ -274,13 +274,13 @@
 				"partName" : "$Gearshift",
 				"rotationPoint" : [0, 0.430625, 2.916250],
 				"rotationAxis" : [0.5, 0, 0],
-				"rotationVariable" : "engine_gearshift_hvertical1"
+				"rotationVariable" : "engine_gearshift_hvertical_1"
 			},
 			{
 				"partName" : "$Gearshift",
 				"rotationPoint" : [0, 0.430625, 2.916250],
 				"rotationAxis" : [0, 0, 1.0],
-				"rotationVariable" : "engine_gearshift_hhorizontal1"
+				"rotationVariable" : "engine_gearshift_hhorizontal_1"
 			}
 		]
   }

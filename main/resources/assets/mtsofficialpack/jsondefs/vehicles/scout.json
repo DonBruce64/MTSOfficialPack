@@ -276,37 +276,37 @@
 				"partName" : "$gearshift",
 				"rotationPoint" : [0, 0.459074, 1.50387],
 				"rotationAxis" : [2, 0, 0],
-				"rotationVariable" : "engine_gearshift1"
+				"rotationVariable" : "engine_gearshift_1"
 			},
 			{
 				"partName" : "$door_L",
 				"rotationPoint" : [1.1262, 0, 1.95699],
 				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$door_L_window",
 				"rotationPoint" : [1.1262, 0, 1.95699],
 				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$door_R",
 				"rotationPoint" : [-1.1238, 0, 1.95699],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$door_R_window",
 				"rotationPoint" : [-1.1238, 0, 1.95699],
 				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$door_tailgate",
 				"rotationPoint" : [0, 0.260388, -0.971157],
 				"rotationAxis" : [-90, 0, 0],
-				"rotationVariable" : "p_brake"
+				"rotationVariable" : "door"
 			},
 			{
 				"partName" : "$hood",
