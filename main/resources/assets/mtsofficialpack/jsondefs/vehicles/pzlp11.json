@@ -333,7 +333,7 @@
 			"maxValue" : 1.25
     },
     {
-      "pos" : [0, 0.0625, -1.4],
+      "pos" : [0, -0.05, -1.635],
       "types" : ["seat"],
 			"isController" : true,
 			"dismountPos" : [1.5, 0, -1.5]
