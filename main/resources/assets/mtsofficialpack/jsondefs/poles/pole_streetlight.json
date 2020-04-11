@@ -1,0 +1,7 @@
+{
+  "general": {
+	"name" : "Street Light",
+		"type" : "street_light",
+		"materials" : ["minecraft:glowstone_dust:0:1", "minecraft:stone_slab:0:1"]
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "general": {
+	"name" : "Crossing Signal",
+		"type" : "crossing_signal",
+		"materials" : ["minecraft:dye:1:1", "minecraft:dye:10:1", "minecraft:glowstone_dust:0:2", "minecraft:stone_slab:0:1"]
+	}
+}
