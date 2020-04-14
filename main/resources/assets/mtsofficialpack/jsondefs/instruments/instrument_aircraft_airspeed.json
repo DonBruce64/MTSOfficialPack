@@ -20,7 +20,8 @@
 			"textureHeight" : 128,
 			"rotationVariable" : "speed",
 			"rotationOffset" : 30,
-			"rotationFactor" : 7.5
+			"rotationFactor" : 7.5,
+			"rotationAbsoluteValue" : true
 		},
 		{
 			"textureXCenter" : 960,
