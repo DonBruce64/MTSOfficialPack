@@ -1,0 +1,7 @@
+{
+    "parent": "mtsofficialpack:item/items/snacks",
+	"textures": {
+		"0": "mtsofficialpack:items/items/nuts",
+		"particle": "mtsofficialpack:items/items/nuts"
+	}
+}
