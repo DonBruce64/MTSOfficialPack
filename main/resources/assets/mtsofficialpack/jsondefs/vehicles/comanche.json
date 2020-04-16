@@ -370,6 +370,7 @@
 
   "plane" : {
     "hasFlaps" : true,
+	"hasAutopilot" : true,
     "wingSpan" : 11.2,
     "wingArea" : 16.5,
     "tailDistance" : 4.125,
