@@ -1,6 +1,7 @@
 {
-  "general": {
-	"name" : "Crash Barrier",
+    "general": {
+        "name" : "Crash Barrier",
+        "description": "Unlike the cone, we made this to reduce the chances of you crashing into other... when you crash",
 		"width" : 1.0,
 		"height" : 0.84375,
 		"depth" : 0.5625,

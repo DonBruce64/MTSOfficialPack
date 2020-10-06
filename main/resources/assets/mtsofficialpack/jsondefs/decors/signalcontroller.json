@@ -1,6 +1,7 @@
 {
-  "general": {
-	"name" : "Signal Controller",
+    "general": {
+        "name" : "Signal Controller",
+        "description": "Traffic police tool, use it wisely",
 		"type" : "signal_controller",
 		"width" : 1.0,
 		"height" : 1.0,
