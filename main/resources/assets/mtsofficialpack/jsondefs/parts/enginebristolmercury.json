@@ -1,26 +1,23 @@
 {
-  "general": {
-	"name" : "Bristol Mercury Plane Engine",
-    "type" : "engine_aircraft",
+    "general": {
+        "name" : "Bristol Mercury Plane Engine",
+        "type" : "engine_aircraft",
 		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "minecraft:iron_ingot:0:1"]
-  },
-	
+    },
 	"engine" : {
-    "isAutomatic" : true,
-    "starterPower" : 40,
-    "starterDuration" : 3,
-    "maxRPM" : 4000,
-    "fuelConsumption" : 0.75,
-	"fuelType" : "avgas",
-    "gearRatios" : [0.5]
+        "isAutomatic" : true,
+        "flamesOnStartup": false,
+        "starterPower" : 40,
+        "fuelConsumption" : 0.75,
+        "fuelType" : "avgas",
+        "gearRatios" : [0.5]
 	},
-		
 	"subParts" : [
-		{
-      "pos" : [0, 0, 0.75],
-      "types" : ["propeller"],
+        {
+            "pos" : [0, 0, 0.75],
+            "types" : ["propeller"],
 			"minValue" : 0,
 			"maxValue" : 150
-    }
+        }
 	]
 }

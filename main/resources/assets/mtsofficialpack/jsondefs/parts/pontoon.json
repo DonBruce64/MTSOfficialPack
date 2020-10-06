@@ -1,12 +1,17 @@
 {
-  "general": {
-	"name" : "Pontoon",
-    "type" : "pontoon",
+    "general": {
+        "name" : "Pontoon",
+        "type" : "ground_pontoon",
 		"materials" : ["minecraft:iron_ingot:0:3"]
-  },
-	
-	"pontoon" : {
+    },
+	"ground" : {
+        "isWheel": false,
+        "isTread": false,
+        "canFloat": true,
+        "canGoFlat": false,
 		"width" : 0.5,
+        "width" : 0.5,
+        "motiveFriction": 0.0,
 		"lateralFriction" : 0.125,
 		"extraCollisionBoxOffset" : -2.0
 	}

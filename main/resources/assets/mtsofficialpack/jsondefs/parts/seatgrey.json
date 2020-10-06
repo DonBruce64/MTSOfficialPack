@@ -1,8 +1,0 @@
-{
-  "general": {
-	"name" : "Grey Seat",
-    "type" : "seat",
-		"modelName" : "seat",
-		"materials" : ["minecraft:wool:8:1", "minecraft:iron_ingot:0:1", "minecraft:string:-1:2"]
-  }
-}

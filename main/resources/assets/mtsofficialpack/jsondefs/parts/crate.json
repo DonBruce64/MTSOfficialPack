@@ -1,9 +1,9 @@
 {
-  "general": {
-	"name" : "Crate",
-    "type" : "crate",
+    "general": {
+        "name" : "Crate",
+        "type" : "crate",
 		"materials" : ["minecraft:planks:-1:8"]
-  },
+    },
 	"crate" : {
 		"rows" : 3
 	}

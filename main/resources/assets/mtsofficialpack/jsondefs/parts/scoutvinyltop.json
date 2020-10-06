@@ -1,22 +1,28 @@
 {
-  "general": {
-	"name" : "Scout Vinyl-Top",
-    "type" : "custom",
-	"modelName" : "scoutroof",
-    "customType" : "scoutroof",
+    "general": {
+        "name" : "Scout Vinyl-Top",
+        "type" : "custom",
+        "modelName" : "scoutroof",
+        "customType" : "scoutroof",
 		"materials" : ["minecraft:iron_ingot:-1:4", "minecraft:iron_bars:-1:2", "minecraft:dye:0:6"]
-  },
-  "custom": {
-    "width" : 1.5,
-    "height" : 0.5
+    },
+    "custom": {
+        "width" : 1.5,
+        "height" : 0.5
     },
 	"rendering": {
-		"rotatableModelObjects" : [
+		"animatedObjects" : [
 			{
-				"partName" : "$door_tailgate",
-				"rotationPoint" : [0, 0.71065, -0.8691],
-				"rotationAxis" : [90, 0, 0],
-				"rotationVariable" : "p_brake"
+				"objectName" : "$door_tailgate",
+                "animations": [
+                    {
+                        "animationType": "rotation",
+				        "centrePoint" : [0, 0.71065, -0.8691],
+				        "axis" : [90, 0, 0],
+                        "duration": 30,
+				        "variable" : "door_tailgate"
+                    }
+                ]
 			}
 		]
 	}

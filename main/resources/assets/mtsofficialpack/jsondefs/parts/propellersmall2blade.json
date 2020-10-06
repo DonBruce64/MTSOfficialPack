@@ -1,12 +1,11 @@
 {
-  "general": {
-	"name" : "Small 2-Bladed Propeller",
-    "type" : "propeller",
+    "general": {
+	   "name" : "Small 2-Bladed Propeller",
+        "type" : "propeller",
 		"materials" : ["minecraft:planks:-1:3"]
-  },
-	
+    },
 	"propeller" : {
-	  "numberBlades" : 2,
+        "isRotor": false,
 		"pitch" : 55,
 		"diameter" : 78,
 		"startingHealth" : 100
