@@ -1,6 +1,7 @@
 {
-  "general": {
-	"name" : "Traffic Signal",
+    "general": {
+        "name" : "Traffic Signal",
+        "description": "Stop —> Wait —> Go!",
 		"type" : "traffic_signal",
 		"materials" : ["minecraft:dye:1:1", "minecraft:dye:11:1","minecraft:dye:10:1", "minecraft:glowstone_dust:0:3", "minecraft:stone_slab:0:1"]
 	}

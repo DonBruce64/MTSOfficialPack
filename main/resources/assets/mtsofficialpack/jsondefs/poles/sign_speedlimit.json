@@ -1,17 +1,16 @@
 {
-  "general": {
-	"name" : "Speed Limit",
-	"type" : "sign",
-	"modelName" : "sign",
-		"textLines" : [
+    "general": {
+        "name" : "Speed Limit",
+        "type" : "sign",
+        "modelName" : "sign",
+        "materials" : ["minecraft:ingot_iron:0:1"],
+		"textObject" : [
 			{
-				"characters" : 3,
-				"xPos" : 0.0,
-				"yPos" : 0.45,
+				"pos" : [0.0, 0.45, 0.0],
 				"scale" : 0.65,
+                "maxLenght": 3,
 				"color" : "0x000000"
 			}
-		],
-	"materials" : ["minecraft:ingot_iron:0:1"]
+		]
 	}
 }
