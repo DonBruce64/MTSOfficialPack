@@ -1,10 +1,11 @@
 {
-  "general": {
-	"name" : "Crate",
-    "type" : "crate",
+    "general": {
+        "name" : "Crate",
+        "type" : "interactable_crate",
 		"materials" : ["minecraft:planks:-1:8"]
-  },
-	"crate" : {
-		"rows" : 3
+    },
+	"interactable" : {
+        "interactionType": "crate",
+		"inventoryUnits" : 1
 	}
 }

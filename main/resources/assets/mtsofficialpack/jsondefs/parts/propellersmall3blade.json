@@ -1,37 +1,50 @@
 {
-  "general": {
-	"name" : "Small 3-Bladed Propeller (Dynamic Pitch)",
-    "type" : "propeller",
+    "general": {
+        "name" : "Small 3-Bladed Propeller (Dynamic Pitch)",
+        "type" : "propeller",
 		"materials" : ["minecraft:dye:15:1", "minecraft:iron_ingot:0:3", "minecraft:redstone:-1:2"]
-  },
-	
+    },
 	"propeller" : {
-		"isDynamicPitch" : true,
-	  "numberBlades" : 3,
+        "isRotor": false,
 		"pitch" : 65,
 		"diameter" : 80,
-		"startingHealth" : 250
+		"startingHealth" : 250,
+        "isDynamicPitch" : true
 	},
-	
 	"rendering": {
-		"rotatableModelObjects" : [
+		"animatedObjects" : [
 			{
-				"partName" : "$blade_1",
-				"rotationPoint" : [0, 0, 0],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "propeller_pitch_deg"
+				"objectName" : "$blade_1",
+                "animations": [
+				    {
+                        "animationType": "rotation",
+                        "centrePoint" : [0, 0, 0],
+				        "axis" : [1, 0, 0],
+				        "variable" : "propeller_pitch_deg"
+                    }
+                ]
 			},
 			{
-				"partName" : "$blade_2",
-				"rotationPoint" : [0, 0, 0],
-				"rotationAxis" : [-0.5, 0.866, 0],
-				"rotationVariable" : "propeller_pitch_deg"
+				"objectName" : "$blade_2",
+                "animations": [
+				    {
+                        "animationType": "rotation",
+                        "centrePoint" : [0, 0, 0],
+				        "axis" : [-0.5, 0.866, 0],
+				        "variable" : "propeller_pitch_deg"
+                    }
+                ]
 			},
 			{
-				"partName" : "$blade_3",
-				"rotationPoint" : [0, 0, 0],
-				"rotationAxis" : [-0.5, -0.866, 0],
-				"rotationVariable" : "propeller_pitch_deg"
+				"objectName" : "$blade_3",
+                "animations": [
+				    {
+                        "animationType": "rotation",
+                        "centrePoint" : [0, 0, 0],
+				        "axis" : [-0.5, -0.866, 0],
+				        "variable" : "propeller_pitch_deg"
+                    }
+                ]
 			}
 		]
 	}

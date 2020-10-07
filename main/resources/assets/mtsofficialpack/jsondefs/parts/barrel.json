@@ -1,10 +1,12 @@
 {
-  "general": {
-	"name" : "Barrel",
-    "type" : "barrel",
-		"materials" : ["minecraft:iron_ingot:-1:5", "minecraft:dye:1:1"]
-  },
-	"barrel": {
-		"capacity" : 5000
+    "general": {
+        "name" : "Barrel",
+        "type" : "interactable_barrel",
+        "materials" : ["minecraft:iron_ingot:-1:5", "minecraft:dye:1:1"]
+    },
+    "interactable": {
+        "interactionType": "barrel",
+        "feedsVehicles": false,
+        "inventoryUnits" : 1
 	}
 }

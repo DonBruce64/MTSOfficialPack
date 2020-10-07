@@ -1,12 +1,17 @@
 {
-  "general": {
-	"name" : "Landing Skid",
-    "type" : "skid",
+    "general": {
+        "name" : "Landing Skid",
+        "type" : "ground_skid",
 		"materials" : ["minecraft:dye:2:1", "minecraft:iron_ingot:0:1"]
-  },
-	
-	"skid" : {
-    "width" : 0.25,
+    },
+	"ground" : {
+        "isWheel": false,
+        "isTread": false,
+        "canFloat": false,
+        "canGoFlat": false,
+        "height": 0.25,
+        "width" : 0.25,
+        "motiveFriction": 0.0,
 		"lateralFriction" : 0.5
 	}
 }

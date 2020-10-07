@@ -1,6 +1,6 @@
 {
-  "general": {
-	"name" : "Pole",
+    "general": {
+        "name" : "Pole",
 		"type" : "core",
 		"radius" : 0.0625,
 		"materials" : ["minecraft:stone:0:1"]

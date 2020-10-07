@@ -1,51 +1,42 @@
 {
-  "general": {
-	"name" : "Fuel Pump",
-	"type" : "fuel_pump",
+    "general": {
+        "name" : "Fuel Pump",
+        "type" : "fuel_pump",
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 0.6875,
 		"materials" : ["minecraft:dye:11:2", "minecraft:glass_pane:0:1", "minecraft:dye:7:2", "minecraft:ingot_iron:0:1", "minecraft:stone_slab:0:2"],
-		"textLines" : [
+		"textObjects" : [
 			{
-				"xPos" : 0.0,
-				"yPos" : 1.578125,
-				"zPos" : 0.28125,
+				"pos" : [0.0, 1.578125, 0.28125],
 				"scale" : 0.125,
 				"color" : "0xFFC800"
 			},
 			{
-				"xPos" : 0.0,
-				"yPos" : 1.40625,
-				"zPos" : 0.28125,
+				"pos" : [0.0, 1.40625, 0.28125],
 				"scale" : 0.125,
 				"color" : "0xFFC800"
 			},
 			{
-				"xPos" : 0.0,
-				"yPos" : 1.21875,
-				"zPos" : 0.28125,
+				"pos" : [0.0, 1.21875, 0.28125],
 				"scale" : 0.125,
 				"color" : "0xFFC800"
 			},
 			{
-				"xPos" : 0.0,
-				"yPos" : 1.578125,
-				"zPos" : -0.28125,
+				"pos" : [0.0, 1.578125, -0.28125],
+                "rot": [0, 180, 0],
 				"scale" : 0.125,
 				"color" : "0xFFC800"
 			},
 			{
-				"xPos" : 0.0,
-				"yPos" : 1.40625,
-				"zPos" : -0.28125,
+				"pos" : [0.0, 1.40625, -0.28125],
+                "rot": [0, 180, 0],
 				"scale" : 0.125,
 				"color" : "0xFFC800"
 			},
 			{
-				"xPos" : 0.0,
-				"yPos" : 1.21875,
-				"zPos" : -0.28125,
+				"pos" : [0.0, 1.21875, -0.28125],
+                "rot": [0, 180, 0],
 				"scale" : 0.125,
 				"color" : "0xFFC800"
 			}

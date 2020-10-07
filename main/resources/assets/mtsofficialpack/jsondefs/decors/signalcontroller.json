@@ -1,6 +1,6 @@
 {
-  "general": {
-	"name" : "Signal Controller",
+    "general": {
+        "name" : "Signal Controller",
 		"type" : "signal_controller",
 		"width" : 1.0,
 		"height" : 1.0,

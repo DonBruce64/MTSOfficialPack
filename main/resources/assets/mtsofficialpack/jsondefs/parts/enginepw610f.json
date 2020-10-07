@@ -1,26 +1,30 @@
 {
-  "general": {
-	"name" : "Pratt & Whitney 610F Jet Engine",
-    "type" : "engine_jet",
+    "general": {
+        "name" : "Pratt & Whitney 610F Jet Engine",
+        "type" : "engine_jet",
 		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "minecraft:iron_ingot:0:1"]
-  },
-	
+    },
 	"engine" : {
-    "isAutomatic" : true,
-    "starterPower" : 30,
-    "starterDuration" : 4,
-    "maxRPM" : 24310,
-    "fuelConsumption" : 0.35,
-	"fuelType" : "avgas",
-    "gearRatios" : [1.83]
+        "isAutomatic" : true,
+        "starterPower" : 30,
+        "starterDuration" : 4,
+        "maxRPM" : 24310,
+        "fuelConsumption" : 0.35,
+        "fuelType" : "avgas",
+        "gearRatios" : [1.83]
 	},
    "rendering": {
-		"rotatableModelObjects" : [
+		"animatedObjects" : [
 			{
-				"partName" : "$IntakeFan",
-				"rotationPoint" : [0, 0, 0],
-				"rotationAxis" : [0, 0, 1],
-				"rotationVariable" : "engine_rotation"
+                "objectName" : "$IntakeFan",
+                "animations": [
+                    {
+                        "animationType": "rotation",
+                        "centrePoint" : [0, 0, 0],
+                        "axis" : [0, 0, 1],
+                        "variable" : "engine_rotation_1"
+                    }
+                ]
 			}
 		]
 	}

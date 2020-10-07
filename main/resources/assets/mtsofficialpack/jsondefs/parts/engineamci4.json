@@ -1,17 +1,19 @@
 {
-  "general": {
-	"name" : "AMC I4 Car Engine",
-    "type" : "engine_car",
+    "general": {
+        "name" : "AMC I4 Car Engine",
+        "type" : "engine_car",
 		"materials" : ["minecraft:piston:0:4", "minecraft:obsidian:0:3", "minecraft:iron_ingot:0:1"]
-  },
-	
+    },
 	"engine" : {
-    "isAutomatic" : true,
-    "starterPower" : 50,
-    "starterDuration" : 3,
-    "maxRPM" : 5100,
-    "fuelConsumption" : 0.35,
-	"fuelType" : "gasoline",
-    "gearRatios" : [-2.2, 0.0, 3.25, 1.75, 1.0]
+        "isAutomatic" : true,
+        "flamesOnStartup": false,
+        "starterPower" : 50,
+        "fuelConsumption" : 0.35,
+        "fuelType" : "gasoline",
+        "gearRatios" : [-2.2, 0.0, 3.25, 1.75, 1.0],
+        "upShiftRPM": 3800,
+        "downShiftRPM": 1500,
+        "shiftSpeed": 15,
+        "revResistance": 15
 	}
 }

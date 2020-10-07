@@ -1,10 +1,9 @@
 {
-  "general": {
-	"name" : "Telephone Booth",
-		"width" : 1.0,
+    "general": {
+        "name" : "Telephone Booth",
+        "width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"oriented" : true,
 		"materials" : ["minecraft:iron_ingot:-1:6", "minecraft:iron_trapdoor:-1:1", "minecraft:glass_pane:-1:4", "minecraft:dye:6:4"]
 	}
 }

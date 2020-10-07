@@ -1,0 +1,44 @@
+{
+    "general": {
+        "name" : "Generic Seat",
+        "type" : "seat",
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:string:-1:2"]
+    },
+    "definitions": [
+        {
+            "subName": "white",
+            "name": "White Seat",
+            "extraMaterials": ["minecraft:wool:0:1"]
+        },
+        {
+            "subName": "black",
+            "name": "Black Seat",
+            "extraMaterials": ["minecraft:wool:15:1"]
+        },
+        {
+            "subName": "blue",
+            "name": "Blue Seat",
+            "extraMaterials": ["minecraft:wool:11:1"]
+        },
+        {
+            "subName": "brown",
+            "name": "Brown Seat",
+            "extraMaterials": ["minecraft:wool:12:1"]
+        },
+        {
+            "subName": "grey",
+            "name": "Grey Seat",
+            "extraMaterials": ["minecraft:wool:8:1"]
+        },
+        {
+            "subName": "pink",
+            "name": "Pink Seat",
+            "extraMaterials": ["minecraft:wool:6:1"]
+        },
+        {
+            "subName": "red",
+            "name": "Red Seat",
+            "extraMaterials": ["minecraft:wool:14:1"]
+        }
+    ]
+}
