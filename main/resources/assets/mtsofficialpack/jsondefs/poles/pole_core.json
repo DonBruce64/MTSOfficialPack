@@ -1,7 +1,6 @@
 {
     "general": {
         "name" : "Pole",
-        "description": "Generic steel pole",
 		"type" : "core",
 		"radius" : 0.0625,
 		"materials" : ["minecraft:stone:0:1"]

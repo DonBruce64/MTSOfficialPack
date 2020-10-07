@@ -1,7 +1,6 @@
 {
     "general": {
         "name" : "Traffic Cone",
-        "description": "Manufactured to prevent the chances of you missing the lanes and crashing\nP.S the manufacturer isn't responsible for crashes, we make our products to prevent them",
 		"width" : 0.6,
 		"height" : 0.75,
 		"depth" : 0.6,

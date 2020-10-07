@@ -1,7 +1,6 @@
 {
     "general": {
         "name" : "Telephone Booth",
-        "description": "Ring! Ring! There is a call for you! Or not?",
         "width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,

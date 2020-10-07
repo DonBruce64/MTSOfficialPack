@@ -2,7 +2,6 @@
     "general": {
         "name" : "Generic Seat",
         "type" : "seat",
-		"modelName" : "seat",
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:string:-1:2"]
     },
     "definitions": [

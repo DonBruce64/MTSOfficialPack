@@ -1,7 +1,6 @@
 {
     "general": {
         "name" : "Fuel Pump",
-        "description": "Fill 'er up!",
         "type" : "fuel_pump",
 		"width" : 1.0,
 		"height" : 1.0,
