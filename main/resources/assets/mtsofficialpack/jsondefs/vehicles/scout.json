@@ -1,4 +1,4 @@
- {
+{
   "definitions" : [
 		{
 		"name" : "Blue Scout",
@@ -37,6 +37,12 @@
   },
 
   "motorized" : {
+		"isBigTruck" : false,
+    "isFrontWheelDrive" : true,
+		"isRearWheelDrive" : true,
+		"hasCruiseControl" : true,
+		"axleRatio" : 3.55,
+    "dragCoefficient" : 0.6,
     "fuelCapacity" : 15000,
     "hornSound" : "mtsofficialpack:horn_car",
          "instruments": [
@@ -142,57 +148,50 @@
         "optionalPartNumber": 0
       }
     ]
-  },
-
-  "car" : {
-		"isBigTruck" : false,
-    "isFrontWheelDrive" : true,
-		"isRearWheelDrive" : true,
-		"hasCruiseControl" : true,
-		"axleRatio" : 3.55,
-    "dragCoefficient" : 0.6
-  },
-	
+  },	
 	"parts": [
 		{
       "pos" : [-0.9875, -0.025, -0.0148575],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0
     },
 		{
       "pos" : [0.9875, -0.025, -0.0148575],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0
     },
 		{
       "pos" : [-0.9875, -0.025, 2.76685],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0,
 			"turnsWithSteer" : true
     },
 		{
       "pos" : [0.9875, -0.025, 2.76685],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.40,
 			"maxValue" : 1.0,
 			"turnsWithSteer" : true
     },
 		{
       "pos" : [-0.5769375, 0.42651875, 0.91465625],
-      "types" : ["seat"]
+      "types" : ["seat"],
+		"linkedDoor": "door_r"
     },
 		{
       "pos" : [0.5769375, 0.42651875, 0.91465625],
       "types" : ["seat"],
-      "isController" : true
+      "isController" : true,
+		"linkedDoor": "door_l"
     },
 		{
       "pos" : [0, 0.70651875, -0.43534375],
       "types" : ["crate"],
-		"maxValue" : 5.0
+		"maxValue" : 5.0,
+		"linkedDoor": "door_tailgate"
     },
 	{
       "pos" : [0, .93, 0.025],
@@ -202,125 +201,371 @@
 		{
       "pos" : [0, 0.2901875, 2.76685],
       "types" : ["engine_car"],
-	  "exhaustPos" : [1.1262, 0.097504, -0.744776],
-	  "exhaustVelocity" : [1.0, 0.0, 0.0],
+	  "exhaustObjects":
+				[
+				{
+				"pos": [1.1262, 0.09754, -0.74476],
+				"velocity": [1.0, 0, 0],
+				"scale": 1.0
+				}
+				],
 			"minValue" : 0.0,
-			"maxValue" : 1.25
+			"maxValue" : 1.25,
+		"linkedDoor": "door_hood"
     }
   ],
 	
   "collision": [
-    {
-      "pos" : [-0.6, 0.9, 2.6],
-      "width" : 1.2,
-      "height" : 0.15
-    },
-		 {
-      "pos" : [0.6, 0.9, 2.6],
-      "width" : 1.2,
-      "height" : 0.15
-    },
-   {
-      "pos" : [-0.6, 0.9, 2.9],
-      "width" : 1.2,
-      "height" : 0.15
-    },
-		 {
-      "pos" : [0.6, 0.9, 2.9],
-      "width" : 1.2,
-      "height" : 0.15
-    },
 		{
       "pos" : [0, 0.3, -0.25],
       "width" : 1.0,
       "height" : 0.15
     }
   ],
+"doors":
+[
+{
+	"name": "door_tailgate",
+	"closedPos": [0.72, 0.6, -0.7],
+	"openPos": [0.72, 0, -1.2],
+	"width": 0.720,
+	"height": 0.720
+},
+{
+	"name": "door_tailgate",
+	"closedPos": [0, 0.6, -0.7],
+	"openPos": [0, 0, -1.2],
+	"width": 0.720,
+	"height": 0.720
+},
+{
+	"name": "door_tailgate",
+	"closedPos": [-0.72, 0.6, -0.7],
+	"openPos": [-0.72, 0, -1.2],
+	"width": 0.720,
+	"height": 0.720
+},
+{
+	"name": "door_l",
+	"closedPos": [1, 0.5, 1],
+	"openPos": [1.8, 0.5, 1.4516],
+	"width": 0.4,
+	"height": 0.8
+},
+{
+	"name": "door_l",
+	"closedPos": [1, 0.5, 1.4],
+	"openPos": [1.4, 0.5, 1.6457],
+	"width": 0.4,
+	"height": 0.8
+},
+{
+	"name": "door_l",
+	"closedPos": [1, 0.5, 1.8],
+	"openPos": [1, 0.5, 1.8],
+	"width": 0.4,
+	"height": 0.8
+},
+{
+	"name": "door_r",
+	"closedPos": [-1, 0.5, 1],
+	"openPos": [-1.8, 0.5, 1.4516],
+	"width": 0.4,
+	"height": 0.8
+},
+{
+	"name": "door_r",
+	"closedPos": [-1, 0.5, 1.4],
+	"openPos": [-1.4, 0.5, 1.6457],
+	"width": 0.4,
+	"height": 0.8
+},
+{
+	"name": "door_r",
+	"closedPos": [-1, 0.5, 1.8],
+	"openPos": [-1, 0.5, 1.8],
+	"width": 0.4,
+	"height": 0.8
+},
+{
+	"name": "door_hood",
+	"closedPos": [0.5, 0.75, 3],
+	"openPos": [0.5, 1.7, 2.6],
+	"width": 1,
+	"height": 0.55
+},
+{
+	"name": "door_hood",
+	"closedPos": [0.5, 0.75, 2.4],
+	"openPos": [0.5, 1.25, 2],
+	"width": 1,
+	"height": 0.55
+},
+{
+	"name": "door_hood",
+	"closedPos": [-0.5, 0.75, 3],
+	"openPos": [-0.5, 1.7, 2.6],
+	"width": 1,
+	"height": 0.55
+},
+{
+	"name": "door_hood",
+	"closedPos": [-0.5, 0.75, 2.4],
+	"openPos": [-0.5, 1.25, 2],
+	"width": 1,
+	"height": 0.55
+}
+],
 
   "rendering": {
-		"defaultDisplayText" : "IH SCOUT",
-    "displayTextMaxLength" : 7,
-		"textMarkings" : [
-			{
-				"pos" : [0.892836, 0.030387, 3.62459],
-				"rot" : [0, 0, 0],
-				"scale" : 0.15,
-				"color" : "#000000"
-			},
-			{
-				"pos" : [0.892837, 0.092888, -1.08253],
-				"rot" : [0, 180, 0],
-				"scale" : 0.15,
-				"color" : "#000000"
-			}
+	"textObjects":
+		[
+		{
+		"pos": [0.892836, 0.030387, 3.62459],
+		"rot": [0, 0, 0],
+		"scale": 0.15,
+		"color": "#000000",
+		"fieldName": "License Plate",
+		"defaultText": "IH SCOUT",
+		"maxLength": 7,
+		"lightsUp": false,
+		"renderPosition": 0
+		},
+		{
+		"pos": [0.892837, 0.092888, -1.08253],
+		"rot": [0, 180, 0],
+		"scale": 0.15,
+		"color": "#000000",
+		"fieldName": "License Plate",
+		"defaultText": "IH SCOUT",
+		"maxLength": 7,
+		"lightsUp": false,
+		"renderPosition": 0
+		}
 		],
-		"rotatableModelObjects" : [
-			{
-				"partName" : "$gas",
-				"rotationPoint" : [0, 0.438564, 1.99344],
-				"rotationAxis" : [-20, 0, 0],
-				"rotationVariable" : "throttle"
-			},
-			{
-				"partName" : "$brake",
-				"rotationPoint" : [0, 0.438564, 1.99344],
-				"rotationAxis" : [-20, 0, 0],
-				"rotationVariable" : "brake"
-			},
-			{
-				"partName" : "$parking_brake",
-				"rotationPoint" : [0, 0.39903, 1.96825],
-				"rotationAxis" : [-20, 0, 0],
-				"rotationVariable" : "p_brake"
-			},
-			{
-				"partName" : "$gearshift",
-				"rotationPoint" : [0, 0.459074, 1.50387],
-				"rotationAxis" : [2, 0, 0],
-				"rotationVariable" : "engine_gearshift_1"
-			},
-			{
-				"partName" : "$door_L",
-				"rotationPoint" : [1.1262, 0, 1.95699],
-				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$door_L_window",
-				"rotationPoint" : [1.1262, 0, 1.95699],
-				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$door_R",
-				"rotationPoint" : [-1.1238, 0, 1.95699],
-				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$door_R_window",
-				"rotationPoint" : [-1.1238, 0, 1.95699],
-				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$door_tailgate",
-				"rotationPoint" : [0, 0.260388, -0.971157],
-				"rotationAxis" : [-90, 0, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$hood",
-				"rotationPoint" : [0, 0.885389, 2.09134],
-				"rotationAxis" : [-60, 0, 0],
-				"rotationVariable" : "hood"
-			},
-			{
-				"partName" : "$steering_wheel",
-				"rotationPoint" : [0.588149, 0.593752, 1.82917],
-				"rotationAxis" : [0, 0.5, -0.5],
-				"rotationVariable" : "steering_wheel"
-			}
+"animatedObjects":
+	[
+	{
+	"objectName": "$gas",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "throttle",
+		"centerPoint": [0, 0.438564, 1.99344],
+		"axis": [-20, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 2,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
 		]
+	},
+	{
+	"objectName": "$brake",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "brake",
+		"centerPoint": [0, 0.438564, 1.99344],
+		"axis": [-20, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 2,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$parking_brake",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "p_brake",
+		"centerPoint": [0, 0.39903, 1.96825],
+		"axis": [-20, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 5,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$gearshift",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "engine_gearshift_1",
+		"centerPoint": [0, 0.459074, 1.50387],
+		"axis": [2, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$door_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_l",
+		"centerPoint": [1.1262, 0, 1.95699],
+		"axis": [0, -60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$door_L_window",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_l",
+		"centerPoint": [1.1262, 0, 1.95699],
+		"axis": [0, -60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$door_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_r",
+		"centerPoint": [-1.1262, 0, 1.95699],
+		"axis": [0, 60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$door_R_window",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_r",
+		"centerPoint": [-1.1262, 0, 1.95699],
+		"axis": [0, 60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$door_tailgate",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_tailgate",
+		"centerPoint": [0, 0.260388, -0.971157],
+		"axis": [-90, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$hood",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_hood",
+		"centerPoint": [0, 0.885389, 2.09134],
+		"axis": [-60, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$steering_wheel",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0.588149, 0.593752, 1.82917],
+		"axis": [0, -0.5, 0.5],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	}
+	]
   }
 }
+

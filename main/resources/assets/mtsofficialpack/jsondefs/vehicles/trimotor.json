@@ -31,6 +31,13 @@
   },
 
   "motorized" : {
+    "hasFlaps" : false,
+    "wingSpan" : 22.6,
+    "wingArea" : 70.0,
+    "tailDistance" : 12,
+    "rudderArea" : 5.0,
+    "elevatorArea" : 7.5,
+    "defaultElevatorAngle" : -5.0,
     "fuelCapacity" : 25000,
 		"instruments": [
       {
@@ -472,35 +479,24 @@
 		"defaultInstrument" : "mtsofficialpack:instrument_aircraft_altimeter"
       }
     ]
-  },
-	
-  "plane" : {
-    "hasFlaps" : false,
-    "wingSpan" : 22.6,
-    "wingArea" : 70.0,
-    "tailDistance" : 12,
-    "rudderArea" : 5.0,
-    "elevatorArea" : 7.5,
-    "defaultElevatorAngle" : -5.0
-  },
-	
+  },	
 	"parts": [
     {
       "pos" : [0, 0.35, -10.5],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.85,
 			"maxValue" : 1.15,
 			"turnsWithSteer" : true
     },
     {
       "pos" : [-2.875, -1.92051, 0.8],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.85,
 			"maxValue" : 1.15
     },
     {
       "pos" : [2.875, -1.92051, 0.8],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.85,
 			"maxValue" : 1.15
     },
@@ -769,47 +765,122 @@
   ],
 
   "rendering": {
-		"defaultDisplayText" : "DB32-1204-UL",
-    "displayTextMaxLength" : 12,
-		"textMarkings" : [
-			{
-        "pos" : [-6, 1.65, 0.5],
-        "rot" : [90, 180, 0],
-				"scale" : 2.0,
-				"color" : "#000000"
-      }
-    ],
-		"rotatableModelObjects" : [
-			{
-				"partName" : "$Aileron_L",
-				"rotationPoint" : [0, 1.61073, -1.25],
-				"rotationAxis" : [-1, 0, 0],
-				"rotationVariable" : "aileron"
-			},
-			{
-				"partName" : "$Aileron_R",
-				"rotationPoint" : [0, 1.61073, -1.25],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "aileron"
-			},
-			{
-				"partName" : "$Elevators",
-				"rotationPoint" : [0, 1.391986, -10.1975],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "elevator"
-			},
-			{
-				"partName" : "$Rudder",
-				"rotationPoint" : [0, 0, -10.1975],
-				"rotationAxis" : [0, 1, 0],
-				"rotationVariable" : "rudder"
-			},
-			{
-				"partName" : "&$NavigationLight_FFFFFF_FFFFF_111",
-				"rotationPoint" : [0, 0, -10.1975],
-				"rotationAxis" : [0, 1, 0],
-				"rotationVariable" : "rudder"
-			}
+	"textObjects":
+		[
+		{
+		"pos": [-6, 1.65, 0.5],
+		"rot": [-90, 180, 0],
+		"scale": 2.0,
+		"color": "#000000",
+		"fieldName": "Callsign",
+		"defaultText": "DB32-1204-UL",
+		"maxLength": 12,
+		"lightsUp": false,
+		"renderPosition": 0
+		}
+		],
+"animatedObjects":
+	[
+	{
+	"objectName": "$Aileron_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "aileron",
+		"centerPoint": [0, 1.61073, -1.25],
+		"axis": [-1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
 		]
+	},
+	{
+	"objectName": "$Aileron_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "aileron",
+		"centerPoint": [0, 1.61073, -1.25],
+		"axis": [1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Elevators",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "elevator",
+		"centerPoint": [0, 1.391986, -10.1975],
+		"axis": [1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Rudder",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, -10.1975],
+		"axis": [0, 1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "&$NavigationLight_FFFFFF_FFFFF_111",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, -10.1975],
+		"axis": [0, 1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	}
+	]
   }
 }

@@ -16,6 +16,13 @@
   },
 
   "motorized" : {
+    "hasFlaps" : false,
+    "wingSpan" : 11.0,
+    "wingArea" : 18.0,
+    "tailDistance" : 7.0,
+    "rudderArea" : 1.5,
+    "elevatorArea" : 3.0,
+    "defaultElevatorAngle" : -5.0,
     "fuelCapacity" : 7000,
     "instruments": [
       {
@@ -269,32 +276,23 @@
     ]
 	},
 
-  "plane" : {
-    "hasFlaps" : false,
-    "wingSpan" : 11.0,
-    "wingArea" : 18.0,
-    "tailDistance" : 7.0,
-    "rudderArea" : 1.5,
-    "elevatorArea" : 3.0,
-    "defaultElevatorAngle" : -5.0
-  },		
 	"parts": [
     {
       "pos" : [0, -0.15, -5.25],
-      "types" : ["skid"],
+      "types" : ["ground_skid"],
 			"minValue" : 0.15,
 			"maxValue" : 0.35,
 			"turnsWithSteer" : true
     },
     {
       "pos" : [-1.4, -1.4875, 0.375],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.65,
 			"maxValue" : 0.95
     },
     {
       "pos" : [1.4, -1.4875, 0.375],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.65,
 			"maxValue" : 0.95
     },
@@ -413,53 +411,133 @@
   ],
 
   "rendering": {
-		"defaultDisplayText" : "MAX 4H70 M",
-    "displayTextMaxLength" : 10,
-		"textMarkings" : [
-      {
-        "pos" : [0.560, 0.4, -3.03],
-        "rot" : [0, 99, 0],
-				"scale" : 0.5,
-				"color" : "#9D9D97"
-      },
-			{
-        "pos" : [-0.560, 0.4, -3.03],
-        "rot" : [0, -99, 0],
-				"scale" : 0.5,
-				"color" : "#9D9D97"
-      }
-    ],
-		"rotatableModelObjects" : [
-			{
-				"partName" : "$Aileron_L",
-				"rotationPoint" : [0, 1.1875, -0.8125],
-				"rotationAxis" : [-1, 0, 0],
-				"rotationVariable" : "aileron"
-			},
-			{
-				"partName" : "$Aileron_R",
-				"rotationPoint" : [0, 1.1875, -0.8125],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "aileron"
-			},
-			{
-				"partName" : "$Elevator_L",
-				"rotationPoint" : [0, 0.5625, -5.5],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "elevator"
-			},
-			{
-				"partName" : "$Elevator_R",
-				"rotationPoint" : [0, 0.5625, -5.5],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "elevator"
-			},
-			{
-				"partName" : "$Rudder",
-				"rotationPoint" : [0, 0, -5.5],
-				"rotationAxis" : [0, 1, 0],
-				"rotationVariable" : "rudder"
-			}
+"textObjects":
+		[
+		{
+		"pos": [0.560, 0.4, -3.03],
+		"rot": [0, 99, 0],
+		"scale": 0.5,
+		"color": "#9D9D97",
+		"fieldName": "Callsign",
+		"defaultText": "MAX 4H70 M",
+		"maxLength": 10,
+		"lightsUp": false,
+		"renderPosition": 0
+		},
+		{
+		"pos": [-0.560, 0.4, -3.03],
+		"rot": [0, -99, 0],
+		"scale": 0.5,
+		"color": "#9D9D97",
+		"fieldName": "Callsign",
+		"defaultText": "MAX 4H70 M",
+		"maxLength": 10,
+		"lightsUp": false,
+		"renderPosition": 0
+		}
+		],
+"animatedObjects":
+	[
+	{
+	"objectName": "$Aileron_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "aileron",
+		"centerPoint": [0, 1.1875, -0.8125],
+		"axis": [-1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
 		]
+	},
+	{
+	"objectName": "$Aileron_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "aileron",
+		"centerPoint": [0, 1.1875, -0.8125],
+		"axis": [1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Elevator_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "elevator",
+		"centerPoint": [0, 0.5625, -5.5],
+		"axis": [1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Elevator_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "elevator",
+		"centerPoint": [0, 0.5625, -5.5],
+		"axis": [1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Rudder",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, -5.5],
+		"axis": [0, 1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	}
+	]
   }
 }

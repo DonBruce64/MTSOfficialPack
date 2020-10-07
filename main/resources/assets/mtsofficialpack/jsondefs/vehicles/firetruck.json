@@ -16,6 +16,11 @@
   },
 
   "motorized" : {
+		"isBigTruck" : true,
+    "isFrontWheelDrive" : false,
+		"isRearWheelDrive" : true,
+		"axleRatio" : 3.55,
+    "dragCoefficient" : 0.7,
     "fuelCapacity" : 15000,
     	"hornSound" : "mtsofficialpack:horn_air",
     	"sirenSound" : "mtsofficialpack:siren",
@@ -132,62 +137,56 @@
       }
     ]
   },
-
-  "car" : {
-		"isBigTruck" : true,
-    "isFrontWheelDrive" : false,
-		"isRearWheelDrive" : true,
-		"axleRatio" : 3.55,
-    "dragCoefficient" : 0.7
-  },
 	
 	"parts": [
       	{
         "pos" : [-0.85, -0.1875, -0.1],
-        "types" : ["wheel"],
+        "types" : ["ground_wheel"],
         "minValue" : 0.0,
         "maxValue" : 1.1,
         "additionalPart" : 	{
      	"pos" : [-1.25, -0.1875, -0.1],
-      	"types" : ["wheel"],
+      	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1
     		}
       	},
       	{
         "pos" : [0.85, -0.1875, -0.1],
-        "types" : ["wheel"],
+        "types" : ["ground_wheel"],
         "minValue" : 0.0,
         "maxValue" : 1.1,
         "additionalPart" :  {
    	  	"pos" : [1.25, -0.1875, -0.1],
-      	"types" : ["wheel"],
+      	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1
     		}
       	},
 		{
       	"pos" : [-1.25, -0.1875, 4.7],
-      	"types" : ["wheel"],
+      	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1,
 			"turnsWithSteer" : true
     	},
 		{
       	"pos" : [1.25, -0.1875, 4.7],
-     	"types" : ["wheel"],
+     	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1,
 			"turnsWithSteer" : true
 		},
 		{
       	"pos" : [-0.8, 0.575, 5.65],
-      	"types" : ["seat"]
+      	"types" : ["seat"],
+		"linkedDoor": "door_r"
     	},
 		{
       	"pos" : [0.8, 0.575, 5.65],
      	"types" : ["seat"],
-			"isController" : true
+			"isController" : true,
+		"linkedDoor": "door_l"
     	},
 		{
       	"pos" : [0, 0.6, 3.5],
@@ -196,6 +195,23 @@
 			"maxValue" : 1.6
 		}
   ],
+"doors":
+[
+{
+	"name": "door_l",
+	"closedPos": [1.04, 0.8, 6.2],
+	"openPos": [2, 0.8, 6.6],
+	"width": 0.8,
+	"height": 2
+},
+{
+	"name": "door_r",
+	"closedPos": [-1.04, 0.8, 6.2],
+	"openPos": [-2, 0.8, 6.6],
+	"width": 0.8,
+	"height": 2
+}
+],
 	
   "collision": [
 	  {
@@ -221,65 +237,188 @@
   ],
 
   "rendering": {
-		"defaultDisplayText" : "1973WLFP80AFT",
-    "displayTextMaxLength" : 7,
-		"textMarkings" : [
-		],
-		"rotatableModelObjects" : [
-			{
-				"partName" : "$Door_L",
-				"rotationPoint" : [1.4375, 0, 6.55609],
-				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$Door_L_Window",
-				"rotationPoint" : [1.4375, 0, 6.55609],
-				"rotationAxis" : [0, -60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$Door_R",
-				"rotationPoint" : [-1.4375, 0, 6.55609],
-				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$Door_R_Window",
-				"rotationPoint" : [-1.4375, 0, 6.55609],
-				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$Gas",
-				"rotationPoint" : [0, 0, -0.75],
-				"rotationAxis" : [5, 0, 0],
-				"rotationVariable" : "throttle"
-			},
-			{
-				"partName" : "$Brake",
-				"rotationPoint" : [0, 0, -0.75],
-				"rotationAxis" : [5, 0, 0],
-				"rotationVariable" : "brake"
-			},
-			{
-				"partName" : "$Parking",
-				"rotationPoint" : [0, 0.640619, 5.57952],
-				"rotationAxis" : [-5, 0, 0],
-				"rotationVariable" : "p_brake"
-			},
-			{
-				"partName" : "$Steeringwheel",
-				"rotationPoint" : [0.774153, 0.953362, 6.41849],
-				"rotationAxis" : [0, 0.707, -0.707],
-				"rotationVariable" : "steering_wheel"
-			},
-			{
-				"partName" : "$Gearshift",
-				"rotationPoint" : [0, 0.328119, 5.86859],
-				"rotationAxis" : [-0.75, 0, 0],
-				"rotationVariable" : "engine_gearshift_1"
-			}
+"animatedObjects":
+	[
+	{
+	"objectName": "$Door_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_l",
+		"centerPoint": [1.4375, 0, 6.55609],
+		"axis": [0, -60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
 		]
+	},
+	{
+	"objectName": "$Door_L_Window",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_l",
+		"centerPoint": [1.4375, 0, 6.55609],
+		"axis": [0, -60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Door_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_r",
+		"centerPoint": [-1.4375, 0, 6.55609],
+		"axis": [0, 60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Door_R_Window",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_r",
+		"centerPoint": [-1.4375, 0, 6.55609],
+		"axis": [0, 60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Gas",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "throttle",
+		"centerPoint": [0, 0, -0.75],
+		"axis": [5, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 2,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Brake",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "brake",
+		"centerPoint": [0, 0, -0.75],
+		"axis": [5, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 2,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Parking",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "p_brake",
+		"centerPoint": [0, 0.640619, 5.57952],
+		"axis": [-5, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Steeringwheel",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0.774153, 0.953362, 6.41849],
+		"axis": [0, -0.707, 0.707],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Gearshift",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "engine_gearshift_1",
+		"centerPoint": [0, 0.328119, 5.86859],
+		"axis": [-0.75, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	}
+	]
   }
 }
