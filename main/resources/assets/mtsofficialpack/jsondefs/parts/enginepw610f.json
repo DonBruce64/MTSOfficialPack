@@ -7,11 +7,11 @@
 	"engine" : {
         "isAutomatic" : true,
         "starterPower" : 30,
-        "starterDuration" : 4,
         "maxRPM" : 24310,
         "fuelConsumption" : 0.35,
         "fuelType" : "avgas",
-        "gearRatios" : [1.83]
+				"bypassRatio" : 1.83,
+        "gearRatios" : [-1.0, 0.0, 1.0]
 	},
    "rendering": {
 		"animatedObjects" : [
@@ -20,7 +20,7 @@
                 "animations": [
                     {
                         "animationType": "rotation",
-                        "centrePoint" : [0, 0, 0],
+                        "centerPoint" : [0, 0, 0],
                         "axis" : [0, 0, 1],
                         "variable" : "engine_rotation_1"
                     }

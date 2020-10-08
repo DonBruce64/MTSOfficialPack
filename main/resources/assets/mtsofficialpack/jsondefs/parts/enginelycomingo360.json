@@ -7,9 +7,10 @@
 	"engine" : {
         "isAutomatic" : true,
         "starterPower" : 40,
+				"maxRPM" : 2900,
         "fuelConsumption" : 0.4,
         "fuelType" : "avgas",
-        "gearRatios" : [1.0]
+        "gearRatios" : [-1.0, 0.0, 1.0]
 	},
 	"subParts" : [
         {

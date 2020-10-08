@@ -5,7 +5,6 @@
 		"materials" : ["minecraft:dye:15:1", "minecraft:iron_ingot:0:3", "minecraft:redstone:-1:2"]
     },
 	"propeller" : {
-        "isRotor": false,
 		"pitch" : 65,
 		"diameter" : 80,
 		"startingHealth" : 250,
@@ -18,7 +17,7 @@
                 "animations": [
 				    {
                         "animationType": "rotation",
-                        "centrePoint" : [0, 0, 0],
+                        "centerPoint" : [0, 0, 0],
 				        "axis" : [1, 0, 0],
 				        "variable" : "propeller_pitch_deg"
                     }
@@ -29,7 +28,7 @@
                 "animations": [
 				    {
                         "animationType": "rotation",
-                        "centrePoint" : [0, 0, 0],
+                        "centerPoint" : [0, 0, 0],
 				        "axis" : [-0.5, 0.866, 0],
 				        "variable" : "propeller_pitch_deg"
                     }
@@ -40,7 +39,7 @@
                 "animations": [
 				    {
                         "animationType": "rotation",
-                        "centrePoint" : [0, 0, 0],
+                        "centerPoint" : [0, 0, 0],
 				        "axis" : [-0.5, -0.866, 0],
 				        "variable" : "propeller_pitch_deg"
                     }

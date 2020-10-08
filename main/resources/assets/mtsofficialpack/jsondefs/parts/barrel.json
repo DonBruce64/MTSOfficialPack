@@ -6,7 +6,6 @@
     },
     "interactable": {
         "interactionType": "barrel",
-        "feedsVehicles": false,
         "inventoryUnits" : 1
 	}
 }

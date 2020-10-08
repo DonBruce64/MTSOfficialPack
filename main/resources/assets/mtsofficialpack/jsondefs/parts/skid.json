@@ -5,13 +5,9 @@
 		"materials" : ["minecraft:dye:2:1", "minecraft:iron_ingot:0:1"]
     },
 	"ground" : {
-        "isWheel": false,
-        "isTread": false,
-        "canFloat": false,
-        "canGoFlat": false,
-        "height": 0.25,
-        "width" : 0.25,
-        "motiveFriction": 0.0,
+    "height": 0.25,
+    "width" : 0.25,
+    "motiveFriction": 0.0,
 		"lateralFriction" : 0.5
 	}
 }

@@ -6,11 +6,10 @@
     },
 	"engine" : {
         "isAutomatic" : true,
-        "flamesOnStartup": false,
         "starterPower" : 40,
         "fuelConsumption" : 0.75,
         "fuelType" : "avgas",
-        "gearRatios" : [0.5]
+        "gearRatios" : [-2.0, 0.0, 2.0]
 	},
 	"subParts" : [
         {

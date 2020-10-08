@@ -6,14 +6,9 @@
     },
 	"engine" : {
         "isAutomatic" : true,
-        "flamesOnStartup": false,
         "starterPower" : 50,
         "fuelConsumption" : 0.35,
         "fuelType" : "gasoline",
-        "gearRatios" : [-2.2, 0.0, 3.25, 1.75, 1.0],
-        "upShiftRPM": 3800,
-        "downShiftRPM": 1500,
-        "shiftSpeed": 15,
-        "revResistance": 15
+        "gearRatios" : [-2.2, 0.0, 3.25, 1.75, 1.0]
 	}
 }

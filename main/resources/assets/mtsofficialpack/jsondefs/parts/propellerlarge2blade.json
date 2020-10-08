@@ -5,7 +5,6 @@
 		"materials" : ["minecraft:dye:15:1", "minecraft:iron_ingot:0:3"]
     },
 	"propeller" : {
-        "isRotor": false,
 		"pitch" : 133,
 		"diameter" : 118,
 		"startingHealth" : 500
