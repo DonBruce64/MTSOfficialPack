@@ -31,6 +31,14 @@
   },
 
   "motorized" : {
+    "hasFlaps" : true,
+	"hasAutopilot" : true,
+    "wingSpan" : 11.2,
+    "wingArea" : 16.5,
+    "tailDistance" : 4.125,
+    "rudderArea" : 0.7,
+    "elevatorArea" : 2.0,
+    "defaultElevatorAngle" : -10.0,
     "fuelCapacity" : 10000,
         "instruments": [
       {
@@ -367,35 +375,24 @@
       }
     ]
   },
-
-  "plane" : {
-    "hasFlaps" : true,
-	"hasAutopilot" : true,
-    "wingSpan" : 11.2,
-    "wingArea" : 16.5,
-    "tailDistance" : 4.125,
-    "rudderArea" : 0.7,
-    "elevatorArea" : 2.0,
-    "defaultElevatorAngle" : -10.0
-  },
 	
 	"parts": [
      {
       "pos" : [0.0, -0.60, 2.35],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65,
 			"turnsWithSteer" : true
     },
     {
       "pos" : [-1.85, -0.45, -0.35],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65
     },
     {
       "pos" : [1.85, -0.45, -0.35],
-      "types" : ["wheel"],
+      "types" : ["ground_wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65
     },
@@ -417,27 +414,31 @@
       "pos" : [-0.38, 0.65, 0.0],
       "types" : ["seat"],
 			"isController" : true,
-			"dismountPos" : [-1.5, 0, -2.0]
+			"dismountPos" : [-1.5, 0, -2.0],
+		"linkedDoor": "door_r"
     },
 		{
       "pos" : [0.38, 0.65, 0.0],
       "types" : ["seat"],
 			"isController" : true,
-			"dismountPos" : [-1.5, 0, -2.0]
+			"dismountPos" : [-1.5, 0, -2.0],
+		"linkedDoor": "door_r"
     },
     {
       "pos" : [-0.38, 0.65, -1.375],
       "types" : ["crate", "seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
-			"dismountPos" : [-1.5, 0, -2.0]
+			"dismountPos" : [-1.5, 0, -2.0],
+		"linkedDoor": "door_r"
     },
 		 {
       "pos" : [0.38, 0.65, -1.375],
       "types" : ["crate", "seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
-			"dismountPos" : [-1.5, 0, -2.0]
+			"dismountPos" : [-1.5, 0, -2.0],
+		"linkedDoor": "door_r"
     }
   ],
 
@@ -558,91 +559,279 @@
       "height" : 0.5
     }
   ],
+"doors":
+[
+{
+	"name": "door_r",
+	"closedPos": [-0.9, 1.05, -0.45],
+	"openPos": [-1.8, 1.05, 0],
+	"width": 0.45,
+	"height": 1.4
+},
+{
+	"name": "door_r",
+	"closedPos": [-0.9, 1.05, 0],
+	"openPos": [-1.35, 1.05, 0.20062],
+	"width": 0.45,
+	"height": 1.4
+},
+{
+	"name": "door_r",
+	"closedPos": [-0.9, 1.05, 0.45],
+	"openPos": [-0.9, 1.05, 0.45],
+	"width": 0.45,
+	"height": 1.4
+}
+],
 
   "rendering": {
-		"defaultDisplayText" : "COMANCHE",
-    "displayTextMaxLength" : 8,
-		"textMarkings" : [
-      {
-        "pos" : [0.67, 1.5, -3.25],
-        "rot" : [0, 99, 0],
-				"scale" : 0.75,
-				"color" : "#CCCCCC"
-      },
-			{
-        "pos" : [-0.67, 1.5, -3.25],
-        "rot" : [0, -99, 0],
-				"scale" : 0.75,
-				"color" : "#CCCCCC"
-      }
-    ],
-		"rotatableModelObjects" : [
-			{
-				"partName" : "$Aileron_L",
-				"rotationPoint" : [7.178849, 0.5179575, -0.437500],
-				"rotationAxis" : [-0.9986, -0.0523, 0],
-				"rotationVariable" : "aileron"
-			},
-			{
-				"partName" : "$Aileron_R",
-				"rotationPoint" : [-7.185391, 0.517956, -0.437500],
-				"rotationAxis" : [0.9986, -0.0523, 0],
-				"rotationVariable" : "aileron"
-			},
-			{
-				"partName" : "$Rudder",
-				"rotationPoint" : [0, 0, -5.25],
-				"rotationAxis" : [0, 1 , 0],
-				"rotationVariable" : "rudder"
-			},
-			{
-				"partName" : "&$NavigationLight_FFFFFF_FFFFF_111",
-				"rotationPoint" : [0, 0, -5.25],
-				"rotationAxis" : [0, 1 , 0],
-				"rotationVariable" : "rudder"
-			},
-			{
-				"partName" : "$WheelStrut",
-				"rotationPoint" : [0, 0, 2.34375],
-				"rotationAxis" : [0, -1 , 0],
-				"rotationVariable" : "rudder"
-			},
-			{
-				"partName" : "$Elevator_R",
-				"rotationPoint" : [0, 1.375, -5.437],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "elevator"
-			},   
-			{
-				"partName" : "$Elevator_L",
-				"rotationPoint" : [0, 1.375, -5.437],
-				"rotationAxis" : [1, 0, 0],
-				"rotationVariable" : "elevator"
-			},  
-			{
-				"partName" : "$Flap_L",
-				"rotationPoint" : [5.375375, 0.423098, -0.812500],
-				"rotationAxis" : [-0.9986, -0.0523, 0],
-				"rotationVariable" : "flaps_actual"
-			},
-			{
-				"partName" : "$Flap_R",
-				"rotationPoint" : [-5.375375, 0.423097, -0.812500],
-				"rotationAxis" : [-0.9986, 0.0523, 0],
-				"rotationVariable" : "flaps_actual"
-			},
-			{
-				"partName" : "$Door_R",
-				"rotationPoint" : [-0.875000, 0, 0.625],
-				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "door"
-			},
-			{
-				"partName" : "$Door_R_Window",
-				"rotationPoint" : [-0.875000, 0, 0.625],
-				"rotationAxis" : [0, 60, 0],
-				"rotationVariable" : "door"
-			}
+	"textObjects":
+		[
+		{
+		"pos": [0.67, 1.5, -3.25],
+		"rot": [0, 99, 0],
+		"scale": 0.75,
+		"color": "#CCCCCC",
+		"fieldName": "Callsign",
+		"defaultText": "COMANCHE",
+		"maxLength": 8,
+		"lightsUp": false,
+		"renderPosition": 0
+		},
+		{
+		"pos": [-0.67, 1.5, -3.25],
+		"rot": [0, -99, 0],
+		"scale": 0.75,
+		"color": "#CCCCCC",
+		"fieldName": "Callsign",
+		"defaultText": "COMANCHE",
+		"maxLength": 8,
+		"lightsUp": false,
+		"renderPosition": 0
+		}
+		],
+"animatedObjects":
+	[
+	{
+	"objectName": "$Aileron_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "aileron",
+		"centerPoint": [7.178849, 0.5179575, -0.437500],
+		"axis": [-0.9986, -0.0523, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
 		]
+	},
+	{
+	"objectName": "$Aileron_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "aileron",
+		"centerPoint": [-7.178849, 0.5179575, -0.437500],
+		"axis": [0.9986, -0.0523, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Rudder",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, -5.25],
+		"axis": [0, 1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "&$NavigationLight_FFFFFF_FFFFF_111",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, -5.25],
+		"axis": [0, 1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$WheelStrut",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, 2.34375],
+		"axis": [0, -1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Elevator_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "elevator",
+		"centerPoint": [0, 1.375, -5.437],
+		"axis": [1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Elevator_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "elevator",
+		"centerPoint": [0, 1.375, -5.437],
+		"axis": [1, 0, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Flap_L",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "flaps_actual",
+		"centerPoint": [5.375375, 0.423098, -0.812500],
+		"axis": [-0.9986, -0.0523, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Flap_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "flaps_actual",
+		"centerPoint": [5.375375, 0.423097, -0.812500],
+		"axis": [-0.9986, 0.0523, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Door_R",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_r",
+		"centerPoint": [-0.875000, 0, 0.625],
+		"axis": [0, 60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$Door_R_Window",
+	"animations":
+		[
+		{
+		"animationType": "rotation",
+		"variable": "door_r",
+		"centerPoint": [-0.875000, 0, 0.625],
+		"axis": [0, 60, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 10,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	}
+	]
   }
 }
