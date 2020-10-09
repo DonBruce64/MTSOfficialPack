@@ -7,6 +7,7 @@
 	"engine" : {
         "isAutomatic" : true,
         "starterPower" : 50,
+				"maxRPM" : 5100,
         "fuelConsumption" : 0.35,
         "fuelType" : "gasoline",
         "gearRatios" : [-2.2, 0.0, 3.25, 1.75, 1.0]
