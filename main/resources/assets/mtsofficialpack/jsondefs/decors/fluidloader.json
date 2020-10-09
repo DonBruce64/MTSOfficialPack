@@ -1,0 +1,10 @@
+{
+    "general": {
+        "name" : "Fluid Loader",
+        "type" : "fluid_loader",
+		"width" : 1.0,
+		"height" : 1.0,
+		"depth" : 1.0,
+		"materials" : ["minecraft:dye:11:2", "minecraft:dye:7:2", "minecraft:bucket:0:3", "minecraft:iron_ingot:0:3", "minecraft:stone_slab:0:2"]
+	}
+}
