@@ -3,6 +3,6 @@
         "name" : "One Way (Right)",
         "type" : "sign",
         "modelName" : "sign",
-        "materials" : ["minecraft:ingot_iron:0:1"]
+        "materials" : ["minecraft:iron_ingot:0:1"]
 	}
 }

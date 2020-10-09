@@ -3,7 +3,7 @@
         "name" : "Speed Limit",
         "type" : "sign",
         "modelName" : "sign",
-        "materials" : ["minecraft:ingot_iron:0:1"],
+        "materials" : ["minecraft:iron_ingot:0:1"],
 		"textObject" : [
 			{
 				"pos" : [0.0, 0.45, 0.0],

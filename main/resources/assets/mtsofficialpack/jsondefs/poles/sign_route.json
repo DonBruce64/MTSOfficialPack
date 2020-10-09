@@ -3,7 +3,7 @@
         "name" : "Route",
         "type" : "sign",
         "modelName" : "sign",
-        "materials" : ["minecraft:ingot_iron:0:1"],
+        "materials" : ["minecraft:iron_ingot:0:1"],
         "textObjects" : [
             {
 	   			"pos" : [0.0, 0.5, 0.0],
