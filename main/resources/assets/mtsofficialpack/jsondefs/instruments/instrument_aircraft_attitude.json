@@ -2,7 +2,6 @@
   "general": {
 	"name" : "Attitude Indicator",
 	"description" : "Indicates where the plane is pointing.",
-    "validVehicles" : ["plane"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:15:1", "minecraft:dye:12:3", "minecraft:dye:3:3"]
   },
 	
@@ -16,7 +15,8 @@
 			"rotationFactor" : -1.0,
 			"translationVariable" : "pitch",
 			"translationFactor" : 1.0,
-			"translationClamp" : 25
+			"translationClampMin" : -50,
+			"translationClampMax" : 50
 		},
 		{
 			"textureXCenter" : 64,

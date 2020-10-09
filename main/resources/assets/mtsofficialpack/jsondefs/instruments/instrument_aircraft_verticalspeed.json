@@ -2,7 +2,6 @@
   "general": {
 	"name" : "Vertical Speed Indicator",
 	"description" : "Indicates climb rate.",
-    "validVehicles" : ["plane", "blimp"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:4"]
   },
 	

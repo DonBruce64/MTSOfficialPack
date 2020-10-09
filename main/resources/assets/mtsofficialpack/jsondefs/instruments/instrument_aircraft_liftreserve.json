@@ -2,7 +2,6 @@
   "general": {
 	"name" : "Lift Reserve Indicator",
 	"description" : "Indicates lift potential.",
-    "validVehicles" : ["plane"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:10:2", "minecraft:dye:11:1", "minecraft:dye:1:1"]
   },
 	
@@ -22,7 +21,8 @@
 			"textureHeight" : 128,
 			"rotationVariable" : "lift_reserve",
 			"rotationFactor" : 1.0,
-			"rotationClamp" : 25
+			"rotationClampMin" : -35,
+			"rotationClampMax" : 35
 		},
 		{
 			"textureXCenter" : 960,

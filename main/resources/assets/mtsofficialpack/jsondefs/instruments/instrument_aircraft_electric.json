@@ -2,7 +2,6 @@
   "general": {
 	"name" : "Electrical Gauge",
 	"description" : "Indicates electrical power and usage.",
-    "validVehicles" : ["plane", "blimp"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:3", "minecraft:dye:10:1", "minecraft:dye:1:1"]
   },
 	
@@ -35,7 +34,8 @@
 			"rotationVariable" : "electric_usage",
 			"rotationOffset" : -90,
 			"rotationFactor" : -55,
-			"rotationClamp" : 55
+			"rotationClampMin" : -195,
+			"rotationClampMax" : -35
 		},
 		{
 			"textureXCenter" : 960,

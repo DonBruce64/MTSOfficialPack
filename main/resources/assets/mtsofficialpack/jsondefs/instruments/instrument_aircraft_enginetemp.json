@@ -2,7 +2,6 @@
   "general": {
 	"name" : "Engine Temperature Gauge",
 	"description" : "Indicates engine temperature.",
-    "validVehicles" : ["plane", "blimp"],
 		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:10:2", "minecraft:dye:11:1"]
   },
 	
