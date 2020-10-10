@@ -179,14 +179,12 @@
 		},
 		{
       	"pos" : [-0.8, 0.575, 5.65],
-      	"types" : ["seat"],
-		"linkedDoor": "door_r"
+      	"types" : ["seat"]
     	},
 		{
       	"pos" : [0.8, 0.575, 5.65],
      	"types" : ["seat"],
-			"isController" : true,
-		"linkedDoor": "door_l"
+			"isController" : true
     	},
 		{
       	"pos" : [0, 0.6, 3.5],

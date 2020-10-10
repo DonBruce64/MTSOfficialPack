@@ -51,6 +51,7 @@
     "wingSpan" : 12.0,
     "wingArea" : 18.6,
     "tailDistance" : 7.0,
+		"aileronArea" : 3.72,
     "rudderArea" : 1.5,
     "elevatorArea" : 3.0,
     "defaultElevatorAngle" : -10.0,

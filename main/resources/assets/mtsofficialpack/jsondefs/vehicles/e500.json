@@ -37,6 +37,7 @@
     "wingSpan" : 11.4,
     "wingArea" : 13.4,
     "tailDistance" : 4.0,
+		"aileronArea" : 2.68,
     "rudderArea" : 1.0,
     "elevatorArea" : 2.2,
     "defaultElevatorAngle" : -7.5,
@@ -414,32 +415,27 @@
       "pos" : [-0.0, 0.195, 2.31875],
       "types" : ["seat"],
 			"isController" : true,
-			"dismountPos" : [1.5, 0, 1.75],
-			"linkedDoor": "door_l"
+			"dismountPos" : [1.5, 0, 1.75]
     },
 		{
       "pos" : [0.40625, 0.195, 1.48125],
       "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75],
-			"linkedDoor": "door_l"
+			"dismountPos" : [1.5, 0, 1.75]
     },
     {
       "pos" : [-0.40625, 0.195, 1.48125],
       "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75],
-		"linkedDoor": "door_l"
+			"dismountPos" : [1.5, 0, 1.75]
     },
     {
       "pos" : [-0.40625, 0.195, 0.51875],
       "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75],
-		"linkedDoor": "door_l"
+			"dismountPos" : [1.5, 0, 1.75]
     },
 	{
       "pos" : [0.40625, 0.195, 0.51875],
       "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75],
-		"linkedDoor": "door_l"
+			"dismountPos" : [1.5, 0, 1.75]
     }
   ],
 

@@ -21,6 +21,7 @@
     "wingArea" : 18.0,
     "tailDistance" : 7.0,
     "rudderArea" : 1.5,
+		"aileronArea" : 3.6,
     "elevatorArea" : 3.0,
     "defaultElevatorAngle" : -5.0,
     "fuelCapacity" : 7000,
