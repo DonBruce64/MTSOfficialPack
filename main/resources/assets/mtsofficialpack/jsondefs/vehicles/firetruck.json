@@ -27,20 +27,50 @@
     "instruments": [
       {
         "pos": [
-          1.003125,
-          1.0625,
-          6.24
+          1.2072822,
+          1.01,
+          6.19009
         ],
         "rot": [
-          0.0,
+          45.0,
           0.0,
           0.0
         ],
-        "hudpos": [
-          43.5,
-          63.0
+        "scale": 0.01953125,
+        "hudX": 72,
+        "hudY": 36,
+        "hudScale": 0.45,
+        "optionalPartNumber": 0
+      },
+			{
+        "pos": [
+          1.051032,
+					1.01,
+          6.19009
         ],
-        "scale": 0.0421875,
+        "rot": [
+          45.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.01953125,
+        "hudX": 123,
+        "hudY": 36,
+        "hudScale": 0.45,
+        "optionalPartNumber": 0
+      },
+			{
+        "pos": [
+          0.894782,
+          1.01,
+          6.19009
+        ],
+        "rot": [
+          45.0,
+          0.0,
+          0.0
+        ],
+        "scale": 0.01953125,
         "hudX": 174,
         "hudY": 36,
         "hudScale": 0.45,
@@ -48,20 +78,16 @@
       },
       {
         "pos": [
-          0.553125,
-          1.0625,
-          6.24
+          0.676032,
+          1.01,
+          6.19009
         ],
         "rot": [
-          0.0,
+          45.0,
           0.0,
           0.0
         ],
-        "hudpos": [
-          56.5,
-          63.0
-        ],
-        "scale": 0.0421875,
+        "scale": 0.01953125,
         "hudX": 225,
         "hudY": 36,
         "hudScale": 0.45,
@@ -69,70 +95,36 @@
       },
       {
         "pos": [
-          0.321875,
-          0.9625,
-          6.24
+          0.519782,
+          1.01,
+					6.19009
         ],
         "rot": [
-          0.0,
+          45.0,
           0.0,
           0.0
         ],
-        "scale": 0.014062,
-        "hudX": 266,
-        "hudY": 22,
-        "hudScale": 0.225,
+        "scale": 0.01953125,
+        "hudX": 276,
+        "hudY": 36,
+        "hudScale": 0.45,
         "optionalPartNumber": 0
       },
       {
         "pos": [
-          0.321875,
-          1.1625,
-          6.24
+          0.363532,
+          1.01,
+          6.19009
         ],
         "rot": [
-          0.0,
+          45.0,
           0.0,
           0.0
         ],
-        "scale": 0.014062,
-        "hudX": 266,
-        "hudY": 51,
-        "hudScale": 0.225,
-        "optionalPartNumber": 0
-      },
-      {
-        "pos": [
-          1.234375,
-          0.9625,
-          6.24
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": 0.014062,
-        "hudX": 134,
-        "hudY": 22,
-        "hudScale": 0.225,
-        "optionalPartNumber": 0
-      },
-      {
-        "pos": [
-          1.234375,
-          1.1625,
-          6.24
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "scale": 0.014062,
-        "hudX": 134,
-        "hudY": 51,
-        "hudScale": 0.225,
+        "scale": 0.01953125,
+        "hudX": 327,
+        "hudY": 36,
+        "hudScale": 0.45,
         "optionalPartNumber": 0
       }
     ]
@@ -140,52 +132,66 @@
 	
 	"parts": [
       	{
-        "pos" : [-0.85, -0.1875, -0.1],
+        "pos" : [-0.869926, 0, 0],
         "types" : ["ground_wheel"],
         "minValue" : 0.0,
         "maxValue" : 1.1,
         "additionalPart" : 	{
-     	"pos" : [-1.25, -0.1875, -0.1],
+     	"pos" : [-1.24225, 0, 0],
       	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1
     		}
       	},
       	{
-        "pos" : [0.85, -0.1875, -0.1],
+         "pos" : [0.869926, 0, 0],
         "types" : ["ground_wheel"],
         "minValue" : 0.0,
         "maxValue" : 1.1,
         "additionalPart" :  {
-   	  	"pos" : [1.25, -0.1875, -0.1],
+   	  	"pos" : [1.24225, 0, 0],
       	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1
     		}
       	},
 		{
-      	"pos" : [-1.25, -0.1875, 4.7],
+      	"pos" : [-1.24225, 0, 4.7513],
       	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1,
 			"turnsWithSteer" : true
     	},
 		{
-      	"pos" : [1.25, -0.1875, 4.7],
+      	"pos" : [1.24225, 0, 4.7513],
      	"types" : ["ground_wheel"],
 			"minValue" : 0.0,
 			"maxValue" : 1.1,
 			"turnsWithSteer" : true
 		},
 		{
-      	"pos" : [-0.8, 0.575, 5.65],
-      	"types" : ["seat"]
-    	},
+		"pos" : [-0.894401, 0.939368, 4.5932],
+		"rot" : [0, 180, 0],
+		"types" : ["seat"]
+		},
 		{
-      	"pos" : [0.8, 0.575, 5.65],
-     	"types" : ["seat"],
-			"isController" : true
-    	},
+		"pos" : [0.894401, 0.939368, 4.5932],
+		"rot" : [0, 180, 0],
+		"types" : ["seat"]
+		},
+		{
+		"pos" : [-0.904241, 0.877468, 5.46806],
+		"types" : ["seat"]
+		},
+		{
+		"pos" : [-0.198579, 0.877468, 5.46806],
+		"types" : ["seat"]
+		},
+		{
+		"pos" : [0.898813, 0.877468, 5.46806],
+		"types" : ["seat"],
+				"isController" : true
+		},
 		{
       	"pos" : [0, 0.6, 3.5],
       	"types" : ["engine_car"],
@@ -197,15 +203,15 @@
 [
 {
 	"name": "door_l",
-	"closedPos": [1.04, 0.8, 6.2],
-	"openPos": [2, 0.8, 6.6],
+	"closedPos": [1.04, 0.8, 5.7],
+	"openPos": [2, 0.8, 6.1],
 	"width": 0.8,
 	"height": 2
 },
 {
 	"name": "door_r",
-	"closedPos": [-1.04, 0.8, 6.2],
-	"openPos": [-2, 0.8, 6.6],
+	"closedPos": [-1.04, 0.8, 5.7],
+	"openPos": [-2, 0.8, 6.1],
 	"width": 0.8,
 	"height": 2
 }
@@ -238,13 +244,13 @@
 "animatedObjects":
 	[
 	{
-	"objectName": "$Door_L",
+	"objectName": "$door_L",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "door_l",
-		"centerPoint": [1.4375, 0, 6.55609],
+		"centerPoint": [1.37916, 0, 6.19057],
 		"axis": [0, -60, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
@@ -258,13 +264,13 @@
 		]
 	},
 	{
-	"objectName": "$Door_L_Window",
+	"objectName": "$window_door_L",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "door_l",
-		"centerPoint": [1.4375, 0, 6.55609],
+		"centerPoint": [1.37916, 0, 6.19057],
 		"axis": [0, -60, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
@@ -278,13 +284,13 @@
 		]
 	},
 	{
-	"objectName": "$Door_R",
+	"objectName": "$door_R",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "door_r",
-		"centerPoint": [-1.4375, 0, 6.55609],
+		"centerPoint": [-1.37916, 0, 6.19057],
 		"axis": [0, 60, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
@@ -298,13 +304,13 @@
 		]
 	},
 	{
-	"objectName": "$Door_R_Window",
+	"objectName": "$window_door_R",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "door_r",
-		"centerPoint": [-1.4375, 0, 6.55609],
+		"centerPoint": [-1.37916, 0, 6.19057],
 		"axis": [0, 60, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
@@ -318,13 +324,13 @@
 		]
 	},
 	{
-	"objectName": "$Gas",
+	"objectName": "$gas",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "throttle",
-		"centerPoint": [0, 0, -0.75],
+		"centerPoint": [0, 0.569725, 5.99046],
 		"axis": [5, 0, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
@@ -338,14 +344,13 @@
 		]
 	},
 	{
-	"objectName": "$Brake",
+	"objectName": "$brake",
 	"animations":
 		[
 		{
-		"animationType": "rotation",
+		"animationType": "translation",
 		"variable": "brake",
-		"centerPoint": [0, 0, -0.75],
-		"axis": [5, 0, 0],
+		"axis": [0, -0.10, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
 		"clampMin": 0.0,
@@ -358,14 +363,14 @@
 		]
 	},
 	{
-	"objectName": "$Parking",
+	"objectName": "$p_brake",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "p_brake",
-		"centerPoint": [0, 0.640619, 5.57952],
-		"axis": [-5, 0, 0],
+		"centerPoint": [0.371345, 0.0, 5.73745],
+		"axis": [0, -90, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
 		"clampMin": 0.0,
@@ -378,14 +383,14 @@
 		]
 	},
 	{
-	"objectName": "$Steeringwheel",
+	"objectName": "$steeringwheel",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "rudder",
-		"centerPoint": [0.774153, 0.953362, 6.41849],
-		"axis": [0, -0.707, 0.707],
+		"centerPoint": [0.785407, 1.10465, 6.0548],
+		"axis": [0, -0.9848, 0.1736],
 		"offset": 0.0,
 		"addPriorOffset": false,
 		"clampMin": 0.0,
@@ -398,14 +403,14 @@
 		]
 	},
 	{
-	"objectName": "$Gearshift",
+	"objectName": "$gearshift",
 	"animations":
 		[
 		{
 		"animationType": "rotation",
 		"variable": "engine_gearshift_1",
-		"centerPoint": [0, 0.328119, 5.86859],
-		"axis": [-0.75, 0, 0],
+		"centerPoint": [0.316657, 0.950173, 5.40932],
+		"axis": [0.75, 0, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
 		"clampMin": 0.0,
