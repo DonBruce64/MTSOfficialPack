@@ -11,6 +11,7 @@
         "fuelConsumption" : 0.35,
         "fuelType" : "avgas",
 				"bypassRatio" : 1.83,
+				"jetPowerFactor" : 1.0,
         "gearRatios" : [-1.0, 0.0, 1.0]
 	},
    "rendering": {
