@@ -411,7 +411,7 @@
 					"axis": [0, 0, 84],
 					"duration": 60,
 					"forwardsDelay": 0,
-					"reverseDelay": 50
+					"reverseDelay": 0
 				}
 			]
     },
@@ -428,7 +428,7 @@
 					"axis": [0, 0, -84],
 					"duration": 60,
 					"forwardsDelay": 0,
-					"reverseDelay": 50
+					"reverseDelay": 0
 				}
 			]
 			
@@ -876,7 +876,7 @@
 			"axis": [0, 0, -84],
 			"duration": 60,
 			"forwardsDelay": 0,
-			"reverseDelay": 50
+			"reverseDelay": 0
 		}
 		]
 	},
@@ -891,7 +891,7 @@
 			"axis": [0, 0, 84],
 			"duration": 60,
 			"forwardsDelay": 0,
-			"reverseDelay": 50
+			"reverseDelay": 0
 		}
 		]
 	},

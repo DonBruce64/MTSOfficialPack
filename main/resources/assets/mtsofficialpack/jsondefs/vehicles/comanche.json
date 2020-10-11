@@ -410,7 +410,7 @@
 					"axis": [0, 0, 87],
 					"duration": 60,
 					"forwardsDelay": 0,
-					"reverseDelay": 20
+					"reverseDelay": 0
 				}
 			]
     },
@@ -427,7 +427,7 @@
 					"axis": [0, 0, -87],
 					"duration": 60,
 					"forwardsDelay": 0,
-					"reverseDelay": 20
+					"reverseDelay": 0
 				}
 			]
     },
@@ -854,7 +854,7 @@
 			"axis": [0, 0, -87],
 			"duration": 60,
 			"forwardsDelay": 0,
-			"reverseDelay": 20
+			"reverseDelay": 0
 		}
 		]
 	},
@@ -869,7 +869,7 @@
 			"axis": [0, 0, 87],
 			"duration": 60,
 			"forwardsDelay": 0,
-			"reverseDelay": 20
+			"reverseDelay": 0
 		}
 		]
 	},
@@ -913,7 +913,7 @@
 			"axis": [0, 0, -87],
 			"duration": 60,
 			"forwardsDelay": 0,
-			"reverseDelay": 20
+			"reverseDelay": 0
 		}
 		]
 	},
@@ -928,7 +928,7 @@
 			"axis": [0, 0, 87],
 			"duration": 60,
 			"forwardsDelay": 0,
-			"reverseDelay": 20
+			"reverseDelay": 0
 		}
 		]
 	},
