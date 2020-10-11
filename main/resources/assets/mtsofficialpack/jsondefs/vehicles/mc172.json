@@ -35,6 +35,7 @@
   "general": {
 	"description" : "The MC-172 is not fancy, but its cheap and sturdy airframe is at home on any rural Minecraft base.  High wings and a good power-to-weight ratio make this a good all-around starter.",
     "type" : "plane",
+		"isAircraft" : true,
 		"openTop" : false,
 		"emptyMass" : 800,
 		"materials" : []

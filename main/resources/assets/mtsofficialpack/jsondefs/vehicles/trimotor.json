@@ -25,6 +25,7 @@
   "general": {
 	"description" : "The Ford Trimotor is an old, yet trustworthy aircraft.  Its large wingspan provides ample lift for short takeoffs, as well as enough to maintain flight with one engine out.  With room for 12 passengers or crates, it's a great choice for long-haul flights where reliability (but not time) is of the essence.",
     "type" : "plane",
+		"isAircraft" : true,
 		"openTop" : false,
 		"emptyMass" : 3000,
 		"materials" : ["minecraft:iron_ingot:-1:40", "minecraft:iron_bars:-1:4", "minecraft:glass_pane:-1:22"]

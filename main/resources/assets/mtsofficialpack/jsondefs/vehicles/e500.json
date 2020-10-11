@@ -25,6 +25,7 @@
   "general": {
 	"description" : "The Eclipse 500, first flown in 2002, created a new class of aircraft: the very light jet, or VLJ. The MTS version is configured to seat five, with the pilot in the front and four passengers behind them. A great addition to any private airport, and quite efficient for its capacity and speed as well.",
     "type" : "plane",
+		"isAircraft" : true,
 		"openTop" : false,
 		"emptyMass" : 1610,
 		"materials" : ["minecraft:iron_bars:1:6", "minecraft:iron_trapdoor:1:8", "minecraft:iron_ingot:1:15", "minecraft:redstone:1:9", "minecraft:comparator:1:1", "minecraft:glass_pane:1:5"]
@@ -40,6 +41,7 @@
 		"aileronArea" : 2.68,
     "rudderArea" : 1.0,
     "elevatorArea" : 2.2,
+		"gearSequenceDuration" : 110,
     "defaultElevatorAngle" : -7.5,
     "instruments": [
       {
@@ -383,19 +385,53 @@
       "types" : ["ground_wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65,
-			"turnsWithSteer" : true
+			"turnsWithSteer" : true,
+			"animations": [
+				{
+					"animationType": "rotation",
+					"variable": "gear_setpoint",
+					"centerPoint": [0, 0.62499, 0],
+					"axis": [-110, 0, 0],
+					"duration": 50,
+					"forwardsDelay": 30,
+					"reverseDelay": 30
+				}
+			]
     },
     {
       "pos" : [-1.5125, -0.4175, -0.18125],
       "types" : ["ground_wheel"],
 			"minValue" : 0.4,
-			"maxValue" : 0.65
+			"maxValue" : 0.65,
+			"animations": [
+				{
+					"animationType": "rotation",
+					"variable": "gear_setpoint",
+					"centerPoint": [-0.03125, 0.424994, 0],
+					"axis": [0, 0, 84],
+					"duration": 60,
+					"forwardsDelay": 0,
+					"reverseDelay": 50
+				}
+			]
     },
     {
       "pos" : [1.5125, -0.4175, -0.18125],
       "types" : ["ground_wheel"],
 			"minValue" : 0.4,
-			"maxValue" : 0.65
+			"maxValue" : 0.65,
+			"animations": [
+				{
+					"animationType": "rotation",
+					"variable": "gear_setpoint",
+					"centerPoint": [0.03125, 0.424994, 0],
+					"axis": [0, 0, -84],
+					"duration": 60,
+					"forwardsDelay": 0,
+					"reverseDelay": 50
+				}
+			]
+			
     },
 				{
       "pos" : [0.96875, 0.78875, -2.4235],
@@ -690,26 +726,6 @@
 		]
 	},
 	{
-	"objectName": "$WheelStrut",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 0, 3.31875],
-		"axis": [0, -1 , 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
 	"objectName": "$Elevator_R",
 	"animations":
 		[
@@ -846,6 +862,176 @@
 		"duration": 10,
 		"forwardsDelay": 0,
 		"reverseDelay": 0
+		}
+		]
+	},
+		{
+	"objectName": "$GearStrutLeftRear",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [1.54375, 0.007494, 0],
+			"axis": [0, 0, -84],
+			"duration": 60,
+			"forwardsDelay": 0,
+			"reverseDelay": 50
+		}
+		]
+	},
+	{
+	"objectName": "$GearStrutRightRear",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-1.54375, 0.007494, 0],
+			"axis": [0, 0, 84],
+			"duration": 60,
+			"forwardsDelay": 0,
+			"reverseDelay": 50
+		}
+		]
+	},
+	{
+	"objectName": "$GearStrutFront",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0, 0.22624, 3.31875],
+			"axis": [-110, 0, 0],
+			"duration": 50,
+			"forwardsDelay": 30,
+			"reverseDelay": 30
+		},
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, 3.31875],
+		"axis": [0, -1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorLeftFront1",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0.15625, 0.00749, 0],
+			"axis": [0, 0, 90],
+			"duration": 30,
+			"forwardsDelay": 0,
+			"reverseDelay": 80
+		},
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0.15625, 0.00749, 0],
+			"axis": [0, 0, -90],
+			"duration": 30,
+			"forwardsDelay": 80,
+			"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorLeftFront2",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0.15625, 0.06999, 0],
+			"axis": [0, 0, 90],
+			"duration": 30,
+			"forwardsDelay": 0,
+			"reverseDelay": 80
+		},
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0.15625, 0.06999, 0],
+			"axis": [0, 0, -90],
+			"duration": 30,
+			"forwardsDelay": 80,
+			"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorRightFront1",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-0.15625, 0.00749, 0],
+			"axis": [0, 0, -90],
+			"duration": 30,
+			"forwardsDelay": 0,
+			"reverseDelay": 80
+		},
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-0.15625, 0.00749, 0],
+			"axis": [0, 0, 90],
+			"duration": 30,
+			"forwardsDelay": 80,
+			"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorRightFront2",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-0.15625, 0.06999, 0],
+			"axis": [0, 0, -90],
+			"duration": 30,
+			"forwardsDelay": 0,
+			"reverseDelay": 80
+		},
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-0.15625, 0.06999, 0],
+			"axis": [0, 0, 90],
+			"duration": 30,
+			"forwardsDelay": 80,
+			"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorBackFront",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0, -0.02376, 3.19375],
+			"axis": [-90, 0, 0],
+			"duration": 30,
+			"forwardsDelay": 80,
+			"reverseDelay": 0
 		}
 		]
 	}

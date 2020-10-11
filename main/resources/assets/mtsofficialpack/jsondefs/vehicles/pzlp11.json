@@ -10,6 +10,7 @@
   "general": {
 	"description" : "The PZL P11.c is a born and bred fighter aircraft. Its shoulder wing monoplane configuration provides the pilot with exceptional visibility of the sky and ground, and makes the PZL P11.c much faster than it's biplane fighter counterparts.",
     "type" : "plane",
+		"isAircraft" : true,
 		"openTop" : true,
 		"emptyMass" : 1150,
 		"materials" : ["minecraft:iron_ingot:-1:12", "minecraft:planks:-1:2", "minecraft:glass_pane:-1:2", "minecraft:string:-1:10", "minecraft:dye:2:4", "minecraft:dye:7:2", "minecraft:dye:12:1"]

@@ -39,6 +39,7 @@
 		"aileronArea" : 2.24,
     "rudderArea" : 0.7,
     "elevatorArea" : 2.0,
+		"gearSequenceDuration" : 80,
     "defaultElevatorAngle" : -10.0,
     "fuelCapacity" : 10000,
         "instruments": [
@@ -383,19 +384,52 @@
       "types" : ["ground_wheel"],
 			"minValue" : 0.4,
 			"maxValue" : 0.65,
-			"turnsWithSteer" : true
+			"turnsWithSteer" : true,
+			"animations": [
+				{
+					"animationType": "rotation",
+					"variable": "gear_setpoint",
+					"centerPoint": [0, 0.75625, 0],
+					"axis": [110, 0, 0],
+					"duration": 50,
+					"forwardsDelay": 0,
+					"reverseDelay": 30
+				}
+			]
     },
     {
-      "pos" : [-1.85, -0.45, -0.35],
+      "pos" : [-1.87, -0.45, -0.35],
       "types" : ["ground_wheel"],
 			"minValue" : 0.4,
-			"maxValue" : 0.65
+			"maxValue" : 0.65,
+			"animations": [
+				{
+					"animationType": "rotation",
+					"variable": "gear_setpoint",
+					"centerPoint": [0.02, 0.7, 0],
+					"axis": [0, 0, 87],
+					"duration": 60,
+					"forwardsDelay": 0,
+					"reverseDelay": 20
+				}
+			]
     },
     {
-      "pos" : [1.85, -0.45, -0.35],
+      "pos" : [1.87, -0.45, -0.35],
       "types" : ["ground_wheel"],
 			"minValue" : 0.4,
-			"maxValue" : 0.65
+			"maxValue" : 0.65,
+			"animations": [
+				{
+					"animationType": "rotation",
+					"variable": "gear_setpoint",
+					"centerPoint": [-0.02, 0.7, 0],
+					"axis": [0, 0, -87],
+					"duration": 60,
+					"forwardsDelay": 0,
+					"reverseDelay": 20
+				}
+			]
     },
 				{
       "pos" : [2.5, 0.51, 1.47],
@@ -607,7 +641,7 @@
 		"renderPosition": 0
 		}
 		],
-"animatedObjects":
+	"animatedObjects":
 	[
 	{
 	"objectName": "$Aileron_L",
@@ -678,26 +712,6 @@
 		"variable": "rudder",
 		"centerPoint": [0, 0, -5.25],
 		"axis": [0, 1, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$WheelStrut",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 0, 2.34375],
-		"axis": [0, -1, 0],
 		"offset": 0.0,
 		"addPriorOffset": false,
 		"clampMin": 0.0,
@@ -826,6 +840,155 @@
 		"duration": 10,
 		"forwardsDelay": 0,
 		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearStrutLeftRear",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [1.84375, 0.25, 0],
+			"axis": [0, 0, -87],
+			"duration": 60,
+			"forwardsDelay": 0,
+			"reverseDelay": 20
+		}
+		]
+	},
+	{
+	"objectName": "$GearStrutRightRear",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-1.84375, 0.25, 0],
+			"axis": [0, 0, 87],
+			"duration": 60,
+			"forwardsDelay": 0,
+			"reverseDelay": 20
+		}
+		]
+	},
+	{
+	"objectName": "$GearStrutFront",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0, 0.15625, 2.34375],
+			"axis": [110, 0, 0],
+			"duration": 50,
+			"forwardsDelay": 0,
+			"reverseDelay": 30
+		},
+		{
+		"animationType": "rotation",
+		"variable": "rudder",
+		"centerPoint": [0, 0, 2.34375],
+		"axis": [0, -1, 0],
+		"offset": 0.0,
+		"addPriorOffset": false,
+		"clampMin": 0.0,
+		"clampMax": 0.0,
+		"absolute": false,
+		"duration": 0,
+		"forwardsDelay": 0,
+		"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorLeftRear",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [1.96875, 0.15625, 0],
+			"axis": [0, 0, -87],
+			"duration": 60,
+			"forwardsDelay": 0,
+			"reverseDelay": 20
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorRightRear",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-1.96875, 0.15625, 0],
+			"axis": [0, 0, 87],
+			"duration": 60,
+			"forwardsDelay": 0,
+			"reverseDelay": 20
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorLeftFront1",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0.25, 0.0, 0],
+			"axis": [0, 0, -90],
+			"duration": 30,
+			"forwardsDelay": 50,
+			"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorLeftFront2",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [0.25, 0.0625, 0],
+			"axis": [0, 0, -90],
+			"duration": 30,
+			"forwardsDelay": 50,
+			"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorRightFront1",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-0.25, 0.0, 0],
+			"axis": [0, 0, 90],
+			"duration": 30,
+			"forwardsDelay": 50,
+			"reverseDelay": 0
+		}
+		]
+	},
+	{
+	"objectName": "$GearDoorRightFront2",
+	"animations":
+		[
+		{
+			"animationType": "rotation",
+			"variable": "gear_setpoint",
+			"centerPoint": [-0.25, 0.0625, 0],
+			"axis": [0, 0, 90],
+			"duration": 30,
+			"forwardsDelay": 50,
+			"reverseDelay": 0
 		}
 		]
 	}
