@@ -4,13 +4,15 @@
         "type" : "sign",
         "modelName" : "sign",
         "materials" : ["minecraft:iron_ingot:0:1"],
-		"textObject" : [
-			{
-				"pos" : [0.0, 0.45, 0.0],
-				"scale" : 0.65,
-                "maxLength": 3,
-				"color" : "0x000000"
-			}
+				"textObjects" : [
+        {
+					"fieldName" : "text",
+					"pos" : [0.0, 0.45, 0.001],
+					"rot" : [0.0, 0.0, 0.0],
+	   			"scale" : 0.65,
+          "maxLength": 3,
+	   			"color" : "0x000000"
+	   		}
 		]
 	}
 }
