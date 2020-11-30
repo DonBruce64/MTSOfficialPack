@@ -1,0 +1,22 @@
+{
+	"definitions": [
+        {
+            "subName": "_standard",
+            "name": "Beacon (With Tower)",
+            "extraMaterials": []
+        },
+        {
+            "subName": "_inverted",
+            "name": "Beacon (With Tower)",
+            "extraMaterials": []
+        }
+	],       
+	
+	"general": {
+		"type" : "beacon",
+		"width" : 1.0,
+		"height" : 1.0,
+		"depth" : 1.0,
+		"materials" : ["mts:mtsofficialpack.beacon_top:0:1", "minecraft:iron_bars:0:16", "minecraft:dye:1:4", "minecraft:dye:15:4"]
+	}
+}
