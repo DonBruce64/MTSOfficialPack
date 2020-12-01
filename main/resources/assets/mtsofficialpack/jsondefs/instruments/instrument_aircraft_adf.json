@@ -25,7 +25,7 @@
 			"textureYCenter" : 192,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
-			"rotationVariable" : "beacon_bearing",
+			"rotationVariable" : "beacon_direction",
 			"rotationFactor" : 1.0
 		},
 		{
