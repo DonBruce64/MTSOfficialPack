@@ -1,8 +1,8 @@
 {
   "general": {
 	"name" : "ADF Indicator",
-	"description" : "Indicates heading and beacon direction.",
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:3", "minecraft:dye:11:1"]
+	"description" : "Indicates beacon direction.",
+		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:11:1"]
   },
 	
 	"components" : [
@@ -13,16 +13,8 @@
 			"textureHeight" : 128
 		},
 		{
-			"textureXCenter" : 320,
-			"textureYCenter" : 192,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "yaw",
-			"rotationFactor" : 1.0
-		},
-		{
-			"textureXCenter" : 832,
-			"textureYCenter" : 192,
+			"textureXCenter" : 192,
+			"textureYCenter" : 576,
 			"textureWidth" : 128,
 			"textureHeight" : 128,
 			"rotationVariable" : "beacon_direction",

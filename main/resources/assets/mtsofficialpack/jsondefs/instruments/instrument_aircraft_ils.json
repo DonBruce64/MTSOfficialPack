@@ -7,30 +7,30 @@
 	
 	"components" : [
 		{
-			"textureXCenter" : 192,
+			"textureXCenter" : 320,
 			"textureYCenter" : 576,
 			"textureWidth" : 128,
 			"textureHeight" : 128
 		},
 		{
-			"textureXCenter" : 320,
+			"textureXCenter" : 448,
 			"textureYCenter" : 576,
 			"textureWidth" : 4,
 			"textureHeight" : 128,
 			"translationVariable" : "beacon_bearing_delta",
-			"translationFactor" : 4,
+			"translationFactor" : -4,
 			"translationClampMin" : -47,
 			"translationClampMax" : 47,
 			"translateHorizontal" : true,
 			"moveComponent" : true
 		},
 		{
-			"textureXCenter" : 448,
+			"textureXCenter" : 576,
 			"textureYCenter" : 576,
 			"textureWidth" : 128,
 			"textureHeight" : 4,
 			"translationVariable" : "beacon_glideslope_delta",
-			"translationFactor" : 4,
+			"translationFactor" : -4,
 			"translationClampMin" : -47,
 			"translationClampMax" : 47,
 			"moveComponent" : true
