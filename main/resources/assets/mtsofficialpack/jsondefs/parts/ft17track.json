@@ -1,0 +1,16 @@
+{
+  "general": {
+    "name": "Renualt FT track",
+    "type": "ground_tread",
+    "materials": [ "minecraft:iron_ingot:0:5" ]
+  },
+	
+	"ground" : {
+		"isTread" : true,
+		"width" : 0.4,
+		"height" : 0.4,
+		"motiveFriction" : 1.0,
+		"lateralFriction" : 1.0,
+		"spacing" : 0.13
+	}
+}

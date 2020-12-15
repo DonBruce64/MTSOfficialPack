@@ -1,0 +1,12 @@
+{
+  "general": {
+    "name": "37mm Solid Shot",
+    "type": "bullet",
+    "materials": [ "minecraft:iron_nugget:0:3"]
+  },
+  "bullet": {
+    "type": "normal",
+    "diameter": 37,
+    "quantity": 1
+  }
+}

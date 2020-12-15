@@ -1,0 +1,12 @@
+{
+  "general": {
+    "name": "37mm HE Shell",
+    "type": "bullet",
+    "materials": [ "minecraft:iron_nugget:0:3", "minecraft:gunpowder:0:1" ]
+  },
+  "bullet": {
+    "type": "explosive",
+    "diameter": 37,
+    "quantity": 1
+  }
+}

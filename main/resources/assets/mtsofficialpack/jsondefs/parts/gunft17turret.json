@@ -1,0 +1,89 @@
+{
+  "general": {
+    "name": "Renualt FT 37mm Turret",
+    "type": "gun_turret",
+    "materials": [ "minecraft:iron_ingot:0:5", "minecraft:lever:-1:1" ],
+    "useVehicleTexture": true
+  },
+
+  "gun": {
+    "isTurret": true,
+    "capacity": 1,
+    "fireDelay": 20,
+    "reloadTime": 80,
+    "muzzleVelocity": 600,
+    "minPitch": -10.0,
+    "maxPitch": 20.0,
+		"minYaw": -180.0,
+    "maxYaw": 180.0,
+    "diameter": 37.0,
+    "length": 0.41
+  },
+	"subParts": [
+    {
+      "pos": [0.0,-0.47,-0.12],
+      "types": ["seat"],
+			"linkedDoors": ["turretHatch"]
+    }
+  ],
+	"doors": [
+    {
+      "name": "turretHatch",
+      "closedPos": [0.0,0.0,-0.75],
+      "openPos": [0.0,0.0,-1.5],
+      "width": 0.5,
+      "height": 0.5,
+      "activateOnSeated": true
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$turretleftdoor",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "turretHatch",
+            "centerPoint": [0.500923,0.059509,-0.315482],
+            "axis": [33.522,-123.5358,-13.8852],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$turretrightdoor",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "turretHatch",
+            "centerPoint": [-0.131126,0.059509,-0.577286],
+            "axis": [13.8852,123.5358,33.522],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$recoilpiston",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [0.0,-0.00195,0.65045],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$barrel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [0.0,-0.00195,0.65045],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,184 @@
+ {
+  "definitions": [
+    {
+      "name": "Olive Renualt FT",
+      "subName": "_olive",
+      "extraMaterials": [ "minecraft:dye:2:3" ]
+    },
+    {
+      "name": "Blue Renualt FT",
+      "subName": "_blue",
+      "extraMaterials": [ "minecraft:dye:12:3" ]
+    }
+  ],
+	
+  "general": {
+		"description" : "The Renault FT (frequently referred to in post-World War I literature as the FT-17, FT17, or similar) was a French light tank that was among the most revolutionary and influential tank designs in history.  Although hoplessly outclassed by modern tanks, the FT17 is still a formidable threat against infantry and lightly-armored vehicles.",
+    "type" : "car",
+		"openTop" : false,
+		"emptyMass" : 5000,
+		"materials" : ["minecraft:iron_ingot:0:18"]
+  },
+
+  "motorized" : {
+    "fuelCapacity" : 15000,
+    "isFrontWheelDrive" : true,
+		"isRearWheelDrive" : true,
+		"axleRatio" : 3.55,
+    "dragCoefficient" : 0.6,
+		"instruments" : []
+  },
+
+  "parts": [
+    {
+      "pos": [0.850915,-0.2,-1.0],
+      "types": ["ground_tread"],
+      "minValue": 0.3,
+      "maxValue": 0.7,
+      "extraCollisionBoxOffset": 3.75,
+			"turnsWithSteer" : true
+    },
+    {
+      "pos": [-0.850915,-0.2,-1.0],
+      "types": ["ground_tread"],
+      "minValue": 0.3,
+      "maxValue": 0.7,
+      "extraCollisionBoxOffset": 3.75,
+			"turnsWithSteer" : true
+    },
+    {
+      "pos": [ 0, 1.54636, 1.10717 ],
+      "types": ["gun_turret"],
+      "minValue": 7,
+      "maxValue": 40
+    },
+    {
+      "pos": [0.0,0.25,1.5],
+      "isController": true,
+      "types": ["seat"],
+			"linkedDoors": ["mainHatch"]
+    },
+    {
+      "pos": [ 0, 0.3, -1 ],
+      "types": ["engine_car"],
+      "minValue": 0.0,
+      "maxValue": 1.25,
+			"exhaustObjects": [
+				{
+				"pos": [-0.684649, 0.964062, -1.21544],
+				"velocity": [0, 0, -1.0],
+				"scale": 2.0
+				}
+			]
+    }
+  ],
+
+  "collision": [
+		{
+      "pos": [0.0,1.0,0.0],
+      "width": 1.5,
+      "height": 1.0
+    }
+  ],
+  "doors": [
+    {
+      "name": "mainHatch",
+      "closedPos": [0.0,0.75,2.2],
+      "openPos": [0.0,1.5,2.75],
+      "width": 1.0,
+      "height": 0.25,
+      "activateOnSeated": true
+    }
+	],
+  "rendering": {
+    "textObjects": [],
+    "animatedObjects": [
+      {
+        "objectName": "$left_door",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "mainHatch",
+            "centerPoint": [0.406563,0.769703,2.35042],
+            "axis": [21.4764,37.9632,-102.144],
+						"duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$right_door",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "mainHatch",
+            "centerPoint": [-0.406563,0.769703,2.35042],
+            "axis": [21.4764,-37.9632,102.144],
+						"duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$center_door",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "mainHatch",
+            "centerPoint": [0.0,1.29637,1.73739],
+            "axis": [-90.0,0.0,0.0],
+						"duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$left_hood",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_present_1",
+						"offset" : -72.793,
+            "centerPoint": [0.3033,1.39617,-0.67974],
+            "axis": [-72.793,0,0.0]
+          },
+					{
+            "animationType": "rotation",
+            "variable": "engine_present_1",
+						"offset" : -23.952,
+            "centerPoint": [0.3033,1.39617,-0.67974],
+            "axis": [0,23.952,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$right_hood",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_present_1",
+						"offset" : -72.793,
+            "centerPoint": [-0.3033,1.39617,-0.67974],
+            "axis": [-72.793,0,0.0]
+          },
+					{
+            "animationType": "rotation",
+            "variable": "engine_present_1",
+						"offset" : -23.952,
+            "centerPoint": [-0.3033,1.39617,-0.67974],
+            "axis": [0,-23.952,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$center_hood",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_present_1",
+						"offset" : -100,
+            "centerPoint": [0.0,1.496,-0.696386],
+            "axis": [-100.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
+	}
+}
