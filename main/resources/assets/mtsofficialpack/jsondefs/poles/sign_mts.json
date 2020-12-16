@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name" : "MTS (AKA Free Product Placement)",
+        "type" : "sign",
+        "modelName" : "sign",
+        "materials" : ["minecraft:iron_ingot:0:1"]
+	   	
+	}
+}
