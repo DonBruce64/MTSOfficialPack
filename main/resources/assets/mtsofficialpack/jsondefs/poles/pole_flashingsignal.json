@@ -1,0 +1,7 @@
+{
+    "general": {
+        "name" : "Flashing Signal",
+		"type" : "traffic_signal",
+		"materials" : ["minecraft:dye:1:1", "minecraft:glowstone_dust:0:3", "minecraft:stone_slab:0:1"]
+	}
+}
