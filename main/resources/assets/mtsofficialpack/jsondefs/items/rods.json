@@ -1,6 +1,12 @@
 {
   "general": {
 	"name" : "Rods",
-	"materials" : ["minecraft:bread:-1:1", "minecraft:dye:4:1"]
-  }
+	"materials" : ["minecraft:bread:-1:1", "minecraft:dye:4:1"],
+	"type" : "food"
+  },
+	"food":{
+		"timeToEat": 20,
+		"hungerAmount": 5,
+		"saturationAmount": 0.6
+	}
 }
