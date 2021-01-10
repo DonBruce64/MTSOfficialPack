@@ -6,6 +6,7 @@
     },
 	"interactable" : {
         "interactionType": "crate",
+				"feedsVehicles" : true,
 		"inventoryUnits" : 1
 	}
 }

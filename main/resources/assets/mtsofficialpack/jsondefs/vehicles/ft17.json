@@ -56,7 +56,31 @@
       "pos": [0.0,0.25,1.5],
       "isController": true,
       "types": ["seat"],
-			"linkedDoors": ["mainHatch"]
+			"linkedDoors": ["mainHatch"],
+			 "animations": [
+        {
+          "animationType": "translation",
+          "variable": "TURRET",
+          "axis": [0.0,0.875,-0.39283],
+          "duration": 10
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "TURRET"
+        },
+        {
+          "animationType": "rotation",
+          "variable": "gun_yaw_1",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,1.0,0.0]
+        }
+      ]
+    },
+		{
+      "pos": [0.0,0.25,0.5],
+      "types": ["interactable_crate"],
+			"minValue": 0,
+      "maxValue": 2
     },
     {
       "pos": [ 0, 0.3, -1 ],
@@ -91,6 +115,7 @@
     }
 	],
   "rendering": {
+		"customVariables": ["TURRET"],
     "textObjects": [],
     "animatedObjects": [
       {
@@ -134,17 +159,19 @@
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "engine_present_1",
+            "variable": "part_present_6",
 						"offset" : -72.793,
             "centerPoint": [0.3033,1.39617,-0.67974],
-            "axis": [-72.793,0,0.0]
+            "axis": [-72.793,0,0.0],
+						"duration": 10
           },
 					{
             "animationType": "rotation",
-            "variable": "engine_present_1",
+            "variable": "part_present_6",
 						"offset" : -23.952,
             "centerPoint": [0.3033,1.39617,-0.67974],
-            "axis": [0,23.952,0.0]
+            "axis": [0,23.952,0.0],
+						"duration": 10
           }
         ]
       },
@@ -153,17 +180,19 @@
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "engine_present_1",
+            "variable": "part_present_6",
 						"offset" : -72.793,
             "centerPoint": [-0.3033,1.39617,-0.67974],
-            "axis": [-72.793,0,0.0]
+            "axis": [-72.793,0,0.0],
+						"duration": 10
           },
 					{
             "animationType": "rotation",
-            "variable": "engine_present_1",
+            "variable": "part_present_6",
 						"offset" : -23.952,
             "centerPoint": [-0.3033,1.39617,-0.67974],
-            "axis": [0,-23.952,0.0]
+            "axis": [0,-23.952,0.0],
+						"duration": 10
           }
         ]
       },
@@ -172,10 +201,11 @@
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "engine_present_1",
+            "variable": "part_present_6",
 						"offset" : -100,
             "centerPoint": [0.0,1.496,-0.696386],
-            "axis": [-100.0,0.0,0.0]
+            "axis": [-100.0,0.0,0.0],
+						"duration": 10
           }
         ]
       }

@@ -7,7 +7,7 @@
   },
 
   "gun": {
-    "isTurret": true,
+		"autoReload": true,
     "capacity": 1,
     "fireDelay": 20,
     "reloadTime": 80,
@@ -19,31 +19,26 @@
     "diameter": 37.0,
     "length": 0.41
   },
-	"subParts": [
-    {
-      "pos": [0.0,-0.47,-0.12],
-      "types": ["seat"],
-			"linkedDoors": ["turretHatch"]
-    }
-  ],
-	"doors": [
-    {
-      "name": "turretHatch",
-      "closedPos": [0.0,0.0,-0.75],
-      "openPos": [0.0,0.0,-1.5],
-      "width": 0.5,
-      "height": 0.5,
-      "activateOnSeated": true
-    }
-  ],
   "rendering": {
     "animatedObjects": [
       {
-        "objectName": "$turretleftdoor",
+        "objectName": "turret",
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "turretHatch",
+            "variable": "gun_yaw",
+            "centerPoint": [0.0, 0.0, 0.0],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+			{
+        "objectName": "$turretleftdoor",
+				"applyAfter": "turret",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "mainHatch",
             "centerPoint": [0.500923,0.059509,-0.315482],
             "axis": [33.522,-123.5358,-13.8852],
             "duration": 10
@@ -52,10 +47,11 @@
       },
       {
         "objectName": "$turretrightdoor",
+				"applyAfter": "turret",
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "turretHatch",
+            "variable": "mainHatch",
             "centerPoint": [-0.131126,0.059509,-0.577286],
             "axis": [13.8852,123.5358,33.522],
             "duration": 10
@@ -64,6 +60,7 @@
       },
       {
         "objectName": "$recoilpiston",
+				"applyAfter": "turret",
         "animations": [
           {
             "animationType": "rotation",
@@ -75,6 +72,7 @@
       },
       {
         "objectName": "$barrel",
+				"applyAfter": "turret",
         "animations": [
           {
             "animationType": "rotation",
