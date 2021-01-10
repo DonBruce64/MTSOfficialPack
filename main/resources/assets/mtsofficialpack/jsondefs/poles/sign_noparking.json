@@ -3,6 +3,6 @@
         "name" : "No Parking",
         "type" : "sign",
         "modelName" : "sign",
-        "materials" : ["minecraft:iron_ingot:0:1"]
+        "materials" : ["oredict:ingotIron:1"]
 	}
 }

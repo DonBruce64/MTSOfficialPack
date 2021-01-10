@@ -2,7 +2,7 @@
     "general": {
         "name" : "Landing Skid",
         "type" : "ground_skid",
-		"materials" : ["minecraft:dye:2:1", "minecraft:iron_ingot:0:1"]
+		"materials" : ["oredict:dyeGreen:1", "oredict:ingotIron:1"]
     },
 	"ground" : {
     "height": 0.25,

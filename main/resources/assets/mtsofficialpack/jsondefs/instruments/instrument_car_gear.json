@@ -2,7 +2,7 @@
   "general": {
 	"name" : "Gear Indicator",
 	"description" : "Indicates current gear.",
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:1:1", "minecraft:dye:4:1", "minecraft:dye:15:4"]
+		"materials" : ["oredict:ingotIron:1", "oredict:dyeRed:1", "oredict:dyeBlue:1", "oredict:dyeWhite:4"]
   },
 	
 	"components" : [

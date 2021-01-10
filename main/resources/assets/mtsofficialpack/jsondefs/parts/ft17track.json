@@ -2,7 +2,7 @@
   "general": {
     "name": "Renualt FT track",
     "type": "ground_tread",
-    "materials": [ "minecraft:iron_ingot:0:5" ]
+    "materials": [ "oredict:ingotIron:5" ]
   },
 	
 	"ground" : {

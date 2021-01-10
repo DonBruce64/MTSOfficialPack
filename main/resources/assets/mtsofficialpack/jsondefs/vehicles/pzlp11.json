@@ -13,7 +13,7 @@
 		"isAircraft" : true,
 		"openTop" : true,
 		"emptyMass" : 1150,
-		"materials" : ["minecraft:iron_ingot:-1:12", "minecraft:planks:-1:2", "minecraft:glass_pane:-1:2", "minecraft:string:-1:10", "minecraft:dye:2:4", "minecraft:dye:7:2", "minecraft:dye:12:1"]
+		"materials" : ["oredict:ingotIron:12", "oredict:plankWood:2", "minecraft:glass_pane:0:2", "oredict:string:10", "oredict:dyeGreen:4", "oredict:dyeLightGray:2", "oredict:dyeLightBlue:1"]
   },
 
   "motorized" : {

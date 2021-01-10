@@ -3,12 +3,12 @@
     {
       "name": "Olive Renualt FT",
       "subName": "_olive",
-      "extraMaterials": [ "minecraft:dye:2:3" ]
+      "extraMaterials": [ "oredict:dyeGreen:3" ]
     },
     {
       "name": "Blue Renualt FT",
       "subName": "_blue",
-      "extraMaterials": [ "minecraft:dye:12:3" ]
+      "extraMaterials": [ "oredict:dyeLightBlue:3" ]
     }
   ],
 	
@@ -17,7 +17,7 @@
     "type" : "car",
 		"openTop" : false,
 		"emptyMass" : 5000,
-		"materials" : ["minecraft:iron_ingot:0:18"]
+		"materials" : ["oredict:ingotIron:18"]
   },
 
   "motorized" : {

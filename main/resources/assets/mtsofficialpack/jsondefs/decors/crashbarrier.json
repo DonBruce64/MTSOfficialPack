@@ -5,6 +5,6 @@
 		"height" : 0.84375,
 		"depth" : 0.5625,
 		"oriented" : true,
-		"materials" : ["minecraft:cobblestone_wall:-1:2"]
+		"materials" : ["minecraft:cobblestone_wall:0:2"]
 	}
 }

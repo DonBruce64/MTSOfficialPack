@@ -2,7 +2,7 @@
     "general": {
         "name" : "Small Wheel",
         "type" : "ground_wheel",
-		"materials" : ["minecraft:dye:0:1", "minecraft:iron_ingot:0:1", "minecraft:wool:15:1"]
+		"materials" : ["oredict:dyeBlack:1", "oredict:ingotIron:1", "minecraft:wool:15:1"]
     },
 	"ground" : {
     "isWheel": true,

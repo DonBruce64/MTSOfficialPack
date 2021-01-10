@@ -2,7 +2,7 @@
     "general": {
         "name" : "Generic Seat",
         "type" : "seat",
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:string:-1:2"]
+		"materials" : ["oredict:ingotIron:1", "oredict:string:2"]
     },
     "definitions": [
         {

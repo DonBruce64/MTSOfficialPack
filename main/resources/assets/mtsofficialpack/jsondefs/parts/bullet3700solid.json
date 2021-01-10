@@ -2,7 +2,7 @@
   "general": {
     "name": "37mm Solid Shot",
     "type": "bullet",
-    "materials": [ "minecraft:iron_nugget:0:3"]
+    "materials": [ "oredict:nuggetIron:3", "oredict:gunpowder:1"]
   },
   "bullet": {
     "type": "normal",

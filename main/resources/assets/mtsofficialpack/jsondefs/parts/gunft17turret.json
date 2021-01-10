@@ -2,7 +2,7 @@
   "general": {
     "name": "Renualt FT 37mm Turret",
     "type": "gun_turret",
-    "materials": [ "minecraft:iron_ingot:0:5", "minecraft:lever:-1:1" ],
+    "materials": [ "oredict:ingotIron:5", "minecraft:lever:0:1" ],
     "useVehicleTexture": true
   },
 

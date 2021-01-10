@@ -2,7 +2,7 @@
     "general": {
         "name" : "Small 2-Bladed Propeller",
         "type" : "propeller",
-		"materials" : ["minecraft:planks:-1:3"]
+		"materials" : ["oredict:plankWood:3"]
     },
 	"propeller" : {
 		"pitch" : 55,

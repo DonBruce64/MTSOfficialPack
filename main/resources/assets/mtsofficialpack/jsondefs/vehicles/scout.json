@@ -3,27 +3,27 @@
 		{
 		"name" : "Blue Scout",
 			"subName" : "_blue",
-			"extraMaterials" : ["minecraft:dye:12:3"]
+			"extraMaterials" : ["oredict:dyeLightBlue:3"]
 		},
 		{
 		"name" : "Orange Scout",
 			"subName" : "_orange",
-			"extraMaterials" : ["minecraft:dye:14:3"]
+			"extraMaterials" : ["oredict:dyeOrange:3"]
 		},
 		{
 		"name" : "Patriotic Scout",
 			"subName" : "_patriot",
-			"extraMaterials" : ["minecraft:dye:4:1","minecraft:dye:1:1","minecraft:dye:15:1"]
+			"extraMaterials" : ["oredict:dyeBlue:1","oredict:dyeRed:1","oredict:dyeWhite:1"]
 		},
 		{
 		"name" : "Red Scout",
 			"subName" : "_red",
-			"extraMaterials" : ["minecraft:dye:1:3"]
+			"extraMaterials" : ["oredict:dyeRed:3"]
 		},
 		{
 		"name" : "Yellow Scout",
 			"subName" : "_yellow",
-			"extraMaterials" : ["minecraft:dye:11:3"]
+			"extraMaterials" : ["oredict:dyeYellow:3"]
 		}
 
 	],
@@ -33,7 +33,7 @@
     "type" : "car",
 		"openTop" : false,
 		"emptyMass" : 1637,
-		"materials" : ["minecraft:iron_ingot:0:18"]
+		"materials" : ["oredict:ingotIron:18"]
   },
 
   "motorized" : {

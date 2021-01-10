@@ -2,7 +2,7 @@
   "general": {
 	"name" : "Oil Presure Gauge (PSI)",
 	"description" : "Indicates oil pressure.",
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:8:2", "minecraft:dye:15:2", "minecraft:dye:1:2"]
+		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:1", "oredict:dyeGray:2", "oredict:dyeWhite:2", "oredict:dyeRed:2"]
   },
 	
 	"components" : [

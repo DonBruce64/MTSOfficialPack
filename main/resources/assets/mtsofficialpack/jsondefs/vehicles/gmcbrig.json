@@ -3,32 +3,32 @@
 		{
 		"name" : "Black GMC Brigadier",
 		  "subName" : "_black",
-		  "extraMaterials" : ["minecraft:dye:0:2"]
+		  "extraMaterials" : ["oredict:dyeBlack:2"]
 	  },
 		{
 		"name" : "Blue GMC Brigadier",
 		  "subName" : "_blue",
-		  "extraMaterials" : ["minecraft:dye:12:2"]
+		  "extraMaterials" : ["oredict:dyeLightBlue:2"]
 	  },
 	  {
 		"name" : "Green GMC Brigadier",
 		  "subName" : "_green",
-		  "extraMaterials" : ["minecraft:dye:2:2"]
+		  "extraMaterials" : ["oredict:dyeGreen:2"]
 	  },
 		{
 		"name" : "Red GMC Brigadier",
 		  "subName" : "_red",
-		  "extraMaterials" : ["minecraft:dye:1:2"]
+		  "extraMaterials" : ["oredict:dyeRed:2"]
 	  },
 	  {
 		"name" : "White GMC Brigadier",
 		  "subName" : "_white",
-		  "extraMaterials" : ["minecraft:dye:15:2"]
+		  "extraMaterials" : ["oredict:dyeWhite:2"]
 	  },
 	  {
 		"name" : "Yellow GMC Brigadier",
 		  "subName" : "_yellow",
-		  "extraMaterials" : ["minecraft:dye:11:2"]
+		  "extraMaterials" : ["oredict:dyeYellow:2"]
 	  }
 	],
 	
@@ -37,7 +37,7 @@
     "type" : "car",
 	"openTop" : false,
 	"emptyMass" : 8165,
-	"materials" : ["minecraft:iron_ingot:-1:7", "minecraft:iron_bars:-1:6", "minecraft:iron_trapdoor:-1:2", "minecraft:glass_pane:-1:5"]
+	"materials" : ["oredict:ingotIron:7", "minecraft:iron_bars:0:6", "minecraft:iron_trapdoor:0:2", "minecraft:glass_pane:0:5"]
   },
 
   "motorized" : {

@@ -1,7 +1,7 @@
 {
   "general": {
 	"name" : "Nuts",
-	"materials" : ["minecraft:pumpkin_seeds:-1:1", "minecraft:dye:1:1"],
+	"materials" : ["minecraft:pumpkin_seeds:0:1", "oredict:dyeRed:1"],
 	"type" : "food"
   },
 	"food":{

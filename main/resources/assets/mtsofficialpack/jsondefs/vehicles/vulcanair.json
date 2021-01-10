@@ -3,37 +3,37 @@
 		{
 		"name" : "White Vulcanair",
 			"subName" : "_white",
-			"extraMaterials" : ["minecraft:dye:15:4"]
+			"extraMaterials" : ["oredict:dyeWhite:4"]
 		},
 		{
 		"name" : "Green Vulcanair",
 			"subName" : "_green",
-			"extraMaterials" : ["minecraft:dye:10:3", "minecraft:dye:2:1"]
+			"extraMaterials" : ["oredict:dyeLime:3", "oredict:dyeGreen:1"]
 		},
 		{
 		"name" : "Blue Vulcanair",
 			"subName" : "_blue",
-			"extraMaterials" : ["minecraft:dye:4:4"]
+			"extraMaterials" : ["oredict:dyeBlue:4"]
 		},
 		{
 		"name" : "Black Vulcanair",
 			"subName" : "_black",
-			"extraMaterials" : ["minecraft:dye:0:4"]
+			"extraMaterials" : ["oredict:dyeBlack:4"]
 		},
 		{
 		"name" : "Red Vulcanair",
 			"subName" : "_red",
-			"extraMaterials" : ["minecraft:dye:1:4"]
+			"extraMaterials" : ["oredict:dyeRed:4"]
 		},
 		{
 		"name" : "Dark Red Vulcanair",
 			"subName" : "_dark_red",
-			"extraMaterials" : ["minecraft:dye:1:2", "minecraft:dye:0:2"]
+			"extraMaterials" : ["oredict:dyeRed:2", "oredict:dyeBlack:2"]
 		},
 		{
 		"name" : "White-Orange Vulcanair",
 			"subName" : "_white_orange",
-			"extraMaterials" : ["minecraft:dye:15:3", "minecraft:dye:14:1"]
+			"extraMaterials" : ["oredict:dyeWhite:3", "oredict:dyeOrange:1"]
 		}
 	],
 
@@ -42,7 +42,7 @@
     "type" : "plane",
 		"openTop" : false,
 		"emptyMass" : 1230,
-		"materials" : ["minecraft:iron_trapdoor:-1:5", "minecraft:iron_ingot:-1:25", "minecraft:redstone:-1:9", "minecraft:redstone_lamp:-1:2", "minecraft:glass_pane:-1:5"]
+		"materials" : ["minecraft:iron_trapdoor:-1:5", "oredict:ingotIron:25", "oredict:dustRedstone:9", "minecraft:redstone_lamp:-1:2", "minecraft:glass_pane:0:5"]
   },
 
   "motorized" : {

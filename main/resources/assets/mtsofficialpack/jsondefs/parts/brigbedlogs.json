@@ -3,7 +3,7 @@
         "name" : "Brigadier Logging Bed",
         "type" : "custom",
         "customType" : "brigbed",
-        "materials" : ["minecraft:planks:-1:5", "minecraft:iron_bars:-1:3", "minecraft:log:1:3"]
+        "materials" : ["oredict:plankWood:5", "minecraft:iron_bars:0:3", "oredict:logWood:3"]
     },
     "custom": {
         "width" : 2.75,

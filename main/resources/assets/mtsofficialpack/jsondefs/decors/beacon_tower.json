@@ -17,6 +17,6 @@
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"materials" : ["mts:mtsofficialpack.beacon_top:0:1", "minecraft:iron_bars:0:16", "minecraft:dye:1:4", "minecraft:dye:15:4"]
+		"materials" : ["mts:mtsofficialpack.beacon_top:0:1", "minecraft:iron_bars:0:16", "oredict:dyeRed:4", "oredict:dyeWhite:4"]
 	}
 }

@@ -2,6 +2,6 @@
     "general": {
         "name" : "Flashing Yellow Signal",
 		"type" : "traffic_signal",
-		"materials" : ["minecraft:dye:11:1", "minecraft:glowstone_dust:0:3", "minecraft:stone_slab:0:1"]
+		"materials" : ["oredict:dyeYellow:1", "oredict:dustGlowstone:3", "minecraft:stone_slab:0:1"]
 	}
 }

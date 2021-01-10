@@ -2,7 +2,7 @@
     "general": {
         "name" : "Pontoon",
         "type" : "ground_pontoon",
-		"materials" : ["minecraft:iron_ingot:0:3"]
+		"materials" : ["oredict:ingotIron:3"]
     },
 	"ground" : {
     "canFloat": true,

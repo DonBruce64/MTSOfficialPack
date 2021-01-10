@@ -2,7 +2,7 @@
   "general": {
 	"name" : "AMC I4 Tachometer",
 	"description" : "Indicates engine speeds.",
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:1", "minecraft:dye:0:2", "minecraft:dye:15:3", "minecraft:dye:1:2"]
+		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:1", "oredict:dyeBlack:2", "oredict:dyeWhite:3", "oredict:dyeRed:2"]
   },
 	
 	"components" : [

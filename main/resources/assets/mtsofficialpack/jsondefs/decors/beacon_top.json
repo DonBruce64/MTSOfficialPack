@@ -5,6 +5,6 @@
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"materials" : ["minecraft:observer:0:1", "minecraft:compass:0:1", "minecraft:redstone:0:3"]
+		"materials" : ["minecraft:observer:0:1", "minecraft:compass:0:1", "oredict:dustRedstone:3"]
 	}
 }

@@ -3,22 +3,22 @@
 		{
 		"name" : "Blue Eclipse 500",
 			"subName" : "_blue",
-    	"extraMaterials" : ["minecraft:dye:12:5"]
+    	"extraMaterials" : ["oredict:dyeLightBlue:5"]
 		},
 		{
 		"name" : "Green Eclipse 500",
 			"subName" : "_green",
-    	"extraMaterials" : ["minecraft:dye:10:5"]
+    	"extraMaterials" : ["oredict:dyeLime:5"]
 		},
 		{
 		"name" : "Red Eclipse 500",
 			"subName" : "_red",
-    	"extraMaterials" : ["minecraft:dye:1:5"]
+    	"extraMaterials" : ["oredict:dyeRed:5"]
 		},
 		{
 		"name" : "Yellow Eclipse 500",
 			"subName" : "_yellow",
-			"extraMaterials" : ["minecraft:dye:11:5"]
+			"extraMaterials" : ["oredict:dyeYellow:5"]
 		}
 	],
 
@@ -28,7 +28,7 @@
 		"isAircraft" : true,
 		"openTop" : false,
 		"emptyMass" : 1610,
-		"materials" : ["minecraft:iron_bars:1:6", "minecraft:iron_trapdoor:1:8", "minecraft:iron_ingot:1:15", "minecraft:redstone:1:9", "minecraft:comparator:1:1", "minecraft:glass_pane:1:5"]
+		"materials" : ["minecraft:iron_bars:0:6", "minecraft:iron_trapdoor:0:8", "oredict:ingotIron:15", "oredict:dustRedstone:9", "minecraft:comparator:0:1", "minecraft:glass_pane:0:5"]
   },
 
   "motorized" : {

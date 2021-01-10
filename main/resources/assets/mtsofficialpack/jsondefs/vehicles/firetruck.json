@@ -12,7 +12,7 @@
     "type" : "car",
 		"openTop" : false,
 		"emptyMass" : 9725,
-		"materials" : ["minecraft:iron_ingot:0:20", "minecraft:dye:1:5", "minecraft:glass_pane:-1:10", "minecraft:redstone:-1:5"]
+		"materials" : ["oredict:ingotIron:20", "oredict:dyeRed:5", "minecraft:glass_pane:0:10", "oredict:dustRedstone:5"]
   },
 
   "motorized" : {

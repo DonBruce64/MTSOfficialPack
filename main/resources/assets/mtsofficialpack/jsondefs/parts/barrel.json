@@ -2,7 +2,7 @@
     "general": {
         "name" : "Barrel",
         "type" : "interactable_barrel",
-        "materials" : ["minecraft:iron_ingot:-1:5", "minecraft:dye:1:1"]
+        "materials" : ["oredict:ingotIron:5", "oredict:dyeRed:1"]
     },
     "interactable": {
         "interactionType": "barrel",

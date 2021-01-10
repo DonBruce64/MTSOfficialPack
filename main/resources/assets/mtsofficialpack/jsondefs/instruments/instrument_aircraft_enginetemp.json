@@ -2,7 +2,7 @@
   "general": {
 	"name" : "Engine Temperature Gauge",
 	"description" : "Indicates engine temperature.",
-		"materials" : ["minecraft:iron_ingot:0:1", "minecraft:dye:0:3", "minecraft:dye:15:2", "minecraft:dye:10:2", "minecraft:dye:11:1"]
+		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:3", "oredict:dyeWhite:2", "oredict:dyeLime:2", "oredict:dyeYellow:1"]
   },
 	
 	"components" : [

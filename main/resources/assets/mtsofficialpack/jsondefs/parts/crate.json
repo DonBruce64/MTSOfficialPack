@@ -2,7 +2,7 @@
     "general": {
         "name" : "Crate",
         "type" : "interactable_crate",
-		"materials" : ["minecraft:planks:-1:8"]
+		"materials" : ["oredict:plankWood:8"]
     },
 	"interactable" : {
         "interactionType": "crate",
