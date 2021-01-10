@@ -207,8 +207,7 @@
 				}
 				],
 			"minValue" : 0.0,
-			"maxValue" : 1.25,
-		"linkedDoor": "door_hood"
+			"maxValue" : 1.25
     }
   ],
 	
@@ -528,10 +527,10 @@
 		[
 		{
 		"animationType": "rotation",
-		"variable": "door_hood",
+		"variable": "part_present_9",
 		"centerPoint": [0, 0.885389, 2.09134],
-		"axis": [-60, 0, 0],
-		"offset": 0.0,
+		"axis": [60, 0, 0],
+		"offset": -60,
 		"addPriorOffset": false,
 		"clampMin": 0.0,
 		"clampMax": 0.0,
