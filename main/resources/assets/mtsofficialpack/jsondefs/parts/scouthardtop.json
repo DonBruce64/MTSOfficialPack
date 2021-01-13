@@ -1,12 +1,12 @@
 {
     "general": {
         "name" : "Scout Hard-Top",
-        "type" : "custom",
+        "type" : "generic",
         "modelName" : "scoutroof",
         "customType" : "scoutroof",
 		"materials" : ["oredict:ingotIron:4", "minecraft:iron_bars:0:2", "oredict:paper:6"]
     },
-    "custom": {
+    "generic": {
         "width" : 1.5,
         "height" : 0.5
     },

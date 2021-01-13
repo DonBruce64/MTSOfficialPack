@@ -459,14 +459,14 @@
     },
     {
       "pos" : [-0.38, 0.65, -1.375],
-      "types" : ["crate", "seat"],
+      "types" : ["interactable_crate", "seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
 			"dismountPos" : [-1.5, 0, -2.0]
     },
 		 {
       "pos" : [0.38, 0.65, -1.375],
-      "types" : ["crate", "seat"],
+      "types" : ["interactable_crate", "seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
 			"dismountPos" : [-1.5, 0, -2.0]

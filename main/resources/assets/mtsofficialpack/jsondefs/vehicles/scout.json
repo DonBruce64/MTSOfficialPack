@@ -187,12 +187,12 @@
     },
 		{
       "pos" : [0, 0.70651875, -0.43534375],
-      "types" : ["crate"],
+      "types" : ["interactable_crate"],
 			"maxValue" : 5.0
     },
 	{
       "pos" : [0, .93, 0.025],
-      "types" : ["custom"],
+      "types" : ["generic"],
       "customTypes" : [ "scoutroof"]
     },
 		{

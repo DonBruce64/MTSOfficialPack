@@ -1,102 +1,102 @@
 {
     "general": {
         "name" : "Brigadier Stakebed",
-        "type" : "custom",
+        "type" : "generic",
         "customType" : "brigbed",
         "materials" : ["oredict:plankWood:5", "minecraft:iron_bars:0:3"]
     },
-    "custom": {
+    "generic": {
         "width" : 1.5,
         "height" : 0.5
     },
     "subParts" : [
         {
             "pos" : [-0.85, 0.2, 1.49],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
             "minValue" : 0,
             "maxValue" : 3
         },
         {
             "pos" : [-0.85, 0.2, 0.69],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [-0.85, 0.2, -0.91],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [-0.85, 0.2, -0.101],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [-0.85, 0.2, -1.71],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [-0, 0.2, 1.49],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [-0, 0.2, 0.69],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [-0, 0.2, -0.901],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [-0, 0.2, -0.101],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
             "maxValue" : 3
         },
 		{
             "pos" : [-0, 0.2, -1.71],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [0.85, 0.2, 1.49],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [0.85, 0.2, 0.69],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [0.85, 0.2, -0.901],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [0.85, 0.2, -0.101],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
             "pos" : [0.85, 0.2, -1.71],
-            "types" : ["crate", "barrel"],
+            "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         }  

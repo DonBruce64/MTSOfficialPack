@@ -481,41 +481,41 @@
     },
 	{
       "pos" : [0.45, 0.25, 1.35],
-      "types" : ["crate","seat"],
+      "types" : ["interactable_crate","seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
 			"dismountPos" : [2.0, 0, 3.0]
     },
 	{
       "pos" : [-0.45, 0.25, 1.35],
-      "types" : ["crate","seat"],
+      "types" : ["interactable_crate","seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
 			"dismountPos" : [-2.0, 0, 3.0]
     },
 	{
       "pos" : [0.45, 0.25, 0.45],
-      "types" : ["crate","seat"],
+      "types" : ["interactable_crate","seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
 			"dismountPos" : [2.0, 0, 3.0]
     },
 	{
       "pos" : [-0.45, 0.25, 0.45],
-      "types" : ["crate","seat"],
+      "types" : ["interactable_crate","seat"],
 			"minValue" : 0,
 			"maxValue" : 3,
 			"dismountPos" : [-2.0, 0, 3.0]
     },
 	{
       "pos" : [0.45, 0.25, -0.35],
-      "types" : ["crate"],
+      "types" : ["interactable_crate"],
 			"minValue" : 0,
 			"maxValue" : 3
     },
 	{
       "pos" : [-0.45, 0.25, -0.35],
-      "types" : ["crate"],
+      "types" : ["interactable_crate"],
 			"minValue" : 0,
 			"maxValue" : 3
     }

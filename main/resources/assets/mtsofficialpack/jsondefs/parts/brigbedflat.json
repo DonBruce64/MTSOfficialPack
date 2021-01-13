@@ -1,11 +1,11 @@
 {
     "general": {
         "name" : "Brigadier Flatbed",
-        "type" : "custom",
+        "type" : "generic",
         "customType" : "brigbed",
         "materials" : ["oredict:plankWood:3", "minecraft:iron_bars:0:1"]
     },
-    "custom": {
+    "generic": {
         "width" : 2.75,
         "height" : 2.46875
     }
