@@ -130,6 +130,15 @@
           "quantity": 1
         }
       ]
+    },
+		{
+      "pos": [0.0,0.158826,-1.06591],
+      "types": ["generic_bumpersticker"]
+    },
+		{
+      "pos": [-0.655047,0.158826,-1.06591],
+      "types": ["generic_bumpersticker"],
+			"defaultPart": "mtsofficialpack:bumpersticker_roostair"
     }
   ],
   "collision": [

@@ -1,0 +1,20 @@
+{
+  "generic": {
+    "type": "generic_bumpersticker",
+    "disableMirroring": true,
+    "width": 0.125,
+    "height": 0.125
+  },
+  "definitions": [
+    {
+      "subName": "_roostair",
+      "name": "Roost Air Bumper Sticker",
+      "description": "Semi-Reliable Air Charter",
+      "extraMaterials": ["oredict:dyeYellow:1"]
+    }
+  ],
+  "general": {
+    "stackSize": 4,
+    "materials": ["minecraft:paper:0:1"]
+  }
+}
