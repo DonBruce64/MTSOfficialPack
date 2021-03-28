@@ -1,484 +1,336 @@
 {
-  "definitions" : [
-		{
-		"name" : "Oak MC-172",
-			"subName" : "_oak",
-    	"extraMaterials" : ["minecraft:wooden_slab:0:10", "minecraft:planks:0:10"]
-		},
-		{
-		"name" : "Spruce MC-172",
-			"subName" : "_spruce",
-    	"extraMaterials" : ["minecraft:wooden_slab:1:10", "minecraft:planks:1:10"]
-		},
-		{
-		"name" : "Birch MC-172",
-			"subName" : "_birch",
-    	"extraMaterials" : ["minecraft:wooden_slab:2:10", "minecraft:planks:2:10"]
-		},
-		{
-		"name" : "Jungle MC-172",
-			"subName" : "_jungle",
-			"extraMaterials" : ["minecraft:wooden_slab:3:10", "minecraft:planks:3:10"]
-		},
-		{
-		"name" : "Acacia MC-172",
-			"subName" : "_acacia",
-			"extraMaterials" : ["minecraft:wooden_slab:4:10", "minecraft:planks:4:10"]
-		},
-		{
-		"name" : "Dark Oak MC-172",
-			"subName" : "_darkoak",
-    	"extraMaterials" : ["minecraft:wooden_slab:5:10", "minecraft:planks:5:10"]
-		}
-	],
-
-  "general": {
-	"description" : "The MC-172 is not fancy, but its cheap and sturdy airframe is at home on any rural Minecraft base.  High wings and a good power-to-weight ratio make this a good all-around starter.",
-    "type" : "plane",
-		"isAircraft" : true,
-		"openTop" : false,
-		"emptyMass" : 800,
-		"materials" : []
-  },
-
-	"motorized" : {
-    "hasFlaps" : true,
-    "wingSpan" : 11.0,
-    "wingArea" : 16.0,
-    "tailDistance" : 7.0,
-		"aileronArea" : 3.2,
-    "rudderArea" : 1.5,
-    "elevatorArea" : 3.0,
-    "defaultElevatorAngle" : -5.0,
-    "fuelCapacity" : 5000,
+  "motorized": {
+    "isAircraft": true,
+    "hasFlaps": true,
+    "emptyMass": 800,
+    "fuelCapacity": 5000,
+    "brakingFactor": 1.0,
+    "tailDistance": 7.0,
+    "wingSpan": 11.0,
+    "wingArea": 16.0,
+    "aileronArea": 3.2,
+    "elevatorArea": 3.0,
+    "rudderArea": 1.5,
     "instruments": [
       {
-        "pos": [
-          0.46875,
-          0.34375,
-          0.718125
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          30.0,
-          63.0
-        ],
+        "pos": [0.46875,0.34375,0.718125],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.04375,
         "hudX": 120,
         "hudY": 36,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.125,
-          0.34375,
-          0.718125
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          50.0,
-          63.0
-        ],
+        "pos": [0.125,0.34375,0.718125],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.04375,
         "hudX": 200,
         "hudY": 36,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          -0.21875,
-          0.34375,
-          0.718125
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          70.0,
-          63.0
-        ],
+        "pos": [-0.21875,0.34375,0.718125],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.04375,
         "hudX": 280,
         "hudY": 36,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.46875,
-          0.0,
-          0.718125
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          30.0,
-          87.0
-        ],
+        "pos": [0.46875,0.0,0.718125],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.04375,
         "hudX": 120,
         "hudY": 103,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.125,
-          0.0,
-          0.718125
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          50.0,
-          87.0
-        ],
+        "pos": [0.125,0.0,0.718125],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.04375,
         "hudX": 200,
         "hudY": 103,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          -0.21875,
-          0.0,
-          0.718125
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
+        "pos": [-0.21875,0.0,0.718125],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.04375,
         "hudX": 280,
         "hudY": 103,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       }
     ]
   },
-	
-	"parts": [
+  "parts": [
     {
-      "pos" : [0, -0.85, 1.7],
-      "types" : ["ground_wheel", "ground_pontoon"],
-			"minValue" : 0.35,
-			"maxValue" : 0.65,
-			"turnsWithSteer" : true
+      "pos": [0.0,-0.85,1.7],
+      "turnsWithSteer": true,
+      "minValue": 0.35,
+      "maxValue": 0.65,
+      "types": ["ground_wheel","ground_pontoon"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
     },
     {
-      "pos" : [-1.65, -0.85, 0],
-      "types" : ["ground_wheel", "ground_pontoon"],
-			"minValue" : 0.35,
-			"maxValue" : 0.65
+      "pos": [-1.65,-0.85,0.0],
+      "minValue": 0.35,
+      "maxValue": 0.65,
+      "types": ["ground_wheel","ground_pontoon"]
     },
     {
-      "pos" : [1.65, -0.85, 0],
-      "types" : ["ground_wheel", "ground_pontoon"],
-			"minValue" : 0.35,
-			"maxValue" : 0.65
+      "pos": [1.65,-0.85,0.0],
+      "minValue": 0.35,
+      "maxValue": 0.65,
+      "types": ["ground_wheel","ground_pontoon"]
     },
     {
-      "pos" : [0, 0.1, 1.65],
-      "types" : ["engine_aircraft"],
-			"minValue" : 0.0,
-			"maxValue" : 0.5
+      "pos": [0.0,0.1,2.15625],
+      "maxValue": 0.5,
+      "types": ["engine_aircraft_horizontal"]
     },
     {
-      "pos" : [-0.40, 0.125, 0.01],
-      "types" : ["seat"],
-			"isController" : true,
-			"dismountPos" : [-2.0, 0, -2.0]
-    },
-		{
-      "pos" : [0.40, 0.125, 0.01],
-      "types" : ["seat"],
-			"isController" : true,
-			"dismountPos" : [2.0, 0, -2.0]
+      "pos": [-0.4,0.125,0.01],
+      "dismountPos": [-2.0,0.0,-2.0],
+      "isController": true,
+      "types": ["seat"]
     },
     {
-      "pos" : [0, 0.125, -1],
-      "types" : ["interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3
+      "pos": [0.4,0.125,0.01],
+      "dismountPos": [2.0,0.0,-2.0],
+      "isController": true,
+      "types": ["seat"]
+    },
+    {
+      "pos": [0.0,0.125,-1.0],
+      "maxValue": 3.0,
+      "types": ["interactable_crate"]
     }
   ],
-
   "collision": [
     {
-      "pos" : [0, 0.2, 1.5],
-      "width" : 1,
-      "height" : 1
+      "pos": [0.0,0.2,1.5],
+      "width": 1.0,
+      "height": 1.0
     },
     {
-      "pos" : [0, 0.2, -2.75],
-      "width" : 1,
-      "height" : 1
+      "pos": [0.0,0.2,-2.75],
+      "width": 1.0,
+      "height": 1.0
     },
     {
-      "pos" : [1.5, 0.5625, -4.25],
-      "width" : 1,
-      "height" : 0.125
+      "pos": [1.5,0.5625,-4.25],
+      "width": 1.0,
+      "height": 0.125
     },
     {
-      "pos" : [-1.5, 0.5625, -4.25],
-      "width" : 1,
-      "height" : 0.125
+      "pos": [-1.5,0.5625,-4.25],
+      "width": 1.0,
+      "height": 0.125
     },
     {
-      "pos" : [1.5, 0.5625, -4.25],
-      "width" : 1,
-      "height" : 0.125
+      "pos": [1.5,0.5625,-4.25],
+      "width": 1.0,
+      "height": 0.125
     },
     {
-      "pos" : [0, 1.25, -4.25],
-      "width" : 0.25,
-      "height" : 1.5
+      "pos": [0.0,1.25,-4.25],
+      "width": 0.25,
+      "height": 1.5
     },
     {
-      "pos" : [0, 1.6625, 0.25],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [0.0,1.6625,0.25],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [-1.25, 1.6625, 0.25],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [-1.25,1.6625,0.25],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [1.25, 1.6625, 0.25],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [1.25,1.6625,0.25],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [-2.5, 1.6625, 0.25],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [-2.5,1.6625,0.25],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [2.5, 1.6625, 0.25],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [2.5,1.6625,0.25],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [-3.75, 1.6625, 0.25],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [-3.75,1.6625,0.25],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [3.75, 1.6625, 0.25],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [3.75,1.6625,0.25],
+      "width": 1.25,
+      "height": 0.125
     }
   ],
-
+  "definitions": [
+    {
+      "subName": "_oak",
+      "name": "Oak MC-172",
+      "extraMaterials": ["minecraft:wooden_slab:0:10","minecraft:planks:0:10"]
+    },
+    {
+      "subName": "_spruce",
+      "name": "Spruce MC-172",
+      "extraMaterials": ["minecraft:wooden_slab:1:10","minecraft:planks:1:10"]
+    },
+    {
+      "subName": "_birch",
+      "name": "Birch MC-172",
+      "extraMaterials": ["minecraft:wooden_slab:2:10","minecraft:planks:2:10"]
+    },
+    {
+      "subName": "_jungle",
+      "name": "Jungle MC-172",
+      "extraMaterials": ["minecraft:wooden_slab:3:10","minecraft:planks:3:10"]
+    },
+    {
+      "subName": "_acacia",
+      "name": "Acacia MC-172",
+      "extraMaterials": ["minecraft:wooden_slab:4:10","minecraft:planks:4:10"]
+    },
+    {
+      "subName": "_darkoak",
+      "name": "Dark Oak MC-172",
+      "extraMaterials": ["minecraft:wooden_slab:5:10","minecraft:planks:5:10"]
+    }
+  ],
   "rendering": {
-	"textObjects":
-		[
-		{
-		"pos": [0.65625, 0.25, -2.8125],
-		"rot": [0, 105, 0],
-		"scale": 0.75,
-		"color": "#CCCCCC",
-		"fieldName": "Callsign",
-		"defaultText": "MC-172",
-		"maxLength": 7,
-		"lightsUp": false,
-		"renderPosition": 0
-		},
-		{
-		"pos": [-0.65625, 0.25, -2.8125],
-		"rot": [0, -105, 0],
-		"scale": 0.75,
-		"color": "#CCCCCC",
-		"fieldName": "Callsign",
-		"defaultText": "MC-172",
-		"maxLength": 7,
-		"lightsUp": false,
-		"renderPosition": 0
-		}
-		],
-"animatedObjects":
-	[
-	{
-	"objectName": "$Aileron_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "aileron",
-		"centerPoint": [0, 1.6875, 0],
-		"axis": [-1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Aileron_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "aileron",
-		"centerPoint": [0, 1.6875, 0],
-		"axis": [1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Elevator_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "elevator",
-		"centerPoint": [0, 0.5, -4.25],
-		"axis": [1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Elevator_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "elevator",
-		"centerPoint": [0, 0.5, -4.25],
-		"axis": [1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Rudder",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 0, -4.25],
-		"axis": [0, 1, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "&$NavigationLight_FFFFFF_FFFFF_111",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 0, -4.25],
-		"axis": [0, 1, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Flap_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "flaps_actual",
-		"centerPoint": [0, 1.6875, 0.125],
-		"axis": [-1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Flap_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "flaps_actual",
-		"centerPoint": [0, 1.6875, 0.125],
-		"axis": [-1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	}
-	]
+    "textObjects": [
+      {
+        "pos": [0.65625,0.25,-2.8125],
+        "rot": [0.0,105.0,0.0],
+        "scale": 0.75,
+        "fieldName": "Callsign",
+        "defaultText": "MC-172",
+        "maxLength": 7,
+        "color": "#CCCCCC"
+      },
+      {
+        "pos": [-0.65625,0.25,-2.8125],
+        "rot": [0.0,-105.0,0.0],
+        "scale": 0.75,
+        "fieldName": "Callsign",
+        "defaultText": "MC-172",
+        "maxLength": 7,
+        "color": "#CCCCCC"
+      }
+    ],
+    "animatedObjects": [
+      {
+        "objectName": "$Aileron_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.0,1.6875,0.0],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Aileron_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.0,1.6875,0.0],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Elevator_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.0,0.5,-4.25],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Elevator_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.0,0.5,-4.25],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Rudder",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,0.0,-4.25],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "&$NavigationLight_FFFFFF_FFFFF_111",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,0.0,-4.25],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Flap_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [0.0,1.6875,0.125],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Flap_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [0.0,1.6875,0.125],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      }
+    ],
+    "sounds": []
+  },
+  "prefixFolders": "",
+  "packID": "mtsofficialpack",
+  "systemName": "mc172",
+  "classification": "vehicle",
+  "general": {
+    "description": "The MC-172 is not fancy, but its cheap and sturdy airframe is at home on any rural Minecraft base.  High wings and a good power-to-weight ratio make this a good all-around starter.",
+    "materials": []
   }
 }

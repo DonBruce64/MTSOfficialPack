@@ -1,509 +1,465 @@
 {
-  "definitions" : [
-		{
-		"name" : "Black GMC Brigadier",
-		  "subName" : "_black",
-		  "extraMaterials" : ["oredict:dyeBlack:2"]
-	  },
-		{
-		"name" : "Blue GMC Brigadier",
-		  "subName" : "_blue",
-		  "extraMaterials" : ["oredict:dyeLightBlue:2"]
-	  },
-	  {
-		"name" : "Green GMC Brigadier",
-		  "subName" : "_green",
-		  "extraMaterials" : ["oredict:dyeGreen:2"]
-	  },
-		{
-		"name" : "Red GMC Brigadier",
-		  "subName" : "_red",
-		  "extraMaterials" : ["oredict:dyeRed:2"]
-	  },
-	  {
-		"name" : "White GMC Brigadier",
-		  "subName" : "_white",
-		  "extraMaterials" : ["oredict:dyeWhite:2"]
-	  },
-	  {
-		"name" : "Yellow GMC Brigadier",
-		  "subName" : "_yellow",
-		  "extraMaterials" : ["oredict:dyeYellow:2"]
-	  }
-	],
-	
-  "general": {
-	"description" : "The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  Its solid frame combined with its ability to be equipped with a variety of beds makes it a solid addition to any city.",
-    "type" : "car",
-	"openTop" : false,
-	"emptyMass" : 8165,
-	"materials" : ["oredict:ingotIron:7", "minecraft:iron_bars:0:6", "minecraft:iron_trapdoor:0:2", "minecraft:glass_pane:0:5"]
+  "motorized": {
+    "isRearWheelDrive": true,
+    "emptyMass": 8165,
+    "fuelCapacity": 35000,
+    "axleRatio": 3.55,
+    "brakingFactor": 1.0,
+    "dragCoefficient": 0.45,
+    "instruments": [
+      {
+        "pos": [0.85,1.12,2.9375],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.045,
+        "hudX": 174,
+        "hudY": 36,
+        "hudScale": 0.37545
+      },
+      {
+        "pos": [0.4,1.12,2.9375],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.045,
+        "hudX": 226,
+        "hudY": 36,
+        "hudScale": 0.37545
+      },
+      {
+        "pos": [0.15,1.24,2.9375],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.015,
+        "hudX": 266,
+        "hudY": 23,
+        "hudScale": 0.225
+      },
+      {
+        "pos": [0.15,1.0,2.9375],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.015,
+        "hudX": 266,
+        "hudY": 53,
+        "hudScale": 0.225
+      }
+    ]
   },
-
-  "motorized" : {
-    "fuelCapacity" : 35000,
-	"hornSound" : "mtsofficialpack:horn_truck",
-		"isBigTruck" : true,
-    "isFrontWheelDrive" : false,
-		"isRearWheelDrive" : true,
-		"axleRatio" : 3.55,
-    "dragCoefficient" : 0.45,
-    "instruments" : [
-		{
-			"pos" : [0.85, 1.12, 2.9375],
-			"rot" : [0, 0, 0],
-			"scale" : 0.045,
-			"hudX": 174,
-			"hudY": 36,
-			"hudScale": 0.37545
-		},			
-		{
-			"pos" : [0.40, 1.12, 2.9375],
-			"rot" : [0, 0, 0],
-			"scale" : 0.045,
-			"hudX": 226,
-			"hudY": 36,
-			"hudScale": 0.37545
-		},
-		{
-			"pos" : [0.15, 1.24, 2.9375],
-			"rot" : [0, 0, 0],
-			"scale" : 0.015,
-			"hudX": 266,
-			"hudY": 23,
-			"hudScale": 0.225
-		},
-		{
-			"pos" : [0.15, 1.00, 2.9375],
-			"rot" : [0, 0, 0],
-			"scale" : 0.015,
-			"hudX": 266,
-			"hudY": 53,
-			"hudScale": 0.225
-		}
-	]
-  },
-	
-	"parts": [
-		{
-      "pos" : [-0.85, 0.0, -0.0],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.9,
-			"maxValue" : 1.1,
-			"additionalPart" :  {
-				"pos" : [-1.25, 0.0, -0.0],
-				"types" : ["wheel"],
-				"minValue" : 0.9,
-				"maxValue" : 1.1
-			}
-    },
-		{
-      "pos" : [0.85, 0.0, -0.0],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.9,
-			"maxValue" : 1.1,
-			"additionalPart" :  {
-				"pos" : [1.25, 0.0, -0.0],
-				"types" : ["ground_wheel"],
-				"minValue" : 0.9,
-				"maxValue" : 1.1
-			}
-    },
-		{
-      "pos" : [-0.85, 0.0, -1.4375],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.9,
-			"maxValue" : 1.1,
-			"additionalPart" :  {
-				"pos" : [-1.25, 0.0, -1.4375],
-				"types" : ["ground_wheel"],
-				"minValue" : 0.9,
-				"maxValue" : 1.1
-			}
-    },
-		{
-      "pos" : [0.85, 0.0, -1.4375],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.9,
-			"maxValue" : 1.1,
-			"additionalPart" :  {
-				"pos" : [1.25, 0.0, -1.4375],
-				"types" : ["ground_wheel"],
-				"minValue" : 0.9,
-				"maxValue" : 1.1
-			}
-    },
-		{
-      "pos" : [-1.25, 0.0, 4.0],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.9,
-			"maxValue" : 1.1,
-			"turnsWithSteer" : true
-    },
-		{
-      "pos" : [1.25, 0.0, 4.0],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.9,
-			"maxValue" : 1.1,
-			"turnsWithSteer" : true
-		},
-		{
-      "pos" : [-0.65, 0.625, 2.4375],
-      "types" : ["seat"]
-    },
-		{
-      "pos" : [0.65, 0.625, 2.4375],
-      "types" : ["seat"],
-			"isController" : true
-    },
-		{
-      "pos" : [0, 0.5, 4.0],
-      "types" : ["engine_car"],
-	  "exhaustObjects":
-				[
-				{
-				"pos": [-1.33777, 2.61785, 1.84594],
-				"velocity": [0.5, 0.5, 0],
-				"scale": 2.0
-				}
-				],
-	  "exhaustPos" : [-1.33777, 2.61785, 1.84594],
-	  "exhaustVelocity" : [-0.5, 0.5, 0.0],
-			"minValue" : 1.4,
-			"maxValue" : 1.6
-	},
-		{
-	  "pos" : [0, 0.99, -0.24],
-	  "types" : ["generic", "interactable_crate"],
-	  "customTypes" : ["brigbed"],
-		"minValue" : 0,
-		"maxValue" : 7
-    } 
-  ],
-	
-  "collision": [
+  "parts": [
     {
-      "pos" : [-0.5, 1.15, 4.0],
-      "width" : 1.0,
-      "height" : 0.5
+      "pos": [-0.85,0.0,-0.0],
+      "minValue": 0.9,
+      "maxValue": 1.1,
+      "types": ["ground_wheel"],
+      "additionalParts": [
+        {
+          "pos": [-1.25,0.0,-0.0],
+          "minValue": 0.9,
+          "maxValue": 1.1,
+          "types": ["ground_wheel"]
+        }
+      ]
     },
-		{
-      "pos" : [0.5, 1.15, 4.0],
-      "width" : 1.0,
-      "height" : 0.5
+    {
+      "pos": [0.85,0.0,-0.0],
+      "minValue": 0.9,
+      "maxValue": 1.1,
+      "types": ["ground_wheel"],
+      "additionalParts": [
+        {
+          "pos": [1.25,0.0,-0.0],
+          "minValue": 0.9,
+          "maxValue": 1.1,
+          "types": ["ground_wheel"]
+        }
+      ]
     },
-		{
-      "pos" : [-0.5, 2.175, 2.5],
-      "width" : 1,
-      "height" : 0.05
+    {
+      "pos": [-0.85,0.0,-1.4375],
+      "minValue": 0.9,
+      "maxValue": 1.1,
+      "types": ["ground_wheel"],
+      "additionalParts": [
+        {
+          "pos": [-1.25,0.0,-1.4375],
+          "minValue": 0.9,
+          "maxValue": 1.1,
+          "types": ["ground_wheel"]
+        }
+      ]
     },
-		{
-      "pos" : [0.5, 2.175, 2.5],
-      "width" : 1,
-      "height" : 0.05
+    {
+      "pos": [0.85,0.0,-1.4375],
+      "minValue": 0.9,
+      "maxValue": 1.1,
+      "types": ["ground_wheel"],
+      "additionalParts": [
+        {
+          "pos": [1.25,0.0,-1.4375],
+          "minValue": 0.9,
+          "maxValue": 1.1,
+          "types": ["ground_wheel"]
+        }
+      ]
     },
-		{
-      "pos" : [0, 0.65, -2.2],
-      "width" : 0.5,
-      "height" : 0.25
+    {
+      "pos": [-1.25,0.0,4.0],
+      "turnsWithSteer": true,
+      "minValue": 0.9,
+      "maxValue": 1.1,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [1.25,0.0,4.0],
+      "turnsWithSteer": true,
+      "minValue": 0.9,
+      "maxValue": 1.1,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [-0.65,0.625,2.4375],
+      "types": ["seat"]
+    },
+    {
+      "pos": [0.65,0.625,2.4375],
+      "isController": true,
+      "types": ["seat"]
+    },
+    {
+      "pos": [0.0,0.5,3.3],
+      "minValue": 0.4,
+      "maxValue": 1.6,
+      "types": ["engine_car"],
+      "particleObjects": [
+        {
+          "type": "smoke",
+          "color": "#D9D9D9",
+          "toColor": "#D9D9D9",
+          "transparency": 0.25,
+          "toTransparency": 0.25,
+          "scale": 2.0,
+          "pos": [-1.33777,2.61785,1.84594],
+          "velocityVector": [0.5,0.5,0.0],
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "pos": [0.0,0.99,-0.24],
+      "maxValue": 7.0,
+      "types": ["generic","interactable_crate"],
+      "customTypes": ["brigbed"]
     }
   ],
-"doors":
-[
-{
-	"name": "door_l",
-	"closedPos": [1.1, 1, 2.2],
-	"openPos": [1.9, 1, 2.75],
-	"width": 0.4,
-	"height": 1.92
-},
-{
-	"name": "door_l",
-	"closedPos": [1.1, 1, 2.6],
-	"openPos": [1.5, 1, 2.85],
-	"width": 0.4,
-	"height": 1.92
-},
-{
-	"name": "door_l",
-	"closedPos": [1.1, 1, 3],
-	"openPos": [1.1, 1, 3],
-	"width": 0.4,
-	"height": 1.92
-},
-{
-	"name": "door_r",
-	"closedPos": [-1.1, 1, 2.2],
-	"openPos": [-1.9, 1, 2.75],
-	"width": 0.4,
-	"height": 1.92
-},
-{
-	"name": "door_r",
-	"closedPos": [-1.1, 1, 2.6],
-	"openPos": [-1.5, 1, 2.85],
-	"width": 0.4,
-	"height": 1.92
-},
-{
-	"name": "door_r",
-	"closedPos": [-1.1, 1, 3],
-	"openPos": [-1.1, 1, 3],
-	"width": 0.4,
-	"height": 1.92
-}
-],
+  "collision": [
+    {
+      "pos": [-0.5,1.15,4.0],
+      "width": 1.0,
+      "height": 0.5
+    },
+    {
+      "pos": [0.5,1.15,4.0],
+      "width": 1.0,
+      "height": 0.5
+    },
+    {
+      "pos": [-0.5,2.175,2.5],
+      "width": 1.0,
+      "height": 0.05
+    },
+    {
+      "pos": [0.5,2.175,2.5],
+      "width": 1.0,
+      "height": 0.05
+    },
+    {
+      "pos": [0.0,0.65,-2.2],
+      "width": 0.5,
+      "height": 0.25
+    }
+  ],
+  "doors": [
+    {
+      "name": "door_l",
+      "closedPos": [1.1,1.0,2.2],
+      "openPos": [1.9,1.0,2.75],
+      "width": 0.4,
+      "height": 1.92
+    },
+    {
+      "name": "door_l",
+      "closedPos": [1.1,1.0,2.6],
+      "openPos": [1.5,1.0,2.85],
+      "width": 0.4,
+      "height": 1.92
+    },
+    {
+      "name": "door_l",
+      "closedPos": [1.1,1.0,3.0],
+      "openPos": [1.1,1.0,3.0],
+      "width": 0.4,
+      "height": 1.92
+    },
+    {
+      "name": "door_r",
+      "closedPos": [-1.1,1.0,2.2],
+      "openPos": [-1.9,1.0,2.75],
+      "width": 0.4,
+      "height": 1.92
+    },
+    {
+      "name": "door_r",
+      "closedPos": [-1.1,1.0,2.6],
+      "openPos": [-1.5,1.0,2.85],
+      "width": 0.4,
+      "height": 1.92
+    },
+    {
+      "name": "door_r",
+      "closedPos": [-1.1,1.0,3.0],
+      "openPos": [-1.1,1.0,3.0],
+      "width": 0.4,
+      "height": 1.92
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "_black",
+      "name": "Black GMC Brigadier",
+      "extraMaterials": ["oredict:dyeBlack:2"]
+    },
+    {
+      "subName": "_blue",
+      "name": "Blue GMC Brigadier",
+      "extraMaterials": ["oredict:dyeLightBlue:2"]
+    },
+    {
+      "subName": "_green",
+      "name": "Green GMC Brigadier",
+      "extraMaterials": ["oredict:dyeGreen:2"]
+    },
+    {
+      "subName": "_red",
+      "name": "Red GMC Brigadier",
+      "extraMaterials": ["oredict:dyeRed:2"]
+    },
+    {
+      "subName": "_white",
+      "name": "White GMC Brigadier",
+      "extraMaterials": ["oredict:dyeWhite:2"]
+    },
+    {
+      "subName": "_yellow",
+      "name": "Yellow GMC Brigadier",
+      "extraMaterials": ["oredict:dyeYellow:2"]
+    }
+  ],
   "rendering": {
-"customVariables" : ["WINDOWS"],
-	"textObjects":
-		[
-		{
-		"pos": [0, 0.118118, 4.8694],
-		"rot": [0, 0, 0],
-		"scale": 0.2,
-		"color": "#000000",
-		"fieldName": "License Plate",
-		"defaultText": "GMC",
-		"maxLength": 7,
-		"lightsUp": false,
-		"renderPosition": 0
-		},
-		{
-		"pos": [0, 0.118124, -2.38065],
-		"rot": [0, 180, 0],
-		"scale": 0.2,
-		"color": "#000000",
-		"fieldName": "License Plate",
-		"defaultText": "GMC",
-		"maxLength": 7,
-		"lightsUp": false,
-		"renderPosition": 0
-		}
-		],
-"animatedObjects":
-	[
-	{
-	"objectName": "$Door_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_l",
-		"centerPoint": [1.0625, 0, 3.275625],
-		"axis": [0, -60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Door_L_Window",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_l",
-		"centerPoint": [1.0625, 0, 3.275625],
-		"axis": [0, -60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		},
-		{
-		"animationType": "translation",
-		"variable": "WINDOWS",
-		"centerPoint": [0, 0, 0],
-		"axis": [0, -0.4, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Door_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_r",
-		"centerPoint": [-1.0625, 0, 3.275625],
-		"axis": [0, 60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Door_R_Window",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_r",
-		"centerPoint": [-1.0625, 0, 3.275625],
-		"axis": [0, 60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		},
-		{
-		"animationType": "translation",
-		"variable": "WINDOWS",
-		"centerPoint": [0, 0, 0],
-		"axis": [0, -0.4, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Gas",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "throttle",
-		"centerPoint": [0, 0.361451, 2.914554],
-		"axis": [20, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 2,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Brake",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "brake",
-		"centerPoint": [0, 0, 0.01],
-		"axis": [20, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 2,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Parking",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "p_brake",
-		"centerPoint": [0, 0.386498, 2.653041],
-		"axis": [-60, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 5,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Steeringwheel",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0.619618, 0.633528, 3.34614],
-		"axis": [0, -0.707, 0.707],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Gearshift",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "engine_gearshift_hvertical_1",
-		"centerPoint": [0, 0.430625, 2.916250],
-		"axis": [0.5, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		},
-		{
-		"animationType": "rotation",
-		"variable": "engine_gearshift_hhorizontal_1",
-		"centerPoint": [0, 0.430625, 2.916250],
-		"axis": [0, 0, 1],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	}
-	]
+    "textObjects": [
+      {
+        "pos": [0.0,0.118118,4.8694],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.2,
+        "fieldName": "License Plate",
+        "defaultText": "GMC",
+        "maxLength": 7,
+        "color": "#000000"
+      },
+      {
+        "pos": [0.0,0.118124,-2.38065],
+        "rot": [0.0,180.0,0.0],
+        "scale": 0.2,
+        "fieldName": "License Plate",
+        "defaultText": "GMC",
+        "maxLength": 7,
+        "color": "#000000"
+      }
+    ],
+    "animatedObjects": [
+      {
+        "objectName": "$Door_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_l",
+            "centerPoint": [1.0625,0.0,3.275625],
+            "axis": [0.0,-60.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$Door_L_Window",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_l",
+            "centerPoint": [1.0625,0.0,3.275625],
+            "axis": [0.0,-60.0,0.0],
+            "duration": 10
+          },
+          {
+            "animationType": "translation",
+            "variable": "WINDOWS",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.4,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$Door_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_r",
+            "centerPoint": [-1.0625,0.0,3.275625],
+            "axis": [0.0,60.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$Door_R_Window",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_r",
+            "centerPoint": [-1.0625,0.0,3.275625],
+            "axis": [0.0,60.0,0.0],
+            "duration": 10
+          },
+          {
+            "animationType": "translation",
+            "variable": "WINDOWS",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.4,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$Gas",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.361451,2.914554],
+            "axis": [20.0,0.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "$Brake",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [0.0,0.0,0.01],
+            "axis": [20.0,0.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "$Parking",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "p_brake",
+            "centerPoint": [0.0,0.386498,2.653041],
+            "axis": [-60.0,0.0,0.0],
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "objectName": "$Steeringwheel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.619618,0.633528,3.34614],
+            "axis": [0.0,-0.707,0.707]
+          }
+        ]
+      },
+      {
+        "objectName": "$Gearshift",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_gearshift_hvertical_1",
+            "centerPoint": [0.0,0.430625,2.91625],
+            "axis": [0.5,0.0,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "engine_gearshift_hhorizontal_1",
+            "centerPoint": [0.0,0.430625,2.91625],
+            "axis": [0.0,0.0,1.0]
+          }
+        ]
+      }
+    ],
+    "customVariables": ["WINDOWS"],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:horn_truck",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "horn",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true
+      },
+      {
+        "name": "mts:air_brake_activating",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "p_brake",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "name": "mts:backup_beeper",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_gear_1",
+            "clampMin": -10.0,
+            "clampMax": -1.0
+          }
+        ],
+        "looping": true
+      }
+    ]
+  },
+  "prefixFolders": "",
+  "packID": "mtsofficialpack",
+  "systemName": "gmcbrig",
+  "classification": "vehicle",
+  "general": {
+    "description": "The GMC Brigadier is a Heavy-Duty truck made by GMC produced from 1978 to 1988.  Its solid frame combined with its ability to be equipped with a variety of beds makes it a solid addition to any city.",
+    "materials": ["oredict:ingotIron:7","minecraft:iron_bars:0:6","minecraft:iron_trapdoor:0:2","minecraft:glass_pane:0:5"]
   }
 }

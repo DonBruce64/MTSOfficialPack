@@ -1,23 +1,135 @@
 {
-    "general": {
-        "name" : "Lycoming O-360 Plane Engine",
-        "type" : "engine_aircraft",
-		"materials" : ["minecraft:piston:0:4", "minecraft:obsidian:0:4", "oredict:ingotIron:1"]
-    },
-	"engine" : {
-        "isAutomatic" : true,
-        "starterPower" : 40,
-				"maxRPM" : 2900,
-        "fuelConsumption" : 0.4,
-        "fuelType" : "avgas",
-        "gearRatios" : [-1.0, 0.0, 1.0]
-	},
-	"subParts" : [
-        {
-            "pos" : [0, 0, 0.75],
-            "types" : ["propeller"],
-			"minValue" : 0,
-			"maxValue" : 90
-        }
-	]
+  "generic": {
+    "type": "engine_aircraft_horizontal"
+  },
+  "engine": {
+    "isAutomatic": true,
+    "starterPower": 40,
+    "shiftSpeed": 20,
+    "revResistance": 10,
+    "maxRPM": 2900,
+    "fuelConsumption": 0.4,
+    "gearRatios": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "fuelType": "avgas"
+  },
+  "parts": [
+    {
+      "pos": [0.0,0.0,0.0625],
+      "maxValue": 90.0,
+      "types": ["propeller"]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Lycoming O-360 Plane Engine",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "sounds": [
+      {
+        "name": "mtsofficialpack:enginelycomingo360_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_sputter",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mts:engine_shifting_grinding",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_badshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.3,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.002,0.0]
+          }
+        ],
+        "looping": true
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,7.0E-4,0.0],
+            "offset": 0.35
+          }
+        ],
+        "looping": true
+      }
+    ]
+  },
+  "prefixFolders": "",
+  "packID": "mtsofficialpack",
+  "systemName": "enginelycomingo360",
+  "classification": "part",
+  "general": {
+    "name": "Lycoming O-360 Plane Engine",
+    "materials": ["minecraft:piston:0:4","minecraft:obsidian:0:4","oredict:ingotIron:1"]
+  }
 }

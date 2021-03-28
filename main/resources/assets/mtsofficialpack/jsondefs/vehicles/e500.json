@@ -1,232 +1,86 @@
-{	
-	"definitions" : [
-		{
-		"name" : "Blue Eclipse 500",
-			"subName" : "_blue",
-    	"extraMaterials" : ["oredict:dyeLightBlue:5"]
-		},
-		{
-		"name" : "Green Eclipse 500",
-			"subName" : "_green",
-    	"extraMaterials" : ["oredict:dyeLime:5"]
-		},
-		{
-		"name" : "Red Eclipse 500",
-			"subName" : "_red",
-    	"extraMaterials" : ["oredict:dyeRed:5"]
-		},
-		{
-		"name" : "Yellow Eclipse 500",
-			"subName" : "_yellow",
-			"extraMaterials" : ["oredict:dyeYellow:5"]
-		}
-	],
-
-  "general": {
-	"description" : "The Eclipse 500, first flown in 2002, created a new class of aircraft: the very light jet, or VLJ. The MTS version is configured to seat five, with the pilot in the front and four passengers behind them. A great addition to any private airport, and quite efficient for its capacity and speed as well.",
-    "type" : "plane",
-		"isAircraft" : true,
-		"openTop" : false,
-		"emptyMass" : 1610,
-		"materials" : ["minecraft:iron_bars:0:6", "minecraft:iron_trapdoor:0:8", "oredict:ingotIron:15", "oredict:dustRedstone:9", "minecraft:comparator:0:1", "minecraft:glass_pane:0:5"]
-  },
-
-  "motorized" : {
-    "fuelCapacity" : 10000,
-    "hasFlaps" : true,
-	"hasAutopilot" : true,
-    "wingSpan" : 11.4,
-    "wingArea" : 13.4,
-    "tailDistance" : 4.0,
-		"aileronArea" : 2.68,
-    "rudderArea" : 1.0,
-    "elevatorArea" : 2.2,
-		"gearSequenceDuration" : 110,
-    "defaultElevatorAngle" : -7.5,
+{
+  "motorized": {
+    "isAircraft": true,
+    "hasAutopilot": true,
+    "hasFlaps": true,
+    "emptyMass": 1610,
+    "fuelCapacity": 10000,
+    "gearSequenceDuration": 110,
+    "brakingFactor": 1.0,
+    "tailDistance": 4.0,
+    "wingSpan": 11.4,
+    "wingArea": 13.4,
+    "aileronArea": 2.68,
+    "elevatorArea": 2.2,
+    "rudderArea": 1.0,
     "instruments": [
       {
-        "pos": [
-          0.3890625,
-          0.671875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          30.0,
-          63.0
-        ],
+        "pos": [0.3890625,0.671875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 120,
         "hudY": 36,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.1296875,
-          0.671875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          43.0,
-          63.0
-        ],
+        "pos": [0.1296875,0.671875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 172,
         "hudY": 36,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          -0.1296875,
-          0.671875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          56.0,
-          63.0
-        ],
+        "pos": [-0.1296875,0.671875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 224,
         "hudY": 36,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          -0.3890625,
-          0.671875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          69.0,
-          63.0
-        ],
+        "pos": [-0.3890625,0.671875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 276,
         "hudY": 36,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.3890625,
-          0.421875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          30.0,
-          87.0
-        ],
+        "pos": [0.3890625,0.421875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 120,
         "hudY": 103,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.1296875,
-          0.421875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          43.0,
-          87.0
-        ],
+        "pos": [0.1296875,0.421875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 172,
         "hudY": 103,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          -0.1296875,
-          0.421875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          56.0,
-          87.0
-        ],
+        "pos": [-0.1296875,0.421875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 224,
         "hudY": 103,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          -0.3890625,
-          0.421875,
-          3.224
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          69.0,
-          87.0
-        ],
+        "pos": [-0.3890625,0.421875,3.224],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0325,
         "hudX": 276,
         "hudY": 103,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.59374,
-          0.756875,
-          2.865625
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          45.0,
-          65.0
-        ],
+        "pos": [0.59374,0.756875,2.865625],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.015,
         "hudX": 180,
         "hudY": 42,
@@ -234,20 +88,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          0.59374,
-          0.756875,
-          2.975
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          55.0,
-          65.0
-        ],
+        "pos": [0.59374,0.756875,2.975],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.015,
         "hudX": 220,
         "hudY": 42,
@@ -255,20 +97,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          0.59374,
-          0.644375,
-          2.865625
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          45.0,
-          83.0
-        ],
+        "pos": [0.59374,0.644375,2.865625],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.015,
         "hudX": 180,
         "hudY": 92,
@@ -276,20 +106,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          0.59374,
-          0.644375,
-          2.975
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          55.0,
-          83.0
-        ],
+        "pos": [0.59374,0.644375,2.975],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.015,
         "hudX": 220,
         "hudY": 92,
@@ -297,20 +115,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          -0.59374,
-          0.756875,
-          2.975
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
-        "hudpos": [
-          70.0,
-          65.0
-        ],
+        "pos": [-0.59374,0.756875,2.975],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.015,
         "hudX": 280,
         "hudY": 42,
@@ -318,20 +124,8 @@
         "optionalPartNumber": 2
       },
       {
-        "pos": [
-          -0.59374,
-          0.756875,
-          2.865625
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
-        "hudpos": [
-          80.0,
-          65.0
-        ],
+        "pos": [-0.59374,0.756875,2.865625],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.015,
         "hudX": 320,
         "hudY": 42,
@@ -339,16 +133,8 @@
         "optionalPartNumber": 2
       },
       {
-        "pos": [
-          -0.59374,
-          0.644375,
-          2.975
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
+        "pos": [-0.59374,0.644375,2.975],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.015,
         "hudX": 280,
         "hudY": 92,
@@ -356,20 +142,8 @@
         "optionalPartNumber": 2
       },
       {
-        "pos": [
-          -0.59374,
-          0.644375,
-          2.865625
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
-        "hudpos": [
-          80.0,
-          83.0
-        ],
+        "pos": [-0.59374,0.644375,2.865625],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.015,
         "hudX": 320,
         "hudY": 92,
@@ -378,663 +152,559 @@
       }
     ]
   },
-	
-	"parts": [
-     {
-      "pos" : [0.0, -0.39875, 3.31875],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.4,
-			"maxValue" : 0.65,
-			"turnsWithSteer" : true,
-			"animations": [
-				{
-					"animationType": "rotation",
-					"variable": "gear_setpoint",
-					"centerPoint": [0, 0.62499, 0],
-					"axis": [-110, 0, 0],
-					"duration": 50,
-					"forwardsDelay": 30,
-					"reverseDelay": 30
-				}
-			]
+  "parts": [
+    {
+      "pos": [0.0,-0.39875,3.31875],
+      "turnsWithSteer": true,
+      "minValue": 0.4,
+      "maxValue": 0.65,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "gear_setpoint",
+          "centerPoint": [0.0,0.62499,0.0],
+          "axis": [-110.0,0.0,0.0],
+          "duration": 50,
+          "forwardsDelay": 30,
+          "reverseDelay": 30
+        }
+      ]
     },
     {
-      "pos" : [-1.5125, -0.4175, -0.18125],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.4,
-			"maxValue" : 0.65,
-			"animations": [
-				{
-					"animationType": "rotation",
-					"variable": "gear_setpoint",
-					"centerPoint": [-0.03125, 0.424994, 0],
-					"axis": [0, 0, 84],
-					"duration": 60,
-					"forwardsDelay": 0,
-					"reverseDelay": 0
-				}
-			]
+      "pos": [-1.5125,-0.4175,-0.18125],
+      "minValue": 0.4,
+      "maxValue": 0.65,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "gear_setpoint",
+          "centerPoint": [-0.03125,0.424994,0.0],
+          "axis": [0.0,0.0,84.0],
+          "duration": 60
+        }
+      ]
     },
     {
-      "pos" : [1.5125, -0.4175, -0.18125],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.4,
-			"maxValue" : 0.65,
-			"animations": [
-				{
-					"animationType": "rotation",
-					"variable": "gear_setpoint",
-					"centerPoint": [0.03125, 0.424994, 0],
-					"axis": [0, 0, -84],
-					"duration": 60,
-					"forwardsDelay": 0,
-					"reverseDelay": 0
-				}
-			]
-			
-    },
-				{
-      "pos" : [0.96875, 0.78875, -2.4235],
-      "types" : ["engine_jet"],
-			"overrideMirror" : true,
-			"minValue" : 0.0,
-			"maxValue" : 0.65
+      "pos": [1.5125,-0.4175,-0.18125],
+      "minValue": 0.4,
+      "maxValue": 0.65,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "gear_setpoint",
+          "centerPoint": [0.03125,0.424994,0.0],
+          "axis": [0.0,0.0,-84.0],
+          "duration": 60
+        }
+      ]
     },
     {
-      "pos" : [-0.96875, 0.78875, -2.4235],
-      "types" : ["engine_jet"],
-			"overrideMirror" : true,
-			"minValue" : 0.0,
-			"maxValue" : 0.65
+      "pos": [0.96875,0.78875,-2.0875],
+      "maxValue": 0.65,
+      "types": ["engine_jet"]
     },
     {
-      "pos" : [-0.0, 0.195, 2.31875],
-      "types" : ["seat"],
-			"isController" : true,
-			"dismountPos" : [1.5, 0, 1.75]
-    },
-		{
-      "pos" : [0.40625, 0.195, 1.48125],
-      "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75]
+      "pos": [-0.96875,0.78875,-2.0875],
+      "maxValue": 0.65,
+      "types": ["engine_jet"]
     },
     {
-      "pos" : [-0.40625, 0.195, 1.48125],
-      "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75]
+      "pos": [-0.0,0.195,2.31875],
+      "dismountPos": [1.5,0.0,1.75],
+      "isController": true,
+      "types": ["seat"]
     },
     {
-      "pos" : [-0.40625, 0.195, 0.51875],
-      "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75]
+      "pos": [0.40625,0.195,1.48125],
+      "dismountPos": [1.5,0.0,1.75],
+      "types": ["seat"]
     },
-	{
-      "pos" : [0.40625, 0.195, 0.51875],
-      "types" : ["seat"],
-			"dismountPos" : [1.5, 0, 1.75]
+    {
+      "pos": [-0.40625,0.195,1.48125],
+      "dismountPos": [1.5,0.0,1.75],
+      "types": ["seat"]
+    },
+    {
+      "pos": [-0.40625,0.195,0.51875],
+      "dismountPos": [1.5,0.0,1.75],
+      "types": ["seat"]
+    },
+    {
+      "pos": [0.40625,0.195,0.51875],
+      "dismountPos": [1.5,0.0,1.75],
+      "types": ["seat"]
     }
   ],
-
   "collision": [
-     {
-      "pos" : [-1.5, 2.35, -5.1],
-      "width" : 0.75,
-      "height" : 0.125 
+    {
+      "pos": [-1.5,2.35,-5.1],
+      "width": 0.75,
+      "height": 0.125
     },
     {
-      "pos" : [-0.6, 2.35, -4.85],
-      "width" : 0.85,
-      "height" : 0.125
+      "pos": [-0.6,2.35,-4.85],
+      "width": 0.85,
+      "height": 0.125
     },
     {
-      "pos" : [0.6, 2.35, -4.85],
-      "width" : 0.85,
-      "height" : 0.125
+      "pos": [0.6,2.35,-4.85],
+      "width": 0.85,
+      "height": 0.125
     },
     {
-      "pos" : [1.5, 2.35, -5.1],
-      "width" : 0.75,
-      "height" : 0.125
+      "pos": [1.5,2.35,-5.1],
+      "width": 0.75,
+      "height": 0.125
     },
     {
-      "pos" : [0.0, 1.25, -3.4],
-      "width" : 0.25,
-      "height" : 0.4
+      "pos": [0.0,1.25,-3.4],
+      "width": 0.25,
+      "height": 0.4
     },
     {
-      "pos" : [0.0, 1.5, -3.9],
-      "width" : 0.25,
-      "height" : 1
+      "pos": [0.0,1.5,-3.9],
+      "width": 0.25,
+      "height": 1.0
     },
     {
-      "pos" : [0.0, 1.65, -4.375],
-      "width" : 0.25,
-      "height" : 1.25
+      "pos": [0.0,1.65,-4.375],
+      "width": 0.25,
+      "height": 1.25
     },
     {
-      "pos" : [0.0, 1.4375, 1.75],
-      "width" : 1.5,
-      "height" : 0.125
+      "pos": [0.0,1.4375,1.75],
+      "width": 1.5,
+      "height": 0.125
     },
     {
-      "pos" : [0.0, 1.4375, 0.75],
-      "width" : 1.5,
-      "height" : 0.125
+      "pos": [0.0,1.4375,0.75],
+      "width": 1.5,
+      "height": 0.125
     },
     {
-      "pos" : [0.0, 0.625, -3.75],
-      "width" : 0.75,
-      "height" : 0.75
+      "pos": [0.0,0.625,-3.75],
+      "width": 0.75,
+      "height": 0.75
     },
     {
-      "pos" : [0.0, 0.625, -2.85],
-      "width" : 1,
-      "height" : 1
+      "pos": [0.0,0.625,-2.85],
+      "width": 1.0,
+      "height": 1.0
     },
     {
-      "pos" : [0.0, 0.625, -1.75],
-      "width" : 1.25,
-      "height" : 1.25
+      "pos": [0.0,0.625,-1.75],
+      "width": 1.25,
+      "height": 1.25
     },
     {
-      "pos" : [0.0, 0.625, -0.5],
-      "width" : 1.5,
-      "height" : 1.5
+      "pos": [0.0,0.625,-0.5],
+      "width": 1.5,
+      "height": 1.5
     },
     {
-      "pos" : [0.0, 0.375, 3.5],
-      "width" : 1,
-      "height" : 1
+      "pos": [0.0,0.375,3.5],
+      "width": 1.0,
+      "height": 1.0
     },
     {
-      "pos" : [0.0, 0.375, 4.25],
-      "width" : 0.5,
-      "height" : 0.5
+      "pos": [0.0,0.375,4.25],
+      "width": 0.5,
+      "height": 0.5
     },
     {
-      "pos" : [0.0, 0.0625, 0.75],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [0.0,0.0625,0.75],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [0.0, 0.0625, 1.75],
-      "width" : 1.25,
-      "height" : 0.125
+      "pos": [0.0,0.0625,1.75],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [1.125, 0.0, 0.625],
-      "width" : 0.5,
-      "height" : 0.125
+      "pos": [1.125,0.0,0.625],
+      "width": 0.5,
+      "height": 0.125
     },
     {
-      "pos" : [1.5, 0.0, -0.125],
-      "width" : 1.25,
-      "height" : 0.125
-    },
-	{
-      "pos" : [3.0, 0.1875, -0.0],
-      "width" : 1.25,
-      "height" : 0.125
-    },
-	{
-      "pos" : [4.5, 0.35, 0.125],
-      "width" : 1.0,
-      "height" : 0.125
+      "pos": [1.5,0.0,-0.125],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [5.25, 0.4, 0.125],
-      "width" : 0.5,
-      "height" : 0.125
+      "pos": [3.0,0.1875,-0.0],
+      "width": 1.25,
+      "height": 0.125
     },
     {
-      "pos" : [-1.125, 0.0, 0.625],
-      "width" : 0.5,
-      "height" : 0.125
-    },
-	{
-      "pos" : [-1.5, 0.0, -0.125],
-      "width" : 1.25,
-      "height" : 0.125
-    },
-	{
-      "pos" : [-3.0, 0.1875, 0.0],
-      "width" : 1.25,
-      "height" : 0.125
-    },
-	{
-      "pos" : [-4.5, 0.35, 0.125],
-      "width" : 1.0,
-      "height" : 0.125
+      "pos": [4.5,0.35,0.125],
+      "width": 1.0,
+      "height": 0.125
     },
     {
-      "pos" : [-5.25, 0.4, 0.125],
-      "width" : 0.5,
-      "height" : 0.125
+      "pos": [5.25,0.4,0.125],
+      "width": 0.5,
+      "height": 0.125
+    },
+    {
+      "pos": [-1.125,0.0,0.625],
+      "width": 0.5,
+      "height": 0.125
+    },
+    {
+      "pos": [-1.5,0.0,-0.125],
+      "width": 1.25,
+      "height": 0.125
+    },
+    {
+      "pos": [-3.0,0.1875,0.0],
+      "width": 1.25,
+      "height": 0.125
+    },
+    {
+      "pos": [-4.5,0.35,0.125],
+      "width": 1.0,
+      "height": 0.125
+    },
+    {
+      "pos": [-5.25,0.4,0.125],
+      "width": 0.5,
+      "height": 0.125
     }
   ],
-"doors":
-[
-{
-	"name": "door_l",
-	"closedPos": [0.8, -0.02, 1.85],
-	"openPos": [0.8, -0.3, 1.85],
-	"width": 0.55,
-	"height": 0.66
-},
-{
-	"name": "door_l",
-	"closedPos": [0.8, 0.64, 1.85],
-	"openPos": [0.8, 1.7, 1.85],
-	"width": 0.55,
-	"height": 0.66
-},
-{
-	"name": "door_l",
-	"closedPos": [0.8, 1.3, 1.85],
-	"openPos": [1.46, 2.06, 1.85],
-	"width": 0.55,
-	"height": 0.66
-}
-],
-
+  "doors": [
+    {
+      "name": "door_l",
+      "closedPos": [0.8,-0.02,1.85],
+      "openPos": [0.8,-0.3,1.85],
+      "width": 0.55,
+      "height": 0.66
+    },
+    {
+      "name": "door_l",
+      "closedPos": [0.8,0.64,1.85],
+      "openPos": [0.8,1.7,1.85],
+      "width": 0.55,
+      "height": 0.66
+    },
+    {
+      "name": "door_l",
+      "closedPos": [0.8,1.3,1.85],
+      "openPos": [1.46,2.06,1.85],
+      "width": 0.55,
+      "height": 0.66
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "_blue",
+      "name": "Blue Eclipse 500",
+      "extraMaterials": ["oredict:dyeLightBlue:5"]
+    },
+    {
+      "subName": "_green",
+      "name": "Green Eclipse 500",
+      "extraMaterials": ["oredict:dyeLime:5"]
+    },
+    {
+      "subName": "_red",
+      "name": "Red Eclipse 500",
+      "extraMaterials": ["oredict:dyeRed:5"]
+    },
+    {
+      "subName": "_yellow",
+      "name": "Yellow Eclipse 500",
+      "extraMaterials": ["oredict:dyeYellow:5"]
+    }
+  ],
   "rendering": {
-	"textObjects":
-		[
-		{
-		"pos": [0.0313, 1.25, -3.25],
-		"rot": [0, 90, 0],
-		"scale": 0.4,
-		"color": "#CCCCCC",
-		"fieldName": "Callsign",
-		"defaultText": "N750RG",
-		"maxLength": 6,
-		"lightsUp": false,
-		"renderPosition": 0
-		},
-		{
-		"pos": [-0.0313, 1.25, -3.25],
-		"rot": [0, -90, 0],
-		"scale": 0.45,
-		"color": "#CCCCCC",
-		"fieldName": "Callsign",
-		"defaultText": "N750RG",
-		"maxLength": 6,
-		"lightsUp": false,
-		"renderPosition": 0
-		}
-		],
-"animatedObjects":
-	[
-	{
-	"objectName": "$Aileron_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "aileron",
-		"centerPoint": [4.6826, 0.343437, -0.025],
-		"axis": [-0.995, -0.105, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Aileron_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "aileron",
-		"centerPoint": [-4.6826, 0.343437, -0.025],
-		"axis": [0.995, -0.105, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Rudder",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 1.61217, -4.25938],
-		"axis": [0, 0.866, -0.5],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Elevator_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "elevator",
-		"centerPoint": [-0.9685, 2.32, -4.995],
-		"axis": [0.966, 0, 0.259],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Elevator_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "elevator",
-		"centerPoint": [0.9685, 2.32, -4.995],
-		"axis": [0.966, 0, -0.259],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Flap_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "flaps_actual",
-		"centerPoint": [2.274, 0.090283, -0.4],
-		"axis": [-0.995, -0.105, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Flap_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "flaps_actual",
-		"centerPoint": [-2.274, 0.090283, -0.4],
-		"axis": [-0.995, 0.105, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Door_Top",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_l",
-		"centerPoint": [0.78125, 1.445, 0],
-		"axis": [0, 0, 135],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Door_Window",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_l",
-		"centerPoint": [0.78125, 1.445, 0],
-		"axis": [0, 0, 135],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Door_Bottom",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_l",
-		"centerPoint": [0.78125, -0.18, 0],
-		"axis": [0, 0, -135],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-		{
-	"objectName": "$GearStrutLeftRear",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [1.54375, 0.007494, 0],
-			"axis": [0, 0, -84],
-			"duration": 60,
-			"forwardsDelay": 0,
-			"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$GearStrutRightRear",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [-1.54375, 0.007494, 0],
-			"axis": [0, 0, 84],
-			"duration": 60,
-			"forwardsDelay": 0,
-			"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$GearStrutFront",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [0, 0.22624, 3.31875],
-			"axis": [-110, 0, 0],
-			"duration": 50,
-			"forwardsDelay": 30,
-			"reverseDelay": 30
-		},
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 0, 3.31875],
-		"axis": [0, -1, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$GearDoorLeftFront1",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [0.15625, 0.00749, 0],
-			"axis": [0, 0, 90],
-			"duration": 30,
-			"forwardsDelay": 0,
-			"reverseDelay": 80
-		},
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [0.15625, 0.00749, 0],
-			"axis": [0, 0, -90],
-			"duration": 30,
-			"forwardsDelay": 80,
-			"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$GearDoorLeftFront2",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [0.15625, 0.06999, 0],
-			"axis": [0, 0, 90],
-			"duration": 30,
-			"forwardsDelay": 0,
-			"reverseDelay": 80
-		},
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [0.15625, 0.06999, 0],
-			"axis": [0, 0, -90],
-			"duration": 30,
-			"forwardsDelay": 80,
-			"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$GearDoorRightFront1",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [-0.15625, 0.00749, 0],
-			"axis": [0, 0, -90],
-			"duration": 30,
-			"forwardsDelay": 0,
-			"reverseDelay": 80
-		},
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [-0.15625, 0.00749, 0],
-			"axis": [0, 0, 90],
-			"duration": 30,
-			"forwardsDelay": 80,
-			"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$GearDoorRightFront2",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [-0.15625, 0.06999, 0],
-			"axis": [0, 0, -90],
-			"duration": 30,
-			"forwardsDelay": 0,
-			"reverseDelay": 80
-		},
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [-0.15625, 0.06999, 0],
-			"axis": [0, 0, 90],
-			"duration": 30,
-			"forwardsDelay": 80,
-			"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$GearDoorBackFront",
-	"animations":
-		[
-		{
-			"animationType": "rotation",
-			"variable": "gear_setpoint",
-			"centerPoint": [0, -0.02376, 3.19375],
-			"axis": [-90, 0, 0],
-			"duration": 30,
-			"forwardsDelay": 80,
-			"reverseDelay": 0
-		}
-		]
-	}
-	]
+    "textObjects": [
+      {
+        "pos": [0.0313,1.25,-3.25],
+        "rot": [0.0,90.0,0.0],
+        "scale": 0.4,
+        "fieldName": "Callsign",
+        "defaultText": "N750RG",
+        "maxLength": 6,
+        "color": "#CCCCCC"
+      },
+      {
+        "pos": [-0.0313,1.25,-3.25],
+        "rot": [0.0,-90.0,0.0],
+        "scale": 0.45,
+        "fieldName": "Callsign",
+        "defaultText": "N750RG",
+        "maxLength": 6,
+        "color": "#CCCCCC"
+      }
+    ],
+    "animatedObjects": [
+      {
+        "objectName": "$Aileron_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [4.6826,0.343437,-0.025],
+            "axis": [-0.995,-0.105,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Aileron_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-4.6826,0.343437,-0.025],
+            "axis": [0.995,-0.105,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Rudder",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,1.61217,-4.25938],
+            "axis": [0.0,0.866,-0.5]
+          }
+        ]
+      },
+      {
+        "objectName": "$Elevator_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-0.9685,2.32,-4.995],
+            "axis": [0.966,0.0,0.259]
+          }
+        ]
+      },
+      {
+        "objectName": "$Elevator_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.9685,2.32,-4.995],
+            "axis": [0.966,0.0,-0.259]
+          }
+        ]
+      },
+      {
+        "objectName": "$Flap_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [2.274,0.090283,-0.4],
+            "axis": [-0.995,-0.105,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Flap_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-2.274,0.090283,-0.4],
+            "axis": [-0.995,0.105,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Door_Top",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_l",
+            "centerPoint": [0.78125,1.445,0.0],
+            "axis": [0.0,0.0,135.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$Door_Window",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_l",
+            "centerPoint": [0.78125,1.445,0.0],
+            "axis": [0.0,0.0,135.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$Door_Bottom",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_l",
+            "centerPoint": [0.78125,-0.18,0.0],
+            "axis": [0.0,0.0,-135.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$GearStrutLeftRear",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [1.54375,0.007494,0.0],
+            "axis": [0.0,0.0,-84.0],
+            "duration": 60
+          }
+        ]
+      },
+      {
+        "objectName": "$GearStrutRightRear",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-1.54375,0.007494,0.0],
+            "axis": [0.0,0.0,84.0],
+            "duration": 60
+          }
+        ]
+      },
+      {
+        "objectName": "$GearStrutFront",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,0.22624,3.31875],
+            "axis": [-110.0,0.0,0.0],
+            "duration": 50,
+            "forwardsDelay": 30,
+            "reverseDelay": 30
+          },
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,0.0,3.31875],
+            "axis": [0.0,-1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$GearDoorLeftFront1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.15625,0.00749,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30,
+            "reverseDelay": 80
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.15625,0.00749,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "$GearDoorLeftFront2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.15625,0.06999,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30,
+            "reverseDelay": 80
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.15625,0.06999,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "$GearDoorRightFront1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.15625,0.00749,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30,
+            "reverseDelay": 80
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.15625,0.00749,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "$GearDoorRightFront2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.15625,0.06999,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30,
+            "reverseDelay": 80
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.15625,0.06999,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30,
+            "forwardsDelay": 80
+          }
+        ]
+      },
+      {
+        "objectName": "$GearDoorBackFront",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,-0.02376,3.19375],
+            "axis": [-90.0,0.0,0.0],
+            "duration": 30,
+            "forwardsDelay": 80
+          }
+        ]
+      }
+    ],
+    "sounds": []
+  },
+  "prefixFolders": "",
+  "packID": "mtsofficialpack",
+  "systemName": "e500",
+  "classification": "vehicle",
+  "general": {
+    "description": "The Eclipse 500, first flown in 2002, created a new class of aircraft: the very light jet, or VLJ. The MTS version is configured to seat five, with the pilot in the front and four passengers behind them. A great addition to any private airport, and quite efficient for its capacity and speed as well.",
+    "materials": ["minecraft:iron_bars:0:6","minecraft:iron_trapdoor:0:8","oredict:ingotIron:15","oredict:dustRedstone:9","minecraft:comparator:0:1","minecraft:glass_pane:0:5"]
   }
 }

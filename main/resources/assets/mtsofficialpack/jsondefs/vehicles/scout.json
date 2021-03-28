@@ -1,567 +1,445 @@
 {
-  "definitions" : [
-		{
-		"name" : "Blue Scout",
-			"subName" : "_blue",
-			"extraMaterials" : ["oredict:dyeLightBlue:3"]
-		},
-		{
-		"name" : "Orange Scout",
-			"subName" : "_orange",
-			"extraMaterials" : ["oredict:dyeOrange:3"]
-		},
-		{
-		"name" : "Patriotic Scout",
-			"subName" : "_patriot",
-			"extraMaterials" : ["oredict:dyeBlue:1","oredict:dyeRed:1","oredict:dyeWhite:1"]
-		},
-		{
-		"name" : "Red Scout",
-			"subName" : "_red",
-			"extraMaterials" : ["oredict:dyeRed:3"]
-		},
-		{
-		"name" : "Yellow Scout",
-			"subName" : "_yellow",
-			"extraMaterials" : ["oredict:dyeYellow:3"]
-		}
-
-	],
-	
-  "general": {
-	"description" : "The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two, with area for cargo in the back.",
-    "type" : "car",
-		"openTop" : false,
-		"emptyMass" : 1637,
-		"materials" : ["oredict:ingotIron:18"]
-  },
-
-  "motorized" : {
-		"isBigTruck" : false,
-    "isFrontWheelDrive" : true,
-		"isRearWheelDrive" : true,
-		"hasCruiseControl" : true,
-		"axleRatio" : 3.55,
-    "dragCoefficient" : 0.6,
-    "fuelCapacity" : 15000,
-    "hornSound" : "mtsofficialpack:horn_car",
-         "instruments": [
+  "motorized": {
+    "isFrontWheelDrive": true,
+    "isRearWheelDrive": true,
+    "hasCruiseControl": true,
+    "emptyMass": 1637,
+    "fuelCapacity": 15000,
+    "axleRatio": 3.55,
+    "brakingFactor": 1.0,
+    "dragCoefficient": 0.6,
+    "instruments": [
       {
-        "pos": [
-          0.90745,
-          0.829139,
-          1.805
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          30.0,
-          66.25
-        ],
+        "pos": [0.90745,0.829139,1.805],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.015625,
         "hudX": 120,
         "hudY": 45,
-        "hudScale": 0.325,
-        "optionalPartNumber": 0
+        "hudScale": 0.325
       },
       {
-        "pos": [
-          0.7512,
-          0.829139,
-          1.805
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          40.0,
-          66.25
-        ],
+        "pos": [0.7512,0.829139,1.805],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.015625,
         "hudX": 160,
         "hudY": 45,
-        "hudScale": 0.325,
-        "optionalPartNumber": 0
+        "hudScale": 0.325
       },
       {
-        "pos": [
-          0.59495,
-          0.829139,
-          1.805
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          50.0,
-          66.25
-        ],
+        "pos": [0.59495,0.829139,1.805],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.015625,
         "hudX": 200,
         "hudY": 45,
-        "hudScale": 0.325,
-        "optionalPartNumber": 0
+        "hudScale": 0.325
       },
       {
-        "pos": [
-          0.4387,
-          0.829139,
-          1.805
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          60.0,
-          66.25
-        ],
+        "pos": [0.4387,0.829139,1.805],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.015625,
         "hudX": 240,
         "hudY": 45,
-        "hudScale": 0.325,
-        "optionalPartNumber": 0
+        "hudScale": 0.325
       },
       {
-        "pos": [
-          0.28245,
-          0.829139,
-          1.805
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
+        "pos": [0.28245,0.829139,1.805],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.015625,
         "hudX": 280,
         "hudY": 45,
-        "hudScale": 0.325,
-        "optionalPartNumber": 0
+        "hudScale": 0.325
       }
     ]
-  },	
-	"parts": [
-		{
-      "pos" : [-0.9875, -0.025, -0.0148575],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.40,
-			"maxValue" : 1.0
+  },
+  "parts": [
+    {
+      "pos": [-0.9875,-0.025,-0.0148575],
+      "minValue": 0.4,
+      "maxValue": 1.0,
+      "types": ["ground_wheel"]
     },
-		{
-      "pos" : [0.9875, -0.025, -0.0148575],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.40,
-			"maxValue" : 1.0
+    {
+      "pos": [0.9875,-0.025,-0.0148575],
+      "minValue": 0.4,
+      "maxValue": 1.0,
+      "types": ["ground_wheel"]
     },
-		{
-      "pos" : [-0.9875, -0.025, 2.76685],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.40,
-			"maxValue" : 1.0,
-			"turnsWithSteer" : true
+    {
+      "pos": [-0.9875,-0.025,2.76685],
+      "turnsWithSteer": true,
+      "minValue": 0.4,
+      "maxValue": 1.0,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
     },
-		{
-      "pos" : [0.9875, -0.025, 2.76685],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.40,
-			"maxValue" : 1.0,
-			"turnsWithSteer" : true
+    {
+      "pos": [0.9875,-0.025,2.76685],
+      "turnsWithSteer": true,
+      "minValue": 0.4,
+      "maxValue": 1.0,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
     },
-		{
-      "pos" : [-0.5769375, 0.42651875, 0.97715625],
-      "types" : ["seat"]
+    {
+      "pos": [-0.5769375,0.42651875,0.97715625],
+      "types": ["seat"]
     },
-		{
-      "pos" : [0.5769375, 0.42651875, 0.97715625],
-      "types" : ["seat"],
-      "isController" : true
+    {
+      "pos": [0.5769375,0.42651875,0.97715625],
+      "isController": true,
+      "types": ["seat"]
     },
-		{
-      "pos" : [0, 0.70651875, -0.43534375],
-      "types" : ["interactable_crate"],
-			"maxValue" : 5.0
+    {
+      "pos": [0.0,0.70651875,-0.43534375],
+      "maxValue": 5.0,
+      "types": ["interactable_crate"]
     },
-	{
-      "pos" : [0, .93, 0.025],
-      "types" : ["generic"],
-      "customTypes" : [ "scoutroof"]
+    {
+      "pos": [0.0,0.93,0.025],
+      "types": ["generic"],
+      "customTypes": ["scoutroof"]
     },
-		{
-      "pos" : [0, 0.2901875, 2.76685],
-      "types" : ["engine_car"],
-	  "exhaustObjects":
-				[
-				{
-				"pos": [1.1262, 0.09754, -0.74476],
-				"velocity": [1.0, 0, 0],
-				"scale": 1.0
-				}
-				],
-			"minValue" : 0.0,
-			"maxValue" : 1.25
+    {
+      "pos": [0.0,0.202463,2.406],
+      "maxValue": 1.25,
+      "types": ["engine_car"],
+      "particleObjects": [
+        {
+          "type": "smoke",
+          "color": "#D9D9D9",
+          "toColor": "#D9D9D9",
+          "transparency": 0.25,
+          "toTransparency": 0.25,
+          "scale": 1.0,
+          "pos": [1.1262,0.09754,-0.74476],
+          "velocityVector": [1.0,0.0,0.0],
+          "quantity": 1
+        }
+      ]
     }
   ],
-	
   "collision": [
-		{
-      "pos" : [0, 0.3, -0.25],
-      "width" : 1.0,
-      "height" : 0.15
+    {
+      "pos": [0.0,0.3,-0.25],
+      "width": 1.0,
+      "height": 0.15
     }
   ],
-"doors":
-[
-{
-	"name": "door_tailgate",
-	"closedPos": [0.72, 0.6, -0.7],
-	"openPos": [0.72, 0, -1.2],
-	"width": 0.720,
-	"height": 0.720
-},
-{
-	"name": "door_tailgate",
-	"closedPos": [0, 0.6, -0.7],
-	"openPos": [0, 0, -1.2],
-	"width": 0.720,
-	"height": 0.720
-},
-{
-	"name": "door_tailgate",
-	"closedPos": [-0.72, 0.6, -0.7],
-	"openPos": [-0.72, 0, -1.2],
-	"width": 0.720,
-	"height": 0.720
-},
-{
-	"name": "door_l",
-	"closedPos": [1, 0.5, 1],
-	"openPos": [1.8, 0.5, 1.4516],
-	"width": 0.4,
-	"height": 0.8
-},
-{
-	"name": "door_l",
-	"closedPos": [1, 0.5, 1.4],
-	"openPos": [1.4, 0.5, 1.6457],
-	"width": 0.4,
-	"height": 0.8
-},
-{
-	"name": "door_l",
-	"closedPos": [1, 0.5, 1.8],
-	"openPos": [1, 0.5, 1.8],
-	"width": 0.4,
-	"height": 0.8
-},
-{
-	"name": "door_r",
-	"closedPos": [-1, 0.5, 1],
-	"openPos": [-1.8, 0.5, 1.4516],
-	"width": 0.4,
-	"height": 0.8
-},
-{
-	"name": "door_r",
-	"closedPos": [-1, 0.5, 1.4],
-	"openPos": [-1.4, 0.5, 1.6457],
-	"width": 0.4,
-	"height": 0.8
-},
-{
-	"name": "door_r",
-	"closedPos": [-1, 0.5, 1.8],
-	"openPos": [-1, 0.5, 1.8],
-	"width": 0.4,
-	"height": 0.8
-},
-{
-	"name": "door_hood",
-	"closedPos": [0.5, 0.75, 3],
-	"openPos": [0.5, 1.7, 2.6],
-	"width": 1,
-	"height": 0.55
-},
-{
-	"name": "door_hood",
-	"closedPos": [0.5, 0.75, 2.4],
-	"openPos": [0.5, 1.25, 2],
-	"width": 1,
-	"height": 0.55
-},
-{
-	"name": "door_hood",
-	"closedPos": [-0.5, 0.75, 3],
-	"openPos": [-0.5, 1.7, 2.6],
-	"width": 1,
-	"height": 0.55
-},
-{
-	"name": "door_hood",
-	"closedPos": [-0.5, 0.75, 2.4],
-	"openPos": [-0.5, 1.25, 2],
-	"width": 1,
-	"height": 0.55
-}
-],
-
+  "doors": [
+    {
+      "name": "door_tailgate",
+      "closedPos": [0.72,0.6,-0.7],
+      "openPos": [0.72,0.0,-1.2],
+      "width": 0.72,
+      "height": 0.72
+    },
+    {
+      "name": "door_tailgate",
+      "closedPos": [0.0,0.6,-0.7],
+      "openPos": [0.0,0.0,-1.2],
+      "width": 0.72,
+      "height": 0.72
+    },
+    {
+      "name": "door_tailgate",
+      "closedPos": [-0.72,0.6,-0.7],
+      "openPos": [-0.72,0.0,-1.2],
+      "width": 0.72,
+      "height": 0.72
+    },
+    {
+      "name": "door_l",
+      "closedPos": [1.0,0.5,1.0],
+      "openPos": [1.8,0.5,1.4516],
+      "width": 0.4,
+      "height": 0.8
+    },
+    {
+      "name": "door_l",
+      "closedPos": [1.0,0.5,1.4],
+      "openPos": [1.4,0.5,1.6457],
+      "width": 0.4,
+      "height": 0.8
+    },
+    {
+      "name": "door_l",
+      "closedPos": [1.0,0.5,1.8],
+      "openPos": [1.0,0.5,1.8],
+      "width": 0.4,
+      "height": 0.8
+    },
+    {
+      "name": "door_r",
+      "closedPos": [-1.0,0.5,1.0],
+      "openPos": [-1.8,0.5,1.4516],
+      "width": 0.4,
+      "height": 0.8
+    },
+    {
+      "name": "door_r",
+      "closedPos": [-1.0,0.5,1.4],
+      "openPos": [-1.4,0.5,1.6457],
+      "width": 0.4,
+      "height": 0.8
+    },
+    {
+      "name": "door_r",
+      "closedPos": [-1.0,0.5,1.8],
+      "openPos": [-1.0,0.5,1.8],
+      "width": 0.4,
+      "height": 0.8
+    },
+    {
+      "name": "door_hood",
+      "closedPos": [0.5,0.75,3.0],
+      "openPos": [0.5,1.7,2.6],
+      "width": 1.0,
+      "height": 0.55
+    },
+    {
+      "name": "door_hood",
+      "closedPos": [0.5,0.75,2.4],
+      "openPos": [0.5,1.25,2.0],
+      "width": 1.0,
+      "height": 0.55
+    },
+    {
+      "name": "door_hood",
+      "closedPos": [-0.5,0.75,3.0],
+      "openPos": [-0.5,1.7,2.6],
+      "width": 1.0,
+      "height": 0.55
+    },
+    {
+      "name": "door_hood",
+      "closedPos": [-0.5,0.75,2.4],
+      "openPos": [-0.5,1.25,2.0],
+      "width": 1.0,
+      "height": 0.55
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "_blue",
+      "name": "Blue Scout",
+      "extraMaterials": ["oredict:dyeLightBlue:3"]
+    },
+    {
+      "subName": "_orange",
+      "name": "Orange Scout",
+      "extraMaterials": ["oredict:dyeOrange:3"]
+    },
+    {
+      "subName": "_patriot",
+      "name": "Patriotic Scout",
+      "extraMaterials": ["oredict:dyeBlue:1","oredict:dyeRed:1","oredict:dyeWhite:1"]
+    },
+    {
+      "subName": "_red",
+      "name": "Red Scout",
+      "extraMaterials": ["oredict:dyeRed:3"]
+    },
+    {
+      "subName": "_yellow",
+      "name": "Yellow Scout",
+      "extraMaterials": ["oredict:dyeYellow:3"]
+    },
+    {
+      "subName": "_army",
+      "name": "Army Scout",
+      "description": "Skin is added by Immersive Vehicles Vanity, not part of original pack.",
+      "extraMaterials": ["minecraft:dye:2:3"]
+    }
+  ],
   "rendering": {
-	"textObjects":
-		[
-		{
-		"pos": [0.892836, 0.030387, 3.62459],
-		"rot": [0, 0, 0],
-		"scale": 0.15,
-		"color": "#000000",
-		"fieldName": "License Plate",
-		"defaultText": "IH SCOUT",
-		"maxLength": 7,
-		"lightsUp": false,
-		"renderPosition": 0
-		},
-		{
-		"pos": [0.892837, 0.092888, -1.08253],
-		"rot": [0, 180, 0],
-		"scale": 0.15,
-		"color": "#000000",
-		"fieldName": "License Plate",
-		"defaultText": "IH SCOUT",
-		"maxLength": 7,
-		"lightsUp": false,
-		"renderPosition": 0
-		}
-		],
-"animatedObjects":
-	[
-	{
-	"objectName": "$gas",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "throttle",
-		"centerPoint": [0, 0.438564, 1.99344],
-		"axis": [-20, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 2,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$brake",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "brake",
-		"centerPoint": [0, 0.438564, 1.99344],
-		"axis": [-20, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 2,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$parking_brake",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "p_brake",
-		"centerPoint": [0, 0.39903, 1.96825],
-		"axis": [-20, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 5,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$gearshift",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "engine_gearshift_1",
-		"centerPoint": [0, 0.459074, 1.50387],
-		"axis": [2, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$door_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_l",
-		"centerPoint": [1.1262, 0, 1.95699],
-		"axis": [0, -60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$door_L_window",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_l",
-		"centerPoint": [1.1262, 0, 1.95699],
-		"axis": [0, -60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$door_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_r",
-		"centerPoint": [-1.1262, 0, 1.95699],
-		"axis": [0, 60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$door_R_window",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_r",
-		"centerPoint": [-1.1262, 0, 1.95699],
-		"axis": [0, 60, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$door_tailgate",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "door_tailgate",
-		"centerPoint": [0, 0.260388, -0.971157],
-		"axis": [-90, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$hood",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "part_present_9",
-		"centerPoint": [0, 0.885389, 2.09134],
-		"axis": [60, 0, 0],
-		"offset": -60,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 10,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$steering_wheel",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0.588149, 0.593752, 1.82917],
-		"axis": [0, -0.5, 0.5],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	}
-	]
+    "textObjects": [
+      {
+        "pos": [0.892836,0.030387,3.62459],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.15,
+        "fieldName": "License Plate",
+        "defaultText": "IH SCOUT",
+        "maxLength": 7,
+        "color": "#000000"
+      },
+      {
+        "pos": [0.892837,0.092888,-1.08253],
+        "rot": [0.0,180.0,0.0],
+        "scale": 0.15,
+        "fieldName": "License Plate",
+        "defaultText": "IH SCOUT",
+        "maxLength": 7,
+        "color": "#000000"
+      }
+    ],
+    "animatedObjects": [
+      {
+        "objectName": "$gas",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.438564,1.99344],
+            "axis": [-20.0,0.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "$brake",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "brake",
+            "centerPoint": [0.0,0.438564,1.99344],
+            "axis": [-20.0,0.0,0.0],
+            "duration": 2
+          }
+        ]
+      },
+      {
+        "objectName": "$parking_brake",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "p_brake",
+            "centerPoint": [0.0,0.39903,1.96825],
+            "axis": [-20.0,0.0,0.0],
+            "duration": 5
+          }
+        ]
+      },
+      {
+        "objectName": "$gearshift",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_gearshift_1",
+            "centerPoint": [0.0,0.459074,1.50387],
+            "axis": [2.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$door_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_l",
+            "centerPoint": [1.1262,0.0,1.95699],
+            "axis": [0.0,-60.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$door_L_window",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_l",
+            "centerPoint": [1.1262,0.0,1.95699],
+            "axis": [0.0,-60.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$door_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_r",
+            "centerPoint": [-1.1262,0.0,1.95699],
+            "axis": [0.0,60.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$door_R_window",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_r",
+            "centerPoint": [-1.1262,0.0,1.95699],
+            "axis": [0.0,60.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$door_tailgate",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_tailgate",
+            "centerPoint": [0.0,0.260388,-0.971157],
+            "axis": [-90.0,0.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$hood",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "part_present_9",
+            "centerPoint": [0.0,0.885389,2.09134],
+            "axis": [60.0,0.0,0.0],
+            "offset": -60.0,
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$steering_wheel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.588149,0.593752,1.82917],
+            "axis": [0.0,-0.5,0.5]
+          }
+        ]
+      }
+    ],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:horn_car",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "horn",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true
+      }
+    ]
+  },
+  "prefixFolders": "",
+  "packID": "mtsofficialpack",
+  "systemName": "scout",
+  "classification": "vehicle",
+  "general": {
+    "description": "The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two, with area for cargo in the back.",
+    "materials": ["oredict:ingotIron:18"]
   }
 }
-

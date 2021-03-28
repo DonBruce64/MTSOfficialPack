@@ -1,14 +1,135 @@
 {
-    "general": {
-        "name" : "Detroit Diesel Truck Engine",
-        "type" : "engine_car",
-		"materials" : ["minecraft:piston:0:6", "minecraft:obsidian:0:8", "oredict:ingotIron:2"]
-    },
-	"engine" : {
-        "starterPower" : 25,
-        "maxRPM" : 3500,
-        "fuelConsumption" : 1.5,
-        "fuelType" : "diesel",
-        "gearRatios" : [-6.33, 0.0, 11.83, 7.90, 5.79, 4.32, 3.20, 2.47, 1.81, 1.35, 1.00]
-	}
+  "generic": {
+    "type": "engine_car"
+  },
+  "engine": {
+    "starterPower": 25,
+    "shiftSpeed": 20,
+    "revResistance": 10,
+    "maxRPM": 3500,
+    "fuelConsumption": 0.75,
+    "gearRatios": [
+      -6.33,
+      0.0,
+      11.83,
+      7.9,
+      5.79,
+      4.32,
+      3.2,
+      2.47,
+      1.81,
+      1.35,
+      1.0
+    ],
+    "fuelType": "diesel"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Detroit Diesel Truck Engine",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "sounds": [
+      {
+        "name": "mtsofficialpack:enginedetroitdiesel_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:enginedetroitdiesel_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:enginedetroitdiesel_sputter",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mts:engine_shifting_grinding",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_badshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:enginedetroitdiesel_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.3,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.002,0.0]
+          }
+        ],
+        "looping": true
+      },
+      {
+        "name": "mtsofficialpack:enginedetroitdiesel_running",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,7.0E-4,0.0],
+            "offset": 0.35
+          }
+        ],
+        "looping": true
+      }
+    ]
+  },
+  "prefixFolders": "",
+  "packID": "mtsofficialpack",
+  "systemName": "enginedetroitdiesel",
+  "classification": "part",
+  "general": {
+    "name": "Detroit Diesel Truck Engine",
+    "materials": ["minecraft:piston:0:6","minecraft:obsidian:0:8","oredict:ingotIron:2"]
+  }
 }

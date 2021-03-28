@@ -1,230 +1,83 @@
 {
-  "definitions" : [
-		{
-		"name" : "Black Ford Trimotor",
-			"subName" : "_black",
-			"extraMaterials" : ["oredict:dyeBlack:4"]
-		},
-		{
-		"name" : "Blue Ford Trimotor",
-			"subName" : "_blue",
-			"extraMaterials" : ["oredict:dyeBlue:4"]
-		},
-		{
-		"name" : "Red Ford Trimotor",
-			"subName" : "_red",
-			"extraMaterials" : ["oredict:dyeRed:4"]
-		},
-		{
-		"name" : "White Ford Trimotor",
-			"subName" : "_white",
-			"extraMaterials" : ["oredict:dyeWhite:4"]
-		}
-	],
-
-  "general": {
-	"description" : "The Ford Trimotor is an old, yet trustworthy aircraft.  Its large wingspan provides ample lift for short takeoffs, as well as enough to maintain flight with one engine out.  With room for 12 passengers or crates, it's a great choice for long-haul flights where reliability (but not time) is of the essence.",
-    "type" : "plane",
-		"isAircraft" : true,
-		"openTop" : false,
-		"emptyMass" : 3000,
-		"materials" : ["oredict:ingotIron:40", "minecraft:iron_bars:0:4", "minecraft:glass_pane:0:22"]
-  },
-
-  "motorized" : {
-    "hasFlaps" : false,
-    "wingSpan" : 22.6,
-    "wingArea" : 70.0,
-    "tailDistance" : 12,
-		"aileronArea" : 2.75,
-    "rudderArea" : 5.0,
-    "elevatorArea" : 7.5,
-    "defaultElevatorAngle" : -5.0,
-    "fuelCapacity" : 25000,
-		"instruments": [
+  "motorized": {
+    "isAircraft": true,
+    "emptyMass": 3000,
+    "fuelCapacity": 25000,
+    "brakingFactor": 1.0,
+    "tailDistance": 12.0,
+    "wingSpan": 22.6,
+    "wingArea": 70.0,
+    "aileronArea": 2.75,
+    "elevatorArea": 7.5,
+    "rudderArea": 5.0,
+    "instruments": [
       {
-        "pos": [
-          0.6875,
-          0.454488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          22.0,
-          64.0
-        ],
+        "pos": [0.6875,0.454488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 88,
         "hudY": 39,
-        "hudScale": 0.375,
-        "optionalPartNumber": 0
+        "hudScale": 0.375
       },
       {
-        "pos": [
-          0.390625,
-          0.454488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          35.0,
-          63.0
-        ],
+        "pos": [0.390625,0.454488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 140,
         "hudY": 36,
-        "hudScale": 0.45,
-        "optionalPartNumber": 0
+        "hudScale": 0.45
       },
       {
-        "pos": [
-          0.09375,
-          0.454488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          50.0,
-          63.0
-        ],
+        "pos": [0.09375,0.454488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 200,
         "hudY": 36,
-        "hudScale": 0.45,
-        "optionalPartNumber": 0
+        "hudScale": 0.45
       },
       {
-        "pos": [
-          -0.203125,
-          0.454488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          65.0,
-          63.0
-        ],
+        "pos": [-0.203125,0.454488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 260,
         "hudY": 36,
-        "hudScale": 0.45,
-        "optionalPartNumber": 0
+        "hudScale": 0.45
       },
       {
-        "pos": [
-          -0.5,
-          0.454488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          78.0,
-          64.0
-        ],
+        "pos": [-0.5,0.454488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 312,
         "hudY": 39,
-        "hudScale": 0.375,
-        "optionalPartNumber": 0
+        "hudScale": 0.375
       },
       {
-        "pos": [
-          0.390625,
-          0.154488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          36.0,
-          88.0
-        ],
+        "pos": [0.390625,0.154488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 144,
         "hudY": 106,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          0.09375,
-          0.154488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          50.0,
-          88.0
-        ],
+        "pos": [0.09375,0.154488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 200,
         "hudY": 106,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          -0.203125,
-          0.154488,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          64.0,
-          88.0
-        ],
+        "pos": [-0.203125,0.154488,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.0375,
         "hudX": 256,
         "hudY": 106,
-        "hudScale": 0.425,
-        "optionalPartNumber": 0
+        "hudScale": 0.425
       },
       {
-        "pos": [
-          2.3,
-          0.366987,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          40.0,
-          65.0
-        ],
+        "pos": [2.3,0.366987,1.0],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.025,
         "hudX": 160,
         "hudY": 42,
@@ -232,20 +85,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          2.3,
-          0.166987,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          50.0,
-          65.0
-        ],
+        "pos": [2.3,0.166987,1.0],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.025,
         "hudX": 200,
         "hudY": 42,
@@ -253,20 +94,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          2.3,
-          -0.033013,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          40.0,
-          80.0
-        ],
+        "pos": [2.3,-0.033013,1.0],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.025,
         "hudX": 160,
         "hudY": 84,
@@ -274,20 +103,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          2.3,
-          -0.233013,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          90.0,
-          0.0
-        ],
-        "hudpos": [
-          50.0,
-          80.0
-        ],
+        "pos": [2.3,-0.233013,1.0],
+        "rot": [0.0,90.0,0.0],
         "scale": 0.025,
         "hudX": 200,
         "hudY": 84,
@@ -295,20 +112,8 @@
         "optionalPartNumber": 1
       },
       {
-        "pos": [
-          0.39375,
-          -0.15,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          60.0,
-          65.0
-        ],
+        "pos": [0.39375,-0.15,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.025,
         "hudX": 240,
         "hudY": 42,
@@ -316,20 +121,8 @@
         "optionalPartNumber": 2
       },
       {
-        "pos": [
-          0.19375,
-          -0.15,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          70.0,
-          65.0
-        ],
+        "pos": [0.19375,-0.15,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.025,
         "hudX": 280,
         "hudY": 42,
@@ -337,20 +130,8 @@
         "optionalPartNumber": 2
       },
       {
-        "pos": [
-          -0.00625,
-          -0.15,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          60.0,
-          80.0
-        ],
+        "pos": [-0.00625,-0.15,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.025,
         "hudX": 240,
         "hudY": 84,
@@ -358,20 +139,8 @@
         "optionalPartNumber": 2
       },
       {
-        "pos": [
-          -0.20625,
-          -0.15,
-          2.84
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hudpos": [
-          70.0,
-          80.0
-        ],
+        "pos": [-0.20625,-0.15,2.84],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.025,
         "hudX": 280,
         "hudY": 84,
@@ -379,20 +148,8 @@
         "optionalPartNumber": 2
       },
       {
-        "pos": [
-          -2.3,
-          0.366987,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
-        "hudpos": [
-          80.0,
-          65.0
-        ],
+        "pos": [-2.3,0.366987,1.0],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.025,
         "hudX": 320,
         "hudY": 42,
@@ -400,20 +157,8 @@
         "optionalPartNumber": 3
       },
       {
-        "pos": [
-          -2.3,
-          0.166987,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
-        "hudpos": [
-          90.0,
-          65.0
-        ],
+        "pos": [-2.3,0.166987,1.0],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.025,
         "hudX": 360,
         "hudY": 42,
@@ -421,20 +166,8 @@
         "optionalPartNumber": 3
       },
       {
-        "pos": [
-          -2.3,
-          -0.033013,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
-        "hudpos": [
-          80.0,
-          80.0
-        ],
+        "pos": [-2.3,-0.033013,1.0],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.025,
         "hudX": 320,
         "hudY": 84,
@@ -442,20 +175,8 @@
         "optionalPartNumber": 3
       },
       {
-        "pos": [
-          -2.3,
-          -0.233013,
-          1.0
-        ],
-        "rot": [
-          0.0,
-          -90.0,
-          0.0
-        ],
-        "hudpos": [
-          90.0,
-          80.0
-        ],
+        "pos": [-2.3,-0.233013,1.0],
+        "rot": [0.0,-90.0,0.0],
         "scale": 0.025,
         "hudX": 360,
         "hudY": 84,
@@ -463,426 +184,398 @@
         "optionalPartNumber": 3
       },
       {
-        "pos": [
-          -0.75,
-          0.579488,
-          1.43
-        ],
-        "rot": [
-          0.0,
-          0.0,
-          0.0
-        ],
+        "pos": [-0.75,0.579488,1.43],
+        "rot": [0.0,0.0,0.0],
         "scale": 0.05625,
         "hudX": 312,
         "hudY": 106,
         "hudScale": 0.425,
-        "optionalPartNumber": 0,
-		"defaultInstrument" : "mtsofficialpack:instrument_aircraft_altimeter"
+        "defaultInstrument": "mtsofficialpack:instrument_aircraft_altimeter"
       }
     ]
-  },	
-	"parts": [
+  },
+  "parts": [
     {
-      "pos" : [0, 0.35, -10.5],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.85,
-			"maxValue" : 1.15,
-			"turnsWithSteer" : true
+      "pos": [0.0,0.35,-10.5],
+      "turnsWithSteer": true,
+      "minValue": 0.85,
+      "maxValue": 1.15,
+      "types": ["ground_wheel"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,1.0,0.0]
+        }
+      ]
     },
     {
-      "pos" : [-2.875, -1.92051, 0.8],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.85,
-			"maxValue" : 1.15
+      "pos": [-2.875,-1.92051,0.8],
+      "minValue": 0.85,
+      "maxValue": 1.15,
+      "types": ["ground_wheel"]
     },
     {
-      "pos" : [2.875, -1.92051, 0.8],
-      "types" : ["ground_wheel"],
-			"minValue" : 0.85,
-			"maxValue" : 1.15
-    },
-		{
-      "pos" : [2.875, 0, 0.9975],
-      "types" : ["engine_aircraft"],
-			"minValue" : 0.5,
-			"maxValue" : 1.25
-    },
-		{
-      "pos" : [0, 0, 3.625],
-      "types" : ["engine_aircraft"],
-			"minValue" : 0.5,
-			"maxValue" : 1.25
-    },
-		{
-      "pos" : [-2.875, 0, 0.9975],
-      "types" : ["engine_aircraft"],
-			"minValue" : 0.5,
-			"maxValue" : 1.25
+      "pos": [2.875,-1.92051,0.8],
+      "minValue": 0.85,
+      "maxValue": 1.15,
+      "types": ["ground_wheel"]
     },
     {
-      "pos" : [0.5, 0.0125, 2.0],
-      "types" : ["seat"],
-			"isController" : true,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [2.875,0.0,1.5625],
+      "minValue": 0.5,
+      "maxValue": 1.25,
+      "types": ["engine_aircraft_radial"]
     },
     {
-      "pos" : [-0.5, 0.0125, 2.0],
-      "types" : ["seat"],
-			"isController" : true,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [0.0,0.0,4.22094],
+      "minValue": 0.5,
+      "maxValue": 1.25,
+      "types": ["engine_aircraft_radial"]
     },
     {
-      "pos" : [0.625, -0.5125, 1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [-2.875,0.0,1.5625],
+      "minValue": 0.5,
+      "maxValue": 1.25,
+      "types": ["engine_aircraft_radial"]
     },
     {
-      "pos" : [-0.625, -0.5125, 1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [0.5,0.0125,2.0],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "isController": true,
+      "types": ["seat"]
     },
     {
-      "pos" : [0.625, -0.5125, -0.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [-0.5,0.0125,2.0],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "isController": true,
+      "types": ["seat"]
     },
     {
-      "pos" : [-0.625, -0.5125, -0.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [0.625,-0.5125,1.0],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
     },
     {
-      "pos" : [0.625, -0.5125, -1.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [-0.625,-0.5125,1.0],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
     },
     {
-      "pos" : [-0.625, -0.5125, -1.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [0.625,-0.5125,-0.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
     },
     {
-      "pos" : [0.625, -0.5125, -2.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [-0.625,-0.5125,-0.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
     },
     {
-      "pos" : [-0.625, -0.5125, -2.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
-    },		
-    {
-      "pos" : [0.625, -0.5125, -3.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [0.625,-0.5125,-1.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
     },
     {
-      "pos" : [-0.625, -0.5125, -3.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
-    },	
-    {
-      "pos" : [0.625, -0.5125, -4.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [-0.625,-0.5125,-1.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
     },
     {
-      "pos" : [-0.625, -0.5125, -4.1],
-      "types" : ["seat", "interactable_crate"],
-			"minValue" : 0,
-			"maxValue" : 3,
-			"dismountPos" : [-2.0, 0, -5.0]
+      "pos": [0.625,-0.5125,-2.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
+    },
+    {
+      "pos": [-0.625,-0.5125,-2.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
+    },
+    {
+      "pos": [0.625,-0.5125,-3.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
+    },
+    {
+      "pos": [-0.625,-0.5125,-3.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
+    },
+    {
+      "pos": [0.625,-0.5125,-4.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
+    },
+    {
+      "pos": [-0.625,-0.5125,-4.1],
+      "dismountPos": [-2.0,0.0,-5.0],
+      "maxValue": 3.0,
+      "types": ["seat","interactable_crate"]
     }
   ],
-	
   "collision": [
-	{
-		"pos" : [0.000, 0.000, 3.250],
-		"width" : 1.000,
-		"height" : 1.000
-	},
-	{
-		"pos" : [-3.000, 0.000, 0.500],
-		"width" : 1.000,
-		"height" : 1.000
-	},
-	{
-		"pos" : [3.000, 0.000, 0.500],
-		"width" : 1.000,
-		"height" : 1.000
-	},
-	{
-		"pos" : [0.000, 1.438, -0.250],
-		"width" : 3.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [-2.500, 1.438, -0.250],
-		"width" : 3.250,
-		"height" : 0.125
-	},
-	{
-		"pos" : [2.500, 1.438, -0.250],
-		"width" : 3.250,
-		"height" : 0.125
-	},
-	{
-		"pos" : [-4.500, 1.438, -0.250],
-		"width" : 3.000,
-		"height" : 0.125
-	},
-	{
-		"pos" : [4.500, 1.438, -0.250],
-		"width" : 3.000,
-		"height" : 0.125
-	},
-	{
-		"pos" : [-6.500, 1.438, -0.250],
-		"width" : 2.750,
-		"height" : 0.125
-	},
-	{
-		"pos" : [6.500, 1.438, -0.250],
-		"width" : 2.750,
-		"height" : 0.125
-	},
-	{
-		"pos" : [-8.500, 1.438, -0.250],
-		"width" : 2.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [8.500, 1.438, -0.250],
-		"width" : 2.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [-9.500, 1.438, -0.250],
-		"width" : 2.250,
-		"height" : 0.125
-	},
-	{
-		"pos" : [9.500, 1.438, -0.250],
-		"width" : 2.250,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.000, -0.637, 2.500],
-		"width" : 1.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.000, -0.938, 0.250],
-		"width" : 1.750,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.000, -0.938, -1.625],
-		"width" : 1.750,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.000, -0.938, -3.500],
-		"width" : 1.750,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.000, 1.438, -3.500],
-		"width" : 1.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.000, 0.500, -5.500],
-		"width" : 1.250,
-		"height" : 2.500
-	},
-	{
-		"pos" : [0.000, 0.500, -7.000],
-		"width" : 1.250,
-		"height" : 2.000
-	},
-	{
-		"pos" : [0.000, 0.750, -8.000],
-		"width" : 1.000,
-		"height" : 1.500
-	},
-	{
-		"pos" : [0.000, 1.000, -9.000],
-		"width" : 0.750,
-		"height" : 1.000
-	},
-	{
-		"pos" : [-0.750, 1.263, -10.000],
-		"width" : 1.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.750, 1.263, -10.000],
-		"width" : 1.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [-2.500, 1.263, -10.000],
-		"width" : 1.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [2.500, 1.263, -10.000],
-		"width" : 1.500,
-		"height" : 0.125
-	},
-	{
-		"pos" : [0.000, 1.825, -10.000],
-		"width" : 0.250,
-		"height" : 1.250
-	},
-	{
-		"pos" : [0.000, 1.825, -10.500],
-		"width" : 0.250,
-		"height" : 1.250
-	}
+    {
+      "pos": [0.0,0.0,3.25],
+      "width": 1.0,
+      "height": 1.0
+    },
+    {
+      "pos": [-3.0,0.0,0.5],
+      "width": 1.0,
+      "height": 1.0
+    },
+    {
+      "pos": [3.0,0.0,0.5],
+      "width": 1.0,
+      "height": 1.0
+    },
+    {
+      "pos": [0.0,1.438,-0.25],
+      "width": 3.5,
+      "height": 0.125
+    },
+    {
+      "pos": [-2.5,1.438,-0.25],
+      "width": 3.25,
+      "height": 0.125
+    },
+    {
+      "pos": [2.5,1.438,-0.25],
+      "width": 3.25,
+      "height": 0.125
+    },
+    {
+      "pos": [-4.5,1.438,-0.25],
+      "width": 3.0,
+      "height": 0.125
+    },
+    {
+      "pos": [4.5,1.438,-0.25],
+      "width": 3.0,
+      "height": 0.125
+    },
+    {
+      "pos": [-6.5,1.438,-0.25],
+      "width": 2.75,
+      "height": 0.125
+    },
+    {
+      "pos": [6.5,1.438,-0.25],
+      "width": 2.75,
+      "height": 0.125
+    },
+    {
+      "pos": [-8.5,1.438,-0.25],
+      "width": 2.5,
+      "height": 0.125
+    },
+    {
+      "pos": [8.5,1.438,-0.25],
+      "width": 2.5,
+      "height": 0.125
+    },
+    {
+      "pos": [-9.5,1.438,-0.25],
+      "width": 2.25,
+      "height": 0.125
+    },
+    {
+      "pos": [9.5,1.438,-0.25],
+      "width": 2.25,
+      "height": 0.125
+    },
+    {
+      "pos": [0.0,-0.637,2.5],
+      "width": 1.5,
+      "height": 0.125
+    },
+    {
+      "pos": [0.0,-0.938,0.25],
+      "width": 1.75,
+      "height": 0.125
+    },
+    {
+      "pos": [0.0,-0.938,-1.625],
+      "width": 1.75,
+      "height": 0.125
+    },
+    {
+      "pos": [0.0,-0.938,-3.5],
+      "width": 1.75,
+      "height": 0.125
+    },
+    {
+      "pos": [0.0,1.438,-3.5],
+      "width": 1.5,
+      "height": 0.125
+    },
+    {
+      "pos": [0.0,0.5,-5.5],
+      "width": 1.25,
+      "height": 2.5
+    },
+    {
+      "pos": [0.0,0.5,-7.0],
+      "width": 1.25,
+      "height": 2.0
+    },
+    {
+      "pos": [0.0,0.75,-8.0],
+      "width": 1.0,
+      "height": 1.5
+    },
+    {
+      "pos": [0.0,1.0,-9.0],
+      "width": 0.75,
+      "height": 1.0
+    },
+    {
+      "pos": [-0.75,1.263,-10.0],
+      "width": 1.5,
+      "height": 0.125
+    },
+    {
+      "pos": [0.75,1.263,-10.0],
+      "width": 1.5,
+      "height": 0.125
+    },
+    {
+      "pos": [-2.5,1.263,-10.0],
+      "width": 1.5,
+      "height": 0.125
+    },
+    {
+      "pos": [2.5,1.263,-10.0],
+      "width": 1.5,
+      "height": 0.125
+    },
+    {
+      "pos": [0.0,1.825,-10.0],
+      "width": 0.25,
+      "height": 1.25
+    },
+    {
+      "pos": [0.0,1.825,-10.5],
+      "width": 0.25,
+      "height": 1.25
+    }
   ],
-
+  "definitions": [
+    {
+      "subName": "_black",
+      "name": "Black Ford Trimotor",
+      "extraMaterials": ["oredict:dyeBlack:4"]
+    },
+    {
+      "subName": "_blue",
+      "name": "Blue Ford Trimotor",
+      "extraMaterials": ["oredict:dyeBlue:4"]
+    },
+    {
+      "subName": "_red",
+      "name": "Red Ford Trimotor",
+      "extraMaterials": ["oredict:dyeRed:4"]
+    },
+    {
+      "subName": "_white",
+      "name": "White Ford Trimotor",
+      "extraMaterials": ["oredict:dyeWhite:4"]
+    },
+    {
+      "subName": "_mai",
+      "name": "Ford Trimotor - Mackrel International Airlines",
+      "extraMaterials": ["minecraft:dye:12:3"]
+    }
+  ],
   "rendering": {
-	"textObjects":
-		[
-		{
-		"pos": [-6, 1.65, 0.5],
-		"rot": [-90, 180, 0],
-		"scale": 2.0,
-		"color": "#000000",
-		"fieldName": "Callsign",
-		"defaultText": "DB32-1204-UL",
-		"maxLength": 12,
-		"lightsUp": false,
-		"renderPosition": 0
-		}
-		],
-"animatedObjects":
-	[
-	{
-	"objectName": "$Aileron_L",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "aileron",
-		"centerPoint": [0, 1.61073, -1.25],
-		"axis": [-1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Aileron_R",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "aileron",
-		"centerPoint": [0, 1.61073, -1.25],
-		"axis": [1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Elevators",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "elevator",
-		"centerPoint": [0, 1.391986, -10.1975],
-		"axis": [1, 0, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "$Rudder",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 0, -10.1975],
-		"axis": [0, 1, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	},
-	{
-	"objectName": "&$NavigationLight_FFFFFF_FFFFF_111",
-	"animations":
-		[
-		{
-		"animationType": "rotation",
-		"variable": "rudder",
-		"centerPoint": [0, 0, -10.1975],
-		"axis": [0, 1, 0],
-		"offset": 0.0,
-		"addPriorOffset": false,
-		"clampMin": 0.0,
-		"clampMax": 0.0,
-		"absolute": false,
-		"duration": 0,
-		"forwardsDelay": 0,
-		"reverseDelay": 0
-		}
-		]
-	}
-	]
+    "textObjects": [
+      {
+        "pos": [-6.0,1.65,0.5],
+        "rot": [-90.0,180.0,0.0],
+        "scale": 2.0,
+        "fieldName": "Callsign",
+        "defaultText": "DB32-1204-UL",
+        "maxLength": 12,
+        "color": "#000000"
+      }
+    ],
+    "animatedObjects": [
+      {
+        "objectName": "$Aileron_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.0,1.61073,-1.25],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Aileron_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.0,1.61073,-1.25],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Elevators",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.0,1.391986,-10.1975],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Rudder",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,0.0,-10.1975],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "&$NavigationLight_FFFFFF_FFFFF_111",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,0.0,-10.1975],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      }
+    ],
+    "sounds": []
+  },
+  "prefixFolders": "",
+  "packID": "mtsofficialpack",
+  "systemName": "trimotor",
+  "classification": "vehicle",
+  "general": {
+    "description": "The Ford Trimotor is an old, yet trustworthy aircraft.  Its large wingspan provides ample lift for short takeoffs, as well as enough to maintain flight with one engine out.  With room for 12 passengers or crates, it's a great choice for long-haul flights where reliability (but not time) is of the essence.",
+    "materials": ["oredict:ingotIron:40","minecraft:iron_bars:0:4","minecraft:glass_pane:0:22"]
   }
 }
