@@ -6,10 +6,23 @@
     },
 	"ground" : {
     "isWheel": true,
-    "canGoFlat": true,
+    "flatHeight": 0.4375,
     "height" : 1.0,
 		"width" : 0.5,
 		"motiveFriction" : 0.5,
 		"lateralFriction" : 0.5
+	},
+	"rendering" : {
+		"animatedObjects" : [
+      {
+        "objectName": "tire",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_isflat"
+          }
+        ]
+      }
+    ]
 	}
 }
