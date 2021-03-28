@@ -89,13 +89,6 @@
         "pitchAnimations": [
           {
             "animationType": "translation",
-            "variable": "electric_power",
-            "axis": [0.0,0.1,0.0],
-            "offset": 0.3,
-            "clampMax": 1.0
-          },
-          {
-            "animationType": "translation",
             "variable": "engine_rpm",
             "axis": [0.0,0.002,0.0]
           }
