@@ -125,13 +125,13 @@
       "pos": [-1.4,-1.4875,0.375],
       "minValue": 0.65,
       "maxValue": 0.95,
-      "types": ["ground_wheel"]
+      "types": ["ground_wheel", "ground_wheel_aircraft"]
     },
     {
       "pos": [1.4,-1.4875,0.375],
       "minValue": 0.65,
       "maxValue": 0.95,
-      "types": ["ground_wheel"]
+      "types": ["ground_wheel", "ground_wheel_aircraft"]
     },
     {
       "pos": [-0.8125,0.3125,0.25],
@@ -165,7 +165,7 @@
       "pos": [0.0,-0.05,-1.635],
       "dismountPos": [1.5,0.0,-1.5],
       "isController": true,
-      "types": ["seat"]
+      "types": ["seat", "seat_pilot"]
     }
   ],
   "collision": [

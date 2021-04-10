@@ -68,7 +68,7 @@
       "turnsWithSteer": true,
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel","ground_pontoon"],
+      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"],
       "animations": [
         {
           "animationType": "rotation",
@@ -82,13 +82,13 @@
       "pos": [-1.65,-0.85,0.0],
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel","ground_pontoon"]
+      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"]
     },
     {
       "pos": [1.65,-0.85,0.0],
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel","ground_pontoon"]
+      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"]
     },
     {
       "pos": [0.0,0.1,2.15625],
@@ -99,13 +99,13 @@
       "pos": [-0.4,0.125,0.01],
       "dismountPos": [-2.0,0.0,-2.0],
       "isController": true,
-      "types": ["seat"]
+      "types": ["seat", "seat_pilot"]
     },
     {
       "pos": [0.4,0.125,0.01],
       "dismountPos": [2.0,0.0,-2.0],
       "isController": true,
-      "types": ["seat"]
+      "types": ["seat", "seat_pilot"]
     },
     {
       "pos": [0.0,0.125,-1.0],

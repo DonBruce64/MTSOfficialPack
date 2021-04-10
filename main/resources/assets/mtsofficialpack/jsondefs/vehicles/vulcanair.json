@@ -173,7 +173,7 @@
       "turnsWithSteer": true,
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel","ground_pontoon"],
+      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"],
       "animations": [
         {
           "animationType": "rotation",
@@ -187,13 +187,13 @@
       "pos": [-1.75,-0.6,0.0],
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel","ground_pontoon"]
+      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"]
     },
     {
       "pos": [1.75,-0.6,0.0],
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel","ground_pontoon"]
+      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"]
     },
     {
       "pos": [2.69,1.65,1.6825],
@@ -209,37 +209,37 @@
       "pos": [0.45,0.25,2.25],
       "dismountPos": [2.0,0.0,3.0],
       "isController": true,
-      "types": ["seat"]
+      "types": ["seat", "seat_pilot"]
     },
     {
       "pos": [-0.45,0.25,2.25],
       "dismountPos": [-2.0,0.0,3.0],
       "isController": true,
-      "types": ["seat"]
+      "types": ["seat", "seat_pilot"]
     },
     {
       "pos": [0.45,0.25,1.35],
       "dismountPos": [2.0,0.0,3.0],
       "maxValue": 3.0,
-      "types": ["interactable_crate","seat"]
+      "types": ["interactable_crate","seat", "seat_airliner"]
     },
     {
       "pos": [-0.45,0.25,1.35],
       "dismountPos": [-2.0,0.0,3.0],
       "maxValue": 3.0,
-      "types": ["interactable_crate","seat"]
+      "types": ["interactable_crate","seat", "seat_airliner"]
     },
     {
       "pos": [0.45,0.25,0.45],
       "dismountPos": [2.0,0.0,3.0],
       "maxValue": 3.0,
-      "types": ["interactable_crate","seat"]
+      "types": ["interactable_crate","seat", "seat_airliner"]
     },
     {
       "pos": [-0.45,0.25,0.45],
       "dismountPos": [-2.0,0.0,3.0],
       "maxValue": 3.0,
-      "types": ["interactable_crate","seat"]
+      "types": ["interactable_crate","seat", "seat_airliner"]
     },
     {
       "pos": [0.45,0.25,-0.35],

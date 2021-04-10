@@ -158,7 +158,7 @@
       "turnsWithSteer": true,
       "minValue": 0.4,
       "maxValue": 0.65,
-      "types": ["ground_wheel"],
+      "types": ["ground_wheel", "ground_wheel_aircraft"],
       "animations": [
         {
           "animationType": "rotation",
@@ -175,7 +175,7 @@
       "pos": [-1.5125,-0.4175,-0.18125],
       "minValue": 0.4,
       "maxValue": 0.65,
-      "types": ["ground_wheel"],
+      "types": ["ground_wheel", "ground_wheel_aircraft"],
       "animations": [
         {
           "animationType": "rotation",
@@ -190,7 +190,7 @@
       "pos": [1.5125,-0.4175,-0.18125],
       "minValue": 0.4,
       "maxValue": 0.65,
-      "types": ["ground_wheel"],
+      "types": ["ground_wheel", "ground_wheel_aircraft"],
       "animations": [
         {
           "animationType": "rotation",
@@ -215,27 +215,27 @@
       "pos": [-0.0,0.195,2.31875],
       "dismountPos": [1.5,0.0,1.75],
       "isController": true,
-      "types": ["seat"]
+      "types": ["seat", "seat_pilot"]
     },
     {
       "pos": [0.40625,0.195,1.48125],
       "dismountPos": [1.5,0.0,1.75],
-      "types": ["seat"]
+      "types": ["seat", "seat_airliner"]
     },
     {
       "pos": [-0.40625,0.195,1.48125],
       "dismountPos": [1.5,0.0,1.75],
-      "types": ["seat"]
+      "types": ["seat", "seat_airliner"]
     },
     {
       "pos": [-0.40625,0.195,0.51875],
       "dismountPos": [1.5,0.0,1.75],
-      "types": ["seat"]
+      "types": ["seat", "seat_airliner"]
     },
     {
       "pos": [0.40625,0.195,0.51875],
       "dismountPos": [1.5,0.0,1.75],
-      "types": ["seat"]
+      "types": ["seat", "seat_airliner"]
     }
   ],
   "collision": [
