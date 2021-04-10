@@ -21,8 +21,7 @@
 			"textureHeight" : 128,
 			"rotationVariable" : "speed",
 			"rotationOffset" : -130,
-			"rotationFactor" : 4.847,
-			"rotationAbsoluteValue" : true
+			"rotationFactor" : 4.847
 		},
 		{
 			"yCenter" : 2,
