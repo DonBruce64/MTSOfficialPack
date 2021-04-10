@@ -502,8 +502,8 @@
           {
             "animationType": "rotation",
             "variable": "flaps_actual",
-            "centerPoint": [5.375375,0.423097,-0.8125],
-            "axis": [-0.9986,0.0523,0.0]
+            "centerPoint": [-5.375375,0.423097,-0.8125],
+						"axis": [-0.9986,0.0523,0.0]
           }
         ]
       },
