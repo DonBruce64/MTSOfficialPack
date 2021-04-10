@@ -13,7 +13,9 @@
 			"textureHeight" : 80,
 			"translationVariable" : "engine_gear",
 			"translationFactor" : 80.0,
-			"translateHorizontal" : true
+			"translateHorizontal" : true,
+			"translationClampMin" : -80,
+			"translationClampMax" : 720
 		},
 		{
 			"textureXCenter" : 960,
