@@ -8,6 +8,7 @@
 
   "gun": {
 		"autoReload": true,
+		"pitchIsInternal": true,
     "capacity": 1,
     "fireDelay": 20,
     "reloadTime": 80,
@@ -21,20 +22,8 @@
   },
   "rendering": {
     "animatedObjects": [
-      {
-        "objectName": "turret",
-        "animations": [
-          {
-            "animationType": "rotation",
-            "variable": "gun_yaw",
-            "centerPoint": [0.0, 0.0, 0.0],
-            "axis": [0.0,1.0,0.0]
-          }
-        ]
-      },
 			{
         "objectName": "$turretleftdoor",
-				"applyAfter": "turret",
         "animations": [
           {
             "animationType": "rotation",
@@ -47,7 +36,6 @@
       },
       {
         "objectName": "$turretrightdoor",
-				"applyAfter": "turret",
         "animations": [
           {
             "animationType": "rotation",
@@ -60,7 +48,6 @@
       },
       {
         "objectName": "$recoilpiston",
-				"applyAfter": "turret",
         "animations": [
           {
             "animationType": "rotation",
@@ -72,7 +59,6 @@
       },
       {
         "objectName": "$barrel",
-				"applyAfter": "turret",
         "animations": [
           {
             "animationType": "rotation",
