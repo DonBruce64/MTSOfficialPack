@@ -1,4 +1,5 @@
 {
 	"packID" : "mtsofficialpack",
-	"packName" : "MTS Official Vehicle Pack"
+	"packName" : "MTS Official Vehicle Pack",
+	"packItem" : "mc172_oak"
 }
