@@ -177,6 +177,18 @@
       "height": 2.0
     }
   ],
+	"connections": [
+    {
+      "hookup": true,
+      "type": "tow_bumper_heavy",
+      "pos": [0.0,-0.054731,6.50307]
+    },
+    {
+      "hookup": true,
+      "type": "tow_wheel_heavy",
+      "pos": [0.0,-0.5,4.75307]
+    }
+  ],
   "definitions": [
     {
       "subName": "",

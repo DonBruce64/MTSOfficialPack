@@ -241,6 +241,18 @@
       "height": 0.55
     }
   ],
+	"connections": [
+    {
+      "hookup": true,
+      "type": "tow_bumper",
+      "pos": [0.0,0.02601,3.56009]
+    },
+    {
+      "hookup": true,
+      "type": "tow_wheel",
+      "pos": [0.0,-0.5,2.764965]
+    }
+  ],
   "definitions": [
     {
       "subName": "_blue",
