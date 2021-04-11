@@ -420,10 +420,9 @@
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "part_present_9",
+            "variable": "door_hood",
             "centerPoint": [0.0,0.885389,2.09134],
-            "axis": [60.0,0.0,0.0],
-            "offset": -60.0,
+            "axis": [-60.0,0.0,0.0],
             "duration": 10
           }
         ]
