@@ -1,0 +1,18 @@
+{
+	"general": {
+    "type": "bullet",
+    "materials": [ "oredict:nuggetIron:3", "oredict:gunpowder:1" ]
+  },
+	 "definitions": [
+		{
+				"subName": "",
+				"name": "37mm Solid Shot",
+				"extraMaterials": []
+		}
+	],
+  "bullet": {
+    "types": [],
+    "diameter": 37,
+    "quantity": 1
+  }
+}

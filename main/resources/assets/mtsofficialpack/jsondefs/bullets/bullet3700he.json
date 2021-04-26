@@ -1,0 +1,19 @@
+{
+  
+"general": {
+    "type": "bullet",
+    "materials": [ "oredict:nuggetIron:3", "oredict:gunpowder:2" ]
+  },
+	 "definitions": [
+		{
+				"subName": "",
+				"name": "37mm HE Shell",
+				"extraMaterials": []
+		}
+	],
+  "bullet": {
+    "types": ["explosive"],
+    "diameter": 37,
+    "quantity": 1
+  }
+}

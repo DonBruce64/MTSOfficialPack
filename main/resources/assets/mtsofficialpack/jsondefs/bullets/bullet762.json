@@ -1,0 +1,18 @@
+{
+	"general": {
+    "type": "bullet",
+    "materials": [ "oredict:nuggetIron:1", "oredict:gunpowder:1" ]
+  },
+	 "definitions": [
+		{
+				"subName": "",
+				"name": "7.62mm Bullet",
+				"extraMaterials": []
+		}
+	],
+    "bullet" : {
+        "types" : [],
+		"diameter" : 7.62,
+		"quantity" : 250
+	}
+}
