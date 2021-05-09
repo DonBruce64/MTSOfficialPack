@@ -1,6 +1,6 @@
 {
     "general": {
-        "name" : "Brigadier Box Rear-End",
+        "name" : "Brigadier Box Bed",
         "type" : "interactable_crate",
         "customType" : "brigbed",
         "materials" : ["oredict:ingotIron:4", "minecraft:iron_bars:0:2", "oredict:paper:6"]
@@ -8,5 +8,22 @@
 	"interactable" : {
         "interactionType": "crate",
         "inventoryUnits" : 6
-	}
+	},
+	"generic": {
+			"width" : 1.5,
+			"height" : 1.5
+	},
+	"rendering": {
+    "textObjects": [
+      {
+        "pos": [0.0,-100.0,0.001],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.0001,
+        "fieldName": "sideTextureURL",
+        "defaultText": "",
+        "maxLength": 400,
+        "color": "0x000000"
+      }
+    ]
+  }
 }

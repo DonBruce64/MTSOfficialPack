@@ -7,95 +7,96 @@
     },
     "generic": {
         "width" : 1.5,
-        "height" : 0.5
+        "height" : 0.5,
+				"disableMirroring": true
     },
     "subParts" : [
         {
-            "pos" : [-0.85, 0.2, 1.49],
+            "pos" : [-0.85, 0.6875, 1.49],
             "types" : ["interactable_crate", "interactable_barrel"],
             "minValue" : 0,
             "maxValue" : 3
         },
         {
-            "pos" : [-0.85, 0.2, 0.69],
+            "pos" : [-0.85, 0.6875, 0.69],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [-0.85, 0.2, -0.91],
+            "pos" : [-0.85, 0.6875, -0.91],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [-0.85, 0.2, -0.101],
+            "pos" : [-0.85, 0.6875, -0.101],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [-0.85, 0.2, -1.71],
+            "pos" : [-0.85, 0.6875, -1.71],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [-0, 0.2, 1.49],
+            "pos" : [-0, 0.6875, 1.49],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [-0, 0.2, 0.69],
+            "pos" : [-0, 0.6875, 0.69],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [-0, 0.2, -0.901],
+            "pos" : [-0, 0.6875, -0.901],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [-0, 0.2, -0.101],
+            "pos" : [-0, 0.6875, -0.101],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
             "maxValue" : 3
         },
 		{
-            "pos" : [-0, 0.2, -1.71],
+            "pos" : [-0, 0.6875, -1.71],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [0.85, 0.2, 1.49],
+            "pos" : [0.85, 0.6875, 1.49],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [0.85, 0.2, 0.69],
+            "pos" : [0.85, 0.6875, 0.69],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [0.85, 0.2, -0.901],
+            "pos" : [0.85, 0.6875, -0.901],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [0.85, 0.2, -0.101],
+            "pos" : [0.85, 0.6875, -0.101],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
         },
 		{
-            "pos" : [0.85, 0.2, -1.71],
+            "pos" : [0.85, 0.6875, -1.71],
             "types" : ["interactable_crate", "interactable_barrel"],
 			"minValue" : 0,
 			"maxValue" : 3
