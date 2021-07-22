@@ -492,11 +492,6 @@
       "subName": "_white",
       "name": "White Ford Trimotor",
       "extraMaterials": ["oredict:dyeWhite:4"]
-    },
-    {
-      "subName": "_mai",
-      "name": "Ford Trimotor - Mackrel International Airlines",
-      "extraMaterials": ["minecraft:dye:12:3"]
     }
   ],
   "rendering": {

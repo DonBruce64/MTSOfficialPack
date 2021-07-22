@@ -278,12 +278,6 @@
       "subName": "_yellow",
       "name": "Yellow Scout",
       "extraMaterials": ["oredict:dyeYellow:3"]
-    },
-    {
-      "subName": "_army",
-      "name": "Army Scout",
-      "description": "Skin is added by Immersive Vehicles Vanity, not part of original pack.",
-      "extraMaterials": ["minecraft:dye:2:3"]
     }
   ],
   "rendering": {
