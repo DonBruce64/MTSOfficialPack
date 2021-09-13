@@ -3,6 +3,7 @@
     "isAircraft": true,
     "hasAutopilot": true,
     "hasFlaps": true,
+		"hasRadioNav": true,
     "emptyMass": 1230,
     "fuelCapacity": 15000,
     "brakingFactor": 1.0,
