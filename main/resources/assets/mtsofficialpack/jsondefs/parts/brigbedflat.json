@@ -13,6 +13,7 @@
     {
       "type": "tow_wheel",
       "pos": [0.0,0.3125,1.0],
+			"rot": [0.0,0.0,0.0],
 			"mounted": true
     }
   ]
