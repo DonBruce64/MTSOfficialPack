@@ -1,10 +1,11 @@
 {
     "general": {
         "name" : "Fluid Loader",
+				"description" : "Adds fluids to tanks/barrels on vehicles.  Connect pipes to the bottom.",
         "type" : "fluid_loader",
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"materials" : ["oredict:dyeYellow:2", "oredict:dyeLightGray:2", "minecraft:bucket:0:3", "oredict:ingotIron:3", "minecraft:stone_slab:0:2"]
+		"materials" : ["minecraft:bucket:0:3", "oredict:ingotIron:3", "minecraft:stone_slab:0:2"]
 	}
 }
