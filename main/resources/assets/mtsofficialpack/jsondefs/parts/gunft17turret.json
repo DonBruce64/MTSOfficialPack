@@ -1,28 +1,52 @@
 {
-  "general": {
-    "name": "Renualt FT 37mm Turret",
+  "generic": {
     "type": "gun_turret",
-    "materials": [ "oredict:ingotIron:5", "minecraft:lever:0:1" ],
-    "useVehicleTexture": true
+    "useVehicleTexture": true,
+		"movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "gun_yaw",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,1.0,0.0]
+      }
+    ]
   },
-
   "gun": {
-		"autoReload": true,
-		"pitchIsInternal": true,
+    "autoReload": true,
+    "pitchIsInternal": true,
     "capacity": 1,
-    "fireDelay": 20,
     "reloadTime": 80,
     "muzzleVelocity": 600,
+    "fireDelay": 20.0,
+    "minYaw": -180.0,
+    "maxYaw": 180.0,
     "minPitch": -10.0,
     "maxPitch": 20.0,
-		"minYaw": -180.0,
-    "maxYaw": 180.0,
     "diameter": 37.0,
-    "length": 0.41
+    "yawSpeed": 3.7903757,
+    "pitchSpeed": 3.7903757,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.0,0.4099999964237213],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
   },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Renualt FT 37mm Turret",
+      "extraMaterials": []
+    }
+  ],
   "rendering": {
     "animatedObjects": [
-			{
+      {
         "objectName": "$turretleftdoor",
         "animations": [
           {
@@ -68,6 +92,37 @@
           }
         ]
       }
-    ]
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:gunft17turret_firing",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:gunft17turret_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "particles": []
+  },
+  "general": {
+    "name": "Renualt FT 37mm Turret",
+    "materials": ["oredict:ingotIron:5","minecraft:lever:0:1"]
   }
 }
