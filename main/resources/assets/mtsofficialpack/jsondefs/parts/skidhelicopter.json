@@ -1,0 +1,147 @@
+{
+  "generic": {
+    "type": "ground_skid_helicopter"
+  },
+  "ground": {
+    "width": 0.1,
+    "height": 0.1,
+    "motiveFriction": 0.25,
+    "lateralFriction": 0.5,
+    "extraCollisionBoxOffset": 3.5,
+    "frictionModifiers": {
+      "snow": -0.2,
+      "ice": -0.2,
+      "dirt_wet": -0.1,
+      "sand_wet": -0.1,
+      "normal_wet": -0.1
+    }
+  },
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.354,4.175],
+          "width": 0.1,
+          "height": 0.1
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Small Helicopter Skid",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mts:wheel_blowout",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_isflat",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "name": "mts:wheel_striking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_contacted",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mts:wheel_skidding",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true
+      }
+    ],
+    "particles": [
+      {
+        "type": "smoke",
+        "quantity": 4,
+        "color": "FFFFFF",
+        "initialVelocity": [0.0,0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_contacted",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 4,
+        "color": "FFFFFF",
+        "pos": [0.0,-0.05000000074505806,0.0],
+        "initialVelocity": [0.0,0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "break",
+        "spawnEveryTick": true,
+        "quantity": 4,
+        "scale": 0.3,
+        "color": "999999",
+        "pos": [0.0,-0.05000000074505806,0.0],
+        "initialVelocity": [0.0,1.5,-1.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_skidding",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "break",
+        "spawnEveryTick": true,
+        "quantity": 4,
+        "scale": 0.3,
+        "color": "999999",
+        "pos": [0.0,-0.05000000074505806,0.0],
+        "initialVelocity": [0.0,1.5,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ]
+  },
+  "general": {
+    "name": "Bell 47G Skid",
+    "materials": ["oredict:dyeLightGray:2","oredict:ingotIron:3"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "general": {
+	"name" : "Bell 47G External Fuel Tank",
+    "type" : "interactable_barrel",
+	"customType" : "bell47g",
+		"materials" : ["oredict:ingotIron:4", "oredict:dyeRed:1"]
+  },
+	"interactable": {
+		"interactionType": "barrel",
+		"feedsVehicles": true,
+		"inventoryUnits": 3
+	}
+}

@@ -1,6 +1,6 @@
 {
     "general": {
-        "name" : "Landing Skid",
+        "name" : "PZL P11 Skid",
         "type" : "ground_skid",
 		"materials" : ["oredict:dyeGreen:1", "oredict:ingotIron:1"]
     },

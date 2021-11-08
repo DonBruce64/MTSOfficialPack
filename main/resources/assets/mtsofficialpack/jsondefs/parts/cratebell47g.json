@@ -1,0 +1,13 @@
+{
+  "general": {
+	"name" : "Bell 47G External Storage Crate",
+    "type" : "interactable_crate",
+	"customType" : "bell47g",
+	"materials" : ["oredict:plankWood:6", "oredict:dyeRed:1"]
+  },
+	"interactable": {
+		"interactionType": "crate",
+		"feedsVehicles": false,
+		"inventoryUnits": 2
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "general": {
+	"name" : "Small Helicopter Rotor",
+    "type" : "propeller_rotor",
+		"materials" : ["oredict:ingotIron:8", "oredict:dyeBlack:2", "oredict:dyeYellow:4"]
+  },
+	"propeller" : {
+	  "isRotor" : true,
+	  "isDynamicPitch" : true,
+	  "numberBlades" : 2,
+		"pitch" : 120,
+		"diameter" : 446,
+		"startingHealth" : 100000
+	}
+}

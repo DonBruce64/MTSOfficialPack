@@ -1,0 +1,704 @@
+{
+  "motorized": {
+    "isAircraft": true,
+    "hasNavLights": true,
+    "hasStrobeLights": true,
+    "hasLandingLights": true,
+    "emptyMass": 1200,
+    "fuelCapacity": 5000,
+    "brakingFactor": 1.0,
+    "tailDistance": 8.40874
+  },
+  "parts": [
+    {
+      "pos": [-1.47649,-1.37138,1.5248],
+      "minValue": 0.25,
+      "maxValue": 0.75,
+      "types": ["ground_pontoon"],
+			"linkedVariables" : ["!part_present_3"]
+    },
+    {
+      "pos": [1.47649,-1.37138,1.5248],
+      "minValue": 0.25,
+      "maxValue": 0.75,
+      "types": ["ground_pontoon"],
+			"linkedVariables" : ["!part_present_4"]
+    },
+		{
+      "pos": [-1.47649,-1.37138,-0.453348],
+      "maxValue": 0.0,
+      "maxValue": 0.25,
+      "types": ["ground_skid_helicopter"],
+			"linkedVariables" : ["!part_present_1"]
+    },
+    {
+      "pos": [1.47649,-1.37138,-0.453348],
+      "minValue": 0.0,
+      "maxValue": 0.25,
+      "types": ["ground_skid_helicopter"],
+			"linkedVariables" : ["!part_present_2"]
+    },
+    {
+      "pos": [-0.75,0.9,-0.1],
+      "rot": [0.0,90.0,0.0],
+      "minValue": 2.0,
+      "maxValue": 6.0,
+      "types": ["interactable_crate","interactable_barrel"],
+      "customTypes": ["bell47g"]
+    },
+    {
+      "pos": [0.75,0.9,-0.1],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": 2.0,
+      "maxValue": 6.0,
+      "types": ["interactable_crate","interactable_barrel"],
+      "customTypes": ["bell47g"]
+    },
+    {
+      "pos": [-1.07,-0.87,1.91],
+      "maxValue": 20.0,
+      "types": ["gun_fixed"]
+    },
+    {
+      "pos": [1.07,-0.87,1.91],
+      "maxValue": 20.0,
+      "types": ["gun_fixed"]
+    },
+    {
+      "pos": [-0.02,0.0,0.03],
+      "maxValue": 2.0,
+      "types": ["engine_helicopter_flat"],
+      "additionalParts": [
+        {
+          "pos": [0.0,2.2779,0.0],
+          "rot": [-90.0,0.0,0.0],
+          "minValue": 400.0,
+          "maxValue": 500.0,
+          "types": ["propeller_rotor"]
+        }
+      ]
+    },
+    {
+      "pos": [-0.42,-0.14,1.34],
+      "dismountPos": [-1.5,0.5,1.34],
+      "isController": true,
+      "types": ["seat"]
+    },
+    {
+      "pos": [0.42,-0.14,1.34],
+      "dismountPos": [1.5,0.5,1.34],
+      "isController": true,
+      "types": ["seat"]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,1.0,-8.41],
+          "width": 0.4,
+          "height": 0.33
+        },
+        {
+          "pos": [0.0,0.34,-6.94],
+          "width": 0.5,
+          "height": 0.68
+        },
+        {
+          "pos": [0.0,0.34,-6.24],
+          "width": 0.5,
+          "height": 0.68
+        },
+        {
+          "pos": [-0.57,0.35,-5.95],
+          "width": 0.36,
+          "height": 0.31
+        },
+        {
+          "pos": [0.57,0.35,-5.95],
+          "width": 0.36,
+          "height": 0.31
+        },
+        {
+          "pos": [0.0,0.34,-5.56],
+          "width": 0.5,
+          "height": 0.68
+        },
+        {
+          "pos": [0.0,0.28,-4.76],
+          "width": 0.76,
+          "height": 0.79
+        },
+        {
+          "pos": [0.0,0.18,-3.83],
+          "width": 0.76,
+          "height": 0.99
+        },
+        {
+          "pos": [0.0,0.15,-2.77],
+          "width": 0.95,
+          "height": 1.06
+        },
+        {
+          "pos": [0.0,0.08,-1.47],
+          "width": 1.28,
+          "height": 1.2
+        },
+        {
+          "pos": [0.0,1.61,1.65],
+          "width": 1.22,
+          "height": 0.5
+        },
+        {
+          "pos": [0.0,0.43,2.51],
+          "width": 1.26,
+          "height": 1.66
+        },
+        {
+          "pos": [1.14,-0.84,1.4],
+          "width": 0.43,
+          "height": 0.27
+        },
+        {
+          "pos": [-1.14,-0.84,1.4],
+          "width": 0.43,
+          "height": 0.27
+        },
+        {
+          "pos": [1.14,-0.84,-0.56],
+          "width": 0.43,
+          "height": 0.27
+        },
+        {
+          "pos": [-1.14,-0.84,-0.56],
+          "width": 0.43,
+          "height": 0.27
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "pos": [0.11,0.23,2.24],
+      "rot": [10.0,0.0,0.0],
+      "scale": 0.0125,
+      "hudX": 120,
+      "hudY": 36,
+      "hudScale": 0.25
+    },
+    {
+      "pos": [-0.11,0.23,2.24],
+      "rot": [10.0,0.0,0.0],
+      "scale": 0.0125,
+      "hudX": 200,
+      "hudY": 36,
+      "hudScale": 0.25
+    },
+    {
+      "pos": [0.11,0.016397,2.19],
+      "rot": [10.0,0.0,0.0],
+      "scale": 0.0125,
+      "hudX": 280,
+      "hudY": 36,
+      "hudScale": 0.25
+    },
+    {
+      "pos": [-0.11,0.016397,2.19],
+      "rot": [10.0,0.0,0.0],
+      "scale": 0.0125,
+      "hudX": 120,
+      "hudY": 103,
+      "hudScale": 0.25
+    },
+    {
+      "pos": [0.11,-0.203255,2.16297],
+      "rot": [10.0,0.0,0.0],
+      "scale": 0.0125,
+      "hudX": 200,
+      "hudY": 103,
+      "hudScale": 0.25
+    },
+    {
+      "pos": [-0.11,-0.203255,2.16297],
+      "rot": [10.0,0.0,0.0],
+      "scale": 0.0125,
+      "hudX": 280,
+      "hudY": 103,
+      "hudScale": 0.25
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Bell 47G",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "textObjects": [
+      {
+        "pos": [0.56,0.4,-3.03],
+        "rot": [0.0,99.0,0.0],
+        "scale": 0.5,
+        "fieldName": "Text",
+        "defaultText": "",
+        "maxLength": 6,
+        "color": "9D9D97"
+      },
+      {
+        "pos": [-0.56,0.4,-3.03],
+        "rot": [0.0,-99.0,0.0],
+        "scale": 0.5,
+        "fieldName": "Text",
+        "defaultText": "",
+        "maxLength": 6,
+        "color": "9D9D97"
+      }
+    ],
+    "animatedObjects": [
+      {
+        "objectName": "$CollectivePitchControl",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [0.0,-0.49,1.15],
+            "axis": [-5.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$LeftStick",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.42,-0.56,2.0],
+            "axis": [-1.0,0.0,0.0]
+          },
+					{
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.42,-0.56,2.0],
+            "axis": [0.0,0.0,1.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$RightStick",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-0.42,-0.56,2.0],
+            "axis": [-1.0,0.0,0.0]
+          },
+					{
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-0.42,-0.56,2.0],
+            "axis": [0.0,0.0,1.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$LeftPedals",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,-0.57,2.4],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$RightPedals",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,-0.57,2.4],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$TailRotor",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_driveshaft_rotation_1",
+            "centerPoint": [-0.21,1.03,-8.39],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&LandingLight_FFFFFF_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "landing_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.0017744973301887512,-0.9822134971618652,2.711155414581299],
+            "axis": [-0.0,-0.34200000762939453,0.9397000074386597],
+            "flareHeight": 0.589119,
+            "flareWidth": 0.589119,
+            "beamDiameter": 12.567872,
+            "beamLength": 37.703617
+          }
+        ]
+      },
+      {
+        "objectName": "&StrobeLight_FF0000_00CC0_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "strobe_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "6_2_12_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.003893498331308365,-0.9005734920501709,2.2430479526519775],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.003893498331308365,-0.8023999929428101,2.193961501121521],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.294519,
+            "flareWidth": 0.294519
+          },
+          {
+            "pos": [-0.003893498331308365,-0.9987469911575317,2.193961501121521],
+            "axis": [0.0,-1.0,0.0],
+            "flareHeight": 0.294519,
+            "flareWidth": 0.294519
+          },
+          {
+            "pos": [0.04519300162792206,-0.9005734920501709,2.193961501121521],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.05297999829053879,-0.9005734920501709,2.193961501121521],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.003893498331308365,1.1119795441627502,-3.9418630599975586],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [-0.003893498331308365,1.1119795441627502,-3.8436899185180664],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [-0.003893498331308365,1.1610660552978516,-3.8927764892578125],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.29451942,
+            "flareWidth": 0.29451942
+          },
+          {
+            "pos": [-0.003893498331308365,1.062893033027649,-3.8927764892578125],
+            "axis": [0.0,-1.0,0.0],
+            "flareHeight": 0.29451942,
+            "flareWidth": 0.29451942
+          },
+          {
+            "pos": [0.04519300162792206,1.1119795441627502,-3.8927764892578125],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.29451942,
+            "flareWidth": 0.29451942
+          },
+          {
+            "pos": [-0.05297999829053879,1.1119795441627502,-3.8927764892578125],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.29451942,
+            "flareWidth": 0.29451942
+          },
+          {
+            "pos": [-0.003893498331308365,-0.9005734920501709,2.1448750495910645],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          }
+        ]
+      },
+      {
+        "objectName": "&NavigationLight_00FF00_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "00FF00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-1.7219250202178955,-0.7533134818077087,1.4085765480995178],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [-1.6728385090827942,-0.8023999929428101,1.4085765480995178],
+            "axis": [0.0,-1.0,0.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [-1.6728385090827942,-0.7533134818077087,1.3594900369644165],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [-1.7219250202178955,-0.7533134818077087,1.4576630592346191],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [-1.672802984714508,-0.7532824873924255,1.4576410055160522],
+            "axis": [0.0,3.9999998989515007E-4,1.0],
+            "flareHeight": 0.2947322,
+            "flareWidth": 0.2947322
+          },
+          {
+            "pos": [-1.6728385090827942,-0.7042269706726074,1.3594900369644165],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [-1.6728160381317139,-0.7042754888534546,1.4084450006484985],
+            "axis": [0.0,1.0,0.0010000000474974513],
+            "flareHeight": 0.2946539,
+            "flareWidth": 0.2946539
+          }
+        ]
+      },
+      {
+        "objectName": "&StrobeLight_FFFFFF_C0000_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "strobe_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "18_2_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.0038940012454986572,0.5733090043067932,-7.132493019104004],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.29836798,
+            "flareWidth": 0.29836798
+          },
+          {
+            "pos": [-0.0038940012454986572,0.37439799308776855,-7.132493019104004],
+            "axis": [0.0,-1.0,0.0],
+            "flareHeight": 0.29836798,
+            "flareWidth": 0.29836798
+          },
+          {
+            "pos": [0.045834001153707504,0.4738534986972809,-7.132493019104004],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.59673303,
+            "flareWidth": 0.59673303
+          },
+          {
+            "pos": [-0.05362199991941452,0.4738534986972809,-7.132493019104004],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.59673303,
+            "flareWidth": 0.59673303
+          },
+          {
+            "pos": [-0.0038940012454986572,0.4738534986972809,-7.182220935821533],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.59673303,
+            "flareWidth": 0.59673303
+          },
+          {
+            "pos": [-0.0038940012454986572,0.4738534986972809,-7.082765102386475],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.59673303,
+            "flareWidth": 0.59673303
+          },
+          {
+            "pos": [-0.691105991601944,0.8665440082550049,0.3777574896812439],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.6911064982414246,0.7683709859848022,0.3777574896812439],
+            "axis": [0.0,-1.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.6420194804668427,0.8174574971199036,0.3777574896812439],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.7401930093765259,0.8174574971199036,0.3777574896812439],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.691105991601944,0.8174574971199036,0.27958399057388306],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.2945221,
+            "flareWidth": 0.2945221
+          },
+          {
+            "pos": [0.6833184957504272,0.7683709859848022,0.3777574896812439],
+            "axis": [0.0,-1.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [0.6833184957504272,0.8665440082550049,0.3777574896812439],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [0.6342319846153259,0.8174574971199036,0.3777574896812439],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          },
+          {
+            "pos": [-0.691105991601944,0.8174574971199036,0.47593098878860474],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.2945221,
+            "flareWidth": 0.2945221
+          },
+          {
+            "pos": [0.6833184957504272,0.8174574971199036,0.47593098878860474],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [0.6833184957504272,0.8174574971199036,0.27958399057388306],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [0.7324050068855286,0.8174574971199036,0.3777574896812439],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.589041,
+            "flareWidth": 0.589041
+          }
+        ]
+      },
+      {
+        "objectName": "&NavigationLight_FF0000_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [1.6650505065917969,-0.7533139884471893,1.3594900369644165],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.2945221,
+            "flareWidth": 0.2945221
+          },
+          {
+            "pos": [1.7141369581222534,-0.7533139884471893,1.4085765480995178],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.2945221,
+            "flareWidth": 0.2945221
+          },
+          {
+            "pos": [1.6650505065917969,-0.7533139884471893,1.4576630592346191],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.2945221,
+            "flareWidth": 0.2945221
+          },
+          {
+            "pos": [1.6650505065917969,-0.8024010062217712,1.4085765480995178],
+            "axis": [0.0,-1.0,0.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          },
+          {
+            "pos": [1.6650505065917969,-0.7042269706726074,1.4085765480995178],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.29451907,
+            "flareWidth": 0.29451907
+          }
+        ]
+      }
+    ],
+    "sounds": [],
+    "particles": []
+  },
+  "general": {
+    "description": "The Bell 47G is a simple, yet versatile helicopter.  While it only seats two, it can carry cargo or extra fuel in optional external containers, making it ideal for either short cargo flights or medium trips to remote bases.  Small guns may also be mounted to the fuselage, though these can only fire the direction the helicopter is facing.  As such, they are not recommended against 'hot' ground targets.",
+    "materials": ["oredict:ingotIron:4","minecraft:iron_bars:0:6","minecraft:glass_pane:0:6","oredict:dyeRed:4"]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "general": {
+		"name" : "Franklin O-335 Helicopter Engine",
+		"type" : "engine_helicopter_flat",
+		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "oredict:ingotIron:1"]
+	},
+	
+	"engine" : {
+		"isAutomatic" : true,
+		"starterPower" : 30,
+		"starterDuration" : 2,
+		"idleRPM" : 14000,
+		"maxSafeRPM" : 14000,
+		"startRPM" : 2400,
+		"stallRPM" : 2000,
+		"maxRPM" : 14000,
+		"fuelConsumption" : 1.25,
+		"fuelType" : "avgas",
+		"gearRatios" : [-1,0,24.39]
+	},
+	
+	
+	"rendering": {
+		"rotatableModelObjects" : [
+			{
+				"partName" : "$Vent",
+				"rotationPoint" : [0, 0.12, 0],
+				"rotationAxis" : [0, 0, -0.415],
+				"rotationVariable" : "engine_rotation"
+			}
+		],
+		"particles": [
+      {
+        "type": "smoke",
+        "quantity": 1,
+        "transparency": 0.25,
+        "toTransparency": 0.25,
+        "scale": 1.0,
+        "color": "D9D9D9",
+        "toColor": "D9D9D9",
+        "pos": [0.430113,0.433944,-1.37683],
+        "initialVelocity": [0.0,0.0,-1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_2_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "quantity": 5,
+        "scale": 2.5,
+        "color": "000000",
+        "pos": [0.430113,0.433944,-1.37683],
+        "initialVelocity": [0.0,0.0,-1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+			{
+        "type": "smoke",
+        "quantity": 1,
+        "transparency": 0.25,
+        "toTransparency": 0.25,
+        "scale": 1.0,
+        "color": "D9D9D9",
+        "toColor": "D9D9D9",
+        "pos": [-0.397108,0.539897,-1.37683],
+        "initialVelocity": [0.0,0.0,-1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_2_2_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "quantity": 5,
+        "scale": 2.5,
+        "color": "000000",
+        "pos": [-0.397108,0.539897,-1.37683],
+        "initialVelocity": [0.0,0.0,-1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ]
+	}
+}
