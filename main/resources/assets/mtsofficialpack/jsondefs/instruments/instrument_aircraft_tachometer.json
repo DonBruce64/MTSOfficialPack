@@ -1,47 +1,118 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 448,
+      "textureYCenter": 448,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 448,
+      "textureYCenter": 192,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "inhibitor",
+          "variable": "engine_rpm_max",
+          "clampMin": 10000.0,
+					"clampMax": 1000000.0
+        },
+				{
+          "animationType": "rotation",
+          "variable": "engine_rpm",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.05000000074505806],
+          "offset": -110.0
+        },
+				{
+          "animationType": "activator",
+          "variable": "engine_rpm_max",
+          "clampMin": 10000.0,
+					"clampMax": 1000000.0
+        },
+				{
+          "animationType": "inhibitor",
+          "variable": "engine_rpm_max",
+          "clampMin": 0.0,
+					"clampMax": 10000.0
+        },
+				{
+          "animationType": "rotation",
+          "variable": "engine_rpm",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.005000000074505806],
+          "offset": -110.0
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 448,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 192,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "inhibitor",
+          "variable": "engine_rpm_max",
+          "clampMin": 10000.0,
+					"clampMax": 1000000.0
+        },
+				{
+          "animationType": "rotation",
+          "variable": "engine_rpm",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.05000000074505806],
+          "offset": -110.0
+        },
+				{
+          "animationType": "activator",
+          "variable": "engine_rpm_max",
+          "clampMin": 10000.0,
+					"clampMax": 1000000.0
+        },
+				{
+          "animationType": "inhibitor",
+          "variable": "engine_rpm_max",
+          "clampMin": 0.0,
+					"clampMax": 10000.0
+        },
+				{
+          "animationType": "rotation",
+          "variable": "engine_rpm",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.005000000074505806],
+          "offset": -110.0
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 960,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    }
+  ],
   "general": {
-	"name" : "Tachometer",
-	"description" : "Indicates engine speeds.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:3", "oredict:dyeWhite:3", "oredict:dyeRed:1"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 448,
-			"textureYCenter" : 448,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 448,
-			"textureYCenter" : 192,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "engine_rpm_safe",
-			"rotationOffset" : -110,
-			"rotationFactor" : 0.05
-		},
-		{
-			"textureXCenter" : 448,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 192,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "engine_rpm",
-			"rotationOffset" : -110,
-			"rotationFactor" : 0.05
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Tachometer",
+    "description": "Indicates engine speeds.",
+    "materials": ["oredict:ingotIron:1","oredict:dyeBlack:3","oredict:dyeWhite:3","oredict:dyeRed:1"]
+  }
 }
