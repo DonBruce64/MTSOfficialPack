@@ -1,15 +1,50 @@
 {
-  "general": {
-	"name" : "Small Helicopter Rotor",
-    "type" : "propeller_rotor",
-		"materials" : ["oredict:ingotIron:8", "oredict:dyeBlack:2", "oredict:dyeYellow:4"]
+  "generic": {
+    "type": "propeller_rotor"
   },
-	"propeller" : {
-	  "isRotor" : true,
-	  "isDynamicPitch" : true,
-	  "numberBlades" : 2,
-		"pitch" : 120,
-		"diameter" : 446,
-		"startingHealth" : 100000
-	}
+  "propeller": {
+    "isDynamicPitch": true,
+    "isRotor": true,
+    "pitch": 120,
+    "diameter": 446,
+    "startingHealth": 100000
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Small Helicopter Rotor",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+		"animatedObjects": [
+      {
+        "objectName": "Blade1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "Blade2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-1.0,0.0]
+          }
+        ]
+      }
+    ]
+  },
+  "general": {
+    "name": "Small Helicopter Rotor",
+    "materials": ["oredict:ingotIron:8","oredict:dyeBlack:2","oredict:dyeYellow:4"]
+  }
 }

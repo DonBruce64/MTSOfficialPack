@@ -1,35 +1,123 @@
 {
-  "general": {
-		"name" : "Franklin O-335 Helicopter Engine",
-		"type" : "engine_helicopter_flat",
-		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "oredict:ingotIron:1"]
-	},
-	
-	"engine" : {
-		"isAutomatic" : true,
-		"starterPower" : 30,
-		"starterDuration" : 2,
-		"idleRPM" : 14000,
-		"maxSafeRPM" : 14000,
-		"startRPM" : 2400,
-		"stallRPM" : 2000,
-		"maxRPM" : 14000,
-		"fuelConsumption" : 1.25,
-		"fuelType" : "avgas",
-		"gearRatios" : [-1,0,24.39]
-	},
-	
-	
-	"rendering": {
-		"rotatableModelObjects" : [
-			{
-				"partName" : "$Vent",
-				"rotationPoint" : [0, 0.12, 0],
-				"rotationAxis" : [0, 0, -0.415],
-				"rotationVariable" : "engine_rotation"
-			}
-		],
-		"particles": [
+  "generic": {
+    "type": "engine_helicopter_flat"
+  },
+  "engine": {
+    "isAutomatic": true,
+    "starterPower": 30,
+    "shiftSpeed": 20,
+    "revResistance": 10,
+    "maxRPM": 14000,
+    "maxSafeRPM": 14000,
+    "idleRPM": 14000,
+    "startRPM": 2400,
+    "revlimitRPM": -1,
+    "revlimitBounce": 8,
+    "stallRPM": 2000,
+    "engineWinddownRate": 10,
+    "heatingCoefficient": 1.0,
+    "coolingCoefficient": 1.0,
+    "engineWearFactor": 1.0,
+    "fuelConsumption": 1.25,
+    "gearRatios": [-1.0,0.0,24.39],
+    "fuelType": "avgas"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Franklin O-335 Helicopter Engine",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$Vent",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rotation",
+            "centerPoint": [0.0,0.12,0.0],
+            "axis": [0.0,0.0,-0.415]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:enginefranklin0335_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:enginefranklin0335_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:enginefranklin0335_sputter",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:enginefranklin0335_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.0005,0.0]
+          }
+        ],
+        "looping": true
+      },
+      {
+        "name": "mtsofficialpack:enginefranklin0335_running",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.00007,0.0],
+            "offset": 0.35
+          }
+        ],
+        "looping": true
+      }
+    ],
+    "particles": [
       {
         "type": "smoke",
         "quantity": 1,
@@ -65,7 +153,7 @@
           }
         ]
       },
-			{
+      {
         "type": "smoke",
         "quantity": 1,
         "transparency": 0.25,
@@ -101,5 +189,9 @@
         ]
       }
     ]
-	}
+  },
+  "general": {
+    "name": "Franklin O-335 Helicopter Engine",
+    "materials": ["minecraft:piston:0:9","minecraft:obsidian:0:5","oredict:ingotIron:1"]
+  }
 }

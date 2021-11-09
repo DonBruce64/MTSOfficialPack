@@ -15,28 +15,26 @@
       "minValue": 0.25,
       "maxValue": 0.75,
       "types": ["ground_pontoon"],
-			"linkedVariables" : ["!part_present_3"]
+      "linkedVariables": ["!part_present_3"]
     },
     {
       "pos": [1.47649,-1.37138,1.5248],
       "minValue": 0.25,
       "maxValue": 0.75,
       "types": ["ground_pontoon"],
-			"linkedVariables" : ["!part_present_4"]
+      "linkedVariables": ["!part_present_4"]
     },
-		{
+    {
       "pos": [-1.47649,-1.37138,-0.453348],
-      "maxValue": 0.0,
       "maxValue": 0.25,
       "types": ["ground_skid_helicopter"],
-			"linkedVariables" : ["!part_present_1"]
+      "linkedVariables": ["!part_present_1"]
     },
     {
       "pos": [1.47649,-1.37138,-0.453348],
-      "minValue": 0.0,
       "maxValue": 0.25,
       "types": ["ground_skid_helicopter"],
-			"linkedVariables" : ["!part_present_2"]
+      "linkedVariables": ["!part_present_2"]
     },
     {
       "pos": [-0.75,0.9,-0.1],
@@ -181,50 +179,50 @@
     {
       "pos": [0.11,0.23,2.24],
       "rot": [10.0,0.0,0.0],
-      "scale": 0.0125,
+      "scale": 0.025,
       "hudX": 120,
       "hudY": 36,
-      "hudScale": 0.25
+      "hudScale": 0.5
     },
     {
       "pos": [-0.11,0.23,2.24],
       "rot": [10.0,0.0,0.0],
-      "scale": 0.0125,
+      "scale": 0.025,
       "hudX": 200,
       "hudY": 36,
-      "hudScale": 0.25
+      "hudScale": 0.5
     },
     {
       "pos": [0.11,0.016397,2.19],
       "rot": [10.0,0.0,0.0],
-      "scale": 0.0125,
+      "scale": 0.025,
       "hudX": 280,
       "hudY": 36,
-      "hudScale": 0.25
+      "hudScale": 0.5
     },
     {
       "pos": [-0.11,0.016397,2.19],
       "rot": [10.0,0.0,0.0],
-      "scale": 0.0125,
+      "scale": 0.025,
       "hudX": 120,
       "hudY": 103,
-      "hudScale": 0.25
+      "hudScale": 0.5
     },
     {
       "pos": [0.11,-0.203255,2.16297],
       "rot": [10.0,0.0,0.0],
-      "scale": 0.0125,
+      "scale": 0.025,
       "hudX": 200,
       "hudY": 103,
-      "hudScale": 0.25
+      "hudScale": 0.5
     },
     {
       "pos": [-0.11,-0.203255,2.16297],
       "rot": [10.0,0.0,0.0],
-      "scale": 0.0125,
+      "scale": 0.025,
       "hudX": 280,
       "hudY": 103,
-      "hudScale": 0.25
+      "hudScale": 0.5
     }
   ],
   "definitions": [
@@ -276,7 +274,7 @@
             "centerPoint": [0.42,-0.56,2.0],
             "axis": [-1.0,0.0,0.0]
           },
-					{
+          {
             "animationType": "rotation",
             "variable": "aileron",
             "centerPoint": [0.42,-0.56,2.0],
@@ -293,7 +291,7 @@
             "centerPoint": [-0.42,-0.56,2.0],
             "axis": [-1.0,0.0,0.0]
           },
-					{
+          {
             "animationType": "rotation",
             "variable": "aileron",
             "centerPoint": [-0.42,-0.56,2.0],
@@ -330,6 +328,7 @@
             "animationType": "rotation",
             "variable": "engine_driveshaft_rotation_1",
             "centerPoint": [-0.21,1.03,-8.39],
+						"offset": 90,
             "axis": [-1.0,0.0,0.0]
           }
         ]
