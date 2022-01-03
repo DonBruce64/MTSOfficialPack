@@ -8,15 +8,15 @@
     "shiftSpeed": 20,
     "revResistance": 10,
     "maxRPM": 14000,
-    "maxSafeRPM": 14000,
-    "idleRPM": 14000,
+    "maxSafeRPM": 15000,
+    "idleRPM": 12500,
     "startRPM": 2400,
     "revlimitRPM": -1,
     "revlimitBounce": 8,
     "stallRPM": 2000,
-    "engineWinddownRate": 10,
-    "heatingCoefficient": 1.0,
-    "coolingCoefficient": 1.0,
+    "engineWinddownRate": 20,
+    "heatingCoefficient": 0.7,
+    "coolingCoefficient": 1.35,
     "engineWearFactor": 1.0,
     "fuelConsumption": 1.25,
     "gearRatios": [-1.0,0.0,24.39],
@@ -91,7 +91,7 @@
           {
             "animationType": "translation",
             "variable": "engine_rpm",
-            "axis": [0.0,0.0005,0.0]
+            "axis": [0.0,5.0E-4,0.0]
           }
         ],
         "looping": true
@@ -110,7 +110,7 @@
           {
             "animationType": "translation",
             "variable": "engine_rpm",
-            "axis": [0.0,0.00007,0.0],
+            "axis": [0.0,7.0E-5,0.0],
             "offset": 0.35
           }
         ],
@@ -192,6 +192,7 @@
   },
   "general": {
     "name": "Franklin O-335 Helicopter Engine",
+    "health": 100,
     "materials": ["minecraft:piston:0:9","minecraft:obsidian:0:5","oredict:ingotIron:1"]
   }
 }
