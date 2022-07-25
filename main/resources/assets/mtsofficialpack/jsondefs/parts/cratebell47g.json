@@ -1,13 +1,27 @@
 {
-  "general": {
-	"name" : "Bell 47G External Storage Crate",
-    "type" : "interactable_crate",
-	"customType" : "bell47g",
-	"materials" : ["oredict:plankWood:6", "oredict:dyeRed:1"]
+  "generic": {
+    "type": "interactable_crate",
+    "useVehicleTexture": true,
+    "customType": "bell47g"
   },
-	"interactable": {
-		"interactionType": "crate",
-		"feedsVehicles": false,
-		"inventoryUnits": 2
-	}
+  "interactable": {
+    "interactionType": "crate",
+    "inventoryUnits": 2.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Bell 47G External Storage Crate",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Bell 47G External Storage Crate",
+    "health": 100,
+    "materials": ["oredict:plankWood:6","oredict:dyeRed:1"]
+  }
 }
