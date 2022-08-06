@@ -1,13 +1,28 @@
 {
-  "general": {
-	"name" : "Bell 47G External Fuel Tank",
-    "type" : "interactable_barrel",
-	"customType" : "bell47g",
-		"materials" : ["oredict:ingotIron:4", "oredict:dyeRed:1"]
+  "generic": {
+    "type": "interactable_barrel",
+    "useVehicleTexture": true,
+    "customType": "bell47g"
   },
-	"interactable": {
-		"interactionType": "barrel",
-		"feedsVehicles": true,
-		"inventoryUnits": 3
-	}
+  "interactable": {
+    "interactionType": "barrel",
+    "feedsVehicles": true,
+    "inventoryUnits": 3.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Bell 47G External Fuel Tank",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Bell 47G External Fuel Tank",
+    "health": 100,
+    "materials": ["oredict:ingotIron:4","oredict:dyeRed:1"]
+  }
 }
