@@ -2,6 +2,7 @@
   "generic": {
     "type": "gun_turret",
     "useVehicleTexture": true,
+		"benchTexture": "gunft17turret",
 		"movementAnimations": [
       {
         "animationType": "rotation",
