@@ -1,6 +1,7 @@
 {
   "generic": {
-    "type": "ground_skid_helicopter"
+    "type": "ground_skid_helicopter",
+     "useVehicleTexture": true
   },
   "ground": {
     "width": 0.1,

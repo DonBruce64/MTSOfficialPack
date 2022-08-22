@@ -2,12 +2,11 @@
   "motorized": {
     "isFrontWheelDrive": true,
     "isRearWheelDrive": true,
-    "emptyMass": 5000,
+    "emptyMass": 6500,
     "fuelCapacity": 15000,
     "axleRatio": 3.55,
     "brakingFactor": 1.0,
-    "dragCoefficient": 0.6,
-    "instruments": []
+    "dragCoefficient": 0.6
   },
   "parts": [
     {
@@ -16,7 +15,8 @@
       "minValue": 0.3,
       "maxValue": 0.7,
       "extraCollisionBoxOffset": 3.75,
-      "types": ["ground_tread"]
+      "types": ["ground_tread"],
+      "treadPath": ["$roller_00","$roller_01","$roller_02","$roller_03","$roller_04","$roller_05","$roller_06","$roller_07","$roller_08","$roller_09","$roller_10","$roller_11","$roller_12","$roller_13","$roller_14","$roller_15","$roller_16"]
     },
     {
       "pos": [-0.850915,-0.2,-1.0],
@@ -24,7 +24,8 @@
       "minValue": 0.3,
       "maxValue": 0.7,
       "extraCollisionBoxOffset": 3.75,
-      "types": ["ground_tread"]
+      "types": ["ground_tread"],
+      "treadPath": ["$roller_00","$roller_01","$roller_02","$roller_03","$roller_04","$roller_05","$roller_06","$roller_07","$roller_08","$roller_09","$roller_10","$roller_11","$roller_12","$roller_13","$roller_14","$roller_15","$roller_16"]
     },
     {
       "pos": [0.0,1.54636,1.10717],
@@ -36,7 +37,7 @@
       "pos": [0.0,0.25,1.5],
       "isController": true,
       "types": ["seat"],
-      "linkedDoors": ["mainHatch"],
+      "linkedVariables": ["mainHatch"],
       "animations": [
         {
           "animationType": "translation",
@@ -51,7 +52,7 @@
         {
           "animationType": "rotation",
           "variable": "gun_yaw_1",
-          "centerPoint": [0.0,0.0,0.0],
+          "centerPoint": [0.0,1.54636,1.10717],
           "axis": [0.0,1.0,0.0]
         }
       ]
@@ -64,39 +65,546 @@
     {
       "pos": [0.0,0.3,-0.838408],
       "maxValue": 1.25,
-      "types": ["engine_car"],
-      "particleObjects": [
+      "types": ["engine_car"]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
         {
-          "type": "smoke",
-          "color": "#D9D9D9",
-          "toColor": "#D9D9D9",
-          "transparency": 0.25,
-          "toTransparency": 0.25,
-          "scale": 2.0,
-          "pos": [-0.684649,0.964062,-1.21544],
-          "velocityVector": [0.0,0.0,-1.0],
-          "quantity": 1
+          "pos": [0.0,0.75,2.2],
+          "width": 1.0,
+          "height": 0.25,
+          "variableName": "mainHatch",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "mainHatch",
+          "axis": [0.0,0.75,0.5499999999999998]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+	  "applyAfter":"$right_door",
+      "collisions": [
+        {
+            "name": "Cube.001",
+            "pos": [-0.17434, 0.66455, 2.61463],
+            "width": 0.322, 
+            "height": 0.13668,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.002",
+            "pos": [-0.21761, 0.72269, 2.3083],
+            "width": 0.40645, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.003",
+            "pos": [-0.21761, 0.86589, 2.03393],
+            "width": 0.40645, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+	  "applyAfter":"$left_door",
+      "collisions": [
+        {
+            "name": "Cube.001",
+            "pos": [0.16903, 0.66455, 2.61463],
+            "width": 0.322, 
+            "height": 0.13668,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.002",
+            "pos": [0.20398, 0.72269, 2.3083],
+            "width": 0.40645, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.003",
+            "pos": [0.21131, 0.86589, 2.03393],
+            "width": 0.40645, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+	  "applyAfter":"$center_door",
+      "collisions": [
+        {
+            "name": "Cube.003",
+            "pos": [0.00142, 0.97562, 1.86401],
+            "width": 0.12434, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.001",
+            "pos": [0.12993, 0.97562, 1.86401],
+            "width": 0.12434, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.002",
+            "pos": [-0.12827, 0.97562, 1.86401],
+            "width": 0.12434, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.004",
+            "pos": [-0.25956, 1.00912, 1.86401],
+            "width": 0.12434, 
+            "height": 0.23952,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.005",
+            "pos": [0.26449, 1.00912, 1.86401],
+            "width": 0.12434, 
+            "height": 0.23952,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.006",
+            "pos": [-0.25956, 1.20122, 1.75951],
+            "width": 0.12434, 
+            "height": 0.18893,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.007",
+            "pos": [0.26449, 1.20122, 1.75951],
+            "width": 0.12434, 
+            "height": 0.18893,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.008",
+            "pos": [0.00142, 1.2198, 1.76118],
+            "width": 0.12434, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.009",
+            "pos": [0.12993, 1.2198, 1.76118],
+            "width": 0.12434, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.010",
+            "pos": [-0.12827, 1.2198, 1.76118],
+            "width": 0.12434, 
+            "height": 0.17253,
+            "armorThickness": 22.0
+        }
+      ],
+      "animations": []
+    },
+    {
+      "collisions": [
+        {
+            "name": "Cube",
+            "pos": [0.00059, 0.31398, 2.75806],
+            "width": 0.1671, 
+            "height": 0.6181,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.001",
+            "pos": [-0.1936, 0.31398, 2.75806],
+            "width": 0.1671, 
+            "height": 0.6181,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.002",
+            "pos": [0.19956, 0.31398, 2.75806],
+            "width": 0.1671, 
+            "height": 0.6181,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.003",
+            "pos": [-0.34839, 0.31398, 2.61484],
+            "width": 0.1671, 
+            "height": 0.6181,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.004",
+            "pos": [-0.45269, 0.31398, 2.42114],
+            "width": 0.1671, 
+            "height": 0.68859,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.005",
+            "pos": [-0.50707, 0.31398, 2.2208],
+            "width": 0.1671, 
+            "height": 0.77219,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.006",
+            "pos": [-0.50707, 0.31398, 2.02332],
+            "width": 0.1671, 
+            "height": 0.84966,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.007",
+            "pos": [-0.50707, 0.31398, 1.81628],
+            "width": 0.1671, 
+            "height": 1.11464,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.008",
+            "pos": [-0.50707, 0.31398, 1.6044],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.009",
+            "pos": [-0.50707, 0.31398, 1.42181],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.010",
+            "pos": [-0.50707, 0.31398, 1.22273],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.011",
+            "pos": [-0.50707, 0.31398, 1.04015],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.012",
+            "pos": [-0.50707, 0.31398, 0.85491],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.013",
+            "pos": [-0.50707, 0.31398, 0.67232],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.014",
+            "pos": [-0.50707, 0.31398, 0.47324],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.015",
+            "pos": [-0.50707, 0.31398, 0.29066],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.016",
+            "pos": [-0.50707, 0.31398, 0.09197],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.017",
+            "pos": [-0.50707, 0.31398, -0.09062],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.018",
+            "pos": [-0.50707, 0.31398, -0.2897],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.019",
+            "pos": [-0.50707, 0.31398, -0.47228],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.020",
+            "pos": [-0.50707, 0.31398, -0.67152],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.021",
+            "pos": [-0.50707, 0.31398, -0.8541],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.022",
+            "pos": [-0.50707, 0.31398, -1.05318],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.023",
+            "pos": [-0.40738, 0.31398, -1.23577],
+            "width": 0.1671, 
+            "height": 1.15158,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.024",
+            "pos": [-0.30621, 0.31398, -1.42248],
+            "width": 0.1671, 
+            "height": 1.10635,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.025",
+            "pos": [-0.22931, 0.31398, -1.61476],
+            "width": 0.1671, 
+            "height": 1.03754,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.026",
+            "pos": [-0.01884, 0.3141, -1.69832],
+            "width": 0.1671, 
+            "height": 1.03754,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.027",
+            "pos": [0.34839, 0.31398, 2.61484],
+            "width": 0.1671, 
+            "height": 0.6181,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.028",
+            "pos": [0.45269, 0.34923, 2.42114],
+            "width": 0.1671, 
+            "height": 0.68859,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.029",
+            "pos": [0.50707, 0.39103, 2.2208],
+            "width": 0.1671, 
+            "height": 0.77219,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.030",
+            "pos": [0.50707, 0.42976, 2.02332],
+            "width": 0.1671, 
+            "height": 0.84966,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.031",
+            "pos": [0.50707, 0.56225, 1.81628],
+            "width": 0.1671, 
+            "height": 1.11464,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.032",
+            "pos": [0.50707, 0.64792, 1.6044],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.033",
+            "pos": [0.50707, 0.64792, 1.42181],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.034",
+            "pos": [0.50707, 0.64792, 1.22273],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.035",
+            "pos": [0.50707, 0.64792, 1.04015],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.036",
+            "pos": [0.50707, 0.64792, 0.85491],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.037",
+            "pos": [0.50707, 0.64792, 0.67232],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.038",
+            "pos": [0.50707, 0.64792, 0.47324],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.039",
+            "pos": [0.50707, 0.64792, 0.29066],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.039",
+            "pos": [0.50707, 0.64792, 0.29066],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.040",
+            "pos": [0.50707, 0.64792, 0.09197],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.041",
+            "pos": [0.50707, 0.64792, -0.09062],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.042",
+            "pos": [0.50707, 0.64792, -0.2897],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.042",
+            "pos": [0.50707, 0.64792, -0.2897],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.043",
+            "pos": [0.50707, 0.64792, -0.47228],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.044",
+            "pos": [0.50707, 0.64792, -0.67152],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.045",
+            "pos": [0.50707, 0.64792, -0.8541],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.046",
+            "pos": [0.50707, 0.64792, -1.05318],
+            "width": 0.1671, 
+            "height": 1.28596,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.047",
+            "pos": [0.40738, 0.58072, -1.23577],
+            "width": 0.1671, 
+            "height": 1.15158,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.048",
+            "pos": [0.30621, 0.55811, -1.42248],
+            "width": 0.1671, 
+            "height": 1.10635,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.048",
+            "pos": [0.30621, 0.55811, -1.42248],
+            "width": 0.1671, 
+            "height": 1.10635,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.049",
+            "pos": [0.22931, 0.5237, -1.61476],
+            "width": 0.1671, 
+            "height": 1.03754,
+            "armorThickness": 22.0
+        },
+        {
+            "name": "Cube.050",
+            "pos": [0.00373, 1.21516, -0.22592],
+            "width": 1.17015, 
+            "height": 0.12894,
+            "armorThickness": 22.0
         }
       ]
     }
   ],
-  "collision": [
-    {
-      "pos": [0.0,1.0,0.0],
-      "width": 1.5,
-      "height": 1.0
-    }
-  ],
-  "doors": [
-    {
-      "name": "mainHatch",
-      "closedPos": [0.0,0.75,2.2],
-      "openPos": [0.0,1.5,2.75],
-      "width": 1.0,
-      "height": 0.25,
-      "activateOnSeated": true
-    }
-  ],
+  "instruments": [],
   "definitions": [
     {
       "subName": "_olive",
@@ -202,17 +710,241 @@
             "duration": 10
           }
         ]
+      },
+      {
+        "objectName": "$roller_10",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.39062099158763885,-0.40260399878025055],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_00",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,2.1238105297088623],
+            "axis": [1.2825820835248767,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_11",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.4569090008735657,0.10089600458741188],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_01",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,1.811310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_12",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.5231959819793701,0.6043959856033325],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_02",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,1.498810052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_13",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.5894840061664581,1.1078959703445435],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_03",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,1.186310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_14",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.655771017074585,1.6113959550857544],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_04",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,0.8738099932670593],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_15",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.7220590114593506,2.1148959398269653],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_05",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,0.5613104999065399],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_16",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.2545425295829773,2.5832749605178833],
+            "axis": [0.3018174147874901,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_06",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,0.24881050735712051],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_07",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,-0.06368950009346008],
+            "axis": [1.2825819295073067,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_08",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,-0.3761895000934601],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$roller_09",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.06459300220012665,-0.8549799919128418],
+            "axis": [0.5092958178940651,0.0,0.0]
+          }
+        ]
       }
     ],
+    "lightObjects": [],
     "customVariables": ["TURRET"],
-    "sounds": []
+    "initialVariables": ["mainHatch"],
+    "sounds": [],
+    "particles": [
+      {
+        "type": "smoke",
+        "quantity": 1,
+        "transparency": 0.25,
+        "toTransparency": 0.25,
+        "scale": 2.0,
+        "color": "D9D9D9",
+        "toColor": "D9D9D9",
+        "pos": [-0.684649,0.964062,-1.21544],
+        "initialVelocity": [0.0,0.0,-1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "quantity": 5,
+        "scale": 2.5,
+        "color": "000000",
+        "pos": [-0.684649,0.964062,-1.21544],
+        "initialVelocity": [0.0,0.0,-1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
   },
-  "prefixFolders": "",
-  "packID": "mtsofficialpack",
-  "systemName": "ft17",
-  "classification": "vehicle",
   "general": {
     "description": "The Renault FT (frequently referred to in post-World War I literature as the FT-17, FT17, or similar) was a French light tank that was among the most revolutionary and influential tank designs in history.  Although hoplessly outclassed by modern tanks, the FT17 is still a formidable threat against infantry and lightly-armored vehicles.",
+    "health": 100,
     "materials": ["oredict:ingotIron:18"]
   }
 }

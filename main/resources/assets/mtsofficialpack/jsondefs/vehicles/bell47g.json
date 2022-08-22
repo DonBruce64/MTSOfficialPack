@@ -229,7 +229,12 @@
     {
       "subName": "",
       "name": "Bell 47G",
-      "extraMaterials": []
+      "extraMaterials": ["oredict:dyeRed:4"]
+    },
+    {
+      "subName": "_olive",
+      "name": "Olive Bell 47G",
+      "extraMaterials": ["minecraft:dye:2:4"]
     }
   ],
   "rendering": {
@@ -239,7 +244,7 @@
         "rot": [0.0,99.0,0.0],
         "scale": 0.5,
         "fieldName": "Text",
-        "defaultText": "",
+        "defaultText": "ඞ",
         "maxLength": 6,
         "color": "9D9D97"
       },
@@ -698,6 +703,6 @@
   },
   "general": {
     "description": "The Bell 47G is a simple, yet versatile helicopter.  While it only seats two, it can carry cargo or extra fuel in optional external containers, making it ideal for either short cargo flights or medium trips to remote bases.  Small guns may also be mounted to the fuselage, though these can only fire the direction the helicopter is facing.  As such, they are not recommended against 'hot' ground targets.",
-    "materials": ["oredict:ingotIron:4","minecraft:iron_bars:0:6","minecraft:glass_pane:0:6","oredict:dyeRed:4"]
+    "materials": ["oredict:ingotIron:4","minecraft:iron_bars:0:6","minecraft:glass_pane:0:6"]
   }
 }
