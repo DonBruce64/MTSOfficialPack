@@ -52,7 +52,7 @@
         {
           "animationType": "rotation",
           "variable": "gun_yaw_1",
-          "centerPoint": [0.0,1.54636,1.10717],
+          "centerPoint": [0.0,1.54636,1.5],
           "axis": [0.0,1.0,0.0]
         }
       ]
