@@ -164,7 +164,7 @@
         {
           "animationType": "rotation",
           "variable": "gear_setpoint",
-          "centerPoint": [0.0,0.75625,0.0],
+          "centerPoint": [0.0,0.15625,2.34375],
           "axis": [110.0,0.0,0.0],
           "duration": 50,
           "reverseDelay": 30
@@ -180,7 +180,7 @@
         {
           "animationType": "rotation",
           "variable": "gear_setpoint",
-          "centerPoint": [0.02,0.7,0.0],
+          "centerPoint": [-1.84375,0.25,-0.34375],
           "axis": [0.0,0.0,87.0],
           "duration": 60
         }
@@ -195,7 +195,7 @@
         {
           "animationType": "rotation",
           "variable": "gear_setpoint",
-          "centerPoint": [-0.02,0.7,0.0],
+          "centerPoint": [1.84375,0.25,-0.34375],
           "axis": [0.0,0.0,-87.0],
           "duration": 60
         }
