@@ -160,47 +160,24 @@
       "minValue": 0.4,
       "maxValue": 0.65,
       "types": ["ground_wheel", "ground_wheel_aircraft"],
-      "animations": [
-        {
-          "animationType": "rotation",
-          "variable": "gear_setpoint",
-          "centerPoint": [0.0,0.62499,0.0],
-          "axis": [-110.0,0.0,0.0],
-          "duration": 50,
-          "forwardsDelay": 30,
-          "reverseDelay": 30
-        }
-      ]
+      "applyAfter": "$GearStrutFront",
+      "animations": []
     },
     {
       "pos": [-1.5125,-0.4175,-0.18125],
       "minValue": 0.4,
       "maxValue": 0.65,
       "types": ["ground_wheel", "ground_wheel_aircraft"],
-      "animations": [
-        {
-          "animationType": "rotation",
-          "variable": "gear_setpoint",
-          "centerPoint": [-0.03125,0.424994,0.0],
-          "axis": [0.0,0.0,84.0],
-          "duration": 60
-        }
-      ]
+      "applyAfter": "$GearStrutRightRear",
+      "animations": []
     },
     {
       "pos": [1.5125,-0.4175,-0.18125],
       "minValue": 0.4,
       "maxValue": 0.65,
       "types": ["ground_wheel", "ground_wheel_aircraft"],
-      "animations": [
-        {
-          "animationType": "rotation",
-          "variable": "gear_setpoint",
-          "centerPoint": [0.03125,0.424994,0.0],
-          "axis": [0.0,0.0,-84.0],
-          "duration": 60
-        }
-      ]
+      "applyAfter": "$GearStrutLeftRear",
+      "animations": []
     },
     {
       "pos": [0.96875,0.78875,-2.0875],
