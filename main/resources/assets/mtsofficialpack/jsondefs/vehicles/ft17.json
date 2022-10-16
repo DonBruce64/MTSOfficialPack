@@ -58,7 +58,7 @@
       ]
     },
     {
-      "pos": [0.0,0.25,0.5],
+      "pos": [0.0,-0.125,0.5],
       "maxValue": 2.0,
       "types": ["interactable_crate"]
     },

@@ -202,13 +202,13 @@
       "types": ["seat", "seat_pilot"]
     },
     {
-      "pos": [-0.38,0.65,-1.375],
+      "pos": [-0.38,0.275,-1.375],
       "dismountPos": [-1.5,0.0,-2.0],
       "maxValue": 3.0,
       "types": ["interactable_crate","seat", "seat_airliner"]
     },
     {
-      "pos": [0.38,0.65,-1.375],
+      "pos": [0.38,0.275,-1.375],
       "dismountPos": [-1.5,0.0,-2.0],
       "maxValue": 3.0,
       "types": ["interactable_crate","seat", "seat_airliner"]

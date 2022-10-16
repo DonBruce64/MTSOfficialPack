@@ -175,7 +175,7 @@
       ]
     },
     {
-      "pos": [0.0,0.343751,0],
+      "pos": [0.0,-0.031249,0],
       "maxValue": 7.0,
       "types": ["generic","interactable_crate"],
       "customTypes": ["brigbed"]
