@@ -11,6 +11,10 @@
     "aileronArea": 3.6,
     "elevatorArea": 3.0,
     "rudderArea": 1.5,
+    "panelTextColor": "FFFFFF",
+    "panelLitTextColor": "FFFFFF",
+    "flapNotches": [],
+    "hookupVariables": [],
     "instruments": [
       {
         "pos": [0.28125,0.725,-0.81875],
@@ -115,31 +119,37 @@
   },
   "parts": [
     {
-      "pos": [0.0,-0.15,-5.25],
+      "pos": [0.0,0.21,-5.25],
+      "rot": [0.0,0.0,0.0],
       "turnsWithSteer": true,
-      "minValue": 0.15,
-      "maxValue": 0.35,
-      "types": ["ground_skid"]
+      "isPermanent": true,
+      "maxValue": 1.0,
+      "defaultPart": "mts:invisible_wheel",
+      "types": ["ground_wheel"]
     },
     {
       "pos": [-1.4,-1.4875,0.375],
+      "rot": [0.0,0.0,0.0],
       "minValue": 0.65,
       "maxValue": 0.95,
-      "types": ["ground_wheel", "ground_wheel_aircraft"]
+      "types": ["ground_wheel","ground_wheel_aircraft"]
     },
     {
       "pos": [1.4,-1.4875,0.375],
+      "rot": [0.0,0.0,0.0],
       "minValue": 0.65,
       "maxValue": 0.95,
-      "types": ["ground_wheel", "ground_wheel_aircraft"]
+      "types": ["ground_wheel","ground_wheel_aircraft"]
     },
     {
       "pos": [-0.8125,0.3125,0.25],
+      "rot": [0.0,0.0,0.0],
       "maxValue": 20.0,
       "types": ["gun_fixed"]
     },
     {
       "pos": [0.8125,0.3125,0.25],
+      "rot": [0.0,0.0,0.0],
       "maxValue": 20.0,
       "types": ["gun_fixed"]
     },
@@ -157,17 +167,22 @@
     },
     {
       "pos": [0.0,0.15,1.4375],
+      "rot": [0.0,0.0,0.0],
       "minValue": 0.5,
       "maxValue": 1.25,
       "types": ["engine_aircraft_radial"]
     },
     {
       "pos": [0.0,-0.05,-1.635],
+      "rot": [0.0,0.0,0.0],
       "dismountPos": [1.5,0.0,-1.5],
       "isController": true,
-      "types": ["seat", "seat_pilot"]
+      "types": ["seat","seat_pilot"]
     }
   ],
+  "collisionGroups": [],
+  "connectionGroups": [],
+  "instruments": [],
   "collision": [
     {
       "pos": [0.0,0.2,0.5],
@@ -238,15 +253,28 @@
       "pos": [4.5,1.2625,-0.1],
       "width": 1.25,
       "height": 0.125
+    },
+	{
+      "pos": [1.25,-1.5,0.4],
+      "width": 0.1,
+      "height": 0.1
+    },
+	{
+      "pos": [-1.25,-1.5,0.4],
+      "width": 0.1,
+      "height": 0.1
     }
   ],
   "definitions": [
     {
       "subName": "",
+      "partTones": [],
+      "secondaryTextColors": [],
       "name": "PZL P11.c",
       "extraMaterials": []
     }
   ],
+  "variableModifiers": [],
   "rendering": {
     "textObjects": [
       {
@@ -256,7 +284,7 @@
         "fieldName": "Callsign",
         "defaultText": "MAX 4H70 M",
         "maxLength": 10,
-        "color": "#9D9D97"
+        "color": "9D9D97"
       },
       {
         "pos": [-0.56,0.4,-3.03],
@@ -265,7 +293,7 @@
         "fieldName": "Callsign",
         "defaultText": "MAX 4H70 M",
         "maxLength": 10,
-        "color": "#9D9D97"
+        "color": "9D9D97"
       }
     ],
     "animatedObjects": [
@@ -325,14 +353,17 @@
         ]
       }
     ],
-    "sounds": []
+    "lightObjects": [],
+    "cameraObjects": [],
+    "customVariables": [],
+    "initialVariables": [],
+    "constants": [],
+    "sounds": [],
+    "particles": []
   },
-  "prefixFolders": "",
-  "packID": "mtsofficialpack",
-  "systemName": "pzlp11",
-  "classification": "vehicle",
   "general": {
     "description": "The PZL P11.c is a born and bred fighter aircraft. Its shoulder wing monoplane configuration provides the pilot with exceptional visibility of the sky and ground, and makes the PZL P11.c much faster than it's biplane fighter counterparts.",
-    "materials": ["oredict:ingotIron:12","oredict:plankWood:2","minecraft:glass_pane:0:2","oredict:string:10","oredict:dyeGreen:4","oredict:dyeLightGray:2","oredict:dyeLightBlue:1"]
+    "materials": ["oredict:ingotIron:12","oredict:plankWood:2","minecraft:glass_pane:0:2","oredict:string:10","oredict:dyeGreen:4","oredict:dyeLightGray:2","oredict:dyeLightBlue:1"],
+    "repairMaterials": []
   }
 }
