@@ -119,13 +119,30 @@
     ],
     "particles": [
       {
-        "type": "smoke",
+        "type": "generic",
         "quantity": 1,
+        "duration": 33,
         "transparency": 0.25,
-        "toTransparency": 0.25,
+        "toTransparency": 0.10,
         "scale": 1.0,
-        "color": "D9D9D9",
-        "toColor": "D9D9D9",
+        "toScale": 8.0,
+        "textureList": 
+        [
+        "mtsofficialpack:textures/particle/exhaust_0.png",
+        "mtsofficialpack:textures/particle/exhaust_1.png",
+        "mtsofficialpack:textures/particle/exhaust_2.png",
+        "mtsofficialpack:textures/particle/exhaust_3.png",
+        "mtsofficialpack:textures/particle/exhaust_4.png",
+        "mtsofficialpack:textures/particle/exhaust_5.png",
+        "mtsofficialpack:textures/particle/exhaust_6.png",
+        "mtsofficialpack:textures/particle/exhaust_7.png",
+        "mtsofficialpack:textures/particle/exhaust_8.png",
+        "mtsofficialpack:textures/particle/exhaust_9.png",
+        "mtsofficialpack:textures/particle/exhaust_10.png",
+        "mtsofficialpack:textures/particle/exhaust_11.png"
+        ],
+        "textureDelay": [3,3,3,3,3,3,3,3,3,3,3],
+        "color": "FFFFFF",
         "pos": [0.430113,0.433944,-1.37683],
         "initialVelocity": [0.0,0.0,-1.0],
         "activeAnimations": [
@@ -154,13 +171,30 @@
         ]
       },
       {
-        "type": "smoke",
+        "type": "generic",
         "quantity": 1,
+        "duration": 33,
         "transparency": 0.25,
-        "toTransparency": 0.25,
+        "toTransparency": 0.10,
         "scale": 1.0,
-        "color": "D9D9D9",
-        "toColor": "D9D9D9",
+        "toScale": 8.0,
+        "textureList": 
+        [
+        "mtsofficialpack:textures/particle/exhaust_0.png",
+        "mtsofficialpack:textures/particle/exhaust_1.png",
+        "mtsofficialpack:textures/particle/exhaust_2.png",
+        "mtsofficialpack:textures/particle/exhaust_3.png",
+        "mtsofficialpack:textures/particle/exhaust_4.png",
+        "mtsofficialpack:textures/particle/exhaust_5.png",
+        "mtsofficialpack:textures/particle/exhaust_6.png",
+        "mtsofficialpack:textures/particle/exhaust_7.png",
+        "mtsofficialpack:textures/particle/exhaust_8.png",
+        "mtsofficialpack:textures/particle/exhaust_9.png",
+        "mtsofficialpack:textures/particle/exhaust_10.png",
+        "mtsofficialpack:textures/particle/exhaust_11.png"
+        ],
+        "textureDelay": [3,3,3,3,3,3,3,3,3,3,3],
+        "color": "FFFFFF",
         "pos": [-0.397108,0.539897,-1.37683],
         "initialVelocity": [0.0,0.0,-1.0],
         "activeAnimations": [

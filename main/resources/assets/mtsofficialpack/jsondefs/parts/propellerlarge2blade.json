@@ -1,4 +1,22 @@
 {
+ 	"rendering": {
+    "lightObjects": [],
+    "particles": [],
+		 "animatedObjects": [
+      {
+        "objectName": "translucent_2bladel_mblur",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin" : 100,
+						"clampMax" : 3500
+          }
+        ]
+      }
+		],
+    "modelType": "obj"
+  },
     "general": {
         "name" : "Large 2-Bladed Propeller",
         "type" : "propeller",
