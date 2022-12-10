@@ -26,6 +26,20 @@
   ],
   "rendering": {
     "lightObjects": [],
+    "particles": [],
+		 "animatedObjects": [
+      {
+        "objectName": "translucent_b47g_mblur",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin" : 100,
+						"clampMax" : 1000
+          }
+        ]
+      }
+		],
     "modelType": "obj"
   },
   "general": {

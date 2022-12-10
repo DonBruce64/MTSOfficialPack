@@ -44,7 +44,18 @@
 				        "variable" : "propeller_pitch_deg"
                     }
                 ]
-			}
+			},
+			{
+        "objectName": "#translucent_3prop_mblur",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin" : 100,
+						"clampMax" : 3000
+          }
+        ]
+      }
 		]
 	}
 }
