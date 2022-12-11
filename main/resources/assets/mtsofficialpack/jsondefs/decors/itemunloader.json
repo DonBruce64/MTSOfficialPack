@@ -1,0 +1,11 @@
+{
+    "general": {
+        "name" : "Item Unloader",
+				"description" : "Removes items from crates on vehicles.",
+        "type" : "item_unloader",
+		"width" : 1.0,
+		"height" : 1.0,
+		"depth" : 1.0,
+		"materials" : ["minecraft:bucket:0:3", "oredict:ingotIron:3", "minecraft:stone_slab:0:2"]
+	}
+}
