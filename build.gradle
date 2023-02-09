@@ -1,0 +1,57 @@
+buildscript {
+    repositories {
+        maven { url = "https://maven.minecraftforge.net" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
+    }
+}
+
+//Apply plugins
+apply plugin: "net.minecraftforge.gradle"
+
+//Set file name.
+version = "V24"
+group = "minecrafttransportsimulator"
+archivesBaseName = "MTS Official Pack"
+
+//Options for Java version to compile to.
+sourceCompatibility = targetCompatibility = "1.8"
+compileJava {
+    options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+}
+
+//Minecraft mappings and run configs.
+minecraft {
+    // The mappings can be changed at any time, and must be in the following format.
+    // Channel:   Version:
+    // snapshot   YYYYMMDD   Snapshot are built nightly.
+    // stable     #          Stables are built at the discretion of the MCP team.
+    // official   MCVersion  Official field/method names from Mojang mapping files
+    mappings channel: "official", version: "1.16.5"
+
+    //Run configurations.
+    runs {
+        client {
+            workingDirectory project.file("run")
+        }
+
+        server {
+            workingDirectory project.file("runServer")
+        }
+    }
+}
+
+//Specify dependencies.
+dependencies {
+    //Minecraft to use.
+    minecraft "net.minecraftforge:forge:1.16.5-36.2.23"
+}
+
+//Now compile the mod.
+jar.finalizedBy("reobfJar")
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8" // Use the UTF-8 charset for Java compilation
+}

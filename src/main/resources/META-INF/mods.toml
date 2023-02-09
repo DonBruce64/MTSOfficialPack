@@ -1,0 +1,28 @@
+# File required to load packs as Forge mods.
+# Find more information on toml format v0.5.0 here:  https://github.com/toml-lang/toml
+
+# Forge settings, don't touch!
+modLoader="javafml"
+loaderVersion="[36,)"
+
+# The license for your pack. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license="All rights reserved"
+
+[[mods]] 
+# The ID of your pack.
+modId="mtsofficialpack"
+# Version number.  Can be whatever format you'd like.
+version="V24"
+ # Display name for the pack in the in-game mods list.
+displayName="Immersive Vehicles (MTS/IV) - Official Content Pack"
+# A URL for the "homepage" for this pack, displayed in the mod UI.
+displayURL="https://www.curseforge.com/minecraft/mc-mods/minecraft-transport-simulator"
+# Pack logo.
+logoFile="vingette.png"
+# The description text for the pack (multi line!)
+description='''
+A small selection of content made by the core Immersive Vehicles (MTS) team.  This pack aims to show a little of all the things the mod can do, but not focus in any one area too heavily.  A good all-around starter pack.
+
+Credits go to Don Bruce, Limit, Wolfvanox, Cactus, Fsendventd, and last, but certianly not least, Mr Mulle.
+'''
