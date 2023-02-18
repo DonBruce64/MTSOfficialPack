@@ -1,0 +1,14 @@
+{
+  "general": {
+	"name" : "Snail Dynamics MRE",
+	"materials" : ["minecraft:steak:0:1", "minecraft:potato:1","minecraft:carrot:1", "oredict:dyeGray:1"],
+	"description": "Compact quality high-protein, dehydrated food in a bag.",
+	"stackSize": 20,
+	"type" : "food"
+  },
+	"food":{
+		"timeToEat": 40,
+		"hungerAmount": 10,
+		"saturationAmount": 0.6
+	}
+}
