@@ -2,13 +2,13 @@
   
 "general": {
     "type": "bullet",
-    "description": "A 37mm round with a high explosive bullet. It explosive potential makes it perfect for crowd control or the demolition of fortifications.",
-    "materials": [ "oredict:ingotIron:2", "oredict:gunpowder:5" ]
+    "description": "Dont like loading individual shells into your AA? Have six of them in one magazine!",
+    "materials": [ "oredict:ingotIron:3", "mts:mtsofficialpack.bullet3700he:6" ]
   },
 	 "definitions": [
 		{
 				"subName": "",
-				"name": "37mm HE Shell",
+				"name": "6rnd HE 37mm Magazine",
 				"extraMaterials": []
 		}
 	],
@@ -39,7 +39,7 @@
             "flareHeight": 4.5,
             "flareWidth": 2.0
           },
-		  {
+          {
             "pos": [0.0,0.0,0.0],
             "axis": [0.0,0.0,-90.0],
             "flareHeight": 0.8,
@@ -71,7 +71,7 @@
             "clampMax": 1.0
           }
         ]
-      }, 
+      },
       
        {
         "type": "generic",
@@ -103,9 +103,7 @@
           }
         ]
       },
-      
-      
-       {
+        {
         "type": "generic",
         "texture":"mtsofficialpack:textures/bullets/bang0.png",
         "quantity": 30,
@@ -115,9 +113,9 @@
         "transparency": 1.0,
         "isBright": true,
         "pos": [0.0,1.3,0.0],
-        		"spreadFactorHorizontal": 100,
+        		"spreadFactorHorizontal": 200,
 				"spreadFactorVertical": 10,
-				"movementDuration": 30,
+				"movementDuration": 20,
         "initialVelocity": [0.0,17.0,0.0],
         "movementVelocity": [0.0,-0.008,0.0],
         "terminalVelocity": [5700.0,6000.0,6200.0],
@@ -130,7 +128,6 @@
           }
         ]
       },
-      
       
       {
         "type": "break",
@@ -195,6 +192,7 @@
           }
         ]
       }
+      
     ],
     "modelType": "obj"
   },
@@ -202,8 +200,7 @@
     "types": ["explosive"],
     "diameter": 37,
     "damage": 25,
-    "blastStrength": 3.3,
-    "despawnTime": 300,
-    "quantity": 1
+    "blastStrength": 3.5,
+    "quantity": 6
   }
 }
