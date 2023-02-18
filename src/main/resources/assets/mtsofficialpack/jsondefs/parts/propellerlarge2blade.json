@@ -2,9 +2,10 @@
  	"rendering": {
     "lightObjects": [],
     "particles": [],
-		 "animatedObjects": [
+	"animatedObjects": [
       {
         "objectName": "#translucent_2bladel_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
@@ -20,6 +21,7 @@
     "general": {
         "name" : "Large 2-Bladed Propeller",
         "type" : "propeller",
+        "health": 20,
 		"materials" : ["oredict:dyeWhite:1", "oredict:ingotIron:3"]
     },
 	"propeller" : {

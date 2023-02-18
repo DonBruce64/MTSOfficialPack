@@ -1,7 +1,8 @@
 {
   "generic": {
     "type": "ground_skid_helicopter",
-     "useVehicleTexture": true
+     "useVehicleTexture": true,
+     "destroyable": true
   },
   "ground": {
     "width": 0.1,
@@ -62,7 +63,7 @@
         "forceSound": true
       },
       {
-        "name": "mts:wheel_skidding",
+        "name": "mtsofficialpack:metalscrape",
         "activeAnimations": [
           {
             "animationType": "visibility",
@@ -76,64 +77,134 @@
     ],
     "particles": [
       {
-        "type": "smoke",
-        "quantity": 4,
-        "color": "FFFFFF",
-        "initialVelocity": [0.0,0.15,0.0],
-        "activeAnimations": [
-          {
-            "animationType": "visibility",
-            "variable": "ground_contacted",
-            "clampMin": 1.0,
-            "clampMax": 1.0
-          }
-        ]
-      },
-      {
-        "type": "smoke",
         "spawnEveryTick": true,
-        "quantity": 4,
-        "color": "FFFFFF",
-        "pos": [0.0,-0.05000000074505806,0.0],
-        "initialVelocity": [0.0,0.15,0.0],
-        "activeAnimations": [
-          {
-            "animationType": "visibility",
-            "variable": "ground_slipping",
-            "clampMin": 1.0,
-            "clampMax": 1.0
-          }
-        ]
-      },
-      {
-        "type": "break",
-        "spawnEveryTick": true,
-        "quantity": 4,
-        "scale": 0.3,
-        "color": "999999",
-        "pos": [0.0,-0.05000000074505806,0.0],
-        "initialVelocity": [0.0,1.5,-1.5],
-        "activeAnimations": [
-          {
-            "animationType": "visibility",
-            "variable": "ground_skidding",
-            "clampMin": 1.0,
-            "clampMax": 1.0
-          }
-        ]
-      },
-      {
-        "type": "break",
-        "spawnEveryTick": true,
-        "quantity": 4,
-        "scale": 0.3,
-        "color": "999999",
-        "pos": [0.0,-0.05000000074505806,0.0],
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 3,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,0.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
         "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
         "activeAnimations": [
-          {
+         {
             "animationType": "visibility",
             "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 3,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,1.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 3,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,2.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 3,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,3.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/bang0.png",
+        "mtsofficialpack:textures/bullets/bang2.png",
+        "mtsofficialpack:textures/bullets/bang3.png",
+        "mtsofficialpack:textures/bullets/bang4.png"
+        ],
+        "textureDelays": [2,2,2,2],
+        "quantity": 1,
+        "duration": 8,
+        "scale": 5.0,
+        "toScale": 5.0,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity":[0.0,-0.1,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_striking",
             "clampMin": 1.0,
             "clampMax": 1.0
           }
@@ -143,6 +214,7 @@
   },
   "general": {
     "name": "Bell 47G Skid",
+    "health": 20,
     "materials": ["oredict:dyeLightGray:2","oredict:ingotIron:3"]
   }
 }

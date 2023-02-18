@@ -13,6 +13,52 @@
 		"lateralFriction" : 0.5
 	},
 	"rendering" : {
+		"particles": [
+      {
+        "type": "smoke",
+        "quantity": 1,
+		"duration": 60,
+        "transparency": 0.15,
+        "toTransparency": -0.001,
+        "scale": 0.5,
+		"toScale": 15,
+        "color": "FFFFFF",
+        "toColor": "FFFFFF",
+        "pos": [0,0.1,0],
+        "initialVelocity": [0,-0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_contacted",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "smoke",
+        "quantity": 1,
+		"duration": 60,
+        "transparency": 0.15,
+        "toTransparency": -0.001,
+        "scale": 0.5,
+		"toScale": 15,
+        "color": "FFFFFF",
+        "toColor": "FFFFFF",
+        "pos": [0,0.1,0],
+        "initialVelocity": [0,-0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+			"absolute": true,
+			"clampMin": 15,
+			"clampMax": 999
+          }
+        ]
+      }
+    ],
 		"animatedObjects" : [
       {
         "objectName": "tire",
@@ -23,6 +69,36 @@
           }
         ]
       }
-    ]
+    ],
+    	"sounds": [
+    	{
+        "name": "mtsofficialpack:wheel_roll",
+        "activeAnimations": [
+           {
+            "animationType": "visibility",
+            "variable": "ground_onground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.23,0.0],
+            "offset": -0.2
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      }
+    	]
 	}
 }

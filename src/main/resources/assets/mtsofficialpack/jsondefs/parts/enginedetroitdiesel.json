@@ -3,34 +3,40 @@
     "type": "engine_car"
   },
   "engine": {
+    "type": "normal",
+	"clutchTime": 10,
     "starterPower": 25,
     "shiftSpeed": 20,
     "revResistance": 10,
     "maxRPM": 3500,
+    "maxSafeRPM": 3000,
+    "idleRPM": 500,
+    "startRPM": 600,
+    "revlimitRPM": 2850,
+    "revlimitBounce": 10,
+    "stallRPM": 325,
+    "engineWinddownRate": 10,
+    "heatingCoefficient": 1.0,
+    "coolingCoefficient": 1.0,
+    "engineWearFactor": 1.0,
     "fuelConsumption": 0.75,
-    "gearRatios": [
-      -6.33,
-      0.0,
-      11.83,
-      7.9,
-      5.79,
-      4.32,
-      3.2,
-      2.47,
-      1.81,
-      1.35,
-      1.0
-    ],
+    "gearRatios": [-6.33,0.0,11.83,7.9,5.79,4.32,3.2,2.47,1.81,1.35,1.0],
     "fuelType": "diesel"
   },
+  //low 3.2
+  //mid 2.2
+  //high 1.1
   "definitions": [
     {
       "subName": "",
       "name": "Detroit Diesel Truck Engine",
-      "extraMaterials": []
+      "extraMaterialLists": [
+        []
+      ]
     }
   ],
   "rendering": {
+    "lightObjects": [],
     "sounds": [
       {
         "name": "mtsofficialpack:enginedetroitdiesel_starting",
@@ -41,7 +47,13 @@
             "clampMin": 1.0,
             "clampMax": 1.0
           }
-        ]
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
       },
       {
         "name": "mtsofficialpack:enginedetroitdiesel_stopping",
@@ -50,7 +62,13 @@
             "animationType": "visibility",
             "variable": "engine_running"
           }
-        ]
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
       },
       {
         "name": "mtsofficialpack:enginedetroitdiesel_sputter",
@@ -62,7 +80,13 @@
             "clampMax": 1.0
           }
         ],
-        "forceSound": true
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
       },
       {
         "name": "mts:engine_shifting_grinding",
@@ -74,7 +98,13 @@
             "clampMax": 1.0
           }
         ],
-        "forceSound": true
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
       },
       {
         "name": "mtsofficialpack:enginedetroitdiesel_cranking",
@@ -93,10 +123,16 @@
             "axis": [0.0,0.002,0.0]
           }
         ],
-        "looping": true
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
       },
       {
-        "name": "mtsofficialpack:enginedetroitdiesel_running",
+        "name": "mtsofficialpack:enginedetroitdiesel_low",
         "activeAnimations": [
           {
             "animationType": "visibility",
@@ -105,24 +141,205 @@
             "clampMax": 1.0
           }
         ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-2.6,0.0],
+            "offset": 0.6,
+			"clampMin": -0.5
+          },
+		  {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0],
+            "offset": -0.0,
+			"clampMax": 0.65
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.05,0.0],
+			"duration": 3
+          },
+		  {
+			  "animationType": "inhibitor",
+			  "variable": "throttle"
+		  },
+		  {
+            "animationType": "translation",
+            "variable": "engine_clutch_upshift",
+            "axis": [0.0,0.05,0.0],
+			"duration": 3
+          }
+        ],
         "pitchAnimations": [
           {
             "animationType": "translation",
-            "variable": "engine_rpm",
-            "axis": [0.0,7.0E-4,0.0],
-            "offset": 0.35
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,3,0.0],
+            "offset": 0.5,
+			"clampMax": 3.5
           }
         ],
-        "looping": true
+        "looping": true,
+        
+      	"minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 50.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 120.0,
+        "maxDistanceVolume": 0.0
+      },
+	  {
+        "name": "mtsofficialpack:enginedetroitdiesel_mid",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+		"volumeAnimations": [
+		  
+		  {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2,0.0],
+            "offset": -0.2,
+			"clampMax": 0.4
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.5,0.0],
+			"duration": 3,
+            "offset": 0
+          },
+		  {
+			  "animationType": "inhibitor",
+			  "variable": "throttle"
+		  },
+		  {
+            "animationType": "translation",
+            "variable": "engine_clutch_upshift",
+            "axis": [0.0,-0.5,0.0],
+			"duration": 3,
+            "offset": 0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0],
+            "offset": 0,
+			"clampMax": 1.8
+          }
+        ],
+        "looping": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 140.0,
+        "maxDistanceVolume": 0.0
+      },
+	  {
+        "name": "mtsofficialpack:enginedetroitdiesel_high",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+		"volumeAnimations": [
+		  {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.17,0.0],
+            "offset": -0.25,
+			"clampMax": 0.4
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.1,0.0],
+			"duration": 3,
+            "offset": 0
+          },
+		  {
+			  "animationType": "inhibitor",
+			  "variable": "throttle"
+		  },
+		  {
+            "animationType": "translation",
+            "variable": "engine_clutch_upshift",
+            "axis": [0.0,0.1,0.0],
+			"duration": 3,
+            "offset": 0
+          }
+        ],
+        "pitchAnimations": [
+
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.1,0.0],
+            "offset": 0,
+			"clampMax": 1.3
+          }
+        ],
+        "looping": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 70.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
       }
-    ]
+    ],
+    "particles": [
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 115.556,
+            "clampMax": 999.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "scale": 2.5,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 121.111,
+            "clampMax": 999.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
   },
-  "prefixFolders": "",
-  "packID": "mtsofficialpack",
-  "systemName": "enginedetroitdiesel",
-  "classification": "part",
   "general": {
     "name": "Detroit Diesel Truck Engine",
-    "materials": ["minecraft:piston:0:6","minecraft:obsidian:0:8","oredict:ingotIron:2"]
+    "materialLists": [
+      ["minecraft:piston:0:6","minecraft:obsidian:0:8","oredict:ingotIron:2"]
+    ]
   }
 }

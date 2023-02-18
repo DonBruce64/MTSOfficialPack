@@ -1,7 +1,11 @@
 {
+"generic": {
+    "destroyable": true
+      },
   "general": {
     "name": "Renualt FT track",
     "type": "ground_tread",
+    "health": 70,
     "materials": [ "oredict:ingotIron:5" ]
   },
 	

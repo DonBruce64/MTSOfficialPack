@@ -5,6 +5,7 @@
 		 "animatedObjects": [
       {
         "objectName": "#translucent_2blade_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
@@ -20,6 +21,7 @@
     "general": {
         "name" : "Small 2-Bladed Propeller",
         "type" : "propeller",
+        "health": 10,
 		"materials" : ["oredict:plankWood:3"]
     },
 	"propeller" : {

@@ -1,0 +1,324 @@
+{
+  "generic": {
+    "type": "gun_pylon_standard",
+    "destroyable": true
+  },
+  "gun": {
+    "autoReload": true,
+    "capacity": 12,
+    "reloadTime": 2,
+    "muzzleVelocity": 270,
+    "fireDelay": 5.0,
+    "diameter": 70.0,
+    "minCaseLength": 2.0,
+    "maxCaseLength": 2.0,
+    "yawSpeed": 1.1830065,
+    "pitchSpeed": 1.1830065,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [-0.055962,-0.145737,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.055962,-0.145737,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.055962,-0.256433,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-0.055962,-0.256433,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.166167,-0.256433,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-0.166167,-0.256433,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.055962,-0.36713,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-0.055962,-0.36713,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.166167,-0.36713,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-0.166167,-0.36713,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-0.05498,-0.479217,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      } ,
+      {
+        "muzzles": [
+          {
+            "pos": [0.05498,-0.479217,0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      }    ]
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Rocket Pod",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "rocka",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 12.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockb",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 11.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockc",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 10.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockd",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 9.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rocke",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 8.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockf",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 7.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockg",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 6.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockh",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 5.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rocki",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 4.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockj",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 3.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockk",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 2.0,
+            "clampMax": 12.0
+          }
+        ]
+      },
+      {
+        "objectName": "rockl",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 12.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:basic_ocp_rocket",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        
+        "middleDistance":50.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0,
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:basic_ocp_rocket_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":50.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 150.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Rocket Pod",
+    "description": "Designed by a well known snail and manufactured by Potato Vehicle Industries, this 12-tubed fixed rocket pod can bring devestation upon any structure or enemy, as long as the pilot has good aim. Commiting warcrimes against villagers has never been easier!",  
+    "health": 50,
+    "materialLists": [
+      ["minecraft:iron_block:2","minecraft:stone_button:2","minecraft:repeater:1"]
+    ]
+  }
+}

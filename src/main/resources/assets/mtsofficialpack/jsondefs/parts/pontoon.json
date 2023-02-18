@@ -2,14 +2,163 @@
     "general": {
         "name" : "Pontoon",
         "type" : "ground_pontoon",
+        "health": 35,
+        "description": "It floats! It slides on ground!",
 		"materials" : ["oredict:ingotIron:3"]
     },
-	"ground" : {
+	"ground": {
     "canFloat": true,
-		"height" : 0.5,
-    "width" : 0.5,
-    "motiveFriction": 0.0,
-		"lateralFriction" : 0.125,
-		"extraCollisionBoxOffset" : -2.0
+    "width": 0.5,
+    "height": 0.5,
+    "motiveFriction" : 0.125,
+    "lateralFriction": 0.125,
+    "extraCollisionBoxOffset": -2.0,
+    "frictionModifiers": {
+      "snow": -0.2,
+      "ice": -0.2,
+      "dirt_wet": -0.1,
+      "sand_wet": -0.1,
+      "normal_wet": -0.1
+    }
+  },
+	"generic": {
+	"type": "ground_pontoon",
+	"destroyable": true,
+	"movementAnimations": [
+	  {
+		"animationType": "rotation",
+		"variable": "part_ismirrored",
+		"centerPoint": [0,0,0],
+		"axis": [0.0,180.0,0.0]
+	  }
+	]
+	},
+	"rendering" : {
+	"activeAnimations": [],
+		"sounds": [
+      {
+        "name": "mtsofficialpack:metalscrape",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true
+      }
+    ],
+     	"particles": [
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 2,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,0.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 2,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,-1.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 2,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,-2.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/bang0.png",
+        "mtsofficialpack:textures/bullets/bang2.png",
+        "mtsofficialpack:textures/bullets/bang3.png",
+        "mtsofficialpack:textures/bullets/bang4.png"
+        ],
+        "textureDelays": [2,2,2,2],
+        "quantity": 1,
+        "duration": 8,
+        "scale": 5.0,
+        "toScale": 5.0,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,-0.25,0.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity":[0.0,-0.1,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "ground_striking",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    	"modelType": "obj"
 	}
 }

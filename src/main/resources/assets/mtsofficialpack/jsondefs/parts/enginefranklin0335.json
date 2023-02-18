@@ -1,6 +1,7 @@
 {
   "generic": {
-    "type": "engine_helicopter_flat"
+    "type": "engine_helicopter_flat",
+    "destroyable": true
   },
   "engine": {
     "isAutomatic": true,
@@ -114,7 +115,79 @@
             "offset": 0.35
           }
         ],
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        
+        "middleDistance":50.0,
+        "middleDistanceVolume": 0.4,
+        
+        "maxDistance": 150.0,
+        "maxDistanceVolume": 0.0,
         "looping": true
+      },
+      {
+        "name": "mtsofficialpack:enginefranklin0335_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],    
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.000045,0.0],
+            "offset": 0.65
+          }
+        ],   
+
+        "looping": true,
+        "isExterior": true,
+        
+         "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":100.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      },
+       {
+        "name": "mtsofficialpack:enginefranklin0335_more_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.00006,0.0],
+            "offset": 0.75
+          }
+        ],
+
+        
+        "looping": true,
+        "isExterior": true,
+        
+        "minDistance": 120.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":175.0,
+        "middleDistanceVolume": 0.3,
+        
+        "maxDistance": 350.0,
+        "maxDistanceVolume": 0.0
       }
     ],
     "particles": [
@@ -126,7 +199,7 @@
         "toTransparency": 0.10,
         "scale": 1.0,
         "toScale": 8.0,
-        "color": "FFFFFF",
+        "color": "B8B1AA",
         "pos": [0.430113,0.533944,-1.37683],
         "initialVelocity": [0.0,0.0,-1.0],
         "activeAnimations": [
@@ -142,7 +215,7 @@
         "type": "smoke",
         "quantity": 5,
         "scale": 2.5,
-        "color": "000000",
+        "color": "615852",
         "pos": [0.430113,0.333944,-1.37683],
         "initialVelocity": [0.0,0.0,-1.0],
         "activeAnimations": [
@@ -162,7 +235,7 @@
         "toTransparency": 0.10,
         "scale": 1.0,
         "toScale": 8.0,
-        "color": "FFFFFF",
+        "color": "B8B1AA",
         "pos": [-0.397108,0.539897,-1.37683],
         "initialVelocity": [0.0,0.0,-1.0],
         "activeAnimations": [
@@ -178,7 +251,7 @@
         "type": "smoke",
         "quantity": 5,
         "scale": 2.5,
-        "color": "000000",
+        "color": "615852",
         "pos": [-0.397108,0.539897,-1.37683],
         "initialVelocity": [0.0,0.0,-1.0],
         "activeAnimations": [
@@ -194,7 +267,7 @@
   },
   "general": {
     "name": "Franklin O-335 Helicopter Engine",
-    "health": 100,
+    "health": 50,
     "materials": ["minecraft:piston:0:9","minecraft:obsidian:0:5","oredict:ingotIron:1"]
   }
 }

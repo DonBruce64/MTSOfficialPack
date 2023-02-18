@@ -1,0 +1,463 @@
+{
+  "generic": {
+    "type": "gun_turret",
+    "autoReload": true,
+    "destroyable": true,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "gun_yaw",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,1.0,0.0]
+      }
+    ]
+  },
+  "gun": {
+    "autoReload": true,
+    "capacity": 250,
+    "reloadTime": 120,
+    "muzzleVelocity": 1300,
+    "fireDelay": 2.0,
+    "gravitationalVelocity": 0.006,
+	"bulletSpreadFactor": 0.9,
+    "minYaw": -180.0,
+    "maxYaw": 180.0,
+    "minPitch": -15.0,
+    "maxPitch": 75.0,
+    "diameter": 7.62,
+    "yawSpeed": 3.7,
+    "pitchSpeed": 3.7,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.125,1.5626,2.328],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.125,1.5626,-0.21875]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-0.1875,1.5626,2.328],
+            "rot": [0.0,0.0,0.0],
+            "center": [-0.1875,1.5626,-0.21875]
+          }
+        ]
+      }
+    ]
+  },
+  "parts": [
+    {
+      "pos": [0.8825,0.75,-0.305],
+      "types": ["seat"]
+    }
+  ],
+  "collisionGroups": [
+  	{
+  	"collisions":[
+  		{
+			"pos": [0.0,0.90625,0.0],
+          "width": 1.0,
+          "height": 1.8125
+        }
+        ]
+  }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "AA 7.62mm Dual Machine-Gun",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+       "animatedObjects": [
+      {
+        "objectName": "ammodrums",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 250.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      
+      
+      {
+        "objectName": "&mflash",
+		"applyAfter": "$barrel",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_active_muzzlegroup",
+            "clampMin": 2.0,
+            "clampMax": 2.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_muzzleflash",
+			"clampMax": 1,
+			"clampMin": 1
+          }
+        ]
+      },
+      {
+        "objectName": "&mflash_inner",
+		"applyAfter": "&mflash",
+        "animations": []
+      },
+      {
+        "objectName": "&mflash2",
+		"applyAfter": "$barrel",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_active_muzzlegroup",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_muzzleflash",
+			"clampMax": 1,
+			"clampMin": 1
+          }
+        ]
+      },
+      {
+        "objectName": "&mflash2_inner",
+		"applyAfter": "&mflash2",
+        "animations": []
+      },
+      
+      
+      {
+        "objectName": "$barrel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&mflash_inner",
+        "emissive": true,
+        "color": "FEFEFE",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      },
+      {
+        "objectName": "&mflash",
+        "emissive": true,
+        "color": "FAB774",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      },
+	  {
+        "objectName": "&mflash2_inner",
+        "emissive": true,
+        "color": "FEFEFE",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      },
+      {
+        "objectName": "&mflash2",
+        "emissive": true,
+        "color": "FAB774",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      }
+    ],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:gunaa762_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:aa762_firing1",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "soundVariations": [
+    	"mtsofficialpack:aa762_firing2"
+    	],
+        "forceSound": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa762_firing_reverb1",
+        "activeAnimations": [
+        {
+            "animationType": "inhibitor",
+			"variable": "gun_ammo_count",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        "soundVariations": [
+    	"mtsofficialpack:aa762_firing_reverb2"
+    	],
+    	
+    	"minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        
+        "maxDistance": 80.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      
+       {
+        "name": "mtsofficialpack:aa762_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":30.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa762_distant_reverb",
+        "activeAnimations": [
+        {
+            "animationType": "inhibitor",
+			"variable": "gun_ammo_count",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":30.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+
+       {
+        "name": "mtsofficialpack:aa762_more_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        
+        "minDistance": 30.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":100.0,
+        "middleDistanceVolume": 0.4,
+        
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      },
+       {
+        "name": "mtsofficialpack:aa762_more_distant_reverb",
+        "activeAnimations": [
+        {
+            "animationType": "inhibitor",
+			"variable": "gun_ammo_count",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        
+    	"minDistance": 30.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":100.0,
+        "middleDistanceVolume": 0.4,
+        
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+          {
+        "type": "smoke",
+		"quantity": 1,
+        "duration": 20,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 8.1,
+        "toScale": 15.0,
+        "color": "7C7670",
+        "pos": [0.0,1.5626,2.328],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "quantity": 1,
+        "duration": 20,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 10.1,
+        "toScale": 20.0,
+        "color": "7C7670",
+        "pos": [0.0,1.5626,2.328],
+        "initialVelocity": [0.0,0.0,3.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 2,
+        "duration": 45,
+        "transparency": 0.15,
+        "transparency": 0.01,
+        "scale": 1.1,
+        "toScale": 5.0,
+        "color": "7C7670",
+        "pos": [0.125,1.5626,2.328],
+        "initialVelocity": [0.0,0.0,1.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_cooldown"
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 2,
+        "duration": 45,
+        "transparency": 0.15,
+        "transparency": 0.01,
+        "scale": 1.1,
+        "toScale": 5.0,
+        "color": "7C7670",
+        "pos": [-0.1875,1.5626,2.328],
+        "initialVelocity": [0.0,0.0,1.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_cooldown"
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "AA 7.62mm Dual Machine-Gun",
+    "description": "SnailDynamics state of the art defense system. Double-barreled and with its high firerate, it can shred small aircraft and garuantee accuracy with its volume of fire. Aiming requires greater lead due to lower bullet velocity.",
+    "autoReload": true,
+    "health": 80,
+    "materialLists": [
+      ["oredict:ingotIron:20","minecraft:lever:2","minecraft:iron_trapdoor:2","minecraft:piston:2","minecraft:redstone:20","mts:mtsofficialpack.gunm1919:2"]
+    ]
+  }
+}

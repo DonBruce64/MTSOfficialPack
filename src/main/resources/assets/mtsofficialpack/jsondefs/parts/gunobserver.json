@@ -1,0 +1,355 @@
+{
+  "generic": {
+    "type": "gun_observer",
+    "autoReload": true,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "gun_yaw",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,1.0,0.0]
+      },
+      {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [1.0,0.0,0.0]
+    }
+    ]
+  },
+  "gun": {
+    "autoReload": true,
+    "capacity": 250,
+    "reloadTime": 120,
+    "muzzleVelocity": 1300,
+    "fireDelay": 2.0,
+    "gravitationalVelocity": 0.006,
+	"bulletSpreadFactor": 0.9,
+    "minYaw": -80.0,
+    "maxYaw": 80.0,
+    "minPitch": -75.0,
+    "maxPitch": 60.0,
+    "diameter": 7.62,
+    "yawSpeed": 6.7,
+    "pitchSpeed": 6.7,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.0,0.8125],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
+  },
+  "parts": [],
+  "collisionGroups": [],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Observers Machine-Gun",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+       "animatedObjects": [
+      {
+        "objectName": "ammobox",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 250.0
+          }
+        ]
+      },
+      
+      
+    {
+        "objectName": "&mflash",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_muzzleflash"
+          }
+        ]
+      },
+      {
+        "objectName": "&mflash_inner",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_muzzleflash"
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&mflash_inner",
+        "emissive": true,
+        "color": "FEFEFE",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      },
+      {
+        "objectName": "&mflash",
+        "emissive": true,
+        "color": "FAB774",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      }
+    ],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:gunaa762_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "name": "mtsofficialpack:aa762_firing1",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "soundVariations": [
+    	"mtsofficialpack:aa762_firing2"
+    	],
+        "forceSound": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa762_firing_reverb1",
+        "activeAnimations": [
+        {
+            "animationType": "inhibitor",
+			"variable": "gun_ammo_count",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        "soundVariations": [
+    	"mtsofficialpack:aa762_firing_reverb2"
+    	],
+    	
+    	"minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        
+        "maxDistance": 80.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      
+       {
+        "name": "mtsofficialpack:aa762_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":30.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa762_distant_reverb",
+        "activeAnimations": [
+        {
+            "animationType": "inhibitor",
+			"variable": "gun_ammo_count",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":30.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+
+       {
+        "name": "mtsofficialpack:aa762_more_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        
+        "minDistance": 30.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":100.0,
+        "middleDistanceVolume": 0.4,
+        
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      },
+       {
+        "name": "mtsofficialpack:aa762_more_distant_reverb",
+        "activeAnimations": [
+        {
+            "animationType": "inhibitor",
+			"variable": "gun_ammo_count",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        
+    	"minDistance": 30.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":100.0,
+        "middleDistanceVolume": 0.4,
+        
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+          {
+        "type": "smoke",
+		"quantity": 1,
+        "duration": 20,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 8.1,
+        "toScale": 15.0,
+        "color": "7C7670",
+        "pos": [0.0,0.0,0.8125],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "quantity": 1,
+        "duration": 20,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 10.1,
+        "toScale": 20.0,
+        "color": "7C7670",
+        "pos": [0.0,0.0,0.8125],
+        "initialVelocity": [0.0,0.0,3.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 2,
+        "duration": 45,
+        "transparency": 0.15,
+        "transparency": 0.01,
+        "scale": 1.1,
+        "toScale": 5.0,
+        "color": "7C7670",
+        "pos": [0.0,0.0,0.8125],
+        "initialVelocity": [0.0,0.0,1.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_cooldown"
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Observers Machine-gun",
+    "description": "The Observers Machine-gun is a gun that is designed to be mounted on larger aircraft like bombers. It allows air to air defense against enemy aircraft.",
+    "autoReload": true,
+    "health": 100,
+    "materialLists": [
+      ["oredict:ingotIron:25","minecraft:lever:2","minecraft:iron_trapdoor:2","minecraft:piston:2","minecraft:redstone:20","mts:mtsofficialpack.gunm1919:2"]
+    ]
+  }
+}

@@ -1,7 +1,12 @@
 {
+  "generic": {
+    "destroyable": true
+      },
     "general": {
         "name" : "Barrel",
         "type" : "interactable_barrel",
+    	"description": "A simple and trustworthy, all-purpose barrel. It can hold everything your heart desires, like ten buckets of industrial lubricant!",
+    	"health": 50,
         "materials" : ["oredict:ingotIron:5", "oredict:dyeRed:1"]
     },
     "interactable": {

@@ -30,6 +30,7 @@
 		 "animatedObjects": [
       {
         "objectName": "translucent_b47g_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
@@ -44,7 +45,7 @@
   },
   "general": {
     "name": "Small Helicopter Rotor",
-    "health": 100,
+    "health": 35,
     "materials": ["oredict:ingotIron:8","oredict:dyeBlack:2","oredict:dyeYellow:4"]
   }
 }
