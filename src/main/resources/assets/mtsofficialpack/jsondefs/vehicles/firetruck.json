@@ -306,6 +306,20 @@
     ],
     "customVariables": ["siren"],
     "sounds": [
+    {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
       {
         "name": "mtsofficialpack:horn_air",
         "activeAnimations": [

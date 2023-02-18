@@ -182,12 +182,42 @@
     {
       "pos": [2.5,0.51,1.9375],
       "maxValue": 0.65,
-      "types": ["engine_aircraft_horizontal"]
+      "types": ["engine_aircraft_horizontal"],
+      "particleObjects": [
+        {
+            "type": "smoke",
+        "quantity": 3,
+        "duration": 33,
+        "transparency": 0.17,
+        "toTransparency": 0.01,
+        "scale": 2.0,
+        "toScale": 14.0,
+        "color": "C6BEB7",
+          "pos": [2.8,0.2,0.8],
+          "velocityVector": [0.0,-1.0,-2.7],
+          "quantity": 1
+        }
+      ]
     },
     {
       "pos": [-2.5,0.51,1.9375],
       "maxValue": 0.65,
-      "types": ["engine_aircraft_horizontal"]
+      "types": ["engine_aircraft_horizontal"],
+      "particleObjects": [
+        {
+          "type": "smoke",
+        "quantity": 3,
+        "duration": 33,
+        "transparency": 0.17,
+        "toTransparency": 0.01,
+        "scale": 2.0,
+        "toScale": 14.0,
+        "color": "C6BEB7",
+          "pos": [-2.8,0.2,0.8],
+          "velocityVector": [0.0,-1.0,-2.7],
+          "quantity": 1
+        }
+      ]
     },
     {
       "pos": [-0.38,0.65,0.0],
@@ -630,7 +660,314 @@
         ]
       }
     ],
-    "sounds": []
+    "particles": [
+    
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 90,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "857D76",
+        "pos": [2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 60,
+			"clampMax": 90
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 130,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "57514B",
+        "pos": [2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 90,
+			"clampMax": 120
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 160,
+        "transparency": 0.8,
+        "transparency": 0.1,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "332E2B",
+        "pos": [2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 120,
+			"clampMax": 150
+          }
+        ]
+      },
+    
+    
+    
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 90,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "857D76",
+        "pos": [-2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 60,
+			"clampMax": 90
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 130,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "57514B",
+        "pos": [-2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 90,
+			"clampMax": 120
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 160,
+        "transparency": 0.8,
+        "transparency": 0.1,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "332E2B",
+        "pos": [-2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 120,
+			"clampMax": 150
+          }
+        ]
+      },
+      
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.9,
+        "transparency": 0.3,
+        "scale": 20.0,
+        "toScale": 75.0,
+        "color": "292521",
+        "pos": [-2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+      
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.9,
+        "transparency": 0.3,
+        "scale": 20.0,
+        "toScale": 75.0,
+        "color": "292521",
+        "pos": [2.5,0.51,1.9375],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      }
+    ],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "blockDoppler": false,
+        "looping": true,
+        "forceSound": true
+      },
+	{
+        "name": "mtsofficialpack:wind_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isInterior": true,
+        "blockDoppler": false,
+        "looping": true
+      },
+      {
+        "name": "mtsofficialpack:wind_on_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isExterior": true,
+        "blockDoppler": false,
+        "looping": true,
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_insideINDEV",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,7.0E-4,0.0],
+            "offset": 0.35
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      }
+    ]
   },
   "prefixFolders": "",
   "packID": "mtsofficialpack",
@@ -638,6 +975,7 @@
   "classification": "vehicle",
   "general": {
     "description": "The Comanche is a small, swift, twin-engine craft.  While the lower wing might pose a hazard on overgrown runways, it makes up for it by being faster and nimbler than other planes of its size.",
+    "health": 250,
     "materials": ["minecraft:iron_trapdoor:0:5","oredict:ingotIron:15","minecraft:repeater:0:1","oredict:dustRedstone:9","minecraft:redstone_lamp:0:2","minecraft:glass_pane:0:5"]
   }
 }

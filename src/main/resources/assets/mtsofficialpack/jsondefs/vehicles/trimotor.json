@@ -226,28 +226,74 @@
       "pos": [2.875,0.0,1.5625],
       "minValue": 0.5,
       "maxValue": 1.25,
-      "types": ["engine_aircraft_radial"]
+      "types": ["engine_aircraft_radial"],
+      "particleObjects": [
+        {
+          "type": "smoke",
+        "quantity": 1,
+        "duration": 60,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 6.0,
+        "toScale": 30.0,
+        "color": "9C948D",
+          "pos": [2.844,-0.078,-0.625],
+          "velocityVector": [0.0,0.0,-3.0],
+          "quantity": 1
+        }
+      ]
     },
+    
     {
       "pos": [0.0,0.0,4.22094],
       "minValue": 0.5,
       "maxValue": 1.25,
-      "types": ["engine_aircraft_radial"]
+      "types": ["engine_aircraft_radial"],
+      "particleObjects": [
+        {
+          "type": "smoke",
+        "quantity": 1,
+        "duration": 60,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 6.0,
+        "toScale": 30.0,
+        "color": "9C948D",
+          "pos": [-0.4219,-0.79,3.218],
+          "velocityVector": [-2.0,-1.5,-2.0],
+          "quantity": 1
+        }
+      ]
     },
     {
       "pos": [-2.875,0.0,1.5625],
       "minValue": 0.5,
       "maxValue": 1.25,
-      "types": ["engine_aircraft_radial"]
+      "types": ["engine_aircraft_radial"],
+      "particleObjects": [
+        {
+          "type": "smoke",
+        "quantity": 1,
+        "duration": 60,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 6.0,
+        "toScale": 30.0,
+        "color": "9C948D",
+          "pos": [-2.906,-0.078,-0.625],
+          "velocityVector": [0.0,0.0,-3.0],
+          "quantity": 1
+        }
+      ]
     },
     {
-      "pos": [0.5,0.0125,2.0],
+      "pos": [0.5,0.18,2.0],
       "dismountPos": [-2.0,0.0,-5.0],
       "isController": true,
       "types": ["seat", "seat_pilot"]
     },
     {
-      "pos": [-0.5,0.0125,2.0],
+      "pos": [-0.5,0.18,2.0],
       "dismountPos": [-2.0,0.0,-5.0],
       "isController": true,
       "types": ["seat", "seat_pilot"]
@@ -563,7 +609,397 @@
         ]
       }
     ],
-    "sounds": []
+    "particles": [
+    
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 90,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "857D76",
+        "pos": [2.813,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 240,
+			"clampMax": 360
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 130,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "57514B",
+        "pos": [2.813,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 360,
+			"clampMax": 480
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 160,
+        "transparency": 0.8,
+        "transparency": 0.1,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "332E2B",
+        "pos": [2.813,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 480,
+			"clampMax": 600
+          }
+        ]
+      },
+    
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 90,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 15.0,
+        "toScale": 70.0,
+        "color": "857D76",
+        "pos": [0.0625,0.0,3.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 240,
+			"clampMax": 360
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 130,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 15.0,
+        "toScale": 70.0,
+        "color": "57514B",
+        "pos": [0.0625,0.0,3.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 360,
+			"clampMax": 480
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 160,
+        "transparency": 0.8,
+        "transparency": 0.1,
+        "scale": 15.0,
+        "toScale": 70.0,
+        "color": "332E2B",
+        "pos": [0.0625,0.0,3.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 480,
+			"clampMax": 600
+          }
+        ]
+      },
+    
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 90,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "857D76",
+        "pos": [-2.938,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 240,
+			"clampMax": 360
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 130,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "57514B",
+        "pos": [-2.938,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 360,
+			"clampMax": 480
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 160,
+        "transparency": 0.8,
+        "transparency": 0.1,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "332E2B",
+        "pos": [-2.938,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 480,
+			"clampMax": 600
+          }
+        ]
+      },
+      
+      
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.8,
+        "transparency": 0.3,
+        "scale": 20.0,
+        "toScale": 75.0,
+        "color": "292521",
+        "pos": [2.813,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.8,
+        "transparency": 0.3,
+        "scale": 20.0,
+        "toScale": 85.0,
+        "color": "292521",
+        "pos": [0.0625,0.0,3.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.8,
+        "transparency": 0.3,
+        "scale": 20.0,
+        "toScale": 75.0,
+        "color": "292521",
+        "pos": [-2.938,-0.125,0.5],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      }
+    ],
+    "sounds": [
+    	{
+        "name": "mtsofficialpack:wind_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:wind_on_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isExterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+    {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      }
+    ]
   },
   "prefixFolders": "",
   "packID": "mtsofficialpack",
@@ -571,6 +1007,7 @@
   "classification": "vehicle",
   "general": {
     "description": "The Ford Trimotor is an old, yet trustworthy aircraft.  Its large wingspan provides ample lift for short takeoffs, as well as enough to maintain flight with one engine out.  With room for 12 passengers or crates, it's a great choice for long-haul flights where reliability (but not time) is of the essence.",
-    "materials": ["oredict:ingotIron:40","minecraft:iron_bars:0:4","minecraft:glass_pane:0:22"]
+    "health": 500,
+    "materials": ["oredict:ingotIron:64","minecraft:iron_bars:0:42","minecraft:glass_pane:0:22"]
   }
 }
