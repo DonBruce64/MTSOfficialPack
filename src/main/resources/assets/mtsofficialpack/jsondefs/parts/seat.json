@@ -5,9 +5,7 @@
 		"materials" : ["oredict:ingotIron:1", "oredict:string:2"]
     },
     "generic": {
-    "type": "seat",
-    "canBePlacedOnGround": false,
-    "placedOffset": 0.35
+    "type": "seat"
   },
     "definitions": [
         {
