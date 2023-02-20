@@ -88,7 +88,7 @@
   },
   "general": {
     "name": "Basic bomb hardpoint",
-    "description": "When SnailDynamics engineers realized that they had no way to attach their new Basic-Bomb to any aircrafts, they came up with this contraption. Due to budget limitations, it can only hold one bomb at once.",
+    "description": "When SnailDynamics engineers realized that they had no way to attach their new Basic-Bomb to any aircraft, they came up with this contraption. Due to budget limitations, it can only hold one bomb at once.",
     "health": 10,
     "materials": ["minecraft:iron_ingot:10","minecraft:stone_button:4","minecraft:tripwire_hook:2"]
   }
