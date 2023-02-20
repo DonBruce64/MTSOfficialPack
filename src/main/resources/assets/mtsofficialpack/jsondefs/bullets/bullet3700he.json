@@ -2,13 +2,13 @@
   
 "general": {
     "type": "bullet",
-    "description": "A 37mm round with a high explosive bullet. It explosive potential makes it perfect for crowd control or the demolition of fortifications.",
+    "description": "A 37mm round with a high explosive projectile. It explosive potential makes it perfect for crowd control or the demolition of fortifications.",
     "materials": [ "oredict:ingotIron:2", "oredict:gunpowder:5" ]
   },
 	 "definitions": [
 		{
 				"subName": "",
-				"name": "37mm HE Shell",
+				"name": "37mm Explosive Shell",
 				"extraMaterials": []
 		}
 	],
