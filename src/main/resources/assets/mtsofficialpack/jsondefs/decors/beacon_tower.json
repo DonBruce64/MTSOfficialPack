@@ -14,7 +14,7 @@
 	
 	"general": {
 		"type" : "beacon",
-		"description": "This white cupola (with tower) tells your planes where it is at all times. It knows this becaue it knows where it isnt. By subtracting where it is, from where it isn't, or where it isn't, from where it is, whichever is greater, it obtains a difference, or deviation",
+		"description": "This white cupola (with tower) tells your plane where it is at all times. It knows this becaue it knows where it isnt. By subtracting where it is, from where it isn't, or where it isn't, from where it is, whichever is greater, it obtains a difference, or deviation. It also has a dark secret.",
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
