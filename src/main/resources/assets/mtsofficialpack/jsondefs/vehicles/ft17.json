@@ -35,6 +35,7 @@
     {
       "pos": [0.0,0.25,1.5],
       "isController": true,
+      "dismountPos": [0.0,1.0,2.5],
       "types": ["seat"],
       "interactableVariables": [
         ["mainHatch"]
