@@ -115,8 +115,8 @@
   },
   "general": {
     "name": "Triple Bomb Hardpoint",
-    "description": "SnailDynamics engineers sat down one day and wondered how to increase the PZL.37s bomb load. Only two hours later they came up The Triple Bomb Rack! (It sounds fancy, but in reality its just a repurposed heavy bomb rack.)",
-    "health": 10,
+    "description": "SnailDynamics engineers sat down one day and wondered how to increase the PZL.37s bomb load. Only two hours later they came up with the Triple Bomb Rack! (It sounds fancy, but in reality its just a repurposed heavy bomb rack.)",
+    "health": 15,
     "materials": ["minecraft:iron_ingot:10","minecraft:stone_button:4","minecraft:tripwire_hook:2"]
   }
 }
