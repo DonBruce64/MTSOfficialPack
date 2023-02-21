@@ -162,6 +162,7 @@
       "minValue": 100.0,
       "linkedParts": [8,9],
       "defaultPart": "mtsofficialpack:pzl37_bombrack",
+      "isPermanent": true,
       "types": ["gun_pylon_wide"]
     },
     
