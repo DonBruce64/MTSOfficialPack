@@ -28,8 +28,8 @@ Credits go to Don Bruce, Limit, Wolfvanox, Cactus, Fsendventd, and last, but cer
 '''
 
 [[dependencies.mtsofficialpack]]
-    modId="minecraft"
+    modId="mts"
     mandatory=true
-    versionRange="[1.16.5,)"
+    versionRange="[22.6.0,)"
     ordering="NONE"
     side="BOTH"
