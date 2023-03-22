@@ -12,7 +12,7 @@ buildscript {
 apply plugin: "net.minecraftforge.gradle"
 
 //Set file name.
-version = "V24"
+version = "V25"
 group = "minecrafttransportsimulator"
 archivesBaseName = "MTS Official Pack"
 
