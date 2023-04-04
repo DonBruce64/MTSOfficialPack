@@ -1,25 +1,12 @@
 {
-  "bullet": {
-    "types": [],
-    "quantity": 1,
-    "diameter": 37.0,
-    "damage": 35.0,
-    "despawnTime": 100,
-    "gravitationalVelocity": 0.033,
-    "armorPenetration": 30.0
+	"general": {
+    "type": "bullet",
+    "description": "Dont like loading individual shells into your AA? Have six of them in one magazine!",
+    "materials": [ "minecraft:iron_ingot:2", "mts:mtsofficialpack.bullet3700solid:6" ]
   },
-  "definitions": [
-    {
-      "subName": "",
-      "name": "37mm Solid Shot",
-      "extraMaterialLists": [
-        []
-      ]
-    }
-  ],
   "rendering": {
-    "animatedObjects": [
-      {
+  		"animatedObjects": [
+     	 {
         "objectName": "bodyModel",
         "animations": [
           {
@@ -30,8 +17,8 @@
           }
         ]
       }
-    ],
-    "lightObjects": [
+     	],
+    	"lightObjects": [
       {
         "objectName": "#tracer",
         "emissive": true,
@@ -53,21 +40,21 @@
         ]
       }
     ],
-    
-    "particles": [
-    {
+    	"particles": [
+      {
         "type": "generic",
-        "texture": "mtsofficialpack:textures/bullets/bang0.png",
-        "quantity": 20,
-        "duration": 20,
-        "scale": 3.0,
-        "toScale": 0.001,
+        "texture":"mts:textures/particles/big_smoke_4.png",
+        "quantity": 4,
+        "duration": 100,
+        "scale": 6.0,
+        "toScale": 45.0,
         "color": "#B1AAA3",
-        "transparency": 1.0,
-        "pos": [0.0,0.0,0.0],
-        		"spreadFactorHorizontal": 25,
-				"spreadFactorVertical": 5,
-        "initialVelocity": [0.0,0.0,-5.0],
+        "transparency": 0.6,
+        "toTransparency": -0.001,
+        "pos": [0.0,1.5,0.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity":[0.0,-0.1,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
         "activeAnimations": [
           {
             "animationType": "visibility",
@@ -79,28 +66,28 @@
       },
       {
         "type": "generic",
-        "texture": "mts:textures/particles/big_smoke_4.png",
-        "quantity": 4,
-        "duration": 100,
-        "transparency": 0.6,
-        "toTransparency": -0.001,
-        "scale": 6.0,
-        "toScale": 45.0,
-        "color": "B1AAA3",
-        "pos": [0.0,1.5,0.0],
-        "initialVelocity": [0.0,1.0,0.0],
-        "movementVelocity": [0.0,-0.1,0.0],
-        "terminalVelocity": [0.0,0.0,0.0],
+        "texture": "mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 20,
+        "duration": 15,
+        "scale": 3.0,
+        "toScale": 0.001,
+        "color": "#B1AAA3",
+        "transparency": 1.0,
+        "pos": [0.0,0.3,0.0],
+        		"spreadFactorHorizontal": 25,
+				"spreadFactorVertical": 5,
+        "initialVelocity": [0.0,1.0,-5.0],
         "activeAnimations": [
           {
             "animationType": "visibility",
-            "variable": "bullet_hit_block",
+            "variable": "bullet_hit",
             "clampMin": 1.0,
             "clampMax": 1.0
           }
         ]
       },
-      {
+      
+            {
         "type": "break",
         "quantity": 8,
         "duration": 90,
@@ -142,14 +129,24 @@
           }
         ]
       }
+      
     ],
-    "modelType": "obj"
+		"modelType": "obj"
   },
-  "general": {
-  "description": "This 37mm round has a basic solid lead projectile with a steel core. It doesnt damage the terrain but with its raw kinetic energy, it shreds through anything it hits, dealing massive single target damage.",
-    "materialLists": [
-      ["minecraft:iron_ingot:2","minecraft:gunpowder:1"]
-    ],
-    "type": "bullet"
+	"definitions": [
+		{
+				"subName": "",
+				"name": "6rnd Solid 37mm Magazine",
+				"extraMaterials": []
+		}
+	],
+	"bullet": {
+    "types": [],
+    "diameter": 37,
+    "damage": 35.0,
+    "armorPenetration": 30,
+    "despawnTime": 100,
+    "gravitationalVelocity": 0.033,
+    "quantity": 6
   }
 }
