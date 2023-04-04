@@ -4,6 +4,6 @@
         "width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"materials" : ["oredict:ingotIron:6", "minecraft:iron_trapdoor:0:1", "minecraft:glass_pane:0:4", "oredict:dyeCyan:4"]
+		"materials" : ["minecraft:iron_ingot:4", "minecraft:iron_trapdoor:1", "minecraft:glass_pane:10"]
 	}
 }

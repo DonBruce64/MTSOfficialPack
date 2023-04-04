@@ -5,7 +5,7 @@
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 0.6875,
-		"materials" : ["oredict:dyeYellow:2", "oredict:dyeLightGray:2", "minecraft:glass_pane:0:1", "oredict:ingotIron:2", "minecraft:stone_slab:0:2"],
+		"materials" : ["minecraft:barrel:1", "mts:mts.fuelhose:1", "minecraft:glass_pane:8", "minecraft:iron_ingot:5", "minecraft:gold_ingot:2"],
 		"textObjects" : [
 			{
 				"pos" : [0.0, 1.578125, 0.29],

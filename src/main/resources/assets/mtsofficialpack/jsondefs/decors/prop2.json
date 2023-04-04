@@ -1,0 +1,12 @@
+{
+    "general": {
+        "name" : "AP Shell Pile",
+		"width" : 0.4,
+		"height" : 0.6,
+		"depth" : 0.4,
+		"oriented" : true,
+		"stackSize": 8,
+		"description": "A couple of decorative 37mm shells. They dont do much other than looking pointy.",
+		"materials" : ["mts:mtsofficialpack.bullet3700solid:1"]
+	}
+}

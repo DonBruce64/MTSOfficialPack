@@ -1,0 +1,12 @@
+{
+    "general": {
+        "name" : "HE Shell Pile",
+		"width" : 0.4,
+		"height" : 0.6,
+		"depth" : 0.4,
+		"oriented" : true,
+		"stackSize": 8,
+		"description": "A couple of decorative 37mm shells. These used to be the spicy ones.",
+		"materials" : ["mts:mtsofficialpack.bullet3700he:1"]
+	}
+}

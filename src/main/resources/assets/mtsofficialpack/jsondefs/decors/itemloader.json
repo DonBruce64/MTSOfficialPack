@@ -6,6 +6,6 @@
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"materials" : ["minecraft:bucket:0:3", "oredict:ingotIron:3", "minecraft:stone_slab:0:2"]
+		"materials" : ["minecraft:hopper:1", "minecraft:gold_ingot:5", "minecraft:redstone:5"]
 	}
 }
