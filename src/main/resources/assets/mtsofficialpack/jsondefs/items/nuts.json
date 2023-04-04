@@ -1,12 +1,13 @@
 {
   "general": {
 	"name" : "Nuts",
-	"materials" : ["minecraft:pumpkin_seeds:0:1", "oredict:dyeRed:1"],
+	"description": "Deez invented those!",
+	"materials" : ["minecraft:pumpkin_seeds:1", "minecraft:red_dye:1"],
 	"type" : "food"
   },
 	"food":{
 		"timeToEat": 20,
-		"hungerAmount": 5,
+		"hungerAmount": 3,
 		"saturationAmount": 0.6
 	}
 }
