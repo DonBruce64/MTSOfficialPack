@@ -192,8 +192,8 @@
     {
       "pos": [0.0,0.0,0.0],
       "rot": [0.0,0.0,0.0],
-      "maxValue": 100.0,
-      "minValue": 100.0,
+      "maxValue": 250.0,
+      "minValue": 250.0,
       "linkedParts": [8,9],
       "defaultPart": "mtsofficialpack:pzl37_bombrack",
       "isPermanent": true,

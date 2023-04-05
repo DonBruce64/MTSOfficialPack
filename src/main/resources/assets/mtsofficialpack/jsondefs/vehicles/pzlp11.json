@@ -99,7 +99,7 @@
     {
       "pos": [0.0,-0.62625,0.0],
       "rot": [0.0,0.0,0.0],
-      "maxValue": 100.0,
+      "maxValue": 250.0,
       "minValue": 100.0,
       "types": ["gun_pylon_standard"],
       "linkedParts": [1],
@@ -111,7 +111,7 @@
      {
       "pos": [0.0,-0.5464,-1.3125],
       "rot": [7.5,0.0,0.0],
-      "maxValue": 100.0,
+      "maxValue": 250.0,
       "minValue": 100.0,
       "types": ["gun_pylon_standard"],
       "linkedParts": [1],
