@@ -1,0 +1,1608 @@
+{
+  "motorized": {
+    "isAircraft": true,
+    "gearSequenceDuration": 80,
+    "hasNavLights": true,
+    "hasLandingLights": true,
+    "emptyMass": 4280,
+    "fuelCapacity": 18000,
+    "brakingFactor": 1.0,
+    "flapSpeed": 0.2,
+    "dragCoefficient": 0.03,
+    "tailDistance": 10.0,
+    "wingSpan": 17.93,
+    "wingArea": 55.0,
+    "aileronArea": 2.5,
+    "elevatorArea": 2.0,
+    "rudderArea": 1.5,
+    "flapNotches": [0.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0,40.0,45.0]
+  },
+  "parts": [
+    {
+      "pos": [0.0,-0.5,-8.0],
+      "turnsWithSteer": true,
+      "minValue": 0.35,
+      "maxValue": 0.65,
+      "types": ["ground_wheel","ground_wheel_aircraft"],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,-0.5,-8.0],
+          "axis": [0.0,-1.0,0.0]
+        }
+      ]
+    },
+    {
+      "pos": [2.59375,-1.875,0.4375],
+      "minValue": 0.55,
+      "maxValue": 0.75,
+      "types": ["ground_wheel","ground_wheel_aircraft"],
+      "applyAfter": "$wheelpiston_left"
+    },
+    {
+      "pos": [2.28125,-1.875,0.4375],
+      "minValue": 0.55,
+      "maxValue": 0.75,
+      "types": ["ground_wheel","ground_wheel_aircraft"],
+      "applyAfter": "$wheelpiston_left"
+    },
+    
+    {
+      "pos": [-2.59375,-1.875,0.4375],
+      "minValue": 0.55,
+      "maxValue": 0.75,
+      "types": ["ground_wheel","ground_wheel_aircraft"],
+      "applyAfter": "$wheelpiston_right"
+    },
+    {
+      "pos": [-2.28125,-1.875,0.4375],
+      "minValue": 0.55,
+      "maxValue": 0.75,
+      "types": ["ground_wheel","ground_wheel_aircraft"],
+      "applyAfter": "$wheelpiston_right"
+    },
+    
+    {
+      "pos": [2.4375,-0.375,1.5625],
+      "minValue": 0.5,
+      "maxValue": 1.25,
+      "types": ["engine_aircraft_radial"],
+      "particleObjects": [
+        {
+          "type": "generic",
+        "textureList": 
+        [
+        "mts:textures/particles/big_smoke_0.png",
+        "mts:textures/particles/big_smoke_1.png",
+        "mts:textures/particles/big_smoke_2.png",
+        "mts:textures/particles/big_smoke_3.png",
+        "mts:textures/particles/big_smoke_4.png",
+        "mts:textures/particles/big_smoke_5.png",
+        "mts:textures/particles/big_smoke_6.png",
+        "mts:textures/particles/big_smoke_7.png",
+        "mts:textures/particles/big_smoke_8.png",
+        "mts:textures/particles/big_smoke_9.png",
+        "mts:textures/particles/big_smoke_10.png",
+        "mts:textures/particles/big_smoke_11.png",
+        "mts:textures/particles/big_smoke_12.png"
+        ],
+        "textureDelays": [13,13,13,13,13,13,13,13,13,13,13,13,13],
+        "quantity": 1,
+		"duration": 169,
+        "transparency": 0.10,
+        "toTransparency": 0.001,
+        "scale": 5.0,
+        "toScale": 30.0,
+        "color": "9C948D",
+          "pos": [2.844,-0.078,-0.625],
+          "velocityVector": [0.0,0.0,-3.0],
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "pos": [-2.4375,-0.375,1.5625],
+      "minValue": 0.5,
+      "maxValue": 1.25,
+      "types": ["engine_aircraft_radial"],
+      "particleObjects": [
+        {
+          "type": "generic",
+        "textureList": 
+        [
+        "mts:textures/particles/big_smoke_0.png",
+        "mts:textures/particles/big_smoke_1.png",
+        "mts:textures/particles/big_smoke_2.png",
+        "mts:textures/particles/big_smoke_3.png",
+        "mts:textures/particles/big_smoke_4.png",
+        "mts:textures/particles/big_smoke_5.png",
+        "mts:textures/particles/big_smoke_6.png",
+        "mts:textures/particles/big_smoke_7.png",
+        "mts:textures/particles/big_smoke_8.png",
+        "mts:textures/particles/big_smoke_9.png",
+        "mts:textures/particles/big_smoke_10.png",
+        "mts:textures/particles/big_smoke_11.png",
+        "mts:textures/particles/big_smoke_12.png"
+        ],
+        "textureDelays": [13,13,13,13,13,13,13,13,13,13,13,13,13],
+        "quantity": 1,
+		"duration": 169,
+        "transparency": 0.10,
+        "toTransparency": 0.001,
+        "scale": 5.0,
+        "toScale": 30.0,
+        "color": "9C948D",
+          "pos": [-2.844,-0.078,-0.625],
+          "velocityVector": [0.0,0.0,-3.0],
+          "quantity": 1
+        }
+      ]
+    },
+    
+    {
+      "pos": [0.0,-0.1875,0.625],
+      "dismountPos": [0.0,1.5,1.0],
+      "isController": true,
+      "types": ["seat","seat_pilot"]
+    },
+    {
+      "pos": [0.0,-0.5625,2.3125],
+      "dismountPos": [0.0,1.5,1.0],
+      "types": ["seat","seat_pilot"]
+    },
+    {
+      "pos": [0.0,-0.1875,-3.0625],
+      "rot": [0,-180,0],
+      "dismountPos": [1.0,0.0,-5.0],
+      "types": ["seat","seat_airliner"]
+    },
+    {
+      "pos": [0.0,-0.3906,-4.5625],
+      "rot": [0,-180,0],
+      "dismountPos": [1.0,0.0,-5.0],
+      "types": ["seat","seat_airliner"]
+    },
+    
+    {
+      "pos": [0.0,0.8125,-4.0],
+      "rot": [0,-180,0],
+      "minValue": 7.0,
+      "maxValue": 10.0,
+      "types": ["gun_observer"],
+      "linkedParts": [10]
+    },
+    {
+      "pos": [0.0,-0.375,-5.1875],
+      "rot": [0,-180,0],
+      "minValue": 7.0,
+      "maxValue": 10.0,
+      "types": ["gun_observer"],
+      "linkedParts": [11]
+    },
+    {
+      "pos": [0.0,-0.16168,3.76],
+      "rot": [0,0,0],
+      "minValue": 7.0,
+      "maxValue": 10.0,
+      "types": ["gun_observer"],
+      "linkedParts": [9]
+    },
+    
+    {
+      "pos": [0.0,0.0,0.0],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "minValue": 100.0,
+      "linkedParts": [8,9],
+      "defaultPart": "mtsofficialpack:pzl37_bombrack",
+      "isPermanent": true,
+      "types": ["gun_pylon_wide"]
+    },
+    
+    
+    {
+      "pos": [0.28125,-0.390625,-1.0625],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "minValue": 100.0,
+      "linkedParts": [8,9],
+      "types": ["gun_pylon_double"],
+      "interactableVariables": [
+        ["!part_present_25"]
+        
+      ]
+    },
+    {
+      "pos": [-0.28125,-0.390625,-1.0625],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 100.0,
+      "minValue": 100.0,
+      "linkedParts": [8,9],
+      "types": ["gun_pylon_double"],
+      "interactableVariables": [
+        ["!part_present_26"]
+        
+      ]
+    },
+    {
+      "pos": [0.28125,-0.453125,-0.5625],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 500.0,
+      "minValue": 500.0,
+      "linkedParts": [8,9],
+      "types": ["gun_pylon_heavy"],
+      "interactableVariables": [
+        ["!part_present_23"]
+        
+      ]
+    },
+    {
+      "pos": [-0.28125,-0.453125,-0.5625],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 500.0,
+      "minValue": 500.0,
+      "linkedParts": [8,9],
+      "types": ["gun_pylon_heavy"],
+      "interactableVariables": [
+        ["!part_present_24"]
+        
+      ]
+    },
+    {
+      "pos": [0.0,-0.05,-1.4375],
+      "maxValue": 3.0,
+      "types": ["interactable_crate"]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.5,3.1875],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,0.6875,2.1875],
+           "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,1.0,0.75],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,1.0,-0.5],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,1.0,-1.75],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,1.0,-3],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,-0.88125,2.3125],
+          "width": 1.125,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,-0.56875,1.0],
+          "width": 1.125,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,-0.88125,-2.25],
+          "width": 1.125,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,-0.8203125,-3.375],
+          "width": 1.125,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,-0.69375,-4.5],
+          "width": 1.125,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,0.0625,-6.5],
+          "width": 1.25,
+          "height": 1.125
+        },
+        {
+          "pos": [0.0,0.125,-7.625],
+          "width": 1.25,
+          "height": 0.75
+        },
+        
+        {
+          "pos": [1.3125,0.25,-8.6875],
+          "width": 2.0,
+          "height": 0.25
+        },
+        {
+          "pos": [-1.3125,0.25,-8.6875],
+          "width": 2.0,
+          "height": 0.25
+        },
+        
+        {
+          "pos": [2.4375,-0.375,0.75],
+          "width": 1.0,
+          "height": 1.0
+        },
+        {
+          "pos": [-2.4375,-0.375,0.75],
+          "width": 1.0,
+          "height": 1.0
+        },
+        
+        {
+          "pos": [2.03125,-0.125,-0.96875],
+          "width": 2.8125,
+          "height": 0.125
+        },
+        {
+          "pos": [-2.03125,-0.125,-0.96875],
+          "width": 2.8125,
+          "height": 0.125
+        },
+        
+        {
+          "pos": [4.625,-0.1875,-0.8125],
+          "width": 2.5,
+          "height": 0.25
+        },
+        {
+          "pos": [-4.625,-0.1875,-0.8125],
+          "width": 2.5,
+          "height": 0.25
+        },
+        
+        {
+          "pos": [6.875,-0.1875,-0.75],
+          "width": 2.0,
+          "height": 0.25
+        },
+        {
+          "pos": [-6.875,-0.1875,-0.75],
+          "width": 2.0,
+          "height": 0.25
+        }
+      ]
+    }
+  ],
+  "instruments": [
+  {
+      "pos": [0.28125,0.41406,1.49849],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.0234375,
+      "hudX": 91,
+      "hudY": 36,
+      "hudScale": 0.425
+    },
+    {
+      "pos": [0.28125,0.59375,1.49844],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.0234375,
+      "hudX": 145,
+      "hudY": 36,
+      "hudScale": 0.425
+    },
+    {
+      "pos": [0.0,0.59375,1.49844],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.0234375,
+      "hudX": 200,
+      "hudY": 36,
+      "hudScale": 0.425
+    },
+    {
+      "pos": [-0.28125,0.59375,1.49844],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.0234375,
+      "hudX": 254,
+      "hudY": 36,
+      "hudScale": 0.425
+    },
+    {
+      "pos": [-0.28125,0.41406,1.49849],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.0234375,
+      "hudX": 308,
+      "hudY": 36,
+      "hudScale": 0.425
+    },
+    
+    
+    
+    {
+      "pos": [0.0625,0.421825,1.49844],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015625,
+      "hudX": 88,
+      "hudY": 106,
+      "hudScale": 0.425
+    },
+    {
+      "pos": [-0.0625,0.421825,1.49844],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.015625,
+      "hudX": 144,
+      "hudY": 106,
+      "hudScale": 0.425
+    }
+  ],
+  "definitions": [
+  {
+      "subName": "_green",
+      "name": "Green PZL.37B Los",
+      "extraMaterialLists": [
+        ["minecraft:green_dye:4","minecraft:light_gray_dye:1"]
+      ]
+    },
+    {
+      "subName": "_brown",
+      "name": "Brown PZL.37B Los",
+      "extraMaterialLists": [
+        ["minecraft:brown_dye:4","minecraft:light_gray_dye:1"]
+      ]
+    },
+    {
+      "subName": "_tan",
+      "name": "Tan PZL.37B Los",
+      "extraMaterialLists": [
+        ["minecraft:yellow_dye:2","minecraft:white_dye:1","minecraft:sand:20","minecraft:black_dye:2"]
+      ]
+    },
+{
+      "subName": "",
+      "partTones": [],
+      "secondaryTextColors": [],
+      "name": "Gray PZL.37B Los",
+      "extraMaterialLists": [
+        ["minecraft:gray_dye:4","minecraft:light_gray_dye:1"]
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [
+      {
+        "pos": [0.563,0.3125,-3.0],
+        "rot": [0.0,90.0,0.0],
+        "scale": 0.75,
+        "fieldName": "Callsign",
+        "defaultText": "Helicidae",
+        "maxLength": 12,
+        "color": "CCCCCC"
+      },
+      {
+        "pos": [-0.563,0.3125,-3.0],
+        "rot": [0.0,-90.0,0.0],
+        "scale": 0.75,
+        "fieldName": "Callsign",
+        "defaultText": "Helicidae",
+        "maxLength": 12,
+        "color": "CCCCCC"
+      }
+    ],
+    "animatedObjects": [
+    	{
+        "objectName": "$wheelstrut_left",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.4375,-0.4375,0.46875],
+            "axis": [90.0,0.0,0.0],
+            "duration": 50,
+            "reverseDelay": 30,
+            "forwardsDelay": 50
+          }
+        ]
+      },
+   		 {
+        "objectName": "$wheelpiston_left",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.4375,-0.4375,0.46875],
+            "axis": [90.0,0.0,0.0],
+            "duration": 50,
+            "forwardsDelay": 50,
+            "reverseDelay": 30
+          },
+          {
+            "animationType": "translation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.4375,-0.4375,0.46875],
+            "axis": [0.0,0.5,0.0],
+            "duration": 50,
+            "reverseDelay": 30
+          }
+        ]
+      },
+      
+      {
+        "objectName": "$wheelstrut_right",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.4375,-0.4375,0.46875],
+            "axis": [90.0,0.0,0.0],
+            "duration": 50,
+            "reverseDelay": 30,
+            "forwardsDelay": 50
+          }
+        ]
+      },
+      {
+        "objectName": "$wheelpiston_right",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.4375,-0.4375,0.46875],
+            "axis": [90.0,0.0,0.0],
+            "duration": 50,
+            "forwardsDelay": 50,
+            "reverseDelay": 30
+          },
+          {
+            "animationType": "translation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.4375,-0.4375,0.46875],
+            "axis": [0.0,0.5,0.0],
+            "duration": 50,
+            "reverseDelay": 30
+          }
+        ]
+      },
+      
+      {
+        "objectName": "$geardoorfront_left",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.0,-0.78125,0.5625],
+            "axis": [90.0,0.0,0.0],
+            "duration": 30,
+            "forwardsDelay": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$geardoorleft_left",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.78125,-0.78125,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30,
+            "forwardsDelay": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$geardoorright_left",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.09375,-0.78125,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30,
+            "forwardsDelay": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$geardoorleft_right",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [2.09375,-0.78125,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30,
+            "forwardsDelay": 90
+          }
+        ]
+      },
+      {
+        "objectName": "$geardoorright_right",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-2.78125,-0.78125,0.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30,
+            "forwardsDelay": 90
+          }
+        ]
+      },
+      
+      
+      {
+        "objectName": "$bombbaydoorleft_8",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [1.96875,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_8",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [1.65625,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleft_7",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [1.625,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_7",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [1.3125,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleft_6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [1.25,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_6",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.9375,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+	  {
+        "objectName": "$bombbaydoorleft_5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.90625,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_5",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.59375,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+	  {
+        "objectName": "$bombbaydoorleft_1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-1.65625,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-1.96875,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleft_4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.59375,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_4",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.90625,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleft_3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.9375,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-1.25,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleft_2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-1.3125,-0.53125,-1.0],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorright_2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-1.625,-0.53125,-1.0],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleftlargeleft_1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.53125,-0.90625,-1.625],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleftlargeright_1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,-0.90625,-1.625],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleftlargeleft_2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [0.0,-0.90625,-1.625],
+            "axis": [0.0,0.0,90.0],
+            "duration": 30
+          }
+        ]
+      },
+      {
+        "objectName": "$bombbaydoorleftlargeright_2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gear_setpoint",
+            "centerPoint": [-0.53125,-0.90625,-1.625],
+            "axis": [0.0,0.0,-90.0],
+            "duration": 30
+          }
+        ]
+      },
+      
+      {
+        "objectName": "$throttle",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.03125,2.71875],
+            "axis": [85.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$sticksteer",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.0,-0.4375,1.25],
+            "axis": [-0.8,0.0,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [0.0,0.3125,1.21875],
+            "axis": [0.0,0.0,2.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$stickstick",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [0.0,-0.4375,1.25],
+            "axis": [-0.8,0.0,0.0]
+          }
+        ]
+      },
+      
+      {
+        "objectName": "$leftpedal",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,-0.34375,1.46875],
+            "axis": [-0.8,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$rightpedal",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,-0.34375,1.46875],
+            "axis": [0.8,0.0,0.0]
+          }
+        ]
+      },
+      
+      {
+        "objectName": "$Aileron_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [6.1875,-0.125,-1.375],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Aileron_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-6.1875,-0.125,-1.375],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Elevator_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-1.0,0.25,-8.875],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Elevator_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-1.0,0.25,-8.875],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Rudder_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [-2.3125,1.0,-8.9375],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Rudder_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [2.3125,1.0,-8.9375],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "&$Navigationlight_FFFFFF_FFFFF_111",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.0,0.75,-5.005],
+            "axis": [0.0,1.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Flap_L",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [-2.75,1.75,-0.1925],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Flap_R",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "flaps_actual",
+            "centerPoint": [2.75,1.75,-0.1925],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&Navigationlight_FF0000_FFFFF_111",
+        "emissive": true,
+        "covered": false,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [7.86953,-0.15625,0.08125],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [7.86953,-0.15625,0.08125],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          }
+        ]
+      },
+      {
+        "objectName": "&LandingLight_FFFFFF_FFFFF_111",
+        "emissive": true,
+        "covered": false,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "landing_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,-1.01103,1.973125],
+            "axis": [0.0,-0.25,0.0],
+            "flareHeight": 1.0,
+            "flareWidth": 1.0,
+            "beamDiameter": 9.0,
+            "beamLength": 42.0
+          }
+        ]
+      },
+      {
+        "objectName": "&Navigationlight_00FF00_FFFFF_111",
+        "emissive": true,
+        "covered": false,
+        "isElectric": true,
+        "color": "00FF00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-7.86953,-0.15625,0.08125],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [-7.86953,-0.15625,0.08125],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          }
+        ]
+      },
+      {
+        "objectName": "&Navigationlight_FFFFFF_FFFFF_111",
+        "emissive": true,
+        "covered": false,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.28125,-9.375],
+            "axis": [1.0,1.0,-1.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [0.0,0.28125,-9.375],
+            "axis": [1.0,1.0,-1.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          }
+        ]
+      }
+    ],
+    "sounds": [
+	{
+        "name": "mtsofficialpack:wind_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isInterior": true,
+        "blockDoppler": false,
+        "looping": true,
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:wind_on_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isExterior": true,
+        "blockDoppler": false,
+        "looping": true,
+        "forceSound": true
+      },
+    {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:metalscrape",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.8,
+            "clampMax": 2.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 2.0,
+            "clampMax": 100.0
+          }
+        ],
+        "looping": true
+      }
+      ],
+    "particles": [
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 90,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "857D76",
+        "pos": [-2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 90,
+			"clampMax": 175
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 130,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "57514B",
+        "pos": [-2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 175,
+			"clampMax": 260
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 160,
+        "transparency": 0.8,
+        "transparency": 0.1,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "332E2B",
+        "pos": [-2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 260,
+			"clampMax": 350
+          }
+        ]
+      },
+      
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 90,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "857D76",
+        "pos": [2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 90,
+			"clampMax": 175
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 130,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "57514B",
+        "pos": [2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 175,
+			"clampMax": 260
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 160,
+        "transparency": 0.8,
+        "transparency": 0.1,
+        "scale": 15.0,
+        "toScale": 60.0,
+        "color": "332E2B",
+        "pos": [2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 260,
+			"clampMax": 350
+          }
+        ]
+      },
+      
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.1,
+        "scale": 20.0,
+        "toScale": 75.0,
+        "color": "292521",
+        "pos": [-2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 3.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/fire0.png",
+        "mtsofficialpack:textures/bullets/fire1.png",
+        "mtsofficialpack:textures/bullets/fire2.png",
+        "mtsofficialpack:textures/bullets/fire3.png",
+        "mtsofficialpack:textures/bullets/fire4.png",
+        "mtsofficialpack:textures/bullets/fire5.png",
+        "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "quantity": 2,
+        "spawnEveryTick": true,
+        "duration": 28,
+        "scale": 15.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [-2.844,-0.078,-0.625],
+        		"spreadFactorHorizontal": 120,
+				"spreadFactorVertical": 2,
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 3.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+    {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.1,
+        "scale": 20.0,
+        "toScale": 75.0,
+        "color": "292521",
+        "pos": [2.844,-0.078,-0.625],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 3.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+{
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/fire0.png",
+        "mtsofficialpack:textures/bullets/fire1.png",
+        "mtsofficialpack:textures/bullets/fire2.png",
+        "mtsofficialpack:textures/bullets/fire3.png",
+        "mtsofficialpack:textures/bullets/fire4.png",
+        "mtsofficialpack:textures/bullets/fire5.png",
+        "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "quantity": 2,
+        "spawnEveryTick": true,
+        "duration": 28,
+        "scale": 15.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [2.844,-0.078,-0.625],
+        		"spreadFactorHorizontal": 120,
+				"spreadFactorVertical": 2,
+				
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 3.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+    {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 7,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,-1.0,-1.0],
+        		"spreadFactorHorizontal": 300,
+				"spreadFactorVertical": 10,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.8,
+            "clampMax": 2.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 2.0,
+            "clampMax": 100.0
+          }
+        ]
+      },
+    {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 7,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,-1.0,-3.0],
+        		"spreadFactorHorizontal": 300,
+				"spreadFactorVertical": 10,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.8,
+            "clampMax": 2.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 2.0,
+            "clampMax": 100.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "description": "The PZL.37 Los is the dedicated twin-engined bomber of OCP. It can carry up to 14 bombs at once, bringing devastation upon anything in its sights. Three onboard machine-guns protect its hull from enemy aircraft at every angle, although you'll need a crew to operate those... The PZL.37 Los is the best choice if you're looking to 'adjust' villager population (and prices).",
+    "health": 350,
+    "materialLists": [
+      ["minecraft:iron_trapdoor:5","minecraft:lever:4","minecraft:gold_ingot:10","minecraft:iron_ingot:40","minecraft:string:10","minecraft:redstone:20","minecraft:redstone_lamp:1","minecraft:glass_pane:48"]
+    ]
+  }
+}

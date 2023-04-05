@@ -4,9 +4,10 @@
     "hasNavLights": true,
     "hasStrobeLights": true,
     "hasLandingLights": true,
-    "emptyMass": 1200,
+    "emptyMass": 1000,
     "fuelCapacity": 5000,
     "brakingFactor": 1.0,
+    "dragCoefficient": 0.03,
     "tailDistance": 8.40874
   },
   "parts": [
@@ -15,31 +16,39 @@
       "minValue": 0.25,
       "maxValue": 0.75,
       "types": ["ground_pontoon"],
-      "linkedVariables": ["!part_present_3"]
+      "interactableVariables": [
+        ["!part_present_3"]
+      ]
     },
     {
       "pos": [1.47649,-1.37138,1.5248],
       "minValue": 0.25,
       "maxValue": 0.75,
       "types": ["ground_pontoon"],
-      "linkedVariables": ["!part_present_4"]
+      "interactableVariables": [
+        ["!part_present_4"]
+      ]
     },
     {
       "pos": [-1.47649,-1.37138,-0.453348],
       "maxValue": 0.25,
       "types": ["ground_skid_helicopter"],
-      "linkedVariables": ["!part_present_1"]
+      "interactableVariables": [
+        ["!part_present_1"]
+      ]
     },
     {
       "pos": [1.47649,-1.37138,-0.453348],
       "maxValue": 0.25,
       "types": ["ground_skid_helicopter"],
-      "linkedVariables": ["!part_present_2"]
+      "interactableVariables": [
+        ["!part_present_2"]
+      ]
     },
     {
       "pos": [-0.75,0.9,-0.1],
       "rot": [0.0,90.0,0.0],
-      "minValue": 2.0,
+      "minValue": 0.5,
       "maxValue": 6.0,
       "types": ["interactable_crate","interactable_barrel"],
       "customTypes": ["bell47g"]
@@ -47,7 +56,7 @@
     {
       "pos": [0.75,0.9,-0.1],
       "rot": [0.0,-90.0,0.0],
-      "minValue": 2.0,
+      "minValue": 0.5,
       "maxValue": 6.0,
       "types": ["interactable_crate","interactable_barrel"],
       "customTypes": ["bell47g"]
@@ -55,25 +64,35 @@
     {
       "pos": [-1.07,-0.87,1.91],
       "maxValue": 20.0,
-      "types": ["gun_fixed"]
+      "types": ["gun_fixed"],
+      "linkedParts": [11,12],
+      "interactableVariables": [
+        ["!part_present_14"]
+      ]
     },
     {
       "pos": [1.07,-0.87,1.91],
       "maxValue": 20.0,
-      "types": ["gun_fixed"]
+      "types": ["gun_fixed"],
+      "linkedParts": [11,12],
+      "interactableVariables": [
+        ["!part_present_13"]
+      ]
     },
     {
       "pos": [-0.02,0.0,0.03],
       "maxValue": 2.0,
       "types": ["engine_helicopter_flat"],
-      "additionalParts": [
-        {
-          "pos": [0.0,2.2779,0.0],
-          "rot": [-90.0,0.0,0.0],
-          "minValue": 400.0,
-          "maxValue": 500.0,
-          "types": ["propeller_rotor"]
-        }
+      "linkedParts": [10]
+    },
+    {
+      "pos": [0.0,2.2779,0.0],
+      "rot": [-90.0,0.0,0.0],
+      "minValue": 400.0,
+      "maxValue": 500.0,
+      "types": ["propeller_rotor"],
+      "interactableVariables": [
+        ["part_present_9"]
       ]
     },
     {
@@ -87,6 +106,26 @@
       "dismountPos": [1.5,0.5,1.34],
       "isController": true,
       "types": ["seat"]
+    },
+    {
+      "pos": [0.924878,-0.438536,1.05028],
+      "rot": [0,0,90],
+      "maxValue": 500.0,
+      "types": ["gun_pylon_standard"],
+      "linkedParts": [11,12],
+      "interactableVariables": [
+        ["!part_present_8"]
+      ]
+    },
+    {
+      "pos": [-0.924878,-0.438536,1.05028],
+      "rot": [0,0,-90],
+      "maxValue": 500.0,
+      "types": ["gun_pylon_standard"],
+      "linkedParts": [11,12],
+      "interactableVariables": [
+        ["!part_present_7"]
+      ]
     }
   ],
   "collisionGroups": [
@@ -229,34 +268,27 @@
     {
       "subName": "",
       "name": "Bell 47G",
-      "extraMaterials": ["oredict:dyeRed:4"]
+      "extraMaterialLists": [
+        ["minecraft:orange_dye:3"]
+      ]
+    },
+    {
+      "subName": "_black",
+      "name": "Black Bell 47G",
+      "extraMaterialLists": [
+        ["minecraft:black_dye:3"]
+      ]
     },
     {
       "subName": "_olive",
       "name": "Olive Bell 47G",
-      "extraMaterials": ["minecraft:dye:2:4"]
+      "extraMaterialLists": [
+        ["minecraft:green_dye:3"]
+      ]
     }
   ],
   "rendering": {
     "textObjects": [
-      {
-        "pos": [0.56,0.4,-3.03],
-        "rot": [0.0,99.0,0.0],
-        "scale": 0.5,
-        "fieldName": "Text",
-        "defaultText": "ඞ",
-        "maxLength": 6,
-        "color": "9D9D97"
-      },
-      {
-        "pos": [-0.56,0.4,-3.03],
-        "rot": [0.0,-99.0,0.0],
-        "scale": 0.5,
-        "fieldName": "Text",
-        "defaultText": "",
-        "maxLength": 6,
-        "color": "9D9D97"
-      }
     ],
     "animatedObjects": [
       {
@@ -325,16 +357,16 @@
             "axis": [1.0,0.0,0.0]
           }
         ]
-      },
+      },   
       {
         "objectName": "$TailRotor",
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "engine_driveshaft_rotation_1",
+            "variable": "propeller_rotation_1",
             "centerPoint": [-0.21,1.03,-8.39],
-						"offset": 90,
-            "axis": [-1.0,0.0,0.0]
+            "axis": [-0.9,0.0,0.0],
+            "offset": 90.0
           }
         ]
       }
@@ -698,11 +730,294 @@
         ]
       }
     ],
-    "sounds": [],
-    "particles": []
+    "sounds": [
+		{
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+		{
+        "name": "mtsofficialpack:wind_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+		{
+        "name": "mtsofficialpack:wind_on_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isExterior": true,
+        "looping": true,
+        "forceSound": true
+      }
+    ],
+    "particles": [
+    {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 1,
+        "duration": 20,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,-1.0],
+        		"spreadFactorHorizontal": 150,
+				"spreadFactorVertical": 10,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,3.0,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 120,
+			"clampMax": 150
+          }
+        ]
+      },
+    
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 80,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "857D76",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 60,
+			"clampMax": 90
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 100,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "57514B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 90,
+			"clampMax": 120
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 140,
+        "transparency": 0.6,
+        "transparency": 0.1,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "332E2B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 120,
+			"clampMax": 150
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/fire0.png",
+        "mtsofficialpack:textures/bullets/fire1.png",
+        "mtsofficialpack:textures/bullets/fire2.png",
+        "mtsofficialpack:textures/bullets/fire3.png",
+        "mtsofficialpack:textures/bullets/fire4.png",
+        "mtsofficialpack:textures/bullets/fire5.png",
+        "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "quantity": 1,
+        "spawnEveryTick": true,
+        "duration": 28,
+        "scale": 10.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,-1.0],
+        		"spreadFactorHorizontal": 120,
+				"spreadFactorVertical": 2,
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 135,
+			"clampMax": 150
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/fire0.png",
+        "mtsofficialpack:textures/bullets/fire1.png",
+        "mtsofficialpack:textures/bullets/fire2.png",
+        "mtsofficialpack:textures/bullets/fire3.png",
+        "mtsofficialpack:textures/bullets/fire4.png",
+        "mtsofficialpack:textures/bullets/fire5.png",
+        "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "quantity": 2,
+        "spawnEveryTick": true,
+        "duration": 28,
+        "scale": 15.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,-1.0],
+        		"spreadFactorHorizontal": 120,
+				"spreadFactorVertical": 2,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.1,
+        "scale": 20.0,
+        "toScale": 60.0,
+        "color": "292521",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
   },
   "general": {
-    "description": "The Bell 47G is a simple, yet versatile helicopter.  While it only seats two, it can carry cargo or extra fuel in optional external containers, making it ideal for either short cargo flights or medium trips to remote bases.  Small guns may also be mounted to the fuselage, though these can only fire the direction the helicopter is facing.  As such, they are not recommended against 'hot' ground targets.",
-    "materials": ["oredict:ingotIron:4","minecraft:iron_bars:0:6","minecraft:glass_pane:0:6"]
+    "description": "The Bell 47G is a simple, yet versatile helicopter.  While it only seats two, it can carry cargo or extra fuel in optional external containers, making it ideal for either short cargo flights or medium trips to remote bases.  Small guns or rocket pods may also be mounted to the fuselage, though these can only fire the direction the helicopter is facing.  As such, they are not recommended against 'hot' ground targets.",
+    "health": 150,
+    "materialLists": [
+      ["minecraft:iron_ingot:25","minecraft:lever:4","minecraft:iron_bars:16","minecraft:piston:2","minecraft:redstone:25","minecraft:glass_pane:16"]
+    ]
   }
 }

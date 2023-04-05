@@ -1,66 +1,22 @@
 {
   "motorized": {
     "isAircraft": true,
-    "hasFlaps": true,
+    "hasNavLights": true,
+    "hasStrobeLights": true,
+    "hasTaxiLights": true,
+    "hasLandingLights": true,
     "emptyMass": 800,
     "fuelCapacity": 5000,
     "brakingFactor": 1.0,
+    "flapSpeed": 0.1,
+    "dragCoefficient": 0.03,
     "tailDistance": 7.0,
     "wingSpan": 11.0,
     "wingArea": 16.0,
     "aileronArea": 3.2,
     "elevatorArea": 3.0,
     "rudderArea": 1.5,
-    "instruments": [
-      {
-        "pos": [0.46875,0.34375,0.718125],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.04375,
-        "hudX": 120,
-        "hudY": 36,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.125,0.34375,0.718125],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.04375,
-        "hudX": 200,
-        "hudY": 36,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [-0.21875,0.34375,0.718125],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.04375,
-        "hudX": 280,
-        "hudY": 36,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.46875,0.0,0.718125],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.04375,
-        "hudX": 120,
-        "hudY": 103,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.125,0.0,0.718125],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.04375,
-        "hudX": 200,
-        "hudY": 103,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [-0.21875,0.0,0.718125],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.04375,
-        "hudX": 280,
-        "hudY": 103,
-        "hudScale": 0.425
-      }
-    ]
+    "flapNotches": [0.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0]
   },
   "parts": [
     {
@@ -68,44 +24,46 @@
       "turnsWithSteer": true,
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"],
+      "types": ["ground_wheel","ground_wheel_aircraft","ground_pontoon"],
       "animations": [
         {
           "animationType": "rotation",
           "variable": "rudder",
-          "centerPoint": [0.0,0.0,0.0],
+          "centerPoint": [0.0,-0.85,1.7],
           "axis": [0.0,-1.0,0.0]
         }
       ]
     },
     {
       "pos": [-1.65,-0.85,0.0],
+      "rot": [0.0,0.0,0.0],
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"]
+      "types": ["ground_wheel","ground_wheel_aircraft","ground_pontoon"]
     },
     {
       "pos": [1.65,-0.85,0.0],
       "minValue": 0.35,
       "maxValue": 0.65,
-      "types": ["ground_wheel", "ground_wheel_aircraft","ground_pontoon"]
+      "types": ["ground_wheel","ground_wheel_aircraft","ground_pontoon"]
     },
     {
       "pos": [0.0,0.1,2.15625],
       "maxValue": 0.5,
-      "types": ["engine_aircraft_horizontal"]
+      "types": ["engine_aircraft_horizontal"],
+      "linkedParts": []
     },
     {
       "pos": [-0.4,0.125,0.01],
       "dismountPos": [-2.0,0.0,-2.0],
       "isController": true,
-      "types": ["seat", "seat_pilot"]
+      "types": ["seat","seat_pilot"]
     },
     {
       "pos": [0.4,0.125,0.01],
       "dismountPos": [2.0,0.0,-2.0],
       "isController": true,
-      "types": ["seat", "seat_pilot"]
+      "types": ["seat","seat_pilot"]
     },
     {
       "pos": [0.0,0.125,-1.0],
@@ -113,103 +71,207 @@
       "types": ["interactable_crate"]
     }
   ],
-  "collision": [
+  "collisionGroups": [
     {
-      "pos": [0.0,0.2,1.5],
-      "width": 1.0,
-      "height": 1.0
+      "collisions": [
+        {
+          "pos": [0.0,0.2,1.5],
+          "width": 1.0,
+          "height": 1.0
+        },
+        {
+          "pos": [0.0,0.2,-2.75],
+          "width": 1.0,
+          "height": 1.0
+        },
+        {
+          "pos": [1.5,0.5625,-4.25],
+          "width": 1.0,
+          "height": 0.125
+        },
+        {
+          "pos": [-1.5,0.5625,-4.25],
+          "width": 1.0,
+          "height": 0.125
+        },
+        {
+          "pos": [1.5,0.5625,-4.25],
+          "width": 1.0,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,1.25,-4.25],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [0.0,1.6625,0.25],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [-1.25,1.6625,0.25],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [1.25,1.6625,0.25],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [-2.5,1.6625,0.25],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [2.5,1.6625,0.25],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [-3.75,1.6625,0.25],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [3.75,1.6625,0.25],
+          "width": 1.25,
+          "height": 0.125
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "pos": [0.46875,0.34375,0.718125],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.04375,
+      "hudX": 120,
+      "hudY": 36,
+      "hudScale": 0.425
     },
     {
-      "pos": [0.0,0.2,-2.75],
-      "width": 1.0,
-      "height": 1.0
+      "pos": [0.125,0.34375,0.718125],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.04375,
+      "hudX": 200,
+      "hudY": 36,
+      "hudScale": 0.425
     },
     {
-      "pos": [1.5,0.5625,-4.25],
-      "width": 1.0,
-      "height": 0.125
+      "pos": [-0.21875,0.34375,0.718125],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.04375,
+      "hudX": 280,
+      "hudY": 36,
+      "hudScale": 0.425
     },
     {
-      "pos": [-1.5,0.5625,-4.25],
-      "width": 1.0,
-      "height": 0.125
+      "pos": [0.46875,0.0,0.718125],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.04375,
+      "hudX": 120,
+      "hudY": 103,
+      "hudScale": 0.425
     },
     {
-      "pos": [1.5,0.5625,-4.25],
-      "width": 1.0,
-      "height": 0.125
+      "pos": [0.125,0.0,0.718125],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.04375,
+      "hudX": 200,
+      "hudY": 103,
+      "hudScale": 0.425
     },
     {
-      "pos": [0.0,1.25,-4.25],
-      "width": 0.25,
-      "height": 1.5
-    },
-    {
-      "pos": [0.0,1.6625,0.25],
-      "width": 1.25,
-      "height": 0.125
-    },
-    {
-      "pos": [-1.25,1.6625,0.25],
-      "width": 1.25,
-      "height": 0.125
-    },
-    {
-      "pos": [1.25,1.6625,0.25],
-      "width": 1.25,
-      "height": 0.125
-    },
-    {
-      "pos": [-2.5,1.6625,0.25],
-      "width": 1.25,
-      "height": 0.125
-    },
-    {
-      "pos": [2.5,1.6625,0.25],
-      "width": 1.25,
-      "height": 0.125
-    },
-    {
-      "pos": [-3.75,1.6625,0.25],
-      "width": 1.25,
-      "height": 0.125
-    },
-    {
-      "pos": [3.75,1.6625,0.25],
-      "width": 1.25,
-      "height": 0.125
+      "pos": [-0.21875,0.0,0.718125],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.04375,
+      "hudX": 280,
+      "hudY": 103,
+      "hudScale": 0.425
     }
   ],
   "definitions": [
     {
       "subName": "_oak",
       "name": "Oak MC-172",
-      "extraMaterials": ["minecraft:wooden_slab:0:10","minecraft:planks:0:10"]
+      "extraMaterialLists": [
+        [
+        "minecraft:oak_slab:24",
+        "minecraft:oak_log:0:2",
+        "minecraft:oak_planks:8",
+        "minecraft:stick:20",
+        "minecraft:lever:1",
+        "minecraft:iron_ingot:5",
+        "minecraft:glass_pane:6"
+        ]
+      ]
     },
     {
       "subName": "_spruce",
       "name": "Spruce MC-172",
-      "extraMaterials": ["minecraft:wooden_slab:1:10","minecraft:planks:1:10"]
+      "extraMaterialLists": [[
+        "minecraft:spruce_slab:24",
+        "minecraft:spruce_log:0:2",
+        "minecraft:spruce_planks:8",
+        "minecraft:stick:20",
+        "minecraft:lever:1",
+        "minecraft:iron_ingot:5",
+        "minecraft:glass_pane:6"
+        ]]
     },
     {
       "subName": "_birch",
       "name": "Birch MC-172",
-      "extraMaterials": ["minecraft:wooden_slab:2:10","minecraft:planks:2:10"]
+      "extraMaterialLists": [[
+        "minecraft:birch_slab:24",
+        "minecraft:birch_log:0:2",
+        "minecraft:birch_planks:8",
+        "minecraft:stick:20",
+        "minecraft:lever:1",
+        "minecraft:iron_ingot:5",
+        "minecraft:glass_pane:6"
+        ]]
     },
     {
       "subName": "_jungle",
       "name": "Jungle MC-172",
-      "extraMaterials": ["minecraft:wooden_slab:3:10","minecraft:planks:3:10"]
+      "extraMaterialLists": [[
+        "minecraft:jungle_slab:24",
+        "minecraft:jungle_log:0:2",
+        "minecraft:jungle_planks:8",
+        "minecraft:stick:20",
+        "minecraft:lever:1",
+        "minecraft:iron_ingot:5",
+        "minecraft:glass_pane:6"
+        ]]
     },
     {
       "subName": "_acacia",
       "name": "Acacia MC-172",
-      "extraMaterials": ["minecraft:wooden_slab:4:10","minecraft:planks:4:10"]
+      "extraMaterialLists": [[
+        "minecraft:acacia_slab:24",
+        "minecraft:acacia_log:0:2",
+        "minecraft:acacia_planks:8",
+        "minecraft:stick:20",
+        "minecraft:lever:1",
+        "minecraft:iron_ingot:5",
+        "minecraft:glass_pane:6"
+        ]]
     },
     {
       "subName": "_darkoak",
       "name": "Dark Oak MC-172",
-      "extraMaterials": ["minecraft:wooden_slab:5:10","minecraft:planks:5:10"]
+      "extraMaterialLists": [[
+        "minecraft:dark_oak_slab:24",
+        "minecraft:dark_oak_log:0:2",
+        "minecraft:dark_oak_planks:8",
+        "minecraft:stick:20",
+        "minecraft:lever:1",
+        "minecraft:iron_ingot:5",
+        "minecraft:glass_pane:6"
+        ]]
     }
   ],
   "rendering": {
@@ -221,7 +283,7 @@
         "fieldName": "Callsign",
         "defaultText": "MC-172",
         "maxLength": 7,
-        "color": "#CCCCCC"
+        "color": "CCCCCC"
       },
       {
         "pos": [-0.65625,0.25,-2.8125],
@@ -230,7 +292,7 @@
         "fieldName": "Callsign",
         "defaultText": "MC-172",
         "maxLength": 7,
-        "color": "#CCCCCC"
+        "color": "CCCCCC"
       }
     ],
     "animatedObjects": [
@@ -323,14 +385,559 @@
         ]
       }
     ],
-    "sounds": []
+    "lightObjects": [
+      {
+        "objectName": "&StrobeLight_FFFFFF_C0000_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "strobe_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "18_2_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-4.5,1.6875040531158447,0.6875],
+            "axis": [-1.0,-0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [-4.5,1.6875040531158447,0.6875],
+            "axis": [-1.0,-0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [4.5,1.6875040531158447,0.6875],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [4.5,1.6875040531158447,0.6875],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          }
+        ]
+      },
+      {
+        "objectName": "&NavigationLight_00FF00_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "00FF00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-4.5,1.6875040531158447,0.8125],
+            "axis": [-1.0,-0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [-4.5,1.6875040531158447,0.8125],
+            "axis": [-1.0,-0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          }
+        ]
+      },
+      {
+        "objectName": "&$NavigationLight_FFFFFF_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,2.0000100135803223,-4.6875],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [0.0,2.0000100135803223,-4.6875],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [0.0,1.9375100135803223,-4.75],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [0.0,1.9375100135803223,-4.75],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          }
+        ]
+      },
+      {
+        "objectName": "&NavigationLight_FF0000_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "navigation_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [4.5,1.6875040531158447,0.8125],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          },
+          {
+            "pos": [4.5,1.6875040531158447,0.8125],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.375,
+            "flareWidth": 0.375
+          }
+        ]
+      },
+      {
+        "objectName": "&TaxiLight_FFFFFF_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "taxi_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [2.8517080545425415,1.656253457069397,0.9139769971370697],
+            "axis": [-0.3659999966621399,-0.5,0.7849000096321106],
+            "flareHeight": 0.41910625,
+            "flareWidth": 0.41910625,
+            "beamDiameter": 8.940933,
+            "beamLength": 26.8228
+          },
+          {
+            "pos": [2.8517080545425415,1.656253457069397,0.8611499965190887],
+            "axis": [-0.3659999966621399,-0.5,0.7849000096321106],
+            "flareHeight": 0.41910625,
+            "flareWidth": 0.41910625,
+            "beamDiameter": 8.940933,
+            "beamLength": 26.8228
+          }
+        ]
+      },
+      {
+        "objectName": "&LandingLight_FFFFFF_FFFFF_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "landing_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,-0.26389650255441666,2.1818569898605347],
+            "axis": [0.0,-0.1736000031232834,0.9847999811172485],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625,
+            "beamDiameter": 12.0,
+            "beamLength": 36.0
+          },
+          {
+            "pos": [0.0,-0.26389650255441666,2.1818569898605347],
+            "axis": [0.0,-0.1736000031232834,0.9847999811172485],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625,
+            "beamDiameter": 12.0,
+            "beamLength": 36.0
+          }
+        ]
+      },
+      {
+        "objectName": "&StrobeLight_FF0000_C0000_111",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "strobe_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "18_2_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,2.121251106262207,-3.875],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [0.0,2.121251106262207,-3.875],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [-0.09375,2.0587510466575623,-3.875],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [-0.09375,2.0587510466575623,-3.875],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [0.0,2.0587510466575623,-3.96875],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [0.0,2.0587510466575623,-3.96875],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [0.09375,2.0587510466575623,-3.875],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [0.09375,2.0587510466575623,-3.875],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [0.0,2.0587510466575623,-3.78125],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          },
+          {
+            "pos": [0.0,2.0587510466575623,-3.78125],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.5625,
+            "flareWidth": 0.5625
+          }
+        ]
+      }
+    ],
+    "sounds": [
+    	{
+        "name": "mtsofficialpack:wind_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:wind_on_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.9
+          }
+        ],
+        "isExterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+    {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      }
+    ],
+    "particles": [
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 80,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "857D76",
+        "pos": [-0.0625,0,1.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 25,
+			"clampMax": 50
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 100,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "57514B",
+        "pos": [-0.0625,0,1.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 50,
+			"clampMax": 75
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 140,
+        "transparency": 0.6,
+        "transparency": 0.1,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "332E2B",
+        "pos": [-0.0625,0,1.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 75,
+			"clampMax": 100
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/fire0.png",
+        "mtsofficialpack:textures/bullets/fire1.png",
+        "mtsofficialpack:textures/bullets/fire2.png",
+        "mtsofficialpack:textures/bullets/fire3.png",
+        "mtsofficialpack:textures/bullets/fire4.png",
+        "mtsofficialpack:textures/bullets/fire5.png",
+        "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "quantity": 2,
+        "spawnEveryTick": true,
+        "duration": 28,
+        "scale": 15.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [-0.0625,0,1.0],
+        		"spreadFactorHorizontal": 120,
+				"spreadFactorVertical": 2,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/fire0.png",
+        "mtsofficialpack:textures/bullets/fire1.png",
+        "mtsofficialpack:textures/bullets/fire2.png",
+        "mtsofficialpack:textures/bullets/fire3.png",
+        "mtsofficialpack:textures/bullets/fire4.png",
+        "mtsofficialpack:textures/bullets/fire5.png",
+        "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "quantity": 2,
+        "spawnEveryTick": true,
+        "duration": 28,
+        "scale": 15.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [-0.0625,0,1.0],
+        		"spreadFactorHorizontal": 120,
+				"spreadFactorVertical": 2,
+				
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 180,
+        "transparency": 0.1,
+        "scale": 20.0,
+        "toScale": 60.0,
+        "color": "292521",
+        "pos": [-0.0625,0,1.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+			"clampMin": 1,
+			"clampMax": 1
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
   },
-  "prefixFolders": "",
-  "packID": "mtsofficialpack",
-  "systemName": "mc172",
-  "classification": "vehicle",
   "general": {
     "description": "The MC-172 is not fancy, but its cheap and sturdy airframe is at home on any rural Minecraft base.  High wings and a good power-to-weight ratio make this a good all-around starter.",
-    "materials": []
+    "health": 100,
+    "materialLists": [
+      []
+    ]
   }
 }

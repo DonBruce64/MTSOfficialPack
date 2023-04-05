@@ -106,12 +106,19 @@
     {
       "pos": [0.0,0.70651875,-0.43534375],
       "maxValue": 5.0,
-      "types": ["interactable_crate"]
+      "types": ["interactable_crate"],
+      "interactableVariables": [
+        ["!part_present_12"]
+      ]
     },
     {
       "pos": [0.0,0.93,0.025],
       "types": ["generic"],
-      "customTypes": ["scoutroof"]
+      "customTypes": ["scoutroof"],
+      "interactableVariables": [
+        ["!part_present_12"]
+      ]
+      
     },
     {
       "pos": [0.0,0.202463,2.406],
@@ -119,26 +126,38 @@
       "types": ["engine_car"],
       "particleObjects": [
         {
-          "type": "smoke",
-          "color": "#D9D9D9",
-          "toColor": "#D9D9D9",
-          "transparency": 0.25,
-          "toTransparency": 0.25,
-          "scale": 1.0,
+        "quantity": 1,
+        "duration": 33,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 4.0,
+        "toScale": 15.0,
+        "color": "D7D3CF",
           "pos": [1.1262,0.09754,-0.74476],
           "velocityVector": [1.0,0.0,0.0],
           "quantity": 1
         }
       ]
     },
-		{
+	{
       "pos": [0.0,0.158826,-1.06591],
       "types": ["generic_bumpersticker"]
     },
-		{
+	{
       "pos": [-0.655047,0.158826,-1.06591],
       "types": ["generic_bumpersticker"],
 			"defaultPart": "mtsofficialpack:bumpersticker_roostair"
+    },
+    {
+      "pos": [-0.0625,0.3125,-0.0625],
+      "minValue": 7.0,
+      "maxValue": 8.0,
+      "types": ["gun_turret", "generic_atgm_tripod", "generic_machinegun_tripod"],
+      "linkedParts": [],
+	  "interactableVariables": [
+        ["!part_present_7"],
+        ["!part_present_8"]
+      ]
     }
   ],
   "collision": [
@@ -257,27 +276,27 @@
     {
       "subName": "_blue",
       "name": "Blue Scout",
-      "extraMaterials": ["oredict:dyeLightBlue:3"]
+      "extraMaterials": ["minecraft:light_blue_dye:3"]
     },
     {
       "subName": "_orange",
       "name": "Orange Scout",
-      "extraMaterials": ["oredict:dyeOrange:3"]
+      "extraMaterials": ["minecraft:orange_dye:3"]
     },
     {
       "subName": "_patriot",
       "name": "Patriotic Scout",
-      "extraMaterials": ["oredict:dyeBlue:1","oredict:dyeRed:1","oredict:dyeWhite:1"]
+      "extraMaterials": ["minecraft:blue_dye:1","minecraft:red_dye:1","minecraft:white_dye:2"]
     },
     {
       "subName": "_red",
       "name": "Red Scout",
-      "extraMaterials": ["oredict:dyeRed:3"]
+      "extraMaterials": ["minecraft:red_dye:3"]
     },
     {
       "subName": "_yellow",
       "name": "Yellow Scout",
-      "extraMaterials": ["oredict:dyeYellow:3"]
+      "extraMaterials": ["minecraft:yellow_dye:3"]
     }
   ],
   "rendering": {
@@ -433,6 +452,89 @@
         ]
       }
     ],
+    "particles": [
+      		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 80,
+        "transparency": 0.25,
+        "transparency": 0.05,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "857D76",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 60,
+			"clampMax": 90
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 100,
+        "transparency": 0.4,
+        "transparency": 0.07,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "57514B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 90,
+			"clampMax": 120
+          }
+        ]
+      },
+		{
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 140,
+        "transparency": 0.6,
+        "transparency": 0.1,
+        "scale": 10.0,
+        "toScale": 40.0,
+        "color": "332E2B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 120,
+			"clampMax": 150
+          }
+        ]
+      }
+    ],
     "sounds": [
       {
         "name": "mtsofficialpack:horn_car",
@@ -445,6 +547,27 @@
           }
         ],
         "looping": true
+      },
+      {
+        "name": "mtsofficialpack:wind_on_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.8
+          }
+        ],
+        "looping": true,
+        "forceSound": true
       }
     ]
   },
@@ -454,6 +577,7 @@
   "classification": "vehicle",
   "general": {
     "description": "The International Harvester Scout is an off road two door SUV made from 1961-1980. This SUV, the Scout II, was produced from 1971-1980. It seats two, with area for cargo in the back.",
-    "materials": ["oredict:ingotIron:18"]
+    "health": 150,
+    "materials": ["minecraft:iron_ingot:15","minecraft:iron_trapdoor:2","minecraft:glass_pane:6","minecraft:tripwire_hook:3","minecraft:redstone:10","minecraft:redstone_lamp:2"]
   }
 }
