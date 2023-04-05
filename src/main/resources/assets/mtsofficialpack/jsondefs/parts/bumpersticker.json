@@ -10,11 +10,11 @@
       "subName": "_roostair",
       "name": "Roost Air Bumper Sticker",
       "description": "Semi-Reliable Air Charter",
-      "extraMaterials": ["oredict:dyeYellow:1"]
+      "extraMaterials": ["minecraft:yellow_dye:1"]
     }
   ],
   "general": {
     "stackSize": 4,
-    "materials": ["minecraft:paper:0:1"]
+    "materials": ["minecraft:paper:1"]
   }
 }

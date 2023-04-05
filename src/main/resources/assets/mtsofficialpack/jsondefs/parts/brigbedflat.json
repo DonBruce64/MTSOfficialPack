@@ -3,7 +3,7 @@
         "name" : "Brigadier Flatbed",
         "type" : "generic",
         "customType" : "brigbed",
-        "materials" : ["oredict:plankWood:3", "minecraft:iron_bars:0:1"]
+        "materials" : ["minecraft:oak_slab:26", "minecraft:iron_ingot:5"]
     },
     "generic": {
        "width" : 1.5,

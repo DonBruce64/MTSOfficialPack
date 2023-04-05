@@ -1,0 +1,57 @@
+{
+  "generic": {
+    "type": "generic",
+    "canBePlacedOnGround": true
+  },
+  "parts":[
+    {
+      "pos": [0.0,0.3125,0.0],
+      "minValue": 7.0,
+      "maxValue": 40.0,
+      "types": ["gun_turret"],
+      "linkedParts": []
+    },
+    {
+      "pos": [-1.125,0.375,1.0],
+      "rot": [0,10,0],
+      "maxValue": 2.0,
+      "types": ["interactable_crate"],
+      "linkedParts": [1]
+    }
+],
+"collisionGroups": [
+  	{
+  	"collisions":[
+  		{
+			"pos": [0.0,0.15625,0.0],
+          "width": 2.0,
+          "height": 0.3125
+        }
+        ]
+  }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "AA Base Plate",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "AA Base Plate",
+    "description": "The base of operation. SnailDynamics Anti Air systems require this sturdy baseplate to function properly.",
+    "health": 100,
+    "materialLists": [
+      ["minecraft:iron_ingot:10","minecraft:redstone_block:1"]
+    ]
+  }
+}

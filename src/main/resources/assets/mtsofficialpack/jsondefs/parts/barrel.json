@@ -1,8 +1,13 @@
 {
+  "generic": {
+    "destroyable": true
+      },
     "general": {
         "name" : "Barrel",
         "type" : "interactable_barrel",
-        "materials" : ["oredict:ingotIron:5", "oredict:dyeRed:1"]
+    	"description": "A simple and trustworthy, all-purpose barrel. It can hold everything your heart desires, like ten buckets of industrial lubricant!",
+    	"health": 50,
+        "materials" : ["minecraft:iron_ingot:5", "minecraft:barrel:1"]
     },
     "interactable": {
         "interactionType": "barrel",

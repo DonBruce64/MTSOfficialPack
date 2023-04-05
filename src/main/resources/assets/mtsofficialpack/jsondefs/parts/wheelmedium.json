@@ -2,7 +2,7 @@
     "general": {
         "name" : "Medium Wheel",
         "type" : "ground_wheel",
-		"materials" : ["oredict:dyeBlack:2", "oredict:ingotIron:2", "minecraft:wool:15:2"]
+		"materials" : ["minecraft:coal:3", "minecraft:iron_ingot:2", "minecraft:black_wool:2"]
     },
 	"ground" : {
     "isWheel": true,
@@ -13,6 +13,191 @@
 		"lateralFriction" : 0.5
 	},
 	"rendering" : {
+		"particles": [
+		{
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 3,
+        "duration": 40,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,-0.18,0.0],
+        		"spreadFactorHorizontal": 140,
+				"spreadFactorVertical": 7,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,1.5,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "ground_isflat",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 0.3
+          },
+         {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 8.0,
+            "clampMax": 100.0
+          }
+        ]
+      },
+		{
+        "spawnEveryTick": true,
+        "type": "generic",
+        "textureList": 
+        [
+        "mts:textures/particles/big_smoke_0.png",
+        "mts:textures/particles/big_smoke_1.png",
+        "mts:textures/particles/big_smoke_2.png",
+        "mts:textures/particles/big_smoke_3.png",
+        "mts:textures/particles/big_smoke_4.png",
+        "mts:textures/particles/big_smoke_5.png",
+        "mts:textures/particles/big_smoke_6.png",
+        "mts:textures/particles/big_smoke_7.png",
+        "mts:textures/particles/big_smoke_8.png",
+        "mts:textures/particles/big_smoke_9.png",
+        "mts:textures/particles/big_smoke_10.png",
+        "mts:textures/particles/big_smoke_11.png",
+        "mts:textures/particles/big_smoke_12.png"
+        ],
+        "textureDelays": [7,7,7,7,7,7,7,7,7,7,7,7,7],
+        "quantity": 1,
+		"duration": 91,
+        "transparency": 0.10,
+        "toTransparency": -0.001,
+        "scale": 5.5,
+		"toScale": 35,
+        "color": "FFFFFF",
+        "toColor": "FFFFFF",
+        "pos": [0,0.1,0],
+        "initialVelocity": [0,0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+			"clampMin": 0,
+			"clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+			"clampMin": 16,
+			"clampMax": 100
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "quantity": 1,
+		"duration": 60,
+        "transparency": 0.15,
+        "toTransparency": -0.001,
+        "scale": 0.5,
+		"toScale": 15,
+        "color": "FFFFFF",
+        "toColor": "FFFFFF",
+        "pos": [0,0.1,0],
+        "initialVelocity": [0,-0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_contacted",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "spawnEveryTick": true,
+        "type": "smoke",
+        "quantity": 1,
+		"duration": 60,
+        "transparency": 0.15,
+        "toTransparency": -0.001,
+        "scale": 0.5,
+		"toScale": 15,
+        "color": "FFFFFF",
+        "toColor": "FFFFFF",
+        "pos": [0,0.1,0],
+        "initialVelocity": [0,-0.15,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "ground_slipping",
+			"absolute": true,
+			"clampMin": 15,
+			"clampMax": 999
+          }
+        ]
+      }
+    ],
+    	"sounds": [
+    	{
+        "name": "mtsofficialpack:wheel_roll",
+        "activeAnimations": [
+           {
+            "animationType": "visibility",
+            "variable": "ground_onground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.23,0.0],
+            "offset": -0.2
+          }
+        ],
+        "looping": true,
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:wheel_skidding",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+			"clampMin": 0,
+			"clampMax": 0.6
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 16.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.23,0.0],
+            "offset": -0.2
+          }
+        ],
+        "looping": true,
+        "forceSound": true
+      }
+    	],
 		"animatedObjects" : [
       {
         "objectName": "tire",

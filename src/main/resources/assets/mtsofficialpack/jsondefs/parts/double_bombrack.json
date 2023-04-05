@@ -1,0 +1,122 @@
+{
+  "generic": {
+    "type": "gun_pylon_double",
+    "destroyable": true
+  },
+  "gun": {
+    "capacity": 3,
+    "reloadTime": 10,
+    "fireDelay": 5.0,
+    "reloadDelay": 5.0,
+    "gravitationalVelocity": 0.048,
+    "diameter": 250.0,
+    "yawSpeed": Infinity,
+    "pitchSpeed": Infinity,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.28125,0.0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.28125,0.0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.28125,1.125],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Triple Bombrack",
+      "extraMaterials": []
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "basicbomb1",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 3.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb2",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 3.0,
+            "clampMax": 3.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb3",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 3.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:basicbomb_drop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true
+      },
+      {
+        "name": "mtsofficialpack:basicbomb_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Triple Bomb Hardpoint",
+    "description": "SnailDynamics engineers sat down one day and wondered how to increase the PZL.37s bomb load. Only two hours later they came up with the Triple Bomb Rack! (It sounds fancy, but in reality its just a repurposed heavy bomb rack.)",
+    "health": 15,
+    "materials": ["minecraft:iron_ingot:15","minecraft:stone_button:6","minecraft:tripwire_hook:3"]
+  }
+}

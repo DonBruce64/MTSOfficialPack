@@ -3,7 +3,7 @@
         "name" : "Brigadier Dump Bed",
         "type" : "generic",
         "customType" : "brigbed",
-        "materials" : ["oredict:ingotIron:4", "minecraft:iron_bars:0:2"]
+        "materials" : ["minecraft:iron_ingot:5", "minecraft:iron_bars:2"]
     },
 	  "generic": {
        "width" : 1.5,

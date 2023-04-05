@@ -1,8 +1,12 @@
 {
+"generic": {
+    "destroyable": true
+      },
   "general": {
     "name": "Renualt FT track",
     "type": "ground_tread",
-    "materials": [ "oredict:ingotIron:5" ]
+    "health": 70,
+    "materials": [ "minecraft:heavy_weighted_pressure_plate:5", "minecraft:iron_ingot:5" ]
   },
 	
 	"ground" : {

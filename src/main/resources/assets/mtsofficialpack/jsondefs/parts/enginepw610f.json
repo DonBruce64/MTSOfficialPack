@@ -1,8 +1,12 @@
 {
+	"generic": {
+    "destroyable": true
+      },
     "general": {
         "name" : "Pratt & Whitney 610F Jet Engine",
         "type" : "engine_jet",
-		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "oredict:ingotIron:1"]
+        "health": 20,
+		"materials" : ["minecraft:redstone_block:1", "minecraft:piston:9", "minecraft:iron_trapdoor:2", "minecraft:blaze_powder:5", "minecraft:obsidian:5", "minecraft:iron_ingot:10"]
     },
 	"engine" : {
         "isAutomatic" : true,
@@ -27,6 +31,40 @@
                     }
                 ]
 			}
-		]
+		],
+		"particles": [
+    {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 1,
+        "duration": 20,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,0.0],
+        		"spreadFactorHorizontal": 150,
+				"spreadFactorVertical": 10,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,3.0,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 5,
+			"clampMax": 20
+          }
+        ]
+      }
+    ]
 	}
 }

@@ -113,7 +113,137 @@
             "offset": 0.35
           }
         ],
-        "looping": true
+        "looping": true,
+        "isExterior": true,
+            
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        
+        "middleDistance":100.0,
+        "middleDistanceVolume": 0.4,
+        
+        "maxDistance": 190.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,7.0E-4,0.0],
+            "offset": 0.35
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
+      
+      {
+        "name": "mtsofficialpack:enginebristolmercury_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,7.0E-4,0.0],
+            "offset": 0.35
+          }
+        ],
+        
+        "looping": true,
+        "isExterior": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":100.0,
+        "middleDistanceVolume": 0.6,
+        
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+       {
+        "name": "mtsofficialpack:enginebristolmercury_more_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,7.0E-4,0.0],
+            "offset": 0.35
+          }
+        ],
+        
+        "looping": true,
+        "isExterior": true,
+        
+        "minDistance": 100.0,
+        "minDistanceVolume": 0.0,
+        
+        "middleDistance":175.0,
+        "middleDistanceVolume": 0.3,
+        
+        "maxDistance": 350.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+    {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 1,
+        "duration": 20,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,0.0],
+        		"spreadFactorHorizontal": 150,
+				"spreadFactorVertical": 10,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,3.0,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 15,
+			"clampMax": 35
+          }
+        ]
       }
     ]
   },
@@ -123,6 +253,7 @@
   "classification": "part",
   "general": {
     "name": "Lycoming O-360 Plane Engine",
-    "materials": ["minecraft:piston:0:4","minecraft:obsidian:0:4","oredict:ingotIron:1"]
+    "health": 35,
+    "materials": ["minecraft:piston:4","minecraft:obsidian:4","minecraft:iron_ingot:5","minecraft:iron_block:1", "minecraft:flint:4"]
   }
 }
