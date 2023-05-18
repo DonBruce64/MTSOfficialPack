@@ -1,0 +1,159 @@
+{
+    "general": {
+        "name" : "Brigadier Transport Trailer",
+        "type" : "generic",
+        "customType" : "brigbed",
+        "description": "This trailer is perfecto for kidnap... ahem, i mean giving Villagers a fun tour of your base.! It is also useful for transportig personell, livestock and even a couple of goods safely across the world. No longer do you have to rely on those pesky boats!",
+        "materials" : ["minecraft:oak_slab:32", "minecraft:iron_ingot:10", "minecraft:iron_bars:16","minecraft:wool:5"]
+    },
+    "generic": {
+        "width" : 1.5,
+        "height" : 0.5,
+				"disableMirroring": true
+    },
+    "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.0,0.21,0.8125],
+          "width": 2.25,
+          "height": 0.5
+        },
+        {
+          "pos": [0.0,0.21,-1.4375],
+          "width": 2.25,
+          "height": 0.5
+        },
+        {
+          "pos": [0.0,2.225,0.8125],
+          "width": 2.25,
+          "height": 0.25
+        },
+        {
+          "pos": [0.0,2.225,-1.4375],
+          "width": 2.25,
+          "height": 0.25
+        }
+      ]
+    }
+  ],
+    "subParts" : [
+        {
+            "pos" : [0.5, 0.6875, 1.3125],
+            "rot": [0,0,0],
+            "types" : ["interactable_crate", "interactable_barrel"],
+            "minValue" : 0,
+            "maxValue" : 3
+        },
+        {
+            "pos" : [-0.375, 0.6875, 1.3125],
+            "rot": [0,10,0],
+            "types" : ["interactable_crate", "interactable_barrel"],
+			"minValue" : 0,
+			"maxValue" : 3
+        },
+		{
+			"pos": [0.75,0.62,0.1875],
+			"dismountPos": [0.0,1.5,1.0],
+			"rot": [0,-90,0],
+			"isController": false,
+			"types": ["seat","seat_pilot"]
+   		},
+   		{
+			"pos": [0.75,0.62,-0.9375],
+			"dismountPos": [0.0,1.5,1.0],
+			"rot": [0,-90,0],
+			"isController": false,
+			"types": ["seat","seat_pilot"]
+   		},
+   		{
+			"pos": [0.75,0.62,-2.0625],
+			"dismountPos": [0.0,1.5,1.0],
+			"rot": [0,-90,0],
+			"isController": false,
+			"types": ["seat","seat_pilot"]
+   		},
+   		{
+			"pos": [-0.75,0.62,0.1875],
+			"dismountPos": [0.0,1.5,1.0],
+			"rot": [0,90,0],
+			"isController": false,
+			"types": ["seat","seat_pilot"]
+   		},
+   		{
+			"pos": [-0.75,0.62,-0.9375],
+			"dismountPos": [0.0,1.5,1.0],
+			"rot": [0,90,0],
+			"isController": false,
+			"types": ["seat","seat_pilot"]
+   		},
+   		{
+			"pos": [-0.75,0.62,-2.0625],
+			"dismountPos": [0.0,1.5,1.0],
+			"rot": [0,90,0],
+			"isController": false,
+			"types": ["seat","seat_pilot"]
+   		}
+   		
+	],
+	"definitions": [
+  {
+      "subName": "_green",
+      "name": "Green Brigadier Transport Trailer",
+      "extraMaterialLists": [
+        ["minecraft:green_dye:3"]
+      ]
+    },
+    {
+      "subName": "_brown",
+      "name": "Brown Brigadier Transport Trailer",
+      "extraMaterialLists": [
+        ["minecraft:brown_dye:2","minecraft:light_gray_dye:1"]
+      ]
+    },
+    {
+      "subName": "_tan",
+      "name": "Tan Brigadier Transport Trailer",
+      "extraMaterialLists": [
+        ["minecraft:yellow_dye:2","minecraft:blue_dye:1","minecraft:sand:5","minecraft:black_dye:1"]
+      ]
+    },
+{
+      "subName": "",
+      "partTones": [],
+      "secondaryTextColors": [],
+      "name": "Grey Brigadier Transport Trailer",
+      "extraMaterialLists": [
+        ["minecraft:gray_dye:3"]
+      ]
+    }
+  ],
+  "rendering": {
+	"animatedObjects": [
+      {
+		"objectName" : "$door_tailgate",
+        "animations": [
+          {
+            "animationType": "rotation",
+			"centerPoint" : [0, 0.3125, -2.625],
+			"axis" : [-145, 0, 0],
+            "duration": 10,
+			"variable" : "door_tailgate"
+          }
+        ]
+			},
+      {
+        "objectName": "$rubberthings",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "speed",
+            "centerPoint": [-0.9375,0,-2.1562],
+            "axis": [4.0,0.0,0.0]
+          }
+        ]
+      } 
+    ]
+	}
+}

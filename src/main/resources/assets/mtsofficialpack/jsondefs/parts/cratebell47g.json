@@ -22,6 +22,6 @@
   "general": {
     "name": "Bell 47G External Storage Crate",
     "health": 100,
-    "materials": ["oredict:plankWood:6","oredict:dyeRed:1"]
+    "materials": ["minecraft:iron_ingot:10", "mts:mtsofficialpack.crate:1"]
   }
 }

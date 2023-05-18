@@ -1,12 +1,33 @@
 {
-    "general": {
-        "name" : "Crate",
-        "type" : "interactable_crate",
-		"materials" : ["oredict:plankWood:8"]
-    },
-	"interactable" : {
-        "interactionType": "crate",
-				"feedsVehicles" : true,
-		"inventoryUnits" : 1
-	}
+  "generic": {
+    "type": "interactable_crate",
+    "destroyable": true
+  },
+  
+  "interactable": {
+    "interactionType": "crate",
+    "feedsVehicles": true,
+    "inventoryUnits": 1.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Crate",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Crate",
+    "feedsVehicles": true,
+    "health": 50,
+    "materialLists": [
+      ["minecraft:chest:1"]
+    ]
+  }
 }

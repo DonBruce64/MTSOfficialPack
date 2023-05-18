@@ -306,6 +306,20 @@
     ],
     "customVariables": ["siren"],
     "sounds": [
+    {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      },
       {
         "name": "mtsofficialpack:horn_air",
         "activeAnimations": [
@@ -361,6 +375,6 @@
   "classification": "vehicle",
   "general": {
     "description": "The 1973 Ward LaFrance P80 Ambassador is a small fire truck, mostly known for being on the TV show Emergency!  This rendition seats two, and comes equipped with a working siren and emergency lights.  A must-have for any town!",
-    "materials": ["oredict:ingotIron:20","oredict:dyeRed:5","minecraft:glass_pane:0:10","oredict:dustRedstone:5"]
+    "materials": ["minecraft:iron_ingot:25","minecraft:red_dye:5","minecraft:glass_pane:0:10", "minecraft:redstone:10","minecraft:cod:1","minecraft:tripwire_hook:0:3"]
   }
 }

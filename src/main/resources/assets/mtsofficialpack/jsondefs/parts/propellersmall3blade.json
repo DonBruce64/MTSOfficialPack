@@ -2,7 +2,8 @@
     "general": {
         "name" : "Small 3-Bladed Propeller (Dynamic Pitch)",
         "type" : "propeller",
-		"materials" : ["oredict:dyeWhite:1", "oredict:ingotIron:3", "oredict:dustRedstone:2"]
+        "health": 20,
+		"materials" : ["minecraft:white_dye:3", "minecraft:iron_ingot:5", "minecraft:redstone:3"]
     },
 	"propeller" : {
 		"pitch" : 65,
@@ -47,12 +48,13 @@
 			},
 			{
         "objectName": "#translucent_3prop_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
             "variable": "propeller_rpm",
             "clampMin" : 100,
-						"clampMax" : 3000
+						"clampMax" : 4000
           }
         ]
       }

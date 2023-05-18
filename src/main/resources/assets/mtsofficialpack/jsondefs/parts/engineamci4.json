@@ -1,15 +1,338 @@
 {
-    "general": {
-        "name" : "AMC I4 Car Engine",
-        "type" : "engine_car",
-		"materials" : ["minecraft:piston:0:4", "minecraft:obsidian:0:3", "oredict:ingotIron:1"]
-    },
-	"engine" : {
-        "isAutomatic" : true,
-        "starterPower" : 50,
-				"maxRPM" : 5100,
-        "fuelConsumption" : 0.35,
-        "fuelType" : "gasoline",
-        "gearRatios" : [-2.2, 0.0, 3.25, 1.75, 1.0]
-	}
+  "generic": {
+    "type": "engine_car",
+    "destroyable": true
+  },
+  "engine": {
+    "type": "normal",
+    "isAutomatic": true,
+    "starterPower": 50,
+    "shiftSpeed": 10,
+    "revResistance": 8,
+    "maxRPM": 7100,
+    "maxSafeRPM": 3800,
+    "idleRPM": 1000,
+    "startRPM": 600,
+    "revlimitRPM": 3780,
+    "revlimitBounce": 17,
+    "stallRPM": 625,
+    "engineWinddownRate": 10,
+    "heatingCoefficient": 1.0,
+    "coolingCoefficient": 1.0,
+    "engineWearFactor": 1.0,
+    "fuelConsumption": 0.35,
+    "gearRatios": [-2.2,0.0,2.5,1.3,0.8],
+    "fuelType": "gasoline"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "AMC I4 Car Engine",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:engineamci4_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:engineamci4_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:engineamci4_sputter",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:engine_shifting_grinding",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_badshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:engineamci4_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.3,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:engineamci4_low",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-2,0.0],
+            "offset": 0.95,
+			"clampMin": -0.5
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.4,0.0],
+			"duration": 4,
+            "offset": 0
+          },
+		  {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,0.4,0.0],
+            "offset": -0.15
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.1,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 50.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 120.0,
+        "maxDistanceVolume": 0.0
+      },
+	  {
+        "name": "mtsofficialpack:engineamci4_mid",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-14,1,0.5],
+            "offset": 1.25,
+			"clampMax": 0.68
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.5,0.0],
+			"duration": 3,
+            "offset": -0.55
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.22,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+       	"minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 140.0,
+        "maxDistanceVolume": 0.0
+      },
+	  {
+        "name": "mtsofficialpack:engineamci4_high",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2,0.0],
+            "offset": -1,
+			"clampMax": 0.5
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.75,0.0],
+			"duration": 4,
+            "offset": 0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 70.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+    {
+        "spawnEveryTick": true,
+        "type": "generic",
+        "texture":"mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 1,
+        "duration": 20,
+        "scale": 2.0,
+        "toScale": 0.1,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,0.0,0.0],
+        		"spreadFactorHorizontal": 150,
+				"spreadFactorVertical": 10,
+				"movementDuration": 14,
+        "initialVelocity": [0.0,3.0,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+         {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+         {
+            "animationType": "visibility",
+            "variable": "damage",
+			"clampMin": 30,
+			"clampMax": 45
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 115.556,
+            "clampMax": 999.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "scale": 2.5,
+        "color": "000000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 121.111,
+            "clampMax": 999.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "AMC I4 Car Engine",
+    "health": 45,
+    "materials" : ["minecraft:piston:4","minecraft:obsidian:4","minecraft:iron_ingot:4","minecraft:iron_block:1", "minecraft:flint:4"]
+  }
 }

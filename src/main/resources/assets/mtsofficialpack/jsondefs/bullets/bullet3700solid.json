@@ -1,18 +1,155 @@
 {
-	"general": {
-    "type": "bullet",
-    "materials": [ "oredict:nuggetIron:3", "oredict:gunpowder:1" ]
-  },
-	 "definitions": [
-		{
-				"subName": "",
-				"name": "37mm Solid Shot",
-				"extraMaterials": []
-		}
-	],
   "bullet": {
     "types": [],
-    "diameter": 37,
-    "quantity": 1
+    "quantity": 1,
+    "diameter": 37.0,
+    "damage": 35.0,
+    "despawnTime": 100,
+    "gravitationalVelocity": 0.033,
+    "armorPenetration": 30.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "37mm Solid Shot",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "bodyModel",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "#tracer",
+        "emissive": true,
+        "color": "FFD496",
+        "brightnessAnimations": [],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.0,0.0],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 4.5,
+            "flareWidth": 1.5
+          },
+          {
+            "pos": [0.0,0.0,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "flareHeight": 0.8,
+            "flareWidth": 0.8
+          }
+        ]
+      }
+    ],
+    
+    "particles": [
+    {
+        "type": "generic",
+        "texture": "mtsofficialpack:textures/bullets/bang0.png",
+        "quantity": 20,
+        "duration": 20,
+        "scale": 3.0,
+        "toScale": 0.001,
+        "color": "#B1AAA3",
+        "transparency": 1.0,
+        "pos": [0.0,0.0,0.0],
+        		"spreadFactorHorizontal": 25,
+				"spreadFactorVertical": 5,
+        "initialVelocity": [0.0,0.0,-5.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "texture": "mts:textures/particles/big_smoke_4.png",
+        "quantity": 4,
+        "duration": 100,
+        "transparency": 0.6,
+        "toTransparency": -0.001,
+        "scale": 6.0,
+        "toScale": 45.0,
+        "color": "B1AAA3",
+        "pos": [0.0,1.5,0.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity": [0.0,-0.1,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "break",
+        "quantity": 8,
+        "duration": 90,
+        "scale": 6.0,
+        "color": "7E7E7E",
+        "pos": [0.0,0.0,0.0],
+				"spreadFactorHorizontal": 25,
+				"spreadFactorVertical": 5,
+        "initialVelocity": [0.0,8.0,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "break",
+        "quantity": 12,
+        "duration": 90,
+        "scale": 3.0,
+        "color": "7E7E7E",
+        "pos": [0.0,0.0,0.0],
+				"spreadFactorHorizontal": 25,
+				"spreadFactorVertical": 5,
+        "initialVelocity": [0.0,10.0,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+  "description": "This 37mm round has a basic solid lead projectile with a steel core. It doesnt damage the terrain but with its raw kinetic energy, it shreds through anything it hits, dealing massive single target damage.",
+    "materialLists": [
+      ["minecraft:iron_ingot:2","minecraft:gunpowder:1"]
+    ],
+    "type": "bullet"
   }
 }

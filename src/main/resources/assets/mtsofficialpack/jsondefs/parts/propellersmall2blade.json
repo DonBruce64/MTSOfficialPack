@@ -5,6 +5,7 @@
 		 "animatedObjects": [
       {
         "objectName": "#translucent_2blade_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
@@ -20,7 +21,8 @@
     "general": {
         "name" : "Small 2-Bladed Propeller",
         "type" : "propeller",
-		"materials" : ["oredict:plankWood:3"]
+        "health": 10,
+		"materials" : ["minecraft:iron_ingot:1", "minecraft:oak_planks:4"]
     },
 	"propeller" : {
 		"pitch" : 55,

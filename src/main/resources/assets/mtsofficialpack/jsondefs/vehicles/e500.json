@@ -380,22 +380,22 @@
     {
       "subName": "_blue",
       "name": "Blue Eclipse 500",
-      "extraMaterials": ["oredict:dyeLightBlue:5"]
+      "extraMaterials": ["minecraft:blue_dye:5"]
     },
     {
       "subName": "_green",
       "name": "Green Eclipse 500",
-      "extraMaterials": ["oredict:dyeLime:5"]
+      "extraMaterials": ["minecraft:lime_dye:5"]
     },
     {
       "subName": "_red",
       "name": "Red Eclipse 500",
-      "extraMaterials": ["oredict:dyeRed:5"]
+      "extraMaterials": ["minecraft:red_dye:5"]
     },
     {
       "subName": "_yellow",
       "name": "Yellow Eclipse 500",
-      "extraMaterials": ["oredict:dyeYellow:5"]
+      "extraMaterials": ["minecraft:yellow_dye:5"]
     }
   ],
   "rendering": {
@@ -675,7 +675,22 @@
         ]
       }
     ],
-    "sounds": []
+    "sounds": [
+    {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "isInterior": true,
+        "looping": true,
+        "forceSound": true
+      }
+    ]
   },
   "prefixFolders": "",
   "packID": "mtsofficialpack",
@@ -683,6 +698,6 @@
   "classification": "vehicle",
   "general": {
     "description": "The Eclipse 500, first flown in 2002, created a new class of aircraft: the very light jet, or VLJ. The MTS version is configured to seat five, with the pilot in the front and four passengers behind them. A great addition to any private airport, and quite efficient for its capacity and speed as well.",
-    "materials": ["minecraft:iron_bars:0:6","minecraft:iron_trapdoor:0:8","oredict:ingotIron:15","oredict:dustRedstone:9","minecraft:comparator:0:1","minecraft:glass_pane:0:5"]
+    "materials": ["minecraft:iron_trapdoor:0:3","minecraft:iron_bars:0:10","minecraft:lever:10","minecraft:stone_button:10", "minecraft:gold_ingot:10", "minecraft:iron_ingot:10","minecraft:repeater:0:5","minecraft:redstone:64","minecraft:redstone_lamp:0:2","minecraft:glass_pane:0:32"]
   }
 }

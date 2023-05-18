@@ -5,6 +5,6 @@
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"materials" : ["minecraft:stone_slab:0:3", "oredict:ingotIron:3", "minecraft:comparator:0:1", "oredict:dustRedstone:2"]
+		"materials" : ["minecraft:stone_slab:3", "minecraft:iron_ingot:1", "minecraft:comparator:1", "minecraft:redstone:5"]
 	}
 }

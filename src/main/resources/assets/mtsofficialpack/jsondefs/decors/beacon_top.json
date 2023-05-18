@@ -2,9 +2,10 @@
 	"general": {
 		"name" : "Beacon",
 		"type" : "beacon",
+		"description": "This white cupola tells your plane where it is at all times. It knows this becaue it knows where it isnt. By subtracting where it is, from where it isn't, or where it isn't, from where it is, whichever is greater, it obtains a difference, or deviation",
 		"width" : 1.0,
 		"height" : 1.0,
 		"depth" : 1.0,
-		"materials" : ["minecraft:observer:0:1", "minecraft:compass:0:1", "oredict:dustRedstone:3"]
+		"materials" : ["minecraft:iron_ingot:5", "minecraft:observer:1", "minecraft:compass:1", "minecraft:redstone:15"]
 	}
 }

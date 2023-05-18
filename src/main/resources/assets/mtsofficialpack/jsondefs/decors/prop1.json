@@ -1,0 +1,13 @@
+
+{
+    "general": {
+        "name" : "Ammo Box",
+		"width" : 0.625,
+		"height" : 0.375,
+		"depth" : 0.625,
+		"oriented" : true,
+		"stackSize": 8,
+		"description": "A decorative Box of 7.62 ammunition",
+		"materials" : ["mts:mtsofficialpack.bullet762:1"]
+	}
+}

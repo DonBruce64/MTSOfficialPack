@@ -1,18 +1,142 @@
 {
 	"general": {
     "type": "bullet",
-    "materials": [ "oredict:nuggetIron:1", "oredict:gunpowder:1" ]
+    "description": "The 7.62mm round is one of the most popular rounds of the world, known for its superb stopping power. Here's 250 of them!",
+    "materials": [ "minecraft:iron_nugget:100", "minecraft:gunpowder:10" ]
+  },
+  "generic": {
+    "canBePlacedOnGround": true,
+    "canBeRemovedByHand": true
   },
 	 "definitions": [
 		{
-				"subName": "",
-				"name": "7.62mm Bullet",
-				"extraMaterials": []
+			"subName": "",
+			"name": "7.62mm Bullets",
+			"extraMaterials": []
 		}
 	],
+	"rendering": {
+    "lightObjects": [
+      {
+        "objectName": "#bodyModel",
+        "emissive": true,
+        "color": "FFD496",
+        "brightnessAnimations": [],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.0,0.0],
+            "axis": [0.0,1.0,0.0],
+            "flareHeight": 4.5,
+            "flareWidth": 0.5
+          },
+          {
+            "pos": [0.0,0.0,0.0],
+            "axis": [0.0,0.0,-90.0],
+            "flareHeight": 0.5,
+            "flareWidth": 0.5
+          }
+        ]
+      }
+    ],
+    "animatedObjects": [
+      {
+        "objectName": "cube",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "particles": [
+    
+    {
+        "type": "generic",
+        "textureList": 
+        [
+        "mtsofficialpack:textures/bullets/bang0.png",
+        "mtsofficialpack:textures/bullets/bang1.png",
+        "mtsofficialpack:textures/bullets/bang2.png",
+        "mtsofficialpack:textures/bullets/bang3.png",
+        "mtsofficialpack:textures/bullets/bang4.png"
+        ],
+        "textureDelays": [2,2,2,2,2],
+        "quantity": 1,
+        "duration": 10,
+        "scale": 7.0,
+        "toScale": 2.0,
+        "transparency": 1.0,
+        "isBright": true,
+        "pos": [0.0,1.4,0.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity":[0.0,-0.1,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+    
+      {
+        "type": "generic",
+        "texture":"mts:textures/particles/big_smoke_4.png",
+        "quantity": 1,
+        "duration": 120,
+        "scale": 4.0,
+        "toScale": 15.0,
+        "transparency": 0.5,
+        "toTransparency": -0.001,
+        "color": "BAB0A7",
+        "pos": [0.0,1.5,0.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity":[0.0,-0.1,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+     {
+        "type": "break",
+        "quantity": 10,
+        "duration": 90,
+        "scale": 3.0,
+        "color": "ABABAB",
+        "pos": [0.0,0.0,0.0],
+				"spreadFactorHorizontal": 25,
+				"spreadFactorVertical": 7,
+        "initialVelocity": [0.0,6.0,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
     "bullet" : {
         "types" : [],
 		"diameter" : 7.62,
-		"quantity" : 250
+		"damage": 6.0,
+		"quantity" : 250,
+		"despawnTime": 100,
+		 "gravitationalVelocity": 0.0315
 	}
 }

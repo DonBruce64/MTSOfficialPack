@@ -1,0 +1,12 @@
+{
+    "general": {
+        "name" : "37mm Magazine Pile",
+		"width" : 0.6,
+		"height" : 0.3,
+		"depth" : 0.6,
+		"oriented" : true,
+		"stackSize": 8,
+		"description": "A pile of decorative 37mm magazines. They smell like metal.",
+		"materials" : ["minecraft:iron_ingot:2"]
+	}
+}

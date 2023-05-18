@@ -1,7 +1,7 @@
 {
   "general": {
 	"name" : "Rods",
-	"materials" : ["minecraft:bread:0:1", "oredict:dyeBlue:1"],
+	"materials" : ["minecraft:bread:0:1", "minecraft:blue_dye:1"],
 	"type" : "food"
   },
 	"food":{

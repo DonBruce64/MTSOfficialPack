@@ -3,7 +3,7 @@
         "name" : "Brigadier Stakebed",
         "type" : "generic",
         "customType" : "brigbed",
-        "materials" : ["oredict:plankWood:5", "minecraft:iron_bars:0:3"]
+        "materials" : ["minecraft:oak_slab:32", "minecraft:iron_ingot:10"]
     },
     "generic": {
         "width" : 1.5,

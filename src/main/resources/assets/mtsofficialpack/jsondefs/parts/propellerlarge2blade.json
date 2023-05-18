@@ -2,9 +2,10 @@
  	"rendering": {
     "lightObjects": [],
     "particles": [],
-		 "animatedObjects": [
+	"animatedObjects": [
       {
         "objectName": "#translucent_2bladel_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
@@ -20,7 +21,8 @@
     "general": {
         "name" : "Large 2-Bladed Propeller",
         "type" : "propeller",
-		"materials" : ["oredict:dyeWhite:1", "oredict:ingotIron:3"]
+        "health": 20,
+		"materials" : ["minecraft:blackstone:5", "minecraft:iron_ingot:4"]
     },
 	"propeller" : {
 		"pitch" : 133,
