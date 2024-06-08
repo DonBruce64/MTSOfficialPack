@@ -12,8 +12,8 @@ license="All rights reserved"
 [[mods]] 
 # The ID of your pack.
 modId="mtsofficialpack"
-# Version number.  Can be whatever format you'd like.
-version="V24"
+# Version number.  Must start with a number or Forge complains.
+version="24"
  # Display name for the pack in the in-game mods list.
 displayName="Immersive Vehicles (MTS/IV) - Official Content Pack"
 # A URL for the "homepage" for this pack, displayed in the mod UI.
