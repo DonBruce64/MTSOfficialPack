@@ -1,0 +1,97 @@
+{
+  "bullet": {
+    "types": [
+      "water"
+    ],
+    "quantity": 1500,
+    "pellets": 1,
+    "diameter": 3.01,
+    "damage": 0.0,
+    //0.0315
+    "gravitationalVelocity": 0.0315,
+    //100
+    "despawnTime": 5,
+    "impactDespawnTime": 2
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Black Spraypaint",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "benchdisplay",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "e",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "cube",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "e",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+    ],
+    "sounds": [],
+    "particles": [
+      //grounddecal
+      {
+        "type": "generic",
+        "spawningOrientation": "facing",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 2500,
+        "transparency": 0.55,
+        "fadeTransparencyTime": 500,
+        "ignoreCollision": true,
+        "scale": 0.45,
+        "hitboxSize": 0.2,
+        "texture": "mtsofficialpack:textures/bullets/skidblank_translucent.png",
+        "color":"1a181d",
+        "pos": [0.0,0.01,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_block",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+  "name": "Black Spraypaint",
+    "description": "Black paint for your refillable OCP-branded spray can.",
+    "hideOnCreativeTab": true, 
+    "materialLists": [
+      [
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0,
+    "type": "bullet"
+  }
+}
