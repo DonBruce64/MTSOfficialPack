@@ -3,16 +3,16 @@
     {
       "scale": 1.0,
       "textureXCenter": 448,
-      "textureYCenter": 448,
+      "textureYCenter": 704,
       "textureWidth": 128,
       "textureHeight": 128,
       "lightUpTexture": true
     },
-    //overlay
+    //halfdisc
     {
       "scale": 1.0,
-      "textureXCenter": 448,
-      "textureYCenter": 192,
+      "textureXCenter": 192,
+      "textureYCenter": 960,
       "textureWidth": 128,
       "textureHeight": 128,
       "lightUpTexture": true,
@@ -26,9 +26,9 @@
         {
           "animationType": "rotation",
           "variable": "engine_rpm_safe",
-          "centerPoint": [0.0,0.0,0.0],
-          "axis": [0.0,0.0,0.05000000074505806],
-          "offset": -110.0
+          "centerPoint": [0.0,0.0,0],
+          "axis": [0.0,0.0,0.045],
+          "offset": -135.0
         },
         {
           "animationType": "activator",
@@ -53,59 +53,54 @@
     //numbers
     {
       "scale": 1.0,
-      "textureXCenter": 448,
-      "textureYCenter": 320,
+      "textureXCenter": 64,
+      "textureYCenter": 960,
       "textureWidth": 128,
       "textureHeight": 128,
       "lightUpTexture": true
     },
     //zeiger
     {
+      "yCenter": 2,
       "scale": 1.0,
-      "textureXCenter": 970,
+      "textureXCenter": 910,
       "textureYCenter": 192,
-      "textureWidth": 8,
+      "textureWidth": 4,
       "textureHeight": 128,
       "lightUpTexture": true,
       "animations": [
         {
-          "animationType": "inhibitor",
-          "variable": "engine_rpm_max",
-          "clampMin": 10000.0,
-          "clampMax": 1000000.0
-        },
-        {
           "animationType": "rotation",
           "variable": "engine_rpm",
           "centerPoint": [0.0,0.0,0.0],
-          "axis": [0.0,0.0,0.05000000074505806],
-          "offset": -110.0
-        },
-        {
-          "animationType": "activator",
-          "variable": "engine_rpm_max",
-          "clampMin": 10000.0,
-          "clampMax": 1000000.0
-        },
-        {
-          "animationType": "inhibitor",
-          "variable": "engine_rpm_max",
-          "clampMax": 10000.0
-        },
-        {
-          "animationType": "rotation",
-          "variable": "engine_rpm",
-          "centerPoint": [0.0,0.0,0.0],
-          "axis": [0.0,0.0,0.005000000074505806],
-          "offset": -110.0
+          "axis": [0.0,0.0,0.045],
+          "offset": -135.0
         }
       ]
     },
-    //light
     {
+      "yCenter": 2,
       "scale": 1.0,
       "textureXCenter": 960,
-      "textureYCenter": 320,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "engine_rpm",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.045],
+          "offset": -135.0
+        }
+      ]
+      
+    },
+    {
+      "scale": 0.0,
+      "textureXCenter": 960,
+      "textureYCenter": 832,
       "textureWidth": 128,
       "textureHeight": 128,
       "lightUpTexture": true,
@@ -113,8 +108,23 @@
     },
     {
       "scale": 1.0,
-      "textureXCenter": 832,
-      "textureYCenter": 576,
+      "textObject": {
+        "pos": [2.0,-15.0,0.0],
+        "rot": [0.0,0.0,0.0],
+        "scale": 1.0,
+        "variableName": "engine_hours_1",
+        "variableFactor": 1.0,
+        "variableFormat": "%05.0f",
+        "defaultText": "0",
+        "lightsUp": true,
+        "color": "FFFFFF"
+      },
+      "lightUpTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 576,
+      "textureYCenter": 704,
       "textureWidth": 128,
       "textureHeight": 128,
       "lightUpTexture": false
@@ -122,14 +132,13 @@
   ],
   "textureName": "instruments.png",
   "general": {
-    "name": "Tachometer",
+    "name": "Car Tachometer",
     "description": "Indicates engine speeds.",
     "stackSize": 64,
     "materialLists": [
       [
         "mts:mtsofficialpack.plating:1",
         "mts:mtsofficialpack.copperwire:1",
-        "tags:dyes/black:1",
         "tags:dyes/white:1",
         "tags:dyes/red:1",
         "minecraft:glass_pane:1"

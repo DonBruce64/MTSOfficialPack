@@ -1,43 +1,87 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 64,
+      "textureYCenter": 64,
+      "textureWidth": 80,
+      "textureHeight": 80,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "pitch",
+          "axis": [0.0,1.0,0.0],
+          "clampMin": -50.0,
+          "clampMax": 50.0
+        },
+        {
+          "animationType": "rotation",
+          "variable": "roll",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,-1.0]
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 64,
+      "textureYCenter": 192,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "roll",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,-1.0]
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 64,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 960,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 832,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "Attitude Indicator",
-	"description" : "Indicates where the plane is pointing.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:1", "oredict:dyeWhite:1", "oredict:dyeLightBlue:3", "oredict:dyeBrown:3"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 64,
-			"textureYCenter" : 64,
-			"textureWidth" : 80,
-			"textureHeight" : 80,
-			"rotationVariable" : "roll",
-			"rotationFactor" : -1.0,
-			"translationVariable" : "pitch",
-			"translationFactor" : 1.0,
-			"translationClampMin" : -50,
-			"translationClampMax" : 50
-		},
-		{
-			"textureXCenter" : 64,
-			"textureYCenter" : 192,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "roll",
-			"rotationFactor" : -1.0
-		},
-		{
-			"textureXCenter" : 64,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Attitude Indicator",
+    "description": "Indicates where the plane is pointing.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.copperwire:1",
+        "minecraft:clay_ball:1",
+        "tags:dyes/white:1",
+        "tags:dyes/light_blue:1",
+        "tags:dyes/brown:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

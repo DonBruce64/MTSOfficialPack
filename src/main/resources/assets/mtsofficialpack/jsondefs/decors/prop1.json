@@ -1,14 +1,14 @@
 {
   "decor": {
     "type": "generic",
-    "width": 1.0,
-    "height": 0.84375,
-    "depth": 0.5625
+    "width": 0.625,
+    "height": 0.375,
+    "depth": 0.625
   },
   "definitions": [
     {
       "subName": "",
-      "name": "Crash Barrier",
+      "name": "Ammo Box",
       "extraMaterialLists": [
         []
       ]
@@ -19,11 +19,12 @@
     "modelType": "obj"
   },
   "general": {
-    "name": "Crash Barrier",
-    "stackSize": 64,
+    "name": "Ammo Box",
+    "description": "A decorative Box of 7.62 ammunition",
+    "stackSize": 8,
     "materialLists": [
       [
-        "minecraft:cobblestone_wall:2"
+        "mts:mtsofficialpack.bullet762:1"
       ]
     ],
     "radarWidth": 0.0,

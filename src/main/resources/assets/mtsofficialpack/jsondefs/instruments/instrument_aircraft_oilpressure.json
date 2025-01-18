@@ -1,32 +1,65 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 320,
+      "textureYCenter": 448,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 970,
+      "textureYCenter": 192,
+      "textureWidth": 8,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "engine_pressure",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,1.7999999523162842],
+          "offset": -135.0
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 960,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 832,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "Oil Pressure Gauge",
-	"description" : "Indicates oil pressure.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:3", "oredict:dyeWhite:2", "oredict:dyeLime:1", "oredict:dyeYellow:1", "oredict:dyeRed:1"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 320,
-			"textureYCenter" : 448,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 192,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "engine_pressure",
-			"rotationOffset" : -135,
-			"rotationFactor" : 1.8
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Oil Pressure Gauge",
+    "description": "Indicates oil pressure.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.screws:1",
+        "tags:dyes/white:1",
+        "tags:dyes/lime:1",
+        "tags:dyes/yellow:1",
+        "tags:dyes/red:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

@@ -1,0 +1,109 @@
+{
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 192,
+      "textureYCenter": 192,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 192,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "navigation_light",
+          "clampMin": 1,
+          "clampMax": 1
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 192,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "headlight",
+          "clampMin": 1,
+          "clampMax": 1
+        }
+      ]
+    },
+    //x
+    {
+      "scale": 1.0,
+      "textObject": {
+        "pos": [9.0,33.0,0.0],
+        "rot": [0.0,0.0,0.0],
+        "scale": 1.8,
+        "variableName": "posX",
+        "variableFactor": 1.0,
+        "variableFormat": "%6.0f",
+        "defaultText": "0",
+        "lightsUp": true,
+        "color": "FFFFFF"
+      },
+      "lightUpTexture": true
+    },
+    //y
+    {
+      "scale": 1.0,
+      "textObject": {
+        "pos": [9.0,6.0,0.0],
+        "rot": [0.0,0.0,0.0],
+        "scale": 1.8,
+        "variableName": "posY",
+        "variableFactor": 1.0,
+        "variableFormat": "%6.0f",
+        "defaultText": "0",
+        "lightsUp": true,
+        "color": "FFFFFF"
+      },
+      "lightUpTexture": true
+    },
+    //z
+    {
+      "scale": 1.0,
+      "textObject": {
+        "pos": [9.0,-20.0,0.0],
+        "rot": [0.0,0.0,0.0],
+        "scale": 1.8,
+        "variableName": "posZ",
+        "variableFactor": 1.0,
+        "variableFormat": "%6.0f",
+        "maxLength": 6,
+        "defaultText": "0",
+        "lightsUp": true,
+        "color": "FFFFFF"
+      },
+      "lightUpTexture": true
+    }
+  ],
+  "textureName": "instruments.png",
+  "general": {
+    "name": "GPS",
+    "description": "Indicates world position.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.screws:1",
+        "mts:mtsofficialpack.circuit:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

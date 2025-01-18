@@ -1,28 +1,56 @@
 {
+  "components": [
+    {
+      "scale": 2.0,
+      "textureXCenter": 524,
+      "textureYCenter": 960,
+      "textureWidth": 40,
+      "textureHeight": 40,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "engine_gear",
+          "axis": [40.0,0.0,0.0],
+          "clampMin": -120.0,
+          "clampMax": 480.0
+        }
+      ]
+    },
+    {
+      "scale": 2.0,
+      "textureXCenter": 1004,
+      "textureYCenter": 1000,
+      "textureWidth": 40,
+      "textureHeight": 40,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 2.0,
+      "textureXCenter": 964,
+      "textureYCenter": 1000,
+      "textureWidth": 40,
+      "textureHeight": 40,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "Gear Indicator",
-	"description" : "Indicates current gear.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeRed:1", "oredict:dyeBlue:1", "oredict:dyeWhite:4"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 128,
-			"textureYCenter" : 960,
-			"textureWidth" : 80,
-			"textureHeight" : 80,
-			"translationVariable" : "engine_gear",
-			"translationFactor" : 80.0,
-			"translateHorizontal" : true,
-			"translationClampMin" : -80,
-			"translationClampMax" : 720
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 960,
-			"textureWidth" : 80,
-			"textureHeight" : 80,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Gear Indicator",
+    "description": "Indicates current gear.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.screws:4",
+        "tags:dyes/red:1",
+        "tags:dyes/blue:1",
+        "tags:dyes/white:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

@@ -1,10 +1,81 @@
 {
-    "general": {
-        "name" : "Signal Controller",
-		"type" : "signal_controller",
-		"width" : 1.0,
-		"height" : 1.0,
-		"depth" : 1.0,
-		"materials" : ["minecraft:stone_slab:0:3", "oredict:ingotIron:3", "minecraft:comparator:0:1", "oredict:dustRedstone:2"]
-	}
+  "decor": {
+    "type": "signal_controller",
+    "width": 1.0,
+    "height": 1.0,
+    "depth": 1.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Signal Controller",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "animatedObjects": [
+    {
+        "objectName": "boxdoor",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "player_interacting",
+            "centerPoint": [0.3125,0.0,0.0],
+            "axis": [0.0,40.0,0.0],
+            "duration": 7,
+            "reverseEasing": "easeinback",
+            "forwardsEasing": "easeincirc"
+          }
+        ]
+      }
+    ],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:interact_hatchclose",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:interact_hatchopen",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Signal Controller",
+    "materialLists": [
+      [
+        "minecraft:stone_slab:1",
+        "mts:mtsofficialpack.plating:6",
+        "mts:mtsofficialpack.circuit:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

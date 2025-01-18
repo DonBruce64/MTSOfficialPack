@@ -1,42 +1,83 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 192,
+      "textureYCenter": 704,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "yCenter": 2,
+      "scale": 1.0,
+      "textureXCenter": 917,
+      "textureYCenter": 192,
+      "textureWidth": 4,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "speed",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,5.4],
+          "offset": -120.0
+        }
+      ]
+    },
+    {
+      "yCenter": 2,
+      "scale": 1.0,
+      "textureXCenter": 960,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "speed",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,5.4],
+          "offset": -120.0
+        }
+      ]
+    },
+    {
+      "scale": 0.0,
+      "textureXCenter": 960,
+      "textureYCenter": 832,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 576,
+      "textureYCenter": 704,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "Spedometer (KPH)",
-	"description" : "Indicates speed in Kilometers Per Hour.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:1", "oredict:dyeGray:2", "oredict:dyeWhite:3", "oredict:dyeRed:1"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 192,
-			"textureYCenter" : 704,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"yCenter" : 2,
-			"xCenter" : 0,
-			"textureXCenter" : 576,
-			"textureYCenter" : 832,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "speed",
-			"rotationOffset" : -130,
-			"rotationFactor" : 6.24
-		},
-		{
-			"yCenter" : 2,
-			"xCenter" : 0,
-			"textureXCenter" : 960,
-			"textureYCenter" : 576,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 832,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Spedometer (KPH)",
+    "description": "Indicates speed in Kilometers Per Hour.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+       "mts:mtsofficialpack.plating:1",
+       "mts:mtsofficialpack.screws:1",
+        "tags:dyes/black:1",
+        "tags:dyes/white:1",
+        "tags:dyes/red:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

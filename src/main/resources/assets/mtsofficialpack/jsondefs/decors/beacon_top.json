@@ -1,10 +1,113 @@
 {
-	"general": {
-		"name" : "Beacon",
-		"type" : "beacon",
-		"width" : 1.0,
-		"height" : 1.0,
-		"depth" : 1.0,
-		"materials" : ["minecraft:observer:0:1", "minecraft:compass:0:1", "oredict:dustRedstone:3"]
-	}
+  "decor": {
+    "type": "beacon",
+    "width": 1.0,
+    "height": 1.0,
+    "depth": 1.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Beacon",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [
+      {
+        "pos": [0.0,-500.0,0.0],
+        "fieldName": "Beacon Name",
+        "defaultText": "NONE",
+        "maxLength": 5,
+        "color": "FFFFFF"
+      },
+      {
+        "pos": [0.0,-500.0,0.0],
+        "fieldName": "Glide Slope (Deg)",
+        "defaultText": "10.0",
+        "maxLength": 5,
+        "color": "FFFFFF"
+      },
+      {
+        "pos": [0.0,-500.0,0.0],
+        "fieldName": "Bearing (Deg)",
+        "defaultText": "0.0",
+        "maxLength": 5,
+        "color": "FFFFFF"
+      }
+    ],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:interact_beaconclose",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:interact_beaconloop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "forwardsDelay": 15,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:interact_beaconopen0",
+        "soundVariations": [
+          "mtsofficialpack:interact_beaconopen0",
+          "mtsofficialpack:interact_beaconopen1",
+          "mtsofficialpack:interact_beaconopen2"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Beacon",
+    "description": "This white cupola tells your plane where it is at all times. It knows this becaue it knows where it isnt. By subtracting where it is, from where it isn't, or where it isn't, from where it is, whichever is greater, it obtains a difference, or deviation",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:8",
+        "minecraft:observer:1",
+        "minecraft:compass:1",
+        "tags:dusts/redstone:15",
+        "mts:mtsofficialpack.copperwire:5"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

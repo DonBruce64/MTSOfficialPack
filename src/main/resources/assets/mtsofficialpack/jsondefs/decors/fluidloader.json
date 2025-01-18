@@ -1,11 +1,108 @@
 {
-    "general": {
-        "name" : "Fluid Loader",
-				"description" : "Adds fluids to tanks/barrels on vehicles.  Connect pipes to the bottom.",
-        "type" : "fluid_loader",
-		"width" : 1.0,
-		"height" : 1.0,
-		"depth" : 1.0,
-		"materials" : ["minecraft:bucket:0:3", "oredict:ingotIron:3", "minecraft:stone_slab:0:2"]
-	}
+  "decor": {
+    "type": "fluid_loader",
+    "width": 1.0,
+    "height": 1.0,
+    "depth": 1.0,
+    "fuelCapacity": 15000,
+    "pumpRate": 100.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Fluid Loader",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:pumploader_loop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "tank_loading_active",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:pumploader_fluidflow",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "tank_loading_active",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 5.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:pumploader_start",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "tank_loading_active",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 20.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:bench/gunbench_stop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "tank_unloading_active"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Fluid Loader",
+    "description": "Adds fluids to tanks/barrels on vehicles.  Connect pipes to the bottom.",
+    "materialLists": [
+      [
+        "tags:dusts/redstone:15",
+        "mts:mtsofficialpack.barrel_blank:2",
+        "mts:mtsofficialpack.metaltube:4",
+        "minecraft:hopper:1",
+        "minecraft:stone_slab:16"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }
