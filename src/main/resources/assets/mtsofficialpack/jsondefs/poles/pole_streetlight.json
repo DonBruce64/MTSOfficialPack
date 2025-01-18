@@ -1,7 +1,67 @@
 {
-    "general": {
-        "name" : "Street Light",
-		"type" : "street_light",
-		"materials" : ["oredict:dustGlowstone:1", "minecraft:stone_slab:0:1"]
-	}
+  "pole": {
+    "type": "street_light",
+    "radius": 0.0625
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Street Light",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [
+      {
+        "objectName": "&bulb",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.40625,0.625],
+            "axis": [0.0,-1.0,-0.0],
+            "flareHeight": 0.75,
+            "flareWidth": 0.75,
+            "beamDiameter": 2.0,
+            "beamLength": 3.0
+          },
+          {
+            "pos": [0.0,0.40625,0.625],
+            "axis": [0.0,-1.0,-0.0],
+            "flareHeight": 1.75,
+            "flareWidth": 1.75,
+            "beamDiameter": 12.0,
+            "beamLength": 10.0
+          }
+        ]
+      },
+      {
+        "objectName": "&translucent_bulbcover",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": []
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Street Light",
+    "stackSize": 16,
+    "materialLists": [
+      [
+        "oredict:dustGlowstone:2",
+        "mts:mtsofficialpack.copperwire:1",
+        "mts:mtsofficialpack.plating:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

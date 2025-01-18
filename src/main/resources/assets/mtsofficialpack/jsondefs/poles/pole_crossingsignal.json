@@ -1,7 +1,111 @@
 {
-    "general": {
-        "name" : "Crossing Signal",
-		"type" : "traffic_signal",
-		"materials" : ["oredict:dyeRed:1", "oredict:dyeLime:1", "oredict:dustGlowstone:2", "minecraft:stone_slab:0:1"]
-	}
+  "pole": {
+    "type": "traffic_signal"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Crossing Signal",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.4,0.4],
+          "width": 0.3,
+          "height": 0.3125
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [
+      {
+        "objectName": "&golight",
+        "emissive": true,
+        "isElectric": true,
+        "color": "00FF00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "go_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.291,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 0.7,
+            "flareWidth": 0.5625
+          }
+        ]
+      },
+      {
+        "objectName": "&stoplight",
+        "emissive": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "linked",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "0_10_10_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "activator",
+            "variable": "linked",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "linked"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "stop_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.7125,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 0.7,
+            "flareWidth": 0.5625
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Crossing Signal",
+    "stackSize": 16,
+    "materialLists": [
+      [
+        "tags:dyes/red:1",
+        "tags:dyes/lime:1",
+        "oredict:dustGlowstone:2",
+        "mts:mtsofficialpack.copperwire:1",
+        "mts:mtsofficialpack.plating:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

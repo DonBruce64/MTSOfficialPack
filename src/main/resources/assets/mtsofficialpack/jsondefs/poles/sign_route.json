@@ -1,18 +1,41 @@
 {
-    "general": {
-        "name" : "Route",
-        "type" : "sign",
-        "modelName" : "sign",
-        "materials" : ["oredict:ingotIron:1"],
-        "textObjects" : [
-        {
-					"fieldName" : "text",
-					"pos" : [0.0, 0.5, 0.001],
-					"rot" : [0.0, 0.0, 0.0],
-	   			"scale" : 0.65,
-          "maxLength": 3,
-	   			"color" : "0x000000"
-	   		}
-	   	]
-	}
+  "pole": {
+    "type": "sign"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "modelName": "sign",
+      "name": "Route",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [
+      {
+        "pos": [0.0,0.5,0.002],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.65,
+        "fieldName": "text",
+        "defaultText": "",
+        "maxLength": 3,
+        "color": "000000"
+      }
+    ],
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Route",
+    "stackSize": 32,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

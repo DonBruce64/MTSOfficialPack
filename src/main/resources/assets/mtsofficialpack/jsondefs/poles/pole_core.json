@@ -1,8 +1,353 @@
 {
-    "general": {
-        "name" : "Pole",
-		"type" : "core",
-		"radius" : 0.0625,
-		"materials" : ["minecraft:stone:0:1"]
-	}
+  "pole": {
+    "type": "core",
+    "radius": 0.094
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Pole",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "up",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_up",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_up",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "up_slab",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "slab_present_up",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "down",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "down_slab",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "slab_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "base",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "solid_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_up",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "north",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_north",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_north",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "north_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_north",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "south",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_south",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_south",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "south_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_south",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "east",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_east",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_east",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "east_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_east",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "west",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_west",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_west",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "west_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_west",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_down",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "northeast",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_northeast",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_northeast",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "northeast_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_northeast",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "southeast",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_southeast",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_southeast",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "southeast_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_southeast",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "northwest",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_northwest",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_northwest",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "northwest_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_northwest",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "southwest",
+        "animations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "solid_present_southwest",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "neighbor_present_southwest",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "southwest_down",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "neighbor_present_southwest",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Pole",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.metaltube:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

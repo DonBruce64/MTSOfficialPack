@@ -1,7 +1,141 @@
 {
-    "general": {
-        "name" : "Traffic Signal",
-		"type" : "traffic_signal",
-		"materials" : ["oredict:dyeRed:1", "oredict:dyeYellow:1","oredict:dyeLime:1", "oredict:dustGlowstone:3", "minecraft:stone_slab:0:1"]
-	}
+  "pole": {
+    "type": "traffic_signal"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Traffic Signal",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [
+      {
+        "objectName": "&cautionlight",
+        "emissive": true,
+        "isElectric": true,
+        "color": "f8b43f",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "caution_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.50625,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 1.75,
+            "flareWidth": 1.75
+          },
+          {
+            "pos": [0.0,0.50625,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 0.6,
+            "flareWidth": 3.0
+          }
+        ]
+      },
+      {
+        "objectName": "&golight",
+        "emissive": true,
+        "isElectric": true,
+        "color": "00FF00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "go_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.09063,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 1.75,
+            "flareWidth": 1.75
+          },
+          {
+            "pos": [0.0,0.09063,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 0.6,
+            "flareWidth": 3.0
+          }
+        ]
+      },
+      {
+        "objectName": "&stoplight",
+        "emissive": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "linked",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "0_10_10_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "activator",
+            "variable": "linked",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "linked"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "stop_light",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.96875,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 1.75,
+            "flareWidth": 1.75
+          },
+          {
+            "pos": [0.0,0.96875,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 0.6,
+            "flareWidth": 3.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Traffic Signal",
+    "stackSize": 16,
+    "materialLists": [
+      [
+        "tags:dyes/red:1",
+        "tags:dyes/yellow:1",
+        "tags:dyes/lime:1",
+        "oredict:dustGlowstone:3",
+        "mts:mtsofficialpack.copperwire:2",
+        "mts:mtsofficialpack.plating:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

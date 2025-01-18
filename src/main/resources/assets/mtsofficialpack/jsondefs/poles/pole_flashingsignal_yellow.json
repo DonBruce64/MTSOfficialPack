@@ -1,7 +1,61 @@
 {
-    "general": {
-        "name" : "Flashing Yellow Signal",
-		"type" : "street_light",
-		"materials" : ["oredict:dyeYellow:1", "oredict:dustGlowstone:3", "minecraft:stone_slab:0:1"]
-	}
+  "pole": {
+    "type": "street_light"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Flashing Yellow Signal",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [
+      {
+        "objectName": "&streetlight",
+        "emissive": true,
+        "isElectric": true,
+        "color": "f8b43f",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "10_10_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,0.50625,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 1.5,
+            "flareWidth": 1.5
+          },
+          {
+            "pos": [0.0,0.50625,0.4],
+            "axis": [0.0,-0.0,1.0],
+            "flareHeight": 0.4,
+            "flareWidth": 2
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+  "stackSize": 16,
+    "name": "Flashing Yellow Signal",
+    "materialLists": [
+      [
+        "tags:dyes/yellow:1",
+        "oredict:dustGlowstone:1",
+        "mts:mtsofficialpack.copperwire:1",
+        "mts:mtsofficialpack.plating:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }
