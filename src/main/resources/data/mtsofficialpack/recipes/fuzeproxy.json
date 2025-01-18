@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        " b ",
+        " c "
+    ],
+    "key": {
+        "a": {
+            "item": "minecraft:observer"
+        },
+        "b": {
+            "item": "minecraft:gunpowder"
+        },
+        "c": {
+            "tag": "forge:ingots/iron"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.fuzeproxy",
+        "count": 8
+    }
+}

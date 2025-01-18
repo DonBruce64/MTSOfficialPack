@@ -1,0 +1,21 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " b ",
+        " a ",
+        " b "
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.metaltube"
+        },
+        "b": {
+            "tag": "forge:nuggets/iron"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.spring",
+        "count": 1
+    }
+}

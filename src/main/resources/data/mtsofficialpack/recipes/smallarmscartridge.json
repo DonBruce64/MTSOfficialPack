@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        " b ",
+        " c "
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:nuggets/gold"
+        },
+        "b": {
+            "tag": "forge:ingots/gold"
+        },
+        "c": {
+            "tag": "forge:nuggets/iron"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.smallarmscartridge",
+        "count": 4
+    }
+}

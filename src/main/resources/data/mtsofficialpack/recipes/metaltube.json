@@ -1,0 +1,18 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        " a ",
+        " a "
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.plating"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.metaltube",
+        "count": 2
+    }
+}

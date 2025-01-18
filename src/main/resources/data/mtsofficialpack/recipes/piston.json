@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "bab",
+        " c ",
+        " b "
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:ingots/iron"
+        },
+        "b": {
+            "tag": "forge:nuggets/iron"
+        },
+        "c": {
+            "item": "mts:mtsofficialpack.screws"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.piston",
+        "count": 2
+    }
+}

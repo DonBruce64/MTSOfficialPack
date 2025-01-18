@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cac",
+        "beb",
+        "dad"
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.plating"
+        },
+        "b": {
+            "item": "mts:mtsofficialpack.copperwire"
+        },
+        "c": {
+            "item": "mts:mtsofficialpack.screws"
+        },
+        "d": {
+            "tag": "forge:dusts/redstone"
+        },
+        "e": {
+            "item": "mts:mtsofficialpack.circuit"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.processor",
+        "count": 1
+    }
+}

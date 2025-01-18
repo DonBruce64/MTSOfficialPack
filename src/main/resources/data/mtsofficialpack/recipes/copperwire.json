@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        "b b",
+        " a "
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:ingots/gold"
+        },
+        "b": {
+            "tag": "forge:dusts/redstone"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.copperwire",
+        "count": 8
+    }
+}

@@ -1,0 +1,24 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        " b ",
+        " c "
+    ],
+    "key": {
+        "a": {
+            "item": "minecraft:sugar"
+        },
+        "b": {
+            "item": "minecraft:coal"
+        },
+        "c": {
+            "item": "minecraft:blaze_powder"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.solidfuel",
+        "count": 3
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        "bcd",
+        " e "
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:gems/quartz"
+        },
+        "b": {
+            "item": "minecraft:repeater"
+        },
+        "c": {
+            "item": "mts:mtsofficialpack.copperwire"
+        },
+        "d": {
+            "item": "minecraft:comparator"
+        },
+        "e": {
+            "item": "mts:mtsofficialpack.plastic"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.circuit",
+        "count": 2
+    }
+}
