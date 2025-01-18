@@ -1,48 +1,168 @@
 {
-    "general": {
-        "name" : "Fuel Pump",
-        "type" : "fuel_pump",
-		"width" : 1.0,
-		"height" : 1.0,
-		"depth" : 0.6875,
-		"materials" : ["oredict:dyeYellow:2", "oredict:dyeLightGray:2", "minecraft:glass_pane:0:1", "oredict:ingotIron:2", "minecraft:stone_slab:0:2"],
-		"textObjects" : [
-			{
-				"pos" : [0.0, 1.578125, 0.29],
-				"rot": [0, 0, 0],
-				"scale" : 0.125,
-				"color" : "0xFFC800"
-			},
-			{
-				"pos" : [0.0, 1.40625, 0.29],
-				"rot": [0, 0, 0],
-				"scale" : 0.125,
-				"color" : "0xFFC800"
-			},
-			{
-				"pos" : [0.0, 1.21875, 0.29],
-				"rot": [0, 0, 0],
-				"scale" : 0.125,
-				"color" : "0xFFC800"
-			},
-			{
-				"pos" : [0.0, 1.578125, -0.29],
-        "rot": [0, 180, 0],
-				"scale" : 0.125,
-				"color" : "0xFFC800"
-			},
-			{
-				"pos" : [0.0, 1.40625, -0.29],
-				"rot": [0, 180, 0],
-				"scale" : 0.125,
-				"color" : "0xFFC800"
-			},
-			{
-				"pos" : [0.0, 1.21875, -0.29],
-        "rot": [0, 180, 0],
-				"scale" : 0.125,
-				"color" : "0xFFC800"
-			}
-		]
-	}
+  "decor": {
+    "type": "fuel_pump",
+    "width": 1.0,
+    "height": 1.0,
+    "depth": 0.6875,
+    "fuelCapacity": 15000,
+    "pumpRate": 10.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Fuel Pump",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [
+      {
+        "pos": [0.0,1.53125,0.255],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.125,
+        "variableName": "fuelpump_fluid",
+        "variableFormat": "%s",
+        "defaultText": "",
+        "lightsUp": true,
+        "color": "FFC800"
+      },
+      {
+        "pos": [0.0,1.34375,0.255],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.125,
+        "variableName": "fuelpump_stored",
+        "variableFactor": 0.001,
+        "variableFormat": "LVL:%04.1fb",
+        "defaultText": "",
+        "lightsUp": true,
+        "color": "FFC800"
+      },
+      {
+        "pos": [0.0,1.156,0.252],
+        "rot": [0.0,0.0,0.0],
+        "scale": 0.125,
+        "variableName": "fuelpump_dispensed",
+        "variableFactor": 0.001,
+        "variableFormat": "DISP:%04.1fb",
+        "defaultText": "",
+        "lightsUp": true,
+        "color": "FFC800"
+      },
+      {
+        "pos": [0.0,1.53125,-0.252],
+        "rot": [0.0,180.0,0.0],
+        "scale": 0.125,
+        "variableName": "fuelpump_fluid",
+        "variableFormat": "%s",
+        "defaultText": "",
+        "lightsUp": true,
+        "color": "FFC800"
+      },
+      {
+        "pos": [0.0,1.34375,-0.252],
+        "rot": [0.0,180.0,0.0],
+        "scale": 0.125,
+        "variableName": "fuelpump_stored",
+        "variableFactor": 0.001,
+        "variableFormat": "LVL:%04.1fb",
+        "defaultText": "",
+        "lightsUp": true,
+        "color": "FFC800"
+      },
+      {
+        "pos": [0.0,1.156,-0.255],
+        "rot": [0.0,180.0,0.0],
+        "scale": 0.125,
+        "variableName": "fuelpump_dispensed",
+        "variableFactor": 0.001,
+        "variableFormat": "DISP:%04.1fb",
+        "defaultText": "",
+        "lightsUp": true,
+        "color": "FFC800"
+      }
+    ],
+    "lightObjects": [],
+    "animatedObjects": [
+      {
+        "objectName": "$pistol",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "fuelpump_active",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ]
+      } 
+    ],
+    "sounds": [
+      {
+        "name": "mts:pump_loop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "fuelpump_active",
+            "forwardsDelay": 30,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 5.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 20.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:pump_start",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "fuelpump_active",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:pump_stop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "fuelpump_active"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Fuel Pump",
+    "materialLists": [
+      [
+        "minecraft:cauldron:1",
+        "minecraft:glass_pane:2",
+		"mts:mtsofficialpack.plating:8",
+		"tags:dyes/yellow:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

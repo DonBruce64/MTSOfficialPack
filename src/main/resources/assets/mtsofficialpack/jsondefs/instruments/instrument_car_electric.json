@@ -1,42 +1,72 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 832,
+      "textureYCenter": 704,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "yCenter": 15,
+      "scale": 1.0,
+      "textureXCenter": 917,
+      "textureYCenter": 192,
+      "textureWidth": 4,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "electric_power",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,6.42857143],
+          "offset": -45.0
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 320,
+      "textureYCenter": 960,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    },
+    {
+      "scale": 0.0,
+      "textureXCenter": 960,
+      "textureYCenter": 832,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 576,
+      "textureYCenter": 704,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "Electrical Gauge",
-	"description" : "Indicates electrical power.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:1", "oredict:dyeGray:2", "oredict:dyeWhite:3", "oredict:dyeRed:1", "oredict:dyeBlue:1"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 832,
-			"textureYCenter" : 704,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"yCenter" : 19,
-			"xCenter" : 0,
-			"textureXCenter" : 832,
-			"textureYCenter" : 832,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "electric_power",
-			"rotationOffset" : -65,
-			"rotationFactor" : 8.0
-		},
-		{
-			"yCenter" : 19,
-			"xCenter" : 0,
-			"textureXCenter" : 832,
-			"textureYCenter" : 576,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 832,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Electrical Gauge",
+    "description": "Indicates electrical power.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.copperwire:1",
+        "tags:dyes/white:1",
+        "tags:dyes/red:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

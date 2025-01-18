@@ -1,9 +1,35 @@
 {
-    "general": {
-        "name" : "Traffic Cone",
-		"width" : 0.6,
-		"height" : 0.75,
-		"depth" : 0.6,
-		"materials" : ["oredict:dyeWhite:1", "oredict:dyeOrange:1", "oredict:slimeball:1"]
-	}
+  "decor": {
+    "type": "generic",
+    "width": 0.6,
+    "height": 0.75,
+    "depth": 0.6
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Traffic Cone",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Traffic Cone",
+    "description": "Its a goddamn traffic cone, what do you want me to write here. It cones traffic!",
+     "stackSize": 64,
+    "materialLists": [
+      [
+        "tags:dyes/white:1",
+        "tags:dyes/orange:1",
+        "mts:mtsofficialpack.plastic:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

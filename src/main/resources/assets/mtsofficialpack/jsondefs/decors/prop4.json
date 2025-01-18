@@ -1,14 +1,14 @@
 {
   "decor": {
     "type": "generic",
-    "width": 1.0,
-    "height": 0.84375,
-    "depth": 0.5625
+    "width": 0.6,
+    "height": 0.3,
+    "depth": 0.6
   },
   "definitions": [
     {
       "subName": "",
-      "name": "Crash Barrier",
+      "name": "37mm Magazine Pile",
       "extraMaterialLists": [
         []
       ]
@@ -19,11 +19,12 @@
     "modelType": "obj"
   },
   "general": {
-    "name": "Crash Barrier",
-    "stackSize": 64,
+    "name": "37mm Magazine Pile",
+    "description": "A pile of decorative 37mm magazines. They smell like oily metal.",
+    "stackSize": 8,
     "materialLists": [
       [
-        "minecraft:cobblestone_wall:2"
+        "tags:ingots/iron:1"
       ]
     ],
     "radarWidth": 0.0,

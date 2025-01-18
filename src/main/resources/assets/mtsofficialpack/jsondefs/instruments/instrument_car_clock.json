@@ -2,42 +2,48 @@
   "components": [
     {
       "scale": 1.0,
-      "textureXCenter": 704,
+      "textureXCenter": 960,
       "textureYCenter": 704,
       "textureWidth": 128,
       "textureHeight": 128,
       "lightUpTexture": true
     },
     {
-      "yCenter": 15,
       "scale": 1.0,
-      "textureXCenter": 917,
+      "textureXCenter": 981,
       "textureYCenter": 192,
-      "textureWidth": 4,
+      "textureWidth": 8,
       "textureHeight": 128,
       "lightUpTexture": true,
       "animations": [
         {
           "animationType": "rotation",
-          "variable": "fuel",
+          "variable": "time",
           "centerPoint": [0.0,0.0,0.0],
-          "axis": [0.0,0.0,90.0],
-          "offset": -45.0
+          "axis": [0.0,0.0,0.03]
         }
       ]
     },
     {
       "scale": 1.0,
-      "textureXCenter": 320,
-      "textureYCenter": 960,
-      "textureWidth": 128,
+      "textureXCenter": 970,
+      "textureYCenter": 192,
+      "textureWidth": 8,
       "textureHeight": 128,
-      "lightUpTexture": false
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "time",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.36]
+        }
+      ]
     },
     {
-      "scale": 0.0,
+      "scale": 1.0,
       "textureXCenter": 960,
-      "textureYCenter": 832,
+      "textureYCenter": 320,
       "textureWidth": 128,
       "textureHeight": 128,
       "lightUpTexture": true,
@@ -54,15 +60,15 @@
   ],
   "textureName": "instruments.png",
   "general": {
-    "name": "Fuel Gauge",
-    "description": "Indicates fuel.",
+    "name": "Automobile Clock",
+    "description": "For when you need to know the time on the go",
     "stackSize": 64,
     "materialLists": [
       [
         "mts:mtsofficialpack.plating:1",
-        "mts:mtsofficialpack.copperwire:1",
+        "mts:mtsofficialpack.screws:1",
+        "tags:dyes/black:1",
         "tags:dyes/white:1",
-        "tags:dyes/red:1",
         "minecraft:glass_pane:1"
       ]
     ],

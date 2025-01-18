@@ -1,9 +1,70 @@
 {
-    "general": {
-        "name" : "Telephone Booth",
-        "width" : 1.0,
-		"height" : 1.0,
-		"depth" : 1.0,
-		"materials" : ["oredict:ingotIron:6", "minecraft:iron_trapdoor:0:1", "minecraft:glass_pane:0:4", "oredict:dyeCyan:4"]
-	}
+  "decor": {
+    "type": "generic",
+    "width": 1.0,
+    "height": 1.0,
+    "depth": 1.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Telephone Booth",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,5.4,0.4],
+          "width": 0.3,
+          "height": 0.3125,
+          "variableName": "phone",
+          "variableType": "toggle"
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:misc/telebooth0",
+        "soundVariations": [
+        	"mtsofficialpack:misc/telebooth0",
+        	"mtsofficialpack:misc/telebooth1",
+        	"mtsofficialpack:misc/telebooth2",
+        	"mtsofficialpack:misc/telebooth3",
+        	"mtsofficialpack:misc/telebooth4"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "phone"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 5.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 20.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Telephone Booth",
+    "materialLists": [
+      [
+        "tags:ingots/iron:4",
+        "minecraft:iron_trapdoor:1",
+        "minecraft:glass_pane:10"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

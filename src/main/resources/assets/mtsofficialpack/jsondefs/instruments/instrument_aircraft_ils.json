@@ -1,46 +1,81 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 320,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 448,
+      "textureYCenter": 576,
+      "textureWidth": 4,
+      "textureHeight": 128,
+      "moveComponent": true,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "beacon_bearing_delta",
+          "axis": [-4.0,0.0,0.0],
+          "clampMin": -47.0,
+          "clampMax": 47.0
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 576,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 4,
+      "moveComponent": true,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "beacon_glideslope_delta",
+          "axis": [0.0,4.0,0.0],
+          "clampMin": -47.0,
+          "clampMax": 47.0
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 960,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 832,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "ILS Indicator",
-	"description" : "Displays instrument landing system (ILS) information for beacons.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:3", "oredict:dyeWhite:3"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 320,
-			"textureYCenter" : 576,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 448,
-			"textureYCenter" : 576,
-			"textureWidth" : 4,
-			"textureHeight" : 128,
-			"translationVariable" : "beacon_bearing_delta",
-			"translationFactor" : -4,
-			"translationClampMin" : -47,
-			"translationClampMax" : 47,
-			"translateHorizontal" : true,
-			"moveComponent" : true
-		},
-		{
-			"textureXCenter" : 576,
-			"textureYCenter" : 576,
-			"textureWidth" : 128,
-			"textureHeight" : 4,
-			"translationVariable" : "beacon_glideslope_delta",
-			"translationFactor" : -4,
-			"translationClampMin" : -47,
-			"translationClampMax" : 47,
-			"moveComponent" : true
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "ILS Indicator",
+    "description": "Displays instrument landing system (ILS) information for beacons.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.copperwire:1",
+        "tags:dyes/white:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

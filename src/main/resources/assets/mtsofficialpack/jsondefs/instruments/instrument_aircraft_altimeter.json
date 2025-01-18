@@ -1,39 +1,77 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 192,
+      "textureYCenter": 64,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 931,
+      "textureYCenter": 192,
+      "textureWidth": 18,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "altitude",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.36000001430511475]
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 970,
+      "textureYCenter": 192,
+      "textureWidth": 8,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "altitude",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,3.6]
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 960,
+      "textureYCenter": 320,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 832,
+      "textureYCenter": 576,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "Altimeter",
-	"description" : "Indicates height.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:3", "oredict:dyeWhite:4"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 192,
-			"textureYCenter" : 64,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 192,
-			"textureYCenter" : 192,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "altitude",
-			"rotationFactor" : 0.36
-		},
-		{
-			"textureXCenter" : 192,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "altitude",
-			"rotationFactor" : 3.6
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 320,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Altimeter",
+    "description": "Indicates height.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.screws:1",
+        "tags:dyes/white:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

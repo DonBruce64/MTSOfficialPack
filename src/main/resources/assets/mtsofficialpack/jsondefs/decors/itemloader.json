@@ -1,11 +1,35 @@
 {
-    "general": {
-        "name" : "Item Loader",
-				"description" : "Adds items to crates on vehicles.",
-        "type" : "item_loader",
-		"width" : 1.0,
-		"height" : 1.0,
-		"depth" : 1.0,
-		"materials" : ["minecraft:bucket:0:3", "oredict:ingotIron:3", "minecraft:stone_slab:0:2"]
-	}
+  "decor": {
+    "type": "item_loader",
+    "width": 1.0,
+    "height": 1.0,
+    "depth": 1.0,
+    "inventoryUnits": 0.11111111
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Item Loader",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Item Loader",
+    "description": "Adds items to crates on vehicles.",
+    "materialLists": [
+      [
+        "minecraft:hopper:1",
+        "tags:ingots/gold:5",
+        "tags:dusts/redstone:5"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

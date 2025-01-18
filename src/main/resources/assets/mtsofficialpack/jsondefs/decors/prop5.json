@@ -1,14 +1,14 @@
 {
   "decor": {
     "type": "generic",
-    "width": 1.0,
-    "height": 0.84375,
-    "depth": 0.5625
+    "width": 0.4,
+    "height": 0.6,
+    "depth": 0.4
   },
   "definitions": [
     {
       "subName": "",
-      "name": "Crash Barrier",
+      "name": "HE Shell Pile",
       "extraMaterialLists": [
         []
       ]
@@ -19,11 +19,12 @@
     "modelType": "obj"
   },
   "general": {
-    "name": "Crash Barrier",
-    "stackSize": 64,
+    "name": "HE Shell Pile",
+    "description": "A couple of decorative 37mm shells. These used to be the spicy ones.",
+    "stackSize": 8,
     "materialLists": [
       [
-        "minecraft:cobblestone_wall:2"
+        "mts:mtsofficialpack.bullet3700he:1"
       ]
     ],
     "radarWidth": 0.0,

@@ -1,42 +1,72 @@
 {
+  "components": [
+    {
+      "scale": 1.0,
+      "textureXCenter": 64,
+      "textureYCenter": 832,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true
+    },
+    {
+      "yCenter": 15,
+      "scale": 1.0,
+      "textureXCenter": 917,
+      "textureYCenter": 192,
+      "textureWidth": 4,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "engine_temp",
+          "centerPoint": [0.0,0.0,0.0],
+          "axis": [0.0,0.0,0.5625],
+          "offset": -45.0
+        }
+      ]
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 320,
+      "textureYCenter": 960,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    },
+    {
+      "scale": 0.0,
+      "textureXCenter": 960,
+      "textureYCenter": 832,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": true,
+      "overlayTexture": true
+    },
+    {
+      "scale": 1.0,
+      "textureXCenter": 576,
+      "textureYCenter": 704,
+      "textureWidth": 128,
+      "textureHeight": 128,
+      "lightUpTexture": false
+    }
+  ],
+  "textureName": "instruments.png",
   "general": {
-	"name" : "Engine Temperature Gauge (C)",
-	"description" : "Indicates engine temperature in Celcius.",
-		"materials" : ["oredict:ingotIron:1", "oredict:dyeBlack:1", "oredict:dyeGray:2", "oredict:dyeWhite:3", "oredict:dyeRed:1"]
-  },
-	
-	"components" : [
-		{
-			"textureXCenter" : 64,
-			"textureYCenter" : 832,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"yCenter" : 19,
-			"xCenter" : 0,
-			"textureXCenter" : 832,
-			"textureYCenter" : 832,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"rotationVariable" : "engine_temp",
-			"rotationOffset" : -65,
-			"rotationFactor" : 0.9286
-		},
-		{
-			"yCenter" : 19,
-			"xCenter" : 0,
-			"textureXCenter" : 832,
-			"textureYCenter" : 576,
-			"textureWidth" : 128,
-			"textureHeight" : 128
-		},
-		{
-			"textureXCenter" : 960,
-			"textureYCenter" : 832,
-			"textureWidth" : 128,
-			"textureHeight" : 128,
-			"lightOverlay" : true
-		}
-	]
+    "name": "Engine Temperature Gauge (C)",
+    "description": "Indicates engine temperature in Celcius.",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1",
+        "mts:mtsofficialpack.copperwire:1",
+        "tags:dyes/white:1",
+        "tags:dyes/red:1",
+        "minecraft:glass_pane:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }
