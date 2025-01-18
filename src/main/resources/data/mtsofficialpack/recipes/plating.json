@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "aba",
+        "bbb",
+        "aba"
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.screws"
+        },
+        "b": {
+            "tag": "forge:ingots/iron"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.plating",
+        "count": 10
+    }
+}

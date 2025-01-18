@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        "cbc",
+        " d "
+    ],
+    "key": {
+        "a": {
+            "item": "minecraft:slime_ball"
+        },
+        "b": {
+            "item": "minecraft:gunpowder"
+        },
+        "c": {
+            "item": "minecraft:clay_ball"
+        },
+        "d": {
+            "item": "minecraft:blaze_powder"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.explosives",
+        "count": 3
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        "cbc",
+        "ddd"
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:sand"
+        },
+        "b": {
+            "item": "minecraft:slime_ball"
+        },
+        "c": {
+            "item": "minecraft:coal"
+        },
+        "d": {
+            "item": "minecraft:clay_ball"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.plastic",
+        "count": 2
+    }
+}

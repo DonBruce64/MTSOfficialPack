@@ -1,0 +1,35 @@
+{
+  	"type": "minecraft:crafting_shaped",
+    "pattern": [
+        "edf",
+        "abc",
+        " g "
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.blowtorch"
+        },
+        "b": {
+            "item": "mts:mts.wrench"
+        },
+        "c": {
+            "item": "minecraft:diamond"
+        },
+        "d": {
+            "item": "mts:mtsofficialpack.plating"
+        },
+        "e": {
+            "item": "mts:mtsofficialpack.screws"
+        },
+        "f": {
+            "item": "mts:mtsofficialpack.copperwire"
+        },
+        "g": {
+            "item": "minecraft:chest"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.repairkit",
+        "count": 1
+    }
+}

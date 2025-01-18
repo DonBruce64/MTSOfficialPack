@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " a ",
+        " a ",
+        " b "
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:ingots/gold"
+        },
+        "b": {
+            "tag": "forge:nuggets/iron"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.basecartridge",
+        "count": 8
+    }
+}

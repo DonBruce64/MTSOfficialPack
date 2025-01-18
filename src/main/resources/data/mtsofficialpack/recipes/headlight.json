@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  d",
+        "bc ",
+        "ab "
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.copperwire"
+        },
+        "b": {
+            "tag": "forge:ingots/iron"
+        },
+        "c": {
+            "item": "minecraft:redstone_lamp"
+        },
+        "d": {
+            "tag": "forge:glass_panes/colorless"
+        }
+    },
+    "result": {
+        "item": "mts:mtsofficialpack.headlight",
+        "count": 2
+    }
+}
