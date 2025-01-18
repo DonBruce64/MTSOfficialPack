@@ -6,30 +6,20 @@
     {
       "subName": "",
       "modelName": "sign",
-      "name": "Speed Limit",
+      "name": "Highway End",
       "extraMaterialLists": [
         []
       ]
     }
   ],
   "rendering": {
-    "textObjects": [
-      {
-        "pos": [0.0,0.45,0.002],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.65,
-        "fieldName": "text",
-        "defaultText": "",
-        "maxLength": 3,
-        "color": "000000"
-      }
-    ],
     "lightObjects": [],
     "modelType": "obj"
   },
   "general": {
-    "name": "Speed Limit",
-    "stackSize": 32,
+    "name": "Highway End",
+    "stackSize": 64,
+    "description": "",
     "materialLists": [
       [
         "mts:mtsofficialpack.plating:1"

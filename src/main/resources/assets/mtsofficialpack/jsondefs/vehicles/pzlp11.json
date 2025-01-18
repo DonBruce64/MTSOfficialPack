@@ -2,281 +2,491 @@
   "motorized": {
     "isAircraft": true,
     "hasOpenTop": true,
-    "emptyMass": 1150,
+    "emptyMass": 1400,
+    "waterBallastFactor": 0.5,
     "fuelCapacity": 7000,
-    "brakingFactor": 1.0,
+    "brakingFactor": 0.4,
+    "dragCoefficient": 0.03,
     "tailDistance": 7.0,
     "wingSpan": 11.0,
     "wingArea": 18.0,
     "aileronArea": 3.6,
     "elevatorArea": 3.0,
     "rudderArea": 1.5,
+    "litVariable": "running_light",
+    "panel": "mts:default_plane",
     "panelTextColor": "FFFFFF",
     "panelLitTextColor": "FFFFFF",
     "flapNotches": [],
-    "hookupVariables": [],
-    "instruments": [
-      {
-        "pos": [0.28125,0.725,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 108,
-        "hudY": 39,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.09375,0.725,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 168,
-        "hudY": 39,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [-0.09375,0.725,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 227,
-        "hudY": 39,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [-0.28125,0.725,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 288,
-        "hudY": 39,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.28125,0.5375,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 108,
-        "hudY": 106,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.09375,0.5375,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 168,
-        "hudY": 106,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [-0.09375,0.5375,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 227,
-        "hudY": 106,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [-0.28125,0.5375,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 288,
-        "hudY": 106,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.0,0.35,-0.81875],
-        "rot": [0.0,0.0,0.0],
-        "scale": 0.025,
-        "hudX": 40,
-        "hudY": 106,
-        "hudScale": 0.425
-      },
-      {
-        "pos": [0.499375,0.525,-1.09375],
-        "rot": [0.0,90.0,0.0],
-        "scale": 0.025,
-        "hudX": 120,
-        "hudY": 84,
-        "hudScale": 0.425,
-        "optionalPartNumber": 1
-      },
-      {
-        "pos": [-0.499375,0.525,-1.09375],
-        "rot": [0.0,-90.0,0.0],
-        "scale": 0.025,
-        "hudX": 260,
-        "hudY": 84,
-        "hudScale": 0.425,
-        "optionalPartNumber": 1
-      },
-      {
-        "pos": [-0.49937,0.525,-1.28125],
-        "rot": [0.0,-90.0,0.0],
-        "scale": 0.025,
-        "hudX": 320,
-        "hudY": 84,
-        "hudScale": 0.425,
-        "optionalPartNumber": 1
-      }
-    ]
+    "hookupVariables": []
   },
   "parts": [
     {
-      "pos": [0.0,0.21,-5.25],
+      "pos": [0.0,0.075,-1.6],
+      "rot": [0.0,0.0,0.0],
+      "dismountPos": [1.5,0.0,-1.5],
+      "isController": true,
+      "types": [
+        "seat",
+        "seat_pilot"
+      ]
+    },
+    {
+      "pos": [0.0,0.29,-5.25],
       "rot": [0.0,0.0,0.0],
       "turnsWithSteer": true,
       "isPermanent": true,
       "maxValue": 1.0,
       "defaultPart": "mts:invisible_wheel",
-      "types": ["ground_wheel"]
+      "types": [
+        "ground_wheel"
+      ],
+      "animations": [
+        {
+          "animationType": "rotation",
+          "variable": "rudder",
+          "centerPoint": [0.0,0.21,-5.25],
+          "axis": [0.0,1.0,0.0]
+        }
+      ]
     },
     {
       "pos": [-1.4,-1.4875,0.375],
       "rot": [0.0,0.0,0.0],
       "minValue": 0.65,
       "maxValue": 0.95,
-      "types": ["ground_wheel","ground_wheel_aircraft"]
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ]
     },
     {
       "pos": [1.4,-1.4875,0.375],
       "rot": [0.0,0.0,0.0],
       "minValue": 0.65,
       "maxValue": 0.95,
-      "types": ["ground_wheel","ground_wheel_aircraft"]
+      "types": [
+        "ground_wheel",
+        "ground_wheel_aircraft"
+      ]
     },
     {
       "pos": [-0.8125,0.3125,0.25],
       "rot": [0.0,0.0,0.0],
       "maxValue": 20.0,
-      "types": ["gun_fixed"]
+      "types": [
+        "gun_fixed"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_9"
+        ]
+      ],
+      "linkedParts": [1]
     },
     {
       "pos": [0.8125,0.3125,0.25],
       "rot": [0.0,0.0,0.0],
       "maxValue": 20.0,
-      "types": ["gun_fixed"]
+      "types": [
+        "gun_fixed"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_9"
+        ]
+      ],
+      "linkedParts": [1]
     },
     {
       "pos": [-2.5,1.0625,0.25],
       "rot": [0.0,2.5,0.0],
       "maxValue": 20.0,
-      "types": ["gun_fixed"]
+      "types": [
+        "gun_fixed"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_10"
+        ]
+      ],
+      "linkedParts": [1]
     },
     {
       "pos": [2.5,1.0625,0.25],
       "rot": [0.0,-2.5,0.0],
       "maxValue": 20.0,
-      "types": ["gun_fixed"]
+      "types": [
+        "gun_fixed"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_10"
+        ]
+      ],
+      "linkedParts": [1]
+    },
+    {
+      "pos": [0.0,-0.62625,0.0],
+      "rot": [0.0,0.0,0.0],
+      "minValue": 100.0,
+      "maxValue": 250.0,
+      "types": [
+        "gun_pylon_single"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_5"
+        ],
+        [
+          "!part_present_6"
+        ]
+      ],
+      "linkedParts": [1]
+    },
+    {
+      "pos": [0.0,-0.5464,-1.3125],
+      "rot": [7.5,0.0,0.0],
+      "minValue": 100.0,
+      "maxValue": 250.0,
+      "types": [
+        "gun_pylon_single"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_7"
+        ],
+        [
+          "!part_present_8"
+        ]
+      ],
+      "linkedParts": [1]
     },
     {
       "pos": [0.0,0.15,1.4375],
       "rot": [0.0,0.0,0.0],
       "minValue": 0.5,
       "maxValue": 1.25,
-      "types": ["engine_aircraft_radial"]
-    },
-    {
-      "pos": [0.0,-0.05,-1.635],
-      "rot": [0.0,0.0,0.0],
-      "dismountPos": [1.5,0.0,-1.5],
-      "isController": true,
-      "types": ["seat","seat_pilot"]
+      "types": [
+        "engine_aircraft_radial"
+      ],
+      "linkedParts": []
     }
   ],
-  "collisionGroups": [],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,-0.3125,-1.375],
+          "width": 1.0,
+          "height": 0.375
+        },
+        {
+          "pos": [0.0,-0.3125,-0.375],
+          "width": 1.0,
+          "height": 0.375
+        },
+        {
+          "pos": [0.0,0.2,0.5],
+          "width": 1.0,
+          "height": 1.0
+        },
+        {
+          "pos": [0.0,0.2,-0.25],
+          "width": 1.0,
+          "height": 1.0
+        },
+        {
+          "pos": [0.0,0.375,-2.5],
+          "width": 1.0,
+          "height": 0.75
+        },
+        {
+          "pos": [0.0,0.375,-3.75],
+          "width": 1.0,
+          "height": 0.75
+        },
+        {
+          "pos": [0.0,0.375,-5.0],
+          "width": 1.0,
+          "height": 0.75
+        },
+        {
+          "pos": [-1.0,0.5625,-5.5],
+          "width": 1.0,
+          "height": 0.125
+        },
+        {
+          "pos": [1.0,0.5625,-5.5],
+          "width": 1.0,
+          "height": 0.125
+        },
+        {
+          "pos": [0.0,1.125,-5.5],
+          "width": 0.25,
+          "height": 1.25
+        },
+        {
+          "pos": [-1.75,1.2625,-0.1],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [1.75,1.2625,-0.1],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [-3.25,1.2625,-0.1],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [3.25,1.2625,-0.1],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [-4.5,1.2625,-0.1],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [4.5,1.2625,-0.1],
+          "width": 1.25,
+          "height": 0.125
+        },
+        {
+          "pos": [1.25,-1.5,0.4],
+          "width": 0.1,
+          "height": 0.1
+        },
+        {
+          "pos": [-1.25,-1.5,0.4],
+          "width": 0.1,
+          "height": 0.1
+        }
+      ]
+    }
+  ],
   "connectionGroups": [],
-  "instruments": [],
-  "collision": [
+  "instruments": [
     {
-      "pos": [0.0,0.2,0.5],
-      "width": 1.0,
-      "height": 1.0
-    },
-    {
-      "pos": [0.0,0.2,-0.25],
-      "width": 1.0,
-      "height": 1.0
+      "pos": [0.28125,0.725,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 108,
+      "hudY": 39,
+      "hudScale": 0.425
     },
     {
-      "pos": [0.0,0.375,-2.5],
-      "width": 1.0,
-      "height": 0.75
+      "pos": [0.09375,0.725,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 168,
+      "hudY": 39,
+      "hudScale": 0.425
     },
     {
-      "pos": [0.0,0.375,-3.75],
-      "width": 1.0,
-      "height": 0.75
+      "pos": [-0.09375,0.725,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 227,
+      "hudY": 39,
+      "hudScale": 0.425
     },
     {
-      "pos": [0.0,0.375,-5.0],
-      "width": 1.0,
-      "height": 0.75
+      "pos": [-0.28125,0.725,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 288,
+      "hudY": 39,
+      "hudScale": 0.425
     },
     {
-      "pos": [-1.0,0.5625,-5.5],
-      "width": 1.0,
-      "height": 0.125
+      "pos": [0.28125,0.5375,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 108,
+      "hudY": 106,
+      "hudScale": 0.425
     },
     {
-      "pos": [1.0,0.5625,-5.5],
-      "width": 1.0,
-      "height": 0.125
+      "pos": [0.09375,0.5375,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 168,
+      "hudY": 106,
+      "hudScale": 0.425
     },
     {
-      "pos": [0.0,1.125,-5.5],
-      "width": 0.25,
-      "height": 1.25
+      "pos": [-0.09375,0.5375,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 227,
+      "hudY": 106,
+      "hudScale": 0.425
     },
     {
-      "pos": [-1.75,1.2625,-0.1],
-      "width": 1.25,
-      "height": 0.125
+      "pos": [-0.28125,0.5375,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 288,
+      "hudY": 106,
+      "hudScale": 0.425
     },
     {
-      "pos": [1.75,1.2625,-0.1],
-      "width": 1.25,
-      "height": 0.125
+      "pos": [0.0,0.35,-0.81875],
+      "rot": [0.0,0.0,0.0],
+      "scale": 0.025,
+      "hudX": 40,
+      "hudY": 106,
+      "hudScale": 0.425
     },
     {
-      "pos": [-3.25,1.2625,-0.1],
-      "width": 1.25,
-      "height": 0.125
+      "pos": [0.499375,0.525,-1.09375],
+      "rot": [0.0,90.0,0.0],
+      "scale": 0.025,
+      "hudX": 120,
+      "hudY": 84,
+      "hudScale": 0.425,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
     },
     {
-      "pos": [3.25,1.2625,-0.1],
-      "width": 1.25,
-      "height": 0.125
+      "pos": [-0.499375,0.525,-1.09375],
+      "rot": [0.0,-90.0,0.0],
+      "scale": 0.025,
+      "hudX": 260,
+      "hudY": 84,
+      "hudScale": 0.425,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
     },
     {
-      "pos": [-4.5,1.2625,-0.1],
-      "width": 1.25,
-      "height": 0.125
-    },
-    {
-      "pos": [4.5,1.2625,-0.1],
-      "width": 1.25,
-      "height": 0.125
-    },
-	{
-      "pos": [1.25,-1.5,0.4],
-      "width": 0.1,
-      "height": 0.1
-    },
-	{
-      "pos": [-1.25,-1.5,0.4],
-      "width": 0.1,
-      "height": 0.1
+      "pos": [-0.49937,0.525,-1.28125],
+      "rot": [0.0,-90.0,0.0],
+      "scale": 0.025,
+      "hudX": 320,
+      "hudY": 84,
+      "hudScale": 0.425,
+      "optionalPartNumber": 1,
+      "placeOnPanel": true
     }
   ],
   "definitions": [
     {
+      "subName": "_green",
+      "name": "Green PZL P11.c",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/green:2",
+          "tags:dyes/light_gray:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_brown",
+      "name": "Brown PZL P11.c",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/brown:2",
+          "tags:dyes/light_gray:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_tan",
+      "name": "Tan PZL P11.c",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/yellow:2",
+          "tags:dyes/white:1",
+          "minecraft:sand:10",
+          "tags:dyes/black:1"
+        ]
+      ]
+    },
+    {
       "subName": "",
       "partTones": [],
       "secondaryTextColors": [],
-      "name": "PZL P11.c",
-      "extraMaterials": []
+      "name": "Gray PZL P11.c",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/gray:2",
+          "tags:dyes/light_gray:1"
+        ]
+      ]
     }
   ],
-  "variableModifiers": [],
+  "constantValues": {},
+  "initialVariables": [],
+  "variableModifiers": [
+  //total area loss VMs
+  	{
+      "variable": "wingArea",
+      "animations": [
+      {
+          "animationType": "translation",
+          "variable": "!damage_totaled",
+          "axis": [1.0,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "elevatorArea",
+      "animations": [
+      {
+          "animationType": "translation",
+          "variable": "!damage_totaled",
+          "axis": [1.0,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "aileronArea",
+      "animations": [
+      {
+          "animationType": "translation",
+          "variable": "!damage_totaled",
+          "axis": [1.0,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "dragCoefficient",
+      "animations": [
+      {
+          "animationType": "translation",
+          "variable": "!damage_totaled",
+          "axis": [1.0,0.0,0.0]
+        }
+      ]
+    },
+    {
+      "variable": "rudderArea",
+      "animations": [
+      {
+          "animationType": "translation",
+          "variable": "!damage_totaled",
+          "axis": [1.0,0.0,0.0]
+        }
+      ]
+    }
+  ],
   "rendering": {
     "textObjects": [
+    {
+        "pos": [0.4,1.8325,7.640625],
+        "rot": [-30.0,180.0,0.0],
+        "scale": 0,
+        "variableName": "speed",
+        "variableFactor": "1",
+        "variableFormat": "(%f)",
+        "defaultText": "(%f)",
+        "color": "CCCCCC"
+      },
       {
         "pos": [0.56,0.4,-3.03],
         "rot": [0.0,99.0,0.0],
@@ -297,6 +507,56 @@
       }
     ],
     "animatedObjects": [
+      {
+        "objectName": "$throttle",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "throttle",
+            "centerPoint": [-0.453125,-0.09375,-1.21875],
+            "axis": [65.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$leftpedal",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.140625,-0.375,-0.75],
+            "axis": [-1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$rightpedal",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "rudder",
+            "centerPoint": [0.140625,-0.375,-0.75],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$Stick",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "elevator",
+            "centerPoint": [-0.03125,-0.40625,-0.96875],
+            "axis": [-1.0,0.0,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "aileron",
+            "centerPoint": [-0.03125,-0.40625,-0.96875],
+            "axis": [0.0,0.0,1.0]
+          }
+        ]
+      },
       {
         "objectName": "$Aileron_L",
         "animations": [
@@ -356,14 +616,3482 @@
     "lightObjects": [],
     "cameraObjects": [],
     "customVariables": [],
-    "initialVariables": [],
-    "constants": [],
-    "sounds": [],
-    "particles": []
+    "sounds": [
+       //stick(modern) push
+      {
+        "name": "mtsofficialpack:stickpush",
+        "soundVariations": [
+          "mtsofficialpack:stickpush",
+          "mtsofficialpack:stickpush1",
+          "mtsofficialpack:stickpush2",
+          "mtsofficialpack:stickpush3",
+          "mtsofficialpack:stickpush4",
+          "mtsofficialpack:stickpull"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!input_elevator"
+          }
+        ],
+        "isInterior": true
+      },
+      
+    
+      
+    //handbrakek
+      {
+        "name": "mtsofficialpack:planehandbrake",
+        "pos": [0.0,0.0,2.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "p_brake",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "isInterior": true
+      },
+	  {
+        "name": "mtsofficialpack:carhandbrakedown",
+        "pos": [0.0,0.0,2.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "p_brake",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "isInterior": true
+      },
+      
+    //brakeplane
+      {
+        "name": "mtsofficialpack:planebrakepush1",
+        "pos": [0.0,0.0,2.5],
+        "soundVariations": [
+        	"mtsofficialpack:pedalyawpush-01",
+        	"mtsofficialpack:pedalyawpush-02",
+        	"mtsofficialpack:pedalyawpush-03",
+        	"mtsofficialpack:pedalyawpush-04"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "brake",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "isInterior": true
+      },
+      {
+        "name": "mtsofficialpack:planebrakerelease1",
+        "pos": [0.0,0.0,2.5],
+         "soundVariations": [
+        	"mtsofficialpack:planebrakerelease1",
+        	"mtsofficialpack:planebrakerelease2",
+        	"mtsofficialpack:planebrakerelease3"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "brake",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "isInterior": true
+      },
+
+      //dive rattle
+      {
+        "name": "mtsofficialpack:inside_rattle_intensive",
+        "soundVariations": [
+          "mtsofficialpack:inside_rattle_intensive",
+          "mtsofficialpack:inside_rattle_intensive2"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 5,
+            "clampMax": 1000
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -100,
+            "clampMax": -7
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "vertical_speed",
+            "axis": [0.0,-0.1,0.0],
+            "offset": -1
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 1.00,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //totaled explosion inisde
+      {
+        "name": "mtsofficialpack:plane_totaled_inside",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ],
+        "isInterior":true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 9.0,
+        "middleDistanceVolume": 1.00,
+        "maxDistance": 25.0,
+        "maxDistanceVolume": 1.0
+      },
+      //totaled explosion outside
+      {
+        "name": "mtsofficialpack:plane_totaled0",
+        "soundVariations": [
+          "mtsofficialpack:plane_totaled0",
+          "mtsofficialpack:plane_totaled1",
+          "mtsofficialpack:plane_totaled2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ],
+        "isExterior":true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 150.0,
+        "maxDistanceVolume": 0.0
+      },
+      //totaled explosion outside distant
+      {
+        "name": "mtsofficialpack:plane_totaled_distant0",
+        "soundVariations": [
+          "mtsofficialpack:plane_totaled_distant0",
+          "mtsofficialpack:plane_totaled_distant1",
+          "mtsofficialpack:plane_totaled_distant2",
+          "mtsofficialpack:plane_totaled_distant3"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ],
+        "isExterior":true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 100.0,
+        "middleDistanceVolume": 1.0,
+        "maxDistance": 400.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //totaled fire air
+      {
+        "name": "mtsofficialpack:totaledfire",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 0,
+            "clampMax": 1000
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.1,0.0],
+            "offset": -0.7
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 10.0,
+        "middleDistanceVolume": 1.0,
+        "maxDistance": 64.0,
+        "maxDistanceVolume": 0.0
+      },
+      //totaled fire ground
+     {
+        "name": "mtsofficialpack:crashfire",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "forwardsDelay": 1400
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 3
+          }
+        ],
+        "volumeAnimations": [],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 24.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 64.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //pedalpush clack
+      {
+        "name": "mtsofficialpack:planebrakepush1",
+        "soundVariations": [
+        "mtsofficialpack:planebrakepush1",
+        	"mtsofficialpack:planebrakepush2",
+        	"mtsofficialpack:planebrakepush3",
+        	"mtsofficialpack:planebrakerelease1",
+        	"mtsofficialpack:planebrakerelease2",
+        	"mtsofficialpack:planebrakerelease3"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!input_rudder"
+          }
+        ],
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      
+      //medium wind
+      {
+        "name": "mtsofficialpack:wind_on_outside",
+        "pos": [0.0,-2.0,-1.5],
+        "soundVariations": [
+          "mtsofficialpack:wind_med_outisde",
+          "mtsofficialpack:wind_on_outside"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.06,0.0],
+            "offset": -0.1
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      //high wind
+      {
+        "name": "mtsofficialpack:wind_high_outside",
+        "soundVariations": [
+          "mtsofficialpack:wind_high_outside",
+          "mtsofficialpack:wind_high_inside"
+        ],
+        "pos": [0.0,-2.0,-1.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.07,0.0],
+            "offset": -0.8
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //rain roof inside
+      {
+        "name": "mtsofficialpack:rain_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 4.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 12.0,
+        "maxDistanceVolume": 0.0
+      },
+      //rainwind
+      {
+        "name": "mtsofficialpack:rain_outsidewind",
+        "pos": [0.0,0.0,3.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 200.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "axis": [0.0,0.06,0.0],
+            "offset": -0.1
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //watersplash
+    {
+        "name": "mtsofficialpack:debrissettle_water1",
+        "soundVariations": [
+          "mtsofficialpack:waterimpact0",
+          "mtsofficialpack:waterimpact1",
+          "mtsofficialpack:waterimpact2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },//base
+    {
+        "name": "mtsofficialpack:waterimpact_add",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -10.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },//add
+    {
+        "name": "mtsofficialpack:debrissettle_water1",
+        "soundVariations": [
+          "mtsofficialpack:debrissettle_water0",
+          "mtsofficialpack:debrissettle_water1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },//settle
+
+      //crashsounds
+      {
+        "name": "mtsofficialpack:explosion_distant",
+        "soundVariations": [
+          "mtsofficialpack:explosion_distant"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -10.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 5
+          }
+        ],
+        "looping": false,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 1.0,
+        "maxDistance": 350.0,
+        "maxDistanceVolume": 0.0
+      }, //distant
+      {
+        "name": "mtsofficialpack:planecrash0",
+        "soundVariations": [
+          "mtsofficialpack:planecrash0",
+          "mtsofficialpack:planecrash1",
+          "mtsofficialpack:planecrash2",
+          "mtsofficialpack:planecrash3"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -10,
+            "clampMax": 1000.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": -1000.5,
+            "clampMax": -0.65
+          }
+        ],
+        "looping": false,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      }, //close acceleration
+      {
+        "name": "mtsofficialpack:planecrash0",
+        "soundVariations": [
+          "mtsofficialpack:planecrash0",
+          "mtsofficialpack:planecrash1",
+          "mtsofficialpack:planecrash2",
+          "mtsofficialpack:planecrash3"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -10.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 5
+          }
+        ],
+        "looping": false,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      }  //close
+    ],
+    "particles": [
+    //close ground dust
+   		//SAND
+   	  	 {
+        "type": "generic",
+        "distance": 2,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 60,
+        "movementDuration": 20,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 10.0,
+        "toScale": 27.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "getBlockPropertiesFromGround": true,
+        "useBlockColor": true,
+        "pos": [0.0,0.5,0.0],
+        "spreadRandomness": [8.0,0.5,8.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.95,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 16.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 25.0
+          }
+        ]
+      },
+   	  	 {
+        "type": "generic",
+        "distance": 3,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 60,
+        "movementDuration": 20,
+        "transparency": 0.1,
+        "toTransparency": 0.001,
+        "scale": 8.0,
+        "toScale": 25.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "getBlockPropertiesFromGround": true,
+        "useBlockColor": true,
+        "randomColor": true,
+        "pos": [0.0,0.5,0.0],
+        "spreadRandomness": [6.0,0.5,6.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.95,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 16.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 25.0,
+            "clampMax": 40.0
+          }
+        ]
+      },
+      //SANDREAL
+   	  	 {
+        "type": "generic",
+        "distance": 2,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 60,
+        "movementDuration": 20,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 10.0,
+        "toScale": 27.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "pos": [0.0,0.5,0.0],
+        "spreadRandomness": [8.0,0.5,8.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.95,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 16.0,
+            "clampMax": 999.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 15.0
+          }
+        ]
+      },
+   	  	 {
+        "type": "generic",
+        "distance": 3,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 60,
+        "movementDuration": 20,
+        "transparency": 0.1,
+        "toTransparency": 0.001,
+        "scale": 8.0,
+        "toScale": 25.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "pos": [0.0,0.5,0.0],
+        "spreadRandomness": [6.0,0.5,6.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.95,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 16.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 25.0,
+            "clampMax": 40.0
+          }
+        ]
+      },
+      
+      	//WATER - small
+      	 {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "distance": 3,
+        "duration": 60,
+        "transparency": 0.5,
+        "toTransparency": 0.0001,
+        "scale": 8.2,
+        "toScale": 25,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/waterfoam0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/waterfoam1_translucent.png"
+        ],
+        "randomTexture": true,
+         "pos": [0.0,0.001,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "spreadRandomness": [1.0,0.0,1.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [10.0,0.0,10.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 15.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 10.0
+          }
+        ]
+      },
+         {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "distance": 4,
+        "duration": 50,
+        "transparency": 0.3,
+        "fadeTransparencyTime": 30,
+        "scale": 13.0,
+        "toScale": 25,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/waterfoam0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/waterfoam1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.1,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0001,0.0],
+        "spreadRandomness": [0.4,0.0,0.4],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [5.0,0.0,5.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.999,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 15.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 10.0,
+            "clampMax": 20.0
+          }
+        ]
+      },
+      	 //mist
+      	 {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 20,
+        "movementDuration": 10,
+        "transparency": 0.05,
+        "toTransparency": 0.001,
+        "scale": 5.0,
+        "toScale": 15.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0.0,0.7,0.0],
+        "spreadRandomness": [8.0,0.5,8.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+        {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 10.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 10.0
+          }
+        ]
+      },
+      	 {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 20,
+        "movementDuration": 15,
+        "transparency": 0.10,
+        "toTransparency": 0.001,
+        "scale": 5.0,
+        "toScale": 15.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0.0,0.1,0.0],
+        "spreadRandomness": [2.0,0.5,8.0],
+        "initialVelocity": [0.0,0.5,-10.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 3.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      //watertrail
+      {
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "distance": 2,
+        "quantity": 1,
+        "duration": 100,
+        "transparency": 0.5,
+        "fadeTransparencyTime": 50,
+        "scale": 7.2,
+        "toScale": 20,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/waterfoam0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/waterfoam1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.01,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0001,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [1.0,0.0,1.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-1,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 2
+          }
+        ]
+      },
+      
+      //sandtrail-autochromatic (small)
+        {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "distance": 10,
+        "duration": 250,
+        "movementDuration": 205,
+        "transparency": 0.05,
+        "toTransparency": 0.3,
+        "fadeTransparencyTime": 200,
+        "scale": 20.0,
+        "toScale": 55.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "getBlockPropertiesFromGround": true,
+        "useBlockColor": true,
+        "pos": [0.0,1.0,0.0],
+        "spreadRandomness": [1.0,0.04,0.7],
+        "initialVelocity": [0.0,0.05,-0.8],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.95,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 15.5,
+            "clampMax": 999
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 70.0
+          }
+        ]
+      },
+    //sandtrail (small)
+        {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "distance": 10,
+        "duration": 250,
+        "movementDuration": 205,
+        "transparency": 0.05,
+        "toTransparency": 0.3,
+        "fadeTransparencyTime": 200,
+        "scale": 20.0,
+        "toScale": 55.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "pos": [0.0,1.0,0.0],
+        "spreadRandomness": [1.0,0.04,0.7],
+        "initialVelocity": [0.0,0.05,-0.8],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.95,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 15.5,
+            "clampMax": 999
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 50.0
+          }
+        ]
+      },
+      
+      //watermovesplashes small
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 15,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 0.8,
+        "toScale": 2.0,
+        "hitboxSize": 0.2,
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "textureList": [
+          "mtsofficialpack:textures/bullets/splash_0.png",
+          "mtsofficialpack:textures/bullets/splash_1.png",
+          "mtsofficialpack:textures/bullets/splash_2.png",
+          "mtsofficialpack:textures/bullets/splash_3.png",
+          "mtsofficialpack:textures/bullets/splash_4.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0.3,0.0,1.5],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "initialVelocity": [2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1,
+            "clampMax": 5.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 15,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 0.8,
+        "toScale": 2.0,
+        "hitboxSize": 0.2,
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "textureList": [
+          "mtsofficialpack:textures/bullets/splash_0.png",
+          "mtsofficialpack:textures/bullets/splash_1.png",
+          "mtsofficialpack:textures/bullets/splash_2.png",
+          "mtsofficialpack:textures/bullets/splash_3.png",
+          "mtsofficialpack:textures/bullets/splash_4.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [-0.3,0.0,1.5],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "initialVelocity": [-2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1,
+            "clampMax": 5.0
+          }
+        ]
+      },
+      
+    //watermovesplashes med
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 15,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 2.0,
+        "toScale": 4.0,
+        "hitboxSize": 0.2,
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0.3,0.0,1.5],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "initialVelocity": [2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 5,
+            "clampMax": 100.5
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 15,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 2.0,
+        "toScale": 4.0,
+        "hitboxSize": 0.2,
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [-0.3,0.0,1.5],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "initialVelocity": [-2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 5,
+            "clampMax": 100.5
+          }
+        ]
+      },
+      
+    //watermovesplashes big
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 15,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 3.0,
+        "toScale": 6.0,
+        "hitboxSize": 0.2,
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0.3,0.0,1.5],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "initialVelocity": [2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 15,
+            "clampMax": 100.5
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 15,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 3.0,
+        "toScale": 6.0,
+        "hitboxSize": 0.2,
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [-0.3,0.0,1.5],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "initialVelocity": [-2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 15,
+            "clampMax": 100.5
+          }
+        ]
+      },
+      
+    //EXPERIMENTAL crash particle system
+        //watercrash (small)
+    	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 6,
+        "duration": 30,
+        "movementDuration": 25,
+        "transparency": 1.0,
+        "toTransparency": 0.0,
+        "fadeTransparencyTime": 15,
+        "scale": 5.8,
+        "toScale": 10.5,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,1.1,0.0],
+        "spreadRandomness": [2.4,8.0,2.4],
+        "initialVelocity": [0.0,8.5,0.0],
+        "movementVelocity": [0.0,-0.025,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          },
+          
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },//throwup
+      	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 5,
+        "duration": 50,
+        "movementDuration": 35,
+        "transparency": 1.0,
+        "toTransparency": 0.0,
+        "fadeTransparencyTime": 25,
+        "scale": 4.8,
+        "toScale": 10.5,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,1.1,0.0],
+        "spreadRandomness": [1.8,11.0,1.8],
+        "initialVelocity": [0.0,11.5,0.0],
+        "movementVelocity": [0.0,-0.025,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -14.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },//throwup high
+      	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 7,
+        "duration": 50,
+        "movementDuration": 10,
+        "transparency": 0.5,
+        "toTransparency": 0.001,
+        "scale": 5.0,
+        "toScale": 10.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0.0,2.1,0.0],
+        "spreadRandomness": [10.0,0.5,10.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          }
+        ]
+      },//mist
+      	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 10,
+        "duration": 80,
+        "movementDuration": 15,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 9.0,
+        "toScale": 15.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "randomColor": true,
+        "color": "ffffff",
+        "pos": [0.0,3.0,0.0],
+        "spreadRandomness": [12.0,0.5,12.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -14.5
+          }
+        ]
+      },//mist high
+        {
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 2,
+        "duration": 100,
+        "transparency": 0.8,
+        "toTransparency": 0.001,
+        "scale": 12.2,
+        "toScale": 30,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/waterfoam0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/waterfoam1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.0,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -999.0,
+            "clampMax": -2.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          }
+        ]
+      },//foam
+    	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 80,
+        "transparency": 0.6,
+        "toTransparency": 0.001,
+        "scale": 5.2,
+        "toScale": 40,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/ripple0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/ripple1_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/ripple2_translucent.png",
+          "mtsofficialpack:textures/bullets/shockwave_translucent.png"
+        ],
+        "randomTexture": true,
+         "pos": [0.0,-0.05,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -999.0,
+            "clampMax": -2.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          }
+        ]
+      },//ripple
+      
+    //light crash
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 6,
+        "duration": 315,
+        "fadeTransparencyTime": 100,
+        "scale": 1.2,
+        "fadeScaleTime": 100,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap3.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap4.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap5.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap6.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap7.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap8.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap9.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap10.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/metalscrap1.obj",
+        "rotationRandomness": [60.0,60.0,60.0],
+        "rotationVelocity": [20.0,20.0,20.0],
+        "pos": [0.0,2.5,0.0],
+        "initialVelocity": [0.0,2.0,0.0],
+        "spreadRandomness": [3.0,1.0,3.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [20.0,20.0,20.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -5.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2,
+            "clampMax": 3
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 10,
+        "duration": 120,
+        "movementDuration": 25,
+        "transparency": 0.1,
+        "toTransparency": 0.001,
+        "scale": 6.0,
+        "toScale": 15.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "randomColor": true,
+        "colorList": [
+          "C4C0BB",
+          "B9B4AD",
+          "D2D0CD",
+          "ADA79F",
+          "A39A8D",
+          "99958F",
+          "DDDBD8"
+        ],
+        "pos": [0.0,-1.0,0.0],
+        "spreadRandomness": [8.0,0.5,8.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -5.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2,
+            "clampMax": 3
+          }
+        ]
+      },
+      
+    //moderate crash
+      	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 5,
+        "duration": 40,
+        "scale": 7.0,
+        "toScale": 10.0,
+        "fadeTransparencyTime": 25,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/debris0.png",
+          "mtsofficialpack:textures/bullets/debris1.png",
+          "mtsofficialpack:textures/bullets/debris2.png",
+          "mtsofficialpack:textures/bullets/debris3.png",
+          "mtsofficialpack:textures/bullets/debris4.png"
+        ],
+        "randomTexture": true,
+        "color": "7E7E7E",
+        "pos": [0.0,-1.0,0.0],
+        "spreadRandomness": [3.0,4.0,3.0],
+        "initialVelocity": [0.0,5.0,0.0],
+        "movementVelocity": [0.0,-0.07,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2,
+            "clampMax": 3
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 10,
+        "duration": 120,
+        "movementDuration": 15,
+        "transparency": 0.45,
+        "toTransparency": 0.001,
+        "scale": 6.0,
+        "toScale": 15.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "randomColor": true,
+        "colorList": [
+          "C4C0BB",
+          "B9B4AD",
+          "D2D0CD",
+          "ADA79F",
+          "A39A8D",
+          "99958F",
+          "DDDBD8"
+        ],
+        "pos": [0.0,-1.0,0.0],
+        "spreadRandomness": [12.0,0.5,12.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2,
+            "clampMax": 3
+          }
+        ]
+      },
+      //scraps
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 16,
+        "duration": 315,
+        "fadeTransparencyTime": 100,
+        "scale": 1.2,
+        "fadeScaleTime": 100,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap3.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap4.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap5.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap6.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap7.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap8.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap9.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap10.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/metalscrap1.obj",
+        "rotationRandomness": [60.0,60.0,60.0],
+        "rotationVelocity": [20.0,20.0,20.0],
+        "pos": [0.0,2.5,0.0],
+        "initialVelocity": [0.0,2.0,0.0],
+        "spreadRandomness": [3.0,1.0,3.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [20.0,20.0,20.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2,
+            "clampMax": 3
+          }
+        ]
+      },
+      //groundglass
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 315,
+        "fadeTransparencyTime": 100,
+        "scale": 1.0,
+        "hitboxSize": 0.1,
+        "texture": "mtsofficialpack:textures/bullets/3dscrap/groundglass.png",
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/groundglass.obj",
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [0.0,60.0,0.0],
+        "rotationVelocity": [0.0,20.0,0.0],
+        "pos": [0.0,0.0,2.0],
+        "initialVelocity": [0.0,2.0,0.0],
+        "spreadRandomness": [2.0,1.0,2.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [20.0,20.0,20.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2,
+            "clampMax": 3
+          }
+        ]
+      },
+      //groundscrap
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 2,
+        "duration": 315,
+        "fadeTransparencyTime": 100,
+        "scale": 1.0,
+        "hitboxSize": 0.23,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/groundscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/groundscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/groundscrap3.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/groundglass.obj",
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [0.0,60.0,0.0],
+        "rotationVelocity": [0.0,20.0,0.0],
+        "pos": [0.0,0.0,2.0],
+        "initialVelocity": [0.0,2.0,0.0],
+        "spreadRandomness": [2.0,1.0,2.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [20.0,20.0,20.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 2,
+            "clampMax": 3
+          }
+        ]
+      },
+      
+    //totaled dirt crash
+     	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 12,
+        "duration": 100,
+        "scale": 12.0,
+        "toScale": 19.0,
+        "fadeTransparencyTime": 55,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/debris0.png",
+          "mtsofficialpack:textures/bullets/debris1.png",
+          "mtsofficialpack:textures/bullets/debris2.png",
+          "mtsofficialpack:textures/bullets/debris3.png",
+          "mtsofficialpack:textures/bullets/debris4.png"
+        ],
+        "randomTexture": true,
+        "color": "7E7E7E",
+        "pos": [0.0,0.0,0.0],
+        "spreadRandomness": [3.0,5.0,3.0],
+        "initialVelocity": [0.0,10.0,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": -1000.5,
+            "clampMax": -0.65
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+    	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 8,
+        "duration": 470,
+        "movementDuration": 20,
+        "transparency": 0.4,
+        "toTransparency": -0.001,
+        "scale": 14.0,
+        "toScale": 18.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "4E4C49",
+          "3A3733",
+          "43413D",
+          "4D4942",
+          "676259",
+          "494641",
+          "53504B",
+          "363432",
+          "2e2a28",
+          "7a7772",
+          "58544d"
+        ],
+        "randomColor": true,
+        "pos": [0.0,-1.0,0.0],
+        "spreadRandomness": [1.0,9.0,1.0],
+        "initialVelocity": [0.0,10.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": -1000.5,
+            "clampMax": -0.65
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 20,
+        "duration": 420,
+        "movementDuration": 20,
+        "transparency": 0.6,
+        "toTransparency": 0.001,
+        "scale": 10.0,
+        "toScale": 25.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "4E4C49",
+          "3A3733",
+          "43413D",
+          "4D4942",
+          "676259",
+          "494641",
+          "53504B",
+          "363432",
+          "2e2a28",
+          "7a7772",
+          "58544d"
+        ],
+        "randomColor": true,
+        "pos": [0.0,-1.0,0.0],
+        "spreadRandomness": [15.0,0.0,15.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": -1000.5,
+            "clampMax": -0.65
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 14,
+        "duration": 520,
+        "transparency": 1.0,
+        "scale": 6.0,
+        "toScale": 0.01,
+        "hitboxSize": 0.8,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [3,3,3,3,3,3,3],
+        "randomTexture": true,
+        "pos": [0,2,0],
+        "spreadRandomness": [5.0,3.0,5.0],
+        "initialVelocity": [0.0,5.0,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [20.0,20,20.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": -1000.5,
+            "clampMax": -0.35
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 6,
+        "duration": 420,
+        "fadeTransparencyTime": 100,
+        "scale": 1.7,
+        "hitboxSize": 0.23,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/groundscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/groundscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/groundscrap3.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/groundglass.obj",
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [0.0,60.0,0.0],
+        "rotationVelocity": [0.0,20.0,0.0],
+        "pos": [0.0,1.0,0.0],
+        "initialVelocity": [0.0,2.0,0.0],
+        "spreadRandomness": [5.0,1.0,5.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [20.0,20.0,20.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": -1000.5,
+            "clampMax": -0.35
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 20,
+        "duration": 420,
+        "fadeTransparencyTime": 100,
+        "scale": 1.8,
+        "fadeScaleTime": 100,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap3.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap4.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap5.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap6.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap7.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap8.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap9.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap10.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/metalscrap1.obj",
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [60.0,60.0,60.0],
+        "rotationVelocity": [20.0,20.0,20.0],
+        "pos": [0.0,2.0,0.0],
+        "initialVelocity": [0.0,2.0,0.0],
+        "spreadRandomness": [3.0,1.0,5.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [20.0,20.0,20.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": -1000.5,
+            "clampMax": -0.35
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0,
+            "clampMax": 5
+          }
+        ]
+      },
+    //smoke plume
+    	{
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 555,
+        "transparency": 0.08,
+        "toTransparency": 1.0E-4,
+        "scale": 7.0,
+        "toScale": 100.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [13,14,15,12,14,13,16,11,13,15,19,13],
+        "randomTexture": true,
+        "color": "332E2B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,2.0,-0.5],
+        "spreadRandomness": [0.43,0.43,0.43],
+        "movementVelocity": [0.0,-0.0001,-0.0005],
+        "terminalVelocity": [0.0,5.0,4],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "forwardsDelay": 1400
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 3
+          },
+          {
+            "animationType": "visibility",
+            "variable": "0_6_14_cycle",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 555,
+        "transparency": 0.08,
+        "toTransparency": 1.0E-4,
+        "scale": 8.0,
+        "toScale": 70.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [13,14,15,12,14,13,16,11,13,15,19,13],
+        "randomTexture": true,
+        "color": "332E2B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "initialVelocity": [0.0,0.0,-0.0],
+        "spreadRandomness": [0.43,0.43,0.43],
+        "movementVelocity": [0.0,0.0001,-0.0001],
+        "terminalVelocity": [0.0,5.0,4],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "forwardsDelay": 1400
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 3
+          },
+          {
+            "animationType": "visibility",
+            "variable": "0_3_30_cycle",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "spawnEveryTick": true,
+        "isBright": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 44,
+        "transparency": 1.0,
+        "scale": 5.0,
+        "toScale": 0.01,
+        "hitboxSize": 0.8,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [3,3,3,3,3,3,3],
+        "randomTexture": true,
+        "pos": [0,0,0],
+        "spreadRandomness": [0.7,1.0,0.7],
+        "initialVelocity": [0.0,2.0,0.0],
+        "terminalVelocity": [20.0,20,20.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "forwardsDelay": 1400
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1,
+            "clampMax": 3
+          },
+          {
+            "animationType": "visibility",
+            "variable": "0_2_8_cycle",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ]
+      },
+      
+      //scraptrails main
+      	{
+        "type": "generic",
+        "spawnEveryTick": true,
+        "stopsOnGround": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 50,
+        "fadeTransparencyTime": 40,
+        "scale": 1.0,
+        "fadeScaleTime": 40,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap3.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap4.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap5.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap6.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap7.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap8.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap9.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap10.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/metalscrap1.obj",
+        "pos": [0,0,0],
+        "initialVelocity": [0,-0.03,2.0],
+        "spreadRandomness": [3.0,0.5,2.0],
+        "relativeInheritedVelocityFactor": [0.8,0.8,0.8],
+        "movementVelocity": [0.0,-0.018,0.0],
+        "terminalVelocity": [30,30,30],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 4.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "random",
+            "clampMin": 0.0,
+            "clampMax": 0.022
+          }
+        ],
+        "subParticles": [
+          {
+            "particle": {
+              "type": "generic",
+              "spawnEveryTick": true,
+              "spawningOrientation": "entity",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 100,
+              "transparency": 0.1,
+              "toTransparency": 0.003,
+              "scale": 1.0,
+              "toScale": 6.0,
+               "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "randomTexture": true,
+        		"color": "292521",
+              "pos": [0.0,0.0,0.0],
+              "initialVelocity": [0.0,0.0,0.0],
+              "movementVelocity": [0.0,0.0,0.0],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 100
+          },
+          {
+            "particle": {
+              "type": "generic",
+              "isBright": true,
+              "spawnEveryTick": true,
+              "spawningOrientation": "entity",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 10,
+              "transparency": 1.0,
+              "scale": 1.0,
+              "toScale": 0.001,
+               "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "randomTexture": true,
+        		"ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureDelays": [4,4,4,4,4,4,4],
+              "pos": [0.0,0.0,0.0],
+              "initialVelocity": [0.0,0.0,0.0],
+              "movementVelocity": [0.0,0.0,0.0],
+              "spreadRandomness": [0.2,0.0,0.2],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 90
+          }
+        ]
+      },
+    
+    //scraptrails impact
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 3,
+        "duration": 100,
+        "fadeTransparencyTime": 40,
+        "scale": 1.0,
+        "fadeScaleTime": 40,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap3.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap4.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap5.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap6.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap7.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap8.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap9.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap10.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/metalscrap1.obj",
+        "pos": [0,0,0],
+        "initialVelocity": [0,7.0,0.0],
+        "spreadRandomness": [5.0,5.5,5.0],
+        "movementVelocity": [0.0,-0.018,0.0],
+        "terminalVelocity": [30,30,30],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -10.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 3,
+            "clampMax": 4
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "subParticles": [
+          {
+            "particle": {
+              "type": "generic",
+              "spawnEveryTick": true,
+              "spawningOrientation": "entity",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 100,
+              "transparency": 0.1,
+              "toTransparency": 0.003,
+              "scale": 1.0,
+              "toScale": 6.0,
+               "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "randomTexture": true,
+        		"color": "292521",
+              "pos": [0.0,0.0,0.0],
+              "initialVelocity": [0.0,0.0,0.0],
+              "movementVelocity": [0.0,0.0,0.0],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 100
+          },
+          {
+            "particle": {
+              "type": "generic",
+              "isBright": true,
+              "spawnEveryTick": true,
+              "spawningOrientation": "entity",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 10,
+              "transparency": 1.0,
+              "scale": 1.0,
+              "toScale": 0.001,
+               "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        		"ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureDelays": [4,4,4,4,4,4,4],
+              "pos": [0.0,0.0,0.0],
+              "initialVelocity": [0.0,0.0,0.0],
+              "movementVelocity": [0.0,0.0,0.0],
+              "spreadRandomness": [0.2,0.0,0.2],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 90
+          }
+        ]
+      },
+      //scraptrails burst
+      	{
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 5,
+        "duration": 100,
+        "fadeTransparencyTime": 40,
+        "scale": 1.0,
+        "fadeScaleTime": 40,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap1.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap2.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap3.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap4.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap5.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap6.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap7.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap8.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap9.png",
+          "mtsofficialpack:textures/bullets/3dscrap/metalscrap10.png"
+        ],
+        "randomTexture": true,
+        "model": "mtsofficialpack:objmodels/bullets/3dscrap/metalscrap1.obj",
+        "pos": [0,0,0],
+        "initialVelocity": [0,-0.03,5.0],
+        "spreadRandomness": [3.0,3.5,5.0],
+        "relativeInheritedVelocityFactor": [0.8,0.8,0.8],
+        "movementVelocity": [0.0,-0.018,0.0],
+        "terminalVelocity": [30,30,30],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 4.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "subParticles": [
+          {
+            "particle": {
+              "type": "generic",
+              "spawnEveryTick": true,
+              "spawningOrientation": "entity",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 100,
+              "transparency": 0.1,
+              "toTransparency": 0.003,
+              "scale": 1.0,
+              "toScale": 6.0,
+               "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "randomTexture": true,
+        		"color": "292521",
+              "pos": [0.0,0.0,0.0],
+              "initialVelocity": [0.0,0.0,0.0],
+              "movementVelocity": [0.0,0.0,0.0],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 100
+          },
+          {
+            "particle": {
+              "type": "generic",
+              "isBright": true,
+              "spawnEveryTick": true,
+              "spawningOrientation": "entity",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 10,
+              "transparency": 1.0,
+              "scale": 1.0,
+              "toScale": 0.001,
+               "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        		"ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureDelays": [4,4,4,4,4,4,4],
+              "pos": [0.0,0.0,0.0],
+              "initialVelocity": [0.0,0.0,0.0],
+              "movementVelocity": [0.0,0.0,0.0],
+              "spreadRandomness": [0.2,0.0,0.2],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 90
+          }
+        ]
+      },
+      
+      //exhaust
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 88,
+        "transparency": 0.04,
+        "toTransparency": 0.000001,
+        "movementDuration": 64,
+        "scale": 1.0,
+        "toScale": 16.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "color": "3f3b39",
+        "pos": [-0.0156,-0.75,0.6406],
+         "spreadRandomness": [0.5,0.5,2.0],
+        "initialVelocity": [0.0,-3.0,-3.5],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 5,
+        "duration": 4,
+        "transparency": 1.0,
+        "scale": 1.2,
+        "toScale": 2.0000001E-4,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/bang0.png",
+          "mtsofficialpack:textures/bullets/bang0d.png",
+          "mtsofficialpack:textures/bullets/bang0b.png",
+          "mtsofficialpack:textures/bullets/bang0a.png",
+          "mtsofficialpack:textures/bullets/bang0c.png"
+        ],
+        "randomTexture": true,
+        "pos": [-0.0156,-0.75,0.6406],
+        "spreadRandomness": [6.0,6.0,8.0],
+        "initialVelocity": [0.0,-9.0,-10.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 5,
+        "transparency": 0.5,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.05,
+        "toScale": 3.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "3f3b39",
+        "pos": [-0.0156,-0.75,0.6406],
+         "spreadRandomness": [0.8,0.8,2.0],
+        "initialVelocity": [0.0,-5.0,-7.5],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      //backfire
+      {
+        "type": "smoke",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 5,
+        "scale": 0.5,
+        "hitboxSize": 0.2,
+        "color": "000000",
+        "pos": [-0.0156,-0.75,0.6406],
+        "initialVelocity": [0.0,-2.0,-2.7],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
   },
   "general": {
     "description": "The PZL P11.c is a born and bred fighter aircraft. Its shoulder wing monoplane configuration provides the pilot with exceptional visibility of the sky and ground, and makes the PZL P11.c much faster than it's biplane fighter counterparts.",
-    "materials": ["oredict:ingotIron:12","oredict:plankWood:2","minecraft:glass_pane:0:2","oredict:string:10","oredict:dyeGreen:4","oredict:dyeLightGray:2","oredict:dyeLightBlue:1"],
-    "repairMaterials": []
+    "health": 150,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:38",
+        "mts:mtsofficialpack.screws:32",
+        "minecraft:lever:3",
+        "minecraft:tripwire_hook:2",
+        "minecraft:string:10",
+        "mts:mtsofficialpack.copperwire:12",
+        "minecraft:glass_pane:3"
+      ]
+    ],
+    "repairMaterialLists": [
+      []
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
   }
 }

@@ -1,8 +1,31 @@
 {
-    "general": {
-        "name" : "Yield",
-        "type" : "sign",
-        "modelName" : "sign",
-        "materials" : ["oredict:ingotIron:1"]
-	}
+  "pole": {
+    "type": "sign"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "modelName": "sign",
+      "name": "Yield",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Yield",
+    "stackSize": 32,
+    "description": "No",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

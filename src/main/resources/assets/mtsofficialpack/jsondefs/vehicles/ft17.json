@@ -1,12 +1,13 @@
 {
   "motorized": {
-    "isFrontWheelDrive": true,
-    "isRearWheelDrive": true,
+    "hasSkidSteer": true,
     "emptyMass": 6500,
     "fuelCapacity": 15000,
     "axleRatio": 3.55,
     "brakingFactor": 1.0,
-    "dragCoefficient": 0.6
+    "dragCoefficient": 0.6,
+    "litVariable": "running_light",
+    "panel": "mts:default_car"
   },
   "parts": [
     {
@@ -15,8 +16,28 @@
       "minValue": 0.3,
       "maxValue": 0.7,
       "extraCollisionBoxOffset": 3.75,
-      "types": ["ground_tread"],
-      "treadPath": ["$roller_00","$roller_01","$roller_02","$roller_03","$roller_04","$roller_05","$roller_06","$roller_07","$roller_08","$roller_09","$roller_10","$roller_11","$roller_12","$roller_13","$roller_14","$roller_15","$roller_16"]
+      "types": [
+        "ground_tread"
+      ],
+      "treadPath": [
+        "$L_roller_00",
+        "$L_roller_01",
+        "$L_roller_02",
+        "$L_roller_03",
+        "$L_roller_04",
+        "$L_roller_05",
+        "$L_roller_06",
+        "$L_roller_07",
+        "$L_roller_08",
+        "$L_roller_09",
+        "$L_roller_10",
+        "$L_roller_11",
+        "$L_roller_12",
+        "$L_roller_13",
+        "$L_roller_14",
+        "$L_roller_15",
+        "$L_roller_16"
+      ]
     },
     {
       "pos": [-0.850915,-0.2,-1.0],
@@ -24,20 +45,51 @@
       "minValue": 0.3,
       "maxValue": 0.7,
       "extraCollisionBoxOffset": 3.75,
-      "types": ["ground_tread"],
-      "treadPath": ["$roller_00","$roller_01","$roller_02","$roller_03","$roller_04","$roller_05","$roller_06","$roller_07","$roller_08","$roller_09","$roller_10","$roller_11","$roller_12","$roller_13","$roller_14","$roller_15","$roller_16"]
+      "types": [
+        "ground_tread"
+      ],
+      "treadPath": [
+        "$R_roller_00",
+        "$R_roller_01",
+        "$R_roller_02",
+        "$R_roller_03",
+        "$R_roller_04",
+        "$R_roller_05",
+        "$R_roller_06",
+        "$R_roller_07",
+        "$R_roller_08",
+        "$R_roller_09",
+        "$R_roller_10",
+        "$R_roller_11",
+        "$R_roller_12",
+        "$R_roller_13",
+        "$R_roller_14",
+        "$R_roller_15",
+        "$R_roller_16"
+      ]
     },
     {
       "pos": [0.0,1.54636,1.10717],
-      "minValue": 7.0,
-      "maxValue": 40.0,
-      "types": ["gun_turret"]
+      "minValue": 8.0,
+      "maxValue": 37.0,
+      "types": [
+        "gun_turret_FT"
+      ],
+      "linkedParts": [4]
     },
     {
-      "pos": [0.0,0.25,1.5],
+      "pos": [0.0,0.29,1.5],
+      "partScale": [1.0,0.9,1.0],
+      "dismountPos": [0.0,1.0,2.5],
       "isController": true,
-      "types": ["seat"],
-      "linkedVariables": ["mainHatch"],
+      "types": [
+        "seat"
+      ],
+      "interactableVariables": [
+        [
+          "door_mainHatch"
+        ]
+      ],
       "animations": [
         {
           "animationType": "translation",
@@ -58,574 +110,805 @@
       ]
     },
     {
-      "pos": [0.0,0.25,0.5],
+      "pos": [0.0,-0.125,0.5],
       "maxValue": 2.0,
-      "types": ["interactable_crate"]
+      "types": [
+        "interactable_crate"
+      ],
+      "linkedParts": [3]
     },
     {
       "pos": [0.0,0.3,-0.838408],
       "maxValue": 1.25,
-      "types": ["engine_car"]
+      "intakeOffset": 0.75,
+      "types": [
+        "engine_car"
+      ],
+      "linkedParts": [1,2]
+    },
+    {
+      "pos": [0,1.078125,1.9375],
+      "rot": [-40,0,0],
+      "types": [
+        "generic_sale_sign"
+      ]
     }
   ],
   "collisionGroups": [
     {
       "isInterior": true,
+      "applyAfter": "$right_door",
       "collisions": [
         {
-          "pos": [0.0,0.75,2.2],
-          "width": 1.0,
-          "height": 0.25,
-          "variableName": "mainHatch",
+          "pos": [-0.17434,0.66455,2.61463],
+          "width": 0.322,
+          "height": 0.13668,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.21761,0.72269,2.3083],
+          "width": 0.40645,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.21761,0.86589,2.03393],
+          "width": 0.40645,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
           "variableType": "toggle"
         }
       ],
-      "animations": [
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "$left_door",
+      "collisions": [
         {
-          "animationType": "translation",
-          "variable": "mainHatch",
-          "axis": [0.0,0.75,0.5499999999999998]
+          "pos": [0.16903,0.66455,2.61463],
+          "width": 0.322,
+          "height": 0.13668,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.20398,0.72269,2.3083],
+          "width": 0.40645,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.21131,0.86589,2.03393],
+          "width": 0.40645,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "applyAfter": "$center_door",
+      "collisions": [
+        {
+          "pos": [0.00142,0.97562,1.86401],
+          "width": 0.12434,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.12993,0.97562,1.86401],
+          "width": 0.12434,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.12827,0.97562,1.86401],
+          "width": 0.12434,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.25956,1.00912,1.86401],
+          "width": 0.12434,
+          "height": 0.23952,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.26449,1.00912,1.86401],
+          "width": 0.12434,
+          "height": 0.23952,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.25956,1.20122,1.75951],
+          "width": 0.12434,
+          "height": 0.18893,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.26449,1.20122,1.75951],
+          "width": 0.12434,
+          "height": 0.18893,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.00142,1.2198,1.76118],
+          "width": 0.12434,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.12993,1.2198,1.76118],
+          "width": 0.12434,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.12827,1.2198,1.76118],
+          "width": 0.12434,
+          "height": 0.17253,
+          "armorThickness": 22.0,
+          "variableName": "door_mainHatch",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+	    {
+          "pos": [0.0,0.31398,2.75806],
+          "width": 0.1671,
+          "height": 0.6181,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.1936,0.31398,2.75806],
+          "width": 0.1671,
+          "height": 0.6181,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.19956,0.31398,2.75806],
+          "width": 0.1671,
+          "height": 0.6181,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.34839,0.31398,2.61484],
+          "width": 0.1671,
+          "height": 0.6181,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.45269,0.34923,2.42114],
+          "width": 0.1671,
+          "height": 0.68859,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.39103,2.2208],
+          "width": 0.1671,
+          "height": 0.77219,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.42976,2.02332],
+          "width": 0.1671,
+          "height": 0.84966,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,1.81628],
+          "width": 0.1671,
+          "height": 1.11464,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,1.6044],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,1.42181],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,1.22273],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,1.04015],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,0.85491],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,0.67232],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,0.47324],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,0.29066],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,0.09197],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,-0.09062],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,-0.2897],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,-0.47228],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,-0.67152],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,-0.8541],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.50707,0.64792,-1.05318],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.40738,0.58072,-1.23577],
+          "width": 0.1671,
+          "height": 1.15158,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.30621,0.55811,-1.42248],
+          "width": 0.1671,
+          "height": 1.10635,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.22931,0.5237,-1.61476],
+          "width": 0.1671,
+          "height": 1.03754,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [-0.01884,0.5237,-1.69832],
+          "width": 0.1671,
+          "height": 1.03754,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.34839,0.31398,2.61484],
+          "width": 0.1671,
+          "height": 0.6181,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.45269,0.34923,2.42114],
+          "width": 0.1671,
+          "height": 0.68859,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.39103,2.2208],
+          "width": 0.1671,
+          "height": 0.77219,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.42976,2.02332],
+          "width": 0.1671,
+          "height": 0.84966,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.56225,1.81628],
+          "width": 0.1671,
+          "height": 1.11464,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,1.6044],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,1.42181],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,1.22273],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,1.04015],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,0.85491],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,0.67232],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,0.47324],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,0.29066],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,0.29066],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,0.09197],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,-0.09062],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,-0.2897],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,-0.2897],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,-0.47228],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,-0.67152],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,-0.8541],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.50707,0.64792,-1.05318],
+          "width": 0.1671,
+          "height": 1.28596,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.40738,0.58072,-1.23577],
+          "width": 0.1671,
+          "height": 1.15158,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.30621,0.55811,-1.42248],
+          "width": 0.1671,
+          "height": 1.10635,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.30621,0.55811,-1.42248],
+          "width": 0.1671,
+          "height": 1.10635,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.22931,0.5237,-1.61476],
+          "width": 0.1671,
+          "height": 1.03754,
+          "armorThickness": 22.0
+        },
+        {
+          "pos": [0.00373,1.21516,-0.22592],
+          "width": 1.17015,
+          "height": 0.12894,
+          "armorThickness": 22.0
         }
       ]
     },
     {
-      "isInterior": true,
-	  "applyAfter":"$right_door",
       "collisions": [
         {
-            "name": "Cube.001",
-            "pos": [-0.17434, 0.66455, 2.61463],
-            "width": 0.322, 
-            "height": 0.13668,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.002",
-            "pos": [-0.21761, 0.72269, 2.3083],
-            "width": 0.40645, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.003",
-            "pos": [-0.21761, 0.86589, 2.03393],
-            "width": 0.40645, 
-            "height": 0.17253,
-            "armorThickness": 22.0
+          "pos": [0.850915,0.31398,2.75806],
+          "width": 0.1671,
+          "height": 0.6181
         }
-      ],
-      "animations": []
-    },
-    {
-      "isInterior": true,
-	  "applyAfter":"$left_door",
-      "collisions": [
-        {
-            "name": "Cube.001",
-            "pos": [0.16903, 0.66455, 2.61463],
-            "width": 0.322, 
-            "height": 0.13668,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.002",
-            "pos": [0.20398, 0.72269, 2.3083],
-            "width": 0.40645, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.003",
-            "pos": [0.21131, 0.86589, 2.03393],
-            "width": 0.40645, 
-            "height": 0.17253,
-            "armorThickness": 22.0
+	  ],
+	  "animations": [
+	    {
+          "animationType": "visibility",
+          "variable": "!part_present_1",
+          "clampMin": 1.0,
+          "clampMax": 1.0
         }
-      ],
-      "animations": []
-    },
-    {
-      "isInterior": true,
-	  "applyAfter":"$center_door",
-      "collisions": [
-        {
-            "name": "Cube.003",
-            "pos": [0.00142, 0.97562, 1.86401],
-            "width": 0.12434, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.001",
-            "pos": [0.12993, 0.97562, 1.86401],
-            "width": 0.12434, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.002",
-            "pos": [-0.12827, 0.97562, 1.86401],
-            "width": 0.12434, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.004",
-            "pos": [-0.25956, 1.00912, 1.86401],
-            "width": 0.12434, 
-            "height": 0.23952,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.005",
-            "pos": [0.26449, 1.00912, 1.86401],
-            "width": 0.12434, 
-            "height": 0.23952,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.006",
-            "pos": [-0.25956, 1.20122, 1.75951],
-            "width": 0.12434, 
-            "height": 0.18893,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.007",
-            "pos": [0.26449, 1.20122, 1.75951],
-            "width": 0.12434, 
-            "height": 0.18893,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.008",
-            "pos": [0.00142, 1.2198, 1.76118],
-            "width": 0.12434, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.009",
-            "pos": [0.12993, 1.2198, 1.76118],
-            "width": 0.12434, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.010",
-            "pos": [-0.12827, 1.2198, 1.76118],
-            "width": 0.12434, 
-            "height": 0.17253,
-            "armorThickness": 22.0
-        }
-      ],
-      "animations": []
-    },
+	  ]
+	},
     {
       "collisions": [
         {
-            "name": "Cube",
-            "pos": [0.00059, 0.31398, 2.75806],
-            "width": 0.1671, 
-            "height": 0.6181,
-            "armorThickness": 22.0
+          "pos": [-0.850915,0.31398,2.75806],
+          "width": 0.1671,
+          "height": 0.6181
+        }
+	  ],
+	  "animations": [
+	    {
+          "animationType": "visibility",
+          "variable": "!part_present_2",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        }
+	  ]
+	}
+  ],
+  "connectionGroups": [
+    {
+      "groupName": "Lift",
+      "isHookup": true,
+      "connections": [
+        {
+          "type": "lift_frame",
+          "pos": [0.0,-0.0625,1.28125],
+          "distance": 2.0
+        }
+      ]
+    },
+    {
+      "groupName": "HOOKUP",
+      "isHookup": true,
+      "connections": [
+        {
+          "type": "tow_bumper",
+          "pos": [0.0,0.02601,3.56009],
+          "distance": 2.0
         },
         {
-            "name": "Cube.001",
-            "pos": [-0.1936, 0.31398, 2.75806],
-            "width": 0.1671, 
-            "height": 0.6181,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.002",
-            "pos": [0.19956, 0.31398, 2.75806],
-            "width": 0.1671, 
-            "height": 0.6181,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.003",
-            "pos": [-0.34839, 0.31398, 2.61484],
-            "width": 0.1671, 
-            "height": 0.6181,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.004",
-            "pos": [-0.45269, 0.31398, 2.42114],
-            "width": 0.1671, 
-            "height": 0.68859,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.005",
-            "pos": [-0.50707, 0.31398, 2.2208],
-            "width": 0.1671, 
-            "height": 0.77219,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.006",
-            "pos": [-0.50707, 0.31398, 2.02332],
-            "width": 0.1671, 
-            "height": 0.84966,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.007",
-            "pos": [-0.50707, 0.31398, 1.81628],
-            "width": 0.1671, 
-            "height": 1.11464,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.008",
-            "pos": [-0.50707, 0.31398, 1.6044],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.009",
-            "pos": [-0.50707, 0.31398, 1.42181],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.010",
-            "pos": [-0.50707, 0.31398, 1.22273],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.011",
-            "pos": [-0.50707, 0.31398, 1.04015],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.012",
-            "pos": [-0.50707, 0.31398, 0.85491],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.013",
-            "pos": [-0.50707, 0.31398, 0.67232],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.014",
-            "pos": [-0.50707, 0.31398, 0.47324],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.015",
-            "pos": [-0.50707, 0.31398, 0.29066],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.016",
-            "pos": [-0.50707, 0.31398, 0.09197],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.017",
-            "pos": [-0.50707, 0.31398, -0.09062],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.018",
-            "pos": [-0.50707, 0.31398, -0.2897],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.019",
-            "pos": [-0.50707, 0.31398, -0.47228],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.020",
-            "pos": [-0.50707, 0.31398, -0.67152],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.021",
-            "pos": [-0.50707, 0.31398, -0.8541],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.022",
-            "pos": [-0.50707, 0.31398, -1.05318],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.023",
-            "pos": [-0.40738, 0.31398, -1.23577],
-            "width": 0.1671, 
-            "height": 1.15158,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.024",
-            "pos": [-0.30621, 0.31398, -1.42248],
-            "width": 0.1671, 
-            "height": 1.10635,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.025",
-            "pos": [-0.22931, 0.31398, -1.61476],
-            "width": 0.1671, 
-            "height": 1.03754,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.026",
-            "pos": [-0.01884, 0.3141, -1.69832],
-            "width": 0.1671, 
-            "height": 1.03754,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.027",
-            "pos": [0.34839, 0.31398, 2.61484],
-            "width": 0.1671, 
-            "height": 0.6181,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.028",
-            "pos": [0.45269, 0.34923, 2.42114],
-            "width": 0.1671, 
-            "height": 0.68859,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.029",
-            "pos": [0.50707, 0.39103, 2.2208],
-            "width": 0.1671, 
-            "height": 0.77219,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.030",
-            "pos": [0.50707, 0.42976, 2.02332],
-            "width": 0.1671, 
-            "height": 0.84966,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.031",
-            "pos": [0.50707, 0.56225, 1.81628],
-            "width": 0.1671, 
-            "height": 1.11464,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.032",
-            "pos": [0.50707, 0.64792, 1.6044],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.033",
-            "pos": [0.50707, 0.64792, 1.42181],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.034",
-            "pos": [0.50707, 0.64792, 1.22273],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.035",
-            "pos": [0.50707, 0.64792, 1.04015],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.036",
-            "pos": [0.50707, 0.64792, 0.85491],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.037",
-            "pos": [0.50707, 0.64792, 0.67232],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.038",
-            "pos": [0.50707, 0.64792, 0.47324],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.039",
-            "pos": [0.50707, 0.64792, 0.29066],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.039",
-            "pos": [0.50707, 0.64792, 0.29066],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.040",
-            "pos": [0.50707, 0.64792, 0.09197],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.041",
-            "pos": [0.50707, 0.64792, -0.09062],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.042",
-            "pos": [0.50707, 0.64792, -0.2897],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.042",
-            "pos": [0.50707, 0.64792, -0.2897],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.043",
-            "pos": [0.50707, 0.64792, -0.47228],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.044",
-            "pos": [0.50707, 0.64792, -0.67152],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.045",
-            "pos": [0.50707, 0.64792, -0.8541],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.046",
-            "pos": [0.50707, 0.64792, -1.05318],
-            "width": 0.1671, 
-            "height": 1.28596,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.047",
-            "pos": [0.40738, 0.58072, -1.23577],
-            "width": 0.1671, 
-            "height": 1.15158,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.048",
-            "pos": [0.30621, 0.55811, -1.42248],
-            "width": 0.1671, 
-            "height": 1.10635,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.048",
-            "pos": [0.30621, 0.55811, -1.42248],
-            "width": 0.1671, 
-            "height": 1.10635,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.049",
-            "pos": [0.22931, 0.5237, -1.61476],
-            "width": 0.1671, 
-            "height": 1.03754,
-            "armorThickness": 22.0
-        },
-        {
-            "name": "Cube.050",
-            "pos": [0.00373, 1.21516, -0.22592],
-            "width": 1.17015, 
-            "height": 0.12894,
-            "armorThickness": 22.0
+          "type": "tow_wheel",
+          "pos": [0.0,-0.45,2.4],
+          "distance": 4.0
         }
       ]
     }
-  ],
+    ],
   "instruments": [],
   "definitions": [
     {
       "subName": "_olive",
-      "name": "Olive Renualt FT",
-      "extraMaterials": ["oredict:dyeGreen:3"]
+      "name": "Olive Renault FT",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/green:3"
+        ]
+      ]
+    },
+    {
+      "subName": "_tan",
+      "name": "Tan Renault FT",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/yellow:3",
+          "minecraft:sand:10"
+        ]
+      ]
+    },
+    {
+      "subName": "_gray",
+      "name": "Gray Renault FT",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/gray:3"
+        ]
+      ]
     },
     {
       "subName": "_blue",
-      "name": "Blue Renualt FT",
-      "extraMaterials": ["oredict:dyeLightBlue:3"]
+      "name": "Blue Renault FT",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/light_blue:3"
+        ]
+      ]
+    }
+  ],
+  "initialVariables": [
+    "door_mainHatch"
+  ],
+  "variableModifiers": [
+    //mudAcc system (custom)
+    {
+      "variable": "mudAcc",
+      "minValue": 0,
+      "maxValue": 100,
+      "animations": [
+      	//mud addition logic gate
+        {
+          "animationType": "inhibitor",
+          "variable": "speed",
+          "clampMin": 0,
+          "clampMax": 5
+        },
+        //rain + speed addition
+        {
+          "animationType": "translation",
+          "variable": "rain_strength",
+          "axis": [0.0,0.035,0.0]
+        },
+        //mud-adding blocks
+        {
+          "animationType": "translation",
+          "variable": "terrain_blockmaterial_grass",
+          "axis": [0.0,0.03,0.0]
+        },
+        {
+          "animationType": "translation",
+          "variable": "terrain_blockmaterial_dirt",
+          "axis": [0.0,0.04,0.0]
+        },
+        {
+          "animationType": "translation",
+          "variable": "terrain_blockmaterial_clay",
+          "axis": [0.0,0.06,0.0]
+        },
+        //water + speed cleaning
+        {
+          "animationType": "translation",
+          "variable": "blockmaterial_water",
+          "axis": [0.0,-0.5,0.0]
+        },
+        //mud reduction logic gate
+        {
+          "animationType": "inhibitor",
+          "variable": "speed",
+          "clampMin": 5,
+          "clampMax": 100
+        },
+        {
+          "animationType": "activator",
+          "variable": "speed",
+          "clampMin": 0,
+          "clampMax": 5
+        },
+        //rain cleaning
+        {
+          "animationType": "translation",
+          "variable": "rain_strength",
+          "axis": [0.0,-0.01,0.0]
+        },
+        //water cleaning
+        {
+          "animationType": "translation",
+          "variable": "blockmaterial_water",
+          "axis": [0.0,-0.3,0.0]
+        },
+        //sub 50% passive inhibitor gate
+        {
+          "animationType": "inhibitor",
+          "variable": "mudAcc",
+          "clampMin": 0,
+          "clampMax": 65
+        },
+        //passive reduction
+        {
+          "animationType": "translation",
+          "variable": "!piss",
+          "axis": [0.0,-0.00185,0.0]
+        }
+      ]
+    },
+  
+    //soundPass
+    {
+      "variable": "soundPass",
+      "maxValue": 1,
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "!PLACEHOLDER",
+          "axis": [0.0,0.0,1]
+        },
+        {
+          "animationType": "translation",
+          "variable": "PLACEHOLDER",
+          "axis": [0.0,1.0,0.0]
+        }
+      ]
     }
   ],
   "rendering": {
     "textObjects": [],
     "animatedObjects": [
       {
+        "objectName": "#translucent_mudAcc_main",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          }
+        ]
+      },
+      {
+        "objectName": "#translucent_mudAcc_sus_r",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          }
+        ]
+      },
+      {
+        "objectName": "#translucent_mudAcc_sus_l",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          }
+        ]
+      },
+      {
+        "objectName": "exhaustpipe",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_sin_1",
+            "centerPoint": [-0.6875,0.96875,-0.25],
+            "axis": [0.25,0.2,0.25]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_exh",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "engine_sin_1",
+            "centerPoint": [-0.6875,0.96875,-0.25],
+            "axis": [0.25,0.2,0.25]
+          }
+        ]
+      },
+      {
         "objectName": "$left_door",
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "mainHatch",
+            "variable": "door_mainHatch",
+            "centerPoint": [0.406563,0.769703,2.35042],
+            "axis": [21.4764,37.9632,-102.144],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_door_l",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door_mainHatch",
             "centerPoint": [0.406563,0.769703,2.35042],
             "axis": [21.4764,37.9632,-102.144],
             "duration": 10
@@ -637,7 +920,25 @@
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "mainHatch",
+            "variable": "door_mainHatch",
+            "centerPoint": [-0.406563,0.769703,2.35042],
+            "axis": [21.4764,-37.9632,102.144],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_door_r",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door_mainHatch",
             "centerPoint": [-0.406563,0.769703,2.35042],
             "axis": [21.4764,-37.9632,102.144],
             "duration": 10
@@ -649,7 +950,25 @@
         "animations": [
           {
             "animationType": "rotation",
-            "variable": "mainHatch",
+            "variable": "door_mainHatch",
+            "centerPoint": [0.0,1.29637,1.73739],
+            "axis": [-90.0,0.0,0.0],
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_centerdoor",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door_mainHatch",
             "centerPoint": [0.0,1.29637,1.73739],
             "axis": [-90.0,0.0,0.0],
             "duration": 10
@@ -659,6 +978,33 @@
       {
         "objectName": "$left_hood",
         "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "part_present_6",
+            "centerPoint": [0.3033,1.39617,-0.67974],
+            "axis": [-72.793,0.0,0.0],
+            "offset": -72.793,
+            "duration": 10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "part_present_6",
+            "centerPoint": [0.3033,1.39617,-0.67974],
+            "axis": [0.0,23.952,0.0],
+            "offset": -23.952,
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_hood_l",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
           {
             "animationType": "rotation",
             "variable": "part_present_6",
@@ -699,6 +1045,33 @@
         ]
       },
       {
+        "objectName": "#$translucent_mudAcc_hood_r",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "part_present_6",
+            "centerPoint": [-0.3033,1.39617,-0.67974],
+            "axis": [-72.793,0.0,0.0],
+            "offset": -72.793,
+            "duration": 10
+          },
+          {
+            "animationType": "rotation",
+            "variable": "part_present_6",
+            "centerPoint": [-0.3033,1.39617,-0.67974],
+            "axis": [0.0,-23.952,0.0],
+            "offset": -23.952,
+            "duration": 10
+          }
+        ]
+      },
+      {
         "objectName": "$center_hood",
         "animations": [
           {
@@ -712,7 +1085,26 @@
         ]
       },
       {
-        "objectName": "$roller_10",
+        "objectName": "#$translucent_mudAcc_centerhood",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "part_present_6",
+            "centerPoint": [0.0,1.496,-0.696386],
+            "axis": [-100.0,0.0,0.0],
+            "offset": -100.0,
+            "duration": 10
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_10",
         "animations": [
           {
             "animationType": "rotation",
@@ -723,7 +1115,24 @@
         ]
       },
       {
-        "objectName": "$roller_00",
+        "objectName": "#$translucent_mudAcc_L_roller_10",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.39062099158763885,-0.40260399878025055],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_00",
         "animations": [
           {
             "animationType": "rotation",
@@ -734,7 +1143,24 @@
         ]
       },
       {
-        "objectName": "$roller_11",
+        "objectName": "#$translucent_mudAcc_L_roller_00",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,2.1238105297088623],
+            "axis": [1.2825820835248767,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_11",
         "animations": [
           {
             "animationType": "rotation",
@@ -745,7 +1171,24 @@
         ]
       },
       {
-        "objectName": "$roller_01",
+        "objectName": "#$translucent_mudAcc_L_roller_11",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.4569090008735657,0.10089600458741188],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_01",
         "animations": [
           {
             "animationType": "rotation",
@@ -756,7 +1199,24 @@
         ]
       },
       {
-        "objectName": "$roller_12",
+        "objectName": "#$translucent_mudAcc_L_roller_01",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,1.811310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_12",
         "animations": [
           {
             "animationType": "rotation",
@@ -767,7 +1227,24 @@
         ]
       },
       {
-        "objectName": "$roller_02",
+        "objectName": "#$translucent_mudAcc_L_roller_12",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.5231959819793701,0.6043959856033325],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_02",
         "animations": [
           {
             "animationType": "rotation",
@@ -778,7 +1255,24 @@
         ]
       },
       {
-        "objectName": "$roller_13",
+        "objectName": "#$translucent_mudAcc_L_roller_02",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,1.498810052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_13",
         "animations": [
           {
             "animationType": "rotation",
@@ -789,7 +1283,24 @@
         ]
       },
       {
-        "objectName": "$roller_03",
+        "objectName": "#$translucent_mudAcc_L_roller_13",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.5894840061664581,1.1078959703445435],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_03",
         "animations": [
           {
             "animationType": "rotation",
@@ -800,7 +1311,24 @@
         ]
       },
       {
-        "objectName": "$roller_14",
+        "objectName": "#$translucent_mudAcc_L_roller_03",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,1.186310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_14",
         "animations": [
           {
             "animationType": "rotation",
@@ -811,7 +1339,24 @@
         ]
       },
       {
-        "objectName": "$roller_04",
+        "objectName": "#$translucent_mudAcc_L_roller_14",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.655771017074585,1.6113959550857544],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_04",
         "animations": [
           {
             "animationType": "rotation",
@@ -822,7 +1367,24 @@
         ]
       },
       {
-        "objectName": "$roller_15",
+        "objectName": "#$translucent_mudAcc_L_roller_04",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,0.8738099932670593],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_15",
         "animations": [
           {
             "animationType": "rotation",
@@ -833,7 +1395,24 @@
         ]
       },
       {
-        "objectName": "$roller_05",
+        "objectName": "#$translucent_mudAcc_L_roller_15",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.7220590114593506,2.1148959398269653],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_05",
         "animations": [
           {
             "animationType": "rotation",
@@ -844,7 +1423,24 @@
         ]
       },
       {
-        "objectName": "$roller_16",
+        "objectName": "#$translucent_mudAcc_L_roller_05",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,0.5613104999065399],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_16",
         "animations": [
           {
             "animationType": "rotation",
@@ -855,7 +1451,24 @@
         ]
       },
       {
-        "objectName": "$roller_06",
+        "objectName": "#$translucent_mudAcc_L_roller_16",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.2545425295829773,2.5832749605178833],
+            "axis": [0.3018174147874901,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_06",
         "animations": [
           {
             "animationType": "rotation",
@@ -866,7 +1479,24 @@
         ]
       },
       {
-        "objectName": "$roller_07",
+        "objectName": "#$translucent_mudAcc_L_roller_06",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,0.24881050735712051],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_07",
         "animations": [
           {
             "animationType": "rotation",
@@ -877,7 +1507,24 @@
         ]
       },
       {
-        "objectName": "$roller_08",
+        "objectName": "#$translucent_mudAcc_L_roller_07",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,-0.06368950009346008],
+            "axis": [1.2825819295073067,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_08",
         "animations": [
           {
             "animationType": "rotation",
@@ -888,7 +1535,24 @@
         ]
       },
       {
-        "objectName": "$roller_09",
+        "objectName": "#$translucent_mudAcc_L_roller_08",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,-0.2791939973831177,-0.3761895000934601],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$L_roller_09",
         "animations": [
           {
             "animationType": "rotation",
@@ -897,24 +1561,1367 @@
             "axis": [0.5092958178940651,0.0,0.0]
           }
         ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_L_roller_09",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_1",
+            "centerPoint": [0.0,0.06459300220012665,-0.8549799919128418],
+            "axis": [0.5092958178940651,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_10",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.39062099158763885,-0.40260399878025055],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_10",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.39062099158763885,-0.40260399878025055],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_00",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,2.1238105297088623],
+            "axis": [1.2825820835248767,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_00",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,2.1238105297088623],
+            "axis": [1.2825820835248767,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_11",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.4569090008735657,0.10089600458741188],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_11",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.4569090008735657,0.10089600458741188],
+            "axis": [1.874373592822422,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_01",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,1.811310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_01",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,1.811310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_12",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.5231959819793701,0.6043959856033325],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_12",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.5231959819793701,0.6043959856033325],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_02",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,1.498810052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_02",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,1.498810052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_13",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.5894840061664581,1.1078959703445435],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_13",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.5894840061664581,1.1078959703445435],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_03",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,1.186310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_03",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,1.186310052871704],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_14",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.655771017074585,1.6113959550857544],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_14",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.655771017074585,1.6113959550857544],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_04",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,0.8738099932670593],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_04",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,0.8738099932670593],
+            "axis": [1.2825870121066447,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_15",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.7220590114593506,2.1148959398269653],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_15",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.7220590114593506,2.1148959398269653],
+            "axis": [1.8743739217591526,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_05",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,0.5613104999065399],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_05",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,0.5613104999065399],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_16",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.2545425295829773,2.5832749605178833],
+            "axis": [0.3018174147874901,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_16",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.2545425295829773,2.5832749605178833],
+            "axis": [0.3018174147874901,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_06",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,0.24881050735712051],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_06",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,0.24881050735712051],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_07",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,-0.06368950009346008],
+            "axis": [1.2825819295073067,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_07",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,-0.06368950009346008],
+            "axis": [1.2825819295073067,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_08",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,-0.3761895000934601],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_08",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,-0.2791939973831177,-0.3761895000934601],
+            "axis": [1.2825817754897737,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$R_roller_09",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.06459300220012665,-0.8549799919128418],
+            "axis": [0.5092958178940651,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_R_roller_09",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "mudAcc",
+            "clampMax": 100.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "ground_rotation_2",
+            "centerPoint": [0.0,0.06459300220012665,-0.8549799919128418],
+            "axis": [0.5092958178940651,0.0,0.0]
+          }
+        ]
       }
     ],
     "lightObjects": [],
-    "customVariables": ["TURRET"],
-    "initialVariables": ["mainHatch"],
-    "sounds": [],
-    "particles": [
+    "customVariables": [
+      "TURRET"
+    ],
+    "sounds": [
+    //watersplash
       {
-        "type": "smoke",
-        "quantity": 1,
-        "transparency": 0.25,
-        "toTransparency": 0.25,
-        "scale": 2.0,
-        "color": "D9D9D9",
-        "toColor": "D9D9D9",
-        "pos": [-0.684649,0.964062,-1.21544],
-        "initialVelocity": [0.0,0.0,-1.0],
+        "name": "mtsofficialpack:debrissettle_water1",
+        "soundVariations": [
+          "mtsofficialpack:waterimpact0",
+          "mtsofficialpack:waterimpact1",
+          "mtsofficialpack:waterimpact2"
+        ],
         "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },//base
+      {
+        "name": "mtsofficialpack:waterimpact_add",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -10.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },//add
+      {
+        "name": "mtsofficialpack:debrissettle_water1",
+        "soundVariations": [
+          "mtsofficialpack:debrissettle_water0",
+          "mtsofficialpack:debrissettle_water1"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -1000.5,
+            "clampMax": -5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },//settle
+      //totaled fire ground
+      {
+        "name": "mtsofficialpack:crashfire",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "forwardsDelay": 1400
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1.0,
+            "clampMax": 3.0
+          }
+        ],
+        "volumeAnimations": [],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 1.0,
+        "maxDistance": 35.0,
+        "maxDistanceVolume": 0.0
+      },
+      //handbrake
+      {
+        "name": "mtsofficialpack:carhandbrakeup",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "p_brake",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:carhandbrakedown",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "p_brake"
+          }
+        ],
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //rain
+      {
+        "name": "mtsofficialpack:rain_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "pos": [0.0,3.0,1.0],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:rain_outside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 4.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 12.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+      //watercrash (small)
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 6,
+        "duration": 30,
+        "movementDuration": 25,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 15,
+        "scale": 5.8,
+        "toScale": 10.5,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,1.1,0.0],
+        "spreadRandomness": [2.4,8.0,2.4],
+        "initialVelocity": [0.0,8.5,0.0],
+        "movementVelocity": [0.0,-0.025,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },//throwup
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 5,
+        "duration": 50,
+        "movementDuration": 35,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 25,
+        "scale": 4.8,
+        "toScale": 10.5,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,1.1,0.0],
+        "spreadRandomness": [1.8,11.0,1.8],
+        "initialVelocity": [0.0,11.5,0.0],
+        "movementVelocity": [0.0,-0.025,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -14.5
+          },
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },//throwup high
+      {
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 7,
+        "duration": 50,
+        "movementDuration": 10,
+        "transparency": 0.5,
+        "toTransparency": 0.001,
+        "scale": 5.0,
+        "toScale": 10.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "FFFFFF",
+        "pos": [0.0,2.1,0.0],
+        "spreadRandomness": [10.0,0.5,10.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,1.0E-4,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -7.5
+          }
+        ]
+      },//mist
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 10,
+        "duration": 80,
+        "movementDuration": 15,
+        "transparency": 0.15,
+        "toTransparency": 0.001,
+        "scale": 9.0,
+        "toScale": 15.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "randomColor": true,
+        "color": "FFFFFF",
+        "pos": [0.0,3.0,0.0],
+        "spreadRandomness": [12.0,0.5,12.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,1.0E-4,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -32767.0,
+            "clampMax": -14.5
+          }
+        ]
+      },//mist high
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 2,
+        "duration": 100,
+        "transparency": 0.8,
+        "toTransparency": 0.001,
+        "scale": 12.2,
+        "toScale": 30.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/waterfoam0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/waterfoam1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,-0.02,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -999.0,
+            "clampMax": -2.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMax": 1.0
+          }
+        ]
+      },//foam
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 80,
+        "transparency": 0.6,
+        "toTransparency": 0.001,
+        "scale": 5.2,
+        "toScale": 40.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/ripple0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/ripple1_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/ripple2_translucent.png",
+          "mtsofficialpack:textures/bullets/shockwave_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,-0.02,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "vertical_speed",
+            "clampMin": -999.0,
+            "clampMax": -2.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMax": 1.0
+          }
+        ]
+      },//ripple
+      
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 50,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 5.2,
+        "toScale": 20.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/waterfoam0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/waterfoam1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,-0.02,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMax": 1.0
+          }
+        ]
+      },//foam small
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 50,
+        "transparency": 0.8,
+        "toTransparency": 0.001,
+        "scale": 2.2,
+        "toScale": 20.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/ripple0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/ripple1_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/ripple2_translucent.png",
+          "mtsofficialpack:textures/bullets/shockwave_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,-0.02,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMax": 1.0
+          }
+        ]
+      },//ripple small
+      
+      //smoke plume
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 555,
+        "transparency": 0.08,
+        "toTransparency": 1.0E-4,
+        "scale": 7.0,
+        "toScale": 100.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [13,14,15,12,14,13,16,11,13,15,19,13],
+        "randomTexture": true,
+        "color": "332E2B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "spreadRandomness": [0.43,0.43,0.43],
+        "initialVelocity": [0.0,2.0,-0.5],
+        "movementVelocity": [0.0,-1.0E-4,-5.0E-4],
+        "terminalVelocity": [0.0,5.0,4.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "forwardsDelay": 1400
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1.0,
+            "clampMax": 3.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "0_6_14_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 555,
+        "transparency": 0.08,
+        "toTransparency": 1.0E-4,
+        "scale": 8.0,
+        "toScale": 70.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [13,14,15,12,14,13,16,11,13,15,19,13],
+        "randomTexture": true,
+        "color": "332E2B",
+        "pos": [-0.0625,-0.1875,0.25],
+        "spreadRandomness": [0.43,0.43,0.43],
+        "initialVelocity": [0.0,0.0,-0.0],
+        "movementVelocity": [0.0,1.0E-4,-1.0E-4],
+        "terminalVelocity": [0.0,5.0,4.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "forwardsDelay": 1400
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": -1.0,
+            "clampMax": 3.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "0_3_30_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      //idle
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "ignoreCollision": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 7,
+        "movementDuration": 6,
+        "transparency": 0.4,
+        "toTransparency": 1.0E-6,
+        "scale": 0.1,
+        "toScale": 2.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "2A2D31",
+        "pos": [-0.684649,0.964062,-1.21544],
+        "spreadRandomness": [0.8,0.8,2.0],
+        "initialVelocity": [0.0,0.0,-3.5],
+        "movementVelocity": [0.0,1.0E-4,-0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "throttle"
+          }
+        ]
+      },
+      //active
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "ignoreCollision": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 5,
+        "movementDuration": 6,
+        "transparency": 0.7,
+        "toTransparency": 1.0E-6,
+        "scale": 0.1,
+        "toScale": 3.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "2A2D31",
+        "pos": [-0.684649,0.964062,-1.21544],
+        "spreadRandomness": [0.8,0.8,2.0],
+        "initialVelocity": [0.0,0.0,-8.5],
+        "movementVelocity": [0.0,1.0E-4,-0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "throttle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 88,
+        "movementDuration": 64,
+        "transparency": 0.02,
+        "toTransparency": 1.0E-6,
+        "scale": 1.0,
+        "toScale": 16.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "randomTexture": true,
+        "color": "2A2D31",
+        "pos": [0.430113,0.533944,-1.37683],
+        "spreadRandomness": [0.5,0.5,2.0],
+        "initialVelocity": [0.0,0.0,-3.5],
+        "movementVelocity": [0.0,1.0E-4,-0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
           {
             "animationType": "visibility",
             "variable": "engine_piston_1_1_cam_1",
@@ -923,11 +2930,288 @@
           }
         ]
       },
+      
+      //watertrail
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "distance": 2.0,
+        "duration": 100,
+        "transparency": 0.5,
+        "fadeTransparencyTime": 50,
+        "scale": 3.2,
+        "toScale": 15.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/waterfoam0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/waterfoam1_translucent.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.01,0.0],
+        "rot": [-90.0,0.0,0.0],
+        "rotationRandomness": [0.0,0.0,50.0],
+        "rotationVelocity": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,1.0E-4,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "terminalVelocity": [1.0,0.0,1.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-1.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 8,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 1.0,
+        "toScale": 3.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "color": "FFFFFF",
+        "pos": [0.1,0.0,3.0],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "initialVelocity": [2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10.0,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 4.0,
+            "clampMax": 100.5
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 10,
+        "transparency": 1.0,
+        "toTransparency": 0.001,
+        "scale": 1.0,
+        "toScale": 3.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/watermist0_translucent.png",
+          "mtsofficialpack:textures/bullets/ground/watermist1_translucent.png"
+        ],
+        "randomTexture": true,
+        "color": "FFFFFF",
+        "pos": [-0.1,0.0,3.0],
+        "spreadRandomness": [1.0,1.5,1.0],
+        "relativeInheritedVelocityFactor": [0.4,0.4,0.4],
+        "initialVelocity": [-2.0,2.5,0.0],
+        "movementVelocity": [0.0,-0.08,0.0],
+        "terminalVelocity": [100.0,10.0,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.99,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 4.0,
+            "clampMax": 100.5
+          }
+        ]
+      },
+      
+     	//sandtrail-autochromatic (carmedium)
+    	{
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "distance": 10,
+        "duration": 350,
+        "movementDuration": 205,
+        "transparency": 0.05,
+        "toTransparency": 0.4,
+        "fadeTransparencyTime": 300,
+        "scale": 20.0,
+        "toScale": 55.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "getBlockPropertiesFromGround": true,
+        "useBlockColor": true,
+        "pos": [0.0,1.0,0.0],
+        "spreadRandomness": [1.0,0.04,0.7],
+        "initialVelocity": [0.0,0.05,-0.8],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 7.5,
+            "clampMax": 999
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 5.0
+          }
+        ]
+      },
+      	//sandtrail (carmedium)
+        {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "distance": 10,
+        "duration": 350,
+        "movementDuration": 205,
+        "transparency": 0.05,
+        "toTransparency": 0.4,
+        "fadeTransparencyTime": 300,
+        "scale": 20.0,
+        "toScale": 55.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "pos": [0.0,1.0,0.0],
+        "spreadRandomness": [1.0,0.04,0.7],
+        "initialVelocity": [0.0,0.05,-0.8],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 7.5,
+            "clampMax": 999
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 5.0
+          }
+        ]
+      },
+      
       {
         "type": "smoke",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
         "quantity": 5,
-        "scale": 2.5,
-        "color": "000000",
+        "scale": 0.5,
+        "hitboxSize": 0.2,
+        "color": "615852",
         "pos": [-0.684649,0.964062,-1.21544],
         "initialVelocity": [0.0,0.0,-1.0],
         "activeAnimations": [
@@ -938,13 +3222,165 @@
             "clampMax": 1.0
           }
         ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 110,
+        "transparency": 0.085,
+        "toTransparency": 1.0E-4,
+        "scale": 2.0,
+        "toScale": 8.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [10,10,10,10,10,10,10,10,10,10,10,10],
+        "randomTexture": true,
+        "color": "857D76",
+        "pos": [0.0,0.3,-0.838],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+            "clampMin": 170.0,
+            "clampMax": 230.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 132,
+        "transparency": 0.07,
+        "toTransparency": 1.0E-4,
+        "scale": 2.0,
+        "toScale": 8.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [12,12,12,12,12,12,12,12,12,12,12,12],
+        "randomTexture": true,
+        "color": "57514B",
+        "pos": [0.0,0.3,-0.838],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+            "clampMin": 230.0,
+            "clampMax": 290.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 154,
+        "transparency": 0.1,
+        "toTransparency": 1.0E-4,
+        "scale": 2.0,
+        "toScale": 8.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [14,14,14,14,14,14,14,14,14,14,14,14],
+        "randomTexture": true,
+        "color": "332E2B",
+        "pos": [0.0,0.3,-0.838],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+            "clampMin": 290.0,
+            "clampMax": 350.0
+          }
+        ]
       }
     ],
     "modelType": "obj"
   },
   "general": {
     "description": "The Renault FT (frequently referred to in post-World War I literature as the FT-17, FT17, or similar) was a French light tank that was among the most revolutionary and influential tank designs in history.  Although hoplessly outclassed by modern tanks, the FT17 is still a formidable threat against infantry and lightly-armored vehicles.",
-    "health": 100,
-    "materials": ["oredict:ingotIron:18"]
+    "health": 350,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:80",
+        "mts:mtsofficialpack.screws:120",
+        "mts:mtsofficialpack.spring:2",
+        "mts:mtsofficialpack.metaltube:4",
+        "minecraft:iron_block:4",
+        "minecraft:iron_trapdoor:2",
+        "minecraft:lever:8",
+        "minecraft:iron_bars:16",
+        "minecraft:tripwire_hook:3"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
   }
 }
