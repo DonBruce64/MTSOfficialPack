@@ -1,5 +1,5 @@
 # Made in Blockbench 4.10.4
-mtllib bullet3700solid.mtl
+mtllib bullet3700proxy.mtl
 
 o bodyModel
 v 0.09375 -0.09375 -0.46875
