@@ -1,0 +1,154 @@
+{
+  "panel": {
+    "texture": "mts:textures/guis/panel.png",
+    "textureWidth": 512,
+    "textureHeight": 256,
+    "backgroundWidth": 400,
+    "backgroundHeight": 140,
+    "components": [
+      {
+        "pos": [15.0,12.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [0.0,196.0,0.0],
+        "specialComponent": "car_light"
+      },
+      {
+        "pos": [15.0,44.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [20.0,176.0,0.0],
+        "specialComponent": "turn_signal"
+      },
+      {
+        "pos": [15.0,76.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [140.0,216.0,0.0],
+        "text": "AMOGUS",
+        "statusVariable": "autopilot_active",
+        "clickAction": {
+          "variable": "autopilot_active",
+          "action": "toggle",
+          "value": 0.0
+        }
+      },
+      {
+        "pos": [21.0,108.0,0.0],
+        "width": 40,
+        "height": 20,
+        "textureStart": [340.0,196.0,0.0],
+        "specialComponent": "beacon_box"
+      },
+      {
+        "pos": [47.0,12.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [80.0,196.0,0.0],
+        "specialComponent": "engine_control"
+      },
+      {
+        "pos": [47.0,44.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [80.0,196.0,0.0],
+        "specialComponent": "engine_control"
+      },
+      {
+        "pos": [47.0,76.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [80.0,196.0,0.0],
+        "specialComponent": "engine_control"
+      },
+      {
+        "pos": [47.0,76.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [120.0,216.0,0.0],
+        "text": "REVERSE",
+        "statusVariable": "reverser",
+        "clickAction": {
+          "variable": "reverser",
+          "action": "toggle",
+          "value": 0.0
+        }
+      },
+      {
+        "pos": [147.0,12.0,0.0],
+        "width": 40,
+        "height": 20,
+        "textureStart": [340.0,216.0,0.0],
+        "text": "Blade Angle",
+        "specialComponent": "roll_trim"
+      },
+      {
+        "pos": [147.0,44.0,0.0],
+        "width": 40,
+        "height": 20,
+        "textureStart": [340.0,216.0,0.0],
+        "text": "Blade Shift",
+        "specialComponent": "pitch_trim"
+      },
+      {
+        "pos": [207.0,12.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [140.0,216.0,0.0],
+        "text": "Angle Reset",
+        "clickAction": {
+          "variable": "trim_aileron",
+          "action": "set",
+          "value": 0.0
+        }
+      },
+      {
+        "pos": [207.0,44.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [140.0,216.0,0.0],
+        "text": "Shift Reset",
+        "clickAction": {
+          "variable": "trim_elevator",
+          "action": "set",
+          "value": 0.0
+        }
+      },
+      {
+        "pos": [79.0,12.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [100.0,216.0,0.0],
+        "specialComponent": "trailer"
+      },
+      {
+        "pos": [79.0,44.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [100.0,216.0,0.0],
+        "specialComponent": "trailer"
+      },
+      {
+        "pos": [79.0,76.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [100.0,216.0,0.0],
+        "specialComponent": "trailer"
+      },
+      {
+        "pos": [111.0,12.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [180.0,216.0,0.0],
+        "specialComponent": "custom_variable"
+      },
+      {
+        "pos": [111.0,44.0,0.0],
+        "width": 20,
+        "height": 20,
+        "textureStart": [180.0,216.0,0.0],
+        "specialComponent": "custom_variable"
+      }
+    ]
+  }
+}

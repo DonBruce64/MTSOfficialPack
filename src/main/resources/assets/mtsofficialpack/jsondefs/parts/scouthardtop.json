@@ -1,29 +1,221 @@
 {
-    "general": {
-        "name" : "Scout Hard-Top",
-        "type" : "generic",
-        "modelName" : "scoutroof",
-        "customType" : "scoutroof",
-		"materials" : ["oredict:ingotIron:4", "minecraft:iron_bars:0:2", "oredict:paper:6"]
+  "generic": {
+    "type": "generic",
+    "customType": "scoutroof",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 30,
+    "destroyable": true
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Scout Hard-Top",
+      "extraMaterialLists": [
+        [
+        ]
+      ]
     },
-    "generic": {
-        "width" : 1.5,
-        "height" : 0.5
-    },
-	"rendering": {
-		"animatedObjects" : [
-			{
-				"objectName" : "$door_tailgate",
+     {
+      "subName": "_vinyl",
+      "name": "Scout Vinyl-Top",
+      "extraMaterialLists": [
+        [
+        "tags:dyes/black:2"
+        ]
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$assdoortop",
         "animations": [
           {
             "animationType": "rotation",
-				    "centerPoint" : [0, 0.71065, -0.8691],
-				    "axis" : [90, 0, 0],
+            "variable": "door_tailgate",
+            "centerPoint": [0.0,0.5625,-1],
+            "forwardsEasing": "easeoutback",
+            "reverseEasing": "easeoutbounce",
+            "axis": [90.0,0.0,0.0],
             "duration": 30,
-				    "variable" : "door_tailgate"
+            "forwardsStartSound": "mtsofficialpack:hoodcarope",
+            "reverseEndSound": "mtsofficialpack:doorplaneclos"
           }
         ]
-			}
-		]
-	}
+      },
+      {
+        "objectName": "$assdoor_wlndow",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_tailgate",
+            "centerPoint": [0.0,0.5625,-1],
+            "forwardsEasing": "easeoutback",
+            "reverseEasing": "easeoutbounce",
+            "axis": [90.0,0.0,0.0],
+            "duration": 30
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/generic_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/generic_place1",
+        	"mtsofficialpack:placesound/generic_place0"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    {
+        "name": "mtsofficialpack:carwind_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.8
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:rain_inside",
+        "pos": [0,2,1],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+    //experimental rain roofsplash
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 5,
+        "transparency": 1.0,
+        "scale": 0.8,
+        "toScale": 0.2,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/splash_0.png",
+          "mtsofficialpack:textures/bullets/splash_1.png",
+          "mtsofficialpack:textures/bullets/splash_2.png",
+          "mtsofficialpack:textures/bullets/splash_3.png",
+          "mtsofficialpack:textures/bullets/splash_4.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.8,-0.5],
+        "spreadRandomness": [1.5,0.8,1.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity": [0.0,-0.04,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "centerPoint": [0.0,0.0,-0.5],
+            "axis": [0.0,0.0,2.0],
+            "offset": 0.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "tick",
+            "centerPoint": [0.0,1.0,-0.3],
+            "axis": [0.0,40.0,0.0],
+            "offset": 0.0
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Scout Hard-Top",
+    "description": "A proper roof for your car! Looks classy and keeps your head from getting wet.",
+    "health": 40,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:10",
+        "minecraft:iron_bars:2",
+        "minecraft:glass_pane:6"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

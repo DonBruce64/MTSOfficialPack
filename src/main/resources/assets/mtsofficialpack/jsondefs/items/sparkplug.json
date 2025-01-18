@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Spark Plug",
+        "stackSize": 64,
+        "description": "Makes flammable liquids go boom!",
+        "materials": [],
+        "type": "none"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Impact Fuze",
+        "description": "This fuze triggeres once it makes contact with your unlucky target.",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

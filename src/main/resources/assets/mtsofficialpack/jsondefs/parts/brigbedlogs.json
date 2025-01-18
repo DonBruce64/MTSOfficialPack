@@ -1,12 +1,252 @@
 {
-    "general": {
-        "name" : "Brigadier Logging Bed",
-        "type" : "generic",
-        "customType" : "brigbed",
-        "materials" : ["oredict:plankWood:5", "minecraft:iron_bars:0:3", "oredict:logWood:3"]
+  "generic": {
+    "type": "interactable_crate",
+    "customType": "brigbed",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 2500,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.075,0.8125],
+          "width": 2.25,
+          "height": 0.4
+        },
+        {
+          "pos": [0.0,0.075,-1.4375],
+          "width": 2.25,
+          "height": 0.4
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "interactable_percent",
+            "clampMin": 0.25,
+            "clampMax": 1
+        },
+        {
+          "animationType": "translation",
+          "variable": "interactable_percent",
+          "axis": [0.0,2.35,0.0]
+        }
+      ]
     },
-    "generic": {
-       "width" : 1.5,
-       "height" : 0.5
+    {
+    "isInterior": true,
+      "collisions": [
+      {
+          "pos": [0.0,0.075,0.8125],
+          "width": 2.25,
+          "height": 0.5
+        },
+        {
+          "pos": [0.0,0.075,-1.4375],
+          "width": 2.25,
+          "height": 0.5
+        }
+      ]
     }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Brigadier Logging Bed",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "interactable": {
+    "interactionType": "crate",
+    "inventoryUnits": 4.0
+  },
+  "rendering": {
+  	"animatedObjects": [
+     {
+        "objectName": "log1",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.00000001,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log2",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.09,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log3",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.18,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log4",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.27,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log5",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.36,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log6",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.45,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log7",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.54,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log8",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.63,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log9",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.72,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log10",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.81,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log11",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.9,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "log12",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.99,
+            "clampMax": 1
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_place",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_remove",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 26.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Brigadier Logging Bed",
+    "description": "log",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:6",
+        "minecraft:iron_bars:4",
+        "tags:logs:10"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

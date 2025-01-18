@@ -1,15 +1,423 @@
 {
-    "general": {
-        "name" : "M1919 Browning Machine Gun",
-        "type" : "gun_fixed",
-		"materials" : ["oredict:ingotIron:4", "oredict:coal:1", "minecraft:lever:0:1"]
-    },
-	"gun" : {
-    "capacity" : 250,
-		"fireDelay" : 2,
-		"reloadTime" : 60,
-		"muzzleVelocity" : 850,
-		"diameter" : 7.62,
-		"length" : 0.610
-	}
+  "generic": {
+    "type": "gun_fixed",
+    "mass": 8,
+    "forwardsDamageMultiplier": 1.0
+  },
+  "gun": {
+    "lockOnType": "default",
+    "targetType": "all",
+    "capacity": 250,
+    "reloadTime": 60,
+    //reduce hypersonic muzzle velocity to something more reasonable
+    //yes daddy
+    "muzzleVelocity": 250,
+    "fireDelay": 2.0,
+    "bulletSpreadFactor": 1.3,
+    "diameter": 7.62,
+    "yawSpeed": 8.201024,
+    "pitchSpeed": 8.201024,
+    "lockMaxAngle": 0.0,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.0,0.61]
+          }
+        ]
+      }
+    ]
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "M1919 Browning Machine Gun",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "&mflash",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_muzzleflash"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "random",
+            "axis":[0.0,0.0,180.0],
+            "centerPoint": [0.0,0.0,0.61]
+          },
+          {
+            "animationType": "scaling",
+            "variable": "random",
+            "axis":[3.0,3.5,3.0],
+            "centerPoint": [0.0,0.0,0.61]
+          }
+        ]
+      },
+      {
+        "objectName": "&mflash_inner",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_muzzleflash"
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&mflash_inner",
+        "emissive": true,
+        "color": "FEFEFE",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      },
+      {
+        "objectName": "&mflash",
+        "emissive": true,
+        "color": "FAB774",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      }
+    ],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/gun_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/gun_place0",
+        	"mtsofficialpack:placesound/gun_place1",
+        	"mtsofficialpack:placesound/gun_place2",
+        	"mtsofficialpack:placesound/gun_place3"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gun_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/gun_place0",
+        	"mtsofficialpack:placesound/gun_place1",
+        	"mtsofficialpack:placesound/gun_place2",
+        	"mtsofficialpack:placesound/gun_place3"
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      {
+        "name": "mtsofficialpack:triggerclick",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.6,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:gunm1919_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 3.0,
+        "middleDistanceVolume": 0.8,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:gunm1919_firing",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:gunm1919_reverb",
+        "activeAnimations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "gun_ammo_count",
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:gunm1919_firing_distant0",
+        "soundVariations": [
+          "mtsofficialpack:gunm1919_firing_distant0",
+          "mtsofficialpack:gunm1919_firing_distant1",
+          "mtsofficialpack:gunm1919_firing_distant2",
+          "mtsofficialpack:gunm1919_firing_distant3",
+          "mtsofficialpack:gunm1919_firing_distant4",
+          "mtsofficialpack:gunm1919_firing_distant5",
+          "mtsofficialpack:gunm1919_firing_distant6"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:gunm1919_reverb_distant",
+        "activeAnimations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "gun_ammo_count",
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:gunm1919_reverb",
+        "activeAnimations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "gun_ammo_count",
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 80.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+    {
+        "type": "generic",
+        "stopsOnGround": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 50,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 25,
+        "scale": 0.85,
+        "fadeScaleTime": 25,
+        "hitboxSize": 0.185,
+        "texture": "mtsofficialpack:textures/bullets/casing762.png",
+        "model": "mtsofficialpack:objmodels/bullets/casing762.obj",
+        "pos": [0,0,-0.1538],
+        "rot": [180.0,0.0,0.0],
+        "rotationRandomness": [70.0,50.0,50.0],
+        "rotationVelocity": [-20.0,0.0,0.0],
+        "spreadRandomness": [1.0,2.0,1.0],
+        "initialVelocity": [1.0,-0.5,-0.2],
+        "movementVelocity": [0.0,-0.036,0.0],
+        "terminalVelocity": [32.0,36.0,32.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 6,
+        "transparency": 0.33,
+        "toTransparency": 0.001,
+        "scale": 0.2,
+        "toScale": 3.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "c8c2bd",
+        "pos": [0.0,0.0,0.401],
+        "spreadRandomness": [1.0,1.0,0.0],
+        "initialVelocity": [0.0,0.0,1.0],
+        
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 8,
+        "movementDuration": 25,
+        "transparency": 0.23,
+        "toTransparency": 0.001,
+        "scale": 0.2,
+        "toScale": 5.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "c8c2bd",
+        "pos": [0.0,0.0,0.401],
+        "spreadRandomness": [1.0,1.0,0.0],
+        "initialVelocity": [0.0,0.0,8.0],
+        
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "M1919 Browning Machine Gun",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.metaltube:1",
+        "tags:ingots/iron:2",
+        "mts:mtsofficialpack.spring:1",
+        "mts:mtsofficialpack.screws:4",
+        "minecraft:flint:1",
+        "minecraft:lever:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

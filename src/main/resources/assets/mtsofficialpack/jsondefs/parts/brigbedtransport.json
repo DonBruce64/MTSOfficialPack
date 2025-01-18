@@ -1,0 +1,967 @@
+{
+  "generic": {
+    "type": "generic",
+    "customType": "brigbed",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 1400,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "parts": [
+    //crates 1-2
+    {
+      "pos": [0.5,0.3125,1.3125],
+      "rot": [0.0,0.0,0.0],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_9"
+        ]
+      ]
+    },
+    {
+      "pos": [-0.375,0.3125,1.3125],
+      "rot": [0.0,22.0,0.0],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_10"
+        ]
+      ]
+    },
+    //seats 3-10
+    {
+      "pos": [0.75,0.62,0.1875],
+      "rot": [0.0,-90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_14"
+        ],
+        [
+          "!part_present_15"
+        ],
+        
+        [
+          "!part_present_19"
+        ],
+        [
+          "!part_present_22"
+        ]
+      ]
+    }, //0.1875 x+ 3 - 2
+    {
+      "pos": [0.75,0.62,-0.9375],
+      "rot": [0.0,-90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_16"
+        ],
+        [
+          "!part_present_17"
+        ],
+        
+        [
+          "!part_present_22"
+        ],
+        [
+          "!part_present_25"
+        ]
+      ]
+    }, //-0.9375 x+ 4 - 3
+    {
+      "pos": [0.75,0.62,-2.0625],
+      "rot": [0.0,-90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_18"
+        ],
+        [
+          "!part_present_25"
+        ]
+      ]
+    }, //-2.0625 x+ 5 - 4
+    {
+      "pos": [-0.75,0.62,0.1875],
+      "rot": [0.0,90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_14"
+        ],
+        [
+          "!part_present_15"
+        ],
+        
+        [
+          "!part_present_21"
+        ],
+        [
+          "!part_present_24"
+        ]
+      ]
+    }, //0.1875 x- 6 - 2
+    {
+      "pos": [-0.75,0.62,-0.9375],
+      "rot": [0.0,90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_16"
+        ],
+        [
+          "!part_present_17"
+        ],
+        
+        [
+          "!part_present_24"
+        ],
+        [
+          "!part_present_27"
+        ]
+      ]
+    }, //-0.9375 x- 7 - 3
+    {
+      "pos": [-0.75,0.62,-2.0625],
+      "rot": [0.0,90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_18"
+        ],
+        [
+          "!part_present_18"
+        ],
+        
+        [
+          "!part_present_27"
+        ]
+      ]
+    }, //-2.0625 x- 8 - 4
+    {
+      "pos": [0.75,0.62,1.3125],
+      "rot": [0.0,-90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_1"
+        ],
+        [
+          "!part_present_13"
+        ],
+        [
+          "!part_present_14"
+        ],
+        [
+          "!part_present_19"
+        ]
+      ]
+    }, //1.3125 x+ 9 - 1
+    {
+      "pos": [-0.75,0.62,1.3125],
+      "rot": [0.0,90.0,0.0],
+      "dismountPos": [0.0,0.5,-3.5],
+      "types": [
+        "seat",
+        "seat_pilot"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_2"
+        ],
+        [
+          "!part_present_13"
+        ],
+        [
+          "!part_present_13"
+        ],
+        [
+          "!part_present_21"
+        ]
+      ]
+    }, //1.3125 x- 10 - 1
+    //crate top 11
+    {
+      "pos": [0.0,1.05,1.3125],
+      "rot": [0.0,-10.0,0.0],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "part_present_1"
+        ],
+        [
+          "part_present_2"
+        ],
+        [
+          "!part_present_10"
+        ],
+        [
+          "!part_present_9"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "part_present_2",
+          "clampMin": 1,
+          "clampMax": 1
+        }
+      ]
+    },
+    //sparewheel 12
+    {
+      "pos": [-0.875,0.0625,1.25],
+      "rot": [0.0,0.0,90.0],
+      "maxValue": 1.1,
+      "types": [
+        "ground_wheel"
+      ],
+      "isSpare": true,
+      "allowParentRemoval": true,
+      "defaultPart": "mtsofficialpack:wheellarge"
+    },
+    //wide crates 13-18
+    {
+      "pos": [0.0,0.3125,1.3723],
+      "maxPartLevels": 4,
+      "rot": [0.0,180.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_wide"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_9"
+        ],
+        [
+          "!part_present_10"
+        ],
+        
+        [
+          "!part_present_19"
+        ],
+        [
+          "!part_present_20"
+        ],
+        [
+          "!part_present_21"
+        ]
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,0.3125,0.6848],
+      "rot": [0.0,180.0,0.0],
+      "maxPartLevels": 4,
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_wide"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_9"
+        ],
+        [
+          "!part_present_10"
+        ],
+        [
+          "!part_present_3"
+        ],
+        [
+          "!part_present_6"
+        ],
+        
+        [
+          "!part_present_19"
+        ],
+        [
+          "!part_present_20"
+        ],
+        [
+          "!part_present_21"
+        ]
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,0.3125,0.0],
+      "rot": [0.0,180.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 4,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_wide"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_3"
+        ],
+        [
+          "!part_present_6"
+        ],
+        
+        [
+          "!part_present_22"
+        ],
+        [
+          "!part_present_23"
+        ],
+        [
+          "!part_present_24"
+        ]
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,0.3125,-0.69016],
+      "rot": [0.0,180.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 4,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_wide"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_4"
+        ],
+        [
+          "!part_present_7"
+        ],
+        
+        [
+          "!part_present_22"
+        ],
+        [
+          "!part_present_23"
+        ],
+        [
+          "!part_present_24"
+        ]
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,0.3125,-1.377668],
+      "rot": [0.0,180.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 4,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_wide"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_4"
+        ],
+        [
+          "!part_present_7"
+        ],
+        
+        [
+          "!part_present_25"
+        ],
+        [
+          "!part_present_26"
+        ],
+        [
+          "!part_present_27"
+        ]
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [0.0,0.3125,-2.069],
+      "rot": [0.0,180.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 4,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_wide"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_5"
+        ],
+        [
+          "!part_present_8"
+        ],
+        
+        [
+          "!part_present_25"
+        ],
+        [
+          "!part_present_26"
+        ],
+        [
+          "!part_present_27"
+        ]
+      ],
+      "linkedParts": []
+    },
+    //medium crates 19-28
+    {
+      "pos": [0.75,0.3125,1.0625],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_13"
+        ],
+        [
+          "!part_present_14"
+        ],
+        
+        [
+          "!part_present_9"
+        ],
+        [
+          "!part_present_3"
+        ]
+      ],
+      "linkedParts": []
+    }, //x+ 19 - 1
+    {
+      "pos": [0.0,0.3125,1.0625],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_13"
+        ],
+        [
+          "!part_present_14"
+        ]
+      ],
+      "linkedParts": []
+    }, //x0 20 - 1
+    {
+      "pos": [-0.75,0.3125,1.0625],
+      "rot": [0.0,90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_13"
+        ],
+        [
+          "!part_present_14"
+        ],
+        
+        [
+          "!part_present_10"
+        ],
+        [
+          "!part_present_6"
+        ]
+      ],
+      "linkedParts": []
+    }, //x- 21 - 1
+    
+    {
+      "pos": [0.75,0.3125,-0.375],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_15"
+        ],
+        [
+          "!part_present_16"
+        ],
+        
+        [
+          "!part_present_4"
+        ],
+        [
+          "!part_present_3"
+        ]
+      ],
+      "linkedParts": []
+    }, //x+ 22 - 2
+    {
+      "pos": [0.0,0.3125,-0.375],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_15"
+        ],
+        [
+          "!part_present_16"
+        ]
+      ],
+      "linkedParts": []
+    }, //x0 23 - 2
+    {
+      "pos": [-0.75,0.3125,-0.375],
+      "rot": [0.0,90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_15"
+        ],
+        [
+          "!part_present_16"
+        ],
+        
+        [
+          "!part_present_6"
+        ],
+        [
+          "!part_present_7"
+        ]
+      ],
+      "linkedParts": []
+    }, //x- 24 - 2
+    
+    {
+      "pos": [0.75,0.3125,-1.8125],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_17"
+        ],
+        [
+          "!part_present_18"
+        ],
+        
+        [
+          "!part_present_4"
+        ],
+        [
+          "!part_present_5"
+        ]
+      ],
+      "linkedParts": []
+    }, //x+ 25 - 3
+    {
+      "pos": [0.0,0.3125,-1.8125],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_17"
+        ],
+        [
+          "!part_present_18"
+        ]
+      ],
+      "linkedParts": []
+    }, //x0 26 - 3
+    {
+      "pos": [-0.75,0.3125,-1.8125],
+      "rot": [0.0,90.0,0.0],
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "maxPartLevels": 3,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "interactableVariables": [
+        [
+          "!part_present_17"
+        ],
+        [
+          "!part_present_18"
+        ],
+        
+        [
+          "!part_present_7"
+        ],
+        [
+          "!part_present_8"
+        ]
+      ],
+      "linkedParts": []
+    }  //x- 27 - 3
+  ],
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.0,0.075,0.8125],
+          "width": 2.25,
+          "height": 0.5
+        },
+        {
+          "pos": [0.0,0.075,-1.4375],
+          "width": 2.25,
+          "height": 0.5
+        },
+        {
+          "pos": [0.0,2.43,0.8125],
+          "width": 2.25,
+          "height": 0.06
+        },
+        {
+          "pos": [0.0,2.43,-1.4375],
+          "width": 2.25,
+          "height": 0.06
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.71875,0.75,-2.46875],
+          "width": 0.563,
+          "height": 0.75,
+          "variableName": "tailgate",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [0.0,0.75,-2.4375],
+          "width": 0.563,
+          "height": 0.75,
+          "variableName": "tailgate",
+          "variableType": "toggle"
+        },
+        {
+          "pos": [-0.71875,0.75,-2.46875],
+          "width": 0.563,
+          "height": 0.75,
+          "variableName": "tailgate",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "tailgate",
+          "axis": [0.0,-0.75,-0.3125]
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "_green",
+      "name": "Green Brigadier Transport Bed",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/green:3"
+        ]
+      ]
+    },
+    {
+      "subName": "_brown",
+      "name": "Brown Brigadier Transport Bed",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/brown:2",
+          "tags:dyes/light_gray:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_tan",
+      "name": "Tan Brigadier Transport Bed",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/yellow:2",
+          "tags:dyes/blue:1",
+          "minecraft:sand:5",
+          "tags:dyes/black:1"
+        ]
+      ]
+    },
+    {
+      "subName": "",
+      "partTones": [],
+      "secondaryTextColors": [],
+      "name": "Grey Brigadier Transport Bed",
+      "extraMaterialLists": [
+        [
+          "tags:dyes/gray:3"
+        ]
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+    {
+        "objectName": "#translucent_mudAcc_main",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "parent_mudAcc",
+            "clampMin": 0,
+            "clampMax": 100
+          }
+        ]
+      },
+      {
+        "objectName": "#translucent_mudAcc_wheel",
+        "blendedAnimations": true,
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_present_12",
+            "clampMin": 1,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_mudAcc",
+            "clampMin": 0,
+            "clampMax": 100
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_tailgate",
+        "applyAfter": "$door_tailgate",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "parent_mudAcc",
+            "clampMin": 0,
+            "clampMax": 100
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_rubber",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "speed",
+            "centerPoint": [-0.9375,0.0,-2.1562],
+            "axis": [4.0,0.0,0.0]
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_mudAcc",
+            "clampMin": 0,
+            "clampMax": 100
+          }
+        ]
+      },
+      
+      {
+        "objectName": "$door_tailgate",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "tailgate",
+            "centerPoint": [0.0,0.3125,-2.625],
+            "axis": [-145.0,0.0,0.0],
+            "forwardsEasing": "easeoutbounce",
+            "reverseEasing": "easeinback",
+            "duration": 20,
+            "forwardsStartSound": "mtsofficialpack:doorcaropen2",
+            "reverseEndSound": "mtsofficialpack:doorcarclose2alt"
+          }
+        ]
+      },
+      {
+        "objectName": "$rubberthings",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "speed",
+            "centerPoint": [-0.9375,0.0,-2.1562],
+            "axis": [4.0,0.0,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_place",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_remove",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 26.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Brigadier Transport Bed",
+    "description": "This trailer is perfect for kidnap... ahem, giving Villagers a fun tour of your base! It is also useful for transporting personell, livestock and ammunition crates safely across the world. No longer do you have to rely on those pesky boats!",
+    "materialLists": [
+      [
+        "tags:wooden_slabs:24",
+        "mts:mtsofficialpack.plating:18",
+        "minecraft:iron_bars:16",
+        "tags:wool:6"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

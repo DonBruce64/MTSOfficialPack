@@ -1,0 +1,84 @@
+{
+  "generic": {
+    "type": "effector",
+    "forwardsDamageMultiplier": 1.0,
+    "width": 0.6,
+    "height": 0.6
+  },
+  "effector": {
+    "type": "dropper",
+    "operationDelay": 0
+  },
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0,0.5,-2.625],
+          "width": 0.2,
+          "height": 0.2
+        },
+        {
+          "pos": [0.35,0.5,-2.625],
+          "width": 0.2,
+          "height": 0.2
+        },
+        {
+          "pos": [-0.35,0.5,-2.625],
+          "width": 0.2,
+          "height": 0.2
+        },
+        {
+          "pos": [0.75,0.5,-2.625],
+          "width": 0.2,
+          "height": 0.2
+        },
+        {
+          "pos": [-0.75,0.5,-2.625],
+          "width": 0.2,
+          "height": 0.2
+        }
+      ],
+      "animations": [
+      	{
+            "animationType": "visibility",
+            "variable": "parent_PLACE",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_DUMP",
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "reverseDelay": 30,
+            "forwardsDelay": 10
+          }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Dump Dropper Logic",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "customVariables": [
+    ],
+    "particles": [],
+    "sounds": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Dump Dropper Logic",
+    "description": "Dropper",
+    "hideOnCreativeTab": true, 
+    "materialLists": []
+  }
+}

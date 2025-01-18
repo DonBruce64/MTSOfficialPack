@@ -1,20 +1,86 @@
 {
-    "general": {
-        "name" : "Brigadier Flatbed",
-        "type" : "generic",
-        "customType" : "brigbed",
-        "materials" : ["oredict:plankWood:3", "minecraft:iron_bars:0:1"]
-    },
-    "generic": {
-       "width" : 1.5,
-       "height" : 0.5
-    },
-		"connections": [
+  "generic": {
+    "type": "generic",
+    "customType": "brigbed",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 800,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "connectionGroups": [
     {
-      "type": "tow_wheel",
-      "pos": [0.0,0.3125,1.0],
-			"rot": [0.0,0.0,0.0],
-			"mounted": true
+      "groupName": "TRAILER",
+      "canInitiateConnections": true,
+      "isHitch": true,
+      "connections": [
+        {
+          "type": "tow_wheel",
+          "pos": [0.0,0.3125,1.0],
+          "rot": [0.0,0.0,0.0],
+          "mounted": true,
+          "distance": 5.0
+        }
+      ]
     }
-  ]
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Brigadier Flatbed",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_place",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_remove",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 26.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Brigadier Flatbed",
+    "description": "The flat area makes it possible to load and transport entire vehicles!",
+    "materialLists": [
+      [
+        "tags:wooden_slabs:24",
+        "mts:mtsofficialpack.plating:6",
+        "minecraft:iron_bars:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

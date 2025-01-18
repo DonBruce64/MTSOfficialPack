@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Screws",
+        "description": "An assortment of various screws, bolts and nuts.",
+    	"stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

@@ -1,44 +1,249 @@
 {
-    "general": {
-        "name" : "Generic Seat",
-        "type" : "seat",
-		"materials" : ["oredict:ingotIron:1", "oredict:string:2"]
+  "generic": {
+    "type": "seat",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 10,
+    "movementAnimations": []
+  },
+  "seat": {},
+  "definitions": [
+    {
+      "subName": "white",
+      "name": "White Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:white_wool:1"
+        ]
+      ]
     },
-    "definitions": [
+    {
+      "subName": "black",
+      "name": "Black Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:black_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "blue",
+      "name": "Blue Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:blue_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "brown",
+      "name": "Brown Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:brown_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "grey",
+      "name": "Grey Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:gray_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "pink",
+      "name": "Pink Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:pink_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "yellow",
+      "name": "Yellow Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:yellow_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "cyan",
+      "name": "Cyan Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:cyan_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "olive",
+      "name": "Olive Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:green_wool:1"
+        ]
+      ]
+    },
+    {
+      "subName": "red",
+      "name": "Red Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:red_wool:1"
+        ]
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "animatedObjects": [
+      {
+        "objectName": "translucent_blackout",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "acceleration",
+            "clampMin": 0.0,
+            "clampMax": 0.5
+          }
+        ]
+      }
+      
+    ],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/seat_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/seat_place0",
+        	"mtsofficialpack:placesound/seat_place1",
+        	"mtsofficialpack:placesound/seat_place2"
+        ],
+        "activeAnimations": [
         {
-            "subName": "white",
-            "name": "White Seat",
-            "extraMaterials": ["minecraft:wool:0:1"]
-        },
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
         {
-            "subName": "black",
-            "name": "Black Seat",
-            "extraMaterials": ["minecraft:wool:15:1"]
-        },
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/seat_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/seat_place0",
+        	"mtsofficialpack:placesound/seat_place1",
+        	"mtsofficialpack:placesound/seat_place2"
+        ],
+        "activeAnimations": [
         {
-            "subName": "blue",
-            "name": "Blue Seat",
-            "extraMaterials": ["minecraft:wool:11:1"]
-        },
+            "animationType": "visibility",
+            "variable": "part_added_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
         {
-            "subName": "brown",
-            "name": "Brown Seat",
-            "extraMaterials": ["minecraft:wool:12:1"]
-        },
-        {
-            "subName": "grey",
-            "name": "Grey Seat",
-            "extraMaterials": ["minecraft:wool:8:1"]
-        },
-        {
-            "subName": "pink",
-            "name": "Pink Seat",
-            "extraMaterials": ["minecraft:wool:6:1"]
-        },
-        {
-            "subName": "red",
-            "name": "Red Seat",
-            "extraMaterials": ["minecraft:wool:14:1"]
-        }
-    ]
+            "animationType": "visibility",
+            "variable": "part_removed_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      {
+        "name": "mtsofficialpack:bucklein",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "seat_occupied",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:buckleout",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "seat_occupied"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Generic Seat",
+    "description": "A somewhat comfortable and cheap seat designed primarily for aircraft. If you're broke or dont care about looks you can also mount them on cars.",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:2",
+		"mts:mtsofficialpack.metaltube:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

@@ -1,37 +1,129 @@
 {
   "generic": {
-    "type": "engine_aircraft_horizontal"
+    "type": "engine_aircraft_horizontal",
+    "forwardsDamageMultiplier": 1.0,
+    
+    "destroyable": true
   },
   "engine": {
+    "type": "normal",
     "isAutomatic": true,
     "starterPower": 40,
     "shiftSpeed": 20,
     "revResistance": 10,
-    "maxRPM": 2900,
+    "maxRPM": 4000,
+    "maxSafeRPM": 4000,
+    "idleRPM": 800,
+    "startRPM": 600,
+    "revlimitRPM": 4000,
+    "revlimitBounce": 10,
+    "stallRPM": 600,
+    "engineWinddownRate": 10,
+    "heatingCoefficient": 1.0,
+    "coolingCoefficient": 1.0,
+    "engineWearFactor": 1.0,
     "fuelConsumption": 0.4,
-    "gearRatios": [
-      -1.0,
-      0.0,
-      1.0
-    ],
+    "gearRatios": [-1.0,0.0,1.0],
     "fuelType": "avgas"
   },
   "parts": [
     {
       "pos": [0.0,0.0,0.0625],
       "maxValue": 90.0,
-      "types": ["propeller"]
+      "types": [
+        "propeller"
+      ]
     }
   ],
   "definitions": [
     {
       "subName": "",
       "name": "Lycoming O-360 Plane Engine",
-      "extraMaterials": []
+      "extraMaterialLists": [
+        []
+      ]
     }
   ],
   "rendering": {
+    "lightObjects": [],
     "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/engine_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_place0",
+        	"mtsofficialpack:placesound/engine_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    //engine cooling
+      {
+        "name": "mtsofficialpack:engine_cooling",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 50.0,
+            "clampMax": 1000.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_temp",
+            "axis": [0.0,0.03,0.0],
+            "offset": -1.9
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 5.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    //basics
       {
         "name": "mtsofficialpack:enginelycomingo360_starting",
         "activeAnimations": [
@@ -41,7 +133,13 @@
             "clampMin": 1.0,
             "clampMax": 1.0
           }
-        ]
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
       },
       {
         "name": "mtsofficialpack:enginelycomingo360_stopping",
@@ -50,7 +148,13 @@
             "animationType": "visibility",
             "variable": "engine_running"
           }
-        ]
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
       },
       {
         "name": "mtsofficialpack:enginelycomingo360_sputter",
@@ -62,20 +166,86 @@
             "clampMax": 1.0
           }
         ],
-        "forceSound": true
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
       },
+      //crankintro
       {
-        "name": "mts:engine_shifting_grinding",
+        "name": "mtsofficialpack:enginelycomingo360_crankingintro",
         "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "electric_power",
+            "clampMin": 0.001,
+            "clampMax": 50.0
+          },
           {
             "animationType": "visibility",
-            "variable": "engine_badshift",
+            "variable": "engine_starter",
             "clampMin": 1.0,
             "clampMax": 1.0
           }
         ],
-        "forceSound": true
+        "looping": false,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
       },
+      //crankingloop
+      {
+        "name": "mtsofficialpack:enginelycomingo360_crankingloop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "forwardsDelay": 8,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+       
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //crankoutro
+      {
+        "name": "mtsofficialpack:enginelycomingo360_crankingoutro",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "electric_power",
+            "clampMin": 0.001,
+            "clampMax": 50.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter"
+          }
+        ],
+        "looping": false,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //cranking base
       {
         "name": "mtsofficialpack:enginelycomingo360_cranking",
         "activeAnimations": [
@@ -93,14 +263,63 @@
             "axis": [0.0,0.002,0.0]
           }
         ],
-        "looping": true
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.1,
+        "maxDistance": 20.0,
+        "maxDistanceVolume": 0.0
       },
+      
+      //propswoosh OUT
       {
-        "name": "mtsofficialpack:enginelycomingo360_running",
-        "activeAnimations": [
+        "name": "mtsofficialpack:enginelycomingo360_running_800",
+        "activeAnimations": [       
           {
             "animationType": "visibility",
             "variable": "engine_powered",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.0005,0.0]
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.001,0.0],
+            "offset": -0.01
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //propswoosh OUT IN
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_800",
+        "activeAnimations": [       
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 15,
             "clampMin": 1.0,
             "clampMax": 1.0
           }
@@ -109,20 +328,1489 @@
           {
             "animationType": "translation",
             "variable": "engine_rpm",
-            "axis": [0.0,7.0E-4,0.0],
-            "offset": 0.35
+            "axis": [0.0,0.0008,0.0]
           }
         ],
-        "looping": true
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.001,0.0],
+            "offset": -0.01
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //propswoosh IN
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_800_inside",
+        "activeAnimations": [       
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 15,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.0008,0.0]
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.001,0.0],
+            "offset": -0.01
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //800rpm
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_800",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-1.0,0.0],
+            "offset": 0.95
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5636,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 20.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_800",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-1.0,0.0],
+            "offset": 0.95
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5636,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_800_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-1.0,0.0],
+            "offset": 0.95
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5636,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.8,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_800_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-1.0,0.0],
+            "offset": 0.95
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5636,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 40.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 100.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 140.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_800_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-1.0,0.0],
+            "offset": 0.95
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5636,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 100.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 140.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 260.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //1600rpm
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_1600",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-7.5,1.0,0.45],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.798,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 50.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 120.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_1600",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-7.5,1.0,0.45],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.798,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 50.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 120.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_1600_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }          
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-7.5,1.0,0.45],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.798,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.9,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_1600_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-7.5,1.0,0.45],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.798,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 50.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 120.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 230.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_1600_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-7.5,1.0,0.45],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.798,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 120.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 230.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 350.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //2000rpm
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-4.0,1.0,0.75],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.4036,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 140.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-4.0,1.0,0.75],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.4036,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 140.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2000_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-4.0,1.0,0.75],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.4036,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2000_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-4.0,1.0,0.75],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.4036,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 40.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 140.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 240.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2000_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-4.0,1.0,0.75],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.4036,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 140.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 240.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 380.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //2500rpm
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2500",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0],
+            "offset": -0.35
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.16,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2500",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0],
+            "offset": -0.35
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.16,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2500_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0],
+            "offset": -0.35
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.16,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2500_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0],
+            "offset": -0.35
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.16,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 50.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 150.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginelycomingo360_running_2500_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0],
+            "offset": -0.35
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.16,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 150.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 250.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 400.0,
+        "maxDistanceVolume": 0.0
       }
-    ]
+    ],
+    "particles": [
+      //propellerdust
+      //SAND
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 58,
+        "transparency": 0.15,
+        "toTransparency": 0.000001,
+        "movementDuration": 34,
+        "scale": 5.0,
+        "toScale": 20.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "getBlockPropertiesFromGround": true,
+        "useBlockColor": true,
+        "pos": [0,0.3,0],
+         "spreadRandomness": [1.8,0.5,2.0],
+        "initialVelocity": [0.0,0.0,-6.0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.9,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "pitch",
+            "centerPoint": [0,0.0,0],
+            "axis": [-0.9,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 3.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      //SANDREAL
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 58,
+        "transparency": 0.15,
+        "toTransparency": 0.000001,
+        "movementDuration": 34,
+        "scale": 5.0,
+        "toScale": 20.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "pos": [0,0.3,0],
+         "spreadRandomness": [1.8,0.5,2.0],
+        "initialVelocity": [0.0,0.0,-6.0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.9,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "pitch",
+            "centerPoint": [0,0.0,0],
+            "axis": [-0.9,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 3.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+        {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      //WATER
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2, //2
+        "duration": 20,
+        "movementDuration": 15,
+        "transparency": 0.07,
+        "toTransparency": 0.001,
+        "scale": 5.0,
+        "toScale": 15.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0,0.3,0],
+        "spreadRandomness": [2.0,0.5,8.0],
+        "initialVelocity": [0.0,0.5,-10.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0,0,0],
+            "axis": [0.0,-0.99,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "pitch",
+            "centerPoint": [1.0625,0.3,-2.5],
+            "axis": [-0.9,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      //damagesmoke stage1
+      {
+        "type": "generic",
+        "distance": 1.0,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 110,
+        "transparency": 0.085,
+        "toTransparency": 1.0E-4,
+        "scale": 2.0,
+        "toScale": 15.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [10,10,10,10,10,10,10,10,10,10,10,10],
+        "randomTexture": true,
+        "colorList": [
+          "857D76",
+          "908882",
+          "948e89",
+          "7f766e",
+          "75706b",
+          "706962"
+        ],
+        "randomColor": true,
+        "pos": [0,0,0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "spreadRandomness": [0.4,0.4,0.4],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_percent",
+            "clampMin": 0.3,
+            "clampMax": 0.5
+          }
+        ]
+      },
+      //damagesmoke stage2
+      {
+        "type": "generic",
+        "distance": 1.0,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 150,
+        "transparency": 0.07,
+        "toTransparency": 1.0E-4,
+        "scale": 4.0,
+        "toScale": 25.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [12,12,12,12,12,12,12,12,12,12,12,12],
+        "randomTexture": true,
+        "colorList": [
+          "57514b",
+          "645e57",
+          "4e4843",
+          "49443e",
+          "413c37"
+        ],
+        "randomColor": true,
+        "pos": [0,0,0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "spreadRandomness": [0.5,0.5,0.4],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_percent",
+            "clampMin": 0.5,
+            "clampMax": 0.8
+          }
+        ]
+      },
+      //damagesmoke stage3
+      {
+        "type": "generic",
+        "distance": 1.5,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 200,
+        "transparency": 0.08,
+        "toTransparency": 1.0E-4,
+        "scale": 4.0,
+        "toScale": 35.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [14,14,14,14,14,14,14,14,14,14,14,14],
+        "randomTexture": true,
+        "color": "332E2B",
+        "pos": [0,0,0],
+        "spreadRandomness": [0.6,0.6,0.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_percent",
+            "clampMin": 0.8,
+            "clampMax": 1
+          }
+        ]
+      },
+      //totaledfire
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 28,
+        "movementDuration": 14,
+        "transparency": 1.0,
+        "scale": 3.0,
+        "toScale": 0.020000001,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "randomTexture": true,
+        "pos": [0.0,0.0,0.0],
+        "spreadRandomness": [1.2,1.0,1.2],
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 4.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      //totaledsmoke
+      {
+        "type": "generic",
+        "distance": 2.0,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 280,
+        "transparency": 0.1,
+        "fadeTransparencyTime": 100,
+        "scale": 6.0,
+        "toScale": 30.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "randomTexture": true,
+        "color": "292521",
+        "pos": [0,0,0],
+        "spreadRandomness": [0.3,0.3,0.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 4.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      //tempsmoke
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 40,
+        "transparency": 0.1,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.5,
+        "toScale": 3.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "e7e9ea",
+        "pos": [0,0,0],
+         "spreadRandomness": [0.3,0.3,0.3],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.006,-0.0],
+        "terminalVelocity": [0.0,0.3,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 100.0,
+            "clampMax": 111.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 40,
+        "transparency": 0.2,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.8,
+        "toScale": 5.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "e7e9ea",
+        "pos": [0,0,0],
+         "spreadRandomness": [0.3,0.3,0.3],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.006,-0.0],
+        "terminalVelocity": [0.0,0.3,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 111.0,
+            "clampMax": 121.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 40,
+        "transparency": 0.1,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.8,
+        "toScale": 8.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "2a2d31",
+        "pos": [0,0,0],
+         "spreadRandomness": [0.3,0.3,0.3],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.006,-0.0],
+        "terminalVelocity": [0.0,0.4,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 121.0,
+            "clampMax": 1001.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
   },
-  "prefixFolders": "",
-  "packID": "mtsofficialpack",
-  "systemName": "enginelycomingo360",
-  "classification": "part",
   "general": {
     "name": "Lycoming O-360 Plane Engine",
-    "materials": ["minecraft:piston:0:4","minecraft:obsidian:0:4","oredict:ingotIron:1"]
+    "description": "The Lycoming O-360 is one of the most popular aircraft engines in the world. Its design provides a perfect balance between power and efficiency, making it the best choice for civillian aircrafts.",
+    "health": 35,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.piston:6",
+        "mts:mtsofficialpack.sparkplug:12",
+        "mts:mtsofficialpack.plating:6",
+		"mts:mtsofficialpack.metaltube:3",
+        "minecraft:iron_block:1",
+		"mts:mtsofficialpack.screws:16",
+		"mts:mtsofficialpack.copperwire:3"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
   }
 }

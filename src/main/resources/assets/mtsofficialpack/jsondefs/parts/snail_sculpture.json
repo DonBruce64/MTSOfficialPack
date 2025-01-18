@@ -1,0 +1,80 @@
+{
+  "generic": {
+    "type": "generic",
+    "canBePlacedOnGround": true,
+    "canBeRemovedByHand": true,
+    "width": 0.1,
+    "height": 0.1
+  },
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisionTypes": [
+        "entity",
+        "click"
+      ],
+      "collisions": [
+        {
+          "pos": [0.0,0.4,0.0],
+          "width": 0.2,
+          "height": 0.75
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Snail Sculpture",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+  	"sounds":[
+  	//place-remove
+      	{
+        "name": "mtsofficialpack:misc/vineboom",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:misc/vineboom",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      }
+  	],
+    "lightObjects": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Snail Sculpture (unfinished)",
+    "description": "An abstract sculpture molded from clay, representing a snail and her child. Gifted by an anonymus supporter.",
+     "stackSize": 64,
+     "hideOnCreativeTab": true,
+    "materialLists": [
+      []
+    ]
+  }
+}

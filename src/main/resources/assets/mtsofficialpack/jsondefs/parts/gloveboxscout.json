@@ -1,0 +1,68 @@
+{
+  "generic": {
+    "type": "interactable_crate",
+    "customType": "gloveboxscout",
+    "width": 0.5,
+    "height": 0.3
+  },
+  "interactable": {
+    "interactionType": "crate",
+    "inventoryUnits": 0.6
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Glovebox Scout",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+  "animatedObjects": [
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:interactable/glovebox_close0",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:interactable/glovebox_open0",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Glovebox Scout",
+    "description": "Built in glovebox for scout",
+    "hideOnCreativeTab": true, 
+    "materialLists": [],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

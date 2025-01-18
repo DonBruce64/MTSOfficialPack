@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Spring",
+        "stackSize": 64,
+        "description": "A steel helix. Springs you right back to that discovery you made about ducks...",
+        "materials": [],
+        "type": "none"
+    }
+}

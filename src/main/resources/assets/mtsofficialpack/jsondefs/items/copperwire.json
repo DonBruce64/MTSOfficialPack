@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Copper Wire",
+        "description": "A roll of conductive wire. Just pretend its copper and not gold seasoned with redstone dust.",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

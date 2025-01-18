@@ -1,0 +1,474 @@
+{
+  "generic": {
+    "type": "effector",
+    "customType": "brigbed",
+    "forwardsDamageMultiplier": 1.0,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "effector": {
+    "type": "drill",
+    "drillHardness": 5,
+    "drillSpeed": 0.03,
+    "drillDurability": 35000
+  },
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0,0,-4.1],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [1,0,-4],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1,0,-4],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [2,0,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-2,0,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        
+        {
+          "pos": [0,-0.5,-4.1],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [1,-0.5,-4.0],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1,-0.5,-4.0],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [2,-0.5,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-2,-0.5,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        
+        {
+          "pos": [0,1,-5],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [1,1,-4.0],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1,1,-4.0],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [2,1,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-2,1,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        
+        {
+          "pos": [0,2,-4.1],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [2,2,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-2,2,-3],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [1,2,-4.0],
+          "width": 0.5,
+          "height": 0.5
+        },
+        {
+          "pos": [-1,2,-4.0],
+          "width": 0.5,
+          "height": 0.5
+        }
+        
+      ],
+      "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "parent_engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DRILL",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Developer Drill",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+    {
+        "objectName": "$drill",
+        "animations": [
+        {
+            "animationType": "inhibitor",
+            "variable": "parent_engines_running",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "DRILL",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "tick",
+            "centerPoint": [0.0,1.125,0],
+            "axis": [0.0,0.0,35.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "customVariables": [
+      "DRILL"
+    ],
+    "particles": [
+    {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 5,
+        "transparency": 0.5,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.1,
+        "toScale": 3.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "2a2d31",
+        "pos": [-0.75,2.375,1],
+         "spreadRandomness": [0.8,2.8,0.8],
+        "initialVelocity": [0.0,8.5,0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "parent_engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DRILL",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 5,
+        "transparency": 0.5,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.1,
+        "toScale": 3.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "2a2d31",
+        "pos": [0.75,2.375,1],
+         "spreadRandomness": [0.8,2.8,0.8],
+        "initialVelocity": [0.0,8.5,0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "parent_engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DRILL",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      
+    {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 88,
+        "transparency": 0.02,
+        "toTransparency": 0.000001,
+        "movementDuration": 64,
+        "scale": 1.0,
+        "toScale": 16.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "color": "2a2d31",
+        "pos": [-0.75,2.375,1],
+         "spreadRandomness": [0.8,2.0,0.8],
+        "initialVelocity": [0.0,3.5,0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "parent_engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DRILL",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "spawnEveryTick": true,
+        "quantity": 1,
+        "duration": 88,
+        "transparency": 0.02,
+        "toTransparency": 0.000001,
+        "movementDuration": 64,
+        "scale": 1.0,
+        "toScale": 16.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "color": "2a2d31",
+        "pos": [0.75,2.375,1],
+         "spreadRandomness": [0.8,2.0,0.8],
+        "initialVelocity": [0.0,3.5,0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "parent_engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DRILL",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+          ]
+      }
+      
+      ],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_place",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_pickup",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 26.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    {
+        "name": "mtsofficialpack:drill_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "parent_engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DRILL",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+    {
+        "name": "mtsofficialpack:drill_running",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "parent_engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DRILL",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+          ],
+        "looping": true,
+        "reverseDelay": 140,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 90.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Developer Drill",
+    "description": "lmao some yeeyee drill for testing purposes. remember to remove later. totally wont forgor. You wanna this in sUrViVaL? naaah man, look at you goofy face, imagine, imagine getting 69 (nice) netehrite blocks fro a random ass WIP, not even real, deletion sceduled item lamo what! unless youre a streamer then good luck :skull: chicken block",
+    "stackSize": 1,
+    "materialLists": [
+      ["minecraft:netherite_block:69"]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

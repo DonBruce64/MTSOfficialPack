@@ -1,0 +1,138 @@
+{
+  "generic": {
+    "type": "generic",
+    "customType": "smokecan",
+    "canBeRemovedByHand": true,
+    "forwardsDamageMultiplier": 1.0,
+    "width": 0.3,
+    "height": 0.3
+  },
+  "parts": [],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Red Smoke Canister",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "customVariables": [
+      "SMOKE"
+    ],
+    "particles": [
+      //TEST-SMOKE
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "distance": 3,
+        "duration": 690,
+        "transparency": 0.2,
+        "toTransparency": 1.0,
+        "fadeTransparencyTime": 420,
+        "scale": 4.0,
+        "toScale": 20.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png"
+        ],
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "colorList": [
+         "981b1b",
+         "731313",
+         "af2727"
+        ],
+        "randomTexture": true,
+        "randomColor": true,
+        "pos": [0.0,-0.1,-0.0],
+        "spreadRandomness": [0.01,0.01,0.01],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "SMOKE",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "distance": 0.5,
+        "duration": 40,
+        "transparency": 0.25,
+        "toTransparency": 0.4,
+        "fadeTransparencyTime": 20,
+        "scale": 0.5,
+        "toScale": 5.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "colorList": [
+         "981b1b",
+         "731313",
+         "af2727"
+        ],
+        "randomTexture": true,
+        "randomColor": true,
+        "pos": [0.0,-0.1,0.0],
+        "spreadRandomness": [0.01,0.01,0.01],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "SMOKE",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Red Smoke Canister",
+    "description": "A canister containing chemicals that produce a colorful smoke trail when flying!",
+    "materialLists": [
+      [
+        "tags:dyes/red:2",
+        "minecraft:gunpowder:1",
+        "mts:mtsofficialpack.metaltube:1",
+        "mts:mtsofficialpack.copperwire:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

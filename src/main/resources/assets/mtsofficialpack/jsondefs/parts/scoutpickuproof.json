@@ -1,0 +1,92 @@
+{
+  "generic": {
+    "type": "generic",
+    "customType": "scoutpickuproof",
+    "useVehicleTexture": true,
+    "forwardsDamageMultiplier": 1.0,
+    "destroyable": true,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Scout Pickup Roof",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:carwind_inside",
+        "soundVariations": [
+          "mtsofficialpack:carwind_inside",
+          "mtsofficialpack:carwind_inside_90"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 300.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,0.09,0.0],
+            "offset": -0.8
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:rain_inside",
+        "pos": [0,2,1],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "rain_strength",
+            "clampMin": 1.0,
+            "clampMax": 2.0
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Scout Pickup Roof",
+    "description": "For that outback look, choose the pickup roof. Makes your car extra american.",
+    "health": 40,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:6",
+        "minecraft:glass_pane:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

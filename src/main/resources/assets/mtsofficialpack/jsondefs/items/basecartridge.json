@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Empty Shell",
+        "description": "An empty, high caliber shell casing.",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

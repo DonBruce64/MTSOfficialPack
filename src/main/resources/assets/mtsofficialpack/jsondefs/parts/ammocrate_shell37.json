@@ -1,0 +1,422 @@
+{
+  "generic": {
+    "type": "interactable_crate",
+    "customType": "crate_medium",
+    "forwardsDamageMultiplier": 1.0,
+    "canBePlacedOnGround": true,
+    "canBeRemovedByHand": true,
+    "destroyable": true,
+    "mass": 20,
+    "width": 0.8,
+    "height": 0.5
+  },
+  "variableModifiers":[
+    {
+      "variable": "door_lid",
+      "maxValue": 1,
+      "animations": [
+      {
+          "animationType": "visibility",
+          "variable": "part_present_1",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "part_present_1",
+          "axis": [0.0,0.0,-1.0]
+        }
+    ]
+    }
+  ],
+  "parts": [
+    {
+      "pos": [0.0,0.6875,0.0],
+      "allowParentRemoval": false,
+      "minValue": 0.0,
+      "maxValue": 40.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "customTypes": [
+      "crate_medium"
+      ],
+      "animations": [],
+      "linkedParts": []
+    }
+  ],
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.0,0.5,0.4],
+          "width": 0.3,
+          "height": 0.3125,
+          "variableName": "door_lid",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+      {
+          "animationType": "visibility",
+          "variable": "part_present_1",
+          "clampMin": 0.0,
+            "clampMax": 0.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "door_lid",
+          "duration": 0,
+          "axis": [0.0,0.6,-0.6]
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.0,0.3,0.0],
+          "width": 0.9,
+          "height": 0.7,
+          "variableName": "piss",
+          "variableType": "toggle"
+        }
+      ],
+      "animations": [
+      {
+          "animationType": "visibility",
+          "variable": "door_lid",
+          "clampMin": 0.0,
+            "clampMax": 0.0
+        }
+      ]
+    }
+  ],
+  "interactable": {
+    "interactionType": "crate",
+    "feedsVehicles": true,
+    "inventoryUnits": 0.67
+  },
+  "definitions": [
+  {
+      "subName": "_ap",
+      "name": "37mm AP Shell Transport Crate",
+      "extraMaterialLists": [
+        [
+        ]
+      ]
+    },
+    {
+      "subName": "_he",
+      "name": "37mm HE Shell Transport Crate",
+      "extraMaterialLists": [
+        [
+        "tags:dyes/green:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_prox",
+      "name": "37mm Proxy Shell Transport Crate",
+      "extraMaterialLists": [
+        [
+        "tags:dyes/gray:1"
+        ]
+      ]
+    }
+  ],
+  "rendering": {
+  "animatedObjects": [
+      {
+        "objectName": "lid",
+        "animations": [
+        {
+            "animationType": "rotation",
+            "variable": "door_lid",
+            "reverseDelay": 0,
+            "duration": 16,
+        	"centerPoint": [0,0.5625,-0.3125],
+        	"axis": [-100.0,0.0,0.0],
+        	"forwardsEasing": "easeoutback",
+            "reverseEasing": "easeoutbounce"
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "door_lid",
+            "clampMin":1,
+            "clampMax":1
+          },
+          {
+            "animationType": "rotation",
+            "variable": "player_interacting",
+            "reverseDelay": 0,
+            "duration": 10,
+        	"centerPoint": [0,0.5625,-0.3125],
+        	"axis": [-100.0,0.0,0.0],
+        	"forwardsEasing": "easeoutback",
+            "reverseEasing": "easeoutbounce"
+          }
+        ]
+      },
+      {
+        "objectName": "shell1",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.00000001,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shell2",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.167,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shell3",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.334,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shell4",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.51,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shell5",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.667,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "shell6",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.835,
+            "clampMax": 1
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/crate_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/crate_place0",
+        	"mtsofficialpack:placesound/crate_place1",
+        	"mtsofficialpack:placesound/crate_place2",
+        	"mtsofficialpack:placesound/crate_place3"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/crate_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/crate_remove0",
+        	"mtsofficialpack:placesound/crate_remove1",
+        	"mtsofficialpack:placesound/crate_remove2"
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/crate_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/crate_place0",
+        	"mtsofficialpack:placesound/crate_place1",
+        	"mtsofficialpack:placesound/crate_place2",
+        	"mtsofficialpack:placesound/crate_place3"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/crate_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/crate_remove0",
+        	"mtsofficialpack:placesound/crate_remove1",
+        	"mtsofficialpack:placesound/crate_remove2"
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    {
+        "name": "mtsofficialpack:crateclose",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "door_lid",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:crateopen",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "door_lid",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      {
+        "name": "mtsofficialpack:crateclose",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "door_lid",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:crateopen",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "door_lid",
+            "reverseDelay": 0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "37mm Shell Transport Crate",
+    "description": "A simple box for storing bulk amounts of 37mm autocannon shells of all kinds. Safety regulations have most definetly been respected.",
+    "health": 50,
+    "materialLists": [
+      [
+        "minecraft:chest:1",
+        "mts:mtsofficialpack.plating:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

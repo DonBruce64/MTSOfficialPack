@@ -1,105 +1,193 @@
 {
-    "general": {
-        "name" : "Brigadier Stakebed",
-        "type" : "generic",
-        "customType" : "brigbed",
-        "materials" : ["oredict:plankWood:5", "minecraft:iron_bars:0:3"]
+  "generic": {
+    "type": "generic",
+    "customType": "brigbed",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 850,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "parts": [
+    {
+      "pos": [-0.85,0.3125,1.49],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
     },
-    "generic": {
-        "width" : 1.5,
-        "height" : 0.5,
-				"disableMirroring": true
+    {
+      "pos": [-0.85,0.3125,0.69],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
     },
-    "subParts" : [
+    {
+      "pos": [-0.85,0.3125,-0.91],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [-0.85,0.3125,-0.101],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [-0.85,0.3125,-1.71],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.0,0.3125,1.49],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.0,0.3125,0.69],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.0,0.3125,-0.901],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.0,0.3125,-0.101],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.0,0.3125,-1.71],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.85,0.3125,1.49],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.85,0.3125,0.69],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.85,0.3125,-0.901],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.85,0.3125,-0.101],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    },
+    {
+      "pos": [0.85,0.3125,-1.71],
+      "maxValue": 3.0,
+      "types": [
+        "interactable_crate",
+        "interactable_barrel"
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Brigadier Stakebed",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_place",
+        "activeAnimations": [
         {
-            "pos" : [-0.85, 0.6875, 1.49],
-            "types" : ["interactable_crate", "interactable_barrel"],
-            "minValue" : 0,
-            "maxValue" : 3
-        },
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_remove",
+        "activeAnimations": [
         {
-            "pos" : [-0.85, 0.6875, 0.69],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [-0.85, 0.6875, -0.91],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [-0.85, 0.6875, -0.101],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [-0.85, 0.6875, -1.71],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [-0, 0.6875, 1.49],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [-0, 0.6875, 0.69],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [-0, 0.6875, -0.901],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [-0, 0.6875, -0.101],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-            "maxValue" : 3
-        },
-		{
-            "pos" : [-0, 0.6875, -1.71],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [0.85, 0.6875, 1.49],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [0.85, 0.6875, 0.69],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [0.85, 0.6875, -0.901],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [0.85, 0.6875, -0.101],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        },
-		{
-            "pos" : [0.85, 0.6875, -1.71],
-            "types" : ["interactable_crate", "interactable_barrel"],
-			"minValue" : 0,
-			"maxValue" : 3
-        }  
-	]
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 26.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Brigadier Stakebed",
+    "description": "This bed has plenty of space for crates and barrels, making it the perfect choice for transporting large amounts of diverse content.",
+    "materialLists": [
+      [
+        "tags:wooden_slabs:32",
+        "mts:mtsofficialpack.screws:10",
+        "mts:mtsofficialpack.plating:6",
+        "minecraft:iron_bars:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

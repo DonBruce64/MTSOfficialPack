@@ -1,0 +1,68 @@
+{
+  "generic": {
+    "type": "interactable_crate",
+    "customType": "gloveboxscout",
+    "width": 0.4,
+    "height": 0.2
+  },
+  "interactable": {
+    "interactionType": "crate",
+    "inventoryUnits": 0.35
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Glovebox Skyhawk",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+  "animatedObjects": [
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:interactable/glovebox_skyhawk_close",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:interactable/glovebox_skyhawk_open",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Glovebox Skyhawk",
+    "description": "Built in glovebox for the Skyhawk",
+    "hideOnCreativeTab": true, 
+    "materialLists": [],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

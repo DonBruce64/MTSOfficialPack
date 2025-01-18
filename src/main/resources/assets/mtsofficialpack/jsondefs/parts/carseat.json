@@ -1,0 +1,191 @@
+{
+  "generic": {
+    "type": "seat",
+    "mass": 10,
+    "forwardsDamageMultiplier": 1.0
+  },
+  "seat": {},
+  "definitions": [
+    {
+      "subName": "_black",
+      "name": "Black Car Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:leather:1",
+          "tags:dyes/black:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_brown",
+      "name": "Brown Car Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:leather:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_red",
+      "name": "Red Car Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:leather:1",
+          "tags:dyes/red:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_white",
+      "name": "White Car Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:leather:1",
+          "tags:dyes/white:1"
+        ]
+      ]
+    },
+    {
+      "subName": "_grey",
+      "name": "Gray Car Seat",
+      "extraMaterialLists": [
+        [
+          "minecraft:leather:1",
+          "tags:dyes/light_gray:1"
+        ]
+      ]
+    }
+  ],
+  "rendering": {
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/seat_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/seat_place0",
+        	"mtsofficialpack:placesound/seat_place1",
+        	"mtsofficialpack:placesound/seat_place2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:placesound/seat_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/seat_place0",
+        	"mtsofficialpack:placesound/seat_place1",
+        	"mtsofficialpack:placesound/seat_place2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      {
+        "name": "mtsofficialpack:bucklein",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "seat_occupied",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 3.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:buckleout",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "seat_occupied"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 3.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Generic Car Seat",
+    "description": "If you dont want to look like a cheap chap, look no further than installing some proper, high quality leather seats into your fine automobile!",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

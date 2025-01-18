@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Solid Propellant",
+        "stackSize": 64,
+        "description": "Composite of oxidizer and energetic fuel. It smells sweet.",
+        "materials": [],
+        "type": "none"
+    }
+}
