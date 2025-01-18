@@ -5,8 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -39,16 +39,19 @@ public class PackCompiler {
 
             //Remove any old packs.
             File libsDir = new File(currentDir, "build/libs");
-            for (File file : libsDir.listFiles()) {
-                file.delete();
+            if (libsDir.exists()) {
+                for (File file : libsDir.listFiles()) {
+                    file.delete();
+                }
             }
 
             //Make sure ForgePackLoader.java is proper to all included mods.
-            List<File> packCompiledFiles = new ArrayList<>();
-            File packAssetDir = new File(currentDir, "src/main/resources/assets");
-            for (File file : packAssetDir.listFiles()) {
+            Set<String> packIDs = new HashSet<>();
+            File packAssetRootDir = new File(currentDir, "src/main/resources/assets");
+            for (File file : packAssetRootDir.listFiles()) {
                 if (file.isDirectory()) {
                     String packID = file.getName();
+                    packIDs.add(packID);
                     File packCompiledFileDir = new File(currentDir, "src/main/java/" + packID);
                     System.out.println("Found pack with ID: " + packID);
 
@@ -57,7 +60,33 @@ public class PackCompiler {
                     BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(packCompiledFile)));
                     fileOutput.write(data);
                     fileOutput.close();
-                    packCompiledFiles.add(packCompiledFile);
+                }
+            }
+
+            //Check for pngs in the texture folder and make any item JSON models as required.
+            for (String packID : packIDs) {
+                Set<String> requiredJSONs = new HashSet<>();
+                File packAssetItemJSONDir = new File(packAssetRootDir, packID + "/models/item");
+                File packAssetItemPNGDir = new File(packAssetRootDir, packID + "/textures/item");
+                if (packAssetItemPNGDir.exists()) {
+                    for (File pngFile : packAssetItemPNGDir.listFiles()) {
+                        String rawFileName = pngFile.getName().substring(0, pngFile.getName().lastIndexOf("."));
+                        File jsonFile = new File(packAssetItemJSONDir, packID + "." + rawFileName + ".json");
+                        requiredJSONs.add(jsonFile.getName());
+                        if (!jsonFile.exists()) {
+                            String createdJSON = "{\"parent\":\"mts:item/basic\",\"textures\":{\"layer0\": \"" + packID + ":item/" + rawFileName + "\"}}";
+                            BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(jsonFile)));
+                            fileOutput.write(createdJSON);
+                            fileOutput.close();
+                            System.out.println("Auto-created missing item JSON for " + packID + ":" + rawFileName);
+                        }
+                    }
+                    for (File jsonFile : packAssetItemJSONDir.listFiles()) {
+                        if (!requiredJSONs.contains(jsonFile.getName())) {
+                            jsonFile.delete();
+                            System.out.println("Removed un-needed JSON file " + packID + ":" + jsonFile.getName());
+                        }
+                    }
                 }
             }
 
@@ -71,7 +100,7 @@ public class PackCompiler {
 
             //Now make a 1.12.2 compliant pack by zipping everything in the assets folder.
             ZipOutputStream pack = new ZipOutputStream(new FileOutputStream(new File(libsDir, "Pack-1.12.2.jar")));
-            addToZip(packAssetDir, pack, packAssetDir.getAbsolutePath().length() - "assets".length());
+            addToZip(packAssetRootDir, pack, packAssetRootDir.getAbsolutePath().length() - "assets".length());
             pack.close();
 
             System.out.println("Your pack is located in " + libsDir.getAbsolutePath().toString());
