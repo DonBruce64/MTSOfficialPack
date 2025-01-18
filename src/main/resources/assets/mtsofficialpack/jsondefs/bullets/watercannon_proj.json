@@ -1,0 +1,140 @@
+{
+  "bullet": {
+    "types": [
+      "water"
+    ],
+    "quantity": 4000,
+    "pellets": 15,
+    "knockback": 0.04,
+    "diameter": 101.01,
+    "damage": 0.0,
+    //0.0315
+    "gravitationalVelocity": 0.0315,
+    //100
+    "despawnTime": 50,
+    "impactDespawnTime": 5
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Watercannnon Water Tank",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "benchdisplay",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "e",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "watercannnon_proj",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "e",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+    ],
+    "sounds": [],
+    "particles": [
+      {
+        "type": "generic",
+        "spawningOrientation": "facing",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 10,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 5,
+        "scale": 1.0,
+        "toScale": 2.3,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/splash_0.png",
+          "mtsofficialpack:textures/bullets/splash_1.png",
+          "mtsofficialpack:textures/bullets/splash_2.png",
+          "mtsofficialpack:textures/bullets/splash_3.png",
+          "mtsofficialpack:textures/bullets/splash_4.png"
+        ],
+        "pos": [0.0,0.2,0.0],
+        "initialVelocity": [0.0,5.0,0.0],
+        "spreadRandomness": [3.0,3.0,3.0],
+        "movementVelocity": [0.0,-0.1,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "facing",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 5,
+        "transparency": 0.9,
+        "toTransparency": -0.001,
+        "scale": 0.4,
+        "toScale": 10.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "FFFFFF",
+        "pos": [0.0,0.5,0.0],
+        "initialVelocity": [0.0,1.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+  "name": "Watercannon Water Tank",
+    "description": "Heavy, big tank full of water, used by the watercannon.",
+    "materialLists": [
+      [
+        "minecraft:water_bucket:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0,
+    "type": "bullet"
+  }
+}

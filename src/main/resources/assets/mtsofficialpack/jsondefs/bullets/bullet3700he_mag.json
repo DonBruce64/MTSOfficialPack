@@ -3,19 +3,22 @@
     "types": [
       "explosive"
     ],
-    "quantity": 1,
+    "casingModel": "mtsofficialpack:objmodels/bullets/casing37he.obj",
+    "casingTexture": "mtsofficialpack:textures/bullets/casing37he.png",
+    "quantity": 6,
     "diameter": 37.0,
     "damage": 55.0,
     "knockback": 5.5,
-    "blastStrength": 3.3,
+    "blastStrength": 3.5,
+    //0.033
     "gravitationalVelocity": 0.033,
     "despawnTime": 100,
-    "impactDespawnTime": 50
+    "impactDespawnTime": 100
   },
   "definitions": [
     {
       "subName": "",
-      "name": "37mm Explosive Shell",
+      "name": "6rnd Explosive 37mm Magazine",
       "extraMaterialLists": [
         []
       ]
@@ -664,7 +667,7 @@
           }
         ]
       },
-      
+    
       {
         "type": "generic",
         "daytimeReductionFactor": 0.2,
@@ -1811,14 +1814,11 @@
     "modelType": "obj"
   },
   "general": {
-    "description": "A 37mm round with a high explosive projectile. It explosive potential makes it perfect for crowd control or the demolition of fortifications.",
-    "stackSize": 4,
+    "description": "Dont like loading individual shells into your AA? Have six of them in one magazine!",
     "materialLists": [
       [
-      "mts:mtsofficialpack.fuzeimpact:1",
-      "mts:mtsofficialpack.explosives:1",
-      "minecraft:gunpowder:1",
-      "mts:mtsofficialpack.basecartridge:1"
+        "mts:mtsofficialpack.bullet3700he:6",
+        "mts:mtsofficialpack.plating:1"
       ]
     ],
     "radarWidth": 0.0,
