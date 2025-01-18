@@ -51,22 +51,23 @@ public class PackCompiler {
             for (File file : packAssetRootDir.listFiles()) {
                 if (file.isDirectory()) {
                     String packID = file.getName();
-                    packIDs.add(packID);
                     File packCompiledFileDir = new File(currentDir, "src/main/java/" + packID);
-                    System.out.println("Found pack with ID: " + packID);
-
                     File packCompiledFile = new File(packCompiledFileDir, "ForgePackLoader.java");
-                    String data = BASE_COMPILED_FILE.replace("packID", packID);
-                    BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(packCompiledFile)));
-                    fileOutput.write(data);
-                    fileOutput.close();
+                    if (packCompiledFile.exists()) {
+                        packIDs.add(packID);
+                        System.out.println("Found pack with ID: " + packID);
+                        String data = BASE_COMPILED_FILE.replace("packID", packID);
+                        BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(packCompiledFile)));
+                        fileOutput.write(data);
+                        fileOutput.close();
+                    }
                 }
             }
 
             //Check for pngs in the texture folder and make any item JSON models as required.
             for (String packID : packIDs) {
                 Set<String> requiredJSONs = new HashSet<>();
-                File packAssetItemJSONDir = new File(packAssetRootDir, packID + "/models/item");
+                File packAssetItemJSONDir = new File(packAssetRootDir, "mts/models/item");
                 File packAssetItemPNGDir = new File(packAssetRootDir, packID + "/textures/item");
                 if (packAssetItemPNGDir.exists()) {
                     for (File pngFile : packAssetItemPNGDir.listFiles()) {
@@ -74,6 +75,7 @@ public class PackCompiler {
                         File jsonFile = new File(packAssetItemJSONDir, packID + "." + rawFileName + ".json");
                         requiredJSONs.add(jsonFile.getName());
                         if (!jsonFile.exists()) {
+                            jsonFile.getParentFile().mkdirs();
                             String createdJSON = "{\"parent\":\"mts:item/basic\",\"textures\":{\"layer0\": \"" + packID + ":item/" + rawFileName + "\"}}";
                             BufferedWriter fileOutput = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(jsonFile)));
                             fileOutput.write(createdJSON);
