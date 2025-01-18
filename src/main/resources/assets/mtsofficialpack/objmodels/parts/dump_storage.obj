@@ -1,0 +1,15 @@
+# Made in Blockbench 4.11.2
+mtllib dump_storage.mtl
+
+o dump_storage
+v 0 0.4375 0.21875
+v 0 0.4375 -0.21875
+v 0 0 0.21875
+v 0 0 -0.21875
+vt 0.125 0.875
+vt 0.125 1
+vt 0 1
+vt 0 0.875
+vn 1 0 0
+usemtl none
+f 4/1/1 2/2/1 1/3/1 3/4/1
