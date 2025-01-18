@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Small Piston",
+        "stackSize": 64,
+        "description": "I piston the moon!",
+        "materials": [],
+        "type": "none"
+    }
+}

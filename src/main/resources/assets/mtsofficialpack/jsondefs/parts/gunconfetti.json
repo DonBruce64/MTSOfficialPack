@@ -1,0 +1,200 @@
+{
+  "generic": {
+    "type": "gun_handheld_flare",
+    "canBeRemovedByHand": true,
+    "width": 0.3,
+    "height": 0.3,
+    "forwardsDamageMultiplier": 1.0
+  },
+  "gun": {
+    "lockOnType": "default",
+    "targetType": "all",
+    "handHeld": true,
+	"isClipless": true,
+	"handHeldNormalOffset": [-0.1,0.1,0.7],
+    "handHeldAimedOffset": [0.26,0.0,0.5],
+    "capacity": 0,
+    "reloadTime": 30,
+	"reloadStartTime": 8,
+	"reloadEndTime": 10,
+    "muzzleVelocity": 90,
+    "fireDelay": 20.0,
+    "diameter": 18.5,
+    "yawSpeed": 1.1830065,
+    "pitchSpeed": 1.1830065,
+    "lockMaxAngle": 0.0,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.18,0.0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
+  },
+  "rendering": {
+  	"textObjects": [],
+    "animatedObjects": [
+      {
+        "objectName": "hammer",
+        "animations": [
+        {
+            "animationType": "rotation",
+            "variable": "gun_reload",
+            "centerPoint": [0.0,0.0,-0.01875],
+            "axis": [-35.0,0.0,0.0]
+          },
+        {
+            "animationType": "inhibitor",
+            "variable": "!gun_reload"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_firing",
+            "centerPoint": [0.0,0.0,-0.01875],
+            "axis": [-35.0,0.0,0.0],
+            "duration": 5,
+            "skipReverseMovement": true,
+            "forwardsEndSound": "mtsofficialpack:gunflaregun_cock",
+            "reverseStartSound": "mtsofficialpack:gunflaregun_cock"
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:gunflaregun_equip",
+        "pos":[0.3,0.0,1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_inhand_equipped",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+    {
+        "name": "mtsofficialpack:gunflaregun_deequip",
+        "pos":[0.3,0.0,1.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_inhand_equipped",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+    {
+        "name": "mtsofficialpack:gunconfetti_firing",
+        "activeAnimations": [
+        
+         {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 40,
+        "duration": 100,
+        "movementDuration": 10,
+        "transparency": 1.0,
+        "scale": 0.8,
+        "toScale": 0.001,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/unused/confetti_red1.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_red2.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_red3.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_red4.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_blue1.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_blue2.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_blue3.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_blue4.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_yellow1.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_yellow2.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_yellow3.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_yellow4.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_green1.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_green2.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_green3.png",
+          "mtsofficialpack:textures/bullets/unused/confetti_green4.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.18,1],
+        "spreadRandomness": [8.0,8.0,13.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "initialVelocity": [0.0,0.0,20.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "§6§l[2M]Confetti Gun",
+    "description": "A harmless gun firing many small paper scraps everywhere! Partys on! Snail Dynamic tech makes it have infinite shots.",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.metaltube:1",
+        "minecraft:paper:4",
+        "minecraft:shears:1",
+		"tags:dyes/red:1",
+		"tags:dyes/green:1",
+		"tags:dyes/yellow:1",
+		"tags:dyes/blue:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

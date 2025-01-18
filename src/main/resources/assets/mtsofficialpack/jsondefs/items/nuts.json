@@ -1,12 +1,23 @@
 {
-  "general": {
-	"name" : "Nuts",
-	"materials" : ["minecraft:pumpkin_seeds:0:1", "oredict:dyeRed:1"],
-	"type" : "food"
+  "item": {
+    "type": "food"
   },
-	"food":{
-		"timeToEat": 20,
-		"hungerAmount": 5,
-		"saturationAmount": 0.6
-	}
+  "food": {
+    "timeToEat": 20,
+    "hungerAmount": 3,
+    "saturationAmount": 0.6
+  },
+  "general": {
+    "name": "Nuts",
+    "description": "Deez invented those!",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "minecraft:pumpkin_seeds:1",
+        "tags:dyes/red:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

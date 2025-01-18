@@ -1,0 +1,358 @@
+{
+  "generic": {
+    "type": "gun_turret",
+    "forwardsDamageMultiplier": 1.0,
+    "destroyable": true,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "gun_yaw",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,1.0,0.0]
+      }
+    ]
+  },
+  "gun": {
+    "lockOnType": "default",
+    "targetType": "all",
+    "autoReload": true,
+    "capacity": 0,
+    "reloadTime": 120,
+    "muzzleVelocity": 2,
+    "fireDelay": 10.0,
+    "bulletSpreadFactor": 0.4,
+    "minYaw": -180.0,
+    "maxYaw": 180.0,
+    "minPitch": -15.0,
+    "maxPitch": 75.0,
+    "diameter": 7.0,
+    "yawSpeed": 3.7,
+    "pitchSpeed": 3.7,
+    "lockMaxAngle": 0.0,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [-0.03125,1.5,2.93],
+            "rot": [0.0,0.0,0.0],
+            "center": [-0.03125,1.5,-0.2187]
+          }
+        ]
+      }
+    ]
+  },
+  "parts": [
+    {
+      "pos": [0.8825,0.625,-0.305],
+      "types": [
+        "seat"
+      ]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.90625,0.0],
+          "width": 1.0,
+          "height": 1.8125
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.95,0.7781,0.6227875],
+          "width": 0.3,
+          "height": 0.3125,
+          "variableName": "switch",
+          "variableType": "toggle"
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Spotlight",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$wheel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [0.5,1.125,0.25],
+            "axis": [10.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "&light",
+        "applyAfter": "$barrel",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "switch",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "&led",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "switch",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "objectName": "$barrel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$button",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "switch",
+            "duration": 3,
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [0.0,-0.0325,0.0325]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&light",
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+        {
+            "animationType": "translation",
+            "variable": "switch",
+            "axis": [0.0,0.8,0.0],
+            "duration": 15,
+            "forwardsEasing": "easeoutelastic",
+            "reverseEasing": "easeinexpo"
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.0,1.42969,0.984125],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 3.7,
+            "flareWidth": 3.7
+          },
+          {
+            "pos": [0.0,1.42969,0.984125],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 2.7,
+            "flareWidth": 2.7
+          },
+          {
+            "pos": [0.0,1.42969,0.91],
+            "axis": [0.0,0.0,1.0],
+            "beamDiameter": 7.0,
+            "beamLength": 5.0
+          },
+          {
+            "pos": [0.0,1.42969,-0.187222],
+            "axis": [0.0,0.0,1.0],
+            "beamDiameter": 90.0,
+            "beamLength": 250.0
+          },
+          {
+            "pos": [0.0,1.42969,-0.187222],
+            "axis": [0.0,0.0,1.0],
+            "beamDiameter": 50.0,
+            "beamLength": 230.0
+          }
+        ]
+      },
+      {
+        "objectName": "&led",
+        "color": "FFB429",
+        "brightnessAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "!switch"
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.75,0.7781,0.6227875],
+            "axis": [0.0,0.7,-1.0],
+            "flareHeight": 0.15,
+            "flareWidth": 0.15
+          }
+        ]
+      }
+    ],
+    "sounds": [
+    //place-remove
+    	{
+        "name": "mtsofficialpack:placesound/AA_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/AA_place0",
+        	"mtsofficialpack:placesound/AA_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/AA_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/AA_place0",
+        	"mtsofficialpack:placesound/AA_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+    //button
+    	{
+        "name": "mtsofficialpack:interactable/buttonpush",
+        "pos": [0.95,0.78,0.62],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "switch",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:interactable/buttonrelease",
+        "pos": [0.95,0.78,0.62],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "switch",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      },
+    //servo
+    	{
+        "name": "mtsofficialpack:aa_yawservo",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_yawing",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 25.0,
+        "maxDistanceVolume": 0.0
+      },
+    //spotlight
+    	{
+        "name": "mtsofficialpack:spotlight_active",
+        "pos": [0.95,0.78,0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "switch",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 25.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:spotlight_loop",
+        "pos": [0.95,0.78,0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "switch",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.1,
+        "maxDistance": 8.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Spotlight",
+    "description": "With this oversized flashlight, SnailDynamics ensures high performance conical photon distribution even on the darkest of nights. This powerful beam marks and lights up any airborne target for your AA gunners to take care of.",
+    "health": 80,
+    "materialLists": [
+      [
+        "tags:ingots/iron:5",
+        "mts:mtsofficialpack.screws:10",
+        "minecraft:lever:2",
+        "minecraft:iron_trapdoor:2",
+        "minecraft:glass:10",
+        "tags:dusts/redstone:15",
+        "mts:mtsofficialpack.headlight:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

@@ -1,32 +1,1742 @@
 {
-    "general": {
-        "name" : "Pratt & Whitney 610F Jet Engine",
-        "type" : "engine_jet",
-		"materials" : ["minecraft:piston:0:9", "minecraft:obsidian:0:5", "oredict:ingotIron:1"]
-    },
-	"engine" : {
-        "isAutomatic" : true,
-        "starterPower" : 30,
-        "maxRPM" : 24310,
-        "fuelConsumption" : 0.35,
-        "fuelType" : "avgas",
-				"bypassRatio" : 1.83,
-				"jetPowerFactor" : 1.0,
-        "gearRatios" : [-1.0, 0.0, 1.0]
-	},
-   "rendering": {
-		"animatedObjects" : [
-			{
-                "objectName" : "$IntakeFan",
-                "animations": [
-                    {
-                        "animationType": "rotation",
-                        "centerPoint" : [0, 0, 0],
-                        "axis" : [0, 0, 1],
-                        "variable" : "engine_rotation_1"
-                    }
-                ]
-			}
-		]
-	}
+ "generic": {
+    "type": "engine_jet",
+    "forwardsDamageMultiplier": 1.0,
+    "destroyable": true,
+    "width": 0.8,
+    "height": 0.8
+  },
+  "engine": {
+    "type": "normal",
+    "isAutomatic": true,
+    "starterPower": 30,
+    "shiftSpeed": 20,
+    //resistance to 5
+    "revResistance": 5,
+    //max rpm to
+    "maxRPM": 14000,
+    "maxSafeRPM": 14000,
+    //idle at
+    "idleRPM": 2000,
+    //start at
+    "startRPM": 2400,
+    "revlimitRPM": -1,
+    "revlimitBounce": 10,
+    //stalls at
+    "stallRPM": 1300,
+    "engineWinddownRate": 10,
+    //jets harder to overheat
+    "heatingCoefficient": 0.5,
+    "coolingCoefficient": 1.0,
+    //jets wear slower due to less moving parts
+    "engineWearFactor": 0.4,
+    "fuelConsumption": 0.35,
+    //power to 0.
+    "jetPowerFactor": 1.0,
+    "bypassRatio": 2.5,
+    "gearRatios": [-1.0,0.0,1.0],
+    "fuelType": "avgas"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Pratt & Whitney 610F Jet Engine",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "intake_fan",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rotation",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.0,0.5]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/engine_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_place0",
+        	"mtsofficialpack:placesound/engine_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    //basics
+      {
+        "name": "mtsofficialpack:enginepw610f_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginepw610f_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginepw610f_sputter",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:engine_shifting_grinding",
+        "soundVariations": [
+          "mtsofficialpack:engine_shifting_grinding1",
+          "mtsofficialpack:engine_shifting_grinding2",
+          "mtsofficialpack:engine_shifting_grinding3",
+          "mtsofficialpack:engine_shifting_grinding4"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_badshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginepw610f_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "electric_power",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.3,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.1,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      //crankinghowl IN
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000_inside",
+        "activeAnimations": [       
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.0005,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //crankinghowl OUT IN
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000",
+        "activeAnimations": [       
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 30,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.0005,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //crankinghowl OUT
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000",
+        "activeAnimations": [       
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,0.0005,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 60.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      
+      
+      
+      
+    //14000 rpm
+      {
+        "name": "mtsofficialpack:enginepw610f_running_14000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.35,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.75,0.0],
+            "offset": -1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.5,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 100.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 200.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginepw610f_running_14000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 30,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.35,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.75,0.0],
+            "offset": -1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.5,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 160.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginepw610f_running_14000_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.35,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.75,0.0],
+            "offset": -1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.5,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isInterior": true
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginepw610f_running_14000_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.35,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.75,0.0],
+            "offset": -1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.5,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 50.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 150.0,
+        "middleDistanceVolume": 0.5,
+        "maxDistance": 300.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginepw610f_running_14000_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.35,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.75,0.0],
+            "offset": -1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.5,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 150.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 250.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 550.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //10000 rpm
+	  {
+        "name": "mtsofficialpack:enginepw610f_running_10000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.575,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-10,1,0.6],
+            "offset": 1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.15,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 150.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 200.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginepw610f_running_10000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 30,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.575,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-10,1,0.6],
+            "offset": 1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.15,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 140.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginepw610f_running_10000_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.575,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-10,1,0.6],
+            "offset": 1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.15,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isInterior": true
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginepw610f_running_10000_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.575,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-10,1,0.6],
+            "offset": 1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.15,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 40.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 140.0,
+        "middleDistanceVolume": 0.5,
+        "maxDistance": 250.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginepw610f_running_10000_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.575,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-10,1,0.6],
+            "offset": 1
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,-0.15,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 140.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 240.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 380.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //6000 rpm
+	  {
+        "name": "mtsofficialpack:enginepw610f_running_6000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.385,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-11,1,0.3],
+            "offset": 0.8
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.25,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 100.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 150.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginepw610f_running_6000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 30,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.385,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-11,1,0.3],
+            "offset": 0.8
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.25,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 50.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 120.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5,0.0],
+            "offset": 0.4
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [0,-2,0],
+            "offset": 1.25
+          }
+        ],
+        "looping": true,
+        "isInterior": true
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginepw610f_running_6000_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.385,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-11,1,0.3],
+            "offset": 0.8
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.25,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 50.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 130.0,
+        "middleDistanceVolume": 0.5,
+        "maxDistance": 230.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginepw610f_running_6000_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.385,0.0],
+            "offset": 0
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [-11,1,0.3],
+            "offset": 0.8
+          },
+		  {
+            "animationType": "translation",
+            "variable": "throttle",
+            "axis": [0.0,0.25,0.0],
+            "offset": 0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 120.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 230.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 350.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //2000 rpm
+	  {
+        "name": "mtsofficialpack:enginepw610f_running_2000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5,0.0],
+            "offset": 0.4
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [0,-2,0],
+            "offset": 1.25
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 60.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 120.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 30,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5,0.0],
+            "offset": 0.4
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [0,-2,0],
+            "offset": 1.25
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      }, //OUT IN
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5,0.0],
+            "offset": 0.4
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [0,-2,0],
+            "offset": 1.25
+          }
+        ],
+        "looping": true,
+        "isInterior": true
+      }, //IN
+      
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5,0.0],
+            "offset": 0.4
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [0,-2,0],
+            "offset": 1.25
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 40.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 100.0,
+        "middleDistanceVolume": 0.5,
+        "maxDistance": 140.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:enginepw610f_running_2000_moredistant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5,0.0],
+            "offset": 0.4
+          }
+        ],
+		"volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+			"centerPoint": [0,0,0],
+            "axis": [0,-2,0],
+            "offset": 1.25
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 100.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 140.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 260.0,
+        "maxDistanceVolume": 0.0
+      }
+      
+    ],
+    "particles": [
+    //propellerdust
+      //SAND
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 58,
+        "transparency": 0.1,
+        "toTransparency": 0.000001,
+        "movementDuration": 34,
+        "scale": 5.0,
+        "toScale": 20.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "getBlockPropertiesFromGround": true,
+        "useBlockColor": true,
+        "randomColor": true,
+        "pos": [0,0.3,-1],
+         "spreadRandomness": [1.8,0.5,2.0],
+        "initialVelocity": [0.0,0.5,-6.0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.9,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "pitch",
+            "centerPoint": [0,0.0,0],
+            "axis": [-0.9,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 3.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+        {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      //SANDREAL
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 58,
+        "transparency": 0.1,
+        "toTransparency": 0.000001,
+        "movementDuration": 34,
+        "scale": 5.0,
+        "toScale": 20.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "textureDelays": [8,8,8,8,8,8,8,8,8,8,8,8,8],
+        "colorList": [
+          "eddeaf",
+          "efd6b8",
+          "ddcab3",
+          "e4d2b8"
+        ],
+        "randomColor": true,
+        "pos": [0,0.3,-1],
+         "spreadRandomness": [1.8,0.5,2.0],
+        "initialVelocity": [0.0,0.5,-6.0],
+        "movementVelocity": [0.0,0.0001,-0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.9,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "pitch",
+            "centerPoint": [0,0.0,0],
+            "axis": [-0.9,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 3.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockname_minecraft:sand",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+        {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      //WATER
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 30,
+        "movementDuration": 25,
+        "transparency": 0.10,
+        "toTransparency": 0.001,
+        "scale": 0.4,
+        "toScale": 20.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "ffffff",
+        "pos": [0,0.6,-1],
+        "spreadRandomness": [6.0,0.5,9.0],
+        "initialVelocity": [0.0,0.5,-10.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "spawningAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "terrain_distance",
+            "centerPoint": [0,0,0],
+            "axis": [0.0,-0.99,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "pitch",
+            "centerPoint": [1.0625,0.3,-2.5],
+            "axis": [-0.9,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1.0,
+            "clampMax": 1
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 0.0,
+            "clampMax": 5.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_piston_1_1_cam",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      //damagesmoke stage1
+      {
+        "type": "generic",
+        "distance": 1.0,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 110,
+        "transparency": 0.085,
+        "toTransparency": 1.0E-4,
+        "scale": 3.0,
+        "toScale": 15.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [10,10,10,10,10,10,10,10,10,10,10,10],
+        "randomTexture": true,
+        "colorList": [
+          "857D76",
+          "908882",
+          "948e89",
+          "7f766e",
+          "75706b",
+          "706962"
+        ],
+        "randomColor": true,
+        "pos": [0,0,0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "spreadRandomness": [0.4,0.4,0.4],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_percent",
+            "clampMin": 30,
+            "clampMax": 50
+          }
+        ]
+      },
+      //damagesmoke stage2
+      {
+        "type": "generic",
+        "distance": 1.0,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 150,
+        "transparency": 0.07,
+        "toTransparency": 1.0E-4,
+        "scale": 4.0,
+        "toScale": 25.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [12,12,12,12,12,12,12,12,12,12,12,12],
+        "randomTexture": true,
+        "colorList": [
+          "57514b",
+          "645e57",
+          "4e4843",
+          "49443e",
+          "413c37"
+        ],
+        "randomColor": true,
+        "pos": [0,0,0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "spreadRandomness": [0.5,0.5,0.4],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_percent",
+            "clampMin": 50,
+            "clampMax": 80
+          }
+        ]
+      },
+      //damagesmoke stage3
+      {
+        "type": "generic",
+        "distance": 1.5,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 200,
+        "transparency": 0.08,
+        "toTransparency": 1.0E-4,
+        "scale": 4.0,
+        "toScale": 35.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [14,14,14,14,14,14,14,14,14,14,14,14],
+        "randomTexture": true,
+        "color": "332E2B",
+        "pos": [0,0,0],
+        "spreadRandomness": [0.6,0.6,0.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_percent",
+            "clampMin": 0.8,
+            "clampMax": 1
+          }
+        ]
+      },
+      //totaledfire
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 28,
+        "movementDuration": 14,
+        "transparency": 1.0,
+        "scale": 3.0,
+        "toScale": 0.020000001,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [4,4,4,4,4,4,4],
+        "randomTexture": true,
+        "pos": [0.0,0.0,0.0],
+        "spreadRandomness": [1.2,1.0,1.2],
+        "initialVelocity": [0.0,2.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 4.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      //totaledsmoke
+      {
+        "type": "generic",
+        "distance": 1.5,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 280,
+        "transparency": 0.1,
+        "fadeTransparencyTime": 100,
+        "scale": 6.0,
+        "toScale": 30.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [20,20,20,20,20,20,20,20,20,20,20,20],
+        "randomTexture": true,
+        "color": "292521",
+        "pos": [0,0,0],
+        "spreadRandomness": [0.3,0.3,0.0],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 4.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "speed",
+            "clampMin": 1.0,
+            "clampMax": 1001.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_damage_totaled",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      
+      //contrails
+    {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "distance": 5,
+        "duration": 1420,
+        "transparency": 0.05,
+        "toTransparency": 0.2,
+        "fadeTransparencyTime": 500,
+        "scale": 2.0,
+        "toScale": 25.0,
+        "ignoreCollision": true,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "textureDelays": [34,34,34,34,34,34,34,34,34,34,34,34],
+        "randomTexture": true,
+        "pos": [0,0,0],
+        "spreadRandomness": [0.01,0.01,0.01],
+        "initialVelocity": [0.0,0.0,-0.5],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_distance",
+            "clampMin": 180.0,
+            "clampMax": 10000.0
+          }
+        ]
+      },
+      
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 20,
+        "movementDuration": 14,
+        "transparency": 1.0,
+        "scale": 0.4,
+        "toScale": 0.020000001,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/bang0.png",
+          "mtsofficialpack:textures/bullets/bang0d.png",
+          "mtsofficialpack:textures/bullets/bang0b.png",
+          "mtsofficialpack:textures/bullets/bang0a.png",
+          "mtsofficialpack:textures/bullets/bang0c.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.0,0.0],
+        "spreadRandomness": [2.0,2.0,2.0],
+        "initialVelocity": [0.0,3.0,0.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "damage",
+            "clampMin": 5.0,
+            "clampMax": 20.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Pratt & Whitney 610F Jet Engine",
+    "health": 20,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.copperwire:10",
+        "mts:mtsofficialpack.sparkplug:2",
+		"mts:mtsofficialpack.circuit:2",
+        "mts:mtsofficialpack.plating:12",
+		"mts:mtsofficialpack.metaltube:3",
+        "minecraft:redstone_block:2",
+		"mts:mtsofficialpack.screws:32",
+		"minecraft:blaze_powder:8"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

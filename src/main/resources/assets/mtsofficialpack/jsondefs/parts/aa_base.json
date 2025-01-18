@@ -1,0 +1,111 @@
+{
+  "generic": {
+    "type": "generic",
+    "forwardsDamageMultiplier": 1.0,
+    "canBePlacedOnGround": true,
+    "destroyable": true
+  },
+  "parts": [
+    {
+      "pos": [0.0,0.3125,0.0],
+      "minValue": 7.0,
+      "maxValue": 120.0,
+      "slotWidth": 1.5,
+      "slotHeight": 0.8,
+      "types": [
+        "gun_turret"
+      ],
+      "linkedParts": []
+    },
+    {
+      "pos": [-1.125,0.0,1.0],
+      "rot": [0.0,10.0,0.0],
+      "maxValue": 2.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "linkedParts": [1]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.15625,0.0],
+          "width": 2.0,
+          "height": 0.3125
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "AA Base Plate",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "sounds": [
+    //place-remove
+    	{
+        "name": "mtsofficialpack:placesound/AA_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/AA_place0",
+        	"mtsofficialpack:placesound/AA_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/AA_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/AA_place0",
+        	"mtsofficialpack:placesound/AA_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "AA Base Plate",
+    "description": "The base of operation. SnailDynamics Anti Air systems require this sturdy baseplate to function properly.",
+    "health": 50,
+    "materialLists": [
+      [
+        "tags:ingots/iron:5",
+        "mts:mtsofficialpack.screws:4",
+        "minecraft:redstone_block:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

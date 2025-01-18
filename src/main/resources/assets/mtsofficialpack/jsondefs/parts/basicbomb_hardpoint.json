@@ -1,0 +1,186 @@
+{
+  "generic": {
+    "type": "gun_pylon_single",
+    "forwardsDamageMultiplier": 1.0,
+    "destroyable": true
+  },
+  "gun": {
+    "lockOnType": "default",
+    "targetType": "all",
+    "isSemiAuto": true,
+    "capacity": 1,
+    "reloadTime": 10,
+    "reloadDelay": 5,
+    "fireDelay": 8.0,
+    "diameter": 250.0,
+    "yawSpeed": Infinity,
+    "pitchSpeed": Infinity,
+    "lockMaxAngle": 0.0,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.1875,0.28125,0.5625],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
+  },
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,-0.25,0.1875],
+          "width": 0.375,
+          "height": 0.375
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Bombrack",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "basicbomb1",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+    //place-remove
+    	{
+        "name": "mtsofficialpack:placesound/skid_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/skid_place0",
+        	"mtsofficialpack:placesound/skid_place1",
+        	"mtsofficialpack:placesound/skid_place2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/skid_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/skid_place0",
+        	"mtsofficialpack:placesound/skid_place1",
+        	"mtsofficialpack:placesound/skid_place2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      {
+        "name": "mtsofficialpack:basicbomb_drop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.2,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:basicbomb_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Basic bomb hardpoint",
+    "description": "When SnailDynamics engineers realized that they had no way to attach their new Basic-Bomb to any aircraft, they came up with this contraption. Due to budget limitations, it can only hold one bomb at once.",
+    "health": 10,
+    "materialLists": [
+      [
+        "tags:ingots/iron:6",
+        "mts:mtsofficialpack.screws:2",
+        "minecraft:tripwire_hook:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

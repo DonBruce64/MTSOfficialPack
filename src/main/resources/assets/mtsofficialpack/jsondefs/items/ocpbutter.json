@@ -1,0 +1,30 @@
+{
+  "item": {
+    "type": "food"
+  },
+  "food": {
+    "timeToEat": 30,
+    "effects": [
+    	{
+    	"name": "minecraft:instant_damage",
+    	"duration": 200,
+    	"amplifier": 10
+  		}
+    ],
+    "hungerAmount": 3,
+    "saturationAmount": 0.4
+  },
+  "general": {
+    "name": "OCP Butter",
+    "description": "A very rancid stick of butter found in Mr.Mulles house. Its three months past its expiration date...",
+    "stackSize": 64,
+    "materialLists": [
+      [
+        "minecraft:milk_bucket:1",
+        "minecraft:clock:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

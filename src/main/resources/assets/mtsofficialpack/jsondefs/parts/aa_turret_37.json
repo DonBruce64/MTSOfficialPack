@@ -1,0 +1,1202 @@
+{
+  "generic": {
+    "type": "gun_turret",
+    "forwardsDamageMultiplier": 1.0,
+    "destroyable": true,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "gun_yaw",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,1.0,0.0]
+      }
+    ]
+  },
+  "gun": {
+    "lockOnType": "default",
+    "targetType": "all",
+    "autoReload": true,
+    "capacity": 6,
+    "reloadTime": 85,
+    "reloadDelay": 10.0,
+    "muzzleVelocity": 420,
+    "fireDelay": 10.0,
+    "bulletSpreadFactor": 0.4,
+    "minYaw": -180.0,
+    "maxYaw": 180.0,
+    "minPitch": -15.0,
+    "maxPitch": 75.0,
+    "diameter": 37.0,
+    "yawSpeed": 3.7,
+    "pitchSpeed": 3.7,
+    "lockMaxAngle": 0.0,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [-0.03125,1.5,2.93],
+            "rot": [0.0,0.0,0.0],
+            "center": [-0.03125,1.5,-0.2187]
+          }
+        ]
+      }
+    ]
+  },
+  "parts": [
+    {
+      "pos": [0.8825,0.625,-0.305],
+      "types": [
+        "seat"
+      ]
+    }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,0.90625,0.0],
+          "width": 1.0,
+          "height": 1.8125
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "AA 37mm Autocannon",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "textObjects": [],
+    "animatedObjects": [
+      {
+        "objectName": "$barrel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          },
+          {
+            "animationType": "translation",
+            "variable": "gun_cooldown",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [0.0,0.0,-1.0],
+            "duration": 1,
+            "skipReverseMovement": true
+          },
+          {
+            "animationType": "translation",
+            "variable": "gun_cooldown",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [0.0,0.0,1.0],
+            "duration": 7,
+            "forwardsDelay": 1,
+            "skipReverseMovement": true
+          }
+        ]
+      },
+      {
+        "objectName": "ammobox",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 6.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$wheel",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [0.5,1.125,0.25],
+            "axis": [10.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "&mflash",
+        "animations": [
+        {
+            "animationType": "visibility",
+            "variable": "!gun_muzzleflash"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          },
+          {
+            "animationType": "rotation",
+            "variable": "random",
+            "axis":[0.0,0.0,180.0],
+            "centerPoint": [-0.03125,1.5,2.93]
+          },
+          {
+            "animationType": "scaling",
+            "variable": "random",
+            "clampMax":10.9,
+            "clampMin":1.5,
+            "axis":[2.5,3.0,2.5],
+            "centerPoint": [-0.03125,1.5,2.93]
+          }
+        ]
+      },
+      {
+        "objectName": "&mflash_inner",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_muzzleflash"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$reciever",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&mflash_inner",
+        "emissive": true,
+        "color": "FEFEFE",
+        "brightnessAnimations": [],
+        "blendableComponents": []
+      },
+      {
+        "objectName": "&mflash",
+        "emissive": true,
+        "color": "FAB774",
+        "brightnessAnimations": [],
+        "blendableComponents": [
+          {
+            "pos": [-0.03125,1.5,2.93],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 2.7,
+            "flareWidth": 2.7
+          }
+        ]
+      }
+    ],
+    "sounds": [
+    //place-remove
+    	{
+        "name": "mtsofficialpack:placesound/AA_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/AA_place0",
+        	"mtsofficialpack:placesound/AA_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/AA_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/AA_place0",
+        	"mtsofficialpack:placesound/AA_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_ground",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    {
+        "name": "mtsofficialpack:triggerclick",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.6,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa_yawservo",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_yawing",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 25.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa_pitchwheel",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_pitching",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 25.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa37mm_fire_01",
+        "soundVariations": [
+          "mtsofficialpack:aa37mm_fire_01",
+          "mtsofficialpack:aa37mm_fire_02",
+          "mtsofficialpack:aa37mm_fire_03"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:gunaa37_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 3.0,
+        "middleDistanceVolume": 0.8,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa37_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 150.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa37_distant_reverb",
+        "activeAnimations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "gun_ammo_count",
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 40.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 150.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa37_more_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.18,0.0],
+            "offset": 1.0
+          }
+        ],
+        "minDistance": 40.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 130.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 350.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:aa37_more_distant_reverb",
+        "activeAnimations": [
+          {
+            "animationType": "inhibitor",
+            "variable": "gun_ammo_count",
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing"
+          }
+        ],
+        "minDistance": 40.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 130.0,
+        "middleDistanceVolume": 0.15,
+        "maxDistance": 350.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+    {
+        "type": "generic",
+        "daytimeReductionFactor": 0.6,
+        "isBright": true,
+        "isBlended": true,
+        "color": "FFFFFF",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 3,
+        "transparency": 1.0,
+        "toTransparency": 0.1,
+        "scale": 64.0,
+        "toScale": 1.2,
+        "hitboxSize": 0.2,
+        "ignoreCollision": true,
+        "texture": "mtsofficialpack:textures/bullets/flash64_translucent.png",
+        "pos": [0.0,1.5626,3.328],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },//blending flare
+    {
+        "type": "generic",
+        "daytimeReductionFactor": 0.6,
+        "isBright": true,
+        "isBlended": false,
+        "color": "FAB774",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 3,
+        "transparency": 0.8,
+        "toTransparency": 0.1,
+        "scale": 64.0,
+        "toScale": 1.2,
+        "hitboxSize": 0.2,
+        "ignoreCollision": true,
+        "texture": "mtsofficialpack:textures/bullets/flash64_translucent.png",
+        "pos": [0.0,1.5626,3.328],
+        "initialVelocity": [0.0,1.0,0.0],
+        "movementVelocity": [0.0,0.0,0.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },//blending flare substitute
+      
+    //fastsmoke
+    {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "duration": 10,
+        "movementDuration": 9,
+        "transparency": 0.23,
+        "toTransparency": 0.001,
+        "scale": 2.1,
+        "toScale": 10.0,
+        "hitboxSize": 0.2,
+        "ignoreCollision": true,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "868280",
+        "pos": [0.0,1.5626,2.328],
+        "spreadRandomness": [1.0,1.0,5.0],
+        "initialVelocity": [0.0,0.0,17.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+    //shockysmoke
+    {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "world",
+        "renderingOrientation": "player",
+        "quantity": 5,
+        "duration": 80,
+        "movementDuration": 7,
+        "transparency": 0.1,
+        "toTransparency": 0.0000001,
+        "scale": 9.0,
+        "toScale": 20.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "color": "dad1ca",
+        "pos": [0.0,-0.2,0.0],
+        "spreadRandomness": [15.0,0.5,15.0],
+        "initialVelocity": [0.0,0.5,0.0],
+        "movementVelocity": [0.0,0.0001,0.0],
+        "terminalVelocity": [100.0,0.005,100.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      
+      //casings hard 
+      {
+        "type": "casing",
+        "stopsOnGround": true,
+        "groundSounds": [
+          "mtsofficialpack:casing37_0",
+          "mtsofficialpack:casing37_1",
+          "mtsofficialpack:casing37_2",
+          "mtsofficialpack:casing37_3",
+          "mtsofficialpack:casing37_4",
+          "mtsofficialpack:casing37_5",
+          "mtsofficialpack:casing37_6"
+        ],
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 1500,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 100,
+        "scale": 1.0,
+        "fadeScaleTime": 100,
+        "hitboxSize": 0.2,
+        "pos": [-0.0625,1.3,0.8],
+        "rot": [180.0,0.0,0.0],
+        "rotationRandomness": [70.0,40.0,20.0],
+        "rotationVelocity": [20.0,0.0,0.0],
+        "spreadRandomness": [0.5,0.2,0.8],
+        "initialVelocity": [0.0,0.5,2.95],
+        "movementVelocity": [0.0,-0.05,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          },
+          //blacklisting every soft block
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_clay",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_dirt",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_grass",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_gravel",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_leaves",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_snow",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_sand",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_wool",
+            "clampMin": 0,
+            "clampMax": 0
+          }
+        ],
+        "subParticles": [
+          {
+            "particle": {
+              "type": "generic",
+              "spawnEveryTick": true,
+              "spawningOrientation": "world",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 44,
+              "transparency": 0.2,
+              "toTransparency": 1.0E-4,
+              "scale": 0.4,
+              "toScale": 1.0,
+              "hitboxSize": 0.2,
+              "textureList": [
+                "mts:textures/particles/big_smoke_0.png",
+                "mts:textures/particles/big_smoke_1.png",
+                "mts:textures/particles/big_smoke_2.png",
+                "mts:textures/particles/big_smoke_3.png",
+                "mts:textures/particles/big_smoke_4.png",
+                "mts:textures/particles/big_smoke_5.png",
+                "mts:textures/particles/big_smoke_6.png",
+                "mts:textures/particles/big_smoke_7.png",
+                "mts:textures/particles/big_smoke_8.png",
+                "mts:textures/particles/big_smoke_9.png",
+                "mts:textures/particles/big_smoke_10.png",
+                "mts:textures/particles/big_smoke_11.png"
+              ],
+              "textureDelays": [4,4,4,4,4,4,4,4,4,4,4],
+              "randomTexture": true,
+              "color": "4E4C49",
+              "pos": [0.0,0.0,0.0],
+              "spreadRandomness": [0.001,0.001,0.001],
+              "initialVelocity": [0.0,0.0,0.2],
+              "movementVelocity": [0.0,0.0,0.0],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 30
+          }
+        ]
+      },
+      //casings soft
+      {
+        "type": "casing",
+        "stopsOnGround": true,
+        "groundSounds": [
+          "mtsofficialpack:casing37_soft0",
+          "mtsofficialpack:casing37_soft1",
+          "mtsofficialpack:casing37_soft2",
+          "mtsofficialpack:casing37_soft3",
+          "mtsofficialpack:casing37_soft4",
+          "mtsofficialpack:casing37_soft5",
+          "mtsofficialpack:casing37_soft6",
+          "mtsofficialpack:casing37_soft7"
+        ],
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 1500,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 100,
+        "scale": 1.0,
+        "fadeScaleTime": 100,
+        "hitboxSize": 0.2,
+        "pos": [-0.0625,1.3,0.8],
+        "rot": [180.0,0.0,0.0],
+        "rotationRandomness": [70.0,40.0,20.0],
+        "rotationVelocity": [20.0,0.0,0.0],
+        "spreadRandomness": [0.5,0.2,0.8],
+        "initialVelocity": [0.0,0.5,2.95],
+        "movementVelocity": [0.0,-0.05,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_stone",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_wood",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_glass",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_ice",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_metal",
+            "clampMin": 0,
+            "clampMax": 0
+          }
+        ],
+        "subParticles": [
+          {
+            "particle": {
+              "type": "generic",
+              "spawnEveryTick": true,
+              "spawningOrientation": "world",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 44,
+              "transparency": 0.2,
+              "toTransparency": 1.0E-4,
+              "scale": 0.4,
+              "toScale": 1.0,
+              "hitboxSize": 0.2,
+              "textureList": [
+                "mts:textures/particles/big_smoke_0.png",
+                "mts:textures/particles/big_smoke_1.png",
+                "mts:textures/particles/big_smoke_2.png",
+                "mts:textures/particles/big_smoke_3.png",
+                "mts:textures/particles/big_smoke_4.png",
+                "mts:textures/particles/big_smoke_5.png",
+                "mts:textures/particles/big_smoke_6.png",
+                "mts:textures/particles/big_smoke_7.png",
+                "mts:textures/particles/big_smoke_8.png",
+                "mts:textures/particles/big_smoke_9.png",
+                "mts:textures/particles/big_smoke_10.png",
+                "mts:textures/particles/big_smoke_11.png"
+              ],
+              "textureDelays": [4,4,4,4,4,4,4,4,4,4,4],
+              "randomTexture": true,
+              "color": "4E4C49",
+              "pos": [0.0,0.0,0.0],
+              "spreadRandomness": [0.001,0.001,0.001],
+              "initialVelocity": [0.0,0.0,0.2],
+              "movementVelocity": [0.0,0.0,0.0],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 30
+          }
+        ]
+      },
+      //casings water
+      {
+        "type": "casing",
+        "stopsOnGround": true,
+        "groundSounds": [
+          "mtsofficialpack:casing37_water0",
+          "mtsofficialpack:casing37_water1",
+          "mtsofficialpack:casing37_water2",
+          "mtsofficialpack:casing37_water3"
+        ],
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 500,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 100,
+        "scale": 1.0,
+        "fadeScaleTime": 100,
+        "hitboxSize": 0.2,
+        "pos": [-0.0625,1.3,0.8],
+        "rot": [180.0,0.0,0.0],
+        "rotationRandomness": [70.0,40.0,20.0],
+        "rotationVelocity": [20.0,0.0,0.0],
+        "spreadRandomness": [0.5,0.2,0.8],
+        "initialVelocity": [0.0,0.5,2.95],
+        "movementVelocity": [0.0,-0.05,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          },
+          {
+            "animationType": "visibility",
+            "variable": "terrain_blockmaterial_water",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ],
+        "subParticles": [
+          {
+            "particle": {
+              "type": "generic",
+              "spawnEveryTick": true,
+              "spawningOrientation": "world",
+              "renderingOrientation": "player",
+              "quantity": 1,
+              "duration": 44,
+              "transparency": 0.2,
+              "toTransparency": 1.0E-4,
+              "scale": 0.4,
+              "toScale": 1.0,
+              "hitboxSize": 0.2,
+              "textureList": [
+                "mts:textures/particles/big_smoke_0.png",
+                "mts:textures/particles/big_smoke_1.png",
+                "mts:textures/particles/big_smoke_2.png",
+                "mts:textures/particles/big_smoke_3.png",
+                "mts:textures/particles/big_smoke_4.png",
+                "mts:textures/particles/big_smoke_5.png",
+                "mts:textures/particles/big_smoke_6.png",
+                "mts:textures/particles/big_smoke_7.png",
+                "mts:textures/particles/big_smoke_8.png",
+                "mts:textures/particles/big_smoke_9.png",
+                "mts:textures/particles/big_smoke_10.png",
+                "mts:textures/particles/big_smoke_11.png"
+              ],
+              "textureDelays": [4,4,4,4,4,4,4,4,4,4,4],
+              "randomTexture": true,
+              "color": "4E4C49",
+              "pos": [0.0,0.0,0.0],
+              "spreadRandomness": [0.001,0.001,0.001],
+              "initialVelocity": [0.0,0.0,0.2],
+              "movementVelocity": [0.0,0.0,0.0],
+              "terminalVelocity": [5700.0,6000.0,6200.0],
+              "activeAnimations": []
+            },
+            "time": 30
+          }
+        ]
+      },
+      
+     //magazine 
+	  {
+        "type": "generic",
+        "stopsOnGround": true,
+        "groundSounds": [
+          "mtsofficialpack:casing37_0",
+          "mtsofficialpack:casing37_1",
+          "mtsofficialpack:casing37_2",
+          "mtsofficialpack:casing37_3",
+          "mtsofficialpack:casing37_4",
+          "mtsofficialpack:casing37_5",
+          "mtsofficialpack:casing37_6"
+        ],
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 1500,
+        "transparency": 1.0,
+        "fadeTransparencyTime": 100,
+        "scale": 1.0,
+        "fadeScaleTime": 100,
+        "hitboxSize": 0.1,
+        "texture": "mtsofficialpack:textures/bullets/magazine37solid.png",
+        "model": "mtsofficialpack:objmodels/bullets/magazine37solid.obj",
+        "pos": [0,1.75,-0.375],
+        "rot": [180.0,0.0,90.0],
+        "rotationRandomness": [70.0,0.0,0.0],
+        "rotationVelocity": [20.0,0.0,0.0],
+        "spreadRandomness": [0.8,0.5,0.8],
+        "initialVelocity": [0.0,4.5,0.0],
+        "movementVelocity": [0.0,-0.05,0.0],
+        "terminalVelocity": [5700.0,6000.0,6200.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 0.0,
+            "clampMax": 0
+          }
+        ]
+      },
+      //frontsmoke
+      {
+        "type": "smoke",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "duration": 30,
+        "transparency": 0.2,
+        "toTransparency": 0.01,
+        "scale": 4.02,
+        "toScale": 5.0,
+        "hitboxSize": 0.2,
+        "color": "7C7670",
+        "pos": [-0.03125,1.5,2.93],
+        "initialVelocity": [0.0,0.0,3.0],
+        
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      //spark
+       {
+        "type": "generic",
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 8,
+        "duration": 4,
+        "transparency": 1.0,
+        "scale": 2.0,
+        "toScale": 2.0000001E-4,
+        "hitboxSize": 0.2,
+        "ignoreCollision": true,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/bang0.png",
+          "mtsofficialpack:textures/bullets/bang0d.png",
+          "mtsofficialpack:textures/bullets/bang0b.png",
+          "mtsofficialpack:textures/bullets/bang0a.png",
+          "mtsofficialpack:textures/bullets/bang0c.png"
+        ],
+        "randomTexture": true,
+        "pos": [-0.03125,1.5,2.93],
+        "spreadRandomness": [6.0,9.0,9.0],
+        "initialVelocity": [0.0,0.0,25.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      //floatsmoke
+      {
+        "type": "smoke",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "duration": 30,
+        "transparency": 0.2,
+        "toTransparency": 0.01,
+        "scale": 2.6200001,
+        "toScale": 4.0,
+        "hitboxSize": 0.2,
+        "color": "7C7670",
+        "pos": [-0.03125,1.5,2.93],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }   
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      //L&Rsmoke
+      {
+        "type": "smoke",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "duration": 30,
+        "transparency": 0.2,
+        "toTransparency": 0.01,
+        "scale": 3.0200002,
+        "toScale": 5.0,
+        "hitboxSize": 0.2,
+        "color": "7C7670",
+        "pos": [-0.03125,1.5,2.9],
+        "initialVelocity": [-3.0,0.0,0.0],
+        
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "duration": 30,
+        "transparency": 0.2,
+        "toTransparency": 0.01,
+        "scale": 2.8200002,
+        "toScale": 5.0,
+        "hitboxSize": 0.2,
+        "color": "7C7670",
+        "pos": [-0.03125,1.5,2.9],
+        "initialVelocity": [3.0,0.0,0.0],
+        
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      //barrelsmoke postshot
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 3,
+        "duration": 45,
+        "transparency": 0.1,
+        "scale": 0.22000001,
+        "toScale": 1.0,
+        "hitboxSize": 0.2,
+        "color": "7C7670",
+        "pos": [-0.03125,1.5,2.93],
+        "initialVelocity": [0.0,0.0,1.0],
+        
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_cooldown"
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "AA 37mm Autocannon",
+    "description": "SnailDynamics state of the art defense system. Chambered in 37mm with reliable accuracy, it is the perfect system for dealing massive damage in a short timespan. Due to its small ammunition capacity, it requires well-trained aim to be effective.",
+    "health": 80,
+    "materialLists": [
+      [
+      	"mts:mtsofficialpack.plating:12",
+      	"mts:mtsofficialpack.screws:10",
+        "tags:ingots/iron:10",
+        "minecraft:lever:2",
+        "minecraft:iron_trapdoor:2",
+        "minecraft:piston:2",
+        "tags:dusts/redstone:20",
+        "mts:mtsofficialpack.spring:4",
+        "mts:mtsofficialpack.metaltube:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

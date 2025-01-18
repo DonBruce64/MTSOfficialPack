@@ -1,0 +1,14 @@
+{
+	"item": {
+    "type": "repair_pack"
+  },
+  "repair": {
+    "amount": 20,
+    "canRepairTotaled": true
+  },
+    "general": {
+        "name": "Repair Kit",
+        "description": "This repair kit can aid in restoring a totaled vehicle! However, due to its specialized equipment, it is unsuited for regular repair jobs.",
+        "materials": []
+    }
+}

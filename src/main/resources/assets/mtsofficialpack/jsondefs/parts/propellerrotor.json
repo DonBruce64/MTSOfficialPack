@@ -2,6 +2,8 @@
   "generic": {
     "type": "propeller_rotor",
     "useVehicleTexture": true,
+    "forwardsDamageMultiplier": 0.5,
+    "destroyable": true,
     "movementAnimations": [
       {
         "animationType": "rotation",
@@ -21,30 +23,92 @@
     {
       "subName": "",
       "name": "Small Helicopter Rotor",
-      "extraMaterials": []
+      "extraMaterialLists": [
+        []
+      ]
     }
   ],
   "rendering": {
-    "lightObjects": [],
-    "particles": [],
-		 "animatedObjects": [
+    "animatedObjects": [
       {
         "objectName": "translucent_b47g_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
             "variable": "propeller_rpm",
-            "clampMin" : 100,
-						"clampMax" : 1000
+            "clampMin": 100.0,
+            "clampMax": 1000.0
           }
         ]
       }
-		],
+      
+    ],
+    "lightObjects": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/prop_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/prop_place0",
+        	"mtsofficialpack:placesound/prop_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/prop_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/prop_remove0",
+        	"mtsofficialpack:placesound/prop_remove1"
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
     "modelType": "obj"
   },
   "general": {
     "name": "Small Helicopter Rotor",
-    "health": 100,
-    "materials": ["oredict:ingotIron:8","oredict:dyeBlack:2","oredict:dyeYellow:4"]
+    "health": 35,
+    "materialLists": [
+      [
+        "tags:ingots/iron:2",
+        "mts:mtsofficialpack.metaltube:3",
+        "tags:dyes/red:2",
+        "minecraft:iron_bars:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
   }
 }

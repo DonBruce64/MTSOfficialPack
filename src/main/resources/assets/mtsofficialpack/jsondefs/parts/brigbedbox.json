@@ -1,29 +1,330 @@
 {
-    "general": {
-        "name" : "Brigadier Box Bed",
-        "type" : "interactable_crate",
-        "customType" : "brigbed",
-        "materials" : ["oredict:ingotIron:4", "minecraft:iron_bars:0:2", "oredict:paper:6"]
+  "generic": {
+    "type": "interactable_crate",
+    "customType": "brigbed",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 1000,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.0,2.4,0.8125],
+          "width": 2.25,
+          "height": 0.4
+        },
+        {
+          "pos": [0.0,2.4,-1.4375],
+          "width": 2.25,
+          "height": 0.4
+        }
+      ]
     },
-	"interactable" : {
-        "interactionType": "crate",
-        "inventoryUnits" : 6
-	},
-	"generic": {
-			"width" : 1.5,
-			"height" : 1.5
-	},
-	"rendering": {
+    {
+    "isInterior": true,
+      "collisions": [
+      {
+          "pos": [0.0,1.15,0.8125],
+          "width": 2.25,
+          "height": 2.0
+        },
+        {
+          "pos": [0.0,1.15,-1.4375],
+          "width": 2.25,
+          "height": 2.0
+        }
+      ]
+    }
+  ],
+  "interactable": {
+    "interactionType": "crate",
+    "inventoryUnits": 18.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Brigadier Box Bed",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+  "animatedObjects": [
+  {
+        "objectName": "#translucent_mudAcc_main",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "parent_mudAcc",
+            "clampMin": 0,
+            "clampMax": 100
+          }
+        ]
+      },
+     {
+        "objectName": "crate1",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.00000001,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate2",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.0715,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate3",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.143,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate4",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.2145,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate5",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.286,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate6",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.3575,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate7",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.429,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate8",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.5,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate9",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.572,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate10",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.6435,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate11",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.715,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate12",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.7865,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate13",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.858,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "crate14",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "interactable_percent",
+            "clampMin": 0.9295,
+            "clampMax": 1
+          }
+        ]
+      },
+      {
+        "objectName": "ford_box.obj.017_selection",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "reverseDelay": 18,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ]
+      }
+    ],
     "textObjects": [
       {
         "pos": [0.0,-100.0,0.001],
         "rot": [0.0,0.0,0.0],
-        "scale": 0.0001,
+        "scale": 1.0E-4,
         "fieldName": "sideTextureURL",
         "defaultText": "",
         "maxLength": 400,
-        "color": "0x000000"
+        "color": "000000"
       }
-    ]
+    ],
+    "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_place",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_remove",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 26.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    {
+        "name": "mtsofficialpack:brigbedbox_close",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:brigbedbox_open",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "reverseDelay": 18,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Brigadier Box Bed",
+    "description": "A proper storage unit. Put it on a truck and haul big-time.",
+    "materialLists": [
+      [
+        "minecraft:chest:10",
+        "tags:wooden_slabs:8",
+        "mts:mtsofficialpack.plating:24",
+        "minecraft:iron_ingot:5",
+        "minecraft:paper:20"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
   }
 }

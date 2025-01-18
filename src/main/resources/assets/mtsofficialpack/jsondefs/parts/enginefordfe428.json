@@ -1,0 +1,1718 @@
+{
+  "generic": {
+    "type": "engine_car",
+    "forwardsDamageMultiplier": 1.0,
+    "destroyable": true,
+    "width": 1.0,
+    "height": 1.5,
+    "movementAnimations": [
+      {
+        "animationType": "translation",
+        "variable": "engine_piston_0_1_0_crank",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.00625,0.0]
+      },
+      {
+        "animationType": "rotation",
+        "variable": "engine_cos",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0]
+      },
+      {
+        "animationType": "rotation",
+        "variable": "engine_rpm_percent",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,-3.0],
+        "clampMin": -3.0,
+        "clampMax": 3.0
+      },
+      {
+        "animationType": "inhibitor",
+        "variable": "engine_running"
+      },
+      {
+        "animationType": "rotation",
+        "variable": "throttle",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0]
+      },
+      {
+        "animationType": "rotation",
+        "variable": "throttle",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0],
+        "duration": 5
+      }
+    ]
+  },
+  "engine": {
+    "type": "normal",
+    "starterPower": 50,
+    "shiftSpeed": 20,
+    "clutchTime": 5,
+    "revResistance": 7,
+    "maxRPM": 8500,
+    "maxSafeRPM": 6400,
+    "idleRPM": 1000,
+    "startRPM": 600,
+    "revlimitRPM": 5810,
+    "revlimitBounce": 10,
+    "stallRPM": 325,
+    "engineWinddownRate": 10,
+    "heatingCoefficient": 1.75,
+    "coolingCoefficient": 1.0,
+    "engineWearFactor": 1.0,
+    "fuelConsumption": 0.95,
+    "gearRatios": [-2.2,0.0,3.0,1.55,1.0,0.7],
+    "fuelType": "gasoline"
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Ford FE 428 V8 Engine",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "variableModifiers": [
+    {
+      "variable": "engine_revlimit_backfire",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "wrapper",
+          "axis": [0.0,0.0,1.0]
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "1_4_0_cycle",
+          "clampMin": 1.0,
+          "clampMax": 1.0
+        },
+        {
+          "animationType": "activator",
+          "variable": "engine_gear"
+        },
+        {
+          "animationType": "inhibitor",
+          "variable": "engine_rpm_percent_revlimit",
+          "clampMin": -1.0,
+          "clampMax": 0.98
+        },
+         {
+            "animationType": "visibility",
+            "variable": "random",
+            "clampMin": 0.0,
+            "clampMax": 0.4
+          },
+        {
+          "animationType": "translation",
+          "variable": "!wrapper",
+          "axis": [0.0,0.0,1.0]
+        }
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$wheelmain",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm",
+            "centerPoint": [0.0,0.34375,0.765625],
+            "axis": [0.0,0.0,0.3]
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "!engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "tick",
+            "centerPoint": [0.0,0.34375,0.765625],
+            "axis": [0.0,0.0,75.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$wheelgenerator",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm",
+            "centerPoint": [-0.359375,0.3125,0.0],
+            "axis": [0.0,0.0,0.3]
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "!engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "tick",
+            "centerPoint": [-0.359375,0.3125,0.0],
+            "axis": [0.0,0.0,180.0]
+          }
+        ]
+      },
+      {
+        "objectName": "$wheeltransmission",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.0,0.3]
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "!engines_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "tick",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.0,75.0]
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/engine_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_place0",
+        	"mtsofficialpack:placesound/engine_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/engine_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/engine_remove0",
+        	"mtsofficialpack:placesound/engine_remove1",
+        	"mtsofficialpack:placesound/engine_remove2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    //engine cooling
+      {
+        "name": "mtsofficialpack:engine_cooling",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 50.0,
+            "clampMax": 1000.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_temp",
+            "axis": [0.0,0.03,0.0],
+            "offset": -1.9
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 5.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+    
+    //CLUTCHSOUND
+    {
+        "name": "mtsofficialpack:gearshiftup",
+        "soundVariations": [
+        	"mtsofficialpack:gearshiftup",
+        	"mtsofficialpack:gearshiftup1",
+        	"mtsofficialpack:gearshiftup2",
+        	"mtsofficialpack:gearshiftup3",
+        	"mtsofficialpack:gearshiftup4"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "isInterior": true
+      },
+    {
+        "name": "mtsofficialpack:gearshiftdown",
+        "soundVariations": [
+        	"mtsofficialpack:gearshiftdown",
+        	"mtsofficialpack:gearshiftdown1",
+        	"mtsofficialpack:gearshiftdown2",
+        	"mtsofficialpack:gearshiftdown3"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_clutch_downshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "isInterior": true
+      },
+      
+      //basic stuff
+      {
+        "name": "mtsofficialpack:enginefordfe428_starting",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:engineamci4_stopping",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_running"
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:engineamci4_sputter",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_backfired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:engineamci4_sputter",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "fuel",
+            "clampMin": 0.001,
+            "clampMax": 0.01
+          },
+          {
+            "animationType": "visibility",
+            "variable": "random",
+            "clampMin": 0.0,
+            "clampMax": 0.02
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mts:engine_shifting_grinding",
+        "soundVariations": [
+          "mtsofficialpack:engine_shifting_grinding1",
+          "mtsofficialpack:engine_shifting_grinding2",
+          "mtsofficialpack:engine_shifting_grinding3",
+          "mtsofficialpack:engine_shifting_grinding4"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_badshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+   
+      //cranking
+      {
+        "name": "mtsofficialpack:enginefordfe428_cranking",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_starter",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      
+      //NORMAL OUTSIDE
+      //INSIDE DOOR OPEN
+      
+      //INSIDE
+      
+      
+      //revs OUT
+      {
+        "name": "mtsofficialpack:enginefordfe428_rev1",
+        "soundVariations": [
+          "mtsofficialpack:enginefordfe428_rev0",
+          "mtsofficialpack:enginefordfe428_rev1",
+          "mtsofficialpack:enginefordfe428_rev2"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "throttle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_rpm",
+			"clampMin": 1000.0,
+            "clampMax": 5000.0
+          }
+        ],
+        "volumeAnimations": [
+        {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,-0.60,0.0],
+            "offset": 1.0
+          },
+        {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,-0.001,0.0],
+            "offset": 2.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,4.0,0.0]
+          }
+        ],
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 40.0,
+        "maxDistanceVolume": 0.0
+      }, 
+      //revs OUT IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_rev1",
+        "soundVariations": [
+          "mtsofficialpack:enginefordfe428_rev0",
+          "mtsofficialpack:enginefordfe428_rev1",
+          "mtsofficialpack:enginefordfe428_rev2"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "throttle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_rpm",
+			"clampMin": 1000.0,
+            "clampMax": 5000.0
+          }
+        ],
+        "volumeAnimations": [
+        {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,-0.60,0.0],
+            "offset": 1.0
+          },
+        {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,-0.001,0.0],
+            "offset": 2.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,4.0,0.0]
+          }
+        ],
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 40.0,
+        "maxDistanceVolume": 0.0
+      },
+      //revs IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_rev1_inside",
+        "soundVariations": [
+          "mtsofficialpack:enginefordfe428_rev0_inside",
+          "mtsofficialpack:enginefordfe428_rev1_inside",
+          "mtsofficialpack:enginefordfe428_rev2_inside"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "throttle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "engine_rpm",
+			"clampMin": 1000.0,
+            "clampMax": 5000.0
+          }
+        ],
+        "volumeAnimations": [
+        {
+            "animationType": "translation",
+            "variable": "speed",
+            "axis": [0.0,-0.60,0.0],
+            "offset": 1.0
+          },
+        {
+            "animationType": "translation",
+            "variable": "engine_rpm",
+            "axis": [0.0,-0.001,0.0],
+            "offset": 2.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,4.0,0.0]
+          }
+        ],
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 40.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //idle OUT
+      {
+        "name": "mtsofficialpack:enginefordfe428_idle",
+        "pos": [0,0.0,-5.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-4.0,0.0],
+            "offset": 1.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5,0.0],
+            "offset": 0.5
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 18.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 42.0,
+        "maxDistanceVolume": 0.0
+      },
+      //idle IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_idle_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-4.0,0.0],
+            "offset": 1.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5,0.0],
+            "offset": 0.5
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 10.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 35.0,
+        "maxDistanceVolume": 0.0
+      },
+      //idle OUT IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_idle",
+        "pos": [0,0.0,-5.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,-4.0,0.0],
+            "offset": 1.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.5,0.0],
+            "offset": 0.5
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.5,
+        "middleDistance": 10.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 30.0,
+        "maxDistanceVolume": 0.0
+      },
+      //idlealternate
+      {
+        "name": "mtsofficialpack:enginefordfe428_idlealternate",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-15.0,1.0,0.25],
+            "offset": 0.5
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5.0,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 0.3,
+        "maxDistance": 55.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //idleactive OUT
+      {
+        "name": "mtsofficialpack:enginefordfe428_idleactive",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-30.0,1.0,0.3],
+            "offset": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,1.0,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5.0,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 15.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 35.0,
+        "maxDistanceVolume": 0.0
+      },
+      //idleactive IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_idleactive_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-30.0,1.0,0.3],
+            "offset": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,1.0,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5.0,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      //idleactive OUT IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_idleactive",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-30.0,1.0,0.3],
+            "offset": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,1.0,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,5.0,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //low OUT
+      {
+        "name": "mtsofficialpack:enginefordfe428_low",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-25.0,1.0,0.45],
+            "offset": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.87,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 15.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 50.0,
+        "maxDistanceVolume": 0.0
+      },
+      //low OUT IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_low",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-25.0,1.0,0.45],
+            "offset": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.87,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 45.0,
+        "maxDistanceVolume": 0.0
+      },
+      //low IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_low_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-25.0,1.0,0.45],
+            "offset": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,2.87,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 45.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //mediumrare OUT
+      {
+        "name": "mtsofficialpack:enginefordfe428_mediumrare",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,4.0,0.0],
+            "offset": -2.1
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-1.4,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.7,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 20.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 60.0,
+        "maxDistanceVolume": 0.0
+      },
+      //mediumrare OUT IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_mediumrare",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,4.0,0.0],
+            "offset": -2.1
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-1.4,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.7,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 55.0,
+        "maxDistanceVolume": 0.0
+      },
+      //mediumrare IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_mediumrare_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,4.0,0.0],
+            "offset": -2.1
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-1.4,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.7,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 55.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //mediumwell OUT
+      {
+        "name": "mtsofficialpack:enginefordfe428_mediumwell",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-10.0,1.0,0.65],
+            "offset": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.5,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 25.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 80.0,
+        "maxDistanceVolume": 0.0
+      },
+      //mediumwell OUT IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_mediumwell",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-10.0,1.0,0.65],
+            "offset": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.5,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 60.0,
+        "maxDistanceVolume": 0.0
+      },
+      //mediumwell IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_mediumwell_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-10.0,1.0,0.65],
+            "offset": 1.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.5,0.0]
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.5,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 60.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+      //high OUT
+      {
+        "name": "mtsofficialpack:enginefordfe428_high",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,3.0,0.0],
+            "offset": -2.1
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,2.0,0.0],
+            "offset": -1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.1,0.0]
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:e",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 0.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true,
+        "isExterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 30.0,
+        "middleDistanceVolume": 0.1,
+        "maxDistance": 90.0,
+        "maxDistanceVolume": 0.0
+      },
+      //high OUT IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_high",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,3.0,0.0],
+            "offset": -2.1
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,2.0,0.0],
+            "offset": -1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.1,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 70.0,
+        "maxDistanceVolume": 0.0
+      },
+      //high IN
+      {
+        "name": "mtsofficialpack:enginefordfe428_high_inside",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "engine_powered",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "parent_soundPass",
+            "reverseDelay": 10,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "volumeAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,3.0,0.0],
+            "offset": -2.1
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "engine_clutch_upshift",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "translation",
+            "variable": "throttle",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,2.0,0.0],
+            "offset": -1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "engine_rpm_percent_safe",
+            "axis": [0.0,1.1,0.0]
+          }
+        ],
+        "looping": true,
+        "isInterior": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 70.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+      //tempsmoke
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 40,
+        "transparency": 0.1,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.5,
+        "toScale": 3.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "e7e9ea",
+        "pos": [0,0,0],
+         "spreadRandomness": [0.3,0.3,0.3],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.006,-0.0],
+        "terminalVelocity": [0.0,0.3,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 100.0,
+            "clampMax": 111.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 40,
+        "transparency": 0.2,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.8,
+        "toScale": 5.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "e7e9ea",
+        "pos": [0,0,0],
+         "spreadRandomness": [0.3,0.3,0.3],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.006,-0.0],
+        "terminalVelocity": [0.0,0.3,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 111.0,
+            "clampMax": 121.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 40,
+        "transparency": 0.2,
+        "toTransparency": 0.000001,
+        "movementDuration": 6,
+        "scale": 0.8,
+        "toScale": 8.0,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png",
+          "mts:textures/particles/big_smoke_9.png",
+          "mts:textures/particles/big_smoke_10.png",
+          "mts:textures/particles/big_smoke_11.png"
+        ],
+        "randomTexture": true,
+        "color": "2a2d31",
+        "pos": [0,0,0],
+         "spreadRandomness": [0.3,0.3,0.3],
+        "initialVelocity": [0.0,0.0,0.0],
+        "movementVelocity": [0.0,0.006,-0.0],
+        "terminalVelocity": [0.0,0.4,-0.0],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "engine_temp",
+            "clampMin": 121.0,
+            "clampMax": 1001.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Ford FE 428 V8 Engine",
+    "description": "A beast of an engine! Eight cylinders provide excellent torque and power, but for that it guzzles gasoline like no other!",
+    "health": 50,
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.sparkplug:8",
+        "mts:mtsofficialpack.piston:8",
+        "mts:mtsofficialpack.metaltube:10",
+        "minecraft:obsidian:8",
+        "minecraft:iron_block:2",
+        "minecraft:blaze_powder:8"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

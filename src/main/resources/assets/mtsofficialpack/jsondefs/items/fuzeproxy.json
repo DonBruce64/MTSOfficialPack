@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Proximity Fuze",
+        "description": "A complex fuze, utilising radio frequency sensoring to determine its distance to the target.",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

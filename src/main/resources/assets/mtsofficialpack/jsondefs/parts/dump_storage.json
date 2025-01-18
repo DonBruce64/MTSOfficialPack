@@ -1,0 +1,187 @@
+{
+  "generic": {
+    "type": "interactable_crate",
+    "width": 0.1,
+    "height": 0.1
+  },
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [-1.125,1.0,1.8125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,1.3125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,0.8125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,0.3125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,-0.1875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,-0.6875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,-1.1875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,-1.6875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [-1.125,1.0,-2.1875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        
+        {
+          "pos": [1.125,1.0,1.8125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,1.3125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,0.8125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,0.3125],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,-0.1875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,-0.6875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,-1.1875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,-1.6875],
+          "width": 0.25,
+          "height": 1.5
+        },
+        {
+          "pos": [1.125,1.0,-2.1875],
+          "width": 0.25,
+          "height": 1.5
+        }
+      ]
+    },
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.5625,1.4,1.4],
+          "width": 1.125,
+          "height": 0.5
+        },
+        {
+          "pos": [0.5625,1.4,0.275],
+          "width": 1.125,
+          "height": 0.5
+        },
+        {
+          "pos": [0.5625,1.4,-0.85],
+          "width": 1.125,
+          "height": 0.5
+        },
+        {
+          "pos": [0.5625,1.4,-1.975],
+          "width": 1.125,
+          "height": 0.5
+        },
+        
+        {
+          "pos": [-0.5625,1.4,1.4],
+          "width": 1.125,
+          "height": 0.5
+        },
+        {
+          "pos": [-0.5625,1.4,0.275],
+          "width": 1.125,
+          "height": 0.5
+        },
+        {
+          "pos": [-0.5625,1.4,-0.85],
+          "width": 1.125,
+          "height": 0.5
+        },
+        {
+          "pos": [-0.5625,1.4,-1.975],
+          "width": 1.125,
+          "height": 0.5
+        }
+      ],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "interactable_percent",
+          "axis": [0.0,1.2,0.0],
+          "offset": -1.25
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Dump Storage",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "interactable": {
+    "interactionType": "crate",
+    "feedsVehicles": true,
+    "inventoryUnits": 6.0
+  },
+  "rendering": {
+  "animatedObjects": [],
+    "lightObjects": [],
+    "customVariables": [],
+    "particles": [],
+    "sounds": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Dump Storage",
+    "description": "Internal Storage part because effectors are hella goofy",
+    "hideOnCreativeTab": true, 
+    "materialLists": []
+  }
+}

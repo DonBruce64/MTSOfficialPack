@@ -1,0 +1,411 @@
+{
+  "generic": {
+    "type": "generic",
+    "customType": "scoutbed",
+    "useVehicleTexture": true,
+    "forwardsDamageMultiplier": 1.0,
+    "destroyable": true,
+    "width": 1.5,
+    "height": 0.6
+  },
+  "parts":[
+   //backseat left (1)
+   {
+      "pos": [0.375,0.437,-0.125],
+      "types": [
+        "seat"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_5"
+        ],
+        [
+          "!part_present_4"
+        ]
+      ]
+    },
+    //backseat right (2)
+    {
+      "pos": [-0.375,0.437,-0.125],
+      "types": [
+        "seat"
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_5"
+        ],
+        [
+          "!part_present_3"
+        ]
+      ]
+    },
+    
+    //seatcrate left (3)
+    {
+      "pos": [-0.328125,0.3125,0.0625],
+      "rot": [0.0,0,10],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "interactableVariables": [
+        [
+          "part_present_1"
+        ],
+        [
+          "!part_present_2"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "part_present_1",
+          "clampMin": 1,
+          "clampMax": 1
+        }
+      ]
+    },
+    //seatcrate right (4)
+    {
+      "pos": [0.328125,0.3125,0.0625],
+      "rot": [0.0,0,-10],
+      "maxValue": 5.0,
+      "types": [
+        "interactable_crate"
+      ],
+       "interactableVariables": [
+        [
+          "!part_present_1"
+        ],
+        [
+          "part_present_2"
+        ]
+      ],
+      "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "part_present_2",
+          "clampMin": 1,
+          "clampMax": 1
+        }
+      ]
+    },
+    
+    //barrel/crate (5)
+    {
+      "pos": [-0.015625,0.0625,0.0625],
+      "rot": [0.0,-192,0],
+      "minValue": 0.1,
+      "maxValue": 5.0,
+      "maxPartLevels": 2,
+      "types": [
+        "interactable_crate",
+        "crate_medium",
+        "interactable_barrel"
+      ],
+      "customTypes": [
+      "crate_medium",
+      ""
+      ],
+      "interactableVariables": [
+        [
+          "!part_present_1"
+        ],
+        [
+          "!part_present_2"
+        ]
+      ]
+    }
+  ],
+  
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Scout Pickup Bed",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$assdoor",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "door_tailgate",
+            "centerPoint": [0.0,0.0625,-0.9375],
+            "axis": [-90.0,0.0,0.0],
+            "forwardsEasing": "easeoutbounce",
+            "reverseEasing": "easeinquint",
+            "duration": 20,
+            "forwardsStartSound": "mtsofficialpack:doorcaropen2",
+            "reverseEndSound": "mtsofficialpack:doorcarclose2alt"
+          }
+        ]
+      },
+      {
+        "objectName": "#translucent_mudAcc_pickup",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "parent_mudAcc",
+            "clampMin": 0,
+            "clampMax": 100
+          }
+        ]
+      },
+      {
+        "objectName": "#$translucent_mudAcc_assdoor",
+        "blendedAnimations": true,
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "parent_mudAcc",
+            "clampMin": 0,
+            "clampMax": 100
+          },
+          {
+            "animationType": "rotation",
+            "variable": "door_tailgate",
+            "centerPoint": [0.0,0.0625,-0.9375],
+            "axis": [-90.0,0.0,0.0],
+            "forwardsEasing": "easeoutbounce",
+            "reverseEasing": "easeinback",
+            "duration": 20
+          }
+        ]
+      }
+    ],
+    "lightObjects": [
+      {
+        "objectName": "&blinker_frontR",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF8C00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "right_turn_signal",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "10_10_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.83672,0.29219,3.484375],
+            "axis": [0.0,0.0,1.0],
+            "flareHeight": 0.515625,
+            "flareWidth": 0.515625
+          }
+        ]
+      },
+      {
+        "objectName": "&blinker_sideR",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF8C00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "right_turn_signal",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "10_10_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-1.078125,0.52578125,-0.7859375],
+            "axis": [-1.0,0.0,0.0],
+            "flareHeight": 0.515625,
+            "flareWidth": 0.515625
+          }
+        ]
+      },
+      
+      
+      {
+        "objectName": "&blinker_sideL",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF8C00",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "left_turn_signal",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "10_10_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [1.078125,0.52578125,-0.7859375],
+            "axis": [1.0,0.0,0.0],
+            "flareHeight": 0.515625,
+            "flareWidth": 0.515625
+          }
+        ]
+      },
+      
+      {
+        "objectName": "&backuplight",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FFFFFF",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "parent_engine_reversed_1",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.984375,0.359375,-1.03125],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.35624707,
+            "flareWidth": 0.35624707
+          },
+          {
+            "pos": [0.984375,0.359375,-1.03125],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.35624707,
+            "flareWidth": 0.35624707
+          }
+        ]
+      },
+      {
+        "objectName": "&brakelights",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "brake",
+            "clampMin": 0.01,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.984375,0.484375,-1.03125],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.4687501,
+            "flareWidth": 0.4687501
+          },
+          {
+            "pos": [0.984375,0.484375,-1.03125],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.4687501,
+            "flareWidth": 0.4687501
+          }
+        ]
+      },
+      {
+        "objectName": "&blinker_rearL",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "left_turn_signal",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "10_10_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [0.984375,0.328125,-1.03125],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.35624707,
+            "flareWidth": 0.35624707
+          }
+        ]
+      },
+      {
+        "objectName": "&blinker_rearR",
+        "emissive": true,
+        "covered": true,
+        "isElectric": true,
+        "color": "FF0000",
+        "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "right_turn_signal",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "10_10_0_cycle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "blendableComponents": [
+          {
+            "pos": [-0.984375,0.328125,-1.03125],
+            "axis": [0.0,0.0,-1.0],
+            "flareHeight": 0.35624707,
+            "flareWidth": 0.35624707
+          }
+        ]
+      }
+      
+    ],
+    "sounds": [
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Scout Pickup Bed",
+    "description": "This bed allows for extra cargo, be it crates filled with beer and traffic cones or just some unlucky sheep you chose to pick up for your questionable piston contraption. Uninstall it to make room for an entire gun turret!",
+    "health": 40,
+    "materialLists": [
+      [
+        "tags:ingots/iron:3",
+        "mts:mtsofficialpack.plating:12",
+        "mts:mtsofficialpack.copperwire:4",
+        "minecraft:iron_bars:8"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

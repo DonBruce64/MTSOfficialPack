@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Metal Sheet",
+        "description": "Oh Sheet! A thin sheet of metal with predrilled holes.",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

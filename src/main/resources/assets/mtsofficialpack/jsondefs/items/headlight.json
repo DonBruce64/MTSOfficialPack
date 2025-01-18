@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Headlight",
+        "description": "Generates photons. Shiny. You can see yourself in the reflector!",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

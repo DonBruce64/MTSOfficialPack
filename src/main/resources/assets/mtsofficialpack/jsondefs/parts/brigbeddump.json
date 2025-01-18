@@ -1,12 +1,572 @@
 {
-    "general": {
-        "name" : "Brigadier Dump Bed",
-        "type" : "generic",
-        "customType" : "brigbed",
-        "materials" : ["oredict:ingotIron:4", "minecraft:iron_bars:0:2"]
+  "generic": {
+    "type": "generic",
+    "customType": "brigbed",
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 1500,
+    "width": 1.5,
+    "height": 0.5
+  },
+  "parts": [
+  	{
+      "pos": [0,0,0],
+      "applyAfter": "dumpbed",
+      "maxValue": 6.0,
+      "types": [
+        "interactable_crate"
+      ],
+      "defaultPart": "mtsofficialpack:dump_storage",
+      "isPermanent": true
     },
-	  "generic": {
-       "width" : 1.5,
-       "height" : 0.5
+    {
+      "pos": [0,0,0],
+      "applyAfter": "dumpbed",
+      "types": [
+        "effector"
+      ],
+      "defaultPart": "mtsofficialpack:dump_hopper",
+      "isPermanent": true,
+      "linkedParts": [1]
+    },
+    {
+      "pos": [0,0,0],
+      "applyAfter": "dumpbed",
+      "types": [
+        "effector"
+      ],
+      "defaultPart": "mtsofficialpack:dump_dropper",
+      "isPermanent": true,
+      "linkedParts": [1]
+    },
+    {
+      "pos": [0,0,0],
+      "types": [
+        "effector"
+      ],
+      "defaultPart": "mtsofficialpack:dump_placer",
+      "isPermanent": true,
+      "linkedParts": [1]
     }
+  ],
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [0.75,1.6875,1.6875],
+          "width": 0.75,
+          "height": 0.5
+        },
+        {
+          "pos": [0,1.6875,1.6875],
+          "width": 0.75,
+          "height": 0.5
+        },
+        {
+          "pos": [-0.75,1.6875,1.6875],
+          "width": 0.75,
+          "height": 0.5
+        },
+        
+        {
+          "pos": [0.75,1.43,-2],
+          "width": 0.75,
+          "height": 0.5
+        },
+        {
+          "pos": [0,1.43,-2],
+          "width": 0.75,
+          "height": 0.5
+        },
+        {
+          "pos": [-0.75,1.43,-2],
+          "width": 0.75,
+          "height": 0.5
+        }
+      ],
+      "applyAfter": "dumpbed"
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Brigadier Dump Bed",
+      "description": "Filled to the brim with Gravel.",
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_coal",
+      "name": "Brigadier Dump Bed",
+      "description": "Filled with Germany's favorite energy source.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_cobble",
+      "name": "Brigadier Dump Bed",
+      "description": "Looks like a truckload of cheap cobblestone.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_copper",
+      "name": "Brigadier Dump Bed",
+      "description": "Its filled with... Copper? Carrots? Salmon? You decide.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_dirt",
+      "name": "Brigadier Dump Bed",
+      "description": "Yep, looks like its filled with all the dirty secrets.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_gold",
+      "name": "Brigadier Dump Bed",
+      "description": "Contains the golden motherlode. Or just oversized corn.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_hay",
+      "name": "Brigadier Dump Bed",
+      "description": "Hay there! Graineral Cornobi! Dies of fall damage.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_iron",
+      "name": "Brigadier Dump Bed",
+      "description": "Filled with bean block! Ah wait, this is raw iron...",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_moss",
+      "name": "Brigadier Dump Bed",
+      "description": "Two metric tons worth of fresh weed(s)",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_nether",
+      "name": "Brigadier Dump Bed",
+      "description": "Filled with raw meat. Or beets. Or Netherrack. Ill let you decide.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_podzol",
+      "name": "Brigadier Dump Bed",
+      "description": "Its Podzol. I hope its Podzol. Good thing Steve doesnt have a nose.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    },
+    {
+      "subName": "_sand",
+      "name": "Brigadier Dump Bed",
+      "description": "Enough material for very ambitious Sandcastles.",
+      "hideOnCreativeTab": true,
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+  	"animatedObjects": [
+     {
+        "objectName": "filler",
+        "applyAfter": "dumpbed",
+        "animations": [
+        {
+          "animationType": "visibility",
+          "variable": "interactable_percent_1",
+            "clampMin": 0.01,
+            "clampMax": 1
+        },
+          {
+          "animationType": "translation",
+          "variable": "interactable_percent_1",
+          "axis": [0.0,1.05,0.0],
+          "offset": -1.05
+          }
+        ]
+      },
+     {
+        "objectName": "dumpbed",
+        "animations": [
+        {
+            "animationType": "rotation",
+            "variable": "DUMP",
+            "centerPoint": [0.0,0.0,-2.125],
+            "axis": [-35.0,0.0,0.0],
+            "duration": 50,
+            "forwardsStartSound": "mtsofficialpack:gearhydraulics_start",
+            "reverseStartSound": "mtsofficialpack:gearhydraulics_start",
+            "forwardsEndSound": "mtsofficialpack:gearhydraulics_end",
+            "reverseEndSound": "mtsofficialpack:gearhydraulics_end"
+          }
+        ]
+      },
+     {
+        "objectName": "tailgate",
+        "applyAfter": "dumpbed",
+        "animations": [
+        {
+            "animationType": "rotation",
+            "variable": "DUMP",
+            "centerPoint": [0.0,1.5,-2.375],
+            "axis": [40.0,0.0,0.0],
+            "duration": 50
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "DUMP",
+            "clampMin": 0,
+            "clampMax": 0
+          },
+          {
+            "animationType": "rotation",
+            "variable": "speed",
+            "centerPoint": [0.0,1.5,-2.375],
+            "axis": [1.0,0.0,0.0]
+          }
+        ]
+      },
+     {
+        "objectName": "hydraulic_tube",
+        "animations": [
+        {
+            "animationType": "rotation",
+            "variable": "DUMP",
+            "centerPoint": [0.0,-0.1875,-0.4375],
+            "axis": [-57.5,0.0,0.0],
+            "duration": 50
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!piss",
+            "centerPoint": [0.0,-0.1875,-0.4375],
+            "axis": [-7.5,0.0,0.0]
+          }
+        ]
+      },
+     {
+        "objectName": "piston_rod",
+        "applyAfter": "hydraulic_tube",
+        "animations": [
+        {
+            "animationType": "translation",
+            "variable": "DUMP",
+            "centerPoint": [0.0,-0.1875,-0.4375],
+            "axis": [0.0,0.0,0.75],
+            "duration": 50
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "customVariables": [
+      "DUMP",
+      "PLACE"
+    ],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:misc/metalpipe",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/gmcbed_remove",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 26.0,
+        "maxDistanceVolume": 0.0
+      },
+	//hydraulics
+		{
+        "name": "mtsofficialpack:gearhydraulics",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "DUMP",
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "forwardsDelay": 50
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DUMP",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "looping": true
+      },
+      	{
+        "name": "mtsofficialpack:gearhydraulics",
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "DUMP",
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "reverseDelay": 50
+          },
+          {
+            "animationType": "visibility",
+            "variable": "DUMP",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "looping": true
+      },
+    //dirty
+    	{
+        "name": "mtsofficialpack:debrissettle_dirtsmall0",
+        "soundVariations": [
+          "mtsofficialpack:debrissettle_dirtsmall0",
+          "mtsofficialpack:debrissettle_dirtsmall1",
+          "mtsofficialpack:debrissettle_dirtsmall2",
+          "mtsofficialpack:debrissettle_dirtsmall3"
+        ],
+        "activeAnimations": [
+        {
+          "animationType": "visibility",
+          "variable": "interactable_percent_1",
+            "clampMin": 0.01,
+            "clampMax": 1
+        },
+        {
+          "animationType": "visibility",
+          "variable": "DUMP",
+        	"clampMin": 1,
+            "clampMax": 1,
+            "reverseDelay": 45
+        },
+          {
+            "animationType": "visibility",
+            "variable": "0_6_4_cycle",
+            "clampMin": 1,
+            "clampMax": 1
+          }
+        ],
+        "volumeAnimations": [
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 25.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:debrissettle_dirtsmall0",
+        "soundVariations": [
+        	"mtsofficialpack:ground_dirt0",
+        	"mtsofficialpack:ground_dirt1",
+        	"mtsofficialpack:ground_dirt3",
+        	"mtsofficialpack:ground_dirt4"
+        ],
+        "activeAnimations": [
+        	{
+          "animationType": "visibility",
+          "variable": "interactable_percent_1",
+            "clampMin": 0.01,
+            "clampMax": 1
+        },
+        	{
+          "animationType": "visibility",
+          "variable": "DUMP",
+        	"clampMin": 1,
+            "clampMax": 1,
+            "reverseDelay": 45
+        }
+        ],
+        "volumeAnimations": [
+        ],
+        "looping": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 0.2,
+        "maxDistance": 25.0,
+        "maxDistanceVolume": 0.0
+      }
+      ],
+    "particles": [
+    	{
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 30,
+        "transparency": 1.0,
+        "scale": 5.5,
+        "toScale": 5.0,
+        "fadeScaleTime": 10,
+        "ignoreCollision": false,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/gravel0.png",
+          "mtsofficialpack:textures/bullets/ground/gravel1.png",
+          "mtsofficialpack:textures/bullets/ground/gravel2.png",
+          "mtsofficialpack:textures/bullets/ground/dirt0.png",
+          "mtsofficialpack:textures/bullets/ground/dirt1.png",
+          "mtsofficialpack:textures/bullets/ground/dirt2.png",
+          "mtsofficialpack:textures/bullets/ground/dirt3.png",
+          "mtsofficialpack:textures/bullets/ground/pebble0.png",
+          "mtsofficialpack:textures/bullets/ground/pebble1.png",
+          "mtsofficialpack:textures/bullets/ground/pebble2.png"
+        ],
+        "randomTexture": true,
+        "relativeInheritedVelocityFactor": [0.9,0.9,0.9],
+        "pos": [0.5,0.85,-2.1],
+        "spreadRandomness": [0.6,0.3,0.25],
+        "initialVelocity": [0.0,0.0,-0.25],
+        "movementVelocity": [0.0,-0.035,0.0],
+        "terminalVelocity": [50,50,50],
+        "spawningAnimations": [
+        {
+            "animationType": "rotation",
+            "variable": "DUMP",
+            "centerPoint": [0.0,0.0,-2.125],
+            "axis": [-35.0,0.0,0.0],
+            "duration": 50
+          }
+        ],
+        "activeAnimations": [
+        {
+          "animationType": "visibility",
+          "variable": "interactable_percent_1",
+            "clampMin": 0.01,
+            "clampMax": 1
+        },
+          {
+            "animationType": "visibility",
+            "variable": "DUMP",
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "reverseDelay": 30,
+            "forwardsDelay": 10
+          }
+        ]
+      },
+      	{
+        "type": "generic",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 2,
+        "duration": 30,
+        "transparency": 1.0,
+        "scale": 5.5,
+        "toScale": 5.0,
+        "fadeScaleTime": 10,
+        "ignoreCollision": false,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/ground/gravel0.png",
+          "mtsofficialpack:textures/bullets/ground/gravel1.png",
+          "mtsofficialpack:textures/bullets/ground/gravel2.png",
+          "mtsofficialpack:textures/bullets/ground/dirt0.png",
+          "mtsofficialpack:textures/bullets/ground/dirt1.png",
+          "mtsofficialpack:textures/bullets/ground/dirt2.png",
+          "mtsofficialpack:textures/bullets/ground/dirt3.png",
+          "mtsofficialpack:textures/bullets/ground/pebble0.png",
+          "mtsofficialpack:textures/bullets/ground/pebble1.png",
+          "mtsofficialpack:textures/bullets/ground/pebble2.png"
+        ],
+        "randomTexture": true,
+        "relativeInheritedVelocityFactor": [0.9,0.9,0.9],
+        "pos": [-0.5,0.85,-2.1],
+        "spreadRandomness": [0.6,0.3,0.25],
+        "initialVelocity": [0.0,0.0,-0.25],
+        "movementVelocity": [0.0,-0.035,0.0],
+        "terminalVelocity": [50,50,50],
+        "spawningAnimations": [
+        {
+            "animationType": "rotation",
+            "variable": "DUMP",
+            "centerPoint": [0.0,0.0,-2.125],
+            "axis": [-35.0,0.0,0.0],
+            "duration": 50
+          }
+        ],
+        "activeAnimations": [
+        {
+          "animationType": "visibility",
+          "variable": "interactable_percent_1",
+            "clampMin": 0.01,
+            "clampMax": 1
+        },
+          {
+            "animationType": "visibility",
+            "variable": "DUMP",
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "reverseDelay": 30,
+            "forwardsDelay": 10
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Brigadier Dump Bed",
+    "description": "Drive around your haul, and if you feel like it, dump it all with the flick of a switch! Or let it place blocks for you for some quick and dirty paving!",
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:28",
+        "mts:mtsofficialpack.metaltube:4",
+        "minecraft:piston:1",
+        "mts:mtsofficialpack.copperwire:6"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }

@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Electronic Circuit",
+        "description": "A compact electronic logical system fastened on a plastic board. Its structure is mesmerizing.",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

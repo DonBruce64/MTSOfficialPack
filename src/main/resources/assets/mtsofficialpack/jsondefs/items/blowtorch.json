@@ -1,0 +1,14 @@
+{
+
+	"item": {
+    "type": "repair_pack"
+  },
+  "repair": {
+    "amount": 50
+  },
+    "general": {
+        "name": "Blowtorch",
+        "description": "Repair tool.",
+        "materials": []
+    }
+}

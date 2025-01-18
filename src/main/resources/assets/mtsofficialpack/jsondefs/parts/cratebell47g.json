@@ -1,8 +1,10 @@
 {
   "generic": {
     "type": "interactable_crate",
+    "customType": "bell47g",
     "useVehicleTexture": true,
-    "customType": "bell47g"
+    "mass": 10,
+    "forwardsDamageMultiplier": 1.0
   },
   "interactable": {
     "interactionType": "crate",
@@ -12,16 +14,121 @@
     {
       "subName": "",
       "name": "Bell 47G External Storage Crate",
-      "extraMaterials": []
+      "extraMaterialLists": [
+        []
+      ]
     }
   ],
   "rendering": {
     "lightObjects": [],
+    "particles": [],
+    "animatedObjects": [
+      {
+        "objectName": "$lid",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "player_interacting",
+            "centerPoint": [0.0,0.359375,0.2703125],
+            "axis": [80.0,0.0,0.0],
+            "reverseEasing": "easeinquart",
+            "forwardsEasing": "easeoutcubic",
+            "reverseDelay": 10,
+            "duration": 8,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ]
+      }
+    ],
+    "sounds": [
+    //place-remove
+      {
+        "name": "mtsofficialpack:placesound/generic_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/generic_place1",
+        	"mtsofficialpack:placesound/generic_place0"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:cratebell47g_close",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/skid_place1",
+        	"mtsofficialpack:placesound/skid_place0",
+        	"mtsofficialpack:placesound/skid_place2"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+      
+    {
+        "name": "mtsofficialpack:cratebell47g_close",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "reverseDelay": 18,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      },
+    {
+        "name": "mtsofficialpack:cratebell47g_open",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "player_interacting",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 15.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
     "modelType": "obj"
   },
   "general": {
     "name": "Bell 47G External Storage Crate",
+    "description": "This crate has been modified to be mounted on the side of your Bell47g helicopter for extra storage!",
     "health": 100,
-    "materials": ["oredict:plankWood:6","oredict:dyeRed:1"]
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.plating:4",
+        "mts:mtsofficialpack.crate:1",
+        "mts:mtsofficialpack.screws:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
   }
 }

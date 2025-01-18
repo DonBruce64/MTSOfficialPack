@@ -1,0 +1,377 @@
+{
+  "generic": {
+    "type": "gun_handheld_rocket"
+  },
+  "gun": {
+    "lockOnType": "default",
+    "targetType": "all",
+    "preloadedBullet": "mtsofficialpack:bulletrocket:1",
+    "disableInheritedMotion": true,
+    "handHeld": true,
+    "isTwoHanded": true,
+    "handHeldNormalOffset": [0.0,-0.03125,0.4],
+    "handHeldAimedOffset": [0.27,0.0,0.5],
+    "capacity": 1,
+    "windupTime": 4,
+    "reloadTime": 50,
+    "muzzleVelocity": 30,
+    "fireDelay": 20.0,
+    "diameter": 70.0,
+    "minCaseLength": 2.0,
+    "maxCaseLength": 2.0,
+    "yawSpeed": 1.1830065,
+    "pitchSpeed": 1.1830065,
+    "lockMaxAngle": 0.0,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [0.0,0.18,0.0],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.0,0.0,0.0]
+          }
+        ]
+      }
+    ]
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Rocket Launcher",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "maintube",
+        "animations": [
+          {
+            "animationType": "translation",
+            "variable": "gun_cooldown",
+            "centerPoint": [0,0.18,0],
+            "axis": [0.0,0.0,-0.7],
+            "duration": 2,
+            "reverseEasing": "easeinquad",
+            "skipReverseMovement": true
+          },
+          {
+            "animationType": "translation",
+            "variable": "gun_cooldown",
+            "centerPoint": [0,0.18,0],
+            "axis": [0.0,0.0,0.7],
+            "duration": 20,
+            "forwardsDelay": 1,
+            "forwardsEasing": "easeinquad",
+            "skipReverseMovement": true
+          },
+          {
+            "animationType": "rotation",
+            "variable": "gun_reload",
+            "centerPoint": [0,0.18,0],
+            "axis": [50.0,0.0,0.0],
+            "duration": 10,
+            "reverseEasing": "easeinquad"
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+    {
+        "name": "mtsofficialpack:rocketlauncher_equip0",
+        
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_inhand_equipped",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+    {
+        "name": "mtsofficialpack:rocketlauncher_equip1",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_inhand_equipped",
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+    {
+        "name": "mtsofficialpack:triggerclick",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.6,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      },
+    {
+        "name": "mtsofficialpack:gunrocketpod_reload0",
+        "soundVariations": [
+          "mtsofficialpack:gunrocketpod_reload0",
+          "mtsofficialpack:gunrocketpod_reload1",
+          "mtsofficialpack:gunrocketpod_reload2"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 10.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:rocketlauncher0",
+        "soundVariations": [
+          "mtsofficialpack:rocketlauncher0",
+          "mtsofficialpack:rocketlauncher1",
+          "mtsofficialpack:rocketlauncher2"
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 50.0,
+        "middleDistanceVolume": 0.4,
+        "maxDistance": 100.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:basic_ocp_rocket_distant",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 50.0,
+        "middleDistanceVolume": 0.6,
+        "maxDistance": 150.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [
+    {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 10,
+        "duration": 120,
+        "movementDuration": 10,
+        "transparency": 0.83,
+        "toTransparency": 0.001,
+        "scale": 2,
+        "toScale": 9.0,
+        "hitboxSize": 0.2,
+        "ignoreCollision": true,
+        "relativeInheritedVelocityFactor": [0.5,0.5,0.5],
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "C4C0BB",
+          "B9B4AD",
+          "D2D0CD",
+          "ADA79F",
+          "A39A8D",
+          "99958F",
+          "DDDBD8"
+        ],
+        "randomColor": true,
+        "pos": [0.0,0.0,1],
+        "spreadRandomness": [2.0,2.0,7.0],
+        "initialVelocity": [0.0,0.0,8.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 10,
+        "duration": 120,
+        "movementDuration": 10,
+        "transparency": 0.83,
+        "toTransparency": 0.001,
+        "scale": 2,
+        "toScale": 9.0,
+        "hitboxSize": 0.2,
+        "ignoreCollision": true,
+        "relativeInheritedVelocityFactor": [0.5,0.5,0.5],
+        "textureList": [
+          "mts:textures/particles/big_smoke_0.png",
+          "mts:textures/particles/big_smoke_1.png",
+          "mts:textures/particles/big_smoke_2.png",
+          "mts:textures/particles/big_smoke_3.png",
+          "mts:textures/particles/big_smoke_4.png",
+          "mts:textures/particles/big_smoke_5.png",
+          "mts:textures/particles/big_smoke_6.png",
+          "mts:textures/particles/big_smoke_7.png",
+          "mts:textures/particles/big_smoke_8.png"
+        ],
+        "randomTexture": true,
+        "colorList": [
+          "C4C0BB",
+          "B9B4AD",
+          "D2D0CD",
+          "ADA79F",
+          "A39A8D",
+          "99958F",
+          "DDDBD8"
+        ],
+        "randomColor": true,
+        "pos": [0.0,0.0,1],
+        "spreadRandomness": [2.0,2.0,-7.0],
+        "initialVelocity": [0.0,0.0,-8.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 5,
+        "duration": 20,
+        "movementDuration": 10,
+        "transparency": 1.0,
+        "scale": 1.0,
+        "toScale": 0.001,
+        "hitboxSize": 0.2,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/bang0.png",
+          "mtsofficialpack:textures/bullets/bang0d.png",
+          "mtsofficialpack:textures/bullets/bang0b.png",
+          "mtsofficialpack:textures/bullets/bang0a.png",
+          "mtsofficialpack:textures/bullets/bang0c.png"
+        ],
+        "randomTexture": true,
+        "pos": [0.0,0.18,1],
+        "spreadRandomness": [4.0,4.0,13.0],
+        "movementVelocity": [0.0,-0.008,0.0],
+        "initialVelocity": [0.0,0.0,20.0],
+        "spawningAnimations": [
+          {
+            "animationType": "rotation",
+            "variable": "gun_pitch",
+            "centerPoint": [-0.0625,1.4375,-0.1538],
+            "axis": [1.0,0.0,0.0]
+          }
+        ],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "isBright": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 6,
+        "transparency": 1.0,
+        "scale": 3.0,
+        "toScale": 0.2,
+        "hitboxSize": 0.2,
+        "relativeInheritedVelocityFactor": [1.0,1.0,1.0],
+        "textureList": [
+          "mtsofficialpack:textures/bullets/bang0.png",
+          "mtsofficialpack:textures/bullets/bang1.png",
+          "mtsofficialpack:textures/bullets/bang2.png",
+          "mtsofficialpack:textures/bullets/bang3.png",
+          "mtsofficialpack:textures/bullets/bang4.png"
+        ],
+        "textureDelays": [1,2,2,1,1],
+        "pos": [0.0,0.18,1.0],
+        "terminalVeloctiy": [0.0,0.0,0.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "!gun_fired"
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Rocket Launcher",
+    "description": "This cheap tube fires an explosive pencil shaped projectile at any unfortunate thing that happens to stand opposite of you!",
+    "materialLists": [
+      [
+        
+        "mts:mtsofficialpack.bulletrocket:1",
+        "mts:mtsofficialpack.metaltube:2",
+		"minecraft:lever:1",
+		"mts:mtsofficialpack.screws:4"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

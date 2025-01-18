@@ -1,28 +1,84 @@
 {
   "generic": {
     "type": "interactable_barrel",
+    "customType": "bell47g",
     "useVehicleTexture": true,
-    "customType": "bell47g"
+    "forwardsDamageMultiplier": 1.0,
+    "mass": 15,
+    "destroyable": true
   },
   "interactable": {
     "interactionType": "barrel",
     "feedsVehicles": true,
-    "inventoryUnits": 3.0
+    "inventoryUnits": 0.6
   },
   "definitions": [
     {
       "subName": "",
       "name": "Bell 47G External Fuel Tank",
-      "extraMaterials": []
+      "extraMaterialLists": [
+        []
+      ]
     }
   ],
   "rendering": {
     "lightObjects": [],
+    "particles": [],
+    "sounds": [
+    	//place-remove
+      	{
+        "name": "mtsofficialpack:placesound/barrel_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/barrel_place0",
+        	"mtsofficialpack:placesound/barrel_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/barrel_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/barrel_remove0",
+        	"mtsofficialpack:placesound/barrel_remove1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
     "modelType": "obj"
   },
   "general": {
     "name": "Bell 47G External Fuel Tank",
+    "description": "An external tank, capable of holding six buckets of extra fuel. Perfect for extending flight time! Warning: It has explosive potential. Keep away from open flames or projectiles. Armor not included.",
     "health": 100,
-    "materials": ["oredict:ingotIron:4","oredict:dyeRed:1"]
+    "materialLists": [
+      [
+        "mts:mtsofficialpack.barrel:1",
+        "mts:mtsofficialpack.screws:4",
+        "mts:mtsofficialpack.metaltube:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
   }
 }

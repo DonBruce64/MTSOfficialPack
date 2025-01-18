@@ -1,0 +1,275 @@
+{
+  "generic": {
+    "type": "gun_pylon_wide",
+    "forwardsDamageMultiplier": 1.0
+  },
+  "gun": {
+    "lockOnType": "default",
+    "targetType": "all",
+    "capacity": 8,
+    "reloadTime": 5,
+    "reloadDelay": 5,
+    "fireDelay": 5.0,
+    "diameter": 250.0,
+    "yawSpeed": Infinity,
+    "pitchSpeed": Infinity,
+    "lockMaxAngle": 0.0,
+    "muzzleGroups": [
+      {
+        "muzzles": [
+          {
+            "pos": [1.8125,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [1.8125,-0.2,-0.375]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-1.8125,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [-1.8125,-0.2,-0.375]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [1.46875,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [1.46875,-0.2,-0.375]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-1.46875,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [-1.46875,-0.2,-0.375]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [1.09375,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [1.09375,-0.2,-0.375]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-1.09375,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [-1.09375,-0.2,-0.375]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [0.75,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [0.75,-0.2,-0.375]
+          }
+        ]
+      },
+      {
+        "muzzles": [
+          {
+            "pos": [-0.75,-0.2,-0.375],
+            "rot": [0.0,0.0,0.0],
+            "center": [-0.75,-0.2,-0.375]
+          }
+        ]
+      }
+    ]
+  },
+  "collisionGroups": [
+    {
+      "collisions": [
+        {
+          "pos": [1.25,-0.4375,-0.5],
+          "width": 1.375,
+          "height": 0.5
+        },
+        {
+          "pos": [-1.25,-0.4375,-0.5],
+          "width": 1.375,
+          "height": 0.5
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "PZL 37 Built-in Bombrack",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "basicbomb1",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 8.0,
+            "clampMax": 8.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb2",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 7.0,
+            "clampMax": 8.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb3",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 6.0,
+            "clampMax": 8.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb4",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 5.0,
+            "clampMax": 8.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb5",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 4.0,
+            "clampMax": 8.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb6",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 3.0,
+            "clampMax": 8.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb7",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 2.0,
+            "clampMax": 8.0
+          }
+        ]
+      },
+      {
+        "objectName": "basicbomb8",
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "clampMin": 1.0,
+            "clampMax": 8.0
+          }
+        ]
+      }
+    ],
+    "lightObjects": [],
+    "sounds": [
+      {
+        "name": "mtsofficialpack:basicbomb_drop",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.13,0.0],
+            "offset": 1.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.2,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 32.0,
+        "maxDistanceVolume": 0.0
+      },
+      {
+        "name": "mtsofficialpack:basicbomb_reloading",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.13,0.0],
+            "offset": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 0.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "PZL37 Built-in Bombracks",
+    "hideOnCreativeTab": true,
+    "description": "Dont mind this one, it comes preinstalled with every PLZ.37 you build. We just had to ducttape eight basic bombracks together for... technical reasons.",
+    "health": 70,
+    "materialLists": [
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "general": {
+        "name": "Processing Unit",
+        "description": "You could probably run Doom on that.",
+        "stackSize": 64,
+        "materials": [],
+        "type": "none"
+    }
+}

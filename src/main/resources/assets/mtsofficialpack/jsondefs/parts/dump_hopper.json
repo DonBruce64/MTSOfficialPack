@@ -1,0 +1,54 @@
+{
+  "generic": {
+    "type": "effector",
+    "forwardsDamageMultiplier": 1.0,
+    "width": 0.5,
+    "height": 0.5
+  },
+  "effector": {
+    "type": "collector"
+  },
+  "collisionGroups": [
+    {
+      "isInterior": true,
+      "collisions": [
+        {
+          "pos": [0.0,1.375,0.6875],
+          "width": 2.25,
+          "height": 0.5
+        },
+        {
+          "pos": [0.0,1.375,-1.1875],
+          "width": 2.25,
+          "height": 0.5
+        }
+      
+      ],
+      "animations": []
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Dump Hopper Logic",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "customVariables": [
+    ],
+    "particles": [],
+    "sounds": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Dump Hopper Logic",
+    "description": "Picks up items",
+    "hideOnCreativeTab": true, 
+    "materialLists": []
+  }
+}

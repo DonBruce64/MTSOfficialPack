@@ -1,61 +1,163 @@
 {
-    "general": {
-        "name" : "Small 3-Bladed Propeller (Dynamic Pitch)",
-        "type" : "propeller",
-		"materials" : ["oredict:dyeWhite:1", "oredict:ingotIron:3", "oredict:dustRedstone:2"]
-    },
-	"propeller" : {
-		"pitch" : 65,
-		"diameter" : 80,
-		"startingHealth" : 250,
-        "isDynamicPitch" : true
-	},
-	"rendering": {
-		"animatedObjects" : [
-			{
-				"objectName" : "$blade_1",
-                "animations": [
-				    {
-                        "animationType": "rotation",
-                        "centerPoint" : [0, 0, 0],
-				        "axis" : [1, 0, 0],
-				        "variable" : "propeller_pitch_deg"
-                    }
-                ]
-			},
-			{
-				"objectName" : "$blade_2",
-                "animations": [
-				    {
-                        "animationType": "rotation",
-                        "centerPoint" : [0, 0, 0],
-				        "axis" : [-0.5, 0.866, 0],
-				        "variable" : "propeller_pitch_deg"
-                    }
-                ]
-			},
-			{
-				"objectName" : "$blade_3",
-                "animations": [
-				    {
-                        "animationType": "rotation",
-                        "centerPoint" : [0, 0, 0],
-				        "axis" : [-0.5, -0.866, 0],
-				        "variable" : "propeller_pitch_deg"
-                    }
-                ]
-			},
-			{
+  "generic": {
+    "type": "propeller",
+    "forwardsDamageMultiplier": 0.5,
+    "destroyable": true,
+    "movementAnimations": [
+      {
+        "animationType": "rotation",
+        "variable": "propeller_rotation",
+        "centerPoint": [0.0,0.0,0.0],
+        "axis": [0.0,0.0,1.0]
+      }
+    ]
+  },
+  "propeller": {
+    "isDynamicPitch": true,
+    "pitch": 80,
+    "diameter": 75
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Small 3-Bladed Propeller (Dynamic Pitch)",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [
+      {
+        "objectName": "$blade_1",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [1.0,0.0,0.0]
+          },
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 0.0,
+            "clampMax": 1800.0
+          }
+        ]
+      },
+      {
+        "objectName": "$blade_2",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-0.5,0.866,0.0]
+          },
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 0.0,
+            "clampMax": 1800.0
+          }
+        ]
+      },
+      {
+        "objectName": "$blade_3",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "propeller_pitch_deg",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [-0.5,-0.866,0.0]
+          },
+          {
+            "animationType": "visibility",
+            "variable": "propeller_rpm",
+            "clampMin": 0.0,
+            "clampMax": 1800.0
+          }
+        ]
+      },
+      {
         "objectName": "#translucent_3prop_mblur",
+        "blendedAnimations": true,
         "animations": [
           {
             "animationType": "visibility",
             "variable": "propeller_rpm",
-            "clampMin" : 100,
-						"clampMax" : 3000
+            "clampMin": 100.0,
+            "clampMax": 5000.0
           }
         ]
       }
-		]
-	}
+    ],
+    "lightObjects": [],
+    "sounds": [
+    //place-remove
+      	{
+        "name": "mtsofficialpack:placesound/prop_place0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/prop_place0",
+        	"mtsofficialpack:placesound/prop_place1"
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_added_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 24.0,
+        "maxDistanceVolume": 0.0
+      },
+      	{
+        "name": "mtsofficialpack:placesound/prop_remove0",
+        "soundVariations": [
+        	"mtsofficialpack:placesound/prop_remove0",
+        	"mtsofficialpack:placesound/prop_remove1"
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 1.0
+          }
+        ],
+        "activeAnimations": [
+        {
+            "animationType": "visibility",
+            "variable": "part_removed_vehicle",
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "maxDistance": 16.0,
+        "maxDistanceVolume": 0.0
+      }
+    ],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "name": "Small 3-Bladed Propeller (Dynamic Pitch)",
+    "description": "While this sophisticated propeller might not deliver superb climbing performance, it redeems itself in excellent cruising performance.",
+    "health": 20,
+    "materialLists": [
+      [
+        "tags:dyes/white:3",
+        "tags:ingots/iron:1",
+        "mts:mtsofficialpack.metaltube:2",
+        "tags:dusts/redstone:3"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
 }
