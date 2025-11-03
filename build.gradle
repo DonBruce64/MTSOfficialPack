@@ -55,3 +55,10 @@ jar.finalizedBy("reobfJar")
 tasks.withType(JavaCompile).configureEach {
     options.encoding = "UTF-8" // Use the UTF-8 charset for Java compilation
 }
+
+// Avoid build failures due to duplicate entries when packaging the JAR (Gradle 7 default is to fail).
+// This excludes duplicate files (e.g., identical class/resources coming from multiple inputs).
+import org.gradle.api.file.DuplicatesStrategy
+tasks.withType(Jar).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
