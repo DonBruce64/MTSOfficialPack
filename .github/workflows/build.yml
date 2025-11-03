@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mts-official-pack-1.16.5
-          path: build/libs/Pack-1.16.5.jar
+          path: 'build/libs/MTS Official Pack-1.16.5-*.jar'
           if-no-files-found: error
 
       - name: Build 1.12.2 assets jar
@@ -52,6 +52,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mts-official-pack-1.12.2
-          path: build/libs/Pack-1.12.2.jar
+          path: 'build/libs/MTS Official Pack-1.12.2-*.jar'
           if-no-files-found: error
 
