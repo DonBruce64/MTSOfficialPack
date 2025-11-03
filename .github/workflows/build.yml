@@ -1,64 +1,40 @@
-name: Build
+name: Build Pack (Forge 1.16.5)
 
 on:
   push:
     branches: [ master ]
   pull_request:
+    branches: [ master ]
   workflow_dispatch:
 
-concurrency:
-  group: build-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  gradle-build:
-    name: Gradle build (JDK 8)
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-    permissions:
-      contents: write
-    env:
-      BASE_PATH: ${{ github.workspace }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@v2
-
-      - name: Set up JDK 8
+      - name: Set up JDK 8 (Temurin)
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '8'
           cache: gradle
 
-      - name: Make gradlew executable (Linux runner)
-        run: chmod +x gradlew
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
 
-      - name: Run Gradle build
-        run: ./gradlew --no-daemon build
+      - name: Build via PackCompiler (creates Pack-1.16.5.jar and Pack-1.12.2.jar)
+        shell: bash
+        run: |
+          javac PackCompiler.java
+          java PackCompiler
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts
+          name: mts-official-pack-artifacts
           path: |
-            build/libs/**/*.jar
-            build/libs/**/*.zip
-            build/distributions/**
+            build/libs/*.jar
           if-no-files-found: error
-
-      - name: Create GitHub Release (on tag)
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
-        with:
-          name: ${{ github.repository }} ${{ github.ref_name }}
-          draft: false
-          prerelease: false
-          generate_release_notes: true
-          files: |
-            build/libs/**
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
