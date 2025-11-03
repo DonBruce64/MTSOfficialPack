@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -108,6 +110,16 @@ public class PackCompiler {
                 }
             }
 
+            // Determine naming components
+            String packVersion = readGradleString(new File(currentDir, "build.gradle"), "version");
+            if (packVersion == null || packVersion.isEmpty()) {
+                packVersion = "unknown";
+            }
+            String baseName = readGradleString(new File(currentDir, "build.gradle"), "archivesBaseName");
+            if (baseName == null || baseName.isEmpty()) {
+                baseName = "MTS Official Pack";
+            }
+
             if (build116) {
                 System.out.println("All files checked, compiling 1.16.5.");
                 result = runCommand(onWindows ? "gradlew.bat build" : "./gradlew build");
@@ -116,12 +128,18 @@ public class PackCompiler {
                 if (libsDir.exists()) {
                     File[] files = libsDir.listFiles();
                     if (files != null) {
+                        File target = null;
                         for (File file : files) {
-                            // Prefer the reobf jar if multiple present
-                            if (file.getName().toLowerCase().endsWith(".jar")) {
-                                file.renameTo(new File(libsDir, "Pack-1.16.5.jar"));
+                            String name = file.getName().toLowerCase();
+                            if (name.endsWith(".jar") && !name.contains("-sources")) {
+                                target = file;
                                 break;
                             }
+                        }
+                        if (target != null) {
+                            File newName = new File(libsDir, baseName + "-1.16.5-" + packVersion + ".jar");
+                            target.renameTo(newName);
+                            System.out.println("Named 1.16.5 jar: " + newName.getName());
                         }
                     }
                 }
@@ -132,7 +150,7 @@ public class PackCompiler {
                 if (!libsDir.exists()) {
                     libsDir.mkdirs();
                 }
-                ZipOutputStream pack = new ZipOutputStream(new FileOutputStream(new File(libsDir, "Pack-1.12.2.jar")));
+                ZipOutputStream pack = new ZipOutputStream(new FileOutputStream(new File(libsDir, baseName + "-1.12.2-" + packVersion + ".jar")));
                 addToZip(packAssetRootDir, pack, packAssetRootDir.getAbsolutePath().length() - "assets".length());
                 pack.close();
             }
@@ -144,6 +162,24 @@ public class PackCompiler {
             System.out.println("Build failed!");
             e.printStackTrace();
         }
+    }
+
+    private static String readGradleString(File buildGradle, String key) {
+        try {
+            if (!buildGradle.exists()) return null;
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(buildGradle), "UTF-8"));
+            String line;
+            Pattern p = Pattern.compile("^" + Pattern.quote(key) + "\\s*=\\s*\"([^\"]*)\"");
+            while ((line = reader.readLine()) != null) {
+                Matcher m = p.matcher(line.trim());
+                if (m.find()) {
+                    reader.close();
+                    return m.group(1);
+                }
+            }
+            reader.close();
+        } catch (Exception ignored) {}
+        return null;
     }
 
     private static void killDSStores(File directory) {
