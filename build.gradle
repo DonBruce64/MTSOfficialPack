@@ -11,6 +11,12 @@ buildscript {
 //Apply plugins
 apply plugin: "net.minecraftforge.gradle"
 
+// Repositories for dependency resolution
+repositories {
+    maven { url = "https://maven.minecraftforge.net" }
+    mavenCentral()
+}
+
 //Set file name.
 version = "V25"
 group = "minecrafttransportsimulator"
