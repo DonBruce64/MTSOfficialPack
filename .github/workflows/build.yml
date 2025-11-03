@@ -25,6 +25,10 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Ensure Gradle wrapper is executable
+        shell: bash
+        run: chmod +x ./gradlew
+
       - name: Build via PackCompiler (creates Pack-1.16.5.jar and Pack-1.12.2.jar)
         shell: bash
         run: |
