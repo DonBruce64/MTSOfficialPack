@@ -36,5 +36,5 @@ jobs:
         with:
           name: mts-official-pack-artifacts
           path: |
-            build/libs/*.jar
+            build/libs/**/*.jar
           if-no-files-found: error
