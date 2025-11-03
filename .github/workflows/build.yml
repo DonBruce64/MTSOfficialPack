@@ -29,16 +29,29 @@ jobs:
         shell: bash
         run: chmod +x ./gradlew
 
-      - name: Build via PackCompiler (creates Pack-1.16.5.jar and Pack-1.12.2.jar)
+      - name: Compile PackCompiler helper
         shell: bash
-        run: |
-          javac PackCompiler.java
-          java PackCompiler
+        run: javac PackCompiler.java
 
-      - name: Upload build artifacts
+      - name: Build 1.16.5 mod jar
+        shell: bash
+        run: java PackCompiler 116
+
+      - name: Upload 1.16.5 artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mts-official-pack-artifacts
-          path: |
-            build/libs/**/*.jar
+          name: mts-official-pack-1.16.5
+          path: build/libs/Pack-1.16.5.jar
           if-no-files-found: error
+
+      - name: Build 1.12.2 assets jar
+        shell: bash
+        run: java PackCompiler 112
+
+      - name: Upload 1.12.2 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mts-official-pack-1.12.2
+          path: build/libs/Pack-1.12.2.jar
+          if-no-files-found: error
+

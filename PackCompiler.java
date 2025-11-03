@@ -16,6 +16,21 @@ public class PackCompiler {
 
     public static void main(String[] args) {
         try {
+            // Parse mode flags
+            boolean build116 = true;  // Build Forge 1.16.5 jar via Gradle
+            boolean build112 = true;  // Build legacy assets-only jar for 1.12.2
+            if (args != null && args.length > 0) {
+                String mode = String.join(" ", args).toLowerCase();
+                // If a specific target is requested, disable the other
+                if (mode.contains("116")) {
+                    build116 = true;
+                    build112 = false;
+                } else if (mode.contains("112")) {
+                    build116 = false;
+                    build112 = true;
+                }
+            }
+
             File currentDir = new File(PackCompiler.class.getProtectionDomain().getCodeSource().getLocation().toURI());
             //Enable for IDE where path isn't where file lies.
             //currentDir = new File("D:\\MinecraftDev\\code_ocp");
@@ -37,9 +52,10 @@ public class PackCompiler {
                 System.out.println("Compile-inator Packing Systems V2.0 found " + killedDSStores + " DS_Stores in your files.  These have been sent to the shadow realm.");
             }
 
-            //Remove any old packs.
+            //Remove any old packs only if we're about to build the 1.16.5 jar
+            //so that a subsequent 1.12.2-only run doesn't delete prior outputs.
             File libsDir = new File(currentDir, "build/libs");
-            if (libsDir.exists()) {
+            if (build116 && libsDir.exists()) {
                 for (File file : libsDir.listFiles()) {
                     file.delete();
                 }
@@ -92,18 +108,34 @@ public class PackCompiler {
                 }
             }
 
-            System.out.println("All files checked, compiling.");
-            result = runCommand(onWindows ? "gradlew.bat build" : "./gradlew build");
+            if (build116) {
+                System.out.println("All files checked, compiling 1.16.5.");
+                result = runCommand(onWindows ? "gradlew.bat build" : "./gradlew build");
 
-            //Re-name compiled file, we know there will only be one, but not what it's called.
-            for (File file : libsDir.listFiles()) {
-                file.renameTo(new File(libsDir, "Pack-1.16.5.jar"));
+                //Re-name compiled file, we know there will only be one, but not what it's called.
+                if (libsDir.exists()) {
+                    File[] files = libsDir.listFiles();
+                    if (files != null) {
+                        for (File file : files) {
+                            // Prefer the reobf jar if multiple present
+                            if (file.getName().toLowerCase().endsWith(".jar")) {
+                                file.renameTo(new File(libsDir, "Pack-1.16.5.jar"));
+                                break;
+                            }
+                        }
+                    }
+                }
             }
 
-            //Now make a 1.12.2 compliant pack by zipping everything in the assets folder.
-            ZipOutputStream pack = new ZipOutputStream(new FileOutputStream(new File(libsDir, "Pack-1.12.2.jar")));
-            addToZip(packAssetRootDir, pack, packAssetRootDir.getAbsolutePath().length() - "assets".length());
-            pack.close();
+            if (build112) {
+                System.out.println("Creating 1.12.2 assets pack jar.");
+                if (!libsDir.exists()) {
+                    libsDir.mkdirs();
+                }
+                ZipOutputStream pack = new ZipOutputStream(new FileOutputStream(new File(libsDir, "Pack-1.12.2.jar")));
+                addToZip(packAssetRootDir, pack, packAssetRootDir.getAbsolutePath().length() - "assets".length());
+                pack.close();
+            }
 
             System.out.println("Your pack is located in " + libsDir.getAbsolutePath().toString());
             System.out.println("If you haven't already, please edit the mods.toml file, located in " + (new File(currentDir, "src/main/resources/META-INF").getAbsolutePath()));
